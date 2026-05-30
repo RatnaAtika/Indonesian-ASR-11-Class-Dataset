@@ -252,13 +252,13 @@ Contoh:
 # Pertama kali — folder dibuat
 python3 training_conventional/m08_hmm_gmm/train.py \
   --run-dir training_conventional/m08_hmm_gmm/runs/run_full_20260524 \
-  --hmm-iters 25
+  --hmm-iters 30 --hmm-states 5 --hmm-mixtures 3 --seed 42  # [FAIRNESS-C] budget kanonik
 # → menulis ke runs/run_full_20260524/
 
 # Re-run dengan flag yang sama — trainer auto-timestamp
 python3 training_conventional/m08_hmm_gmm/train.py \
   --run-dir training_conventional/m08_hmm_gmm/runs/run_full_20260524 \
-  --hmm-iters 50  # tweak
+  --hmm-iters 30 --hmm-states 5 --hmm-mixtures 3 --seed 42  # JANGAN ubah budget (anti-asimetri)
 # → menulis ke runs/run_full_20260524_163027/
 # → hasil run pertama TETAP utuh di runs/run_full_20260524/
 ```
@@ -288,11 +288,11 @@ rm -rf training_conventional/m08_hmm_gmm/runs/run_full_20260524
 ### 2. HMM transmat fixed (no degeneracy)
 Untuk HMM family (m08/m09/m10), strict left-right transmat di-pinned dan
 TIDAK di-update selama EM. Ini menghindari warning `transmat_ zero rows`.
-Flag yang efektif:
-- `--hmm-iters` (EM iterations untuk emission update; default 10, naikkan ke 25–50)
-- `--hmm-states` (default 5)
-- `--hmm-mixtures` (default 2, naikkan ke 3–8)
-- `--cov-type` (default `diag`; `full` untuk RAM lebih)
+Flag yang efektif (**[FAIRNESS-C] budget kanonik dikunci** — jangan diubah untuk run paper):
+- `--hmm-iters 30` (Baum-Welch EM iterations; sudah konvergen, jangan dinaikkan)
+- `--hmm-states 5`
+- `--hmm-mixtures 3`
+- `--cov-type diag` (default; `full` hanya untuk eksperimen RAM, bukan run paper)
 
 
 ---
@@ -317,10 +317,11 @@ tambah flag di belakang command.
 
 **Kenapa HMM-GMM cuma "Epoch 1/1" di log?** Karena HMM bukan model neural —
 training Baum-Welch EM bukan iterasi atas dataset, melainkan algoritma maximum-
-likelihood yang konvergen dalam beberapa iterasi internal. Yang perlu dinaikkan:
-- `--hmm-iters` (default 10, naikkan ke 25–50 untuk konvergensi lebih kuat)
-- `--hmm-states` (default 5, naikkan ke 7–9 untuk model lebih kompleks)
-- `--hmm-mixtures` (default 2, naikkan ke 4–8 untuk kapasitas lebih)
+likelihood yang konvergen dalam beberapa iterasi internal. **[FAIRNESS-C]** Untuk run
+paper, budget dikunci dan TIDAK dinaikkan (anti-asimetri — jangan menganakemaskan baseline):
+- `--hmm-iters 30` (EM sudah konvergen ~10–25 iter; 30 = buffer aman)
+- `--hmm-states 5`
+- `--hmm-mixtures 3`
 
 Hasil tetap "1 epoch" di log = "1 round of Baum-Welch", tapi parameter HMM lebih bagus.
 
@@ -383,15 +384,15 @@ Hasil tetap "1 epoch" di log = "1 round of Baum-Welch", tapi parameter HMM lebih
 **HMM-specific (m08, m10 stage 1):**
 | Flag | Default | Recommended (full) | Effect |
 |------|---------|---------------------|--------|
-| `--hmm-iters` | 10 | **25–50** | EM iterations untuk Baum-Welch ★ TINGKATKAN INI |
-| `--hmm-states` | 5 | **5–9** | States per HMM (left-right topology) |
-| `--hmm-mixtures` | 2 | **3–8** | Gaussian mixtures per state |
+| `--hmm-iters` | 10 | **30 (kanonik)** | EM iterations; ★ [FAIRNESS-C] kunci 30, JANGAN naikkan |
+| `--hmm-states` | 5 | **5 (kanonik)** | States per HMM (left-right); kunci 5 |
+| `--hmm-mixtures` | 2 | **3 (kanonik)** | Gaussian mixtures per state; kunci 3 |
 | `--cov-type` | `diag` | `diag` (8GB) / `full` (lebih banyak RAM) | Covariance matrix structure |
 
 **DNN-specific (m09, m10 stage 3) — dilatih dengan CTC loss (blank=`<pad>`):**
 | Flag | Default | Recommended (full) | Effect |
 |------|---------|---------------------|--------|
-| `--dnn-epochs` | 3 | **30** | DNN training epochs ★ TINGKATKAN INI |
+| `--dnn-epochs` | 3 | **30 (kanonik)** | DNN training epochs; ★ [FAIRNESS-C] sama dgn m11/m12 from-scratch |
 | `--dnn-batch-size` | 256 | **12000** | ★ Budget **FRAME** (bukan utterance) untuk CTC. 256 terlalu kecil. |
 | `--dnn-lr` | 1e-3 | **1e-3** | Learning rate |
 | `--dnn-hidden` | 512 | **512–1024** | DNN hidden width |
@@ -443,10 +444,10 @@ python3 training/m02_whisper_small/train.py \
   --run-dir training/m02_whisper_small/runs/run_full_$(date +%Y%m%d) \
   --epochs 5 --batch-size 4 --grad-accum 8 --lr 5e-6 --warmup-steps 1000
 
-# m08 HMM-GMM
+# m08 HMM-GMM  [FAIRNESS-C] budget kanonik (jangan naikkan states/mixtures/iters)
 python3 training_conventional/m08_hmm_gmm/train.py \
   --run-dir training_conventional/m08_hmm_gmm/runs/run_full_$(date +%Y%m%d) \
-  --hmm-iters 50 --hmm-states 7 --hmm-mixtures 6
+  --hmm-iters 30 --hmm-states 5 --hmm-mixtures 3 --seed 42
 
 # m09 DNN-HMM (CTC loss, batch = budget frame)
 python3 training_conventional/m09_dnn_hmm/train.py \
@@ -601,10 +602,13 @@ python3 training/zero_shot_baselines/run_inference.py \
 ```bash
 python3 training_conventional/m08_hmm_gmm/train.py \
   --run-dir training_conventional/m08_hmm_gmm/runs/run_full_$(date +%Y%m%d) \
-  --hmm-states 5 --hmm-mixtures 3 --hmm-iters 25
+  --hmm-iters 30 --hmm-states 5 --hmm-mixtures 3 --seed 42
 ```
-> ★ HMM-GMM TIDAK pakai `--epochs`. Gunakan `--hmm-iters` untuk lebih banyak EM iterations.
-> Untuk akurasi lebih tinggi: `--hmm-iters 50 --hmm-states 7 --hmm-mixtures 6`.
+> ★ HMM-GMM TIDAK pakai `--epochs`; `--hmm-iters` = jumlah Baum-Welch EM iteration.
+> **[FAIRNESS-C 2026-05-29]** Budget kanonik = `--hmm-iters 30 --hmm-states 5 --hmm-mixtures 3`.
+> JANGAN menaikkan states/mixtures/iters untuk "akurasi lebih tinggi": itu melanggar
+> pagar anti-asimetri (menganakemaskan baseline lemah) dan EM sudah konvergen ~10–25 iter.
+> Lihat `training_conventional/reports/fairness_protocol_C_FINAL.md`.
 
 ### Terminal 12 — m09 DNN-HMM hybrid (~1 jam)
 ```bash
@@ -622,7 +626,7 @@ python3 training_conventional/m09_dnn_hmm/train.py \
 ```bash
 python3 training_conventional/m10_gmm_hmm_dnn/train.py \
   --run-dir training_conventional/m10_gmm_hmm_dnn/runs/run_full_$(date +%Y%m%d_%H%M%S) \
-  --hmm-states 5 --hmm-mixtures 3 --hmm-iters 25 \
+  --hmm-iters 30 --hmm-states 5 --hmm-mixtures 3 \
   --dnn-hidden 512 --dnn-layers 4 --dnn-context 5 --dnn-epochs 30 \
   --dnn-batch-size 12000 --dnn-lr 1e-3 --seed 42
 ```
