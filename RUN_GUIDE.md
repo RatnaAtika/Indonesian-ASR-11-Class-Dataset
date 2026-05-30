@@ -1106,9 +1106,12 @@ by cosine annealing to zero learning rate. The effective batch size was held
 constant at 32 across all from-scratch and HMM-DNN trainers via gradient
 accumulation when single-batch GPU memory was insufficient. From-scratch
 models (Bi-LSTM, Conformer, Wav2Letter, Vanilla Transformer, ViT-modified-ID)
-were trained for 30 epochs. Pretrained Whisper-medium was fine-tuned for 5
+were trained for 30 epochs and the best checkpoint was selected on validation
+WER (best-on-validation); the encoder-decoder models additionally used early
+stopping with patience 12. Pretrained Whisper-medium was fine-tuned for 5
 epochs following Radford et al. (2022) to avoid catastrophic forgetting of
-the original multilingual capability. HMM-GMM was trained via Baum-Welch EM
+the original multilingual capability, with the best checkpoint chosen by
+validation WER (load_best_model_at_end). HMM-GMM was trained via Baum-Welch EM
 for 30 iterations. SpecAugment (Park et al. 2019) was applied to all neural
 models with T=20, F=10, mT=2, mF=2 except HMM (incompatible). Greedy decoding
 was used at evaluation time across all systems for head-to-head comparison;

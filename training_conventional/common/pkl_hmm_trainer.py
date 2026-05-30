@@ -109,6 +109,10 @@ def run_hmm_gmm(args, train_data, val_data, sp, out_dir):
     min_samples = max(2, args.hmm_states + 1)
     templates = [t for t in template_to_X if len(template_to_X[t]) >= min_samples]
     print(f"[hmm-gmm] {len(templates)} templates after pruning (min_samples={min_samples})")
+    if not templates:
+        raise SystemExit(
+            f"[hmm-gmm] ERROR: 0 templates survived pruning (min_samples={min_samples}). "
+            f"Train subset too small — use full data (--max-train-samples 0) for paper runs.")
     print(f"[hmm-gmm] training {len(templates)} GMM-HMMs (states={args.hmm_states}, mix={args.hmm_mixtures}) ...")
     
     models = {}

@@ -29,7 +29,7 @@ Operasionalisasi (identik untuk semua sistem):
 | Metrik | WER + CER + MER + WIL via `jiwer` |
 | Seed | 42 (deviasi historis m11 didokumentasikan) |
 | Pemilihan checkpoint | **best-on-validation** (bukan last-epoch) |
-| Early-stopping | **patience 10** pada val-WER untuk semua trainer neural from-scratch |
+| Early-stopping / pemilihan checkpoint | **best-on-validation WER untuk SEMUA model** (penyetara keadilan utama); m11/m12 tambahan early-stop patience 12; m02b `load_best_model_at_end` |
 
 ---
 
@@ -52,7 +52,7 @@ Implementasi pagar:
 | Hybrid **DNN-HMM (m09)** / stage-3 **m10** | 30 epoch (CTC) | sama dgn from-scratch | blank=`<pad>`, greedy collapse |
 | From-scratch enc-dec **Vanilla TF (m11)** | 30 epoch | konvergensi pada ~92 jam korpus | identik dgn m12 |
 | From-scratch enc-dec **ViT-Novel (m12) ★** | 30 epoch (Table 1) + 200 (Appendix B) | extended = SOTA, dilaporkan terpisah | identik m11 di Table 1 → atribusi-arsitektur |
-| From-scratch + CTC **Conformer (m06), Bi-LSTM (m07), Wav2Letter (m13), Jasper (m14)** | 30 epoch, early-stop patience 10 | CTC butuh 20–50 epoch align | **lihat §4 — m06/m07 sudah konvergen, TIDAK diubah** |
+| From-scratch + CTC **Conformer (m06), Bi-LSTM (m07), Wav2Letter (m13), Jasper (m14)** | 30 epoch, **best-on-val** (full budget, tanpa early-stop) | CTC butuh 20–50 epoch align | **lihat §4 — m06/m07 sudah konvergen, TIDAK diubah** |
 | Pretrained FT **Whisper-medium** | **5 epoch** | Radford 2022 (hindari catastrophic forgetting); 30 ep = overfit | bukan ketidakadilan |
 
 ---
@@ -73,7 +73,9 @@ Diperiksa langsung dari run full terakhir (bukti, bukan asumsi):
 
 **Putusan:** Kedua model **memenuhi prinsip fairness apa adanya**. Best-epoch (16 dan 19) berada di dalam anggaran 30 dan dipilih via best-on-val → bukti objektif "equal opportunity to converge" tanpa over/under-training.
 
-> **Perubahan hyperparameter: TIDAK DIPERLUKAN untuk m06 maupun m07.** Mengubahnya sekarang justru melanggar pagar anti-asimetri (tidak ada alasan arsitektural; keduanya sudah unggul). Yang **ditambahkan hanya pelaporan**: cantumkan `best_epoch`, `early_stop_patience=10`, dan `checkpoint=best-on-val` di tabel §4.2 agar reviewer melihat equal-opportunity secara eksplisit.
+> **Perubahan hyperparameter: TIDAK DIPERLUKAN untuk m06 maupun m07.** Mengubahnya sekarang justru melanggar pagar anti-asimetri (tidak ada alasan arsitektural; keduanya sudah unggul). Yang **ditambahkan hanya pelaporan**: cantumkan `best_epoch`, mekanisme pemilihan checkpoint (`best-on-val`, via `BestCheckpointTracker(metric=wer, lower_is_better=True)`), dan jumlah epoch dilatih di tabel §4.2 agar reviewer melihat equal-opportunity secara eksplisit.
+>
+> **[VERIFIED 2026-05-29]** Mekanisme aktual di kode: m06/m07 (`from_scratch_trainer`) & m13 (`pkl_cnn_ctc_trainer`) melatih penuh 30 epoch lalu simpan **best-on-val** (tanpa early-stop); m11/m12 (root scripts) punya early-stop **patience 12**; m02b (HF) pakai `load_best_model_at_end=True, metric_for_best_model=wer`. Penyetara keadilan = **best-on-val untuk semua**, bukan patience seragam.
 
 Catatan kecil (transparansi, bukan tindakan): m07 history mencatat 20 baris epoch (berhenti dini), m06 mencatat 30 baris penuh — perbedaan ini konsisten dengan early-stopping dan **wajar dilaporkan apa adanya**.
 
@@ -84,7 +86,7 @@ Catatan kecil (transparansi, bukan tindakan): m07 history mencatat 20 baris epoc
 Disarikan dari NeurIPS Dataset&Benchmark checklist (terlihat di paper riset) — reviewer menuntut **transparansi, bukan keseragaman angka**:
 
 - [x] **Tabel hyperparameter per-model** (arch, params, epoch/iter, optimizer, LR, batch, grad-accum, scheduler, dropout, **early-stop patience**, **best epoch**, seed). → membuat heterogenitas *dapat diterima*.
-- [x] **Justifikasi eksplisit tiap deviasi** (Whisper 5 ep; HMM 30 EM iter; from-scratch 30 ep + patience 10).
+- [x] **Justifikasi eksplisit tiap deviasi** (Whisper 5 ep; HMM 30 EM iter; from-scratch 30 ep + best-on-val).
 - [x] **Kriteria penghentian & pemilihan checkpoint** = best-on-val, patience sama → penyetara keadilan.
 - [x] **Sumber daya komputasi** per model (GPU, jam) — mis. m06 ≈ 33 jam.
 - [x] **Paragraf fairness** (lihat §6) yang menegaskan atribusi-arsitektur + anti-asimetri.
@@ -95,7 +97,7 @@ Disarikan dari NeurIPS Dataset&Benchmark checklist (terlihat di paper riset) —
 
 ## 6. Paragraf §4.2 siap-pakai (paper-grade, EN)
 
-> "Because the benchmark spans a classical generative model (HMM-GMM), neural-HMM hybrids, from-scratch encoder–decoder and CTC models, and a fine-tuned pretrained model (Whisper-medium), we deliberately did **not** fix the number of training steps across systems—doing so would either leave some architectures under-trained or cause the pretrained model to overfit. Instead, we held constant every non-architectural factor: the frozen train/dev/test split, log-mel features with CMVN, the tokenizer, greedy decoding without a language model, the evaluation metrics, the random seed, and the stopping rule (early stopping with patience 10 on validation WER; checkpoints selected as best-on-validation). Maximum training budgets were assigned **per architecture family** using established conventions—pretrained fine-tuning: 5 epochs (Radford et al., 2022); from-scratch neural models: 30 epochs; HMM-GMM: 30 Baum–Welch EM iterations—and applied identically to weaker and stronger models within each family. The vanilla Transformer and the proposed ViT-modified-ID used an identical configuration (30 epochs, 6 layers, lr 5e-4), so that any performance difference between them is attributable to architecture rather than to training budget. Models that converged earlier (e.g., Conformer best at epoch 16/30; Bi-LSTM best at epoch 19/30) stopped via the shared early-stopping rule rather than being deliberately curtailed, providing objective evidence of equal opportunity to converge. With this protocol, performance differences in Table 1 are attributable to architecture, not to unequal training budgets."
+> "Because the benchmark spans a classical generative model (HMM-GMM), neural-HMM hybrids, from-scratch encoder–decoder and CTC models, and a fine-tuned pretrained model (Whisper-medium), we deliberately did **not** fix the number of training steps across systems—doing so would either leave some architectures under-trained or cause the pretrained model to overfit. Instead, we held constant every non-architectural factor: the frozen train/dev/test split, log-mel features with CMVN, the tokenizer, greedy decoding without a language model, the evaluation metrics, the random seed, and the checkpoint-selection rule (**best checkpoint by validation WER for every model**; the encoder–decoder models additionally used early stopping with patience 12, and the fine-tuned Whisper used load_best_model_at_end). Maximum training budgets were assigned **per architecture family** using established conventions—pretrained fine-tuning: 5 epochs (Radford et al., 2022); from-scratch neural models: 30 epochs; HMM-GMM: 30 Baum–Welch EM iterations—and applied identically to weaker and stronger models within each family. The vanilla Transformer and the proposed ViT-modified-ID used an identical configuration (30 epochs, 6 layers, lr 5e-4), so that any performance difference between them is attributable to architecture rather than to training budget. Models that reached their best validation WER before the budget end (e.g., Conformer best at epoch 16/30; Bi-LSTM best at epoch 19/30) had that best checkpoint retained, providing objective evidence of equal opportunity to converge. With this protocol, performance differences in Table 1 are attributable to architecture, not to unequal training budgets."
 
 ---
 
@@ -110,7 +112,7 @@ Disarikan dari NeurIPS Dataset&Benchmark checklist (terlihat di paper riset) —
 | **Bi-LSTM (m07)** | **TIDAK diubah** — sudah konvergen (best WER 0.0262 @ ep 19) |
 | HMM-GMM (m08) | 30 EM iter (istilah dikoreksi), tidak ke 100 |
 | Yang ditambah | hanya **pelaporan**: best_epoch + patience + best-on-val di tabel §4.2 |
-| Penyetara keadilan | data/fitur/tokenizer/decoding/metrik/seed + **early-stop patience 10** |
+| Penyetara keadilan | data/fitur/tokenizer/decoding/metrik/seed + **best-on-val checkpoint untuk semua** (m11/m12 +patience12; m02b load_best) |
 
 **Tindakan konkret yang dilakukan:** tidak ada perubahan kode/hyperparameter pada m06 & m07 (sesuai bukti konvergensi); keputusan ini didokumentasikan dan dilampirkan ke jejak fairness repo; seluruh proyek di-commit & push ke remote untuk manajemen perubahan.
 

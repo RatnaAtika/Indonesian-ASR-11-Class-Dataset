@@ -135,8 +135,9 @@ Argumentasi ilmiah:
 > constant at 32 across all from-scratch and HMM-DNN trainers via gradient
 > accumulation when single-batch GPU memory was insufficient. From-scratch
 > models (Bi-LSTM, Conformer, Wav2Letter, Vanilla Transformer, ViT-modified-ID)
-> were trained for 30 epochs with early-stopping patience of 10 on validation
-> WER. Pretrained Whisper-medium was fine-tuned for 5 epochs following Radford
+> were trained for 30 epochs with the best checkpoint selected on validation
+> WER (best-on-validation); the encoder-decoder models additionally used early
+> stopping with patience 12. Pretrained Whisper-medium was fine-tuned for 5 epochs following Radford
 > et al. (2022) to avoid catastrophic forgetting of the original multilingual
 > capability. HMM-GMM was trained via Baum-Welch EM for 30 iterations.
 > The DNN-HMM hybrid (m09) and the DNN stage of the three-stage GMM-HMM-DNN

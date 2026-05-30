@@ -51,7 +51,7 @@ Kesimpulan riset: **dua pola sama-sama sah** — (a) epoch seragam ketika model 
 ### Pendekatan C — Protokol seragam + epoch per-keluarga yang dijustifikasi + early-stopping universal ⭐ **REKOMENDASI**
 - **Plus:** persis yang sudah ada di `FAIR_COMPARISON_PROTOCOL.md` repo Anda; sejalan dengan STEP & CheXGenBench; mudah dipertahankan saat reviewer bertanya; tidak memboroskan compute; tiap model adil mencapai potensinya.
 - **Minus:** butuh satu paragraf justifikasi di §4.2 (sudah ditulis di protokol repo).
-- **Aturan:** kunci data/fitur/tokenizer/decoding/metrik/seed + **patience early-stopping sama (mis. 10)**; epoch *maksimum* per keluarga (from-scratch 30, pretrained FT 5, HMM EM 30 iter); LR per-keluarga sesuai konvensi.
+- **Aturan:** kunci data/fitur/tokenizer/decoding/metrik/seed + **pemilihan checkpoint best-on-validation untuk semua model** (m11/m12 tambahan early-stop patience 12; m02b `load_best_model_at_end`); epoch *maksimum* per keluarga (from-scratch 30, pretrained FT 5, HMM EM 30 iter); LR per-keluarga sesuai konvensi.
 
 **Untuk paper *dataset*, Pendekatan C adalah titik manis** antara kekakuan dan keadilan, dan sudah Anda miliki.
 
@@ -73,14 +73,14 @@ Boleh secara prinsip, **tetapi bukan strategi yang tepat** untuk kasus ini, kare
 Reviewer dataset/benchmark (lihat checklist NeurIPS di paper-paper riset) menuntut **transparansi**, bukan keseragaman:
 
 - **Tabel hyperparameter per-model** (epoch, optimizer, LR, batch, scheduler, early-stop) — wajib, di §4.2 atau Appendix. Ini yang membuat heterogenitas *dapat diterima*.
-- **Justifikasi eksplisit setiap deviasi:** "Whisper 5 epoch (Radford 2022, hindari catastrophic forgetting)"; "HMM 30 EM iter (Baum-Welch converged)"; "from-scratch 30 epoch + early-stop patience 10".
+- **Justifikasi eksplisit setiap deviasi:** "Whisper 5 epoch (Radford 2022, hindari catastrophic forgetting)"; "HMM 30 EM iter (Baum-Welch converged)"; "from-scratch 30 epoch + best-on-val checkpoint".
 - **Kriteria penghentian & pemilihan checkpoint:** best-on-val (bukan last-epoch), patience sama → ini "kesetaraan kesempatan" yang menggantikan "kesetaraan epoch".
 - **Compute resources** (GPU, jam) per model — standar checklist.
 - **Pernyataan fairness 1 paragraf** (sudah ada di protokol repo §3) yang menyebut: data/fitur/tokenizer/decoding/metrik seragam; epoch budget per-family dijustifikasi.
 
 Kalimat kunci yang bisa langsung dipakai di §4.2 (adaptasi dari riset):
 
-> "Karena lineup mencakup model generatif klasik (HMM-GMM), hybrid neural-HMM, encoder-decoder from-scratch, dan model pretrained yang di-fine-tune, kami tidak menyeragamkan jumlah langkah pelatihan—praktik yang justru akan membuat sebagian arsitektur tidak konvergen atau model pretrained overfit. Sebagai gantinya kami menyeragamkan split data, fitur, tokenizer, dekoding greedy tanpa LM, metrik, dan kriteria early-stopping (patience 10), serta menetapkan anggaran pelatihan maksimum per keluarga arsitektur dengan justifikasi konvensional (pretrained FT: 5 epoch; from-scratch: 30 epoch; HMM: 30 iterasi EM). Pemilihan checkpoint selalu best-on-validation. Dengan demikian setiap sistem dievaluasi pada potensi konvergennya, dan perbedaan kinerja dapat diatribusikan ke arsitektur, bukan ke anggaran pelatihan yang tidak setara."
+> "Karena lineup mencakup model generatif klasik (HMM-GMM), hybrid neural-HMM, encoder-decoder from-scratch, dan model pretrained yang di-fine-tune, kami tidak menyeragamkan jumlah langkah pelatihan—praktik yang justru akan membuat sebagian arsitektur tidak konvergen atau model pretrained overfit. Sebagai gantinya kami menyeragamkan split data, fitur, tokenizer, dekoding greedy tanpa LM, metrik, dan kriteria pemilihan checkpoint (**best-on-validation WER untuk semua model**; encoder-decoder tambahan early-stop patience 12; Whisper FT `load_best_model_at_end`), serta menetapkan anggaran pelatihan maksimum per keluarga arsitektur dengan justifikasi konvensional (pretrained FT: 5 epoch; from-scratch: 30 epoch; HMM: 30 iterasi EM). Dengan demikian setiap sistem dievaluasi pada potensi konvergennya, dan perbedaan kinerja dapat diatribusikan ke arsitektur, bukan ke anggaran pelatihan yang tidak setara."
 
 ---
 
@@ -92,7 +92,7 @@ Kalimat kunci yang bisa langsung dipakai di §4.2 (adaptasi dari riset):
 | Epoch HMM-GMM | Tetap **30 EM iter** (sudah konvergen); jangan 100. Istilah: "EM iterations", bukan "epoch". |
 | Epoch ViT-Novel | **30** (fair, di Table 1) + **200** di Appendix B sebagai extended/SOTA. |
 | Whisper | **5 epoch** — pertahankan, justifikasi Radford 2022. Bukan ketidakadilan. |
-| Penyetara keadilan | data/fitur/tokenizer/decoding/metrik/seed + **early-stopping patience 10** untuk semua trainer neural. |
+| Penyetara keadilan | data/fitur/tokenizer/decoding/metrik/seed + **best-on-val checkpoint untuk semua model** (m11/m12 +patience12; m02b load_best). |
 | Wajib di paper | tabel hyperparameter per-model + justifikasi per deviasi + compute + best-on-val. |
 | Status repo | Protokol ini **sudah ada** di `reports/hyperparameter_reference/FAIR_COMPARISON_PROTOCOL.md` — keputusan ini mengonfirmasinya, hanya menambah landasan riset + koreksi terminologi epoch HMM. |
 
