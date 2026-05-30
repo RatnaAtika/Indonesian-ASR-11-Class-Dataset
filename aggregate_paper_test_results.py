@@ -120,6 +120,8 @@ def aggregate(out_dir: Path):
         else:
             r = load_test_result(tj)
             if r:
+                r["model_id"] = slot_id
+                r["family"] = family
                 r["paper_position"] = pos
                 r["is_user_novel"] = is_novel
                 r["status"] = "OK"

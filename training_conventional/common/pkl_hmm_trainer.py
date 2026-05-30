@@ -623,6 +623,21 @@ def main():
     best_path = ckpt_dir / best_name
     pointer_path = ckpt_dir / "best.pkl"
     
+    # [FAIRNESS-C] For DNN modes, the .pkl artifact (loaded by pkl_hmm_test.py) must
+    # carry the BEST-epoch DNN weights (best-on-val), not the last-epoch model. The
+    # per-epoch BestCheckpointTracker wrote them to checkpoints/best.pt; prefer that.
+    def _best_dnn_state():
+        bp = ckpt_dir / "best.pt"
+        if bp.exists():
+            try:
+                bd = torch.load(bp, map_location="cpu", weights_only=False)
+                if bd.get("model_state") is not None:
+                    return bd["model_state"]
+            except Exception:
+                pass
+        m = result.get("model")
+        return m.state_dict() if hasattr(m, "state_dict") else None
+
     if args.mode == "hmm_gmm":
         # result["models"] is dict of hmmlearn objects — pickle-able
         artifact = {
@@ -633,7 +648,7 @@ def main():
     elif args.mode == "dnn_hmm":
         artifact = {
             "mode": "dnn_hmm",
-            "model_state": result["model"].state_dict() if hasattr(result["model"], "state_dict") else None,
+            "model_state": _best_dnn_state(),
             "wer": metrics["wer"], "cer": metrics["cer"],
             "args": vars(args), "n_params": result.get("n_params"),
             "history_dnn": result.get("history_dnn"),
@@ -641,6 +656,7 @@ def main():
     else:  # gmm_hmm_dnn
         artifact = {
             "mode": "gmm_hmm_dnn",
+            "model_state": _best_dnn_state(),  # was MISSING -> test ran random-init DNN
             "stage1_metrics": result.get("stage1_metrics"),
             "stage3_metrics": result.get("stage3_metrics"),
             "wer": metrics["wer"], "cer": metrics["cer"],

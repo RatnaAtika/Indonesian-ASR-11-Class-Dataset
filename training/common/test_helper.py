@@ -156,10 +156,28 @@ def find_best_checkpoint(run_dir: Path) -> Dict:
     if final_pkls:
         return _resolve_best_meta(final_pkls[0], "pkl", ckpt_dir)
     
-    # Strategy 4: epoch_NNN.pt (last)
+    # Strategy 4: epoch_NNN.pt — pick the epoch with best (lowest) val WER from
+    # history.json when available; else fall back to the last epoch. This protects
+    # paper integrity when best.pt was not written (e.g. interrupted/legacy runs):
+    # never report a worse-than-best checkpoint.
     epoch_pts = sorted(ckpt_dir.glob("epoch_*.pt"))
     if epoch_pts:
-        return _resolve_best_meta(epoch_pts[-1], "pt", ckpt_dir)
+        chosen = epoch_pts[-1]
+        hist_p = run_dir / "history.json"
+        if hist_p.exists():
+            try:
+                import json as _json
+                rows = _json.loads(hist_p.read_text(encoding="utf-8"))
+                rows = rows if isinstance(rows, list) else rows.get("epochs", [])
+                best_row = min((r for r in rows if r.get("wer") is not None),
+                               key=lambda r: r["wer"], default=None)
+                if best_row is not None:
+                    cand = ckpt_dir / f"epoch_{int(best_row['epoch']):03d}.pt"
+                    if cand.exists():
+                        chosen = cand
+            except Exception:
+                pass
+        return _resolve_best_meta(chosen, "pt", ckpt_dir)
     
     # Strategy 5: HF Trainer checkpoints (checkpoint-NNN/)
     hf_ckpts = sorted([d for d in ckpt_dir.iterdir() if d.is_dir() and d.name.startswith("checkpoint-")])
