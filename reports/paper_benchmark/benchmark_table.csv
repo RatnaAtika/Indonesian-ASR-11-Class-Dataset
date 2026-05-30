@@ -1,0 +1,10 @@
+rank,slot,family,wer,cer,mer,wil,ser,wall_time_sec,peak_gpu_mb,n_epochs_trained,best_train_epoch,best_train_wer,is_user_novel,status
+1,m08-hmm-gmm,HMM-GMM template classifier,1.1687344913151365,0.898019801980198,0.9271653543307087,0.9932059553349876,0.94,0.54,0.0,1,1,1.1687344913151365,False,OK
+,m09-dnn-hmm,DNN-HMM (hybrid),,,,,,,,,,,False,MISSING
+,m10-gmm-hmm-dnn,GMM-HMM-DNN (3-stage),,,,,,,,,,,False,MISSING
+,m11-vanilla-transformer,Vanilla Transformer (Vaswani 2017),,,,,,,,,,,False,MISSING
+,m12-vit-modified-ID,ViT-modified-ID (Ratna 2026),,,,,,,,,,,True,MISSING
+,m13-wav2letter,Wav2Letter CNN-CTC (Collobert 2016),,,,,,,,,,,False,MISSING
+,m07-bilstm-ctc,Bi-LSTM CTC,,,,,,,,,,,False,MISSING
+,m06-conformer-ctc,Conformer-CTC (Gulati 2020),,,,,,,,,,,False,MISSING
+,m02b-whisper-medium-ft,Whisper-medium FT (Radford 2022),,,,,,,,,,,False,MISSING

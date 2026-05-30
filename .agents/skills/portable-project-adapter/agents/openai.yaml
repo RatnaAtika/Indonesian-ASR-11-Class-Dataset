@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portable Project Adapter"
+  short_description: "Adapt reusable skills to the current repository"
+  default_prompt: "Use this skill first when moving reusable skills into a new project. Read the local repo, choose the right profile, and strip source-project assumptions."

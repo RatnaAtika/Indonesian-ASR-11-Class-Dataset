@@ -1,0 +1,22 @@
+[
+  {
+    "pred": "saya membukan terkmebjasi kempatuisatat iku ka palynba",
+    "label": "saya membutuhkan rekomendasi tempat wisata di kota palembang"
+  },
+  {
+    "pred": "kmbisetan memese kantukas sempo mu mata puiahsisem kantol",
+    "label": "kami sedang mengerjakan tugas kelompok untuk mata kuliah sistem kontrol"
+  },
+  {
+    "pred": "susan pemimi memberian panya mas kan iyan membanun",
+    "label": "dosen pembimbing memberikan banyak masukan yang membangun"
+  },
+  {
+    "pred": "tunkunanaka eni ian positi sana enbukun perors ilasa",
+    "label": "lingkungan akademik yang positif sangat mendukung proses belajar"
+  },
+  {
+    "pred": "mahswa pemu menan ku atu endan pari an parakuia ken pektiatan mlainiya",
+    "label": "mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya"
+  }
+]

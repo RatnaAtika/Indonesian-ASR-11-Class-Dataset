@@ -1,0 +1,158 @@
+ Selesai. Infrastruktur replay penuh terbangun — kapanpun butuh ulang plot dengan format jurnal beda, tanpa
+ retrain.
+
+ Yang Disimpan Setiap Model (14 trainer)
+
+ Setiap runs/run_full_<YYYYMMDD>/ berisi 8 artifact lengkap:
+
+ ┌───────────────────────────────────┬──────────────────────────────────────────────────────────────────────┐
+ │ File                              │ Isi                                                                  │
+ ├───────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+ │ history.json                      │ Semua metric per epoch (loss, acc, WER, CER, MER, WIL, GPU, lr,      │
+ │                                   │ throughput, time)                                                    │
+ ├───────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+ │ meta.json ★ NEW                   │ Identity model + family + era + env (Python, torch, CUDA, libs) +    │
+ │                                   │ replay command                                                       │
+ ├───────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+ │ log.txt                           │ Rich log per epoch (format Bi-LSTM/T-RCNN style)                     │
+ ├───────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+ │ config.json                       │ CLI args lengkap                                                     │
+ ├───────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+ │ predictions/sample_preds_e{N}.txt │ 5 PRED/LABEL pairs per epoch                                         │
+ ├───────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+ │ plots/                            │ Default plot saat training                                           │
+ ├───────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+ │ checkpoints/                      │ Model state                                                          │
+ ├───────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+ │ report.md                         │ Auto-summary                                                         │
+ └───────────────────────────────────┴──────────────────────────────────────────────────────────────────────┘
+
+ Kunci: untuk replot hanya butuh history.json (~200 KB) — tidak perlu audio data, GPU, model checkpoint, atau
+ internet.
+
+ 6 Journal Style Preset Built-in
+
+ ```bash
+   $ python3 training/common/journal_plotting.py --list-styles
+     ieee        IEEE (1-col, sans-serif, BW-friendly)         figsize=(3.487, 2.6)
+     acm         ACM (1-col, serif, color-friendly)            figsize=(3.33, 2.5)
+     springer    Springer LNCS (single-col, serif)             figsize=(4.6, 3.0)
+     elsevier    Elsevier (1-col, sans-serif, color OK)        figsize=(3.5, 2.7)
+     thesis      Thesis / dissertation (full-page)             figsize=(6.5, 4.0)
+     plain       Plain default                                 figsize=(8.0, 5.0)
+ ```
+
+ Setiap style menentukan: figsize (sesuai column-width jurnal), font family + size, line styles (dashed untuk
+ BW print), grid policy, default DPI (600 untuk paper, 300 untuk thesis).
+
+ 4 Cara Replot
+
+ ### 1. Per-model satu style
+
+ ```bash
+   python3 training/common/journal_plotting.py \
+     --run-dir training/m02_whisper_small/runs/run_full_20260601 \
+     --style ieee --formats png pdf svg
+ ```
+
+ Output: runs/run_full_20260601/plots_ieee/ dengan 7 plot × 3 format = 21 file (loss, acc, wer_cer, lr,
+ gpu_mb, throughput, combined_4panel untuk paper Figure 1).
+
+ ### 2. Semua 14 model satu style
+
+ ```bash
+   python3 replot_all.py --style ieee --pattern "run_full*" \
+     --out-root reports/paper_figures_ieee
+ ```
+
+ Output 1 folder reports/paper_figures_ieee/ berisi 14 sub-folder model.
+
+ ### 3. Multi-model overlay (paper Figure 2)
+
+ ```bash
+   python3 replot_compare.py \
+     --runs training/m02_whisper_small/runs/run_full_*  \
+            training_conventional/m12_vit_modified/runs/run_full_* \
+     --labels "Whisper-small ★" "ViT-modified-ID ★" \
+     --metrics wer cer train_loss val_loss \
+     --style ieee --formats png pdf \
+     --out reports/paper_figures_ieee/figure2_overlay.png
+ ```
+
+ Output: 1 figure 4-panel berisi 4 metric × N model overlay.
+
+ ### 4. Semua 6 style sekaligus
+
+ ```bash
+   for STYLE in ieee acm springer elsevier thesis plain; do
+     python3 replot_all.py --style $STYLE --pattern "run_full*" \
+       --out-root reports/paper_figures_$STYLE
+   done
+ ```
+
+ Hasil: 6 folder × 14 model × 7 plot × 2 format ≈ 1,176 file paper-ready, 25 menit total.
+
+ Verifikasi (smoke runs)
+
+ ┌──────────┬────────────────────────────────┬────────────┐
+ │ Style    │ File output (1 model, PNG+PDF) │ Total size │
+ ├──────────┼────────────────────────────────┼────────────┤
+ │ ieee     │ 15 files                       │ 872 KB     │
+ ├──────────┼────────────────────────────────┼────────────┤
+ │ acm      │ 15 files                       │ 944 KB     │
+ ├──────────┼────────────────────────────────┼────────────┤
+ │ springer │ 15 files                       │ 992 KB     │
+ ├──────────┼────────────────────────────────┼────────────┤
+ │ elsevier │ 15 files                       │ 952 KB     │
+ ├──────────┼────────────────────────────────┼────────────┤
+ │ thesis   │ 15 files                       │ 664 KB     │
+ ├──────────┼────────────────────────────────┼────────────┤
+ │ plain    │ 15 files                       │ 644 KB     │
+ └──────────┴────────────────────────────────┴────────────┘
+
+ Demo overlay sudah dihasilkan di reports/replot_demo/smoke_compare_ieee.{png,pdf} (4 model, 4 metric).
+
+ Workflow Lengkap untuk Paper
+
+ ```bash
+   # 0. Training di terminal terpisah (RUN_GUIDE.md) → menghasilkan history.json per model
+   # 1. Aggregate ke Tabel 1
+   python3 aggregate_all_models.py
+   # 2. Per-model figure dalam style jurnal target
+   python3 replot_all.py --style ieee --pattern "run_full*" \
+     --out-root reports/paper_figures_ieee --formats pdf png
+   # 3. Multi-model overlay Figure 2
+   python3 replot_compare.py --auto-discover --metrics wer cer \
+     --style ieee --formats pdf \
+     --out reports/paper_figures_ieee/figure2_overlay.pdf
+   # 4. (opsional) Style alternatif untuk preferensi co-author
+   for S in acm springer thesis; do
+     python3 replot_all.py --style $S --pattern "run_full*" \
+       --out-root reports/paper_figures_$S --formats pdf
+   done
+ ```
+
+ Status Project
+
+ ```
+   Paper_Datatset_SOTA/
+   ├── aggregate_all_models.py        17 KB — agregasi 17-model untuk paper Tabel 1
+   ├── replot_all.py                  5.5 KB — re-plot semua 14 model
+   ├── replot_compare.py              7.1 KB — overlay multi-model
+   ├── REPLAY_GUIDE.md                10 KB — dokumentasi lengkap re-plotting
+   ├── RUN_GUIDE.md                   10 KB — workflow run per-terminal
+   ├── training/common/journal_plotting.py        17.8 KB — 6 style + plot helpers
+   ├── training_conventional/common/journal_plotting.py  (synced)
+   ├── training/{m01..m07}/                       7 modern model trainer + smoke runs
+   ├── training_conventional/{m08..m14}/          7 conventional model trainer + smoke runs
+   └── reports/
+       ├── all_models_full/                       agregator output
+       ├── paper_figures_<style>/                 (akan terisi setelah replot)
+       └── replot_demo/                           demo overlay sudah dihasilkan
+ ```
+
+ Semua 14 trainer (whisper_trainer, wav2vec2_trainer, from_scratch_trainer, pkl_cnn_ctc_trainer,
+ pkl_hmm_trainer) sudah menyimpan meta.json + history.json + log.txt + predictions/ lengkap.
+
+ Detail lengkap workflow re-plotting ada di REPLAY_GUIDE.md — termasuk cara tambah preset style baru
+ (STYLES["nature"] example) jika jurnal target butuh format custom yang belum ada di 6 preset default.

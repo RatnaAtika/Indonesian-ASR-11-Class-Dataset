@@ -1,0 +1,54 @@
+schema_version: 1
+generated_at: "2026-05-20T02:46:32Z"
+project_root: "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA"
+
+mode: "harness-managed"
+notes: |
+  9router endpoint detected (http://127.0.0.1:11434/v1); harness routes the model
+
+harness:
+  detected: "codex"
+
+nine_router:
+  detected: "http://127.0.0.1:11434/v1"
+  notes: |
+    9router (or any compatible local gateway) handles model routing
+    transparently. Skills consume capability flags below; they don't need
+    to know which underlying model the gateway picked.
+
+provider:
+  active: "harness-managed"
+  api_base: "http://127.0.0.1:11434/v1"
+  model: ""
+  env_var: ""
+  env_present: false
+  tool_format: "harness-managed"
+  context_window: 128000
+  reasoning: true
+  vision: true
+  audio: false
+  prompt_caching: true
+  output_token_cap: 8192
+
+skills_capability_flags:
+  long_context_load_all: true
+  use_reasoning_blocks: true
+  use_vision: true
+  use_audio: false
+  use_prompt_caching: true
+
+# Optional fallback when the active provider lacks a capability a skill
+# needs (e.g. vision). Leave empty to let the harness handle it.
+fallback_provider:
+  active: ""
+  model: ""
+  env_var: ""
+  env_present: false
+
+usage_notes: |
+  Default behavior: trust the harness for model routing. Switch via:
+    scripts/configure.sh --provider <id> --model <id> --force
+    scripts/configure.sh --probe-env --force          # auto-detect from env
+  Pin explicitly to 9router:
+    scripts/configure.sh --provider nine-router --force
+  This file stores ENV VAR NAMES, never secret values.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "PDF Toolkit"
+  short_description: "Extract, build, redact, sign, OCR"
+  default_prompt: "Use this skill to extract text/tables/images from PDFs, generate PDFs from HTML/Markdown/typst, redact safely, sign (PAdES), or OCR scans. Picks the right tool per task."

@@ -1,0 +1,69 @@
+{
+  "model_id": "hmm-trainer-gmm_hmm_dnn",
+  "family": "Hybrid-GMM-HMM-DNN",
+  "era": "2010s",
+  "notes": "Conventional gmm_hmm_dnn trainer. Replot: python3 -m common.journal_plotting --run-dir <this_dir> --style ieee",
+  "config": {
+    "mode": "gmm_hmm_dnn",
+    "run_dir": "training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260529_164211",
+    "data_pkl_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl",
+    "spm_model": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/spm/spm_v7_char.model",
+    "max_train_samples": 0,
+    "max_val_samples": 0,
+    "hmm_states": 5,
+    "hmm_mixtures": 3,
+    "hmm_iters": 30,
+    "cov_type": "diag",
+    "dnn_hidden": 512,
+    "dnn_layers": 4,
+    "dnn_context": 5,
+    "dnn_epochs": 30,
+    "dnn_batch_size": 12000,
+    "dnn_lr": 0.001,
+    "seed": 42
+  },
+  "dataset_info": {
+    "data_pkl_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl",
+    "spm_model": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/spm/spm_v7_char.model"
+  },
+  "environment": {
+    "python": "3.10.18",
+    "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "timestamp": "2026-05-29T16:42:23.341869",
+    "torch_version": "2.10.0+cu128",
+    "transformers_version": "4.57.6",
+    "librosa_version": "0.11.0",
+    "soundfile_version": "0.13.1",
+    "sentencepiece_version": "0.2.0",
+    "hmmlearn_version": "0.3.3",
+    "jiwer_version": "unknown",
+    "numpy_version": "1.26.4",
+    "scipy_version": "1.14.1",
+    "pandas_version": "2.3.3",
+    "matplotlib_version": "3.10.9",
+    "seaborn_version": "0.13.2",
+    "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda_version": "12.8",
+    "cudnn_version": 91002
+  },
+  "replay": {
+    "history_path": "training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260529_164211/history.json",
+    "log_path": "training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260529_164211/log.txt",
+    "predictions_dir": "training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260529_164211/predictions",
+    "replot_command": "python3 -m common.journal_plotting --run-dir 'training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260529_164211' --style ieee --formats png pdf",
+    "available_styles": [
+      "ieee",
+      "acm",
+      "springer",
+      "elsevier",
+      "thesis",
+      "plain"
+    ],
+    "available_formats": [
+      "png",
+      "pdf",
+      "svg",
+      "eps"
+    ]
+  }
+}

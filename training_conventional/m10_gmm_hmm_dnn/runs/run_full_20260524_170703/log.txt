@@ -1,0 +1,32 @@
+============================================================
+[17:28:31] Epoch 1/1 | Current LR: 0.000000
+Current Learning Rate: 0.0000000000
+Train Loss: n/a
+Validation Loss: n/a
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 4.725062
+CER: 4.126358
+[Mode] gmm_hmm_dnn
+[Train] stage1+stage3 hybrid; accuracy=1-CER proxy
+Durasi epoch: 00:20:52
+Total elapsed time: 00:20:58
+GPU memory usage: 0 MB
+Throughput: 1.60 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: S  S perR Sayabahm  rekomendasim mem ubutuhkan an tu itas rekomendasi u rekomendasi tinggi rekomendasi  dahng rumahstemi
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: S peri se menyedao mendangning ngsa  meng menar men  men ntuk2n ada  rekomendasi ltemstems S  mengkansakan tugas  t tuga
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: S  peraplap dinlors sengtan di kampustribusi m daano0mnimbiaimim ya0 menbimitasiwalng  mem  tugasa bagii antar adaatanan
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: S kotaingink saLtaing  Palembangi men positif menjagakuntuk kelompokku dGan  ke tanLngyaakan akhir semesteran semesterul
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: S kampus meng semesterMsdaahtaah memta perlu meng tjadi tperlu mengperluspo Asi Au Aatursiatur d  tuli kelompokatur wakt
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=n/a | Val Loss=n/a | Train Acc=0.0000 | Val Acc=0.0000 | WER=4.7251 | CER=4.1264 | Time=00:20:52 | GPU=0MB

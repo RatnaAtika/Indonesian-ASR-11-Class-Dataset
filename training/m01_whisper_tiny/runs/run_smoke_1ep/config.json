@@ -1,0 +1,18 @@
+{
+  "model_id": "openai/whisper-tiny",
+  "run_dir": "m01_whisper_tiny/runs/run_smoke_1ep",
+  "data_root": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19",
+  "data_final": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/data_final",
+  "epochs": 1,
+  "batch_size": 4,
+  "grad_accum": 1,
+  "lr": 1e-05,
+  "warmup_steps": 5,
+  "max_train_samples": 50,
+  "max_val_samples": 20,
+  "language": "indonesian",
+  "task": "transcribe",
+  "gradient_checkpointing": false,
+  "fp16": true,
+  "seed": 42
+}

@@ -1,0 +1,501 @@
+hyp,ref,cer,wer,text
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya yakin usaha tidak akan mengkhianati hasil.,0.7659574468085106,0.8571428571428571,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya percaya bahwa belajar adalah investasi jangka panjang,0.896551724137931,1.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Ujian akhir semester akan dilaksanakan minggu depan,1.0784313725490196,1.4285714285714286,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Dosen pembimbing memberikan banyak masukan yang membangun.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.7358490566037735,1.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Transportasi LRT sangat membantu mobilitas warga,Transportasi LRT sangat membantu mobilitas warga,0.0,0.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Saya bangga menjadi bagian dari masyarakat Palembang.,0.8490566037735849,1.1428571428571428,Saya bangga menjadi bagian dari masyarakat Palembang.
+Transportasi LRT sangat membantu mobilitas warga,Transportasi LRT sangat membantu mobilitas warga,0.0,0.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.75,1.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Transportasi LRT sangat membantu mobilitas warga,1.2083333333333333,1.6666666666666667,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.75,1.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Kita harus menjaga lingkungan untuk generasi mendatang,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.75,0.875,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya yakin usaha tidak akan mengkhianati hasil.,0.7659574468085106,0.8571428571428571,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.7241379310344828,0.875,Saya percaya bahwa belajar adalah investasi jangka panjang
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Ujian akhir semester akan dilaksanakan minggu depan,1.0784313725490196,1.4285714285714286,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Dosen pembimbing memberikan banyak masukan yang membangun.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.7358490566037735,1.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Transportasi LRT sangat membantu mobilitas warga,Transportasi LRT sangat membantu mobilitas warga,0.0,0.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Kita harus menjaga lingkungan untuk generasi mendatang,Saya yakin usaha tidak akan mengkhianati hasil.,0.7659574468085106,1.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya percaya bahwa belajar adalah investasi jangka panjang,0.896551724137931,1.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Ujian akhir semester akan dilaksanakan minggu depan,1.0784313725490196,1.4285714285714286,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Kita harus menjaga lingkungan untuk generasi mendatang,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.7454545454545455,1.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Saya bangga menjadi bagian dari masyarakat Palembang.,0.8490566037735849,1.1428571428571428,Saya bangga menjadi bagian dari masyarakat Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Transportasi LRT sangat membantu mobilitas warga,0.9166666666666666,1.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.7241379310344828,0.8571428571428571,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Kita harus menjaga lingkungan untuk generasi mendatang,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.75,0.875,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Kita harus menjaga lingkungan untuk generasi mendatang,Saya yakin usaha tidak akan mengkhianati hasil.,0.7659574468085106,1.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Ujian akhir semester akan dilaksanakan minggu depan,1.0784313725490196,1.4285714285714286,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Lingkungan akademik yang positif sangat mendukung proses belajar,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.9272727272727272,1.1428571428571428,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Transportasi LRT sangat membantu mobilitas warga,0.9166666666666666,1.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Transportasi LRT sangat membantu mobilitas warga,Dosen pembimbing memberikan banyak masukan yang membangun.,0.7931034482758621,1.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Lingkungan akademik yang positif sangat mendukung proses belajar,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.9272727272727272,1.1428571428571428,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Transportasi LRT sangat membantu mobilitas warga,Transportasi LRT sangat membantu mobilitas warga,0.0,0.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya percaya bahwa belajar adalah investasi jangka panjang,0.896551724137931,1.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Ujian akhir semester akan dilaksanakan minggu depan,1.0784313725490196,1.4285714285714286,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Transportasi LRT sangat membantu mobilitas warga,Transportasi LRT sangat membantu mobilitas warga,0.0,0.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.7241379310344828,0.875,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Transportasi LRT sangat membantu mobilitas warga,Transportasi LRT sangat membantu mobilitas warga,0.0,0.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya yakin usaha tidak akan mengkhianati hasil.,0.7446808510638298,0.8571428571428571,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.7241379310344828,0.875,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Transportasi LRT sangat membantu mobilitas warga,Transportasi LRT sangat membantu mobilitas warga,0.0,0.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Kita harus menjaga lingkungan untuk generasi mendatang,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.7454545454545455,1.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Transportasi LRT sangat membantu mobilitas warga,0.9166666666666666,1.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Transportasi LRT sangat membantu mobilitas warga,Transportasi LRT sangat membantu mobilitas warga,0.0,0.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.75,1.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.7241379310344828,0.8571428571428571,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Transportasi LRT sangat membantu mobilitas warga,Transportasi LRT sangat membantu mobilitas warga,0.0,0.0,Transportasi LRT sangat membantu mobilitas warga
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.7123287671232876,0.8888888888888888,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Lingkungan akademik yang positif sangat mendukung proses belajar,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.8088235294117647,1.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Transportasi LRT sangat membantu mobilitas warga,0.9166666666666666,1.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Lingkungan akademik yang positif sangat mendukung proses belajar,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.8088235294117647,1.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.7241379310344828,0.8571428571428571,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Saya yakin usaha tidak akan mengkhianati hasil.,0.8723404255319149,1.1428571428571428,Saya yakin usaha tidak akan mengkhianati hasil.
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Saya percaya bahwa belajar adalah investasi jangka panjang,0.8275862068965517,1.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Transportasi LRT sangat membantu mobilitas warga,0.9166666666666666,1.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya yakin usaha tidak akan mengkhianati hasil.,0.7659574468085106,0.8571428571428571,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Ujian akhir semester akan dilaksanakan minggu depan,1.0784313725490196,1.4285714285714286,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Transportasi LRT sangat membantu mobilitas warga,Transportasi LRT sangat membantu mobilitas warga,0.0,0.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.7241379310344828,0.8571428571428571,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.7636363636363637,1.3333333333333333,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Transportasi LRT sangat membantu mobilitas warga,0.9166666666666666,1.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Dosen pembimbing memberikan banyak masukan yang membangun.,1.0,1.4285714285714286,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya yakin usaha tidak akan mengkhianati hasil.,0.7446808510638298,0.8571428571428571,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.7241379310344828,0.875,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Transportasi LRT sangat membantu mobilitas warga,Transportasi LRT sangat membantu mobilitas warga,0.0,0.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.75,1.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.7241379310344828,0.8571428571428571,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya percaya bahwa belajar adalah investasi jangka panjang,0.6724137931034483,0.875,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Transportasi LRT sangat membantu mobilitas warga,0.9166666666666666,1.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Ujian akhir semester akan dilaksanakan minggu depan,Dosen pembimbing memberikan banyak masukan yang membangun.,0.6379310344827587,1.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya percaya bahwa belajar adalah investasi jangka panjang,0.7241379310344828,0.875,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Transportasi LRT sangat membantu mobilitas warga,0.9166666666666666,1.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.75,1.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Ujian akhir semester akan dilaksanakan minggu depan,Dosen pembimbing memberikan banyak masukan yang membangun.,0.6379310344827587,1.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya yakin usaha tidak akan mengkhianati hasil.,0.7446808510638298,0.8571428571428571,Saya yakin usaha tidak akan mengkhianati hasil.
+Kita harus menjaga lingkungan untuk generasi mendatang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.7413793103448276,1.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Kita harus menjaga lingkungan untuk generasi mendatang,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.7051282051282052,1.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Kampus menyediakan fasilitas laboratorium yang lengkap.,1.018181818181818,1.8333333333333333,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Kita harus menjaga lingkungan untuk generasi mendatang,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.7454545454545455,1.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Transportasi LRT sangat membantu mobilitas warga,0.9166666666666666,1.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Dosen pembimbing memberikan banyak masukan yang membangun.,0.7068965517241379,0.8571428571428571,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.6883116883116883,1.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya percaya bahwa belajar adalah investasi jangka panjang,0.6724137931034483,0.875,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Transportasi LRT sangat membantu mobilitas warga,Transportasi LRT sangat membantu mobilitas warga,0.0,0.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.75,1.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Transportasi LRT sangat membantu mobilitas warga,Dosen pembimbing memberikan banyak masukan yang membangun.,0.7931034482758621,1.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Kita harus menjaga lingkungan untuk generasi mendatang,Saya yakin usaha tidak akan mengkhianati hasil.,0.7659574468085106,1.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Transportasi LRT sangat membantu mobilitas warga,0.9166666666666666,1.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Lingkungan akademik yang positif sangat mendukung proses belajar,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.8088235294117647,1.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.75,1.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Ujian akhir semester akan dilaksanakan minggu depan,Dosen pembimbing memberikan banyak masukan yang membangun.,0.6379310344827587,1.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya yakin usaha tidak akan mengkhianati hasil.,0.7659574468085106,0.8571428571428571,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.8205128205128205,1.1,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Transportasi LRT sangat membantu mobilitas warga,0.9166666666666666,1.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.75,1.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Dosen pembimbing memberikan banyak masukan yang membangun.,0.7068965517241379,0.8571428571428571,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Kita harus menjaga lingkungan untuk generasi mendatang,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.75,0.875,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya yakin usaha tidak akan mengkhianati hasil.,0.7659574468085106,0.8571428571428571,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Kita harus menjaga lingkungan untuk generasi mendatang,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.7051282051282052,1.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Transportasi LRT sangat membantu mobilitas warga,1.1041666666666667,1.6666666666666667,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup
+Kita harus menjaga lingkungan untuk generasi mendatang,Kita harus menjaga lingkungan untuk generasi mendatang,0.0,0.0,Kita harus menjaga lingkungan untuk generasi mendatang
+Saya yakin usaha tidak akan mengkhianati hasil.,Saya yakin usaha tidak akan mengkhianati hasil.,0.0,0.0,Saya yakin usaha tidak akan mengkhianati hasil.
+Saya percaya bahwa belajar adalah investasi jangka panjang,Saya percaya bahwa belajar adalah investasi jangka panjang,0.0,0.0,Saya percaya bahwa belajar adalah investasi jangka panjang
+Ujian akhir semester akan dilaksanakan minggu depan,Ujian akhir semester akan dilaksanakan minggu depan,0.0,0.0,Ujian akhir semester akan dilaksanakan minggu depan
+Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.,0.0,0.0,Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+Kampus menyediakan fasilitas laboratorium yang lengkap.,Kampus menyediakan fasilitas laboratorium yang lengkap.,0.0,0.0,Kampus menyediakan fasilitas laboratorium yang lengkap.
+Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.,0.0,0.0,Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+Perpustakaan kampus menyediakan banyak referensi ilmiah,Perpustakaan kampus menyediakan banyak referensi ilmiah,0.0,0.0,Perpustakaan kampus menyediakan banyak referensi ilmiah
+Saya aktif mengikuti organisasi kemahasiswaan di kampus,Saya aktif mengikuti organisasi kemahasiswaan di kampus,0.0,0.0,Saya aktif mengikuti organisasi kemahasiswaan di kampus
+Saya bangga menjadi bagian dari masyarakat Palembang.,Saya bangga menjadi bagian dari masyarakat Palembang.,0.0,0.0,Saya bangga menjadi bagian dari masyarakat Palembang.
+Transportasi LRT sangat membantu mobilitas warga,Transportasi LRT sangat membantu mobilitas warga,0.0,0.0,Transportasi LRT sangat membantu mobilitas warga
+Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan,0.0,0.0,Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta,0.0,0.0,Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta
+Saya membutuhkan rekomendasi tempat wisata di kota Palembang,Saya membutuhkan rekomendasi tempat wisata di kota Palembang,0.0,0.0,Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.,0.0,0.0,Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+Dosen pembimbing memberikan banyak masukan yang membangun.,Dosen pembimbing memberikan banyak masukan yang membangun.,0.0,0.0,Dosen pembimbing memberikan banyak masukan yang membangun.
+Lingkungan akademik yang positif sangat mendukung proses belajar,Lingkungan akademik yang positif sangat mendukung proses belajar,0.0,0.0,Lingkungan akademik yang positif sangat mendukung proses belajar
+Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya,0.0,0.0,Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+Semua makhluk hidup membutuhkan air untuk bertahan hidup,Semua makhluk hidup membutuhkan air untuk bertahan hidup,0.0,0.0,Semua makhluk hidup membutuhkan air untuk bertahan hidup

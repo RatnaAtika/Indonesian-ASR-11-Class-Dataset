@@ -1,0 +1,22 @@
+01|Robot, tolong ambilkan remote itu !
+02|Tunjukkan dimana penghapus papan tulis berada !
+03|Ambilkan botol minum itu!
+04|Letakkan botol ini ke meja!
+05|Antarkan spidol ini ke pak rendy
+06|Antarkan cangkir ini ke pak firdaus 
+07|Ambilkan spidol itu
+08|Robot, tolong jelaskan panduan keselamatan sebelum memulai praktikum di lab ini 
+09|Jelaskan cara kerja remote ini secara singkat.
+10|Jelaskan cara menggunakan penghapus ini kepada mahasiswa
+11|Ambilkan penghapus di atas meja itu !
+12|Letakkan cangkir ini diatas meja
+13|Ambilkan saya remote itu !
+14|Tunjukkan dimana botol minum !
+15|Letakkan kembali penghapus ini ke tempatnya
+16|Antarkan spidol ini ke pak firdaus
+17|Sebutkan alat apa saja yang akan digunakan pada praktikum mikrokontroller 
+18|Tolong ambilkan cangkir itu
+19|letakkan remote ini ke meja
+
+Note :
+20 sengaja dibuang untuk penyetaraan 19 kalimat biar seimbang

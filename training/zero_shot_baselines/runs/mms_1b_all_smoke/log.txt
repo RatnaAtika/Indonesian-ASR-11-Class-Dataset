@@ -1,0 +1,26 @@
+
+============================================================
+Zero-shot facebook/mms-1b-all on test
+Samples: 30
+WER: 0.3361  CER: 0.0668
+MER: 0.3333  WIL: 0.5482
+Time: 00:00:03
+GPU: 3901 MB
+Throughput: 9.03 samples/sec
+============================================================
+
+=== Sample predictions ===
+PRED:  saya membuntukkan rekomenasi tempak lusata di kota palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED:  kami sedang mengerjakan tugas kelompok untuk mata kulea sistem kontrol
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED:  dosan pemimping memberikan banyak masukan yang membangun
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED:  lingkungan akademik yang positif sangat menukung proses pelajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED:  masiswa perlu mengatur waktu dengan baik antara kulia dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya

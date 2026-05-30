@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Delivery"
+  short_description: "Portable commit, push, and PR workflow"
+  default_prompt: "Use this skill when the current repository needs commit, push, PR, CI, or GitHub review workflow support."

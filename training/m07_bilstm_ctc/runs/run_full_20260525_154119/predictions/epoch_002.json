@@ -1,0 +1,22 @@
+[
+  {
+    "pred": "saya membutuhkan trekmendasi tempat wisatat ikuta pa lenbang",
+    "label": "saya membutuhkan rekomendasi tempat wisata di kota palembang"
+  },
+  {
+    "pred": "kambisa kan menbersjakan tugas kelmo untuk mata kuliah sistem kontrol",
+    "label": "kami sedang mengerjakan tugas kelompok untuk mata kuliah sistem kontrol"
+  },
+  {
+    "pred": "dosen pembimbing memberikan bpan ya masukan yang membangun",
+    "label": "dosen pembimbing memberikan banyak masukan yang membangun"
+  },
+  {
+    "pred": "lingkungan akas pemik yang positif sangat mendukung proses belasjar",
+    "label": "lingkungan akademik yang positif sangat mendukung proses belajar"
+  },
+  {
+    "pred": "mahasiswa perlu mengatur waktu dengan bearik an tea kuliahstan ketiaptan melainya",
+    "label": "mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya"
+  }
+]

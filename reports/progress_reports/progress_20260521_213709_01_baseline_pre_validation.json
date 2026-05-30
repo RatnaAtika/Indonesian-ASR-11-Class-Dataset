@@ -1,0 +1,268 @@
+{
+  "snapshot_time": "2026-05-21T21:37:09.979185",
+  "project_root": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA",
+  "datasets": {
+    "Processed_Balanced19": {
+      "path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19",
+      "exists": true,
+      "size": "n/a",
+      "n_wav": 24652
+    },
+    "Processed_Balanced19_v2": {
+      "path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v2",
+      "exists": true,
+      "size": "n/a",
+      "n_wav": 104494
+    },
+    "Processed_Balanced19_v3": {
+      "path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v3",
+      "exists": true,
+      "size": "n/a",
+      "n_wav": 104500
+    },
+    "Processed_Balanced19_v4_merged": {
+      "path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v4_merged",
+      "exists": true,
+      "size": "21M",
+      "n_wav": 114
+    },
+    "Processed_Balanced19_v5_uniform": {
+      "path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v5_uniform",
+      "exists": true,
+      "size": "n/a",
+      "n_wav": 104500
+    },
+    "Processed_Balanced19_v6_relabeled": {
+      "path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v6_relabeled",
+      "exists": true,
+      "size": "n/a",
+      "n_wav": 104500
+    },
+    "Processed_Balanced19_v7_natural_synth": {
+      "path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v7_natural_synth",
+      "exists": true,
+      "size": "n/a",
+      "n_wav": 104500
+    }
+  },
+  "metadata": {
+    "path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/metadata/dataset_metadata.csv",
+    "exists": true,
+    "n_rows": 104500,
+    "size": "41M",
+    "summary": {
+      "generated_at": "2026-05-21T21:11:49.246231",
+      "n_files_total": 104500,
+      "n_real": 104368,
+      "n_synthetic": 132,
+      "synthetic_percent": 0.1263,
+      "n_categories": 11,
+      "n_speakers": 20,
+      "categories": {
+        "Kalimat_Deklaratif": 9500,
+        "Kalimat_Klarifikasi": 9500,
+        "Kalimat_Kondisional": 9500,
+        "Kalimat_Konfirmasi": 9500,
+        "Kalimat_Negasi": 9500,
+        "Kalimat_Penjadwalan": 9500,
+        "Kalimat_Perintah": 9500,
+        "Kalimat_Persuasif": 9500,
+        "Kalimat_Retoris": 9500,
+        "Kalimat_Seruan": 9500,
+        "Kalimat_Tanya": 9500
+      },
+      "speakers": {
+        "Afgan": 5225,
+        "Ammar": 5225,
+        "Amri": 5225,
+        "Anggi": 5225,
+        "Atika": 5225,
+        "Baron": 5225,
+        "Bey": 5225,
+        "Elisa": 5225,
+        "Erlin": 5225,
+        "Fajar": 5225,
+        "Fito": 5225,
+        "Harry": 5225,
+        "Indah": 5225,
+        "Joni": 5225,
+        "Muhaimin": 5225,
+        "Nanda": 5225,
+        "Pram": 5225,
+        "Risky": 5225,
+        "Robi": 5225,
+        "Uly": 5225
+      },
+      "wall_clock_sec": 2907.14
+    }
+  },
+  "splits": {
+    "train": {
+      "path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/splits/train.tsv",
+      "n_rows": 73150
+    },
+    "dev": {
+      "path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/splits/dev.tsv",
+      "n_rows": 15675
+    },
+    "test": {
+      "path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/splits/test.tsv",
+      "n_rows": 15675
+    },
+    "summary": {
+      "generated_at": "2026-05-21T21:14:13.861340",
+      "seed": 42,
+      "config": {
+        "train": 14,
+        "dev": 3,
+        "test": 3
+      },
+      "speakers_by_split": {
+        "train": [
+          "Afgan",
+          "Ammar",
+          "Anggi",
+          "Atika",
+          "Bey",
+          "Elisa",
+          "Erlin",
+          "Fito",
+          "Harry",
+          "Indah",
+          "Muhaimin",
+          "Nanda",
+          "Risky",
+          "Uly"
+        ],
+        "dev": [
+          "Amri",
+          "Fajar",
+          "Pram"
+        ],
+        "test": [
+          "Baron",
+          "Joni",
+          "Robi"
+        ]
+      },
+      "files_by_split": {
+        "train": 73150,
+        "dev": 15675,
+        "test": 15675
+      },
+      "real_files_by_split": {
+        "train": 73028,
+        "dev": 15667,
+        "test": 15673
+      },
+      "synth_files_by_split": {
+        "train": 122,
+        "dev": 8,
+        "test": 2
+      },
+      "duration_hours_by_split": {
+        "train": 94.9437,
+        "dev": 20.2969,
+        "test": 18.9357
+      },
+      "gender_by_split": {
+        "train": {
+          "Male": 6,
+          "Female": 8
+        },
+        "dev": {
+          "Male": 3
+        },
+        "test": {
+          "Male": 2,
+          "Female": 1
+        }
+      }
+    }
+  },
+  "sessions": [
+    {
+      "name": "session_20260520_124943",
+      "exists": true,
+      "size": "460K",
+      "has_final_report": false
+    },
+    {
+      "name": "session_20260520_211815_bad_takes_synthesis",
+      "exists": true,
+      "size": "172K",
+      "has_final_report": true
+    },
+    {
+      "name": "session_20260520_215208_dataset_v4_merge",
+      "exists": true,
+      "size": "30M",
+      "has_final_report": true
+    },
+    {
+      "name": "session_20260520_222900_bad_takes_v2_report",
+      "exists": true,
+      "size": "124K",
+      "has_final_report": true
+    },
+    {
+      "name": "session_20260520_225029_dataset_duration_audit",
+      "exists": true,
+      "size": "26M",
+      "has_final_report": true
+    },
+    {
+      "name": "session_20260520_235624_dataset_v5_uniform",
+      "exists": true,
+      "size": "68M",
+      "has_final_report": true
+    },
+    {
+      "name": "session_20260521_094638_bad_takes_strategy_brainstorm",
+      "exists": true,
+      "size": "16K",
+      "has_final_report": false
+    },
+    {
+      "name": "session_20260521_100349_v6_relabel_synth",
+      "exists": true,
+      "size": "1.4M",
+      "has_final_report": true
+    },
+    {
+      "name": "session_20260521_132123_v7_natural_synth_metadata_splits",
+      "exists": true,
+      "size": "1.7M",
+      "has_final_report": true
+    },
+    {
+      "name": "session_20260521_213525_validation_reporting_training_plan",
+      "exists": true,
+      "size": "24K",
+      "has_final_report": false
+    }
+  ],
+  "synthesis": {
+    "v7_initial": {
+      "path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Whisper_Verification_Sessions/session_20260521_132123_v7_natural_synth_metadata_splits/v7_synthesis_metadata.csv",
+      "n_rows": 124
+    },
+    "v7_residual": {
+      "path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Whisper_Verification_Sessions/session_20260521_132123_v7_natural_synth_metadata_splits/v7_residual_synthesis_metadata.csv",
+      "n_rows": 8
+    },
+    "total_synthetic": 132
+  },
+  "recent_reports": [
+    {
+      "name": "dataset_duration_20260520_235655",
+      "size": "1.4M",
+      "n_files": 7
+    },
+    {
+      "name": "progress_reports",
+      "size": "0",
+      "n_files": 0
+    }
+  ]
+}

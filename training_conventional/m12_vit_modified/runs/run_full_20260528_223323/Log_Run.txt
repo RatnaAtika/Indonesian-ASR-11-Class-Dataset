@@ -1,0 +1,698 @@
+(torch-gpu) ┌──(ratna  RATNA-PC)-[/mnt/…/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA]
+└─$ python3 training_conventional/m12_vit_modified/train.py \                                           130 ⨯
+  --epochs 30 --batch-size 16 --lr 5e-4 \
+  --d-model 192 --nhead 4 --num-layers 6 --ff 256 --dropout 0.1 \
+  --input-dim 80 --amp --specaug \
+  --lambda-ctc 0.1 --scheduler plateau --seed 42
+Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.10.0+cu128).
+[m12-vit-modified-ID] resolved run_dir: /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323
+[m12-vit] cmd: python3 /mnt/c/Users/ratnaatika/AI/Dataset ASR/train_model_vit.py --train-pkl /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl/train.pkl --val-pkl /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl/valid.pkl --spm-model /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/spm/spm_v7_char.model --outdir /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323 --checkpoint /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth --epochs 30 --batch-size 16 --lr 5e-4 --d-model 192 --nhead 4 --num-layers 6 --ff 256 --dropout 0.1 --input-dim 80 --amp --specaug --lambda-ctc 0.1 --scheduler plateau --seed 42 --epochs 30 --batch-size 16 --lr 5e-4 --d-model 192 --nhead 4 --num-layers 6 --ff 256 --dropout 0.1 --input-dim 80 --amp --specaug --lambda-ctc 0.1 --scheduler plateau --seed 42
+Using device: cuda
+[Seed] seed=42 deterministic=False
+[Config] train_model_vit
+[Config] train_pkl=/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl/train.pkl
+[Config] val_pkl=/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl/valid.pkl
+[Config] spm_model=/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/spm/spm_v7_char.model
+[Config] outdir=/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323
+[Config] checkpoint=/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+[Config] epochs=30 batch_size=16 lr=0.0005
+[Config] d_model=192 nhead=4 num_layers=6 ff=256 dropout=0.1
+[Config] amp=True specaug=True
+[Config] lambda_ctc=0.1
+[Config] scheduler=plateau warmup_steps=4000
+Mapping token id:
+PAD (0): <pad>
+UNK (1): <unk>
+BOS (2): <s>
+EOS (3): </s>
+========================================================================================================================
+Layer (type:depth-idx)                        Input Shape               Output Shape              Param #
+========================================================================================================================
+TransformerASR                                [16, 100, 80]             [16, 50, 400]             400
+├─TinyViTEncoder: 1-1                         [16, 1, 100, 80]          [16, 25, 192]             --
+│    └─ConvSubsampling: 2-1                   [16, 1, 100, 80]          [16, 25, 192]             --
+│    │    └─Sequential: 3-1                   [16, 1, 100, 80]          [16, 192, 25, 20]         333,888
+│    │    └─LayerNorm: 3-2                    [16, 25, 192]             [16, 25, 192]             384
+│    └─ModuleList: 2-2                        --                        --                        --
+│    │    └─TinyViTEncoderBlock: 3-3          [16, 25, 192]             [16, 25, 192]             247,744
+│    │    └─TinyViTEncoderBlock: 3-4          [16, 25, 192]             [16, 25, 192]             247,744
+│    │    └─TinyViTEncoderBlock: 3-5          [16, 25, 192]             [16, 25, 192]             247,744
+│    │    └─TinyViTEncoderBlock: 3-6          [16, 25, 192]             [16, 25, 192]             247,744
+│    │    └─TinyViTEncoderBlock: 3-7          [16, 25, 192]             [16, 25, 192]             247,744
+│    │    └─TinyViTEncoderBlock: 3-8          [16, 25, 192]             [16, 25, 192]             247,744
+├─PositionalEncoding: 1-2                     [16, 25, 192]             [16, 25, 192]             --
+│    └─Dropout: 2-3                           [16, 25, 192]             [16, 25, 192]             --
+├─Embedding: 1-3                              [16, 50]                  [16, 50, 192]             76,800
+├─PositionalEncoding: 1-4                     [16, 50, 192]             [16, 50, 192]             --
+│    └─Dropout: 2-4                           [16, 50, 192]             [16, 50, 192]             --
+├─TransformerDecoder: 1-5                     [16, 50, 192]             [16, 50, 192]             --
+│    └─ModuleList: 2-5                        --                        --                        --
+│    │    └─TransformerDecoderLayer: 3-9      [16, 50, 192]             [16, 50, 192]             396,352
+│    │    └─TransformerDecoderLayer: 3-10     [16, 50, 192]             [16, 50, 192]             396,352
+│    │    └─TransformerDecoderLayer: 3-11     [16, 50, 192]             [16, 50, 192]             396,352
+│    │    └─TransformerDecoderLayer: 3-12     [16, 50, 192]             [16, 50, 192]             396,352
+│    │    └─TransformerDecoderLayer: 3-13     [16, 50, 192]             [16, 50, 192]             396,352
+│    │    └─TransformerDecoderLayer: 3-14     [16, 50, 192]             [16, 50, 192]             396,352
+├─Linear: 1-6                                 [16, 50, 192]             [16, 50, 400]             77,200
+========================================================================================================================
+Total params: 4,353,248
+Trainable params: 4,353,248
+Non-trainable params: 0
+Total mult-adds (G): 2.74
+========================================================================================================================
+Input size (MB): 0.52
+Forward/backward pass size (MB): 121.14
+Params size (MB): 6.74
+Estimated Total Size (MB): 128.40
+========================================================================================================================
+========================================================================================================================
+Layer (type:depth-idx)                        Input Shape               Output Shape              Param #
+========================================================================================================================
+TransformerASR                                [16, 100, 80]             [16, 50, 400]             400
+├─TinyViTEncoder: 1-1                         [16, 1, 100, 80]          [16, 25, 192]             --
+│    └─ConvSubsampling: 2-1                   [16, 1, 100, 80]          [16, 25, 192]             --
+│    │    └─Sequential: 3-1                   [16, 1, 100, 80]          [16, 192, 25, 20]         333,888
+│    │    └─LayerNorm: 3-2                    [16, 25, 192]             [16, 25, 192]             384
+│    └─ModuleList: 2-2                        --                        --                        --
+│    │    └─TinyViTEncoderBlock: 3-3          [16, 25, 192]             [16, 25, 192]             247,744
+│    │    └─TinyViTEncoderBlock: 3-4          [16, 25, 192]             [16, 25, 192]             247,744
+│    │    └─TinyViTEncoderBlock: 3-5          [16, 25, 192]             [16, 25, 192]             247,744
+│    │    └─TinyViTEncoderBlock: 3-6          [16, 25, 192]             [16, 25, 192]             247,744
+│    │    └─TinyViTEncoderBlock: 3-7          [16, 25, 192]             [16, 25, 192]             247,744
+│    │    └─TinyViTEncoderBlock: 3-8          [16, 25, 192]             [16, 25, 192]             247,744
+├─PositionalEncoding: 1-2                     [16, 25, 192]             [16, 25, 192]             --
+│    └─Dropout: 2-3                           [16, 25, 192]             [16, 25, 192]             --
+├─Embedding: 1-3                              [16, 50]                  [16, 50, 192]             76,800
+├─PositionalEncoding: 1-4                     [16, 50, 192]             [16, 50, 192]             --
+│    └─Dropout: 2-4                           [16, 50, 192]             [16, 50, 192]             --
+├─TransformerDecoder: 1-5                     [16, 50, 192]             [16, 50, 192]             --
+│    └─ModuleList: 2-5                        --                        --                        --
+│    │    └─TransformerDecoderLayer: 3-9      [16, 50, 192]             [16, 50, 192]             396,352
+│    │    └─TransformerDecoderLayer: 3-10     [16, 50, 192]             [16, 50, 192]             396,352
+│    │    └─TransformerDecoderLayer: 3-11     [16, 50, 192]             [16, 50, 192]             396,352
+│    │    └─TransformerDecoderLayer: 3-12     [16, 50, 192]             [16, 50, 192]             396,352
+│    │    └─TransformerDecoderLayer: 3-13     [16, 50, 192]             [16, 50, 192]             396,352
+│    │    └─TransformerDecoderLayer: 3-14     [16, 50, 192]             [16, 50, 192]             396,352
+├─Linear: 1-6                                 [16, 50, 192]             [16, 50, 400]             77,200
+========================================================================================================================
+Total params: 4,353,248
+Trainable params: 4,353,248
+Non-trainable params: 0
+Total mult-adds (G): 2.74
+========================================================================================================================
+Input size (MB): 0.52
+Forward/backward pass size (MB): 121.14
+Params size (MB): 6.74
+Estimated Total Size (MB): 128.40
+========================================================================================================================
+Total Parameters: 4,353,248
+/mnt/c/Users/ratnaatika/AI/Dataset ASR/train_model_vit.py:316: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=args.amp)
+Epoch 1 | Current LR: 0.000500
+Epoch 1/30 [Train]:   0%|                                                            | 0/4487 [00:00<?, ?it/s]/mnt/c/Users/ratnaatika/AI/Dataset ASR/train_model_vit.py:344: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=args.amp):
+[Train] avg_ce=1.4093 avg_ctc=4.7839 (lambda_ctc=0.1)
+Epoch 1: Train Loss=1.7468 | Val Loss=0.1469 | Train Acc=0.7477 | Val Acc=0.9432 | Val WER=0.1430 | Val CER=0.0568
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: i sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: PeMosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Mingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa tperlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 2 | Current LR: 0.000500
+[Train] avg_ce=0.1486 avg_ctc=4.3211 (lambda_ctc=0.1)
+Epoch 2: Train Loss=0.5659 | Val Loss=0.0727 | Train Acc=0.9430 | Val Acc=0.9720 | Val WER=0.0715 | Val CER=0.0280
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: TDosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: PalembangMingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 3 | Current LR: 0.000500
+[Train] avg_ce=0.0731 avg_ctc=4.0546 (lambda_ctc=0.1)
+Epoch 3: Train Loss=0.4713 | Val Loss=0.0270 | Train Acc=0.9729 | Val Acc=0.9912 | Val WER=0.0260 | Val CER=0.0088
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 4 | Current LR: 0.000500
+[Train] avg_ce=0.0582 avg_ctc=3.8791 (lambda_ctc=0.1)
+Epoch 4: Train Loss=0.4403 | Val Loss=0.0213 | Train Acc=0.9786 | Val Acc=0.9928 | Val WER=0.0203 | Val CER=0.0072
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 5 | Current LR: 0.000500
+[Train] avg_ce=0.0449 avg_ctc=3.6616 (lambda_ctc=0.1)
+Epoch 5: Train Loss=0.4066 | Val Loss=0.0231 | Train Acc=0.9835 | Val Acc=0.9925 | Val WER=0.0211 | Val CER=0.0075
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: PeDosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: PalembangLingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 6 | Current LR: 0.000500
+[Train] avg_ce=0.0371 avg_ctc=3.4334 (lambda_ctc=0.1)
+Epoch 6: Train Loss=0.3768 | Val Loss=0.0111 | Train Acc=0.9864 | Val Acc=0.9965 | Val WER=0.0100 | Val CER=0.0035
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: PalembangLingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 7 | Current LR: 0.000500
+[Train] avg_ce=0.0226 avg_ctc=3.1542 (lambda_ctc=0.1)
+Epoch 7: Train Loss=0.3357 | Val Loss=0.0085 | Train Acc=0.9919 | Val Acc=0.9973 | Val WER=0.0073 | Val CER=0.0027
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 8 | Current LR: 0.000500
+[Train] avg_ce=0.0229 avg_ctc=3.0006 (lambda_ctc=0.1)
+Epoch 8: Train Loss=0.3207 | Val Loss=0.0109 | Train Acc=0.9917 | Val Acc=0.9963 | Val WER=0.0101 | Val CER=0.0037
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 9 | Current LR: 0.000500
+[Train] avg_ce=0.0240 avg_ctc=2.8491 (lambda_ctc=0.1)
+Epoch 9: Train Loss=0.3065 | Val Loss=0.0093 | Train Acc=0.9912 | Val Acc=0.9969 | Val WER=0.0085 | Val CER=0.0031
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 10 | Current LR: 0.000500
+[Train] avg_ce=0.0297 avg_ctc=2.7352 (lambda_ctc=0.1)
+Epoch 10: Train Loss=0.3002 | Val Loss=0.0111 | Train Acc=0.9891 | Val Acc=0.9963 | Val WER=0.0100 | Val CER=0.0037
+=== Contoh prediksi vs label (val) ===
+PRED: Saya butuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 11 | Current LR: 0.000500
+[Train] avg_ce=0.0207 avg_ctc=2.4759 (lambda_ctc=0.1)
+Epoch 11: Train Loss=0.2662 | Val Loss=0.0064 | Train Acc=0.9924 | Val Acc=0.9980 | Val WER=0.0058 | Val CER=0.0020
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 12 | Current LR: 0.000500
+[Train] avg_ce=0.0099 avg_ctc=2.1782 (lambda_ctc=0.1)
+Epoch 12: Train Loss=0.2268 | Val Loss=0.0064 | Train Acc=0.9966 | Val Acc=0.9976 | Val WER=0.0061 | Val CER=0.0024
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 13 | Current LR: 0.000500
+[Train] avg_ce=0.0113 avg_ctc=2.1319 (lambda_ctc=0.1)
+Epoch 13: Train Loss=0.2233 | Val Loss=0.0034 | Train Acc=0.9960 | Val Acc=0.9990 | Val WER=0.0029 | Val CER=0.0010
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 14 | Current LR: 0.000500
+[Train] avg_ce=0.0075 avg_ctc=1.9803 (lambda_ctc=0.1)
+Epoch 14: Train Loss=0.2048 | Val Loss=0.0065 | Train Acc=0.9974 | Val Acc=0.9981 | Val WER=0.0053 | Val CER=0.0019
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 15 | Current LR: 0.000500
+[Train] avg_ce=0.0089 avg_ctc=1.9564 (lambda_ctc=0.1)
+Epoch 15: Train Loss=0.2037 | Val Loss=0.0091 | Train Acc=0.9968 | Val Acc=0.9969 | Val WER=0.0077 | Val CER=0.0031
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: PalembangLingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 16 | Current LR: 0.000500
+[Train] avg_ce=0.0069 avg_ctc=1.8371 (lambda_ctc=0.1)
+Epoch 16: Train Loss=0.1899 | Val Loss=0.0074 | Train Acc=0.9975 | Val Acc=0.9980 | Val WER=0.0058 | Val CER=0.0020
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 17 | Current LR: 0.000500
+[Train] avg_ce=0.0150 avg_ctc=1.9768 (lambda_ctc=0.1)
+Epoch 17: Train Loss=0.2112 | Val Loss=0.0047 | Train Acc=0.9946 | Val Acc=0.9983 | Val WER=0.0042 | Val CER=0.0017
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 18 | Current LR: 0.000500
+[Train] avg_ce=0.0141 avg_ctc=1.8879 (lambda_ctc=0.1)
+Epoch 18: Train Loss=0.2015 | Val Loss=0.0089 | Train Acc=0.9949 | Val Acc=0.9970 | Val WER=0.0076 | Val CER=0.0030
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 19 | Current LR: 0.000500
+[Train] avg_ce=0.0094 avg_ctc=1.7277 (lambda_ctc=0.1)
+[Scheduler] Learning rate changed: 0.0005 -> 0.00025
+Epoch 19: Train Loss=0.1812 | Val Loss=0.0040 | Train Acc=0.9966 | Val Acc=0.9988 | Val WER=0.0031 | Val CER=0.0012
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 20 | Current LR: 0.000250
+[Train] avg_ce=0.0038 avg_ctc=1.5038 (lambda_ctc=0.1)
+Epoch 20: Train Loss=0.1538 | Val Loss=0.0029 | Train Acc=0.9987 | Val Acc=0.9992 | Val WER=0.0023 | Val CER=0.0008
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 21 | Current LR: 0.000250
+[Train] avg_ce=0.0040 avg_ctc=1.4889 (lambda_ctc=0.1)
+Epoch 21: Train Loss=0.1525 | Val Loss=0.0026 | Train Acc=0.9986 | Val Acc=0.9992 | Val WER=0.0021 | Val CER=0.0008
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 22 | Current LR: 0.000250
+[Train] avg_ce=0.0033 avg_ctc=1.4288 (lambda_ctc=0.1)
+Epoch 22: Train Loss=0.1458 | Val Loss=0.0034 | Train Acc=0.9989 | Val Acc=0.9989 | Val WER=0.0029 | Val CER=0.0011
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 23 | Current LR: 0.000250
+[Train] avg_ce=0.0035 avg_ctc=1.4171 (lambda_ctc=0.1)
+Epoch 23: Train Loss=0.1448 | Val Loss=0.0025 | Train Acc=0.9987 | Val Acc=0.9993 | Val WER=0.0020 | Val CER=0.0007
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 24 | Current LR: 0.000250
+[Train] avg_ce=0.0028 avg_ctc=1.3652 (lambda_ctc=0.1)
+Epoch 24: Train Loss=0.1390 | Val Loss=0.0026 | Train Acc=0.9990 | Val Acc=0.9993 | Val WER=0.0021 | Val CER=0.0007
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 25 | Current LR: 0.000250
+[Train] avg_ce=0.0029 avg_ctc=1.3564 (lambda_ctc=0.1)
+Epoch 25: Train Loss=0.1383 | Val Loss=0.0020 | Train Acc=0.9989 | Val Acc=0.9994 | Val WER=0.0015 | Val CER=0.0006
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 26 | Current LR: 0.000250
+[Train] avg_ce=0.0028 avg_ctc=1.3355 (lambda_ctc=0.1)
+Epoch 26: Train Loss=0.1361 | Val Loss=0.0019 | Train Acc=0.9990 | Val Acc=0.9994 | Val WER=0.0015 | Val CER=0.0006
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 27 | Current LR: 0.000250
+[Train] avg_ce=0.0029 avg_ctc=1.3201 (lambda_ctc=0.1)
+Epoch 27: Train Loss=0.1346 | Val Loss=0.0019 | Train Acc=0.9989 | Val Acc=0.9994 | Val WER=0.0015 | Val CER=0.0006
+[Checkpoint] Saved best model to /mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 28 | Current LR: 0.000250
+[Train] avg_ce=0.0029 avg_ctc=1.2998 (lambda_ctc=0.1)
+Epoch 28: Train Loss=0.1326 | Val Loss=0.0023 | Train Acc=0.9990 | Val Acc=0.9992 | Val WER=0.0020 | Val CER=0.0008
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 29 | Current LR: 0.000250
+[Train] avg_ce=0.0029 avg_ctc=1.2815 (lambda_ctc=0.1)
+Epoch 29: Train Loss=0.1307 | Val Loss=0.0028 | Train Acc=0.9990 | Val Acc=0.9990 | Val WER=0.0023 | Val CER=0.0010
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 30 | Current LR: 0.000250
+[Train] avg_ce=0.0030 avg_ctc=1.2710 (lambda_ctc=0.1)
+Epoch 30: Train Loss=0.1298 | Val Loss=0.0026 | Train Acc=0.9990 | Val Acc=0.9991 | Val WER=0.0021 | Val CER=0.0009
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Total waktu training: 3 jam, 44 menit, 58 detik

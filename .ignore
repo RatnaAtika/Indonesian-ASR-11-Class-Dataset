@@ -1,0 +1,22 @@
+# Agent/search guardrails for this WSL2 project.
+# The raw and processed audio trees live on /mnt/c and contain very large WAV sets.
+# Recursive scans without these excludes can make agents look stuck.
+
+Dataset_Ori/
+Processed_Balanced19/
+Processed_Balanced19_v2/
+Processed_Balanced19_v3/Dataset_Balanced19/
+Whisper_Verification/run_*/
+__pycache__/
+
+*.wav
+*.flac
+*.mp3
+*.m4a
+*.ogg
+*.rar
+*.zip
+*.7z
+*.docx
+*.pdf
+*.pyc

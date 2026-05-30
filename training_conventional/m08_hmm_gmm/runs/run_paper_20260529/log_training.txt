@@ -1,0 +1,215 @@
+(torch-gpu) ┌──(ratna  RATNA-PC)-[/mnt/…/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA]
+└─$ python3 training_conventional/m08_hmm_gmm/train.py \
+  --run-dir training_conventional/m08_hmm_gmm/runs/run_paper_$(date +%Y%m%d) \
+  --hmm-iters 30 --hmm-states 5 --hmm-mixtures 3 --seed 42
+Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.10.0+cu128).
+[hmm-trainer] resolved run_dir: training_conventional/m08_hmm_gmm/runs/run_paper_20260529
+[hmm-trainer] mode: hmm_gmm
+[hmm-trainer] run_dir: training_conventional/m08_hmm_gmm/runs/run_paper_20260529
+[hmm-trainer] loading pickles ...
+  train: 71792, val: 15376
+[hmm-gmm] grouping training utterances by transcript ...
+[hmm-gmm] 209 templates after pruning (min_samples=6)
+[hmm-gmm] training 209 GMM-HMMs (states=5, mix=3) ...
+  [hmm-gmm] trained 20/209 (elapsed 986s)
+  [hmm-gmm] trained 40/209 (elapsed 2279s)
+  [hmm-gmm] trained 60/209 (elapsed 3530s)
+  [hmm-gmm] trained 80/209 (elapsed 4626s)
+  [hmm-gmm] trained 100/209 (elapsed 5592s)
+  [hmm-gmm] trained 120/209 (elapsed 6566s)
+  [hmm-gmm] trained 140/209 (elapsed 7487s)
+  [hmm-gmm] trained 160/209 (elapsed 8601s)
+  [hmm-gmm] trained 180/209 (elapsed 9491s)
+  [hmm-gmm] trained 200/209 (elapsed 10443s)
+[hmm-gmm] training done: 209 HMMs in 181.3 min
+[hmm-gmm] scoring 15376 val utterances ...
+  scored 100/15376
+  scored 200/15376
+  scored 300/15376
+  scored 400/15376
+  scored 500/15376
+  scored 600/15376
+  scored 700/15376
+  scored 800/15376
+  scored 900/15376
+  scored 1000/15376
+  scored 1100/15376
+  scored 1200/15376
+  scored 1300/15376
+  scored 1400/15376
+  scored 1500/15376
+  scored 1600/15376
+  scored 1700/15376
+  scored 1800/15376
+  scored 1900/15376
+  scored 2000/15376
+  scored 2100/15376
+  scored 2200/15376
+  scored 2300/15376
+  scored 2400/15376
+  scored 2500/15376
+  scored 2600/15376
+  scored 2700/15376
+  scored 2800/15376
+  scored 2900/15376
+  scored 3000/15376
+  scored 3100/15376
+  scored 3200/15376
+  scored 3300/15376
+  scored 3400/15376
+  scored 3500/15376
+  scored 3600/15376
+  scored 3700/15376
+  scored 3800/15376
+  scored 3900/15376
+  scored 4000/15376
+  scored 4100/15376
+  scored 4200/15376
+  scored 4300/15376
+  scored 4400/15376
+  scored 4500/15376
+  scored 4600/15376
+  scored 4700/15376
+  scored 4800/15376
+  scored 4900/15376
+  scored 5000/15376
+  scored 5100/15376
+  scored 5200/15376
+  scored 5300/15376
+  scored 5400/15376
+  scored 5500/15376
+  scored 5600/15376
+  scored 5700/15376
+  scored 5800/15376
+  scored 5900/15376
+  scored 6000/15376
+  scored 6100/15376
+  scored 6200/15376
+  scored 6300/15376
+  scored 6400/15376
+  scored 6500/15376
+  scored 6600/15376
+  scored 6700/15376
+  scored 6800/15376
+  scored 6900/15376
+  scored 7000/15376
+  scored 7100/15376
+  scored 7200/15376
+  scored 7300/15376
+  scored 7400/15376
+  scored 7500/15376
+  scored 7600/15376
+  scored 7700/15376
+  scored 7800/15376
+  scored 7900/15376
+  scored 8000/15376
+  scored 8100/15376
+  scored 8200/15376
+  scored 8300/15376
+  scored 8400/15376
+  scored 8500/15376
+  scored 8600/15376
+  scored 8700/15376
+  scored 8800/15376
+  scored 8900/15376
+  scored 9000/15376
+  scored 9100/15376
+  scored 9200/15376
+  scored 9300/15376
+  scored 9400/15376
+  scored 9500/15376
+  scored 9600/15376
+  scored 9700/15376
+  scored 9800/15376
+  scored 9900/15376
+  scored 10000/15376
+  scored 10100/15376
+  scored 10200/15376
+  scored 10300/15376
+  scored 10400/15376
+  scored 10500/15376
+  scored 10600/15376
+  scored 10700/15376
+  scored 10800/15376
+  scored 10900/15376
+  scored 11000/15376
+  scored 11100/15376
+  scored 11200/15376
+  scored 11300/15376
+  scored 11400/15376
+  scored 11500/15376
+  scored 11600/15376
+  scored 11700/15376
+  scored 11800/15376
+  scored 11900/15376
+  scored 12000/15376
+  scored 12100/15376
+  scored 12200/15376
+  scored 12300/15376
+  scored 12400/15376
+  scored 12500/15376
+  scored 12600/15376
+  scored 12700/15376
+  scored 12800/15376
+  scored 12900/15376
+  scored 13000/15376
+  scored 13100/15376
+  scored 13200/15376
+  scored 13300/15376
+  scored 13400/15376
+  scored 13500/15376
+  scored 13600/15376
+  scored 13700/15376
+  scored 13800/15376
+  scored 13900/15376
+  scored 14000/15376
+  scored 14100/15376
+  scored 14200/15376
+  scored 14300/15376
+  scored 14400/15376
+  scored 14500/15376
+  scored 14600/15376
+  scored 14700/15376
+  scored 14800/15376
+  scored 14900/15376
+  scored 15000/15376
+  scored 15100/15376
+  scored 15200/15376
+  scored 15300/15376
+[hmm-gmm] WER: 1.0255, CER: 0.7695
+[hmm-gmm] eval time: 57.8 min
+  ★ Saved best model: WER=1.0255 → best_wer1p0255_final.pkl
+============================================================
+[11:16:31] Epoch 1/1 | Current LR: 0.000000
+Current Learning Rate: 0.0000000000
+Train Loss: n/a
+Validation Loss: n/a
+Train Accuracy: 0.196543
+Validation Accuracy: 0.230451
+WER: 1.025475
+CER: 0.769549
+[Mode] hmm_gmm
+[Train] N templates=209, accuracy=template-match (1-CER proxy)
+Durasi epoch: 03:01:19
+Total elapsed time: 03:59:07
+GPU memory usage: 0 MB
+Throughput: 6.60 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: saya ingin berkontribusi untuk kemajuan kota palembang melalui pendidikan
+LABEL: saya membutuhkan rekomendasi tempat wisata di kota palembang
+
+PRED: coba deh, ikut program magang di perusahaan ini, banyak pengalaman berharga yang bisa kamu pelajari.
+LABEL: kami sedang mengerjakan tugas kelompok untuk mata kuliah sistem kontrol.
+
+PRED: jika kamu ingin mendalami materi lebih dalam, coba lakukan percobaan di laboratorium untuk menguji teori yang telah dipe
+LABEL: dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: ya ampun, masih banyak mahasiswa yang belum paham konsep dasar ini!
+LABEL: lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: jika kamu ingin mendalami materi lebih dalam, coba lakukan percobaan di laboratorium untuk menguji teori yang telah dipe
+LABEL: mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=n/a | Val Loss=n/a | Train Acc=0.1965 | Val Acc=0.2305 | WER=1.0255 | CER=0.7695 | Time=03:01:19 | GPU=0MB
+
+[hmm-trainer] done. report saved: training_conventional/m08_hmm_gmm/runs/run_paper_20260529/report.md

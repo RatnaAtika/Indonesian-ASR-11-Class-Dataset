@@ -1,0 +1,17 @@
+{
+  "arch": "jasper",
+  "run_dir": "training_conventional/m14_jasper_cnn/runs/run_smoke_2ep",
+  "data_pkl_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl",
+  "spm_model": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/spm/spm_v7_char.model",
+  "epochs": 2,
+  "batch_size": 4,
+  "lr": 0.0002,
+  "warmup_pct": 0.1,
+  "max_train_samples": 200,
+  "max_val_samples": 50,
+  "input_dim": 80,
+  "dropout": 0.1,
+  "seed": 42,
+  "fp16": true,
+  "grad_clip": 5.0
+}

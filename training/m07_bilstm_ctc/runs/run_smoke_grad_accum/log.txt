@@ -1,0 +1,32 @@
+============================================================
+[15:30:59] Epoch 1/1 | Current LR: 0.000054
+Current Learning Rate: 0.0000535828
+Train Loss: 4.264259
+Validation Loss: 5.368268
+Train Accuracy: 0.030534
+Validation Accuracy: 0.026991
+WER: 1.000000
+CER: 0.973009
+[Train] arch=bilstm ctc_decode=greedy
+Durasi epoch: 00:00:11
+Total elapsed time: 00:00:11
+GPU memory usage: 333 MB
+Throughput: 16.88 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: nn
+LABEL: saya membutuhkan rekomendasi tempat wisata di kota palembang
+
+PRED: n
+LABEL: kami sedang mengerjakan tugas kelompok untuk mata kuliah sistem kontrol
+
+PRED: n
+LABEL: dosen pembimbing memberikan banyak masukan yang membangun
+
+PRED: n
+LABEL: lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: nn
+LABEL: mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=4.2643 | Val Loss=5.3683 | Train Acc=0.0305 | Val Acc=0.0270 | WER=1.0000 | CER=0.9730 | Time=00:00:11 | GPU=333MB
+

@@ -1,0 +1,23 @@
+01|Apakah saya harus mengulangi ini lagi?
+02|Apakah kebijakan publik dibuat untuk rakyat, atau untuk kepentingan politik sesaat?
+03|Kamu pikir aku punya waktu seharian?
+04|Siapa yang akan menegakkan hukum jika aparat sendiri tidak memberikan contoh?
+05|Bukankah kita semua memiliki tanggung jawab yang sama?
+06|Bukankah anggaran negara seharusnya digunakan untuk kepentingan rakyat banyak?
+07|Apakah saya harus mengulangi hal yang sama?
+08|Apakah wajar jika terus bergantung pada orang lain?
+09|Apakah kita hanya mengajar untuk mengejar kurikulum, bukan untuk memahami siswa?
+10|Bukankah sudah seharusnya kita saling menghargai?
+11|Siapa yang akan peduli pada masa depan bangsa jika bukan para pendidik?
+12|Bukankah suara rakyat adalah amanah yang harus dijaga, bukan dimanipulasi?
+13|Siapa yang bertanggung jawab jika siswa kehilangan semangat belajar?
+14|Apakah kita akan terus membiarkan ketimpangan menjadi warisan generasi berikutnya?
+16|Bukankah pemerintah hadir untuk melayani rakyat, bukan sebaliknya?
+17|Bukankah sekolah seharusnya menjadi tempat yang menyenangkan bagi siswa?
+18|Tidakkah sudah saatnya kita mengubah cara pandang terhadap kegagalan?
+19|Apakah Anda tidak menyadari dampaknya?
+20|Tidakkah transparansi merupakan kunci utama dalam membangun kepercayaan publik?
+
+
+Note :
+15 dibuang karena kalimatnya duplikat

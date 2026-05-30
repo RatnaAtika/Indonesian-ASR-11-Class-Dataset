@@ -1,0 +1,32 @@
+============================================================
+[18:53:55] Epoch 1/1 | Current LR: 0.000000
+Current Learning Rate: 0.0000000000
+Train Loss: n/a
+Validation Loss: n/a
+Train Accuracy: 0.453585
+Validation Accuracy: 0.101980
+WER: 1.168734
+CER: 0.898020
+[Mode] hmm_gmm
+[Train] N templates=19, accuracy=template-match (1-CER proxy)
+Durasi epoch: 00:01:02
+Total elapsed time: 00:01:03
+GPU memory usage: 0 MB
+Throughput: 3.19 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.
+LABEL: saya membutuhkan rekomendasi tempat wisata di kota palembang
+
+PRED: universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.
+LABEL: kami sedang mengerjakan tugas kelompok untuk mata kuliah sistem kontrol.
+
+PRED: universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.
+LABEL: dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.
+LABEL: lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.
+LABEL: mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=n/a | Val Loss=n/a | Train Acc=0.4536 | Val Acc=0.1020 | WER=1.1687 | CER=0.8980 | Time=00:01:02 | GPU=0MB

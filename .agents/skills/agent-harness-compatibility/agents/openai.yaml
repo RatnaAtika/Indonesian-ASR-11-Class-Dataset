@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Harness Compatibility"
+  short_description: "Codex/Pi/Cursor/Claude Code/Aider/OpenCode"
+  default_prompt: "Use this skill to make grand-skills discoverable across multiple agent harnesses without forking content. Generates per-harness adapters (symlinks for SKILL.md harnesses, .mdc for Cursor, concat md for Aider, etc.) from one canonical source."

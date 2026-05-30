@@ -1,0 +1,60 @@
+# [FAIRNESS-C 2026-05-29] GitHub-safe ignore: keep code/reports/configs/plots,
+# exclude large audio data, feature pickles, and model weights (GitHub caps 100MB/file).
+
+# --- Raw & processed audio datasets (tens of GB) ---
+Dataset_Ori/
+Processed_Balanced19/
+Processed_Balanced19_v2/
+Processed_Balanced19_v3/
+Processed_Balanced19_v4_merged/
+Processed_Balanced19_v5_uniform/
+Processed_Balanced19_v6_relabeled/
+Processed_Balanced19_v7_natural_synth/
+Whisper_Verification/
+Whisper_Verification_Sessions/
+splits/
+metadata/
+
+# --- Feature caches & precomputed tensors ---
+training_conventional/data_pkl/
+training/data_final/
+
+# --- Model checkpoints / weights (keep configs+history+plots, drop binaries) ---
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.pkl
+*.npy
+*.npz
+*.h5
+*.onnx
+*.tflite
+
+# --- Media / archives / large docs ---
+*.wav
+*.flac
+*.mp3
+*.m4a
+*.ogg
+*.rar
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.docx
+*.pdf
+*.pyc
+__pycache__/
+
+# Local/runtime files
+*.log
+*.err
+*.out
+*.pid
+*.lock
+.cache/
+.tmp/

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Notebook Authoring"
+  short_description: "Jupyter notebooks for analysis & demo"
+  default_prompt: "Use this skill to scaffold, run, version, and ship Jupyter notebooks for data analysis, ML demos, reports, and reproducible research."

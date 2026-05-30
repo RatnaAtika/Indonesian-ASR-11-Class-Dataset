@@ -1,0 +1,19 @@
+# Codex/agent guard: avoid recursive scans of huge audio/output trees on /mnt/c.
+Dataset_Ori/
+Processed_Balanced19/
+Processed_Balanced19_v2/
+Processed_Balanced19_v3/Dataset_Balanced19/
+Whisper_Verification/run_*/
+__pycache__/
+
+*.wav
+*.flac
+*.mp3
+*.m4a
+*.ogg
+*.rar
+*.zip
+*.7z
+*.docx
+*.pdf
+*.pyc

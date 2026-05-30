@@ -1,0 +1,10 @@
+{
+  "model_id": "facebook/mms-1b-all",
+  "run_dir": "zero_shot_baselines/runs/mms_1b_all_smoke",
+  "data_root": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19",
+  "data_final": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/data_final",
+  "split": "test",
+  "max_samples": 30,
+  "target_lang": "ind",
+  "language": "indonesian"
+}

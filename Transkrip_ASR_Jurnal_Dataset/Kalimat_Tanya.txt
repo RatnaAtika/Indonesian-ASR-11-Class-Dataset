@@ -1,0 +1,22 @@
+01|Berapa temperatur udara di indralaya saat ini?
+02|Dimana letak ruang dosen Teknik Elektro?
+03|Berapa jarak dari sini ke kantin kampus?
+04|Kapan bus terakhir beroperasi di kampus Indralaya?
+05|Siapa dosen pengampu mata kuliah Dasar Sistem Kendali?
+06|Kapan jadwal ujian akhir semester?
+07|Berapa kapasitas maksimal ruang laboratorium ini?
+08|Siapa yang bisa saya hubungi jika ada masalah di lab ini?
+09|Bagaimana cara mengakses repository tugas akhir mahasiswa?
+10|Apakah kamu bisa membantu saya mencari referensi jurnal?
+11|Apakah ada prosedur keselamatan yang perlu saya lakukan sebelum menyelesaikan praktikum?
+12|Apakah ada orang di dalam ruangan lab sekarang?
+13|Dimana lokasi kantin terdekat?
+14|Dimana lokasi terminal resmi bus kampus?
+15|Ada berapa fakultas di kampus ini?
+16|Berapa jumlah asisten lab ini?
+17|siapa kepala laboratorium ini?
+18|Kapan jadwal praktikum dasar sistem kendali?
+19|Bagaimana cara mengakses Wi-Fi kampus?
+
+Note :
+20 sengaja dibuang untuk penyetaraan 19 kalimat biar seimbang

@@ -1,0 +1,414 @@
+{
+  "generated": "2026-05-28T22:27:39.404426",
+  "scope": "Paper Section 5 (Results) + Table 1 + Appendix B",
+  "target_journal": "Data in Brief (Elsevier, ISSN 2352-3409)",
+  "n_paper_models": 9,
+  "n_paper_models_present": 1,
+  "n_secondary_models": 6,
+  "n_secondary_models_present": 0,
+  "missing_paper_models": [
+    "m09-dnn-hmm",
+    "m10-gmm-hmm-dnn",
+    "m11-vanilla-transformer",
+    "m12-vit-modified-ID",
+    "m13-wav2letter",
+    "m07-bilstm-ctc",
+    "m06-conformer-ctc",
+    "m02b-whisper-medium-ft"
+  ],
+  "missing_secondary_models": [
+    "m01-whisper-tiny",
+    "m02-whisper-small",
+    "m03-w2v2-xlsr-300m",
+    "m04-cahya-w2v2-id",
+    "m05-mms-1b-adapter",
+    "m14-jasper-mini"
+  ],
+  "best_paper_model": {
+    "model_id": "m08-hmm-gmm",
+    "family": "HMM-GMM template classifier",
+    "wer": 1.1687344913151365,
+    "cer": 0.898019801980198,
+    "is_user_novel": false,
+    "test_json": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_smoke_best/test_results/test_paper.json"
+  },
+  "paper_models_ranked_by_wer": [
+    {
+      "rank": 1,
+      "model_id": "m08-hmm-gmm",
+      "family": "HMM-GMM template classifier",
+      "wer": 1.1687344913151365,
+      "cer": 0.898019801980198,
+      "is_user_novel": false
+    }
+  ],
+  "paper_models": [
+    {
+      "model_id": "m08-hmm-gmm",
+      "family": "HMM-GMM template classifier",
+      "is_paper_model": true,
+      "is_user_novel": false,
+      "checkpoint": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_smoke_best/checkpoints/best.pkl",
+      "checkpoint_filename": "best.pkl",
+      "best_train_wer": 1.1687344913151365,
+      "best_train_epoch": 1,
+      "n_epochs_trained": 1,
+      "test_set": {
+        "split": "test",
+        "n_samples": 50,
+        "audio_root": "data_pkl",
+        "feature_format": "pkl_logmel80"
+      },
+      "metrics": {
+        "wer": 1.1687344913151365,
+        "cer": 0.898019801980198,
+        "mer": 0.9271653543307087,
+        "wil": 0.9932059553349876,
+        "ser": 0.94
+      },
+      "decoding": {
+        "method": "viterbi_template_argmax",
+        "beam_size": 1,
+        "lm": null,
+        "max_decode_len": null
+      },
+      "wall_time_sec": 0.54,
+      "throughput_samples_per_sec": 92.09,
+      "peak_gpu_mb": 0.0,
+      "predictions_csv": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_smoke_best/test_results/predictions.csv",
+      "sample_predictions": [
+        {
+          "idx": 0,
+          "audio": "Kalimat_Deklaratif/Baron/Baron_Deklaratif_Take1/01.wav",
+          "pred": "universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.",
+          "label": "saya membutuhkan rekomendasi tempat wisata di kota palembang",
+          "per_sample_wer": 1.25,
+          "per_sample_cer": 0.9333333333333333
+        },
+        {
+          "idx": 5,
+          "audio": "Kalimat_Deklaratif/Baron/Baron_Deklaratif_Take1/07.wav",
+          "pred": "universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.",
+          "label": "semua makhluk hidup membutuhkan air untuk bertahan hidup",
+          "per_sample_wer": 1.25,
+          "per_sample_cer": 1.0892857142857142
+        },
+        {
+          "idx": 10,
+          "audio": "Kalimat_Deklaratif/Baron/Baron_Deklaratif_Take1/12.wav",
+          "pred": "universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.",
+          "label": "universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.",
+          "per_sample_wer": 0.0,
+          "per_sample_cer": 0.0
+        },
+        {
+          "idx": 16,
+          "audio": "Kalimat_Deklaratif/Baron/Baron_Deklaratif_Take1/18.wav",
+          "pred": "universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.",
+          "label": "transportasi lrt sangat membantu mobilitas warga",
+          "per_sample_wer": 1.6666666666666667,
+          "per_sample_cer": 1.1875
+        },
+        {
+          "idx": 21,
+          "audio": "Kalimat_Deklaratif/Baron/Baron_Deklaratif_Take10/03.wav",
+          "pred": "universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.",
+          "label": "dosen pembimbing memberikan banyak masukan yang membangun.",
+          "per_sample_wer": 1.4285714285714286,
+          "per_sample_cer": 1.0
+        },
+        {
+          "idx": 27,
+          "audio": "Kalimat_Deklaratif/Baron/Baron_Deklaratif_Take10/10.wav",
+          "pred": "universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.",
+          "label": "saya percaya bahwa belajar adalah investasi jangka panjang",
+          "per_sample_wer": 1.25,
+          "per_sample_cer": 0.9310344827586207
+        },
+        {
+          "idx": 32,
+          "audio": "Kalimat_Deklaratif/Baron/Baron_Deklaratif_Take10/15.wav",
+          "pred": "universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.",
+          "label": "perpustakaan kampus menyediakan banyak referensi ilmiah",
+          "per_sample_wer": 1.6666666666666667,
+          "per_sample_cer": 1.0363636363636364
+        },
+        {
+          "idx": 38,
+          "audio": "Kalimat_Deklaratif/Baron/Baron_Deklaratif_Take2/01.wav",
+          "pred": "universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.",
+          "label": "saya membutuhkan rekomendasi tempat wisata di kota palembang",
+          "per_sample_wer": 1.25,
+          "per_sample_cer": 0.9333333333333333
+        },
+        {
+          "idx": 43,
+          "audio": "Kalimat_Deklaratif/Baron/Baron_Deklaratif_Take2/07.wav",
+          "pred": "universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.",
+          "label": "semua makhluk hidup membutuhkan air untuk bertahan hidup",
+          "per_sample_wer": 1.25,
+          "per_sample_cer": 1.0892857142857142
+        },
+        {
+          "idx": 49,
+          "audio": "Kalimat_Deklaratif/Baron/Baron_Deklaratif_Take2/13.wav",
+          "pred": "universitas sriwijaya adalah salah satu perguruan tinggi ternama di palembang.",
+          "label": "kampus menyediakan fasilitas laboratorium yang lengkap.",
+          "per_sample_wer": 1.6666666666666667,
+          "per_sample_cer": 1.0363636363636364
+        }
+      ],
+      "config": {
+        "mode": "hmm_gmm",
+        "run_dir": "training_conventional/m08_hmm_gmm/runs/run_smoke_best",
+        "data_pkl_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl",
+        "spm_model": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/spm/spm_v7_char.model",
+        "max_train_samples": 200,
+        "max_val_samples": 50,
+        "hmm_states": 4,
+        "hmm_mixtures": 2,
+        "hmm_iters": 5,
+        "cov_type": "diag",
+        "dnn_hidden": 512,
+        "dnn_layers": 4,
+        "dnn_context": 5,
+        "dnn_epochs": 3,
+        "dnn_batch_size": 256,
+        "dnn_lr": 0.001,
+        "seed": 42
+      },
+      "training_meta": {
+        "model_id": "hmm-trainer-hmm_gmm",
+        "family": "HMM",
+        "era": "1990s",
+        "notes": "Conventional hmm_gmm trainer. Replot: python3 -m common.journal_plotting --run-dir <this_dir> --style ieee",
+        "config": {
+          "mode": "hmm_gmm",
+          "run_dir": "training_conventional/m08_hmm_gmm/runs/run_smoke_best",
+          "data_pkl_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl",
+          "spm_model": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/spm/spm_v7_char.model",
+          "max_train_samples": 200,
+          "max_val_samples": 50,
+          "hmm_states": 4,
+          "hmm_mixtures": 2,
+          "hmm_iters": 5,
+          "cov_type": "diag",
+          "dnn_hidden": 512,
+          "dnn_layers": 4,
+          "dnn_context": 5,
+          "dnn_epochs": 3,
+          "dnn_batch_size": 256,
+          "dnn_lr": 0.001,
+          "seed": 42
+        },
+        "dataset_info": {
+          "data_pkl_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl",
+          "spm_model": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/spm/spm_v7_char.model"
+        },
+        "environment": {
+          "python": "3.10.18",
+          "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+          "timestamp": "2026-05-28T18:52:49.094157",
+          "torch_version": "2.10.0+cu128",
+          "transformers_version": "4.57.6",
+          "librosa_version": "0.11.0",
+          "soundfile_version": "0.13.1",
+          "sentencepiece_version": "0.2.0",
+          "hmmlearn_version": "0.3.3",
+          "jiwer_version": "unknown",
+          "numpy_version": "1.26.4",
+          "scipy_version": "1.14.1",
+          "pandas_version": "2.3.3",
+          "matplotlib_version": "3.10.9",
+          "seaborn_version": "0.13.2",
+          "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "cuda_version": "12.8",
+          "cudnn_version": 91002
+        },
+        "replay": {
+          "history_path": "training_conventional/m08_hmm_gmm/runs/run_smoke_best/history.json",
+          "log_path": "training_conventional/m08_hmm_gmm/runs/run_smoke_best/log.txt",
+          "predictions_dir": "training_conventional/m08_hmm_gmm/runs/run_smoke_best/predictions",
+          "replot_command": "python3 -m common.journal_plotting --run-dir 'training_conventional/m08_hmm_gmm/runs/run_smoke_best' --style ieee --formats png pdf",
+          "available_styles": [
+            "ieee",
+            "acm",
+            "springer",
+            "elsevier",
+            "thesis",
+            "plain"
+          ],
+          "available_formats": [
+            "png",
+            "pdf",
+            "svg",
+            "eps"
+          ]
+        }
+      },
+      "timestamp": "2026-05-28T22:27:17.371225",
+      "test_environment": {
+        "python": "3.10.18",
+        "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+        "timestamp": "2026-05-28T22:27:17.379216",
+        "torch_version": "2.10.0+cu128",
+        "transformers_version": "4.57.6",
+        "librosa_version": "0.11.0",
+        "soundfile_version": "0.13.1",
+        "sentencepiece_version": "0.2.0",
+        "hmmlearn_version": "0.3.3",
+        "jiwer_version": "unknown",
+        "numpy_version": "1.26.4",
+        "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+        "cuda_version": "12.8"
+      },
+      "paper_position": 1,
+      "status": "OK",
+      "test_json": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_smoke_best/test_results/test_paper.json"
+    },
+    {
+      "model_id": "m09-dnn-hmm",
+      "family": "DNN-HMM (hybrid)",
+      "paper_position": 2,
+      "is_user_novel": false,
+      "is_paper_model": true,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null,
+      "checkpoint": null
+    },
+    {
+      "model_id": "m10-gmm-hmm-dnn",
+      "family": "GMM-HMM-DNN (3-stage)",
+      "paper_position": 3,
+      "is_user_novel": false,
+      "is_paper_model": true,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null,
+      "checkpoint": null
+    },
+    {
+      "model_id": "m11-vanilla-transformer",
+      "family": "Vanilla Transformer (Vaswani 2017)",
+      "paper_position": 4,
+      "is_user_novel": false,
+      "is_paper_model": true,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null,
+      "checkpoint": null
+    },
+    {
+      "model_id": "m12-vit-modified-ID",
+      "family": "ViT-modified-ID (Ratna 2026)",
+      "paper_position": 5,
+      "is_user_novel": true,
+      "is_paper_model": true,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null,
+      "checkpoint": null
+    },
+    {
+      "model_id": "m13-wav2letter",
+      "family": "Wav2Letter CNN-CTC (Collobert 2016)",
+      "paper_position": 6,
+      "is_user_novel": false,
+      "is_paper_model": true,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null,
+      "checkpoint": null
+    },
+    {
+      "model_id": "m07-bilstm-ctc",
+      "family": "Bi-LSTM CTC",
+      "paper_position": 7,
+      "is_user_novel": false,
+      "is_paper_model": true,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null,
+      "checkpoint": null
+    },
+    {
+      "model_id": "m06-conformer-ctc",
+      "family": "Conformer-CTC (Gulati 2020)",
+      "paper_position": 8,
+      "is_user_novel": false,
+      "is_paper_model": true,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null,
+      "checkpoint": null
+    },
+    {
+      "model_id": "m02b-whisper-medium-ft",
+      "family": "Whisper-medium FT (Radford 2022)",
+      "paper_position": 9,
+      "is_user_novel": false,
+      "is_paper_model": true,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null,
+      "checkpoint": null
+    }
+  ],
+  "secondary_models": [
+    {
+      "model_id": "m01-whisper-tiny",
+      "family": "Whisper-tiny FT",
+      "is_paper_model": false,
+      "is_user_novel": false,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null
+    },
+    {
+      "model_id": "m02-whisper-small",
+      "family": "Whisper-small FT",
+      "is_paper_model": false,
+      "is_user_novel": false,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null
+    },
+    {
+      "model_id": "m03-w2v2-xlsr-300m",
+      "family": "wav2vec2-XLS-R-300M FT",
+      "is_paper_model": false,
+      "is_user_novel": false,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null
+    },
+    {
+      "model_id": "m04-cahya-w2v2-id",
+      "family": "cahya-w2v2-id FT",
+      "is_paper_model": false,
+      "is_user_novel": false,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null
+    },
+    {
+      "model_id": "m05-mms-1b-adapter",
+      "family": "MMS-1B adapter FT",
+      "is_paper_model": false,
+      "is_user_novel": false,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null
+    },
+    {
+      "model_id": "m14-jasper-mini",
+      "family": "Jasper-mini CNN-CTC",
+      "is_paper_model": false,
+      "is_user_novel": false,
+      "status": "MISSING",
+      "test_json": null,
+      "metrics": null
+    }
+  ]
+}

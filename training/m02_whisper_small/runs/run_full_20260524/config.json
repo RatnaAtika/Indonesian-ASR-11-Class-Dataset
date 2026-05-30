@@ -1,0 +1,18 @@
+{
+  "model_id": "openai/whisper-small",
+  "run_dir": "m02_whisper_small/runs/run_full_20260524",
+  "data_root": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19",
+  "data_final": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/data_final",
+  "epochs": 3,
+  "batch_size": 4,
+  "grad_accum": 4,
+  "lr": 1e-05,
+  "warmup_steps": 500,
+  "max_train_samples": 0,
+  "max_val_samples": 0,
+  "language": "indonesian",
+  "task": "transcribe",
+  "gradient_checkpointing": false,
+  "fp16": true,
+  "seed": 42
+}

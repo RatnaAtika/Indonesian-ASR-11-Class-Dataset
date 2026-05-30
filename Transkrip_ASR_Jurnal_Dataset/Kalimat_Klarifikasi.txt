@@ -1,0 +1,23 @@
+01|Robot, bisakah kamu menjelaskan langkah-langkahnya dengan lebih detail?
+02|Apa kamu yakin langkah-langkah yang diberikan sudah benar?
+03|Apakah kamu dapat menjelaskan hasil yang telah kamu capai sejauh ini?
+04|Jika saya memberikan perintah ini, apa yang akan terjadi?
+05|Tolong konfirmasi jika kamu sudah selesai memproses tugas ini.
+06|Bisakah kamu memperjelas apa yang dimaksud dengan itu?
+07|Apakah kamu bisa memastikan apakah ruang perpustakaan yang saya cari tersedia?
+08|Dapatkah kamu mengulang instruksi yang baru saja saya berikan?
+10|Apakah saya harus melanjutkan dengan topik yang sama atau beralih ke topik berikutnya?
+11|Bisakah kamu mengecek apakah pintu sudah terkunci?
+12|Apa kamu sudah memanaskan makanan sesuai dengan suhu yang saya tentukan?
+13|Apakah kamu bisa memindahkan benda ini ke tempat yang berbeda?
+14|Tolong periksa apakah suhu AC sudah sesuai dengan pengaturan yang saya buat
+15|Tolong verifikasi apakah semua peralatan elektronik dimatikan saat saya keluar rumah
+16|Apakah kamu yakin ruangan ini sudah bebas dari debu?
+17|Bisa kamu pastikan apakah pintu garasi sudah tertutup dengan baik?
+18|Tolong pastikan bahwa lampu di ruang tamu sudah dimatikan.
+19|Bisakah kamu memastikan apakah ruang kelas yang saya tuju tersedia?
+20|Apakah sistem sudah mencatat kehadiran saya di pertemuan tadi?
+
+
+Note :
+09 Kalimatnya dibuang karena kemarin duplikat

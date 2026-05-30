@@ -1,0 +1,32 @@
+============================================================
+[14:50:07] Epoch 1/1 | Current LR: 0.000000
+Current Learning Rate: 0.0000000000
+Train Loss: 4.737800
+Validation Loss: 3.246880
+Train Accuracy: 0.787445
+Validation Accuracy: 0.877753
+WER: 0.528926
+CER: 0.122247
+[Train] model=openai/whisper-tiny accuracy=1-CER (char-level proxy, free-running greedy)
+Durasi epoch: 00:00:04
+Total elapsed time: 00:00:04
+GPU memory usage: 1092 MB
+Throughput: 7.35 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: saya membutuhkan rekomendasi tempat risaat di Kota Palimbang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: kami sedang mengercekan duka sekolong bok untuk matahulia sistem kontrol
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembiim biing memberikan banyak masukkan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Linkungan akad demi kiyang positif sangat mendukung proces pelacar.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: bahasis wapar lumangatur waktu dengan baik, antara kuliah dan kekiyatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=4.7378 | Val Loss=3.2469 | Train Acc=0.7874 | Val Acc=0.8778 | WER=0.5289 | CER=0.1222 | Time=00:00:04 | GPU=1092MB
+

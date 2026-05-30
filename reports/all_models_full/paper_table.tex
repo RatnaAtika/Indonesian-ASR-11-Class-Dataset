@@ -1,0 +1,31 @@
+% Auto-generated paper Table 1 — 17-architecture ASR comparison on v7 Indonesian corpus
+\begin{table*}[h]
+  \centering
+  \caption{All 17 ASR systems compared on the v7 Indonesian corpus (102{,}544 files, 130.65 h, 20 speakers, 11 categories). \\
+           m12 ViT-modified-ID is the user's own novel architecture, this paper's first public report.}
+  \label{tab:all17}
+  \small
+  \begin{tabular}{lllrrrrrrl}
+  \hline
+  Slot & Family & Era & Params (M) & WER & CER & Train Acc & Val Acc & Notes \\
+  \hline
+  m01-whisper-tiny & Whisper & 2022 & 38 & n/a & n/a & n/a & n/a & FT \\
+  m02-whisper-small $\star$ & Whisper & 2022 & 244 & n/a & n/a & n/a & n/a & FT primary \\
+  m03-w2v2-xlsr-300m & wav2vec2 & 2021 & 315 & n/a & n/a & n/a & n/a & FT \\
+  m04-cahya-w2v2-id & wav2vec2 & 2021 & 315 & n/a & n/a & n/a & n/a & FT (ID-pretrained) \\
+  m05-mms-1b-adapter & MMS & 2023 & 965 & n/a & n/a & n/a & n/a & FT adapter (~3M trainable) \\
+  m06-conformer-ctc & CNN-CTC & 2020 & 6.6 & n/a & n/a & n/a & n/a & from-scratch \\
+  m07-bilstm-ctc & Bi-LSTM & 2014 & 6.6 & n/a & n/a & n/a & n/a & from-scratch \\
+  zs1-whisper-large-v3 & Whisper & 2023 & 1543 & n/a & n/a & n/a & n/a & zero-shot \\
+  zs2-whisper-medium & Whisper & 2022 & 764 & n/a & n/a & n/a & n/a & zero-shot \\
+  zs3-mms-1b-all & MMS & 2023 & 965 & n/a & n/a & n/a & n/a & zero-shot \\
+  m08-hmm-gmm & HMM & 1990s & 0.01 & n/a & n/a & n/a & n/a & template classifier \\
+  m09-dnn-hmm & Hybrid & 2010s & 3.7 & n/a & n/a & n/a & n/a & linear-init alignment \\
+  m10-gmm-hmm-dnn & Hybrid & 2010s & 3.7 & n/a & n/a & n/a & n/a & 3-stage \\
+  m11-vanilla-transformer & Transformer & 2017 & 3.5 & n/a & n/a & n/a & n/a & Vaswani 2017 ref \\
+  m12-vit-modified-ID $\star$ & Transformer-novel & 2026 & 3.5 & n/a & n/a & n/a & n/a & USER'S NOVEL ARCH (unpublished) \\
+  m13-wav2letter & CNN-CTC & 2016 & 7.0 & n/a & n/a & n/a & n/a & from-scratch \\
+  m14-jasper-mini & CNN-CTC & 2019 & 28.0 & n/a & n/a & n/a & n/a & from-scratch \\
+  \hline
+  \end{tabular}
+\end{table*}

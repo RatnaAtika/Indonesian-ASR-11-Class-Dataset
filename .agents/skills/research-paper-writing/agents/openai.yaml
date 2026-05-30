@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Paper Writing"
+  short_description: "Section-by-section ML/CV/NLP paper writing guide (wrapper for Master-cai/Research-Paper-Writing-Skills)."
+  default_prompt: "Use this skill to draft, rewrite, or review Abstract / Introduction / Method / Experiments / Conclusion sections of an ML/CV/NLP paper."

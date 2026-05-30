@@ -1,0 +1,4 @@
+category,respondent,take,wav_name,wav_path,duration_sec,sample_rate,channels,bits_per_sample,samples
+Kalimat_Penjadwalan,Atika,Atika_Penjadwalan_Take5,04.wav,/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v3/Dataset_Balanced19/Kalimat_Penjadwalan/Atika/Atika_Penjadwalan_Take5/04.wav,206.4045,16000,1,16,3302472
+Kalimat_Perintah,Pram,Pram_Perintah_take12,17.wav,/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v3/Dataset_Balanced19/Kalimat_Perintah/Pram/Pram_Perintah_take12/17.wav,82.727,16000,1,16,1323632
+Kalimat_Tanya,Anggi,Anggi_tanya_take12,03.wav,/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v3/Dataset_Balanced19/Kalimat_Tanya/Anggi/Anggi_tanya_take12/03.wav,135.3505,16000,1,16,2165608

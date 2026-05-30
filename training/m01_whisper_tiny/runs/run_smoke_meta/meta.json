@@ -1,0 +1,70 @@
+{
+  "model_id": "openai/whisper-tiny",
+  "family": "Whisper",
+  "era": "2022",
+  "notes": "Whisper FT trainer. Replot with: python3 -m common.journal_plotting --run-dir <this_dir> --style ieee",
+  "config": {
+    "model_id": "openai/whisper-tiny",
+    "run_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m01_whisper_tiny/runs/run_smoke_meta",
+    "data_root": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19",
+    "data_final": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/data_final",
+    "epochs": 1,
+    "batch_size": 4,
+    "grad_accum": 2,
+    "lr": 1e-05,
+    "warmup_steps": 5,
+    "max_train_samples": 30,
+    "max_val_samples": 15,
+    "language": "indonesian",
+    "task": "transcribe",
+    "gradient_checkpointing": false,
+    "fp16": true,
+    "seed": 42
+  },
+  "dataset_info": {
+    "splits_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/data_final",
+    "audio_root": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19",
+    "language": "indonesian",
+    "task": "transcribe"
+  },
+  "environment": {
+    "python": "3.10.18",
+    "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "timestamp": "2026-05-24T15:07:48.536844",
+    "torch_version": "2.10.0+cu128",
+    "transformers_version": "4.57.6",
+    "librosa_version": "0.11.0",
+    "soundfile_version": "0.13.1",
+    "sentencepiece_version": "0.2.0",
+    "hmmlearn_version": "0.3.3",
+    "jiwer_version": "unknown",
+    "numpy_version": "2.2.6",
+    "scipy_version": "1.14.1",
+    "pandas_version": "2.3.3",
+    "matplotlib_version": "3.10.9",
+    "seaborn_version": "0.13.2",
+    "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda_version": "12.8",
+    "cudnn_version": 91002
+  },
+  "replay": {
+    "history_path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m01_whisper_tiny/runs/run_smoke_meta/history.json",
+    "log_path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m01_whisper_tiny/runs/run_smoke_meta/log.txt",
+    "predictions_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m01_whisper_tiny/runs/run_smoke_meta/predictions",
+    "replot_command": "python3 -m common.journal_plotting --run-dir '/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m01_whisper_tiny/runs/run_smoke_meta' --style ieee --formats png pdf",
+    "available_styles": [
+      "ieee",
+      "acm",
+      "springer",
+      "elsevier",
+      "thesis",
+      "plain"
+    ],
+    "available_formats": [
+      "png",
+      "pdf",
+      "svg",
+      "eps"
+    ]
+  }
+}

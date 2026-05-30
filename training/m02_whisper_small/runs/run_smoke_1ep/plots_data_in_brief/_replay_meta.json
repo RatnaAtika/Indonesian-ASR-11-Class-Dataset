@@ -1,0 +1,10 @@
+{
+  "run_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02_whisper_small/runs/run_smoke_1ep",
+  "style": "data_in_brief",
+  "formats": [
+    "pdf"
+  ],
+  "n_epochs": 1,
+  "history_path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02_whisper_small/runs/run_smoke_1ep/history.json",
+  "out_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02_whisper_small/runs/run_smoke_1ep/plots_data_in_brief"
+}

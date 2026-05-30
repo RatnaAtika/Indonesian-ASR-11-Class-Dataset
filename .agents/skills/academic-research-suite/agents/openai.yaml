@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Research Suite"
+  short_description: "Research → write → review → revise → finalize pipeline (portable wrapper for Imbad0202/academic-research-skills)."
+  default_prompt: "Use this skill when the current repository is a paper, thesis, or research manuscript and needs the deep-research / academic-paper / academic-paper-reviewer / academic-pipeline suite."

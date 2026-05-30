@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-05-20T23:32:56.735141",
+  "dataset_root": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/Processed_Balanced19_v3/Dataset_Balanced19",
+  "n_files_total": 104500,
+  "n_files_error": 0,
+  "fast_path_count": 104500,
+  "fallback_count": 0,
+  "total_duration_sec": 483073.92,
+  "total_duration_min": 8051.23,
+  "total_duration_hour": 134.1872,
+  "mean_duration_sec": 4.6227,
+  "median_duration_sec": 4.506,
+  "min_duration_sec": 1.1507,
+  "max_duration_sec": 206.4045,
+  "stddev_duration_sec": 1.6678,
+  "n_outliers": 3,
+  "outlier_thresholds": {
+    "min": 0.5,
+    "max": 30.0
+  },
+  "n_categories": 11,
+  "n_speakers": 21,
+  "n_takes": 5500,
+  "wall_clock_seconds": 2028.73
+}

@@ -1,0 +1,10 @@
+{
+  "run_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m07_bilstm_ctc/runs/run_smoke_progress",
+  "style": "data_in_brief",
+  "formats": [
+    "pdf"
+  ],
+  "n_epochs": 1,
+  "history_path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m07_bilstm_ctc/runs/run_smoke_progress/history.json",
+  "out_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m07_bilstm_ctc/runs/run_smoke_progress/plots_data_in_brief"
+}

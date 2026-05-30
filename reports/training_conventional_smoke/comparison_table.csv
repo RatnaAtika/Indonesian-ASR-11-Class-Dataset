@@ -1,0 +1,8 @@
+slot,era,family,wer,cer,val_loss,gpu_mb,time_str,note
+m08-hmm-gmm,1990s,HMM,1.1687344913151365,0.898019801980198,,0,00:00:05,
+m09-dnn-hmm,2010s,hybrid,5.076923076923077,3.508910891089109,,0,00:00:01,
+m10-gmm-hmm-dnn,2010s,hybrid,5.076923076923077,3.508910891089109,,0,00:00:07,
+m11-vanilla-transformer,2017,Transformer,,,,,,wrapper-run; CER from existing root-script log only
+m12-vit-modified,2020s,Transformer,,,,,,wrapper-run; CER from existing root-script log only
+m13-wav2letter,2016,CNN-CTC,0.9925558312655087,0.9099009900990099,6.461517810821533,487.3,00:00:00,
+m14-jasper-mini,2019,CNN-CTC,1.0,0.933003300330033,6.0703403032743015,2073.7,00:00:05,

@@ -1,0 +1,18 @@
+slot,family,era,params_M,notes,run_dir,wer,cer,train_acc,val_acc,val_loss,gpu_mb,time_str,source
+m01-whisper-tiny,Whisper,2022,38,FT,MISSING,,,,,,,,history.json
+m02-whisper-small ★,Whisper,2022,244,FT primary,/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02_whisper_small/runs/run_full_20260524,,,,,,,,history.json
+m03-w2v2-xlsr-300m,wav2vec2,2021,315,FT,MISSING,,,,,,,,history.json
+m04-cahya-w2v2-id,wav2vec2,2021,315,FT (ID-pretrained),MISSING,,,,,,,,history.json
+m05-mms-1b-adapter,MMS,2023,965,FT adapter (~3M trainable),MISSING,,,,,,,,history.json
+m06-conformer-ctc,CNN-CTC,2020,6.6,from-scratch,MISSING,,,,,,,,history.json
+m07-bilstm-ctc,Bi-LSTM,2014,6.6,from-scratch,MISSING,,,,,,,,history.json
+zs1-whisper-large-v3,Whisper,2023,1543,zero-shot,MISSING,,,,,,,,history.json
+zs2-whisper-medium,Whisper,2022,764,zero-shot,MISSING,,,,,,,,history.json
+zs3-mms-1b-all,MMS,2023,965,zero-shot,MISSING,,,,,,,,history.json
+m08-hmm-gmm,HMM,1990s,0.01,template classifier,MISSING,,,,,,,,history.json
+m09-dnn-hmm,Hybrid,2010s,3.7,linear-init alignment,MISSING,,,,,,,,history.json
+m10-gmm-hmm-dnn,Hybrid,2010s,3.7,3-stage,MISSING,,,,,,,,history.json
+m11-vanilla-transformer,Transformer,2017,3.5,Vaswani 2017 ref,MISSING,,,,,,,,history.json
+m12-vit-modified-ID ★,Transformer-novel,2026,3.5,USER'S NOVEL ARCH (unpublished),MISSING,,,,,,,,history.json
+m13-wav2letter,CNN-CTC,2016,7.0,from-scratch,MISSING,,,,,,,,history.json
+m14-jasper-mini,CNN-CTC,2019,28.0,from-scratch,MISSING,,,,,,,,history.json

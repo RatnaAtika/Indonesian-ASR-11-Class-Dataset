@@ -1,0 +1,1600 @@
+============================================================
+[10:10:30] Epoch 1/50 | Current LR: 0.000040
+Current Learning Rate: 0.0000395868
+Train Loss: 9.381681
+Validation Loss: 4.525772
+Train Accuracy: 0.239319
+Validation Accuracy: 0.241391
+WER: 0.947891
+CER: 0.758609
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:00:08
+GPU memory usage: 641 MB
+Throughput: 239.66 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya anng di Palembang.datang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Saya anng di Palembang.datang
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Saya an ng di Palembang.datang
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Saya an ng di Palembang.datang
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Saya anng di Palembang.datang
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=9.3817 | Val Loss=4.5258 | Train Acc=0.2393 | Val Acc=0.2414 | WER=0.9479 | CER=0.7586 | Time=00:00:08 | GPU=641MB
+
+============================================================
+[10:10:40] Epoch 2/50 | Current LR: 0.000112
+Current Learning Rate: 0.0001117774
+Train Loss: 3.578519
+Validation Loss: 3.171299
+Train Accuracy: 0.135493
+Validation Accuracy: 0.046555
+WER: 1.252109
+CER: 0.953445
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:07
+Total elapsed time: 00:00:18
+GPU memory usage: 649 MB
+Throughput: 285.27 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya a membutuhkanan tempat wiyata di kota. depannggu depandatang warga
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Saya  adat membutuhkan rekomendasi tempat wiyata di kota Palembang. Palembang depannggu depan warga depan warga
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Mahasiswa adat membutuhkan rekomendasi tempat w masyata di Palembang. depannggu depandatang warga
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Saya bang untukmaauan kota Palembang melalui. pendidikan depannggu depandatang warga
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Saya bangtribusi ada untuk membutuhkanan kota Palembangilalu kota. pendidikan kotahidup warga depandatang warga
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 2: Train Loss=3.5785 | Val Loss=3.1713 | Train Acc=0.1355 | Val Acc=0.0466 | WER=1.2521 | CER=0.9534 | Time=00:00:07 | GPU=649MB
+
+============================================================
+[10:10:50] Epoch 3/50 | Current LR: 0.000201
+Current Learning Rate: 0.0002009119
+Train Loss: 2.157329
+Validation Loss: 1.706091
+Train Accuracy: 0.253731
+Validation Accuracy: 0.212732
+WER: 0.993797
+CER: 0.787268
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:06
+Total elapsed time: 00:00:28
+GPU memory usage: 647 MB
+Throughput: 294.28 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya bangt mem perkanan tinggi ter masarak di Palembang. Palembang depan.hidupdatang warga
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Transpkan tugas belajar ada untuk ing memberikanestasi jangta di Palembang. Palembang depan.hidup warga
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: D sen peaturbimbing memberikan banyak masukan masngta di Palembang. Palembang depandatang warga
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Saya  kan tugas kelompok untukmmata kuliah Si kulingat dan kegiatan lainnyahidup wargadatang wargadatang warga
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: PalembangMahasiswa perlu mengatur ada untuk ke memjkanan kota Palembang me bertahan lainnyahidup pendidikanhidup wargahi
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 3: Train Loss=2.1573 | Val Loss=1.7061 | Train Acc=0.2537 | Val Acc=0.2127 | WER=0.9938 | CER=0.7873 | Time=00:00:06 | GPU=647MB
+
+============================================================
+[10:11:00] Epoch 4/50 | Current LR: 0.000273
+Current Learning Rate: 0.0002728384
+Train Loss: 1.319040
+Validation Loss: 1.412937
+Train Accuracy: 0.314052
+Validation Accuracy: 0.261102
+WER: 0.796526
+CER: 0.738898
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:07
+Total elapsed time: 00:00:37
+GPU memory usage: 650 MB
+Throughput: 279.99 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya adah sakhidup membutuhkanan tempat wisarak di Palembang. depan. depan. depan. depandatang depandatang"
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang menger kelompok untuk mata kuliah Sistem Kontrol. depan. depan. depan.hidupdatang"
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen mbimbing memberikan banyak masukan yang membangun. depandatang depandatang depandatang"
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Sayamungan ik yadiakan banyak referensingilmiah pendidikanah. depandatang depandatang"
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antarjuan kota Palembang melalui pendidikanah.ah.hidupdatang"
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 4: Train Loss=1.3190 | Val Loss=1.4129 | Train Acc=0.3141 | Val Acc=0.2611 | WER=0.7965 | CER=0.7389 | Time=00:00:07 | GPU=650MB
+
+============================================================
+[10:11:09] Epoch 5/50 | Current LR: 0.000300
+Current Learning Rate: 0.0003000000
+Train Loss: 0.932134
+Validation Loss: 1.475282
+Train Accuracy: 0.095495
+Validation Accuracy: 0.076931
+WER: 0.695037
+CER: 0.923069
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:06
+Total elapsed time: 00:00:47
+GPU memory usage: 650 MB
+Throughput: 299.51 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya ingin berk adau perguruan tinggi ternamaan Palembangnyahidupali pendidikanhidupahhidupngahhidupdatanghidup
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerja tugas kelompokmbimatangahberikan banyak masukanontrol Palembanghidupngihidupnyahidup
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen peelas membuat sayambimbing memberikan banyak masukan yang membangun.ngatnggu depanhidupngdatanghidupdatanghidupda
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Ling pe uademik yang positif banyak referensi ilmiahiahhidupdatanghidup
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur untuk kemajuan kota Palembang melalui pendidikani pendidikanahhidupnyahidupahhidup
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 5: Train Loss=0.9321 | Val Loss=1.4753 | Train Acc=0.0955 | Val Acc=0.0769 | WER=0.6950 | CER=0.9231 | Time=00:00:06 | GPU=650MB
+
+============================================================
+[10:11:19] Epoch 6/50 | Current LR: 0.000300
+Current Learning Rate: 0.0002996287
+Train Loss: 0.624176
+Validation Loss: 1.336955
+Train Accuracy: 0.398160
+Validation Accuracy: 0.315647
+WER: 0.611414
+CER: 0.684353
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:06
+Total elapsed time: 00:00:57
+GPU memory usage: 649 MB
+Throughput: 289.70 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya  menbutuhkan rekomendasi tempat terntukama di Palembang.ng di.datanghidupdatang.hidupdatang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol. Palembang kota Palembang.datangihidupdatang.dat
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Mahasiswasen pembibng mem Si banyak masukan yang membangun. Palembang.datanghidupdatang.datang
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: ayaingkungan akademik yang men sa lingkungan mendukuenerailms belajarng.ilm.datang.hidupdatang
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya pendidikani pendidikanahihidupdatang. pend
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 6: Train Loss=0.6242 | Val Loss=1.3370 | Train Acc=0.3982 | Val Acc=0.3156 | WER=0.6114 | CER=0.6844 | Time=00:00:06 | GPU=649MB
+
+============================================================
+[10:11:29] Epoch 7/50 | Current LR: 0.000299
+Current Learning Rate: 0.0002985285
+Train Loss: 0.457926
+Validation Loss: 0.830297
+Train Accuracy: 0.532003
+Validation Accuracy: 0.466933
+WER: 0.563027
+CER: 0.533067
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:07
+Total elapsed time: 00:01:07
+GPU memory usage: 649 MB
+Throughput: 281.02 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Sayat membutuhguruan tinggi ter masyarak di Palembang. Palembang.i.datang pendidikan
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengkan tugas kelompok untuk mata kuliah Sistem Kontrol. depannggu.i.datang. pendidikandatang
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Uombimbing memberikan banyak masukan yang membangun.datang pendidikan
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungakademik yang positif sangat mendukung proses.i.datang pendidikan
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengaturo waktu dengan baikmajuan kota Palembang melalui pendidikan.i.datang pendidikandatang kampus
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 7: Train Loss=0.4579 | Val Loss=0.8303 | Train Acc=0.5320 | Val Acc=0.4669 | WER=0.5630 | CER=0.5331 | Time=00:00:07 | GPU=649MB
+
+============================================================
+[10:11:40] Epoch 8/50 | Current LR: 0.000297
+Current Learning Rate: 0.0002967047
+Train Loss: 0.304861
+Validation Loss: 0.981823
+Train Accuracy: 0.552139
+Validation Accuracy: 0.453594
+WER: 0.606203
+CER: 0.546406
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:07
+Total elapsed time: 00:01:18
+GPU memory usage: 652 MB
+Throughput: 276.76 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di Palembang. Palembang.si mendatang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang meng tugas kelompok untuk mata kuliah Sistem Kontrol. Palembang. Asilah men
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.si belajarsi mendatang
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar.ahsi mendatang
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengaturntribusi untuk kemajuan kota Palembang melalui pendidikanahsilah men
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 8: Train Loss=0.3049 | Val Loss=0.9818 | Train Acc=0.5521 | Val Acc=0.4536 | WER=0.6062 | CER=0.5464 | Time=00:00:07 | GPU=652MB
+
+============================================================
+[10:11:50] Epoch 9/50 | Current LR: 0.000294
+Current Learning Rate: 0.0002941662
+Train Loss: 0.270664
+Validation Loss: 0.671101
+Train Accuracy: 0.466802
+Validation Accuracy: 0.399941
+WER: 0.422829
+CER: 0.600059
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:07
+Total elapsed time: 00:01:28
+GPU memory usage: 652 MB
+Throughput: 275.74 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang. Palembanghidup.datang belajar.datang.datang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol. Palembang kotahidup belajar.hidupah.ahdatang
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupdatang.datang.datang
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkunganakademik yang positiftemngat mendukung proses belajar.ah.datang belajar.datang.datang
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengaturontribusi untuk kemajuan kota Palembang melalui pendidikanah belajarahhidupahdatangi
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 9: Train Loss=0.2707 | Val Loss=0.6711 | Train Acc=0.4668 | Val Acc=0.3999 | WER=0.4228 | CER=0.6001 | Time=00:00:07 | GPU=652MB
+
+============================================================
+[10:12:01] Epoch 10/50 | Current LR: 0.000291
+Current Learning Rate: 0.0002909253
+Train Loss: 0.181224
+Validation Loss: 0.502869
+Train Accuracy: 0.707026
+Validation Accuracy: 0.557104
+WER: 0.371960
+CER: 0.442896
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:07
+Total elapsed time: 00:01:38
+GPU memory usage: 650 MB
+Throughput: 269.68 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisagi di lainnyahidupalu pendidikan.s.datang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.ng Palembang unya warga.ja.datang.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Mahasiswa pembimbing memberikan banyak masukan yang membangun. ng.datang.datang
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungakademik yang positif sangat mendukung proses belajar.i pendidikan.s.datang
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kanah Palembang melalui pendidikannyasi.jasi.datang
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 10: Train Loss=0.1812 | Val Loss=0.5029 | Train Acc=0.7070 | Val Acc=0.5571 | WER=0.3720 | CER=0.4429 | Time=00:00:07 | GPU=650MB
+
+============================================================
+[10:12:12] Epoch 11/50 | Current LR: 0.000287
+Current Learning Rate: 0.0002869978
+Train Loss: 0.152021
+Validation Loss: 0.937840
+Train Accuracy: 0.735540
+Validation Accuracy: 0.553571
+WER: 0.629529
+CER: 0.446429
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:07
+Total elapsed time: 00:01:49
+GPU memory usage: 649 MB
+Throughput: 264.38 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkanan tinggi ternama di Palembang. Palembangngi. depan.datang. Kam
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.ng di. belajar. Kamap depan Kamhidup
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Mahasiswa pe mengermbimbing memberikan banyak masukan yang membangun.ng depan. depan. Kam
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkunganakademik yang positif sangatferensi ilmiah belajar .i.i. depan.datang. Kam
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baikmajuan kota Palembang melalui pendidikani. belajar. Kam. depan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 11: Train Loss=0.1520 | Val Loss=0.9378 | Train Acc=0.7355 | Val Acc=0.5536 | WER=0.6295 | CER=0.4464 | Time=00:00:07 | GPU=649MB
+
+============================================================
+[10:12:24] Epoch 12/50 | Current LR: 0.000282
+Current Learning Rate: 0.0002824029
+Train Loss: 0.133675
+Validation Loss: 0.677214
+Train Accuracy: 0.496909
+Validation Accuracy: 0.320765
+WER: 0.546898
+CER: 0.679235
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:07
+Total elapsed time: 00:02:02
+GPU memory usage: 649 MB
+Throughput: 253.03 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya ingin berk membutuhkan rekomendasi tempat wisata di Palembang. Palembang. belajar.hidup.datang.hidup.datang Kamhidu
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol. Palembanghidup belajar.hidupsidatang Kamhidup
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Mosen pembimbing memberikan banyak masukan yang membangun.nghidup.hidup. depandatang.datang Kamhidup
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Saya inginakademik yang positif sangat mendukung proses belajar.ah.hidup. depandatanghidup.datang Kamhidup
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengaturontribusi waktu dengan baikmaauan kota Palembang melalui pendidikanah belajarhidupsi Kamhi
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 12: Train Loss=0.1337 | Val Loss=0.6772 | Train Acc=0.4969 | Val Acc=0.3208 | WER=0.5469 | CER=0.6792 | Time=00:00:07 | GPU=649MB
+
+============================================================
+[10:12:35] Epoch 13/50 | Current LR: 0.000277
+Current Learning Rate: 0.0002771629
+Train Loss: 0.113594
+Validation Loss: 0.990963
+Train Accuracy: 0.326482
+Validation Accuracy: 0.049328
+WER: 0.749132
+CER: 0.950672
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:07
+Total elapsed time: 00:02:13
+GPU memory usage: 650 MB
+Throughput: 252.75 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya i berk membutuhkan rekomendasi tempat wisata di kotanya Palembang pendidikanngs.hidup depandatanghidupdatang Kam"ah
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan belajar untuk mata kuliah Sistem Kontrol.ng Palembanghidup belajarhidupsidatanghidup
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pe belajarmblahming memberikan banyak masukan yang membangun.ng depanngdatang belajardatanghidupdatang depandatang
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukuati hasil. pendidikan.datang belajar.hidup depandatang Kam"ah
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengaturn waktuntukenganmajuan kota Palembang melalui pendidikan.ah belajarhidupsi Kamdatang
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 13: Train Loss=0.1136 | Val Loss=0.9910 | Train Acc=0.3265 | Val Acc=0.0493 | WER=0.7491 | CER=0.9507 | Time=00:00:07 | GPU=650MB
+
+============================================================
+[10:12:46] Epoch 14/50 | Current LR: 0.000271
+Current Learning Rate: 0.0002713034
+Train Loss: 0.113965
+Validation Loss: 0.467601
+Train Accuracy: 0.722362
+Validation Accuracy: 0.645062
+WER: 0.388089
+CER: 0.354938
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:07
+Total elapsed time: 00:02:24
+GPU memory usage: 647 MB
+Throughput: 261.98 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di Palembang.nya Palembang. depan.ah
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugaskan tugas kelompok untuk mata kuliah Sistem Kontrol. Palembang. Palembang.hidupdatang depan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Mosen pembimbing memberikan banyak masukan yang membangun. Palembang. depandatang.ah
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positifjagangat mendukuat proses belajar. depandatang.ah
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya pendidikan.hidupdatang. depan Kamdatangi
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 14: Train Loss=0.1140 | Val Loss=0.4676 | Train Acc=0.7224 | Val Acc=0.6451 | WER=0.3881 | CER=0.3549 | Time=00:00:07 | GPU=647MB
+
+============================================================
+[10:12:57] Epoch 15/50 | Current LR: 0.000265
+Current Learning Rate: 0.0002648529
+Train Loss: 0.101292
+Validation Loss: 0.525022
+Train Accuracy: 0.397095
+Validation Accuracy: 0.247169
+WER: 0.562283
+CER: 0.752831
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:07
+Total elapsed time: 00:02:35
+GPU memory usage: 650 MB
+Throughput: 250.61 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang.hidupah.hidupah. depan. depanhidup
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupahhidupahhidup depanhidup
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupah.hidupdatang. depan. depanhidup
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positifjaga lingkungan untuk generasi men belajar ah.ahhidupah. depan. depanah depanhidup depan
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya pendidikanahhidupahhidup
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 15: Train Loss=0.1013 | Val Loss=0.5250 | Train Acc=0.3971 | Val Acc=0.2472 | WER=0.5623 | CER=0.7528 | Time=00:00:07 | GPU=650MB
+
+============================================================
+[10:13:09] Epoch 16/50 | Current LR: 0.000258
+Current Learning Rate: 0.0002578429
+Train Loss: 0.076703
+Validation Loss: 0.912959
+Train Accuracy: 0.301418
+Validation Accuracy: 0.092713
+WER: 0.970223
+CER: 0.907287
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:02:47
+GPU memory usage: 648 MB
+Throughput: 247.26 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota. kotaan kampusi sayaja Palembang kampus.ah.datang Kam warga
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.anhidupsa sayaja kampus warga Kamhidup pendidika
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidup kampus saya Palembang kampus wargaah.datang Kam warga
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar.ahi sayaah Palembang kampus.ah.datang depan Kam warga
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur dengan baik antara kuliah d melalui pendidikani sayaija kampusnya di pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 16: Train Loss=0.0767 | Val Loss=0.9130 | Train Acc=0.3014 | Val Acc=0.0927 | WER=0.9702 | CER=0.9073 | Time=00:00:08 | GPU=648MB
+
+============================================================
+[10:13:21] Epoch 17/50 | Current LR: 0.000250
+Current Learning Rate: 0.0002503075
+Train Loss: 0.044859
+Validation Loss: 0.723734
+Train Accuracy: 0.252492
+Validation Accuracy: 0.041470
+WER: 0.648139
+CER: 0.958530
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:02:58
+GPU memory usage: 650 MB
+Throughput: 248.91 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di Palembang. Palembanghidupahdatangahhidupdatang depandatanghidupdatangah pe
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupah belajarhidup depandatang depandatang
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masu ja yaka panja.ng.hidupdatangnghidupdatang depandatanghidupdatangah pendidikan Ka
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: ayaiku akademik yang positif sangat mendukung proses belajar hidup.ahdatangahhidupdatanghidupah pendidikan Kam pendidika
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lain pendidikanahhidup depandatang
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 17: Train Loss=0.0449 | Val Loss=0.7237 | Train Acc=0.2525 | Val Acc=0.0415 | WER=0.6481 | CER=0.9585 | Time=00:00:08 | GPU=650MB
+
+============================================================
+[10:13:32] Epoch 18/50 | Current LR: 0.000242
+Current Learning Rate: 0.0002422834
+Train Loss: 0.077085
+Validation Loss: 0.547814
+Train Accuracy: 0.086809
+Validation Accuracy: 0.010632
+WER: 0.732754
+CER: 0.989368
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:03:10
+GPU memory usage: 646 MB
+Throughput: 247.11 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang. Palembang.ngi. depanahhidup depandatang depan pendidikan
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupihidupisi.hidupah.hidup depanhidup depanhid
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupi.hidupdatang. depanhidup depandatang depanah pendidikan
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajari.ahiah. depanahdatang depandatanghidup depandatang warg
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiui pendidikanisi.uah.hidup
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 18: Train Loss=0.0771 | Val Loss=0.5478 | Train Acc=0.0868 | Val Acc=0.0106 | WER=0.7328 | CER=0.9894 | Time=00:00:08 | GPU=646MB
+
+============================================================
+[10:13:44] Epoch 19/50 | Current LR: 0.000234
+Current Learning Rate: 0.0002338097
+Train Loss: 0.053558
+Validation Loss: 0.708907
+Train Accuracy: 0.258339
+Validation Accuracy: 0.252386
+WER: 0.621588
+CER: 0.747614
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:03:22
+GPU memory usage: 648 MB
+Throughput: 244.94 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisama di Palembang. Palembang. .datangs.hidupdatang.datang pendidikan Kam pendidika
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.ng.hidup hidupisihidupi.hidupdatangta
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun. .datang.datang pendidikan Kam pendidikan
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajari. .datang belajar.datanghidup Kamdatang pendidikan Kam 
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikan ishidupihidup belajari
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 19: Train Loss=0.0536 | Val Loss=0.7089 | Train Acc=0.2583 | Val Acc=0.2524 | WER=0.6216 | CER=0.7476 | Time=00:00:08 | GPU=648MB
+
+============================================================
+[10:13:56] Epoch 20/50 | Current LR: 0.000225
+Current Learning Rate: 0.0002249277
+Train Loss: 0.043441
+Validation Loss: 0.447473
+Train Accuracy: 0.152388
+Validation Accuracy: 0.054116
+WER: 0.739206
+CER: 0.945884
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:03:34
+GPU memory usage: 652 MB
+Throughput: 236.34 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisama di Palembang. Palembangs depan hidupidatang.hidupdatang.hidup depandatang has
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol. Palembang dihidup hidupi belajarhidup pendidika
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.embangun depan hidup depandatang.hidupdatang. depandatang Kam 
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajarsngiah i belajar.hidupdatang. depandatang Kam pendidikan
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikanisihidup pendidikanai
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 20: Train Loss=0.0434 | Val Loss=0.4475 | Train Acc=0.1524 | Val Acc=0.0541 | WER=0.7392 | CER=0.9459 | Time=00:00:08 | GPU=652MB
+
+============================================================
+[10:14:09] Epoch 21/50 | Current LR: 0.000216
+Current Learning Rate: 0.0002156807
+Train Loss: 0.020536
+Validation Loss: 0.526689
+Train Accuracy: 0.173961
+Validation Accuracy: 0.136923
+WER: 0.679901
+CER: 0.863077
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:03:46
+GPU memory usage: 649 MB
+Throughput: 243.78 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisama di Palembang. Palembang.i.idatang.hidupdatang. depandatang Kam pendidikan
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidup i belajar.hidup pendidikan depan pendidika
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun. idatang. depandatang. depandatang Kam pendidikan
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajariahiah.datang. depandatang Kam pendidikan
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu d kemajuan kota Palembang melalui pendidikaniah.hidup pendidikanhidup depan pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 21: Train Loss=0.0205 | Val Loss=0.5267 | Train Acc=0.1740 | Val Acc=0.1369 | WER=0.6799 | CER=0.8631 | Time=00:00:08 | GPU=649MB
+
+============================================================
+[10:14:21] Epoch 22/50 | Current LR: 0.000206
+Current Learning Rate: 0.0002061137
+Train Loss: 0.010037
+Validation Loss: 0.470982
+Train Accuracy: 0.089806
+Validation Accuracy: 0.080199
+WER: 0.663027
+CER: 0.919801
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:03:58
+GPU memory usage: 650 MB
+Throughput: 242.94 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisama di Palembang. Palembang. pendidikan.idatang.hidupdatang. depan pendidikandata
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarnyahidup pendidikan depan pendidik
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidup depandatang.hidupdatang. depandatang Kamdatang Kamnya
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah.ahdatang.hidupdatang. depandatang Kamnya
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antarauanah Palembang melalui pendidikannyaisinyahidup pendidikanhidup pendid
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 22: Train Loss=0.0100 | Val Loss=0.4710 | Train Acc=0.0898 | Val Acc=0.0802 | WER=0.6630 | CER=0.9198 | Time=00:00:08 | GPU=650MB
+
+============================================================
+[10:14:32] Epoch 23/50 | Current LR: 0.000196
+Current Learning Rate: 0.0001962733
+Train Loss: 0.006677
+Validation Loss: 0.475617
+Train Accuracy: 0.149132
+Validation Accuracy: 0.000000
+WER: 0.733995
+CER: 1.007759
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:04:10
+GPU memory usage: 649 MB
+Throughput: 243.24 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wnsata di Palembang. Palembang.ahdatang.hidupdatang. depandatang Kam pendidikan
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidup hidup belajarhidup pendidikan depan pendid
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidup depandatang.hidupdatang depandatang Kamdatang Kam pendid
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah.ahdatang.hidupdatang. depandatang Kam pendidik
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah Palembang melalui pendidikannyai belajarnyahidup pendidikan dep
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 23: Train Loss=0.0067 | Val Loss=0.4756 | Train Acc=0.1491 | Val Acc=0.0000 | WER=0.7340 | CER=1.0078 | Time=00:00:08 | GPU=649MB
+
+============================================================
+[10:14:44] Epoch 24/50 | Current LR: 0.000186
+Current Learning Rate: 0.0001862074
+Train Loss: 0.004619
+Validation Loss: 0.478847
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.804467
+CER: 1.090270
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:04:22
+GPU memory usage: 645 MB
+Throughput: 244.10 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di Palembang. Palembang.ah belajar.hidupdatang. depan pendidikandatang hasild
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidup hidupi belajarhidup pendidikan. depan pend
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupi belajar.hidupdatang. depandatang depandatang Kam pendid
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajari.ah belajar.hidupdatang. depandatang Kam pendidikan
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah Palembang melalui pendidikannyai belajarnyahidup pendidikan.hid
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 24: Train Loss=0.0046 | Val Loss=0.4788 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.8045 | CER=1.0903 | Time=00:00:08 | GPU=645MB
+
+============================================================
+[10:14:56] Epoch 25/50 | Current LR: 0.000176
+Current Learning Rate: 0.0001759652
+Train Loss: 0.003343
+Validation Loss: 0.643175
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.837717
+CER: 1.120679
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:04:34
+GPU memory usage: 652 MB
+Throughput: 239.73 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhguruan tinggi ternama di Palembang. di Palembang.i belajar.hidupdatang. depan pendidikandatang hasildatang 
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidup hidupi belajarhidup mem pendidikanhidup pe
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupi belajar.hidupdatang depandatang pendidikan hasildatang 
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajari.ah belajar.hidupdatang. depan pendidikandatang hasilda
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antarauuliah Palembang melalui pendidikannyaisihidup mem pendidikanhidup pend
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 25: Train Loss=0.0033 | Val Loss=0.6432 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.8377 | CER=1.1207 | Time=00:00:08 | GPU=652MB
+
+============================================================
+[10:15:08] Epoch 26/50 | Current LR: 0.000166
+Current Learning Rate: 0.0001655965
+Train Loss: 0.002877
+Validation Loss: 0.555518
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.828536
+CER: 1.135339
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:04:46
+GPU memory usage: 652 MB
+Throughput: 239.95 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisama di Palembang. Palembang kota. pendidikan.ah belajar.hidupdatang depan pendidi
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol. kotahidupi belajarhidup pendidikan depan pendid
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupahdatang.hidupdatang depandatanghidup depandatang depanda
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar.i.ah.hidupdatang. depandatang Kam pendidikan
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah Palembang melalui pendidikanahnyahidup pendidikan depan pendidi
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 26: Train Loss=0.0029 | Val Loss=0.5555 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.8285 | CER=1.1353 | Time=00:00:08 | GPU=652MB
+
+============================================================
+[10:15:20] Epoch 27/50 | Current LR: 0.000155
+Current Learning Rate: 0.0001551518
+Train Loss: 0.002750
+Validation Loss: 0.520617
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.820347
+CER: 1.194044
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:04:58
+GPU memory usage: 649 MB
+Throughput: 235.52 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wnama di Palembang. Palembang.ahdatang.hidupdatang. depan pendidikandatang hasilhidu
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarhidup pendidikanhidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupidatang.hidupdatang depandatanghidup depandatang depandat
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajari.ah.hidupdatang. depan pendidikandatang depandatang Kam
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah Palembang melalui pendidikaniahnyahidup pendidikanhidup pendidi
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 27: Train Loss=0.0027 | Val Loss=0.5206 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.8203 | CER=1.1940 | Time=00:00:08 | GPU=649MB
+
+============================================================
+[10:15:34] Epoch 28/50 | Current LR: 0.000145
+Current Learning Rate: 0.0001446820
+Train Loss: 0.001528
+Validation Loss: 0.497301
+Train Accuracy: 0.018914
+Validation Accuracy: 0.054281
+WER: 0.722084
+CER: 0.945719
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:05:12
+GPU memory usage: 654 MB
+Throughput: 236.54 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wnama di Palembang.ah belajar.hidupdatang. depan pendidikandatangD Kam warga
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarhidup pendidikan depan pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupahdatang.hidupdatang depandatang Kam warga
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar. hasil.ah belajar.hidupdatang. depandatang Kam warga
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah Palembang melalui pendidikanahiahnyahidup pendidikan depan pend
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 28: Train Loss=0.0015 | Val Loss=0.4973 | Train Acc=0.0189 | Val Acc=0.0543 | WER=0.7221 | CER=0.9457 | Time=00:00:08 | GPU=654MB
+
+============================================================
+[10:15:46] Epoch 29/50 | Current LR: 0.000134
+Current Learning Rate: 0.0001342381
+Train Loss: 0.002409
+Validation Loss: 0.490900
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.906203
+CER: 1.236999
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:05:24
+GPU memory usage: 652 MB
+Throughput: 233.81 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wnsama di Palembang. Palembang kota.i belajar.hidupdatang. depan pendidikandatang ha
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidup hidupi belajarhidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupidatang.hidupdatang depan pendidikandatang pendidikan"hid
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajari.ah belajar.hidupdatang. depan pendidikandatang hasilda
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah Palembang melalui pendidikannyaisinyahidup pendidikanhidup pend
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 29: Train Loss=0.0024 | Val Loss=0.4909 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.9062 | CER=1.2370 | Time=00:00:08 | GPU=652MB
+
+============================================================
+[10:15:59] Epoch 30/50 | Current LR: 0.000124
+Current Learning Rate: 0.0001238710
+Train Loss: 0.001658
+Validation Loss: 0.507786
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.781390
+CER: 1.116651
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:05:37
+GPU memory usage: 652 MB
+Throughput: 231.18 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wnsama di Palembang. Palembang.ah belajar.hidupdatang depan pendidikandatang pendidi
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidup belajarhidup pendidikanhidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupi belajar.hidupdatang depan pendidikandatang pendidikan"d
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajari.ah belajar.hidupdatang. depan pendidikandatang Kamnyaa
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah Palembang melalui pendidikanah belajarnyahidup pendidikanhidup 
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 30: Train Loss=0.0017 | Val Loss=0.5078 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.7814 | CER=1.1167 | Time=00:00:08 | GPU=652MB
+
+============================================================
+[10:16:11] Epoch 31/50 | Current LR: 0.000114
+Current Learning Rate: 0.0001136312
+Train Loss: 0.001822
+Validation Loss: 0.455391
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.990074
+CER: 1.274045
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:05:49
+GPU memory usage: 648 MB
+Throughput: 231.50 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya ingin membutuhkan rekomendasi tempat wisata di kota. Palembang.ah belajar.hidupdatang. depan pendidikandatang pendi
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol. Palembanghidup hidupi belajarnyahidup pendidika
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupidatang.hidupdatang depan pendidikandatang pendidikan" ha
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar. hasil.ah belajar.hidupdatang. depan pendidikandatang h
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengaturn waktu dengan baik antara kuliah Palembang melalui pendidikanahiahnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 31: Train Loss=0.0018 | Val Loss=0.4554 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.9901 | CER=1.2740 | Time=00:00:08 | GPU=648MB
+
+============================================================
+[10:16:24] Epoch 32/50 | Current LR: 0.000104
+Current Learning Rate: 0.0001035686
+Train Loss: 0.001056
+Validation Loss: 0.602624
+Train Accuracy: 0.055481
+Validation Accuracy: 0.000000
+WER: 0.918114
+CER: 1.184072
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:09
+Total elapsed time: 00:06:02
+GPU memory usage: 650 MB
+Throughput: 222.11 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkanan tinggi ternama di Palembang. di Palembang. pendidikan.ah belajar.hidupdatang depan pendidikandatang p
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidup hidupi belajarnyahidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupi belajar.hidupdatang depandatang depandatang depandatang
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah belajar.hidupdatang. depan pendidikandatang Ka
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah Palembang melalui pendidikannyaiahnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 32: Train Loss=0.0011 | Val Loss=0.6026 | Train Acc=0.0555 | Val Acc=0.0000 | WER=0.9181 | CER=1.1841 | Time=00:00:09 | GPU=650MB
+
+============================================================
+[10:16:38] Epoch 33/50 | Current LR: 0.000094
+Current Learning Rate: 0.0000937322
+Train Loss: 0.000621
+Validation Loss: 0.558492
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.925062
+CER: 1.246872
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:09
+Total elapsed time: 00:06:16
+GPU memory usage: 649 MB
+Throughput: 210.52 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wnama di Palembang. Palembang. pendidikan.i belajar.hidupdatang depan pendidikandata
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarhidup pendidikan depan pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupidatang.hidupdatang depandatang depan pendidikan"hidupdat
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasili.ah belajar.hidupdatang. depan pendidikandatang K
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah Palembang melalui pendidikanahiahnyahidup pendidikanhidup pendi
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 33: Train Loss=0.0006 | Val Loss=0.5585 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.9251 | CER=1.2469 | Time=00:00:09 | GPU=649MB
+
+============================================================
+[10:16:51] Epoch 34/50 | Current LR: 0.000084
+Current Learning Rate: 0.0000841699
+Train Loss: 0.000585
+Validation Loss: 0.556103
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.942680
+CER: 1.268663
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:06:29
+GPU memory usage: 647 MB
+Throughput: 231.11 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tinggi wnama di Palembang. Palembang. pendidikan.ah belajar.hidupdatang depan pendidikandat
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarhidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupidatang.hidupdatang depan pendidikandatang depan pendidik
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah belajar.hidupdatang. depan pendidikandatang Ka
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah Palembang melalui pendidikanahiahnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 34: Train Loss=0.0006 | Val Loss=0.5561 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.9427 | CER=1.2687 | Time=00:00:08 | GPU=647MB
+
+============================================================
+[10:17:03] Epoch 35/50 | Current LR: 0.000075
+Current Learning Rate: 0.0000749284
+Train Loss: 0.000493
+Validation Loss: 0.591598
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.927543
+CER: 1.231254
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:06:41
+GPU memory usage: 651 MB
+Throughput: 228.87 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya  membutuhkan rekomendasi tempat wisata di Palembang. Palembang. pendidikan.ah belajar.hidupdatang depan pendidikand
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarhidup pendidikan depan pendidikan 
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupidatang.hidupdatang depandatang depan pendidikandatang de
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah belajar.hidupdatang. depandatang Kam warga pen
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah Palembang melalui pendidikanahiahnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 35: Train Loss=0.0005 | Val Loss=0.5916 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.9275 | CER=1.2313 | Time=00:00:08 | GPU=651MB
+
+============================================================
+[10:17:17] Epoch 36/50 | Current LR: 0.000066
+Current Learning Rate: 0.0000660526
+Train Loss: 0.004517
+Validation Loss: 0.747400
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.929280
+CER: 1.393073
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:06:55
+GPU memory usage: 648 MB
+Throughput: 223.85 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisama di Palembang. Palembang.i belajar.hidupdatang depan pendidikandatang" pendidi
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarhidup pendidikan depanhidup pendid
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupiU.hidupdatang depandatang pendidikan"hidup depandatang d
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar.i.ah belajar.hidupdatang depan pendidikandatang" hasild
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lain pendidikanahisinyahidup pendidikanhidup pendi
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 36: Train Loss=0.0045 | Val Loss=0.7474 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.9293 | CER=1.3931 | Time=00:00:08 | GPU=648MB
+
+============================================================
+[10:17:29] Epoch 37/50 | Current LR: 0.000058
+Current Learning Rate: 0.0000575857
+Train Loss: 0.003657
+Validation Loss: 0.638036
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.898263
+CER: 1.251890
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:07:07
+GPU memory usage: 655 MB
+Throughput: 231.49 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wnama di Palembang. Palembang.isi.hidupdatang. depan pendidikandatang" pendidikan" h
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupisijahidupdatang pendidikan Kam pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidupi belajar.hidupdatang depan pendidikandatang pendidikan" 
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajari.ah belajarathidupdatang. depan pendidikandatang hasild
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikanahnyaisihidup pendidikannyama pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 37: Train Loss=0.0037 | Val Loss=0.6380 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.8983 | CER=1.2519 | Time=00:00:08 | GPU=655MB
+
+============================================================
+[10:17:47] Epoch 38/50 | Current LR: 0.000050
+Current Learning Rate: 0.0000495692
+Train Loss: 0.001662
+Validation Loss: 0.619538
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.883623
+CER: 1.231684
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:07:24
+GPU memory usage: 650 MB
+Throughput: 233.90 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkanan tinggi ternama di Palembang. Palembang.ahdatang.hidupdatang depan pendidikandatang pendidikandatangD 
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidup belajarnyahidup pendidikan depan pendidika
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun. depanhidup depandatang.hidupdatang depandatang pendidikanDdat
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ahdatang.hidupdatang depan pendidikandatang depan
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiui pendidikanah belajarnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 38: Train Loss=0.0017 | Val Loss=0.6195 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.8836 | CER=1.2317 | Time=00:00:08 | GPU=650MB
+
+============================================================
+[10:17:59] Epoch 39/50 | Current LR: 0.000042
+Current Learning Rate: 0.0000420419
+Train Loss: 0.001142
+Validation Loss: 0.614410
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.909677
+CER: 1.290124
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:07:37
+GPU memory usage: 648 MB
+Throughput: 228.46 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wnama di Palembang. Palembang.ah belajar.hidupdatang depan pendidikandatang pendidik
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarnyahidup pendidikan depan pendidik
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidup depandatang.hidupdatang depandatang"Ddatang depandatang 
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah belajar.hidupdatang. depan pendidikandatang de
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiui pendidikanahisinyahidup pendidikanhidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 39: Train Loss=0.0011 | Val Loss=0.6144 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.9097 | CER=1.2901 | Time=00:00:08 | GPU=648MB
+
+============================================================
+[10:18:12] Epoch 40/50 | Current LR: 0.000035
+Current Learning Rate: 0.0000350406
+Train Loss: 0.001018
+Validation Loss: 0.647753
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.906700
+CER: 1.277908
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:07:50
+GPU memory usage: 651 MB
+Throughput: 233.15 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkanan tinggi ternama di Palembang. Palembang.ahdatang.hidup depan pendidikandatang pendidikanDdatang depand
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarnyahidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun. depanhidup depandatang.hidup depan pendidikandatang pendidika
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah belajar.hidupdatang depan pendidikandatangD de
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikanahnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 40: Train Loss=0.0010 | Val Loss=0.6478 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.9067 | CER=1.2779 | Time=00:00:08 | GPU=651MB
+
+============================================================
+[10:18:25] Epoch 41/50 | Current LR: 0.000029
+Current Learning Rate: 0.0000285993
+Train Loss: 0.000421
+Validation Loss: 0.627585
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.934491
+CER: 1.359065
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:08:03
+GPU memory usage: 649 MB
+Throughput: 229.45 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkanan tinggi wnama di Palembang. Palembang.ah belajar.hidupdatang depan pendidikandatang hasil pendidikan" 
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajar Ahidup pendidikanhidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidup depandatang.hidupdatang depan pendidikandatang" pendidik
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajari.ah belajar.hidupdatang depan pendidikandatang hasildat
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikannyaisinyahidup pendidikanhidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 41: Train Loss=0.0004 | Val Loss=0.6276 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.9345 | CER=1.3591 | Time=00:00:08 | GPU=649MB
+
+============================================================
+[10:18:38] Epoch 42/50 | Current LR: 0.000023
+Current Learning Rate: 0.0000227495
+Train Loss: 0.000414
+Validation Loss: 0.609793
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.889578
+CER: 1.287912
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:08:16
+GPU memory usage: 652 MB
+Throughput: 228.91 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkanan tinggi ternama di Palembang. Palembang.ah belajar.hidupdatang depan pendidikandatang pendidikan"datan
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarnyahidup pendidikan Kam pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidup depandatang.hidupdatang depan pendidikandatang pendidika
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah belajar.hidupdatang. depan pendidikandatang de
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikanah belajarnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 42: Train Loss=0.0004 | Val Loss=0.6098 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.8896 | CER=1.2879 | Time=00:00:08 | GPU=652MB
+
+============================================================
+[10:18:51] Epoch 43/50 | Current LR: 0.000018
+Current Learning Rate: 0.0000175197
+Train Loss: 0.000323
+Validation Loss: 0.582302
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.878412
+CER: 1.225707
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:08:29
+GPU memory usage: 652 MB
+Throughput: 224.54 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkanan tinggi wnama di Palembang. Palembang.ah belajar.hidupdatang depan pendidikandatang pendidikandatang d
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarnyahidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun. depanhidup depandatang.hidupdatang depan pendidikan depandata
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah belajar.hidupdatang. depan pendidikandatang de
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikanah belajarnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 43: Train Loss=0.0003 | Val Loss=0.5823 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.8784 | CER=1.2257 | Time=00:00:08 | GPU=652MB
+
+============================================================
+[10:19:04] Epoch 44/50 | Current LR: 0.000013
+Current Learning Rate: 0.0000129353
+Train Loss: 0.000328
+Validation Loss: 0.581040
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.879404
+CER: 1.247796
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:08:41
+GPU memory usage: 647 MB
+Throughput: 227.63 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wnama di Palembang. Palembang.ah belajar.hidupdatang depan pendidikandatang pendidik
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidup belajarnyahidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidup depandatang.hidupdatang depan pendidikandatang pendidika
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah belajar.hidupdatang. depan pendidikandatang de
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikanah belajarnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 44: Train Loss=0.0003 | Val Loss=0.5810 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.8794 | CER=1.2478 | Time=00:00:08 | GPU=647MB
+
+============================================================
+[10:19:17] Epoch 45/50 | Current LR: 0.000009
+Current Learning Rate: 0.0000090186
+Train Loss: 0.000367
+Validation Loss: 0.615624
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.911911
+CER: 1.296002
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:09
+Total elapsed time: 00:08:55
+GPU memory usage: 650 MB
+Throughput: 209.63 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkanan tinggi ternama di Palembang. Palembang.ah belajar.hidupdatang depan pendidikandatang pendidikan"datan
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarnyahidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidup depandatang.hidupdatang depan pendidikandatang pendidika
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah belajar.hidupdatang. depan pendidikandatang de
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikannyaah belajarnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 45: Train Loss=0.0004 | Val Loss=0.6156 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.9119 | CER=1.2960 | Time=00:00:09 | GPU=650MB
+
+============================================================
+[10:19:32] Epoch 46/50 | Current LR: 0.000006
+Current Learning Rate: 0.0000057889
+Train Loss: 0.000392
+Validation Loss: 0.604742
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.893797
+CER: 1.263050
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:09
+Total elapsed time: 00:09:10
+GPU memory usage: 648 MB
+Throughput: 207.28 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tinggi wnama di Palembang. Palembang. pendidikan.ah belajar.hidupdatang depan pendidikandat
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarnyahidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidup depandatang.hidupdatang depan pendidikandatang pendidika
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah belajar.hidupdatang. depan pendidikandatang de
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikanahnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 46: Train Loss=0.0004 | Val Loss=0.6047 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.8938 | CER=1.2631 | Time=00:00:09 | GPU=648MB
+
+============================================================
+[10:19:47] Epoch 47/50 | Current LR: 0.000003
+Current Learning Rate: 0.0000032617
+Train Loss: 0.000337
+Validation Loss: 0.624760
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.890819
+CER: 1.260772
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:09
+Total elapsed time: 00:09:25
+GPU memory usage: 648 MB
+Throughput: 207.52 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkanan tinggi ternama di Palembang. Palembang. pendidikan.ah belajar.hidupdatang depan pendidikandatang pend
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidupi belajarnyahidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidup depandatang.hidupdatang depan pendidikandatang pendidika
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah belajar.hidupdatang. depan pendidikandatang de
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikannyaah belajarnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 47: Train Loss=0.0003 | Val Loss=0.6248 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.8908 | CER=1.2608 | Time=00:00:09 | GPU=648MB
+
+============================================================
+[10:20:02] Epoch 48/50 | Current LR: 0.000001
+Current Learning Rate: 0.0000014493
+Train Loss: 0.000332
+Validation Loss: 0.595527
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.856079
+CER: 1.201076
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:09:40
+GPU memory usage: 649 MB
+Throughput: 222.41 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkanan tinggi ternama di Palembang. Palembang.ah belajar.hidupdatang depan pendidikandatang pendidikandatang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidup belajarnyahidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun. depanhidup depandatang.hidupdatang depan pendidikandatang pen
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah belajar.hidupdatang. depan pendidikandatang de
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikanahnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 48: Train Loss=0.0003 | Val Loss=0.5955 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.8561 | CER=1.2011 | Time=00:00:08 | GPU=649MB
+
+============================================================
+[10:20:18] Epoch 49/50 | Current LR: 0.000000
+Current Learning Rate: 0.0000003608
+Train Loss: 0.000282
+Validation Loss: 0.581219
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.901985
+CER: 1.274507
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:08
+Total elapsed time: 00:09:55
+GPU memory usage: 648 MB
+Throughput: 224.39 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wnama di Palembang. Palembang. pendidikan.ah belajar.hidupdatang depan pendidikandat
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.hidup belajarnyahidup pendidikan
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidup depandatang.hidupdatang depan pendidikandatang pendidika
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar hasil.ah belajar.hidupdatang depan pendidikandatang dep
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikanahnyahidup pendidikan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 49: Train Loss=0.0003 | Val Loss=0.5812 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.9020 | CER=1.2745 | Time=00:00:08 | GPU=648MB
+
+============================================================
+[10:20:32] Epoch 50/50 | Current LR: 0.000000
+Current Learning Rate: 0.0000000012
+Train Loss: 0.000278
+Validation Loss: 0.647544
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 0.930769
+CER: 1.331165
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:09
+Total elapsed time: 00:10:10
+GPU memory usage: 648 MB
+Throughput: 219.67 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wnama di Palembang. Palembang. pendidikan.ah belajarhidup depan pendidikandatang has
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol. kotahidupi belajar Ahidup pendidikanhidup pendi
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.hidup depan belajar.hidup depan pendidikandatang" pendidikan"d
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajari.ah belajar.hidupdatang depan pendidikandatang hasildat
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah danlalui pendidikannyaisinyahidup pendidikanhidup pendidikani
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 50: Train Loss=0.0003 | Val Loss=0.6475 | Train Acc=0.0000 | Val Acc=0.0000 | WER=0.9308 | CER=1.3312 | Time=00:00:09 | GPU=648MB
+

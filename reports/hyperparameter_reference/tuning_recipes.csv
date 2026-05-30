@@ -1,0 +1,4 @@
+recipe,goal,tradeoff
+A: Lebih akurat,Akurasi paper-grade (full data + epoch besar + model besar),"Lebih lambat, RAM/VRAM lebih"
+B: Lebih cepat,Smoke / debug (200 sample / 1 ep),"WER tinggi, tapi pipeline OK"
+C: VRAM-constrained,RTX 4060 8 GB (--batch-size 2 --grad-accum 8 --gradient-checkpointing),~30% lebih lambat

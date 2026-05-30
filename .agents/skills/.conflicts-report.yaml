@@ -1,0 +1,31 @@
+decisions:
+  - timestamp: "2026-05-20T02:46:31Z"
+  - group: "academic-pipeline"
+    keep: "academic-research-suite"
+    action: keep_declared_winner
+  - group: "paper-section-writer"
+    keep: "research-paper-writing"
+    action: keep_declared_winner
+  - group: "autonomous-iteration-loop"
+    keep: "autoresearch-suite"
+    action: keep_declared_winner
+  - removed: autoresearch
+    reason: "conflict with keep=autoresearch-suite in group=autonomous-iteration-loop"
+  - group: "agent-harness-compatibility"
+    keep: "agent-harness-compatibility"
+    action: keep_declared_winner
+  - group: "model-provider-config"
+    keep: "model-provider-config"
+    action: keep_declared_winner
+  - group: "pdf-toolkit"
+    keep: "pdf-toolkit"
+    action: keep_declared_winner
+  - group: "notebook-authoring"
+    keep: "notebook-authoring"
+    action: keep_declared_winner
+  - group: "media-pipeline"
+    keep: "media-pipeline"
+    action: keep_declared_winner
+  - group: "skill-authoring"
+    keep: "skill-authoring"
+    action: keep_declared_winner

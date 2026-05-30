@@ -1,0 +1,11 @@
+{
+  "run_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m01_whisper_tiny/runs/run_smoke_meta",
+  "style": "elsevier",
+  "formats": [
+    "png",
+    "pdf"
+  ],
+  "n_epochs": 1,
+  "history_path": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m01_whisper_tiny/runs/run_smoke_meta/history.json",
+  "out_dir": "/mnt/c/Users/ratnaatika/AI/Dataset ASR/Paper_Datatset_SOTA/training/m01_whisper_tiny/runs/run_smoke_meta/plots_elsevier"
+}

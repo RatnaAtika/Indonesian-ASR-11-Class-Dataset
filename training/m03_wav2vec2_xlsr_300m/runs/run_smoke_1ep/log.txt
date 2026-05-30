@@ -1,0 +1,24 @@
+
+============================================================
+[11:27:55] Epoch 1/1 | LR: 0.000000
+Train Loss: 7.0527 | Val Loss: 8.5305
+WER: 1.0000 | CER: 0.9834
+Durasi epoch: 00:00:06 | Total: 00:00:06
+GPU memory: 5640 MB | Throughput: 4.92 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED:  
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED:  
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED:  
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED:  
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED:  
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=7.0527 | Val Loss=8.5305 | WER=1.0000 | CER=0.9834 | Time=00:00:06 | GPU=5640MB

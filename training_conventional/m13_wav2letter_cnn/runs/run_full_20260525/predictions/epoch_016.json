@@ -1,0 +1,22 @@
+[
+  {
+    "pred": "Saya membutuhkan rekomendasi tempat wisata di kota. kotaan kampusi sayaja Palembang kampus.ah.datang Kam warga",
+    "label": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang"
+  },
+  {
+    "pred": "Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.anhidupsa sayaja kampus warga Kamhidup pendidikan",
+    "label": "Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol."
+  },
+  {
+    "pred": "Dosen pembimbing memberikan banyak masukan yang membangun.hidup kampus saya Palembang kampus wargaah.datang Kam warga",
+    "label": "Dosen pembimbing memberikan banyak masukan yang membangun."
+  },
+  {
+    "pred": "Lingkungan akademik yang positif sangat mendukung proses belajar.ahi sayaah Palembang kampus.ah.datang depan Kam warga",
+    "label": "Lingkungan akademik yang positif sangat mendukung proses belajar"
+  },
+  {
+    "pred": "Mahasiswa perlu mengatur dengan baik antara kuliah d melalui pendidikani sayaija kampusnya di pendidikan",
+    "label": "Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya"
+  }
+]

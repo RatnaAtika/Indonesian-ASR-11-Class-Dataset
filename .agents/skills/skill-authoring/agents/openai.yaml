@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Authoring"
+  short_description: "Write portable agent skills (agentskills.io)"
+  default_prompt: "Use this skill to author or refactor a portable agent skill that follows the agentskills.io open standard — frontmatter, content, helper scripts, examples, and adapters per harness."

@@ -1,0 +1,21 @@
+[
+  {
+    "epoch": 1,
+    "timestamp": "2026-05-28T18:53:55.030962",
+    "train_loss": null,
+    "val_loss": null,
+    "train_acc": 0.453585325180656,
+    "val_acc": 0.10198019801980196,
+    "wer": 1.1687344913151365,
+    "cer": 0.898019801980198,
+    "mer": 0.9271653543307087,
+    "wil": 0.9932059553349876,
+    "time_sec": 62.751670034995186,
+    "time_str": "00:01:02",
+    "total_elapsed_sec": 63.41846701900067,
+    "total_elapsed_str": "00:01:03",
+    "gpu_mb": 0,
+    "lr": 0,
+    "throughput_samples_per_sec": 3.19
+  }
+]

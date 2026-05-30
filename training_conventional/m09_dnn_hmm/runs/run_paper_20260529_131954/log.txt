@@ -1,0 +1,288 @@
+============================================================
+[13:26:23] Epoch 1/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 4.365727
+Validation Loss: n/a
+Train Accuracy: 0.097937
+Validation Accuracy: 0.000000
+WER: 2.927789
+CER: 1.437946
+[Train] mode=dnn_hmm frame_acc=0.0979 avg_ce=4.3657
+Durasi epoch: 00:04:55
+Total elapsed time: 00:04:55
+GPU memory usage: 496 MB
+Throughput: 242.90 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: S Aayaelamat , an memuan an u an kan kan an an d ses kembali kean an nganngan iok p an an kan an runggu !
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: S yokahumbilyokan bot bot i be bisa bengannganp  mem u an an positifbutuht kan ans i , b,uanman, kan,  ini an anman,anu 
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: S  S A mbilkan, fir u ng an inginan menganu anngan ansau sut kan an an an uanuan tan,uan m menyenangkanan !
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: S kan , i anuanuan an iani an ngan a dingsngs i an a an an positifan an ra i anian diin dis pendidikans kanan aya !
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: S  S  S kanMkanM, ans ng be suan baru, anoan, uanu an,an,uanu an nganada an an U an an t t i  praktikum kanan i i ini an
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=4.3657 | Val Loss=n/a | Train Acc=0.0979 | Val Acc=0.0000 | WER=2.9278 | CER=1.4379 | Time=00:04:55 | GPU=496MB
+
+============================================================
+[13:31:46] Epoch 2/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 3.583737
+Validation Loss: n/a
+Train Accuracy: 0.167163
+Validation Accuracy: 0.000000
+WER: 3.208640
+CER: 1.330085
+[Train] mode=dnn_hmm frame_acc=0.1672 avg_ce=3.5837
+Durasi epoch: 00:05:21
+Total elapsed time: 00:10:18
+GPU memory usage: 498 MB
+Throughput: 223.20 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: T ,ayaelamat , an memanu  untuk ubutuhkan kananng  se i sayai u  keemuan an a ian sei se an anilaporul ke kan ke akana p
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: olokaholoanoloan ian kesi meman  se u an kan ntuk ukan ubutuhkan su s kansntuktantuk ,uan ,u kan, u, an a ntuk udan u o 
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: T oloatankuo h ankananntukan u ian mem an kan an an ansa se suu su u kanankan anaan an uan tuanuan !.!
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: T ,  uu u ,  l ianjagaan kan an ai i,an anasu dia pi ikahs  se a aanntukan an an  di pan t ta as di  sei se kampusin ses
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: , kanMan an  sistem u oanuan pe uanuanjagaan meng a  untuk uuanu  waktu ng  waktu u  uan  l i an anga ada ada u ntukanl 
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 2: Train Loss=3.5837 | Val Loss=n/a | Train Acc=0.1672 | Val Acc=0.0000 | WER=3.2086 | CER=1.3301 | Time=00:05:21 | GPU=498MB
+
+============================================================
+[13:37:16] Epoch 3/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 3.230861
+Validation Loss: n/a
+Train Accuracy: 0.208407
+Validation Accuracy: 0.000000
+WER: 3.471049
+CER: 1.819465
+[Train] mode=dnn_hmm frame_acc=0.2084 avg_ce=3.2309
+Durasi epoch: 00:05:29
+Total elapsed time: 00:15:49
+GPU memory usage: 496 MB
+Throughput: 217.77 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: aya,aya, aya aya , ,ng ya mem meng meman memanbutuhkanan kanan menganngan biasa se sini i itu i keemuankannganangangaoan
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: ,olontarolokah kan kanan nginging bisapng an an mem meng  meng  meng anaan kankkanankanan uankanbutuhkan sus s kansan se
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Pe  S ,oloatanu i pfirredi  p arianng pkanan ang an i mengkanng an  d annganng ya anakan su kekan sukanakanan  yangan me
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: ,kanatani an iang nganjaga keankanngakankan inan aniani yangan aharusnga dei ituci i, se, ng yakanngan aan positif pan a
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: ,kanM kan s lumu siswapan  penghan p  meng  meng anjagakan meng an yaan an an u p uan u  siswa  d ng  waktu, waktui an i
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 3: Train Loss=3.2309 | Val Loss=n/a | Train Acc=0.2084 | Val Acc=0.0000 | WER=3.4710 | CER=1.8195 | Time=00:05:29 | GPU=496MB
+
+============================================================
+[13:42:52] Epoch 4/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 3.041441
+Validation Loss: n/a
+Train Accuracy: 0.232053
+Validation Accuracy: 0.000000
+WER: 3.607029
+CER: 1.970430
+[Train] mode=dnn_hmm frame_acc=0.2321 avg_ce=3.0414
+Durasi epoch: 00:05:34
+Total elapsed time: 00:21:24
+GPU memory usage: 498 MB
+Throughput: 214.55 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: S Apa S ika Sika,ayaa i  meman  meng anbutuh ubutuhkanan kanngkannganngan d ngi ga g i  keemuan tempat ya ani yangan an 
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Apa J Apa J Apa A Sika,ntarkahu ing sekarangng an,  mem  me aan kkan ankanan ubutuhkanbutuhkanan kanaanapf a  waktut  ko
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: S A S ikakah,kahuatanu ke ntuhnga  danngan an uan  untukan an an ng i u anngan kota Palembangaberikanaberikana banyak ka
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: S Apa Sikakah,kanu t ke u ian u lain u anjaga an akanan ng an anibahibahan ungan kota angha g i i sebe semua aya ng ya n
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Apa Jika ,kanMahasiswau kota kan  sis i p bagi  waktu  waktu pengh  me an Palembang  untuk u an  kota  ya waktu uani uan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 4: Train Loss=3.0414 | Val Loss=n/a | Train Acc=0.2321 | Val Acc=0.0000 | WER=3.6070 | CER=1.9704 | Time=00:05:34 | GPU=498MB
+
+============================================================
+[13:47:49] Epoch 5/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 2.922190
+Validation Loss: n/a
+Train Accuracy: 0.247271
+Validation Accuracy: 0.000000
+WER: 3.609268
+CER: 2.260723
+[Train] mode=dnn_hmm frame_acc=0.2473 avg_ce=2.9222
+Durasi epoch: 00:04:56
+Total elapsed time: 00:26:22
+GPU memory usage: 496 MB
+Throughput: 242.03 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: A ika , semua,ayau  yaan i ,  mema u menguan untukbutuhntuk kekananakanmkananmanng d  biasa , se semuauanmasi i kem mnga
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: A J ika,u ing ng yaarip,p ,  mem i uan se  sea kan kanan uankanan susansa dikanan ,ajar, m man bot, waktu kita ,an, annt
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: A ika ,u, waktu itu ihngangaanngan anngkan kekanan an mater lmateri u ngbibi luankananngana an Palembanga masa banyak se
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: A ika,uLu, keani anjagapjaga kekanngkanakananng ngan anianngan iangamasi i i sekan  seanng ya an  yaaadapkananng an posi
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: A  Jika,kanMari lahukanankanumasiu an  baru,u  pengh u u pkaniahami aan pengh u waktu u itu i,ukanulman  waktu ya waktum
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 5: Train Loss=2.9222 | Val Loss=n/a | Train Acc=0.2473 | Val Acc=0.0000 | WER=3.6093 | CER=2.2607 | Time=00:04:56 | GPU=496MB
+
+============================================================
+[13:52:51] Epoch 6/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 2.831376
+Validation Loss: n/a
+Train Accuracy: 0.258919
+Validation Accuracy: 0.000000
+WER: 3.755717
+CER: 2.387783
+[Train] mode=dnn_hmm frame_acc=0.2589 avg_ce=2.8314
+Durasi epoch: 00:05:00
+Total elapsed time: 00:31:23
+GPU memory usage: 498 MB
+Throughput: 238.70 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: A Bu  A ,ayasenayanya  rei, ,an mem meng memu memu mem ubutuhkan kan kananib ngkanngannganng dan dan dan biasa, semua a 
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: A Bu ,ukah kana min sei sengi bisai bisas seng ng an,  belajar  mem i meng i ng an kank kkan ngan uu positifkankahkan di
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: A S A yo,kahL keu ntuih sen anngmanb ba ini an an ya anbi di  dianngana memanrak ya banyakberikana banyaka banyak kan su
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: A Bu ,uL, keani anjagangakan nganngan sean b anian ianianiangan  yaah ha i mem i,ng waktung yang yang yab belajaranng an
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: A ,kanMgaLung haruskan  baru siswa baruan bagi i bagi wa waa ar b u uiuan meng  Palembangangi yanganng u p u i m ung wak
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 6: Train Loss=2.8314 | Val Loss=n/a | Train Acc=0.2589 | Val Acc=0.0000 | WER=3.7557 | CER=2.3878 | Time=00:05:00 | GPU=498MB
+
+============================================================
+[13:58:04] Epoch 7/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 2.762309
+Validation Loss: n/a
+Train Accuracy: 0.267952
+Validation Accuracy: 0.000000
+WER: 3.453400
+CER: 2.075430
+[Train] mode=dnn_hmm frame_acc=0.2680 avg_ce=2.7623
+Durasi epoch: 00:05:11
+Total elapsed time: 00:36:36
+GPU memory usage: 496 MB
+Throughput: 230.20 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Pe S Jikakahaya aya an ada mem mengu memu u an ubutuhntukbutuhkankah suankananangan kanlaporjagaanngan lesai,lesai semua
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: J Pe Jikakah,kahu u  men i ngi bisa pep su an an an  mem an k k se  t an ugunakankah suskansasakan o t anm diak o, t , a
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Sikakah,kahu ke itu i pngnyaaanarian pean t an dalam ngani uan Palembangana mas banyak se su ukanan dikanan an dalaman d
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Pe S J Sikakah,uk keani anjagaan akanan an an an ianng an an anngangha i laporikan semuaaya an ya an adaankanannganukugu
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: J Pe Jika,kanan  Palembang ankan rekomendasi ngan  bagio  pengh lum adaan meng  Palembangp an  u itu  itui an an ya wakt
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 7: Train Loss=2.7623 | Val Loss=n/a | Train Acc=0.2680 | Val Acc=0.0000 | WER=3.4534 | CER=2.0754 | Time=00:05:11 | GPU=496MB
+
+============================================================
+[14:03:11] Epoch 8/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 2.705519
+Validation Loss: n/a
+Train Accuracy: 0.275671
+Validation Accuracy: 0.000000
+WER: 3.059246
+CER: 1.732407
+[Train] mode=dnn_hmm frame_acc=0.2757 avg_ce=2.7055
+Durasi epoch: 00:05:06
+Total elapsed time: 00:41:44
+GPU memory usage: 496 MB
+Throughput: 234.10 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: J S J  Jkaholo,ayaanaya  meng an butuhntukbutuhkan an kan olokannganng an saya se  seng i i keanemuanan ng an ani  secar
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: J kaholouanap sekan an dacarng meng su an  mem an meng an se kan kanankanan u kanan sukansapsntukkan an bot , r, penting
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: J S Jkaholo,uatano ke waktu, firng a ng an anngan ntuk an kanan anakan se sugunakan an anngan an an an rmngguan menyenan
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: J S kaholo,oloatanoatan  t kani i annganpan an gunaan an sean ingannganngkanngang i i, semua se  se ng yang atngadadakan
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: J ikakah,kan rekomendasiM anng jikapngp  siswa bagian  pengh an an an an u itu ui ada anng n,n ui uiani an anngan ada ad
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 8: Train Loss=2.7055 | Val Loss=n/a | Train Acc=0.2757 | Val Acc=0.0000 | WER=3.0592 | CER=1.7324 | Time=00:05:06 | GPU=496MB
+
+============================================================
+[14:08:08] Epoch 9/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 2.658193
+Validation Loss: n/a
+Train Accuracy: 0.281676
+Validation Accuracy: 0.000000
+WER: 3.578955
+CER: 2.430933
+[Train] mode=dnn_hmm frame_acc=0.2817 avg_ce=2.6582
+Durasi epoch: 00:04:55
+Total elapsed time: 00:46:40
+GPU memory usage: 496 MB
+Throughput: 243.19 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: T oloaya,ayak  re ,  meman meman dabutuh suan peankolongjagangmngandangda d  su sayai de de i i men inian inianmanmng ya
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: T S T S olouap da ana  seng bisai meng pepk, mo  memte u  meng gangan k k daan u positif mem su di sukansa diu t ng, man
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: T S olouoloung firng k an peanm pekan ntuk t anng ng b publik  dian pean pean yaan Palembanganua su se suukan sukanankan
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: T olouatan tkan  menh anngjagaankngakananng  pean an iiran yaan yaadeanngdea dei iir  u isakngayaknganng yang yangpentin
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: T ng,u,oloukanMga  Palembang , ngsuaan mo bagi, a pengha pe  pekan peb u an uanu mengup yang ya pean da u  u itui, u Pal
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 9: Train Loss=2.6582 | Val Loss=n/a | Train Acc=0.2817 | Val Acc=0.0000 | WER=3.5790 | CER=2.4309 | Time=00:04:55 | GPU=496MB
+

@@ -1,0 +1,48 @@
+
+============================================================
+[11:57:56] Epoch 1/2 | LR: 0.000111
+Train Loss: 3.2945 | Val Loss: 3.0964
+WER: 1.0000 | CER: 1.0000
+Durasi epoch: 00:00:05 | Total: 00:00:05
+GPU memory: 348 MB | Throughput: 5.64 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED:  
+LABEL: saya membutuhkan rekomendasi tempat wisata di kota palembang
+
+PRED:  
+LABEL: kami sedang mengerjakan tugas kelompok untuk mata kuliah sistem kontrol
+
+PRED:  
+LABEL: dosen pembimbing memberikan banyak masukan yang membangun
+
+PRED:  
+LABEL: lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED:  
+LABEL: mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=3.2945 | Val Loss=3.0964 | WER=1.0000 | CER=1.0000 | Time=00:00:05 | GPU=348MB
+
+============================================================
+[11:58:01] Epoch 2/2 | LR: 0.000014
+Train Loss: 2.9882 | Val Loss: 2.9233
+WER: 1.0000 | CER: 1.0000
+Durasi epoch: 00:00:03 | Total: 00:00:10
+GPU memory: 348 MB | Throughput: 8.68 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED:  
+LABEL: saya membutuhkan rekomendasi tempat wisata di kota palembang
+
+PRED:  
+LABEL: kami sedang mengerjakan tugas kelompok untuk mata kuliah sistem kontrol
+
+PRED:  
+LABEL: dosen pembimbing memberikan banyak masukan yang membangun
+
+PRED:  
+LABEL: lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED:  
+LABEL: mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 2: Train Loss=2.9882 | Val Loss=2.9233 | WER=1.0000 | CER=1.0000 | Time=00:00:03 | GPU=348MB

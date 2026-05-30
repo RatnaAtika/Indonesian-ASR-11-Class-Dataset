@@ -1,0 +1,64 @@
+============================================================
+[14:50:33] Epoch 1/2 | Current LR: 0.000166
+Current Learning Rate: 0.0001656798
+Train Loss: 10.436714
+Validation Loss: 9.557862
+Train Accuracy: 0.258597
+Validation Accuracy: 0.243894
+WER: 0.985112
+CER: 0.756106
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:01
+Total elapsed time: 00:00:01
+GPU memory usage: 487 MB
+Throughput: 107.35 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya  memanakan Palembang S aya
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: aya  mem  memanakan Palembang
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: d  memanakan Palembang aya
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: d  memanakan Palembang S aya
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: S aya  memanakan
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=10.4367 | Val Loss=9.5579 | Train Acc=0.2586 | Val Acc=0.2439 | WER=0.9851 | CER=0.7561 | Time=00:00:01 | GPU=487MB
+
+============================================================
+[14:50:36] Epoch 2/2 | Current LR: 0.000000
+Current Learning Rate: 0.0000003666
+Train Loss: 5.102048
+Validation Loss: 6.622933
+Train Accuracy: 0.200139
+Validation Accuracy: 0.145215
+WER: 0.985112
+CER: 0.854785
+[Train] arch=wav2letter ctc_decode=greedy blank_id=0
+Durasi epoch: 00:00:00
+Total elapsed time: 00:00:05
+GPU memory usage: 491 MB
+Throughput: 200.00 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: aya ianng Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: ng di Palembang
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: ng di Palembang
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: ian  Palembang
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: an
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 2: Train Loss=5.1020 | Val Loss=6.6229 | Train Acc=0.2001 | Val Acc=0.1452 | WER=0.9851 | CER=0.8548 | Time=00:00:00 | GPU=491MB
+

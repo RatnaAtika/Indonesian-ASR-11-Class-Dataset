@@ -1,0 +1,4 @@
+interface:
+  display_name: "Media Pipeline"
+  short_description: "Image / speech / transcription"
+  default_prompt: "Use this skill for image generation, text-to-speech, and speech-to-text. Picks the right provider per task, handles cost/latency budgets, and keeps audio/image content out of long-term logs."

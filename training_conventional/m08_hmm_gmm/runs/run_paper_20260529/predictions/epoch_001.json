@@ -1,0 +1,22 @@
+[
+  {
+    "pred": "saya ingin berkontribusi untuk kemajuan kota palembang melalui pendidikan",
+    "label": "saya membutuhkan rekomendasi tempat wisata di kota palembang"
+  },
+  {
+    "pred": "coba deh, ikut program magang di perusahaan ini, banyak pengalaman berharga yang bisa kamu pelajari.",
+    "label": "kami sedang mengerjakan tugas kelompok untuk mata kuliah sistem kontrol."
+  },
+  {
+    "pred": "jika kamu ingin mendalami materi lebih dalam, coba lakukan percobaan di laboratorium untuk menguji teori yang telah dipelajari.",
+    "label": "dosen pembimbing memberikan banyak masukan yang membangun."
+  },
+  {
+    "pred": "ya ampun, masih banyak mahasiswa yang belum paham konsep dasar ini!",
+    "label": "lingkungan akademik yang positif sangat mendukung proses belajar"
+  },
+  {
+    "pred": "jika kamu ingin mendalami materi lebih dalam, coba lakukan percobaan di laboratorium untuk menguji teori yang telah dipelajari.",
+    "label": "mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya"
+  }
+]

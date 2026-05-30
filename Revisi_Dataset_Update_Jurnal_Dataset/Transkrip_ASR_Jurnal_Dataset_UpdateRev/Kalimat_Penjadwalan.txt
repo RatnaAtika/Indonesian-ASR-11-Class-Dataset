@@ -1,0 +1,22 @@
+01|Robot, Ingatkan saya untuk mengirim laporan besok pagi jam 9
+02|Buat jadwal kunjungan ke dinas terkait minggu depan.
+03|Tolong siapkan agenda rapat harian setiap pagi
+04|Jadwalkan ulang pertemuan dengan dosen ke hari Kamis
+05|Jadwalkan servis kendaraan keluarga minggu ini
+06|Tolong atur pengingat untuk sidang skripsi hari Senin
+07|Jadwalkan audiensi dengan warga Kelurahan 15 Ulu minggu depan.
+08|Tolong atur jadwal periksa kesehatan keluarga di puskesmas minggu depan
+09|Tolong buat jadwal belajar untuk mata kuliah Dasar Sistem Kendali.
+10|Atur jadwal pengambilan dokumen kependudukan oleh warga lansia secara kolektif.
+11|Tolong buat jadwal menyiram tanaman pagi dan sore.
+12|Atur jadwal monitoring program bantuan sosial bulan ini
+13|Buat jadwal presentasi kelompok minggu depan.
+14|Jadwalkan waktu bermain anak di luar rumah sore ini
+15|Buat agenda peninjauan lapangan untuk bulan agustus
+16|Tolong atur pengingat untuk pengumpulan tugas akhir
+17|Tolong jadwalkan penandatanganan MoU dengan perguruan tinggi mitra.
+18|Tolong siapkan jadwal pendistribusian logistik untuk kegiatan pelayanan publik keliling
+19|Tolong atur jadwal penerimaan tamu resmi setiap bulannya
+
+Note :
+20 sengaja dibuang untuk penyetaraan 19 kalimat biar seimbang

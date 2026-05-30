@@ -1,0 +1,7 @@
+family,training_flags,model_size_flags,model_slots
+Whisper / wav2vec2 / MMS,--epochs N,"--batch-size, --lr, --gradient-checkpointing","m01, m02, m03, m04, m05"
+Conformer / Bi-LSTM / CNN,--epochs N,"--hidden-size, --num-layers, --dropout","m06, m07, m13, m14"
+Vanilla TF + ViT-modified-ID,--epochs N,"--d-model, --num-layers, --ff, --nhead","m11, m12"
+m08 HMM-GMM,--hmm-iters N,"--hmm-states, --hmm-mixtures, --cov-type",m08
+m09 DNN-HMM,--dnn-epochs N,"--dnn-hidden, --dnn-layers, --dnn-context",m09
+m10 GMM-HMM-DNN,--hmm-iters + --dnn-epochs,semua flag HMM + DNN,m10

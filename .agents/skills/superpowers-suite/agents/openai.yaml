@@ -1,0 +1,4 @@
+interface:
+  display_name: "Superpowers Suite"
+  short_description: "Portable planning, debugging, and verification stack"
+  default_prompt: "Use this skill when a repository needs structured execution: brainstorming, plans, debugging, TDD, verification, subagents, or worktree discipline."

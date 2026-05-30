@@ -1,0 +1,26 @@
+
+============================================================
+Zero-shot openai/whisper-medium on test
+Samples: 30
+WER: 0.1557  CER: 0.0345
+MER: 0.1557  WIL: 0.2843
+Time: 00:00:16
+GPU: 1618 MB
+Throughput: 1.85 samples/sec
+============================================================
+
+=== Sample predictions ===
+PRED:  Saya membutuhkan rekomendasi tempat wisata di kota Palembang.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED:  Kami sedang mengerjakan tugas kelompok untuk mata kuliah sistem kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED:  Dosan pemimpin memberikan banyak masukan yang membangun
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED:  lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED:  Masiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya

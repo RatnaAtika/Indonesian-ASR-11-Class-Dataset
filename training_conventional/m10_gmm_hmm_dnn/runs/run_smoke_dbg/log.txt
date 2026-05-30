@@ -1,0 +1,64 @@
+============================================================
+[13:06:35] Epoch 1/2 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 4.652271
+Validation Loss: n/a
+Train Accuracy: 0.063065
+Validation Accuracy: 0.000000
+WER: 2.950413
+CER: 1.426099
+[Train] mode=gmm_hmm_dnn frame_acc=0.0631 avg_ce=4.6523
+Durasi epoch: 00:00:01
+Total elapsed time: 00:00:01
+GPU memory usage: 32 MB
+Throughput: 289.55 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Si.ayarayam ktifi  sa  dingnan u an aniu  sa  sa  sa anian animn nng t  san ani an an uimanimi diann  sa ngnan  dinan i 
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Si.ayarpus n an ani ani di nanktif an ani an  sa  sananktif nan  sa  sanan t  diri  sa  sa mem  sa an ngnan  di  sa ania
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Si.ayarayanan iu ng sa aniu aniu  sa anian ngnan anu ani ding nan u ani t  sat sa  sa  sa  sa  dii dii diir Si.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Si.ayar ani  sa an an anianng anuimani  sa anim anian an an ma ma di nng sa  sa ngn sa  sang an an  diimanianianm ktif m
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Si.r nan ktif an an nan  sat an ngn sa  sa an  dirayai  sa nganu u ngan ian  di ng sa an an  di  sa aniui diannaniuan ng
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=4.6523 | Val Loss=n/a | Train Acc=0.0631 | Val Acc=0.0000 | WER=2.9504 | CER=1.4261 | Time=00:00:01 | GPU=32MB
+
+============================================================
+[13:06:37] Epoch 2/2 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 4.105355
+Validation Loss: n/a
+Train Accuracy: 0.080829
+Validation Accuracy: 0.000000
+WER: 3.398760
+CER: 2.460989
+[Train] mode=gmm_hmm_dnn frame_acc=0.0808 avg_ce=4.1054
+Durasi epoch: 00:00:00
+Total elapsed time: 00:00:03
+GPU memory usage: 31 MB
+Throughput: 300.00 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: S.ayariraya i mem belajar sa  mem sa  kotao J unan memkansakaninu ps belajar kota  dilaksanakanui aniunggumnann  belajar
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: S.ayarirayanantu memi kanuin i meman belajaran mem sa w isaianah  dilaksanakan kotabutuh u ta nan  belajar kotaankuan be
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: S.ayarayan butuh u ta i memu dilaksanakanu  sa belajar  dilaksanakanu u i memu memu meman belajar kota belajar sa iinahk
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: S.ayarirU i memu dilaksanakan  kota  sa belajar kotaanuan anu dilaksanakan  dilaksanakanu i mem  kota belajar butuh mung
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: S.ayarir ankuanah memta butuh memmak belajar kotananmak belajarbutuh belajar kotaanngu kotama  belajar kota belajaran ko
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 2: Train Loss=4.1054 | Val Loss=n/a | Train Acc=0.0808 | Val Acc=0.0000 | WER=3.3988 | CER=2.4610 | Time=00:00:00 | GPU=31MB
+

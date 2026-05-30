@@ -1,0 +1,64 @@
+============================================================
+[18:48:22] Epoch 1/2 | Current LR: 0.000244
+Current Learning Rate: 0.0002435237
+Train Loss: 4.193945
+Validation Loss: 5.766698
+Train Accuracy: 0.032765
+Validation Accuracy: 0.033259
+WER: 1.000000
+CER: 0.966741
+[Train] arch=bilstm ctc_decode=greedy
+Durasi epoch: 00:00:17
+Total elapsed time: 00:00:17
+GPU memory usage: 240 MB
+Throughput: 1.72 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: nn
+LABEL: saya membutuhkan rekomendasi tempat wisata di kota palembang
+
+PRED: nn
+LABEL: kami sedang mengerjakan tugas kelompok untuk mata kuliah sistem kontrol
+
+PRED: nn
+LABEL: dosen pembimbing memberikan banyak masukan yang membangun
+
+PRED: nn
+LABEL: lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: nn
+LABEL: mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=4.1939 | Val Loss=5.7667 | Train Acc=0.0328 | Val Acc=0.0333 | WER=1.0000 | CER=0.9667 | Time=00:00:17 | GPU=240MB
+
+============================================================
+[18:48:28] Epoch 2/2 | Current LR: 0.000015
+Current Learning Rate: 0.0000148558
+Train Loss: 3.821639
+Validation Loss: 4.662385
+Train Accuracy: 0.000000
+Validation Accuracy: 0.000000
+WER: 1.000000
+CER: 1.000000
+[Train] arch=bilstm ctc_decode=greedy
+Durasi epoch: 00:00:02
+Total elapsed time: 00:00:23
+GPU memory usage: 241 MB
+Throughput: 11.39 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: 
+LABEL: saya membutuhkan rekomendasi tempat wisata di kota palembang
+
+PRED: 
+LABEL: kami sedang mengerjakan tugas kelompok untuk mata kuliah sistem kontrol
+
+PRED: 
+LABEL: dosen pembimbing memberikan banyak masukan yang membangun
+
+PRED: 
+LABEL: lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: 
+LABEL: mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 2: Train Loss=3.8216 | Val Loss=4.6624 | Train Acc=0.0000 | Val Acc=0.0000 | WER=1.0000 | CER=1.0000 | Time=00:00:02 | GPU=241MB
+

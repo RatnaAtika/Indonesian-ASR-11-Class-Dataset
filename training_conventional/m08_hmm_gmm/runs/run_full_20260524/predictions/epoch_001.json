@@ -1,0 +1,22 @@
+[
+  {
+    "pred": "saya aktif mengikuti organisasi kemahasiswaan di kampus",
+    "label": "saya membutuhkan rekomendasi tempat wisata di kota palembang"
+  },
+  {
+    "pred": "palembang pernah menjadi tuan rumah asian games 2018 bersama jakarta",
+    "label": "kami sedang mengerjakan tugas kelompok untuk mata kuliah sistem kontrol."
+  },
+  {
+    "pred": "saya aktif mengikuti organisasi kemahasiswaan di kampus",
+    "label": "dosen pembimbing memberikan banyak masukan yang membangun."
+  },
+  {
+    "pred": "saya aktif mengikuti organisasi kemahasiswaan di kampus",
+    "label": "lingkungan akademik yang positif sangat mendukung proses belajar"
+  },
+  {
+    "pred": "palembang pernah menjadi tuan rumah asian games 2018 bersama jakarta",
+    "label": "mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya"
+  }
+]

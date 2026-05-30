@@ -1,0 +1,4 @@
+interface:
+  display_name: "Model Provider Config"
+  short_description: "GPT/Claude/DeepSeek/GLM/Minimax/Gemini/local"
+  default_prompt: "Use this skill before running any other skill on a new harness or after switching model. It detects the active provider, writes .skills-config.yaml, and tells every other skill which capabilities (tools, vision, reasoning, audio, prompt-caching) are available."

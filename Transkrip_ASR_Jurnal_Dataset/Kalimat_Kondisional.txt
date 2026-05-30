@@ -1,0 +1,22 @@
+01|Jika saya pergi ke kampus indralaya sore ini, apakah bis kampus masih ada?
+02|Jika saya punya waktu, saya akan membantu kamu menyelesaikan tugas
+03|Jika kamu membaca buku ini, kamu akan memperoleh banyak pengetahuan baru.
+04|Jika kamu mengulang pelajaran setiap hari, kamu akan lebih cepat menguasainya.
+05|Jika mereka setuju, kita bisa mulai proyek ini minggu depan.
+06|Jika kita mendapat informasi lebih lanjut, kita bisa mengambil keputusan yang lebih baik.
+07|Jika kamu terus berlatih, kemampuanmu akan meningkat.
+08|Jika kampus meningkatkan fasilitas teknologi, proses belajar mengajar akan semakin efektif.
+09|Jika mereka menerapkan metode pengajaran yang interaktif, siswa akan lebih tertarik.
+10|Jika semua tugas dikumpulkan tepat waktu, kita akan mendapat tambahan nilai.
+11|Jika semua pihak bekerja sama, pembangunan infrastruktur akan lebih merata.
+12|Jika masyarakat mengurangi penggunaan plastik, sampah di jalanan bisa berkurang.
+13|Jika kita menjaga kebersihan lingkungan, udara akan lebih segar.
+14|Jika festival budaya di Palembang semakin ramai, kota ini akan lebih hidup dan meriah.
+15|Jika masyarakat mengedukasi diri tentang kesehatan, tingkat penyakit bisa berkurang.
+16|Jika semua warga memiliki kesadaran tinggi, kriminalitas di sekitar kita bisa berkurang.
+17|Jika ada lebih banyak program pelatihan keterampilan, masyarakat Palembang akan semakin siap menghadapi tantangan kerja.
+18|Jika masyarakat lebih peduli dengan lingkungan, polusi udara di Palembang bisa berkurang.
+19|Jika inovasi teknologi dalam bidang transportasi semakin maju, kemacetan di kota-kota besar bisa teratasi.
+
+Note :
+20 sengaja dibuang untuk penyetaraan 19 kalimat biar seimbang

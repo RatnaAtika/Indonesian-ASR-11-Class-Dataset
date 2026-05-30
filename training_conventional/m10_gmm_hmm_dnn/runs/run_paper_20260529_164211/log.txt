@@ -1,0 +1,960 @@
+============================================================
+[01:01:50] Epoch 1/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 4.562975
+Validation Loss: n/a
+Train Accuracy: 0.032951
+Validation Accuracy: 0.092706
+WER: 0.989458
+CER: 0.907294
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.0330 avg_ctc=4.5630
+Durasi epoch: 00:04:34
+Total elapsed time: 00:04:34
+GPU memory usage: 2481 MB
+Throughput: 261.44 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Sika, mem w.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Sika,ntuk tempat.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Sika, memberikan yang mem!
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Sika, ya kampusds.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Sika, ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=4.5630 | Val Loss=n/a | Train Acc=0.0330 | Val Acc=0.0927 | WER=0.9895 | CER=0.9073 | Time=00:04:34 | GPU=2481MB
+
+============================================================
+[01:07:11] Epoch 2/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 2.599066
+Validation Loss: n/a
+Train Accuracy: 0.076212
+Validation Accuracy: 0.091825
+WER: 0.992372
+CER: 0.908175
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.0762 avg_ctc=2.5991
+Durasi epoch: 00:05:19
+Total elapsed time: 00:09:55
+GPU memory usage: 2283 MB
+Throughput: 224.85 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jika mem suemuan ber.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Jika mem untukuli Sis tempat kon.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jika memberikanng mem ber.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jika laboratorium.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Jika kampu.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 2: Train Loss=2.5991 | Val Loss=n/a | Train Acc=0.0762 | Val Acc=0.0918 | WER=0.9924 | CER=0.9082 | Time=00:05:19 | GPU=2283MB
+
+============================================================
+[01:13:45] Epoch 3/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 1.871839
+Validation Loss: n/a
+Train Accuracy: 0.124420
+Validation Accuracy: 0.103745
+WER: 0.987277
+CER: 0.896255
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.1244 avg_ctc=1.8718
+Durasi epoch: 00:06:32
+Total elapsed time: 00:16:29
+GPU memory usage: 3073 MB
+Throughput: 183.01 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jika mem tempat!
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Jikaisi Sis!
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jika kampus mem berikanng ber!
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jika kampusso!
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Jika siswaatur ke!
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 3: Train Loss=1.8718 | Val Loss=n/a | Train Acc=0.1244 | Val Acc=0.1037 | WER=0.9873 | CER=0.8963 | Time=00:06:32 | GPU=3073MB
+
+============================================================
+[01:18:55] Epoch 4/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 1.485882
+Validation Loss: n/a
+Train Accuracy: 0.168470
+Validation Accuracy: 0.121514
+WER: 0.982366
+CER: 0.878486
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.1685 avg_ctc=1.4859
+Durasi epoch: 00:05:08
+Total elapsed time: 00:21:39
+GPU memory usage: 2509 MB
+Throughput: 232.62 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jika kam mem tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Jika kam tugas untuksi Si tempat.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jika kam mem yangng.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jika kam yangdukung.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Jika kamsiatur ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 4: Train Loss=1.4859 | Val Loss=n/a | Train Acc=0.1685 | Val Acc=0.1215 | WER=0.9824 | CER=0.8785 | Time=00:05:08 | GPU=2509MB
+
+============================================================
+[01:24:09] Epoch 5/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 1.260636
+Validation Loss: n/a
+Train Accuracy: 0.205286
+Validation Accuracy: 0.126965
+WER: 0.985552
+CER: 0.873035
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.2053 avg_ctc=1.2606
+Durasi epoch: 00:05:13
+Total elapsed time: 00:26:54
+GPU memory usage: 1652 MB
+Throughput: 229.00 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jika, memhidupo tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Jika,ilaporntuk.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jika,an memberikan yang yang mem.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jikabot yangdukung prose.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Jikabotatur kenya.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 5: Train Loss=1.2606 | Val Loss=n/a | Train Acc=0.2053 | Val Acc=0.1270 | WER=0.9856 | CER=0.8730 | Time=00:05:13 | GPU=1652MB
+
+============================================================
+[01:29:28] Epoch 6/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 1.117509
+Validation Loss: n/a
+Train Accuracy: 0.232943
+Validation Accuracy: 0.110644
+WER: 0.987373
+CER: 0.889356
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.2329 avg_ctc=1.1175
+Durasi epoch: 00:05:17
+Total elapsed time: 00:32:12
+GPU memory usage: 3218 MB
+Throughput: 226.27 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jikabotng mem tempatal.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Jikabot untuksis tempat.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jika,an p memberikan yang yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jikabot yangdukung.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Jikabotaturan ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 6: Train Loss=1.1175 | Val Loss=n/a | Train Acc=0.2329 | Val Acc=0.1106 | WER=0.9874 | CER=0.8894 | Time=00:05:17 | GPU=3218MB
+
+============================================================
+[01:34:51] Epoch 7/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 1.017344
+Validation Loss: n/a
+Train Accuracy: 0.255017
+Validation Accuracy: 0.114686
+WER: 0.983518
+CER: 0.885314
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.2550 avg_ctc=1.0173
+Durasi epoch: 00:05:22
+Total elapsed time: 00:37:36
+GPU memory usage: 1832 MB
+Throughput: 222.86 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jika mem tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Jika suembangunntuks tempat.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jikaanberikan yang yangbah.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jikaakan yang bedukung prose.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Jika keikut.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 7: Train Loss=1.0173 | Val Loss=n/a | Train Acc=0.2550 | Val Acc=0.1147 | WER=0.9835 | CER=0.8853 | Time=00:05:22 | GPU=1832MB
+
+============================================================
+[01:40:10] Epoch 8/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.941679
+Validation Loss: n/a
+Train Accuracy: 0.271996
+Validation Accuracy: 0.127923
+WER: 0.981881
+CER: 0.872077
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.2720 avg_ctc=0.9417
+Durasi epoch: 00:05:17
+Total elapsed time: 00:42:54
+GPU memory usage: 2357 MB
+Throughput: 226.41 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jikang mem men tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Jika kamembangun untukstemol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jika kam mem berikan yang yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jika yang mendukusgar.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Jika kamengan ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 8: Train Loss=0.9417 | Val Loss=n/a | Train Acc=0.2720 | Val Acc=0.1279 | WER=0.9819 | CER=0.8721 | Time=00:05:17 | GPU=2357MB
+
+============================================================
+[01:45:24] Epoch 9/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.877138
+Validation Loss: n/a
+Train Accuracy: 0.289108
+Validation Accuracy: 0.125743
+WER: 0.982806
+CER: 0.874257
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.2891 avg_ctc=0.8771
+Durasi epoch: 00:05:12
+Total elapsed time: 00:48:08
+GPU memory usage: 2857 MB
+Throughput: 229.48 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Joloika  mem men tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Jikau ke untuks.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jika sen mem  yang yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Joloika  yang menukuperlu prose.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Jika  ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 9: Train Loss=0.8771 | Val Loss=n/a | Train Acc=0.2891 | Val Acc=0.1257 | WER=0.9828 | CER=0.8743 | Time=00:05:12 | GPU=2857MB
+
+============================================================
+[01:50:26] Epoch 10/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.830036
+Validation Loss: n/a
+Train Accuracy: 0.303188
+Validation Accuracy: 0.110610
+WER: 0.986734
+CER: 0.889390
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.3032 avg_ctc=0.8300
+Durasi epoch: 00:05:00
+Total elapsed time: 00:53:10
+GPU memory usage: 2610 MB
+Throughput: 238.56 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Tng kam memhidup men tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Tika kam kewantuk tempat.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Tng,berikan yang yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Tng kamng kampus menduku bera.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Tika kamatur dengan ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 10: Train Loss=0.8300 | Val Loss=n/a | Train Acc=0.3032 | Val Acc=0.1106 | WER=0.9867 | CER=0.8894 | Time=00:05:00 | GPU=2610MB
+
+============================================================
+[01:55:30] Epoch 11/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.788794
+Validation Loss: n/a
+Train Accuracy: 0.315595
+Validation Accuracy: 0.117192
+WER: 0.985603
+CER: 0.882808
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.3156 avg_ctc=0.7888
+Durasi epoch: 00:05:03
+Total elapsed time: 00:58:15
+GPU memory usage: 1911 MB
+Throughput: 236.88 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jikabung ya memhidup tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Jikabungembangunntuks tempatool.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jika kam mem ber yang yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jikabung lingkungan yang kampusuku proses.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Jikabung dengan ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 11: Train Loss=0.7888 | Val Loss=n/a | Train Acc=0.3156 | Val Acc=0.1172 | WER=0.9856 | CER=0.8828 | Time=00:05:03 | GPU=1911MB
+
+============================================================
+[02:00:34] Epoch 12/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.753601
+Validation Loss: n/a
+Train Accuracy: 0.326600
+Validation Accuracy: 0.131742
+WER: 0.985141
+CER: 0.868258
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.3266 avg_ctc=0.7536
+Durasi epoch: 00:05:03
+Total elapsed time: 01:03:19
+GPU memory usage: 1037 MB
+Throughput: 236.78 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jikau mem mensi tempat?
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Apaika kamntuk sis tempat?
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Apa Jikausen ber ya yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Apaikau yayongktif?
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Apa Jika kam dengan ke?
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 12: Train Loss=0.7536 | Val Loss=n/a | Train Acc=0.3266 | Val Acc=0.1317 | WER=0.9851 | CER=0.8683 | Time=00:05:03 | GPU=1037MB
+
+============================================================
+[02:05:48] Epoch 13/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.725200
+Validation Loss: n/a
+Train Accuracy: 0.336866
+Validation Accuracy: 0.097568
+WER: 0.990581
+CER: 0.902432
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.3369 avg_ctc=0.7252
+Durasi epoch: 00:05:12
+Total elapsed time: 01:08:32
+GPU memory usage: 986 MB
+Throughput: 229.88 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: kah kam kon mem tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: kahika kebahntuks ber.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: kahika mem berikan yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: kah kam yang kampus kampus.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: kahika kon uengan ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 13: Train Loss=0.7252 | Val Loss=n/a | Train Acc=0.3369 | Val Acc=0.0976 | WER=0.9906 | CER=0.9024 | Time=00:05:12 | GPU=986MB
+
+============================================================
+[02:11:05] Epoch 14/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.692248
+Validation Loss: n/a
+Train Accuracy: 0.346396
+Validation Accuracy: 0.103917
+WER: 0.987835
+CER: 0.896083
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.3464 avg_ctc=0.6922
+Durasi epoch: 00:05:15
+Total elapsed time: 01:13:49
+GPU memory usage: 2069 MB
+Throughput: 227.30 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: olong kon mem men tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Jika konbahntuk tempat.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jng, berikan yangu yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: olong konakan yang kampusm men.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: olong kon dengan kenya.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 14: Train Loss=0.6922 | Val Loss=n/a | Train Acc=0.3464 | Val Acc=0.1039 | WER=0.9878 | CER=0.8961 | Time=00:05:15 | GPU=2069MB
+
+============================================================
+[02:17:15] Epoch 15/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.673385
+Validation Loss: n/a
+Train Accuracy: 0.355035
+Validation Accuracy: 0.133197
+WER: 0.979759
+CER: 0.866803
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.3550 avg_ctc=0.6734
+Durasi epoch: 00:06:08
+Total elapsed time: 01:19:59
+GPU memory usage: 2567 MB
+Throughput: 194.64 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jika kam yang memhidupntuk men tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Jika kami untuk tempat.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jika kamus memberikan yang yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jika kam yang kampusuku prosesgar.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Jika kamengan ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 15: Train Loss=0.6734 | Val Loss=n/a | Train Acc=0.3550 | Val Acc=0.1332 | WER=0.9798 | CER=0.8668 | Time=00:06:08 | GPU=2567MB
+
+============================================================
+[02:23:30] Epoch 16/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.647653
+Validation Loss: n/a
+Train Accuracy: 0.364653
+Validation Accuracy: 0.094543
+WER: 0.987629
+CER: 0.905457
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.3647 avg_ctc=0.6477
+Durasi epoch: 00:06:13
+Total elapsed time: 01:26:14
+GPU memory usage: 2316 MB
+Throughput: 192.10 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Apaaya mem tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Apaayabahwa tempat ber.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Apaaya ya yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Apaayam kampusuus.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Apaaya d ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 16: Train Loss=0.6477 | Val Loss=n/a | Train Acc=0.3647 | Val Acc=0.0945 | WER=0.9876 | CER=0.9055 | Time=00:06:13 | GPU=2316MB
+
+============================================================
+[02:28:45] Epoch 17/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.628919
+Validation Loss: n/a
+Train Accuracy: 0.370609
+Validation Accuracy: 0.116003
+WER: 0.985948
+CER: 0.883997
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.3706 avg_ctc=0.6289
+Durasi epoch: 00:05:14
+Total elapsed time: 01:31:29
+GPU memory usage: 2970 MB
+Throughput: 228.55 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: olong mem tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Tikabah Si sis kon.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Tng p memberikan ya yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Tngakanng kampusdso.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Tng kenya.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 17: Train Loss=0.6289 | Val Loss=n/a | Train Acc=0.3706 | Val Acc=0.1160 | WER=0.9859 | CER=0.8840 | Time=00:05:14 | GPU=2970MB
+
+============================================================
+[02:34:01] Epoch 18/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.610205
+Validation Loss: n/a
+Train Accuracy: 0.378271
+Validation Accuracy: 0.110994
+WER: 0.983034
+CER: 0.889006
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.3783 avg_ctc=0.6102
+Durasi epoch: 00:05:14
+Total elapsed time: 01:36:46
+GPU memory usage: 3272 MB
+Throughput: 227.92 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jika ya mem men tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Jika untukuli tempat.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jika mem berberikan yang yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jika lingkungan yangdng proses.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Jikantuk duli ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 18: Train Loss=0.6102 | Val Loss=n/a | Train Acc=0.3783 | Val Acc=0.1110 | WER=0.9830 | CER=0.8890 | Time=00:05:14 | GPU=3272MB
+
+============================================================
+[02:39:20] Epoch 19/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.596436
+Validation Loss: n/a
+Train Accuracy: 0.383010
+Validation Accuracy: 0.090692
+WER: 0.987505
+CER: 0.909308
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.3830 avg_ctc=0.5964
+Durasi epoch: 00:05:18
+Total elapsed time: 01:42:05
+GPU memory usage: 3457 MB
+Throughput: 225.74 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jng yang mem tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Jikaibahs tempat ber.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jng yang yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jng yang kampusds.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Jika ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 19: Train Loss=0.5964 | Val Loss=n/a | Train Acc=0.3830 | Val Acc=0.0907 | WER=0.9875 | CER=0.9093 | Time=00:05:18 | GPU=3457MB
+
+============================================================
+[02:44:35] Epoch 20/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.582199
+Validation Loss: n/a
+Train Accuracy: 0.389769
+Validation Accuracy: 0.082691
+WER: 0.991836
+CER: 0.917309
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.3898 avg_ctc=0.5822
+Durasi epoch: 00:05:13
+Total elapsed time: 01:47:19
+GPU memory usage: 2161 MB
+Throughput: 229.18 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Tng,ng mem tempat ke.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Trntuks.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Tng, berikan yangng.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Tngakan yang kampus proses.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Tng ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 20: Train Loss=0.5822 | Val Loss=n/a | Train Acc=0.3898 | Val Acc=0.0827 | WER=0.9918 | CER=0.9173 | Time=00:05:13 | GPU=2161MB
+
+============================================================
+[02:49:40] Epoch 21/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.566328
+Validation Loss: n/a
+Train Accuracy: 0.396300
+Validation Accuracy: 0.105035
+WER: 0.990118
+CER: 0.894965
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.3963 avg_ctc=0.5663
+Durasi epoch: 00:05:03
+Total elapsed time: 01:52:24
+GPU memory usage: 1959 MB
+Throughput: 236.54 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: ikang tempat bisa.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: ikaembangunubahwas ber.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: ikang p yang yangbah.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: ikangng kampusds.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: ikang d ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 21: Train Loss=0.5663 | Val Loss=n/a | Train Acc=0.3963 | Val Acc=0.1050 | WER=0.9901 | CER=0.8950 | Time=00:05:03 | GPU=1959MB
+
+============================================================
+[02:54:38] Epoch 22/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.556113
+Validation Loss: n/a
+Train Accuracy: 0.401345
+Validation Accuracy: 0.111876
+WER: 0.985141
+CER: 0.888124
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.4013 avg_ctc=0.5561
+Durasi epoch: 00:04:57
+Total elapsed time: 01:57:22
+GPU memory usage: 1098 MB
+Throughput: 241.50 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Sikabot memntuk tempat bisa.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Sikabot kes us tempat kon.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Sika,us ya yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Sikabot yang kampusd prose.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Sikabotengan ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 22: Train Loss=0.5561 | Val Loss=n/a | Train Acc=0.4013 | Val Acc=0.1119 | WER=0.9851 | CER=0.8881 | Time=00:04:57 | GPU=1098MB
+
+============================================================
+[02:59:41] Epoch 23/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.543451
+Validation Loss: n/a
+Train Accuracy: 0.403673
+Validation Accuracy: 0.127396
+WER: 0.985376
+CER: 0.872604
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.4037 avg_ctc=0.5435
+Durasi epoch: 00:05:02
+Total elapsed time: 02:02:26
+GPU memory usage: 1218 MB
+Throughput: 237.37 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Apaika saya yang mem tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Apaika sayaan ber.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Apaika sayaus ber yang yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Apaika sayaakan yang kampusngs.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Apaika sayasi ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 23: Train Loss=0.5435 | Val Loss=n/a | Train Acc=0.4037 | Val Acc=0.1274 | WER=0.9854 | CER=0.8726 | Time=00:05:02 | GPU=1218MB
+
+============================================================
+[03:04:43] Epoch 24/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.531242
+Validation Loss: n/a
+Train Accuracy: 0.412121
+Validation Accuracy: 0.117753
+WER: 0.991403
+CER: 0.882247
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.4121 avg_ctc=0.5312
+Durasi epoch: 00:05:00
+Total elapsed time: 02:07:27
+GPU memory usage: 2601 MB
+Throughput: 239.22 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Tkah kamu sungu tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Tkah kamuus.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Tkah kamu  ber yang yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Tkah kamu yang kampus mends.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Tkah kamu ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 24: Train Loss=0.5312 | Val Loss=n/a | Train Acc=0.4121 | Val Acc=0.1178 | WER=0.9914 | CER=0.8822 | Time=00:05:00 | GPU=2601MB
+
+============================================================
+[03:09:41] Epoch 25/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.525191
+Validation Loss: n/a
+Train Accuracy: 0.414717
+Validation Accuracy: 0.097225
+WER: 0.991704
+CER: 0.902775
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.4147 avg_ctc=0.5252
+Durasi epoch: 00:04:57
+Total elapsed time: 02:12:26
+GPU memory usage: 2089 MB
+Throughput: 241.29 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jika  yang tempat berkurang.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: ika u untuk.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: ika  ber yangng.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jika  yang kampusdso.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: ika  d ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 25: Train Loss=0.5252 | Val Loss=n/a | Train Acc=0.4147 | Val Acc=0.0972 | WER=0.9917 | CER=0.9028 | Time=00:04:57 | GPU=2089MB
+
+============================================================
+[03:14:41] Epoch 26/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.513455
+Validation Loss: n/a
+Train Accuracy: 0.419781
+Validation Accuracy: 0.126685
+WER: 0.986279
+CER: 0.873315
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.4198 avg_ctc=0.5135
+Durasi epoch: 00:04:58
+Total elapsed time: 02:17:25
+GPU memory usage: 2973 MB
+Throughput: 240.65 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: kahika  mem tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Apaika ianbah u.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Apaika  kampus p ber yangbah.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Apaika akan yang kampus.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Apaika engan kenya.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 26: Train Loss=0.5135 | Val Loss=n/a | Train Acc=0.4198 | Val Acc=0.1267 | WER=0.9863 | CER=0.8733 | Time=00:04:58 | GPU=2973MB
+
+============================================================
+[03:19:48] Epoch 27/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.509464
+Validation Loss: n/a
+Train Accuracy: 0.421743
+Validation Accuracy: 0.116757
+WER: 0.988878
+CER: 0.883243
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.4217 avg_ctc=0.5095
+Durasi epoch: 00:05:06
+Total elapsed time: 02:22:33
+GPU memory usage: 962 MB
+Throughput: 234.24 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: kah kam  mem tempat?
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Tika kamu?
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: T kam  mem yang yang?
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: kah kam akan yangng?
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: kah kam kenya?
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 27: Train Loss=0.5095 | Val Loss=n/a | Train Acc=0.4217 | Val Acc=0.1168 | WER=0.9889 | CER=0.8832 | Time=00:05:06 | GPU=962MB
+
+============================================================
+[03:26:13] Epoch 28/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.495408
+Validation Loss: n/a
+Train Accuracy: 0.427918
+Validation Accuracy: 0.097438
+WER: 0.989303
+CER: 0.902562
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.4279 avg_ctc=0.4954
+Durasi epoch: 00:06:23
+Total elapsed time: 02:28:57
+GPU memory usage: 2296 MB
+Throughput: 187.18 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jika tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: ikabah untuk tempat.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Jika berikan yang yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jika yang kampusd proses.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: ika dengan ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 28: Train Loss=0.4954 | Val Loss=n/a | Train Acc=0.4279 | Val Acc=0.0974 | WER=0.9893 | CER=0.9026 | Time=00:06:23 | GPU=2296MB
+
+============================================================
+[03:31:58] Epoch 29/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.486609
+Validation Loss: n/a
+Train Accuracy: 0.431736
+Validation Accuracy: 0.083796
+WER: 0.991234
+CER: 0.916204
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.4317 avg_ctc=0.4866
+Durasi epoch: 00:05:43
+Total elapsed time: 02:34:42
+GPU memory usage: 3798 MB
+Throughput: 208.92 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Jika yang men tempat.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: ikabah untuk.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Toloika p ber yang yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Jika p yang kampuss.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: ika d ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 29: Train Loss=0.4866 | Val Loss=n/a | Train Acc=0.4317 | Val Acc=0.0838 | WER=0.9912 | CER=0.9162 | Time=00:05:43 | GPU=3798MB
+
+============================================================
+[03:36:52] Epoch 30/30 | Current LR: 0.001000
+Current Learning Rate: 0.0010000000
+Train Loss: 0.482323
+Validation Loss: n/a
+Train Accuracy: 0.434141
+Validation Accuracy: 0.081302
+WER: 0.989876
+CER: 0.918698
+[Train] mode=gmm_hmm_dnn loss=CTC emit_acc=0.4341 avg_ctc=0.4823
+Durasi epoch: 00:04:53
+Total elapsed time: 02:39:37
+GPU memory usage: 1310 MB
+Throughput: 244.57 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Sikang mem tempat kota.
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Sikai tempat.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Sikaberikan yangan yang.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Sika yangde.
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Sika d ke.
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 30: Train Loss=0.4823 | Val Loss=n/a | Train Acc=0.4341 | Val Acc=0.0813 | WER=0.9899 | CER=0.9187 | Time=00:04:53 | GPU=1310MB
+

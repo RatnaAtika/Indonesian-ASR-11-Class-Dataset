@@ -1,0 +1,177 @@
+{
+  "generated_at": "2026-05-21T23:48:00.287295",
+  "report_title": "Grand Master ASR Model Selection — Comprehensive Research Report",
+  "perspective": "Grand Master Scientist ASR Researcher",
+  "target_paper_venues": [
+    "NeurIPS Datasets & Benchmarks",
+    "LREC-COLING",
+    "ICASSP",
+    "INTERSPEECH"
+  ],
+  "dataset": {
+    "version": "v7_natural_synth (clean)",
+    "total_files": 102544,
+    "real_audio_pct": 99.871,
+    "synthetic_pct": 0.129,
+    "duration_hours": 130.65,
+    "n_speakers": 20,
+    "n_categories": 11,
+    "format": "16 kHz mono PCM_16"
+  },
+  "recommended_models": [
+    {
+      "tier": "T0",
+      "model": "Whisper-large-v3",
+      "type": "zero-shot",
+      "role": "strongest zero-shot baseline",
+      "expected_wer_pct": "8-13"
+    },
+    {
+      "tier": "T0",
+      "model": "MMS-1B-all",
+      "type": "zero-shot",
+      "role": "multilingual zero-shot",
+      "expected_wer_pct": "12-18"
+    },
+    {
+      "tier": "T1",
+      "model": "Whisper-small fine-tune",
+      "type": "fine-tune",
+      "role": "PRIMARY paper benchmark",
+      "expected_wer_pct": "8-12"
+    },
+    {
+      "tier": "T1",
+      "model": "MMS-1B adapter fine-tune",
+      "type": "adapter FT",
+      "role": "parameter-efficient",
+      "expected_wer_pct": "8-12"
+    },
+    {
+      "tier": "T2",
+      "model": "wav2vec2-XLS-R-300M FT",
+      "type": "fine-tune",
+      "role": "self-supervised CTC alternative",
+      "expected_wer_pct": "9-13"
+    },
+    {
+      "tier": "T3",
+      "model": "cahya/wav2vec2-xlsr-id FT",
+      "type": "fine-tune",
+      "role": "Indonesian-specialized",
+      "expected_wer_pct": "6-10"
+    },
+    {
+      "tier": "T3",
+      "model": "Conformer-CTC small (NeMo)",
+      "type": "from-scratch",
+      "role": "modern from-scratch baseline",
+      "expected_wer_pct": "15-20"
+    },
+    {
+      "tier": "T4-A",
+      "model": "Kaldi TDNN-HMM hybrid",
+      "type": "hybrid",
+      "role": "hybrid HMM-DNN baseline",
+      "expected_wer_pct": "15-25"
+    },
+    {
+      "tier": "T4-B",
+      "model": "Bi-LSTM CTC (DeepSpeech-2)",
+      "type": "from-scratch",
+      "role": "legacy E2E baseline",
+      "expected_wer_pct": "25-35"
+    }
+  ],
+  "excluded_models": [
+    {
+      "model": "T-RCNN",
+      "reason": "non-standard term, no reference implementation, low reproducibility"
+    },
+    {
+      "model": "Jasper / QuartzNet",
+      "reason": "redundant with Bi-LSTM/Conformer baselines"
+    },
+    {
+      "model": "LAS",
+      "reason": "outdated by Conformer (2020+)"
+    },
+    {
+      "model": "Canary-1B",
+      "reason": "no Indonesian language support"
+    },
+    {
+      "model": "Voxtral",
+      "reason": "insufficient track record (released 2024)"
+    }
+  ],
+  "bilstm_verdict": "RECOMMENDED as legacy baseline. DeepSpeech-2-style implementation (5x BiLSTM 1024 + CNN frontend + CTC). Cite Amodei et al. 2015. Expected WER ~25-35% (much higher than modern, expected). Position as 'pre-Transformer ASR baseline'.",
+  "trcnn_verdict": "NOT RECOMMENDED. Term ambiguous in ASR taxonomy, no standard implementation, no pretrained checkpoint, reviewer would question reproducibility. Replace with Conformer-CTC small (modern from-scratch) or Bi-LSTM CTC (legacy).",
+  "modern_sota_2024_2025": [
+    {
+      "model": "Whisper-large-v3-turbo",
+      "release": "Oct 2024",
+      "use_case": "optional zero-shot"
+    },
+    {
+      "model": "Parakeet-TDT-1.1B",
+      "release": "2024",
+      "use_case": "optional (NeMo dependency)"
+    },
+    {
+      "model": "MMS-1B-all",
+      "release": "May 2023",
+      "use_case": "MUST include"
+    },
+    {
+      "model": "SeamlessM4T-v2",
+      "release": "Dec 2023",
+      "use_case": "optional zero-shot"
+    },
+    {
+      "model": "Zipformer",
+      "release": "2024",
+      "use_case": "optional (icefall dependency)"
+    }
+  ],
+  "evaluation_methodology": {
+    "wer_with_ci": "Bootstrap 1000 iterations, 95% CI",
+    "model_comparison": "McNemar's chi-square test",
+    "per_error_breakdown": "insertions / deletions / substitutions",
+    "per_speaker_variance": "boxplot per model",
+    "augmentation_ablation": "with/without SpecAugment + speed perturbation",
+    "synth_ablation": "real-only vs full train (PRIMARY model)",
+    "data_efficiency": "20% / 50% / 100% train"
+  },
+  "publication_strategy": {
+    "primary_venue": "NeurIPS Datasets & Benchmarks",
+    "alt_venues": [
+      "LREC-COLING",
+      "ICASSP",
+      "IEEE Access"
+    ],
+    "novelty_claims": [
+      "First open Indonesian ASR dataset stratified by 11 pragmatic sentence types",
+      "9-architecture comparison spanning 7+ years (2015 BiLSTM → 2023 Whisper-large-v3)",
+      "Sentence-type-aware evaluation revealing per-category model failures",
+      "Speaker-disjoint splits with stratified sampling",
+      "Honest synthetic data disclosure (0.129%, full provenance)"
+    ]
+  },
+  "sprint_plan": {
+    "sprint_1_zero_shot_baselines": "1-2 days",
+    "sprint_2_primary_finetune": "3-5 days (Whisper-small)",
+    "sprint_3_alternative_finetunes": "3-5 days (XLS-R, MMS, cahya)",
+    "sprint_4_architectural_baselines": "5-7 days (Conformer, Bi-LSTM, Kaldi)",
+    "sprint_5_ablations": "5-7 days",
+    "sprint_6_paper_writing": "5-10 days",
+    "total_estimated_days": "22-36 days from kick-off to draft"
+  },
+  "final_status": {
+    "critique_iterations": 3,
+    "iter_1_finding": "Added Kaldi TDNN-HMM, evaluation methodology, augmentation, decoding, Indonesian phonology",
+    "iter_2_finding": "Citation gaps for Indonesian-specific papers (Sakti, TITML-IDN, INDspeech)",
+    "iter_3_finding": "Reviewer concerns mitigated, novelty claims defensible, paper-publishable",
+    "verdict": "READY FOR EXECUTION - 9-architecture comparison plan ready"
+  }
+}

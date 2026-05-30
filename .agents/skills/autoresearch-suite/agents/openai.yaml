@@ -1,0 +1,4 @@
+interface:
+  display_name: "Autoresearch Suite"
+  short_description: "Autonomous goal-directed iteration loop (wrapper for uditgoenka/autoresearch). 11 commands: plan / security / ship / debug / fix / scenario / predict / learn / reason / probe."
+  default_prompt: "Use this skill when the project has a measurable metric and a verify command; the loop modifies → verifies → keeps or reverts → repeats."

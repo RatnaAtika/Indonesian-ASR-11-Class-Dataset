@@ -1,0 +1,47 @@
+% LaTeX table fragments — Hyperparameter concept + tuning recipes
+% Use: \input{hyperparameter_reference.tex} in your paper
+
+% ============================================================
+% Table: Hyperparameter Concept per Family
+% ============================================================
+\begin{table}[h]
+  \centering
+  \caption{Hyperparameter concept across the 14 ASR architecture families.
+           Star ($\star$) marks the family-specific knob that controls
+           training duration; otherwise default is \texttt{--epochs N}.}
+  \label{tab:hyperparam_concept}
+  \small
+  \begin{tabular}{p{3.6cm}p{3.0cm}p{4.4cm}}
+  \hline
+  Family & Training duration flag & Model-size flags \\
+  \hline
+  Whisper / wav2vec2 / MMS (m01--m05) & \texttt{--epochs N} & \texttt{--batch-size}, \texttt{--lr}, \texttt{--gradient-checkpointing} \\
+  Conformer / Bi-LSTM / CNN (m06, m07, m13, m14) & \texttt{--epochs N} & \texttt{--hidden-size}, \texttt{--num-layers}, \texttt{--dropout} \\
+  Vanilla TF + ViT-modified-ID (m11, m12) & \texttt{--epochs N} & \texttt{--d-model}, \texttt{--num-layers}, \texttt{--ff}, \texttt{--nhead} \\
+  m08 HMM-GMM & \texttt{--hmm-iters N} $\star$ & \texttt{--hmm-states}, \texttt{--hmm-mixtures}, \texttt{--cov-type} \\
+  m09 DNN-HMM & \texttt{--dnn-epochs N} & \texttt{--dnn-hidden}, \texttt{--dnn-layers}, \texttt{--dnn-context} \\
+  m10 GMM-HMM-DNN & \texttt{--hmm-iters} + \texttt{--dnn-epochs} & all HMM + DNN flags \\
+  \hline
+  \end{tabular}
+\end{table}
+
+
+% ============================================================
+% Table: Three tuning recipes
+% ============================================================
+\begin{table}[h]
+  \centering
+  \caption{Three tuning recipes provided for all 14 trainers.
+           Copy-paste-ready commands per model are in \texttt{RUN\_GUIDE.md}.}
+  \label{tab:tuning_recipes}
+  \small
+  \begin{tabular}{p{3.0cm}p{6.0cm}p{3.5cm}}
+  \hline
+  Recipe & Goal & Trade-off \\
+  \hline
+  A: Higher accuracy & Paper-grade (full data, large epochs, large model) & Slower, more RAM/VRAM \\
+  B: Faster (smoke) & Debug / pipeline check (200 samples / 1 epoch) & High WER but pipeline OK \\
+  C: VRAM-constrained & RTX 4060 8 GB (\texttt{--batch-size 2 --grad-accum 8 --gradient-checkpointing}) & $\sim$30\% slower \\
+  \hline
+  \end{tabular}
+\end{table}
