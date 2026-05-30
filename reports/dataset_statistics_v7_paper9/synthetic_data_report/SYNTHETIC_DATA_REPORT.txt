@@ -1,0 +1,39 @@
+SYNTHETIC-DATA REPORT — Indonesian ASR corpus v7 (9-model paper)
+================================================================
+Source: metadata/dataset_metadata_clean.csv  |  dataset_version: v7_natural_synth
+
+OVERVIEW
+  Synthetic files       : 132 / 102544 (0.1287 %)
+  Synthetic duration    : 0.1757 h (632.52 s)
+  Engine                : microsoft_edge_tts_neural
+  Voices (gender-match) : id-ID-ArdiNeural (M) / id-ID-GadisNeural (F)
+  Speaker-cloned        : False  (TTS only, disclosed)
+  Speakers with synth   : 18 / 20
+  Zero-synth speakers   : Baron, Robi (clean for test)
+
+QUALITY (Whisper-large-v3 similarity, accept >= 0.70)
+  mean 0.9941  median 1.0  min 0.9101  max 1.0
+  pass>=0.90: 132/132  pass>=0.95: 125/132  ==1.00: 114/132
+
+SYNTHESIS ROUNDS
+  v7_initial        : 124
+  v7_residual_fix   : 8
+
+PER-SPLIT DISTRIBUTION
+  train: 122 / 71792 (0.1699 %)
+  dev  :   8 / 15376 (0.052 %)
+  test :   2 / 15376 (0.013 %)
+
+PER-CATEGORY DISTRIBUTION
+  category                 n   %cat   %all     M/F   tr/dv/te  qmean
+  Kalimat_Konfirmasi      29   0.32  21.97   11/18     25/2/2 0.9878
+  Kalimat_Retoris         17   0.18  12.88    10/7     15/2/0 1.0000
+  Kalimat_Kondisional     16   0.18  12.12     9/7     16/0/0 1.0000
+  Kalimat_Persuasif       16   0.18  12.12     9/7     16/0/0 1.0000
+  Kalimat_Perintah        15   0.16  11.36    13/2     13/2/0 0.9894
+  Kalimat_Negasi          11   0.12   8.33     8/3     10/1/0 1.0000
+  Kalimat_Tanya           10   0.11   7.58     6/4     10/0/0 0.9886
+  Kalimat_Klarifikasi      9   0.09   6.82     2/7      9/0/0 0.9886
+  Kalimat_Penjadwalan      4   0.04   3.03     3/1      3/1/0 0.9873
+  Kalimat_Seruan           3   0.03   2.27     1/2      3/0/0 1.0000
+  Kalimat_Deklaratif       2   0.02   1.52     1/1      2/0/0 1.0000

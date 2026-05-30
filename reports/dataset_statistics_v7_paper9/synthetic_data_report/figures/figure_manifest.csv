@@ -1,0 +1,5 @@
+figure,pdf,png,caption
+S1_synth_per_category_voice,figures/S1_synth_per_category_voice.pdf,figures/S1_synth_per_category_voice.png,Synthetic files per category by TTS voice gender
+S2_synth_fraction_per_category,figures/S2_synth_fraction_per_category.pdf,figures/S2_synth_fraction_per_category.png,Synthetic fraction within each category
+S3_synth_split_per_category,figures/S3_synth_split_per_category.pdf,figures/S3_synth_split_per_category.png,Synthetic split distribution per category
+S4_synth_quality,figures/S4_synth_quality.pdf,figures/S4_synth_quality.png,Synthetic-audio Whisper-similarity quality

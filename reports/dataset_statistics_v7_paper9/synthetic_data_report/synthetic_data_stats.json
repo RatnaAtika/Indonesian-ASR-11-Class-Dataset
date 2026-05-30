@@ -1,0 +1,284 @@
+{
+  "title": "Synthetic-data characterization — Indonesian ASR corpus v7",
+  "source": "metadata/dataset_metadata_clean.csv",
+  "dataset_version": "v7_natural_synth",
+  "overview": {
+    "n_synthetic": 132,
+    "n_corpus": 102544,
+    "fraction_corpus_pct": 0.1287,
+    "synthetic_hours": 0.1757,
+    "synthetic_seconds": 632.52,
+    "engine": "microsoft_edge_tts_neural",
+    "voice_male": "id-ID-ArdiNeural",
+    "voice_female": "id-ID-GadisNeural",
+    "speaker_cloned": false,
+    "voice_gender_matched": true,
+    "n_speakers_with_synth": 18,
+    "n_speakers_total": 20,
+    "speakers_zero_synth": [
+      "Baron",
+      "Robi"
+    ]
+  },
+  "by_gender_voice": {
+    "Male": 73,
+    "Female": 59
+  },
+  "by_voice": {
+    "id-ID-ArdiNeural": 73,
+    "id-ID-GadisNeural": 59
+  },
+  "by_round": {
+    "v7_initial": 124,
+    "v7_residual_fix": 8
+  },
+  "by_split": {
+    "train": {
+      "n_synth": 122,
+      "split_total": 71792,
+      "pct_of_split": 0.1699
+    },
+    "dev": {
+      "n_synth": 8,
+      "split_total": 15376,
+      "pct_of_split": 0.052
+    },
+    "test": {
+      "n_synth": 2,
+      "split_total": 15376,
+      "pct_of_split": 0.013
+    }
+  },
+  "by_speaker": {
+    "Afgan": 17,
+    "Ammar": 15,
+    "Nanda": 14,
+    "Muhaimin": 12,
+    "Harry": 10,
+    "Elisa": 8,
+    "Bey": 8,
+    "Fito": 7,
+    "Atika": 7,
+    "Anggi": 6,
+    "Uly": 6,
+    "Erlin": 4,
+    "Indah": 4,
+    "Risky": 4,
+    "Pram": 3,
+    "Fajar": 3,
+    "Joni": 2,
+    "Amri": 2
+  },
+  "quality": {
+    "metric": "Whisper-large-v3 text-similarity to target (0-1)",
+    "threshold_accept": 0.7,
+    "mean": 0.9941,
+    "min": 0.9101,
+    "max": 1.0,
+    "median": 1.0,
+    "n_scored": 132,
+    "pass_ge_0.90": 132,
+    "pass_ge_0.95": 125,
+    "pass_eq_1.00": 114
+  },
+  "by_category": {
+    "Kalimat_Deklaratif": {
+      "n_synth": 2,
+      "category_total": 9500,
+      "pct_of_category": 0.0211,
+      "pct_of_all_synth": 1.52,
+      "synthetic_seconds": 8.9,
+      "voice_male": 1,
+      "voice_female": 1,
+      "rounds": {
+        "v7_initial": 2
+      },
+      "splits": {
+        "train": 2
+      },
+      "quality_mean": 1.0,
+      "quality_min": 1.0
+    },
+    "Kalimat_Klarifikasi": {
+      "n_synth": 9,
+      "category_total": 9500,
+      "pct_of_category": 0.0947,
+      "pct_of_all_synth": 6.82,
+      "synthetic_seconds": 44.93,
+      "voice_male": 2,
+      "voice_female": 7,
+      "rounds": {
+        "v7_initial": 9
+      },
+      "splits": {
+        "train": 9
+      },
+      "quality_mean": 0.9886,
+      "quality_min": 0.9489
+    },
+    "Kalimat_Kondisional": {
+      "n_synth": 16,
+      "category_total": 9010,
+      "pct_of_category": 0.1776,
+      "pct_of_all_synth": 12.12,
+      "synthetic_seconds": 94.32,
+      "voice_male": 9,
+      "voice_female": 7,
+      "rounds": {
+        "v7_initial": 14,
+        "v7_residual_fix": 2
+      },
+      "splits": {
+        "train": 16
+      },
+      "quality_mean": 1.0,
+      "quality_min": 1.0
+    },
+    "Kalimat_Konfirmasi": {
+      "n_synth": 29,
+      "category_total": 9017,
+      "pct_of_category": 0.3216,
+      "pct_of_all_synth": 21.97,
+      "synthetic_seconds": 156.62,
+      "voice_male": 11,
+      "voice_female": 18,
+      "rounds": {
+        "v7_initial": 28,
+        "v7_residual_fix": 1
+      },
+      "splits": {
+        "train": 25,
+        "test": 2,
+        "dev": 2
+      },
+      "quality_mean": 0.9878,
+      "quality_min": 0.9553
+    },
+    "Kalimat_Negasi": {
+      "n_synth": 11,
+      "category_total": 9500,
+      "pct_of_category": 0.1158,
+      "pct_of_all_synth": 8.33,
+      "synthetic_seconds": 38.52,
+      "voice_male": 8,
+      "voice_female": 3,
+      "rounds": {
+        "v7_initial": 10,
+        "v7_residual_fix": 1
+      },
+      "splits": {
+        "train": 10,
+        "dev": 1
+      },
+      "quality_mean": 1.0,
+      "quality_min": 1.0
+    },
+    "Kalimat_Penjadwalan": {
+      "n_synth": 4,
+      "category_total": 9500,
+      "pct_of_category": 0.0421,
+      "pct_of_all_synth": 3.03,
+      "synthetic_seconds": 14.93,
+      "voice_male": 3,
+      "voice_female": 1,
+      "rounds": {
+        "v7_initial": 4
+      },
+      "splits": {
+        "dev": 1,
+        "train": 3
+      },
+      "quality_mean": 0.9873,
+      "quality_min": 0.9493
+    },
+    "Kalimat_Perintah": {
+      "n_synth": 15,
+      "category_total": 9500,
+      "pct_of_category": 0.1579,
+      "pct_of_all_synth": 11.36,
+      "synthetic_seconds": 48.36,
+      "voice_male": 13,
+      "voice_female": 2,
+      "rounds": {
+        "v7_residual_fix": 3,
+        "v7_initial": 12
+      },
+      "splits": {
+        "train": 13,
+        "dev": 2
+      },
+      "quality_mean": 0.9894,
+      "quality_min": 0.9101
+    },
+    "Kalimat_Persuasif": {
+      "n_synth": 16,
+      "category_total": 9011,
+      "pct_of_category": 0.1776,
+      "pct_of_all_synth": 12.12,
+      "synthetic_seconds": 101.28,
+      "voice_male": 9,
+      "voice_female": 7,
+      "rounds": {
+        "v7_initial": 15,
+        "v7_residual_fix": 1
+      },
+      "splits": {
+        "train": 16
+      },
+      "quality_mean": 1.0,
+      "quality_min": 1.0
+    },
+    "Kalimat_Retoris": {
+      "n_synth": 17,
+      "category_total": 9500,
+      "pct_of_category": 0.1789,
+      "pct_of_all_synth": 12.88,
+      "synthetic_seconds": 74.83,
+      "voice_male": 10,
+      "voice_female": 7,
+      "rounds": {
+        "v7_initial": 17
+      },
+      "splits": {
+        "train": 15,
+        "dev": 2
+      },
+      "quality_mean": 1.0,
+      "quality_min": 1.0
+    },
+    "Kalimat_Seruan": {
+      "n_synth": 3,
+      "category_total": 9500,
+      "pct_of_category": 0.0316,
+      "pct_of_all_synth": 2.27,
+      "synthetic_seconds": 10.73,
+      "voice_male": 1,
+      "voice_female": 2,
+      "rounds": {
+        "v7_initial": 3
+      },
+      "splits": {
+        "train": 3
+      },
+      "quality_mean": 1.0,
+      "quality_min": 1.0
+    },
+    "Kalimat_Tanya": {
+      "n_synth": 10,
+      "category_total": 9006,
+      "pct_of_category": 0.111,
+      "pct_of_all_synth": 7.58,
+      "synthetic_seconds": 39.1,
+      "voice_male": 6,
+      "voice_female": 4,
+      "rounds": {
+        "v7_initial": 10
+      },
+      "splits": {
+        "train": 10
+      },
+      "quality_mean": 0.9886,
+      "quality_min": 0.943
+    }
+  }
+}
