@@ -901,6 +901,18 @@ python3 training/m02b_whisper_medium_ft/train.py \
 > JSON `test_paper.json` di `<run_dir>/test_results/` adalah single source of
 > truth untuk **AI agent menulis paper**.
 
+> **[PIPELINE UPDATE 2026-05-30]** Perbaikan integritas test (commit `adfa7fd`):
+> - **m10 GMM-HMM-DNN**: artifact `.pkl` kini menyimpan `model_state` (dulu hilang →
+>   test jalan DNN random-init / WER≈1). **m09 & m10 WAJIB di-run ulang** dgn trainer
+>   terbaru agar artifact valid.
+> - **m09/m10**: artifact memuat bobot **best-on-val** (dari `checkpoints/best.pt`),
+>   bukan epoch terakhir — konsisten dgn protokol fairness.
+> - **`find_best_checkpoint`**: bila hanya ada `epoch_*.pt`, kini pilih epoch ber-WER
+>   terendah dari `history.json` (bukan epoch terakhir).
+> - **Aggregator**: label `family`+`model_id` otoritatif dari tabel kanonik
+>   `PAPER_MODELS` (cegah drift label, mis. "unpublished" bocor ke Table 1).
+> Detail: `training_conventional/reports/pipeline_audit_test_aggregate.md`.
+
 Tiap test.py auto-pick best checkpoint terbaru (run_paper_*) di slot folder,
 jalankan greedy decode pada full test split (15,376 utterances), dan save JSON
 + CSV + sample preds.
