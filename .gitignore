@@ -61,3 +61,5 @@ __pycache__/
 
 # --- Exception: publish DiB-compliant vector figures for the v7 dataset stats report ---
 !reports/dataset_statistics_v7_paper9/figures/*.pdf
+!reports/dataset_statistics_v7_paper9/**/*.pdf
+!reports/dataset_statistics_v7_paper9/*.pdf

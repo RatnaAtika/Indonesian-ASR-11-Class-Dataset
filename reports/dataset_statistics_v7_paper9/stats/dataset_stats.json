@@ -1,12 +1,31 @@
 {
   "source": {
     "metadata": "metadata/dataset_metadata_clean.csv",
+    "dataset_version": "v7_natural_synth",
     "splits": {
       "train": "splits/train_clean.tsv",
       "dev": "splits/dev_clean.tsv",
       "test": "splits/test_clean.tsv"
-    },
-    "dataset_version": "v7_natural_synth"
+    }
+  },
+  "pipeline": {
+    "target_journal": "Data in Brief (Elsevier, ISSN 2352-3409)",
+    "n_paper_models": 9,
+    "models": [
+      "m08 HMM-GMM",
+      "m09 DNN-HMM",
+      "m10 GMM-HMM-DNN",
+      "m11 Vanilla Transformer",
+      "m12 ViT-modified-ID (novel)",
+      "m07 Bi-LSTM CTC",
+      "m06 Conformer-CTC",
+      "m13 Wav2Letter",
+      "m02b Whisper-medium FT"
+    ],
+    "tokenizer": "spm_v7_char",
+    "features": "80-bin log-mel 25ms/10ms per-utt CMVN",
+    "decoding": "greedy, no LM",
+    "seed": 42
   },
   "corpus": {
     "n_files": 102544,
@@ -16,14 +35,11 @@
     "n_categories": 11,
     "n_base_sentences": 209,
     "n_sentences_per_category": 19,
-    "sentence_id_index_range": [
-      1,
-      20
-    ],
     "mean_dur_s": 4.5869,
     "median_dur_s": 4.488,
     "min_dur_s": 1.562,
     "max_dur_s": 206.405,
+    "mean_tokens_per_file": 8.86,
     "speaker_hours_min": 5.62,
     "speaker_hours_max": 7.67
   },
@@ -262,5 +278,43 @@
     "quality_mean": 0.9941,
     "quality_min": 0.9101,
     "quality_n": 132
-  }
+  },
+  "statistical_tests": [
+    {
+      "test": "Kruskal-Wallis (duration ~ category)",
+      "statistic": 60906.77632169184,
+      "df": 10,
+      "p": 0.0,
+      "p_bonferroni": 0.0,
+      "effect_size": 0.5939236764913914,
+      "n": 102544
+    },
+    {
+      "test": "Kruskal-Wallis (duration ~ speaker)",
+      "statistic": 5856.287597122961,
+      "df": 19,
+      "p": 0.0,
+      "p_bonferroni": 0.0,
+      "effect_size": 0.05693581597599549,
+      "n": 102544
+    },
+    {
+      "test": "Chi2 goodness-of-fit (category ~ uniform)",
+      "statistic": 65.29948119831488,
+      "df": 10,
+      "p": 3.552240892579299e-10,
+      "p_bonferroni": 1.4208963570317197e-09,
+      "effect_size": 0.007979942064045623,
+      "n": 102544
+    },
+    {
+      "test": "Kolmogorov-Smirnov 2-sample (train vs test dur)",
+      "statistic": 0.0757422239806197,
+      "df": null,
+      "p": 1.2440312389405243e-63,
+      "p_bonferroni": 4.976124955762097e-63,
+      "effect_size": 0.0757422239806197,
+      "n": 87168
+    }
+  ]
 }
