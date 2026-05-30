@@ -1,0 +1,9 @@
+figure,file
+F1_files_per_speaker,figures/F1_files_per_speaker.pdf
+F2_duration_per_category,figures/F2_duration_per_category.pdf
+F3_hours_per_category,figures/F3_hours_per_category.pdf
+F4_gender_distribution,figures/F4_gender_distribution.pdf
+F5_word_frequency_zipf,figures/F5_word_frequency_zipf.pdf
+F6_split_gender,figures/F6_split_gender.pdf
+F7_synthetic_disclosure,figures/F7_synthetic_disclosure.pdf
+F8_duration_histogram,figures/F8_duration_histogram.pdf

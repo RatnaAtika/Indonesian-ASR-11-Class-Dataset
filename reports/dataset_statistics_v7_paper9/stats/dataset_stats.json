@@ -1,0 +1,266 @@
+{
+  "source": {
+    "metadata": "metadata/dataset_metadata_clean.csv",
+    "splits": {
+      "train": "splits/train_clean.tsv",
+      "dev": "splits/dev_clean.tsv",
+      "test": "splits/test_clean.tsv"
+    },
+    "dataset_version": "v7_natural_synth"
+  },
+  "corpus": {
+    "n_files": 102544,
+    "total_hours": 130.6548,
+    "total_seconds": 470357.4,
+    "n_speakers": 20,
+    "n_categories": 11,
+    "n_base_sentences": 209,
+    "n_sentences_per_category": 19,
+    "sentence_id_index_range": [
+      1,
+      20
+    ],
+    "mean_dur_s": 4.5869,
+    "median_dur_s": 4.488,
+    "min_dur_s": 1.562,
+    "max_dur_s": 206.405,
+    "speaker_hours_min": 5.62,
+    "speaker_hours_max": 7.67
+  },
+  "audio_format": {
+    "sample_rate": {
+      "16000": 102544
+    },
+    "num_channels": {
+      "1": 102544
+    },
+    "bits_per_sample": {
+      "16": 102544
+    }
+  },
+  "gender": {
+    "speakers": {
+      "male": [
+        "Afgan",
+        "Ammar",
+        "Amri",
+        "Baron",
+        "Fajar",
+        "Fito",
+        "Harry",
+        "Muhaimin",
+        "Pram",
+        "Risky",
+        "Robi"
+      ],
+      "female": [
+        "Anggi",
+        "Atika",
+        "Bey",
+        "Elisa",
+        "Erlin",
+        "Indah",
+        "Joni",
+        "Nanda",
+        "Uly"
+      ]
+    },
+    "n_male_speakers": 11,
+    "n_female_speakers": 9,
+    "files": {
+      "Male": 56396,
+      "Female": 46148
+    },
+    "hours": {
+      "Male": 70.2665,
+      "Female": 60.3884
+    }
+  },
+  "balance": {
+    "speaker_entropy_norm": 0.99999998,
+    "speaker_gini": 0.000196,
+    "speaker_file_min": 5125,
+    "speaker_file_max": 5132,
+    "category_entropy_norm": 0.99986657,
+    "category_gini": 0.012169
+  },
+  "splits": {
+    "train": {
+      "n_files": 71792,
+      "n_speakers": 14,
+      "hours": 92.4882,
+      "n_male": 30770,
+      "n_female": 41022,
+      "n_synthetic": 122,
+      "speakers": [
+        "Afgan",
+        "Ammar",
+        "Anggi",
+        "Atika",
+        "Bey",
+        "Elisa",
+        "Erlin",
+        "Fito",
+        "Harry",
+        "Indah",
+        "Muhaimin",
+        "Nanda",
+        "Risky",
+        "Uly"
+      ]
+    },
+    "dev": {
+      "n_files": 15376,
+      "n_speakers": 3,
+      "hours": 19.7412,
+      "n_male": 15376,
+      "n_female": 0,
+      "n_synthetic": 8,
+      "speakers": [
+        "Amri",
+        "Fajar",
+        "Pram"
+      ]
+    },
+    "test": {
+      "n_files": 15376,
+      "n_speakers": 3,
+      "hours": 18.4254,
+      "n_male": 10250,
+      "n_female": 5126,
+      "n_synthetic": 2,
+      "speakers": [
+        "Baron",
+        "Joni",
+        "Robi"
+      ]
+    }
+  },
+  "linguistics": {
+    "vocab_types": 786,
+    "total_tokens": 908472,
+    "top20": [
+      [
+        "yang",
+        26500
+      ],
+      [
+        "kamu",
+        24000
+      ],
+      [
+        "apakah",
+        21017
+      ],
+      [
+        "saya",
+        19500
+      ],
+      [
+        "jika",
+        18016
+      ],
+      [
+        "di",
+        14517
+      ],
+      [
+        "untuk",
+        14500
+      ],
+      [
+        "sudah",
+        14500
+      ],
+      [
+        "kita",
+        13021
+      ],
+      [
+        "akan",
+        12511
+      ],
+      [
+        "ini",
+        12000
+      ],
+      [
+        "tolong",
+        11517
+      ],
+      [
+        "lebih",
+        10010
+      ],
+      [
+        "dengan",
+        9523
+      ],
+      [
+        "ke",
+        8500
+      ],
+      [
+        "bisa",
+        8010
+      ],
+      [
+        "tidak",
+        8000
+      ],
+      [
+        "jadwal",
+        6000
+      ],
+      [
+        "semua",
+        5517
+      ],
+      [
+        "dan",
+        5500
+      ]
+    ]
+  },
+  "synthetic": {
+    "n_files": 132,
+    "fraction_corpus": 0.001287,
+    "hours": 0.1757,
+    "engine": {
+      "microsoft_edge_tts_neural": 132
+    },
+    "voices": {
+      "id-ID-ArdiNeural": 73,
+      "id-ID-GadisNeural": 59
+    },
+    "rounds": {
+      "v7_initial": 124,
+      "v7_residual_fix": 8
+    },
+    "by_category": {
+      "Kalimat_Deklaratif": 2,
+      "Kalimat_Klarifikasi": 9,
+      "Kalimat_Kondisional": 16,
+      "Kalimat_Konfirmasi": 29,
+      "Kalimat_Negasi": 11,
+      "Kalimat_Penjadwalan": 4,
+      "Kalimat_Perintah": 15,
+      "Kalimat_Persuasif": 16,
+      "Kalimat_Retoris": 17,
+      "Kalimat_Seruan": 3,
+      "Kalimat_Tanya": 10
+    },
+    "by_gender": {
+      "Male": 73,
+      "Female": 59
+    },
+    "by_split": {
+      "train": 122,
+      "test": 2,
+      "dev": 8
+    },
+    "quality_mean": 0.9941,
+    "quality_min": 0.9101,
+    "quality_n": 132
+  }
+}

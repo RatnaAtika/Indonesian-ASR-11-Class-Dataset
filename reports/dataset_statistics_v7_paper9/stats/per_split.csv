@@ -1,0 +1,4 @@
+split,n_files,n_speakers,hours,n_male,n_female,n_synthetic
+train,71792,14,92.4882,30770,41022,122
+dev,15376,3,19.7412,15376,0,8
+test,15376,3,18.4254,10250,5126,2
