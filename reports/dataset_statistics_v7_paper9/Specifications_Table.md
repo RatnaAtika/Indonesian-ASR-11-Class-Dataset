@@ -14,7 +14,7 @@
 | Description of data collection | Twenty native-Indonesian speakers (9 female, 11 male), ages 19–28, recorded balanced takes covering 11 sentence-type categories (209 base sentences = 19 sentences × 11 categories). Total ≈ 130.65 hours. Speaker-disjoint train (14 speakers, 92.49 h) / dev (3 speakers, 19.74 h) / test (3 speakers, 18.43 h) split with zero leak. Files are balanced per speaker (5,125–5,132 files; Gini = 0.0002). |
 | Data source location        | Universitas X Speech Lab, Jakarta, Indonesia. Approximate coordinates: 6.20° S, 106.81° E. |
 | Data accessibility          | Repository name: **Mendeley Data** <br> Direct URL to data: `https://doi.org/10.17632/PLACEHOLDER.v1` <br> Data identification number: `10.17632/PLACEHOLDER.v1` <br> Instructions for accessing the data: openly accessible, no firewall, no controlled access. |
-| Related research article    | W. Dadang *et al.*, *A fair-comparison benchmark of nine ASR architectures on a limited-data Indonesian corpus* (manuscript in preparation). The nine models (HMM-GMM, DNN-HMM, GMM-HMM-DNN, Vanilla Transformer, ViT-modified-ID, Bi-LSTM-CTC, Conformer-CTC, Wav2Letter, Whisper-medium FT) all consume the frozen splits described here. **N/A** at time of submission. |
+| Related research article    | R. Atika *et al.*, *A fair-comparison benchmark of nine ASR architectures on a limited-data Indonesian corpus* (manuscript in preparation). The nine models (HMM-GMM, DNN-HMM, GMM-HMM-DNN, Vanilla Transformer, ViT-modified-ID, Bi-LSTM-CTC, Conformer-CTC, Wav2Letter, Whisper-medium FT) all consume the frozen splits described here. **N/A** at time of submission. |
 
 ---
 

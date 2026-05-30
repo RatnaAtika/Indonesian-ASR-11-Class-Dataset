@@ -154,7 +154,7 @@ Kandidat model (HF Transformers, evaluasi `transcribe` + `lang=id`):
 | Input | dataset final + metadata + benchmark |
 | Skill | `notebook-authoring`, `github-delivery`, `media-pipeline` (cross-check transkrip akhir) |
 | Output | Hugging Face Datasets loader script `datasets/paper_dataset_sota.py` (mengikuti template `audiofolder` atau `LegacyMetadataConfig`) · `README_HF.md` (dataset card resmi) · `Dockerfile` + `environment.yml` (conda `torch-gpu`) · GitHub Actions CI: lint + bench-smoke (≤ 50 file) |
-| Gate | `datasets.load_dataset("Ratna123/paper_dataset_sota", "balanced19_test")` sukses; CI hijau |
+| Gate | `datasets.load_dataset("RatnaAtika/paper_dataset_sota", "balanced19_test")` sukses; CI hijau |
 
 ### Fase 7 — Manuscript & submission (5–10 hari)
 

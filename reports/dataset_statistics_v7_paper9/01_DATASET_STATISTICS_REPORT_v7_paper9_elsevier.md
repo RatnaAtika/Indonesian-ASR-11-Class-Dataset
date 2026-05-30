@@ -251,7 +251,7 @@ where available. Full BibTeX in [`references.bib`](references.bib).
 
 [13] **[software]** Microsoft, *Microsoft Edge-TTS* [software], Edge-browser TTS service, 2024.
 
-[14] **[dataset]** W. Dadang *et al.*, *Indonesian limited-data ASR corpus (v7): 20-speaker balanced-take audio dataset* [dataset], Mendeley Data, v1, 2026. <https://doi.org/10.17632/PLACEHOLDER.v1>
+[14] **[dataset]** R. Atika *et al.*, *Indonesian limited-data ASR corpus (v7): 20-speaker balanced-take audio dataset* [dataset], Mendeley Data, v1, 2026. <https://doi.org/10.17632/PLACEHOLDER.v1>
 
 ---
 

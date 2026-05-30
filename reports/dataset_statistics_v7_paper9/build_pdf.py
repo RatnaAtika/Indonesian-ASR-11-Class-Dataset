@@ -107,6 +107,6 @@ pdf.add_section(Section(md_final, root=str(PNG), toc=True),
               "pre{background:#f5f5f5;padding:8px;border-radius:4px;font-size:8pt;} "
               "img{max-width:100%;height:auto;margin:8pt 0;} p{line-height:1.4;}"))
 pdf.meta["title"] = "Indonesian ASR Corpus v7 — Dataset Statistics (Data in Brief)"
-pdf.meta["author"] = "Ratna Dadang et al."
+pdf.meta["author"] = "Ratna Atika et al."
 pdf.save(str(PDF_OUT))
 print(f"PDF: {PDF_OUT} ({PDF_OUT.stat().st_size/1024:.0f} KB), figures inlined: {sorted(inlined)}")
