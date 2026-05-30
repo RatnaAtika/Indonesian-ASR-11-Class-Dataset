@@ -461,3 +461,43 @@ Selesai. Sistem testing lengkap untuk 9 paper models + AI-agent-readable benchma
  Catatan: ada dua angka WER yang konsisten arah (test 1.1687 vs val 1.0255), keduanya saya cantumkan dengan
  test sebagai angka paper-facing. Kalau mau, saya bisa sekalian render ke LaTeX agar langsung \input{} ke
  manuskrip.
+
+
+ ## Prompt Data Vis dan Stat:
+
+ Done. The grand Elsevier Data-in-Brief package is complete, committed, and pushed.
+
+ What I built
+
+ I merged both reference sessions (...viz plain + ...viz_elsevier) into the grand folder
+ session_20260530_125618_dataset_stats_v7_paper9, made it as complete as both combined, added the _elsevier
+ naming, and integrated the 9-model pipeline binding — all re-derived from the exact files the 9 models train
+ on.
+
+ Now in the grand folder (and mirrored to reports/dataset_statistics_v7_paper9/):
+ - PDF grand report (..._elsevier.pdf, 12 pages, all 12 figures inlined, 3 MB)
+ - Elsevier-compliant report MD + plain MD variant
+ - Mandatory DiB sections: Specifications Table, Value of the Data, 5 declarations
+   (Ethics/CRediT/CoI/Funding/GenAI), references.bib
+ - 6 booktabs tex tables (T1–T5 + G1) + 12 vector PDF figures (F1–F12) with 600 DPI PNG fallback
+ - 4 statistical tests recomputed (KW η²=0.594/0.057, χ² V=0.008, KS D=0.076)
+ - regenerate_all_elsevier.py + build_pdf.py (reproducible, no audio-tree scan), SUBMISSION_READINESS.md,
+   README.md
+
+ Errors I corrected from the earlier elsevier draft
+
+ - Gender 10 F / 10 M → 9 F / 11 M (verified from metadata)
+ - Vocabulary 711 → 786
+ - Synthesis engine tag → microsoft_edge_tts_neural (with full method documented)
+
+ On the skill
+
+ The referenced sciencedirect-elsevier-format skill already exists at Dataset ASR/.agents/skills/ (parent
+ dir). I applied its Data-in-Brief contract rather than recreating it. The package passed a reviewer critique
+ with zero consistency issues.
+
+ Pushed to main: 7082526..951d764.
+
+ One note for honesty: the figures are matplotlib-algorithmic (DiB-compliant, no AI images), but the F11
+ mel-spectrograms and the n=297 audio-quality sample are reused from the prior immutable audio scan — they
+ reflect the same v7 audio content and were not recomputed, to respect the no-audio-traversal rule.
