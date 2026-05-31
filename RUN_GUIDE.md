@@ -874,6 +874,8 @@ python3 training_conventional/m13_wav2letter_cnn/train.py \
 > Train/Val Acc=0 & WER/CER>1 di epoch awal. Fix di `common/pkl_cnn_ctc_trainer.py`
 > (`ctc_greedy_decode(..., lengths=new_lens)`) + `common/pkl_cnn_ctc_test.py`
 > (berlaku juga untuk m14 Jasper). Diuji: smoke 2-ep → CER 1.03→0.60, tanpa ekor.
+> **[+2026-05-31]** `model_summary.txt` (params + arsitektur) kini ditulis di awal
+> training (seragam dgn 8 model lain), jadi tetap ada walau run terinterupsi.
 
 ### Terminal P-7 — m07 Bi-LSTM CTC (~12 jam, recipe C VRAM-safe)
 ```bash
@@ -1093,6 +1095,7 @@ python3 replot_compare.py --auto-discover --pattern "run_paper_*" \
 
 Setelah training selesai, setiap `runs/run_paper_<date>/` berisi:
 - `meta.json` — environment snapshot (Python, torch, CUDA, libraries)
+- `model_summary.txt` — arsitektur + jumlah parameter (ditulis di awal training; seragam m06–m14)
 - `config.json` — exact CLI args
 - `history.json` — per-epoch WER/CER/loss/acc/lr/gpu/throughput
 - `log.txt` — human-readable training log dengan PRED/LABEL samples

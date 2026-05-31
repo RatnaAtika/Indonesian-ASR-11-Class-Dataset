@@ -26,7 +26,7 @@ THIS = Path(__file__).parent
 sys.path.insert(0, str(THIS.parent))
 from common.utils import (compute_wer_cer, HistorySaver, regenerate_plots, GPUMonitor,
                           EpochTimer, format_epoch_log, cer_to_token_acc_proxy,
-                          save_run_meta, unique_run_dir, BestCheckpointTracker)
+                          save_run_meta, unique_run_dir, BestCheckpointTracker, save_model_summary)
 
 
 def parse_args():
@@ -300,6 +300,8 @@ def main():
     n_params = sum(p.numel() for p in model.parameters())
     n_trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"[cnn-ctc] params: total={n_params:,}, trainable={n_trainable:,}")
+    save_model_summary(args.run_dir, model, args.arch, n_params, n_trainable,
+                       extra={"vocab_size": vocab_size, "input_dim": args.input_dim})
     
     # Optim + scheduler
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=1e-5)

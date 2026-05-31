@@ -34,7 +34,7 @@ sys.path.insert(0, str(TRAINING_ROOT))
 from common.utils import (
     compute_wer_cer, HistorySaver, regenerate_plots, GPUMonitor, EpochTimer,
     format_epoch_log, cer_to_token_acc_proxy, save_run_meta, unique_run_dir,
-    BestCheckpointTracker,
+    BestCheckpointTracker, save_model_summary,
 )
 
 
@@ -350,6 +350,8 @@ def main():
     n_params = sum(p.numel() for p in model.parameters())
     n_trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"[from-scratch] params: total={n_params:,}, trainable={n_trainable:,}")
+    save_model_summary(args.run_dir, model, args.arch, n_params, n_trainable,
+                       extra={"vocab_size": len(vocab), "n_mels": args.n_mels})
     
     # Optimizer + scheduler
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=1e-5)

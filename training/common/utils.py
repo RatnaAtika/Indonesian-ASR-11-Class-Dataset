@@ -628,6 +628,33 @@ def save_run_meta(run_dir: Path, model_id: str, family: str, era: str,
     return out
 
 
+def save_model_summary(run_dir: Path, model, arch: str, n_params: int,
+                       n_trainable: Optional[int] = None, extra: Optional[Dict] = None) -> Path:
+    """Write model_summary.txt (architecture repr + param counts) at training start.
+
+    Uniform across conventional/from-scratch trainers (m06–m14) so a model summary
+    always exists even if a run is interrupted before report.md is written.
+    """
+    run_dir = Path(run_dir)
+    run_dir.mkdir(parents=True, exist_ok=True)
+    if n_trainable is None:
+        try:
+            n_trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
+        except Exception:
+            n_trainable = n_params
+    lines = [
+        f"# Model Summary — {arch}",
+        f"Total params    : {n_params:,}",
+        f"Trainable params: {n_trainable:,}",
+    ]
+    for k, v in (extra or {}).items():
+        lines.append(f"{k}: {v}")
+    lines += ["", "## Architecture", str(model)]
+    out = run_dir / "model_summary.txt"
+    out.write_text("\n".join(lines), encoding="utf-8")
+    return out
+
+
 # ============================================================
 # 7. LOGGING CALLBACK FOR HF TRAINER
 # ============================================================
