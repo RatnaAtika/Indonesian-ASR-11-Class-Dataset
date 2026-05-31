@@ -1,4 +1,4 @@
-"""Whisper-medium FT test entry point — m02b paper model #9.
+"""Whisper-small FT test entry point — Option A (paper model #9, 8GB-friendly).
 
 Loads HF Trainer-saved checkpoint dari run_dir, jalan generate() pada test
 set v7, save JSON test_paper.json.
@@ -6,7 +6,7 @@ set v7, save JSON test_paper.json.
 Usage:
     python3 training/m02b_whisper_medium_ft/test.py
     python3 training/m02b_whisper_medium_ft/test.py \\
-      --run-dir training/m02b_whisper_medium_ft/runs/run_paper_20260601
+      --run-dir training/m02b_whisper_small_ft/runs/run_paper_20260601
 """
 import sys, argparse, csv, time
 from pathlib import Path
@@ -37,7 +37,7 @@ def parse_args():
     p.add_argument("--max-new-tokens", type=int, default=200)
     p.add_argument("--checkpoint", type=Path, default=None,
                    help="HF checkpoint dir (overrides auto-detect)")
-    p.add_argument("--model-id-fallback", default="openai/whisper-medium",
+    p.add_argument("--model-id-fallback", default="openai/whisper-small",
                    help="Fallback model id if checkpoint dir invalid")
     return p.parse_args()
 
@@ -156,8 +156,8 @@ def main():
     out_dir = args.run_dir / "test_results"
     json_path = write_test_results(
         out_dir=out_dir,
-        model_id="m02b-whisper-medium-ft",
-        family="Whisper-medium FT (Radford 2022)",
+        model_id="m02b-whisper-small-ft",
+        family="Whisper-small FT (Radford 2022)",
         is_paper_model=True, is_user_novel=False,
         run_dir=args.run_dir,
         checkpoint_info={"path": str(ckpt_path), "filename": ckpt_path.name,

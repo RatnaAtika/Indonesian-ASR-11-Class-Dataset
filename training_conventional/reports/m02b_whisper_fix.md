@@ -40,3 +40,19 @@ Command tercetak bersih: `--model-id openai/whisper-small --run-dir ... --epochs
 - m02b kini **whisper-small FT**, valid sebagai baseline pretrained-FT (Radford 2022), muat di hardware 8GB.
 - Run paper: `python3 training/m02b_whisper_medium_ft/train.py --epochs 5 --batch-size 8 --grad-accum 4 --lr 1e-5 --warmup-steps 500 --gradient-checkpointing --seed 42` di terminal terpisah.
 - Jika ada akses A100/GPU besar dan ingin medium, ganti `--model-id openai/whisper-medium` di wrapper \u2014 tapi default kini small demi reproduksibilitas di laptop.
+
+---
+
+## Update 2026-05-31 (b): dua opsi kode terpisah
+
+Atas permintaan, Whisper FT dipisah menjadi **dua entry point**, masing-masing simpan hasil di folder sendiri:
+
+| Opsi | Folder | Model | runs/ | Slot paper |
+|---|---|---|---|---|
+| **A** | `training/m02b_whisper_small_ft/` | whisper-small (244M) | `m02b_whisper_small_ft/runs/` | **paper #9** (muat GPU 8GB) |
+| **B** | `training/m02b_whisper_medium_ft/` | whisper-medium (764M) | `m02b_whisper_medium_ft/runs/` | secondary (GPU besar; OOM di 8GB) |
+
+- Keduanya memanggil `common/whisper_trainer.py` yang sama (fix backward error berlaku untuk dua-duanya).
+- Aggregator: `m02b-whisper-small-ft` = paper #9 (folder small); `m02b-whisper-medium-ft` = secondary (folder medium).
+- Verifikasi: Opsi A E2E via wrapper OK (GPU 3711MB, WER 0.2424 smoke, simpan ke folder small); Opsi B wrapper emit cmd whisper-medium + folder medium yang benar (tidak di-run karena OOM di 8GB).
+- Test: `python3 training/m02b_whisper_small_ft/test.py` (A) dan `python3 training/m02b_whisper_medium_ft/test.py` (B).

@@ -894,18 +894,31 @@ python3 training/m06_conformer_ctc/train.py \
   --hidden-size 256 --num-layers 6 --lr 3e-4 --seed 42
 ```
 
-### Terminal P-9 — m02b Whisper-small FT (~4 jam laptop / <1 jam A100)
+### Terminal P-9 — m02b Whisper FT (2 opsi)
+
+**Opsi A — whisper-small (244M), paper model #9, muat GPU 8GB (~4 jam laptop):**
 ```bash
-python3 training/m02b_whisper_medium_ft/train.py \
+python3 training/m02b_whisper_small_ft/train.py \
   --epochs 5 --batch-size 8 --grad-accum 4 \
   --lr 1e-5 --warmup-steps 500 \
   --gradient-checkpointing --seed 42
 ```
-> **[FIX 2026-05-31]** Model = **whisper-small (244M)**, bukan medium. whisper-medium
-> (764M) **OOM** di GPU 8GB (RTX 4060 Laptop) walau batch 2 + grad-ckpt — terverifikasi.
-> small muat ~3.7GB. Juga diperbaiki: error "backward through the graph a second time"
-> akibat gradient checkpointing di-enable ganda + reentrant autograd; kini Trainer
-> meng-enable dgn `use_reentrant=False` + `use_cache=False` (lihat whisper_trainer.py).
+> Hasil tersimpan di `training/m02b_whisper_small_ft/runs/`. Ini slot paper #9.
+
+**Opsi B — whisper-medium (764M), GPU besar (A100/3090/4090/Colab Pro+):**
+```bash
+python3 training/m02b_whisper_medium_ft/train.py \
+  --epochs 5 --batch-size 2 --grad-accum 16 \
+  --lr 1e-5 --warmup-steps 500 \
+  --gradient-checkpointing --seed 42
+```
+> Hasil tersimpan di `training/m02b_whisper_medium_ft/runs/`. **OOM di GPU 8GB**
+> (terverifikasi) — jalankan hanya di GPU besar. Aggregator memperlakukan medium
+> sebagai secondary model (opsional di paper).
+>
+> **[FIX 2026-05-31]** Kedua opsi memakai `whisper_trainer.py` yang sama; error
+> "backward through the graph a second time" sudah diperbaiki (Trainer enable
+> gradient checkpointing dgn `use_reentrant=False` + `use_cache=False`).
 > 5 epoch (bukan 30) karena pretrained FT akan over-fit dgn training panjang.
 
 ## P3-T. Testing per-model (jalankan SETELAH training selesai)
@@ -944,7 +957,8 @@ python3 training_conventional/m13_wav2letter_cnn/test.py
 # Modern models (m07 + m06 di training/, m02b di training/)
 python3 training/m07_bilstm_ctc/test.py
 python3 training/m06_conformer_ctc/test.py
-python3 training/m02b_whisper_medium_ft/test.py
+python3 training/m02b_whisper_small_ft/test.py     # Opsi A (paper #9)
+python3 training/m02b_whisper_medium_ft/test.py    # Opsi B (GPU besar, secondary)
 ```
 
 Setiap test.py akan:
