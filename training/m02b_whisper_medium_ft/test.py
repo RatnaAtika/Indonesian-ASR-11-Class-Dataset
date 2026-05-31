@@ -37,7 +37,7 @@ def parse_args():
     p.add_argument("--max-new-tokens", type=int, default=200)
     p.add_argument("--checkpoint", type=Path, default=None,
                    help="HF checkpoint dir (overrides auto-detect)")
-    p.add_argument("--model-id-fallback", default="openai/whisper-medium",
+    p.add_argument("--model-id-fallback", default="openai/whisper-small",
                    help="Fallback model id if checkpoint dir invalid")
     return p.parse_args()
 
@@ -156,8 +156,8 @@ def main():
     out_dir = args.run_dir / "test_results"
     json_path = write_test_results(
         out_dir=out_dir,
-        model_id="m02b-whisper-medium-ft",
-        family="Whisper-medium FT (Radford 2022)",
+        model_id="m02b-whisper-small-ft",
+        family="Whisper-small FT (Radford 2022)",
         is_paper_model=True, is_user_novel=False,
         run_dir=args.run_dir,
         checkpoint_info={"path": str(ckpt_path), "filename": ckpt_path.name,

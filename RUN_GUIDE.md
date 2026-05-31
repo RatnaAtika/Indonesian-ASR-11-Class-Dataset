@@ -783,7 +783,7 @@ itu evidence pipeline OK. Full runs masuk `runs/run_full_<YYYYMMDD>/` terpisah.
 | m07 | Bi-LSTM CTC ⭐ | 30 ep | from-scratch RNN-CTC |
 | m06 | Conformer-CTC ⭐ | 30 ep | from-scratch conv+attn-CTC |
 | m13 | Wav2Letter ⭐ | 30 ep | from-scratch CNN-CTC |
-| m02b | Whisper-medium FT ⭐ | 5 ep | pretrained FT (Radford 2022 convention) |
+| m02b | Whisper-small FT ⭐ | 5 ep | pretrained FT (Radford 2022); small=244M, muat di 8GB GPU |
 
 ☆ = user's novel architecture (Ratna 2026, this paper's first public report)
 
@@ -894,15 +894,19 @@ python3 training/m06_conformer_ctc/train.py \
   --hidden-size 256 --num-layers 6 --lr 3e-4 --seed 42
 ```
 
-### Terminal P-9 — m02b Whisper-medium FT (~10 jam laptop / 1.5 jam A100)
+### Terminal P-9 — m02b Whisper-small FT (~4 jam laptop / <1 jam A100)
 ```bash
 python3 training/m02b_whisper_medium_ft/train.py \
-  --epochs 5 --batch-size 2 --grad-accum 16 \
+  --epochs 5 --batch-size 8 --grad-accum 4 \
   --lr 1e-5 --warmup-steps 500 \
   --gradient-checkpointing --seed 42
 ```
-> 5 epoch (bukan 30) karena pretrained Whisper-medium akan over-fit dengan
-> training panjang. Sangat disarankan run di Colab Pro+ A100 (~1.5 jam).
+> **[FIX 2026-05-31]** Model = **whisper-small (244M)**, bukan medium. whisper-medium
+> (764M) **OOM** di GPU 8GB (RTX 4060 Laptop) walau batch 2 + grad-ckpt — terverifikasi.
+> small muat ~3.7GB. Juga diperbaiki: error "backward through the graph a second time"
+> akibat gradient checkpointing di-enable ganda + reentrant autograd; kini Trainer
+> meng-enable dgn `use_reentrant=False` + `use_cache=False` (lihat whisper_trainer.py).
+> 5 epoch (bukan 30) karena pretrained FT akan over-fit dgn training panjang.
 
 ## P3-T. Testing per-model (jalankan SETELAH training selesai)
 
@@ -1130,7 +1134,7 @@ accumulation when single-batch GPU memory was insufficient. From-scratch
 models (Bi-LSTM, Conformer, Wav2Letter, Vanilla Transformer, ViT-modified-ID)
 were trained for 30 epochs and the best checkpoint was selected on validation
 WER (best-on-validation); the encoder-decoder models additionally used early
-stopping with patience 12. Pretrained Whisper-medium was fine-tuned for 5
+stopping with patience 12. Pretrained Whisper-small (244M) was fine-tuned for 5
 epochs following Radford et al. (2022) to avoid catastrophic forgetting of
 the original multilingual capability, with the best checkpoint chosen by
 validation WER (load_best_model_at_end). HMM-GMM was trained via Baum-Welch EM

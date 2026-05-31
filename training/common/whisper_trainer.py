@@ -149,8 +149,14 @@ def main() -> int:
     processor.tokenizer.set_prefix_tokens(language=args.language, task=args.task)
     
     model = WhisperForConditionalGeneration.from_pretrained(args.model_id)
+    # NOTE: do NOT call model.gradient_checkpointing_enable() here. The HF Trainer
+    # enables it from training_args.gradient_checkpointing; enabling it twice (and
+    # with the default reentrant autograd path) triggers
+    # "Trying to backward through the graph a second time" on torch>=2.x.
+    # We instead pass gradient_checkpointing_kwargs={'use_reentrant': False} to the
+    # trainer below, and disable the KV cache (incompatible w/ checkpointing).
     if args.gradient_checkpointing:
-        model.gradient_checkpointing_enable()
+        model.config.use_cache = False
     
     # Force language config
     model.generation_config.language = args.language
@@ -313,6 +319,7 @@ def main() -> int:
         warmup_steps=args.warmup_steps,
         num_train_epochs=args.epochs,
         gradient_checkpointing=args.gradient_checkpointing,
+        gradient_checkpointing_kwargs={"use_reentrant": False} if args.gradient_checkpointing else None,
         fp16=args.fp16 and torch.cuda.is_available(),
         eval_strategy="epoch",
         save_strategy="epoch",

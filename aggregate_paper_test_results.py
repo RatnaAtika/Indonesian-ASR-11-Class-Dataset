@@ -49,7 +49,7 @@ PAPER_MODELS = [
     ("m13-wav2letter",         [TC/"m13_wav2letter_cnn/runs"],     "Wav2Letter CNN-CTC (Collobert 2016)",6, False),
     ("m07-bilstm-ctc",         [TRAINING/"m07_bilstm_ctc/runs"],   "Bi-LSTM CTC",                        7, False),
     ("m06-conformer-ctc",      [TRAINING/"m06_conformer_ctc/runs"],"Conformer-CTC (Gulati 2020)",        8, False),
-    ("m02b-whisper-medium-ft", [TRAINING/"m02b_whisper_medium_ft/runs"],"Whisper-medium FT (Radford 2022)", 9, False),
+    ("m02b-whisper-small-ft", [TRAINING/"m02b_whisper_medium_ft/runs"],"Whisper-small FT (Radford 2022)", 9, False),
 ]
 
 SECONDARY_MODELS = [

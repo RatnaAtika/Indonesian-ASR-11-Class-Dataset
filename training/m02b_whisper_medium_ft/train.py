@@ -13,13 +13,13 @@ from pathlib import Path
 HERE = Path(__file__).parent
 TRAINING = HERE.parent
 
+# Inject only identity/run-dir defaults; forward user flags as-is (no duplication).
+# If the user passes --run-dir, theirs wins (argparse takes the last value).
+# NOTE: whisper-MEDIUM (764M) OOMs on 8GB GPUs even at batch 2 + grad-ckpt; we use
+# whisper-SMALL (244M) which fits ~3.7GB and is a valid pretrained-FT paper baseline.
 cmd = ["python3", str(TRAINING / "common/whisper_trainer.py"),
-       "--model-id", "openai/whisper-medium",
-       "--run-dir", str(HERE / "runs/run_paper"),
-       "--epochs", "5",
-       "--batch-size", "2", "--grad-accum", "16",
-       "--lr", "1e-5", "--warmup-steps", "500",
-       "--gradient-checkpointing", "--seed", "42"] + sys.argv[1:]
+       "--model-id", "openai/whisper-small",
+       "--run-dir", str(HERE / "runs/run_paper")] + sys.argv[1:]
 
 print(f"[m02b-whisper-medium] cmd: {' '.join(cmd)}")
 subprocess.run(cmd, check=False)
