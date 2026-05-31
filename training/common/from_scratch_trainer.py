@@ -107,11 +107,17 @@ def ids_to_text(ids, vocab):
     return "".join(vocab[i] if i < len(vocab) and vocab[i] not in ("<blank>", "<unk>") else "" for i in ids)
 
 
-def ctc_decode(logits, blank=0):
-    """Greedy CTC decode."""
+def ctc_decode(logits, blank=0, lengths=None):
+    """Greedy CTC decode. When `lengths` (per-sample valid output frames) is given,
+    truncate each sequence before collapsing so padded-tail frames don't emit
+    spurious tokens (which inflate WER/CER above 1.0 early in training)."""
     pred = logits.argmax(dim=-1).cpu().tolist()
+    if lengths is not None:
+        lengths = [int(x) for x in lengths]
     out = []
-    for seq in pred:
+    for i, seq in enumerate(pred):
+        if lengths is not None:
+            seq = seq[: lengths[i]]
         prev = blank
         result = []
         for tok in seq:
@@ -482,7 +488,7 @@ def main():
                 loss = F.ctc_loss(log_probs, labels, new_lens, label_lens,
                                   blank=0, zero_infinity=True)
                 val_losses.append(loss.item())
-                pred_ids = ctc_decode(logits)
+                pred_ids = ctc_decode(logits, blank=0, lengths=new_lens)
                 preds = [ids_to_text(p, vocab) for p in pred_ids]
                 all_preds.extend(preds)
                 all_labels.extend(batch["transcripts"])
@@ -505,8 +511,8 @@ def main():
                         break
                     feats_t = batch["features"].to(device)
                     feat_lens_t = batch["feat_lens"].to(device)
-                    logits_t, _ = model(feats_t, feat_lens_t)
-                    pred_t = ctc_decode(logits_t, blank=0)
+                    logits_t, new_lens_t = model(feats_t, feat_lens_t)
+                    pred_t = ctc_decode(logits_t, blank=0, lengths=new_lens_t)
                     train_subset_preds.extend([ids_to_text(p, vocab) for p in pred_t])
                     train_subset_labels.extend([normalize_text(l) for l in batch["transcripts"]])
             if train_subset_preds:

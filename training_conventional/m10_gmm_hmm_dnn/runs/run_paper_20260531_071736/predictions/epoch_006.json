@@ -1,0 +1,22 @@
+[
+  {
+    "pred": "ika, memng tempat.",
+    "label": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang"
+  },
+  {
+    "pred": "Jika,bahntuksir.",
+    "label": "Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol."
+  },
+  {
+    "pred": "Jika,an mem berikan yang ya mem.",
+    "label": "Dosen pembimbing memberikan banyak masukan yang membangun."
+  },
+  {
+    "pred": "Jika,  mingatd proseo.",
+    "label": "Lingkungan akademik yang positif sangat mendukung proses belajar"
+  },
+  {
+    "pred": "Jika,atur waktu kenya.",
+    "label": "Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya"
+  }
+]

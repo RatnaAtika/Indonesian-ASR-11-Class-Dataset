@@ -1,0 +1,22 @@
+[
+  {
+    "pred": "Robotng mem be tempat ke ber.",
+    "label": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang"
+  },
+  {
+    "pred": "Jikabot resmi usis.",
+    "label": "Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol."
+  },
+  {
+    "pred": "Jika,an p memberikan yangang membah.",
+    "label": "Dosen pembimbing memberikan banyak masukan yang membangun."
+  },
+  {
+    "pred": "Robot lingkunganakanberikan yangdukuso.",
+    "label": "Lingkungan akademik yang positif sangat mendukung proses belajar"
+  },
+  {
+    "pred": "Robotsi k keikutnya.",
+    "label": "Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya"
+  }
+]

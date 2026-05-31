@@ -101,8 +101,8 @@ def main():
         for i, batch in enumerate(test_loader):
             feats = batch["features"].to(device)
             feat_lens = batch["feat_lens"].to(device)
-            logits, _ = model(feats, feat_lens)
-            pred_ids = ctc_greedy_decode(logits, blank=blank_id)
+            logits, new_lens = model(feats, feat_lens)
+            pred_ids = ctc_greedy_decode(logits, blank=blank_id, lengths=new_lens)
             preds = [ids_to_text(p, sp) for p in pred_ids]
             all_preds.extend(preds)
             all_labels.extend(batch["transcripts"])

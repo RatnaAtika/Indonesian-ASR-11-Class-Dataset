@@ -120,8 +120,8 @@ def main():
         for i, batch in enumerate(test_loader):
             feats = batch["features"].to(device)
             feat_lens = batch["feat_lens"].to(device)
-            logits, _ = model(feats, feat_lens)
-            pred_ids = ctc_decode(logits, blank=0)
+            logits, new_lens = model(feats, feat_lens)
+            pred_ids = ctc_decode(logits, blank=0, lengths=new_lens)
             preds = [ids_to_text(p, vocab) for p in pred_ids]
             all_preds.extend(preds)
             for txt in batch["transcripts"]:

@@ -1,0 +1,22 @@
+[
+  {
+    "pred": "olong, mem tempat w bisa.",
+    "label": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang"
+  },
+  {
+    "pred": "olong kon untuksr.",
+    "label": "Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol."
+  },
+  {
+    "pred": "olong, memberikan yang ya memembangun.",
+    "label": "Dosen pembimbing memberikan banyak masukan yang membangun."
+  },
+  {
+    "pred": "olong kon yas.",
+    "label": "Lingkungan akademik yang positif sangat mendukung proses belajar"
+  },
+  {
+    "pred": "olong konatur waktu d kenya.",
+    "label": "Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya"
+  }
+]

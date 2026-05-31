@@ -215,11 +215,22 @@ class JasperBlock(nn.Module):
 # ============================================================
 # CTC decode + train loop
 # ============================================================
-def ctc_greedy_decode(logits, blank=0):
-    """Greedy CTC: collapse repeats + remove blanks."""
+def ctc_greedy_decode(logits, blank=0, lengths=None):
+    """Greedy CTC: collapse repeats + remove blanks.
+
+    `logits` is (B, T, V) over the PADDED time axis. When `lengths` (per-sample
+    valid output frame counts, e.g. from the model's `new_lens`) is given, each
+    sequence is truncated to its own length BEFORE collapsing — otherwise the
+    padded tail frames emit spurious tokens, producing over-long hypotheses that
+    inflate WER/CER above 1.0 even when the model is correct.
+    """
     pred = logits.argmax(dim=-1).cpu().tolist()
+    if lengths is not None:
+        lengths = [int(x) for x in lengths]
     out = []
-    for seq in pred:
+    for i, seq in enumerate(pred):
+        if lengths is not None:
+            seq = seq[: lengths[i]]
         prev = blank
         result = []
         for tok in seq:
@@ -395,7 +406,7 @@ def main():
                 loss = F.ctc_loss(log_probs, labels, new_lens, label_lens,
                                   blank=blank_id, zero_infinity=True)
                 val_losses.append(float(loss.item()))
-                pred_ids = ctc_greedy_decode(logits, blank=blank_id)
+                pred_ids = ctc_greedy_decode(logits, blank=blank_id, lengths=new_lens)
                 preds = [ids_to_text(p, sp) for p in pred_ids]
                 all_preds.extend(preds)
                 all_labels.extend(batch["transcripts"])
@@ -414,8 +425,8 @@ def main():
                     if j >= 3: break
                     feats_t = batch["features"].to(device)
                     feat_lens_t = batch["feat_lens"].to(device)
-                    logits_t, _ = model(feats_t, feat_lens_t)
-                    pred_t = ctc_greedy_decode(logits_t, blank=blank_id)
+                    logits_t, new_lens_t = model(feats_t, feat_lens_t)
+                    pred_t = ctc_greedy_decode(logits_t, blank=blank_id, lengths=new_lens_t)
                     t_preds.extend([ids_to_text(p, sp) for p in pred_t])
                     t_labels.extend(batch["transcripts"])
             if t_preds:

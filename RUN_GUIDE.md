@@ -868,6 +868,12 @@ python3 training_conventional/m13_wav2letter_cnn/train.py \
   --run-dir training_conventional/m13_wav2letter_cnn/runs/run_paper_$(date +%Y%m%d) \
   --epochs 30 --batch-size 16 --lr 3e-4 --seed 42
 ```
+> **[FIX 2026-05-31]** CTC greedy decode kini truncate tiap sample ke panjang
+> output valid (`new_lens`) sebelum collapse. Sebelumnya men-decode seluruh
+> sumbu waktu ter-pad → ekor token sampah → prediksi lebih panjang dari label,
+> Train/Val Acc=0 & WER/CER>1 di epoch awal. Fix di `common/pkl_cnn_ctc_trainer.py`
+> (`ctc_greedy_decode(..., lengths=new_lens)`) + `common/pkl_cnn_ctc_test.py`
+> (berlaku juga untuk m14 Jasper). Diuji: smoke 2-ep → CER 1.03→0.60, tanpa ekor.
 
 ### Terminal P-7 — m07 Bi-LSTM CTC (~12 jam, recipe C VRAM-safe)
 ```bash
