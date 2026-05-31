@@ -300,8 +300,14 @@ def main():
     n_params = sum(p.numel() for p in model.parameters())
     n_trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"[cnn-ctc] params: total={n_params:,}, trainable={n_trainable:,}")
-    save_model_summary(args.run_dir, model, args.arch, n_params, n_trainable,
-                       extra={"vocab_size": vocab_size, "input_dim": args.input_dim})
+    try:
+        _dx = torch.randn(1, args.input_dim, 200, device=device)
+        _dl = torch.tensor([200], device=device)
+        save_model_summary(args.run_dir, model, args.arch, n_params, n_trainable,
+                           extra={"vocab_size": vocab_size, "input_dim": args.input_dim},
+                           input_data=(_dx, _dl))
+    except Exception as _e:
+        print(f"[cnn-ctc] model summary warn: {_e}")
     
     # Optim + scheduler
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=1e-5)

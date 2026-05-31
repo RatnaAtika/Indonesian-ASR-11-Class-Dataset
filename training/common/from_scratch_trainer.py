@@ -350,8 +350,14 @@ def main():
     n_params = sum(p.numel() for p in model.parameters())
     n_trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"[from-scratch] params: total={n_params:,}, trainable={n_trainable:,}")
-    save_model_summary(args.run_dir, model, args.arch, n_params, n_trainable,
-                       extra={"vocab_size": len(vocab), "n_mels": args.n_mels})
+    try:
+        _dx = torch.randn(1, args.n_mels, 200, device=device)
+        _dl = torch.tensor([200], device=device)
+        save_model_summary(args.run_dir, model, args.arch, n_params, n_trainable,
+                           extra={"vocab_size": len(vocab), "n_mels": args.n_mels},
+                           input_data=(_dx, _dl))
+    except Exception as _e:
+        print(f"[from-scratch] model summary warn: {_e}")
     
     # Optimizer + scheduler
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=1e-5)

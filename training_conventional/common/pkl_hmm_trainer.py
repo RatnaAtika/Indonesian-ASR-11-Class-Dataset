@@ -114,9 +114,9 @@ def run_hmm_gmm(args, train_data, val_data, sp, out_dir):
             f"[hmm-gmm] ERROR: 0 templates survived pruning (min_samples={min_samples}). "
             f"Train subset too small — use full data (--max-train-samples 0) for paper runs.")
     print(f"[hmm-gmm] training {len(templates)} GMM-HMMs (states={args.hmm_states}, mix={args.hmm_mixtures}) ...")
-    # Model summary (m08 has no nn.Module; describe the generative template bank)
+    # Model summary PNG/PDF (m08 has no nn.Module; describe the generative template bank)
     _gmm_summary = (
-        f"# Model Summary — hmm_gmm (GMM-HMM template classifier)\n"
+        f"Model: hmm_gmm (GMM-HMM template classifier)\n\n"
         f"Templates       : {len(templates)}\n"
         f"HMM states      : {args.hmm_states}\n"
         f"GMM mixtures    : {args.hmm_mixtures}\n"
@@ -125,7 +125,15 @@ def run_hmm_gmm(args, train_data, val_data, sp, out_dir):
         f"Topology        : strict left-right (transmat fixed)\n"
         f"Params          : non-parametric (per-template GMM-HMM bank)\n"
     )
-    (out_dir / "model_summary.txt").write_text(_gmm_summary, encoding="utf-8")
+    try:
+        import matplotlib; matplotlib.use("Agg")
+        import matplotlib.pyplot as _plt
+        _fig, _ax = _plt.subplots(figsize=(12, 8)); _ax.axis("off")
+        _ax.text(0, 1, _gmm_summary, fontsize=9, family="monospace", verticalalignment="top")
+        _plt.savefig(out_dir / "model_summary.png", bbox_inches="tight", dpi=150)
+        _plt.savefig(out_dir / "model_summary.pdf", bbox_inches="tight"); _plt.close(_fig)
+    except Exception:
+        (out_dir / "model_summary.txt").write_text(_gmm_summary, encoding="utf-8")
     
     models = {}
     t0 = time.perf_counter()
@@ -297,9 +305,14 @@ def run_dnn_hmm(args, train_data, val_data, sp, out_dir, alignments=None):
     opt = torch.optim.AdamW(model.parameters(), lr=args.dnn_lr, weight_decay=1e-5)
     n_params = sum(p.numel() for p in model.parameters())
     print(f"[dnn-hmm] DNN params: {n_params:,}", flush=True)
-    save_model_summary(out_dir, model, f"{args.mode} (FrameDNN)", n_params,
-                       extra={"vocab_size": vocab_size, "input_dim": in_dim,
-                              "dnn_context": args.dnn_context})
+    try:
+        _dx = torch.randn(200, in_dim, device=device)
+        save_model_summary(out_dir, model, f"{args.mode} (FrameDNN)", n_params,
+                           extra={"vocab_size": vocab_size, "input_dim": in_dim,
+                                  "dnn_context": args.dnn_context},
+                           input_data=(_dx,))
+    except Exception as _e:
+        print(f"[dnn-hmm] model summary warn: {_e}", flush=True)
 
     # tqdm (graceful fallback)
     try:

@@ -629,11 +629,13 @@ def save_run_meta(run_dir: Path, model_id: str, family: str, era: str,
 
 
 def save_model_summary(run_dir: Path, model, arch: str, n_params: int,
-                       n_trainable: Optional[int] = None, extra: Optional[Dict] = None) -> Path:
-    """Write model_summary.txt (architecture repr + param counts) at training start.
+                       n_trainable: Optional[int] = None, extra: Optional[Dict] = None,
+                       input_data=None, input_size=None) -> Optional[Path]:
+    """Render model_summary.png + model_summary.pdf via torchinfo (same format as
+    m11/m12 root scripts): a Layer/Input/Output/Param# table drawn to a figure.
 
-    Uniform across conventional/from-scratch trainers (m06–m14) so a model summary
-    always exists even if a run is interrupted before report.md is written.
+    Written at training start so a summary exists even if the run is interrupted.
+    Falls back to a plain-text figure if torchinfo/forward fails.
     """
     run_dir = Path(run_dir)
     run_dir.mkdir(parents=True, exist_ok=True)
@@ -642,17 +644,40 @@ def save_model_summary(run_dir: Path, model, arch: str, n_params: int,
             n_trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
         except Exception:
             n_trainable = n_params
-    lines = [
-        f"# Model Summary — {arch}",
-        f"Total params    : {n_params:,}",
-        f"Trainable params: {n_trainable:,}",
-    ]
+    header = [f"Model: {arch}",
+             f"Total params: {n_params:,}   Trainable: {n_trainable:,}"]
     for k, v in (extra or {}).items():
-        lines.append(f"{k}: {v}")
-    lines += ["", "## Architecture", str(model)]
-    out = run_dir / "model_summary.txt"
-    out.write_text("\n".join(lines), encoding="utf-8")
-    return out
+        header.append(f"{k}: {v}")
+    body = ""
+    try:
+        from torchinfo import summary
+        kw = {"depth": 3, "col_names": ["input_size", "output_size", "num_params"],
+              "verbose": 0}
+        if input_data is not None:
+            s = summary(model, input_data=input_data, **kw)
+        elif input_size is not None:
+            s = summary(model, input_size=input_size, **kw)
+        else:
+            s = summary(model, verbose=0)
+        body = str(s)
+    except Exception as e:
+        body = f"[torchinfo unavailable/failed: {e}]\n\n{model}"
+    text = "\n".join(header) + "\n\n" + body
+    try:
+        import matplotlib
+        matplotlib.use("Agg")
+        import matplotlib.pyplot as plt
+        fig, ax = plt.subplots(figsize=(12, max(8, text.count(chr(10)) * 0.16)))
+        ax.axis("off")
+        ax.text(0, 1, text, fontsize=8, family="monospace", verticalalignment="top")
+        png = run_dir / "model_summary.png"
+        plt.savefig(png, bbox_inches="tight", dpi=150)
+        plt.savefig(run_dir / "model_summary.pdf", bbox_inches="tight")
+        plt.close(fig)
+        return png
+    except Exception:
+        (run_dir / "model_summary.txt").write_text(text, encoding="utf-8")
+        return run_dir / "model_summary.txt"
 
 
 # ============================================================
