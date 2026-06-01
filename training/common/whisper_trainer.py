@@ -388,6 +388,20 @@ def main() -> int:
     best_wer = best['wer'] if best else 'n/a'
     best_cer = best.get('cer', 'n/a') if best else 'n/a'
     best_ep = best['epoch'] if best else 'n/a'
+
+    # Export the BEST model (load_best_model_at_end=True -> `model` is already best)
+    # to a dedicated, directly-loadable HF directory: <run_dir>/best_model/
+    best_dir = args.run_dir / "best_model"
+    try:
+        model.save_pretrained(str(best_dir))
+        processor.save_pretrained(str(best_dir))
+        (best_dir / "BEST_INFO.txt").write_text(
+            f"model_id: {args.model_id}\nbest_wer: {best_wer}\nbest_cer: {best_cer}\n"
+            f"best_epoch: {best_ep}\nload: WhisperForConditionalGeneration.from_pretrained('{best_dir}')\n",
+            encoding="utf-8")
+        print(f"[whisper-trainer] ★ best model saved -> {best_dir} (WER={best_wer})", flush=True)
+    except Exception as _e:
+        print(f"[whisper-trainer] best_model export warn: {_e}", flush=True)
     
     report = f"""# Training Report — {args.model_id}
 

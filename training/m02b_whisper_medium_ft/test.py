@@ -77,6 +77,8 @@ def main():
     # Find HF Trainer checkpoint dir (best loaded automatically by load_best_model_at_end=True)
     if args.checkpoint:
         ckpt_path = args.checkpoint
+    elif (args.run_dir / "best_model").exists():
+        ckpt_path = args.run_dir / "best_model"   # dedicated best-model dir (preferred)
     else:
         ckpt_info = find_best_checkpoint(args.run_dir)
         if ckpt_info.get("format") == "hf_dir" and ckpt_info.get("path"):

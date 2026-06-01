@@ -928,6 +928,12 @@ python3 training/m02b_whisper_medium_ft/train.py \
 > (waktu full seluruh epoch, bukan hanya per-epoch). **Resume**: tambahkan `--resume`
 > (auto-pick checkpoint terbaru) atau `--resume <dir-checkpoint>` untuk melanjutkan
 > training yang terhenti tanpa membuat run-dir baru.
+>
+> **[+2026-06-01b]** Setiap run **membuat folder baru** `runs/run_paper_<YYYYMMDD_HHMMSS>/`
+> otomatis (hasil run lama TIDAK tertimpa). Model terbaik (best-on-val) diekspor ke
+> direktori khusus **`<run_dir>/best_model/`** (format HF, langsung loadable via
+> `WhisperForConditionalGeneration.from_pretrained('<run_dir>/best_model')`, + `BEST_INFO.txt`).
+> `test.py` otomatis memakai `best_model/` jika ada.
 
 ## P3-T. Testing per-model (jalankan SETELAH training selesai)
 
