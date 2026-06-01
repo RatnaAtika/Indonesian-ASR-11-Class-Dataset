@@ -59,6 +59,10 @@ __pycache__/
 .cache/
 .tmp/
 
+# Local cross-OS transfer bundles (may contain secrets/auth tokens)
+_linux_transfer/
+skills_transfer_bundle/
+
 # --- Exception: publish DiB-compliant vector figures for the v7 dataset stats report ---
 !reports/dataset_statistics_v7_paper9/figures/*.pdf
 !reports/dataset_statistics_v7_paper9/**/*.pdf
