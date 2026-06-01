@@ -585,6 +585,11 @@ def main():
             print(f"  ★ New best WER={m_val['wer']:.4f} @ epoch {epoch} → {saved_best.name}", flush=True)
     
     train_elapsed = time.perf_counter() - train_start
+    _h=int(train_elapsed//3600); _m=int((train_elapsed%3600)//60); _s=int(train_elapsed%60)
+    total_str = f"{_h} jam, {_m} menit, {_s} detik"
+    print(f"Total waktu training: {total_str}", flush=True)
+    with log_file.open("a", encoding="utf-8") as f:
+        f.write(f"\nTotal waktu training: {total_str}\n")
     best = history_saver.get_best("wer")
     
     report = f"""# Training Report — {args.arch} (from-scratch)
@@ -603,7 +608,7 @@ def main():
 - Total params: {n_params:,}
 
 ## Final
-- Total time: {EpochTimer.format_seconds(train_elapsed)}
+- Total time: {EpochTimer.format_seconds(train_elapsed)}  ({total_str})
 - Best WER: {best.get('wer', 'n/a') if best else 'n/a'}
 - Best CER: {best.get('cer', 'n/a') if best else 'n/a'}
 - Best epoch: {best.get('epoch', 'n/a') if best else 'n/a'}

@@ -762,9 +762,18 @@ def main():
 - WIL: {metrics['wil']:.4f}
 - Train time: {EpochTimer.format_seconds(result['train_elapsed'])}
 - Eval time:  {EpochTimer.format_seconds(result['eval_elapsed'])}
+- Total waktu training: {EpochTimer.format_seconds(result['train_elapsed'] + result['eval_elapsed'])}
 {extras}
 """
     (args.run_dir / "report.md").write_text(report, encoding="utf-8")
+    
+    # Total accumulated time (train + eval) in human-readable form, appended to log.txt
+    _tot = result["train_elapsed"] + result["eval_elapsed"]
+    _h=int(_tot//3600); _m=int((_tot%3600)//60); _s=int(_tot%60)
+    total_str = f"{_h} jam, {_m} menit, {_s} detik"
+    print(f"Total waktu training: {total_str}", flush=True)
+    with (args.run_dir / "log.txt").open("a", encoding="utf-8") as f:
+        f.write(f"\nTotal waktu training: {total_str}\n")
     
     try:
         regenerate_plots(history.history_path)
