@@ -920,6 +920,14 @@ python3 training/m02b_whisper_medium_ft/train.py \
 > "backward through the graph a second time" sudah diperbaiki (Trainer enable
 > gradient checkpointing dgn `use_reentrant=False` + `use_cache=False`).
 > 5 epoch (bukan 30) karena pretrained FT akan over-fit dgn training panjang.
+>
+> **[+2026-06-01]** Kedua opsi kini menulis artefak paper lengkap per run:
+> `config.json`, `meta.json`, `history.json`, `log.txt`, `model_summary.png`+`.pdf`
+> (tabel torchinfo), `plots/`, `predictions/`, `report.md`, `checkpoints/`. Di akhir
+> training dicetak & ditulis ke `log.txt`: **`Total waktu training: X jam, Y menit, Z detik`**
+> (waktu full seluruh epoch, bukan hanya per-epoch). **Resume**: tambahkan `--resume`
+> (auto-pick checkpoint terbaru) atau `--resume <dir-checkpoint>` untuk melanjutkan
+> training yang terhenti tanpa membuat run-dir baru.
 
 ## P3-T. Testing per-model (jalankan SETELAH training selesai)
 

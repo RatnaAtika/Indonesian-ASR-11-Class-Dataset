@@ -28,7 +28,7 @@ sys.path.insert(0, str(TRAINING_ROOT))
 from common.utils import (
     compute_wer_cer, HistorySaver, regenerate_plots, GPUMonitor, EpochTimer,
     format_epoch_log, cer_to_token_acc_proxy, save_run_meta, unique_run_dir,
-    BestCheckpointTracker,
+    BestCheckpointTracker, save_model_summary,
 )
 
 
@@ -50,6 +50,9 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--task", default="transcribe")
     p.add_argument("--gradient-checkpointing", action="store_true", default=False)
     p.add_argument("--fp16", action="store_true", default=True)
+    p.add_argument("--resume", nargs="?", const="auto", default=None,
+                   help="Resume training: pass a checkpoint dir, or bare --resume to "
+                        "auto-pick the latest checkpoint-* in run_dir/checkpoints.")
     p.add_argument("--seed", type=int, default=42)
     return p.parse_args()
 
@@ -111,8 +114,9 @@ class WhisperASRDataset(Dataset):
 
 def main() -> int:
     args = parse_args()
-    # Auto-timestamp if run_dir already contains a previous run
-    args.run_dir = unique_run_dir(args.run_dir)
+    # When resuming, keep the SAME run_dir (don't auto-timestamp a fresh one).
+    if args.resume is None:
+        args.run_dir = unique_run_dir(args.run_dir)
     args.run_dir.mkdir(parents=True, exist_ok=True)
     print(f"[whisper-trainer] resolved run_dir: {args.run_dir}")
     
@@ -166,6 +170,15 @@ def main() -> int:
     n_params = sum(p.numel() for p in model.parameters())
     n_trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"[whisper-trainer] params: total={n_params:,}, trainable={n_trainable:,}")
+    try:
+        # Whisper is seq2seq: torchinfo needs both encoder features + decoder ids.
+        _df = torch.zeros(1, 80, 3000)
+        _dd = torch.tensor([[model.config.decoder_start_token_id or 50258]], dtype=torch.long)
+        save_model_summary(args.run_dir, model, args.model_id, n_params, n_trainable,
+                           extra={"language": args.language, "task": args.task},
+                           input_data={"input_features": _df, "decoder_input_ids": _dd})
+    except Exception as _e:
+        print(f"[whisper-trainer] model summary warn: {_e}")
     
     print("[whisper-trainer] loading splits ...")
     train_rows = load_split_rows(args.data_final / "train.tsv", args.data_root, args.max_train_samples)
@@ -349,10 +362,27 @@ def main() -> int:
     )
     
     print("[whisper-trainer] starting training ...")
+    # Resume from checkpoint if requested (auto = latest checkpoint-* in run_dir)
+    resume_arg = None
+    if args.resume is not None:
+        if args.resume == "auto":
+            ckdirs = sorted((args.run_dir / "checkpoints").glob("checkpoint-*"),
+                            key=lambda d: int(d.name.split("-")[-1]) if d.name.split("-")[-1].isdigit() else -1)
+            resume_arg = str(ckdirs[-1]) if ckdirs else None
+            print(f"[whisper-trainer] resume: auto -> {resume_arg or 'no checkpoint found, starting fresh'}")
+        else:
+            resume_arg = args.resume
+            print(f"[whisper-trainer] resume: {resume_arg}")
     train_start = time.perf_counter()
-    trainer.train()
+    trainer.train(resume_from_checkpoint=resume_arg)
     train_elapsed = time.perf_counter() - train_start
+    # Human-readable total training time (same style as m11/m12), logged to log.txt
+    _h = int(train_elapsed // 3600); _m = int((train_elapsed % 3600) // 60); _s = int(train_elapsed % 60)
+    total_str = f"{_h} jam, {_m} menit, {_s} detik"
     print(f"[whisper-trainer] training complete in {EpochTimer.format_seconds(train_elapsed)}")
+    print(f"Total waktu training: {total_str}")
+    with log_file.open("a", encoding="utf-8") as f:
+        f.write(f"\nTotal waktu training: {total_str}\n")
     
     best = history_saver.get_best("wer")
     best_wer = best['wer'] if best else 'n/a'
@@ -381,7 +411,7 @@ def main() -> int:
 - Trainable params: {n_trainable:,}
 
 ## Final results
-- Total training time: {EpochTimer.format_seconds(train_elapsed)}
+- Total training time: {EpochTimer.format_seconds(train_elapsed)}  ({total_str})
 - Best WER: {best_wer if best else 'n/a'}
 - Best CER: {best_cer if best else 'n/a'}
 - Best at epoch: {best_ep if best else 'n/a'}
