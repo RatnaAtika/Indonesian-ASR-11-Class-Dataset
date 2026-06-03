@@ -94,7 +94,7 @@ Jika OOM, turunkan `A100_BATCH_SIZE` dan naikkan `A100_GRAD_ACCUM` agar effectiv
 
 ## Hasil
 
-Script training otomatis menjalankan `test.py`, melakukan periodic sync selama training, dan menyalin run-dir akhir ke:
+Script training otomatis menjalankan `test.py`, melakukan periodic sync selama training, menulis **total akumulasi waktu training** ke `log.txt` dan `report.md`, lalu menyalin run-dir akhir ke:
 
 ```text
 MyDrive/ASR_Colab_A100/Results/<model>/<run_name>/
@@ -104,4 +104,11 @@ Run Colab diberi label:
 
 ```text
 run_paper_<YYYYMMDD_HHMMSS>_colab_a100
+```
+
+Notebook juga punya cell **Paper-ready training time and metric summary** yang membaca `log.txt`, `report.md`, dan `test_results/test_paper.json`, lalu menulis:
+
+```text
+MyDrive/ASR_Colab_A100/Results/paper_training_time_summary.md
+MyDrive/ASR_Colab_A100/Results/paper_training_time_summary.json
 ```

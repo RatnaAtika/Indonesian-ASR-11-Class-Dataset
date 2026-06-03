@@ -369,9 +369,10 @@ MyDrive/ASR_Colab_A100/Results/m02b_whisper_small_ft/run_paper_<timestamp>_colab
 Script otomatis menjalankan:
 
 1. training 5 epoch,
-2. test.py,
-3. periodic sync ke Drive,
-4. final sync ke Drive.
+2. menulis total akumulasi waktu training ke `log.txt` dan `report.md`,
+3. test.py,
+4. periodic sync ke Drive,
+5. final sync ke Drive.
 
 ---
 
@@ -513,7 +514,14 @@ Kritik:
 
 ## 15. Verifikasi hasil di Colab setelah selesai
 
-Ganti `RUN_DIR` sesuai run terbaru:
+Setelah training/test selesai, jalankan cell notebook **Paper-ready training time and metric summary**. Cell itu membaca `log.txt`, `report.md`, dan `test_results/test_paper.json`, lalu membuat:
+
+```text
+Results/paper_training_time_summary.md
+Results/paper_training_time_summary.json
+```
+
+Ganti `RUN_DIR` sesuai run terbaru jika ingin cek manual:
 
 ```bash
 !source /content/asr_work/colab_env.sh && cd "$REPO" && \
