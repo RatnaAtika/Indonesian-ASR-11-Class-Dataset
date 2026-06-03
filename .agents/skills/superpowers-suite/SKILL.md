@@ -1,6 +1,6 @@
 ---
 name: superpowers-suite
-description: Apply the reusable Superpowers workflow stack to the current repository: brainstorming, planning, debugging, TDD, verification, and agent orchestration.
+description: Use when applying reusable Superpowers workflow guidance for brainstorming, planning, debugging, TDD, verification, or agent orchestration.
 ---
 
 # Superpowers Suite

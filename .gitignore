@@ -63,6 +63,10 @@ __pycache__/
 _linux_transfer/
 skills_transfer_bundle/
 
+# Local/generated Colab upload snapshot; regenerate with
+# Colab_ASR_A100_Training/scripts/prepare_repo_code_snapshot.sh
+Colab_ASR_A100_Training/repo_code/
+
 # --- Exception: publish DiB-compliant vector figures for the v7 dataset stats report ---
 !reports/dataset_statistics_v7_paper9/figures/*.pdf
 !reports/dataset_statistics_v7_paper9/**/*.pdf

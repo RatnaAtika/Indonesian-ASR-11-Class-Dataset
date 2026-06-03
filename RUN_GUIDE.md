@@ -807,6 +807,12 @@ Semua command di-set untuk **30 epoch (atau setara) dengan effective batch 32**
 untuk fairness. Output otomatis di-save ke `runs/run_paper_<YYYYMMDD>/`
 yang tidak bentrok dengan run sebelumnya (auto-timestamp via `unique_run_dir`).
 
+**Windows/WSL2 vs Ubuntu/Linux native:** command utama di bawah tetap bisa dipakai
+dari Windows via WSL2. Jika training dijalankan dari copy Linux/ext4, pakai blok
+**Run via Ubuntu/Linux native** yang menambahkan `cd ~/AI/Dataset_ASR_Train_Linux`
+dan label run-dir `_linux` supaya hasil Linux mudah dibedakan saat ditransfer
+kembali ke Windows.
+
 ### Terminal P-1 — m08 HMM-GMM (CPU, ~30 menit)
 ```bash
 python3 training_conventional/m08_hmm_gmm/train.py \
@@ -886,10 +892,28 @@ python3 training/m07_bilstm_ctc/train.py \
   --hidden-size 512 --num-layers 5 --lr 3e-4 --seed 42
 ```
 
+**Run via Ubuntu/Linux native/ext4 (`~/AI/Dataset_ASR_Train_Linux`, label `_linux`):**
+```bash
+cd ~/AI/Dataset_ASR_Train_Linux
+python3 training/m07_bilstm_ctc/train.py \
+  --run-dir training/m07_bilstm_ctc/runs/run_paper_$(date +%Y%m%d_%H%M%S)_linux \
+  --epochs 30 --batch-size 16 --grad-accum 2 \
+  --hidden-size 512 --num-layers 5 --lr 3e-4 --seed 42
+```
+
 ### Terminal P-8 — m06 Conformer-CTC (~8 jam)
 ```bash
 python3 training/m06_conformer_ctc/train.py \
   --run-dir training/m06_conformer_ctc/runs/run_paper_$(date +%Y%m%d) \
+  --epochs 30 --batch-size 16 --grad-accum 2 \
+  --hidden-size 256 --num-layers 6 --lr 3e-4 --seed 42
+```
+
+**Run via Ubuntu/Linux native/ext4 (`~/AI/Dataset_ASR_Train_Linux`, label `_linux`):**
+```bash
+cd ~/AI/Dataset_ASR_Train_Linux
+python3 training/m06_conformer_ctc/train.py \
+  --run-dir training/m06_conformer_ctc/runs/run_paper_$(date +%Y%m%d_%H%M%S)_linux \
   --epochs 30 --batch-size 16 --grad-accum 2 \
   --hidden-size 256 --num-layers 6 --lr 3e-4 --seed 42
 ```
@@ -903,11 +927,31 @@ python3 training/m02b_whisper_small_ft/train.py \
   --lr 1e-5 --warmup-steps 500 \
   --gradient-checkpointing --seed 42
 ```
+
+**Run via Ubuntu/Linux native/ext4 (`~/AI/Dataset_ASR_Train_Linux`, label `_linux`):**
+```bash
+cd ~/AI/Dataset_ASR_Train_Linux
+python3 training/m02b_whisper_small_ft/train.py \
+  --run-dir training/m02b_whisper_small_ft/runs/run_paper_$(date +%Y%m%d_%H%M%S)_linux \
+  --epochs 5 --batch-size 8 --grad-accum 4 \
+  --lr 1e-5 --warmup-steps 500 \
+  --gradient-checkpointing --seed 42
+```
 > Hasil tersimpan di `training/m02b_whisper_small_ft/runs/`. Ini slot paper #9.
 
 **Opsi B — whisper-medium (764M), GPU besar (A100/3090/4090/Colab Pro+):**
 ```bash
 python3 training/m02b_whisper_medium_ft/train.py \
+  --epochs 5 --batch-size 2 --grad-accum 16 \
+  --lr 1e-5 --warmup-steps 500 \
+  --gradient-checkpointing --seed 42
+```
+
+**Run via Ubuntu/Linux native/ext4 (`~/AI/Dataset_ASR_Train_Linux`, label `_linux`, hanya GPU besar):**
+```bash
+cd ~/AI/Dataset_ASR_Train_Linux
+python3 training/m02b_whisper_medium_ft/train.py \
+  --run-dir training/m02b_whisper_medium_ft/runs/run_paper_$(date +%Y%m%d_%H%M%S)_linux \
   --epochs 5 --batch-size 2 --grad-accum 16 \
   --lr 1e-5 --warmup-steps 500 \
   --gradient-checkpointing --seed 42

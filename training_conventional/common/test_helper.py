@@ -77,16 +77,30 @@ def compute_test_metrics(predictions: List[str], labels: List[str]) -> Dict[str,
         return {"wer": 1.0, "cer": 1.0, "mer": 1.0, "wil": 1.0, "ser": 1.0}
     norm_p, norm_l = zip(*pairs)
     
+    refs = list(norm_l)
+    hyps = list(norm_p)
     try:
-        m = jiwer.compute_measures(list(norm_l), list(norm_p))
-        wer = float(m.get("wer", 1.0))
-        mer = float(m.get("mer", 1.0))
-        wil = float(m.get("wil", 1.0))
+        # jiwer>=3/4 removed compute_measures(); process_words is the stable API.
+        measures = jiwer.process_words(refs, hyps)
+        wer = float(measures.wer)
+        mer = float(measures.mer)
+        wil = float(measures.wil)
     except Exception:
-        wer = mer = wil = 1.0
+        try:
+            wer = float(jiwer.wer(refs, hyps))
+        except Exception:
+            wer = 1.0
+        try:
+            mer = float(jiwer.mer(refs, hyps))
+        except Exception:
+            mer = wer
+        try:
+            wil = float(jiwer.wil(refs, hyps))
+        except Exception:
+            wil = wer
     
     try:
-        cer = float(jiwer.cer(list(norm_l), list(norm_p)))
+        cer = float(jiwer.cer(refs, hyps))
     except Exception:
         cer = 1.0
     
