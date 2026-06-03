@@ -280,6 +280,8 @@ Jika bukan A100, jangan mulai final paper run.
 
 ## 8. Cell Colab bootstrap lengkap
 
+Notebook `ASR_Whisper_A100_Colab.ipynb` sekarang sudah auto-detect lokasi folder `Colab_ASR_A100_Training` di Google Drive. Jika error `No such file or directory` tetap muncul, penyebabnya hampir pasti folder package belum terupload lengkap, berada di luar batas pencarian, atau perlu mengisi `MANUAL_COLAB_ROOT` di cell bootstrap dengan path Drive yang tepat.
+
 Jalankan cell ini di Colab:
 
 ```python

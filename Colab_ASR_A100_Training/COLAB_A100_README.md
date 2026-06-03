@@ -72,7 +72,7 @@ Syarat: remote rclone Google Drive sudah dikonfigurasi, default `gdrive:`.
 
 1. Buka `notebooks/ASR_Whisper_A100_Colab.ipynb` dari Google Drive.
 2. Runtime → Change runtime type → pilih GPU A100.
-3. Jalankan cell dari atas.
+3. Jalankan cell dari atas. Notebook sudah auto-detect lokasi `Colab_ASR_A100_Training`; jika masih muncul `No such file or directory`, berarti folder package belum terupload lengkap atau `MANUAL_COLAB_ROOT` perlu diisi dengan path Drive yang tepat.
 4. Untuk paper model #9, jalankan Whisper-small **paper-exact** kecuali user eksplisit memilih A100-fast.
 5. Whisper-medium tersedia sebagai secondary/appendix dan butuh A100.
 6. Script training kini melakukan periodic sync run-dir/checkpoint ke Drive (default tiap 10 menit) dan final sync saat exit, agar runtime disconnect tidak menghapus semua progress.
