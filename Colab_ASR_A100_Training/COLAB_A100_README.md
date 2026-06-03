@@ -39,6 +39,15 @@ bash Colab_ASR_A100_Training/scripts/prepare_repo_code_snapshot.sh
 
 Jangan training langsung dari Drive kecuali darurat. Jika `USE_LOCAL_SSD=1`, bootstrap akan mengecek free space `/content` (default minimal 40 GiB), lalu copy dataset + TSV ke local SSD sebelum training.
 
+**Cara tercepat:** buat/upload archive satu kali:
+
+```bash
+bash Colab_ASR_A100_Training/scripts/build_colab_data_archives.sh
+rclone copy Colab_ASR_A100_Training/archives gdrive:ASR_Colab_A100/Data/_archives --progress --transfers 2 --checkers 4
+```
+
+Jika Drive berisi `Data/_archives/dataset_balanced19_v7.tar` dan `Data/_archives/data_final.tar`, bootstrap akan memakai archive itu (1 file besar) lalu extract ke `/content`; ini jauh lebih cepat daripada copy 104 ribu WAV kecil dari Drive.
+
 ### Opsi A — Web UI Google Drive
 
 Upload folder ini ke:

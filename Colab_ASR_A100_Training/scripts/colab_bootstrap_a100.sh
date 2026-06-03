@@ -5,9 +5,13 @@ DRIVE_COLAB_ROOT="${DRIVE_COLAB_ROOT:-$DRIVE_PROJECT_ROOT/Colab_ASR_A100_Trainin
 DRIVE_DATA_ROOT="${DRIVE_DATA_ROOT:-$DRIVE_PROJECT_ROOT/Data/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19}"
 DRIVE_DATA_FINAL="${DRIVE_DATA_FINAL:-$DRIVE_PROJECT_ROOT/Data/training/data_final}"
 DRIVE_RESULTS_ROOT="${DRIVE_RESULTS_ROOT:-$DRIVE_PROJECT_ROOT/Results}"
+DRIVE_ARCHIVE_ROOT="${DRIVE_ARCHIVE_ROOT:-$DRIVE_PROJECT_ROOT/Data/_archives}"
+DRIVE_DATA_ARCHIVE="${DRIVE_DATA_ARCHIVE:-$DRIVE_ARCHIVE_ROOT/dataset_balanced19_v7.tar}"
+DRIVE_DATA_FINAL_ARCHIVE="${DRIVE_DATA_FINAL_ARCHIVE:-$DRIVE_ARCHIVE_ROOT/data_final.tar}"
 COLAB_WORK_ROOT="${COLAB_WORK_ROOT:-/content/asr_work}"
 COLAB_REPO="${COLAB_REPO:-$COLAB_WORK_ROOT/Paper_Datatset_SOTA}"
 USE_LOCAL_SSD="${USE_LOCAL_SSD:-1}"
+USE_DATA_ARCHIVE="${USE_DATA_ARCHIVE:-1}"
 LOCAL_DATA_ROOT="${LOCAL_DATA_ROOT:-/content/asr_data/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19}"
 LOCAL_DATA_FINAL="${LOCAL_DATA_FINAL:-/content/asr_data/training/data_final}"
 MIN_LOCAL_FREE_GB="${MIN_LOCAL_FREE_GB:-40}"
@@ -28,12 +32,44 @@ rsync -aH --delete "$DRIVE_COLAB_ROOT/repo_code/" "$COLAB_REPO/"
 test -d "$DRIVE_DATA_ROOT" || { echo "ERROR: missing DRIVE_DATA_ROOT=$DRIVE_DATA_ROOT"; exit 3; }
 test -d "$DRIVE_DATA_FINAL" || { echo "ERROR: missing DRIVE_DATA_FINAL=$DRIVE_DATA_FINAL"; exit 3; }
 if [[ "$USE_LOCAL_SSD" == "1" ]]; then
-  echo "Copying dataset WAVs from Drive to Colab local SSD (/content) for faster A100 training."
+  echo "Using Colab local SSD (/content) for A100 training/testing."
   echo "This is a temporary runtime copy, not a permanent Drive duplicate."
-  mkdir -p "$(dirname "$LOCAL_DATA_ROOT")" "$LOCAL_DATA_FINAL"
-  rsync -aH --info=progress2 "$DRIVE_DATA_ROOT/" "$LOCAL_DATA_ROOT/"
-  echo "Copying split TSVs to local SSD as well (avoid Drive I/O during training/test)."
-  rsync -aH --delete --info=progress2 "$DRIVE_DATA_FINAL/" "$LOCAL_DATA_FINAL/"
+  mkdir -p "$(dirname "$LOCAL_DATA_ROOT")" "$(dirname "$LOCAL_DATA_FINAL")" /content/asr_archives
+
+  if [[ -f "$LOCAL_DATA_ROOT/.colab_copy_complete" && -f "$LOCAL_DATA_FINAL/train.tsv" ]]; then
+    echo "Local SSD dataset already present in this runtime; skipping copy."
+  elif [[ "$USE_DATA_ARCHIVE" == "1" && -f "$DRIVE_DATA_ARCHIVE" ]]; then
+    echo "FAST PATH: found dataset archive: $DRIVE_DATA_ARCHIVE"
+    echo "Copying one large archive to /content, then extracting locally (much faster than 104k small Drive reads)."
+    rsync -aH --info=progress2 "$DRIVE_DATA_ARCHIVE" /content/asr_archives/dataset_balanced19_v7.tar
+    rm -rf "$LOCAL_DATA_ROOT"
+    mkdir -p "$(dirname "$LOCAL_DATA_ROOT")"
+    tar -xf /content/asr_archives/dataset_balanced19_v7.tar -C "$(dirname "$LOCAL_DATA_ROOT")"
+    touch "$LOCAL_DATA_ROOT/.colab_copy_complete"
+  else
+    echo "SLOW FALLBACK: dataset archive not found; copying many WAV files from Drive."
+    echo "For faster bootstrap, create/upload: $DRIVE_DATA_ARCHIVE"
+    mkdir -p "$(dirname "$LOCAL_DATA_ROOT")"
+    rsync -aH --info=progress2 "$DRIVE_DATA_ROOT/" "$LOCAL_DATA_ROOT/"
+    touch "$LOCAL_DATA_ROOT/.colab_copy_complete"
+  fi
+
+  if [[ -f "$LOCAL_DATA_FINAL/.colab_copy_complete" && -f "$LOCAL_DATA_FINAL/train.tsv" ]]; then
+    echo "Local SSD split TSVs already present; skipping TSV copy."
+  elif [[ "$USE_DATA_ARCHIVE" == "1" && -f "$DRIVE_DATA_FINAL_ARCHIVE" ]]; then
+    echo "FAST PATH: found split archive: $DRIVE_DATA_FINAL_ARCHIVE"
+    rsync -aH --info=progress2 "$DRIVE_DATA_FINAL_ARCHIVE" /content/asr_archives/data_final.tar
+    rm -rf "$LOCAL_DATA_FINAL"
+    mkdir -p "$(dirname "$LOCAL_DATA_FINAL")"
+    tar -xf /content/asr_archives/data_final.tar -C "$(dirname "$LOCAL_DATA_FINAL")"
+    touch "$LOCAL_DATA_FINAL/.colab_copy_complete"
+  else
+    echo "Copying split TSVs to local SSD as well (avoid Drive I/O during training/test)."
+    mkdir -p "$LOCAL_DATA_FINAL"
+    rsync -aH --delete --info=progress2 "$DRIVE_DATA_FINAL/" "$LOCAL_DATA_FINAL/"
+    touch "$LOCAL_DATA_FINAL/.colab_copy_complete"
+  fi
+
   DATA_ROOT="$LOCAL_DATA_ROOT"
   DATA_FINAL="$LOCAL_DATA_FINAL"
 else
@@ -52,11 +88,15 @@ export DRIVE_COLAB_ROOT="$DRIVE_COLAB_ROOT"
 export DRIVE_DATA_ROOT="$DRIVE_DATA_ROOT"
 export DRIVE_DATA_FINAL="$DRIVE_DATA_FINAL"
 export DRIVE_RESULTS_ROOT="$DRIVE_RESULTS_ROOT"
+export DRIVE_ARCHIVE_ROOT="$DRIVE_ARCHIVE_ROOT"
+export DRIVE_DATA_ARCHIVE="$DRIVE_DATA_ARCHIVE"
+export DRIVE_DATA_FINAL_ARCHIVE="$DRIVE_DATA_FINAL_ARCHIVE"
 export COLAB_WORK_ROOT="$COLAB_WORK_ROOT"
 export REPO="$COLAB_REPO"
 export DATA_ROOT="$DATA_ROOT"
 export DATA_FINAL="$DATA_FINAL"
 export MIN_LOCAL_FREE_GB="${MIN_LOCAL_FREE_GB:-40}"
+export USE_DATA_ARCHIVE="${USE_DATA_ARCHIVE:-1}"
 export A100_SYNC_INTERVAL_SEC="${A100_SYNC_INTERVAL_SEC:-600}"
 export A100_AUTO_DISCONNECT="${A100_AUTO_DISCONNECT:-0}"
 ENV

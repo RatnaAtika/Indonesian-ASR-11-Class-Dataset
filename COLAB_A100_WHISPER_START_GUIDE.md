@@ -293,6 +293,7 @@ drive.mount('/content/drive')
 # Sesuaikan jika Drive folder berbeda.
 os.environ['DRIVE_PROJECT_ROOT'] = '/content/drive/MyDrive/ASR_Colab_A100'
 os.environ['USE_LOCAL_SSD'] = '1'                 # wajib/recommended: copy Drive dataset + TSV -> /content SSD
+os.environ['USE_DATA_ARCHIVE'] = '1'              # fastest: use Data/_archives/*.tar if available
 os.environ['MIN_LOCAL_FREE_GB'] = '40'            # fail early if /content free space is too small
 os.environ['A100_SYNC_INTERVAL_SEC'] = '600'      # sync checkpoint ke Drive tiap 10 menit
 os.environ['A100_AUTO_DISCONNECT'] = '0'          # set '1' only for final run auto-shutdown
@@ -316,6 +317,23 @@ Bootstrap akan:
 6. Menjalankan quick dataset verification.
 
 Kritik: jangan training langsung dari Drive kecuali terpaksa. Banyak WAV kecil membuat Drive mount sangat lambat dan bisa memperpanjang runtime berjam-jam. `USE_LOCAL_SSD=1` adalah best practice: bootstrap menyalin dataset WAV dan split TSV ke SSD `/content` Colab, lalu training/test membaca dari local SSD. Google Drive hanya dipakai sebagai sumber awal dan tujuan sinkronisasi hasil.
+
+**Fastest bootstrap:** jangan copy 104 ribu WAV satu per satu dari Drive. Buat/upload archive sekali saja:
+
+```bash
+cd "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA"
+bash Colab_ASR_A100_Training/scripts/build_colab_data_archives.sh
+rclone copy Colab_ASR_A100_Training/archives gdrive:ASR_Colab_A100/Data/_archives --progress --transfers 2 --checkers 4
+```
+
+Setelah archive ada di Drive:
+
+```text
+MyDrive/ASR_Colab_A100/Data/_archives/dataset_balanced19_v7.tar
+MyDrive/ASR_Colab_A100/Data/_archives/data_final.tar
+```
+
+bootstrap akan copy 1 file besar ke `/content/asr_archives/`, lalu extract lokal. Ini jauh lebih cepat dan lebih hemat compute time daripada membaca file WAV kecil dari Drive mount.
 
 ---
 
