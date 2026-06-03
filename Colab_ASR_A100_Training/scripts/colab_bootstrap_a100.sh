@@ -42,8 +42,30 @@ python3 -m pip install -q -r "$DRIVE_COLAB_ROOT/requirements_colab_a100.txt"
 rm -rf "$COLAB_REPO"
 mkdir -p "$COLAB_REPO"
 rsync -aH --delete "$DRIVE_COLAB_ROOT/repo_code/" "$COLAB_REPO/"
-test -d "$DRIVE_DATA_ROOT" || { echo "ERROR: missing DRIVE_DATA_ROOT=$DRIVE_DATA_ROOT"; exit 3; }
-test -d "$DRIVE_DATA_FINAL" || { echo "ERROR: missing DRIVE_DATA_FINAL=$DRIVE_DATA_FINAL"; exit 3; }
+echo "[colab-bootstrap] DRIVE_DATA_ROOT=$DRIVE_DATA_ROOT"
+echo "[colab-bootstrap] DRIVE_DATA_FINAL=$DRIVE_DATA_FINAL"
+echo "[colab-bootstrap] DRIVE_DATA_ARCHIVE=$DRIVE_DATA_ARCHIVE"
+echo "[colab-bootstrap] DRIVE_DATA_FINAL_ARCHIVE=$DRIVE_DATA_FINAL_ARCHIVE"
+if [[ "$USE_LOCAL_SSD" == "1" && "$USE_DATA_ARCHIVE" == "1" && -f "$DRIVE_DATA_ARCHIVE" ]]; then
+  echo "[colab-bootstrap] dataset source OK: archive exists. Raw Drive dataset folder is not required."
+elif [[ -d "$DRIVE_DATA_ROOT" ]]; then
+  echo "[colab-bootstrap] dataset source OK: raw Drive dataset folder exists."
+else
+  echo "ERROR: missing dataset source. Need either archive or raw folder:"
+  echo "  archive: $DRIVE_DATA_ARCHIVE"
+  echo "  raw dir:  $DRIVE_DATA_ROOT"
+  exit 3
+fi
+if [[ "$USE_LOCAL_SSD" == "1" && "$USE_DATA_ARCHIVE" == "1" && -f "$DRIVE_DATA_FINAL_ARCHIVE" ]]; then
+  echo "[colab-bootstrap] split source OK: archive exists. Raw Drive data_final folder is not required."
+elif [[ -d "$DRIVE_DATA_FINAL" ]]; then
+  echo "[colab-bootstrap] split source OK: raw Drive data_final folder exists."
+else
+  echo "ERROR: missing split source. Need either archive or raw folder:"
+  echo "  archive: $DRIVE_DATA_FINAL_ARCHIVE"
+  echo "  raw dir:  $DRIVE_DATA_FINAL"
+  exit 3
+fi
 if [[ "$USE_LOCAL_SSD" == "1" ]]; then
   echo "Using Colab local SSD (/content) for A100 training/testing."
   echo "This is a temporary runtime copy, not a permanent Drive duplicate."

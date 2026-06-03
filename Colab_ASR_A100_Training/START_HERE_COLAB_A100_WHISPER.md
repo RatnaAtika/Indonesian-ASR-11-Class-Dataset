@@ -343,7 +343,14 @@ MyDrive/ASR_Colab_A100/Data/_archives/dataset_balanced19_v7.tar
 MyDrive/ASR_Colab_A100/Data/_archives/data_final.tar
 ```
 
-bootstrap akan copy 1 file besar ke `/content/asr_archives/`, lalu extract lokal. Ini jauh lebih cepat dan lebih hemat compute time daripada membaca file WAV kecil dari Drive mount.
+atau pada layout flat user:
+
+```text
+MyDrive/Colab_ASR_A100/Data/_archives/dataset_balanced19_v7.tar
+MyDrive/Colab_ASR_A100/Data/_archives/data_final.tar
+```
+
+bootstrap akan copy 1 file besar ke `/content/asr_archives/`, lalu extract lokal. Ini jauh lebih cepat dan lebih hemat compute time daripada membaca file WAV kecil dari Drive mount. Jika archive tersedia, folder raw `Data/Processed_Balanced19_v7_natural_synth/...` tidak wajib ada di Drive.
 
 ---
 
