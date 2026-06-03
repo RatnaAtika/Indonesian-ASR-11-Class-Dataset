@@ -94,7 +94,7 @@ Jika OOM, turunkan `A100_BATCH_SIZE` dan naikkan `A100_GRAD_ACCUM` agar effectiv
 
 ## Hasil
 
-Script training otomatis menjalankan `test.py`, melakukan periodic sync selama training, menulis **total akumulasi waktu training** ke `log.txt` dan `report.md`, lalu menyalin run-dir akhir ke:
+Script training otomatis menjalankan `test.py`, melakukan periodic sync selama training, menulis **total akumulasi waktu training** ke `log.txt` dan `report.md`, lalu menyalin **seluruh run-dir lengkap** ke Google Drive, termasuk `best_model/`, `checkpoints/`, `model_summary.png/.pdf`, `report.md`, `history.json`, `log.txt`, dan `test_results/`.
 
 ```text
 MyDrive/ASR_Colab_A100/Results/<model>/<run_name>/
@@ -106,9 +106,17 @@ Run Colab diberi label:
 run_paper_<YYYYMMDD_HHMMSS>_colab_a100
 ```
 
-Notebook juga punya cell **Paper-ready training time and metric summary** yang membaca `log.txt`, `report.md`, dan `test_results/test_paper.json`, lalu menulis:
+Setelah final sync, script training otomatis membuat summary paper-ready. Notebook juga punya cell **Paper-ready training time and metric summary** untuk re-check manual. Keduanya membaca `log.txt`, `report.md`, dan `test_results/test_paper.json`, lalu menulis:
 
 ```text
 MyDrive/ASR_Colab_A100/Results/paper_training_time_summary.md
 MyDrive/ASR_Colab_A100/Results/paper_training_time_summary.json
 ```
+
+Auto-disconnect runtime Colab setelah semua proses selesai bersifat opsional. Set di notebook sebelum bootstrap:
+
+```python
+os.environ['A100_AUTO_DISCONNECT'] = '1'
+```
+
+Jika `A100_AUTO_DISCONNECT=1`, runtime baru di-unassign setelah training, testing, final sync, dan summary selesai.

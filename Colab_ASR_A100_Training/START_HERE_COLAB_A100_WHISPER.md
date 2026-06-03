@@ -294,6 +294,7 @@ drive.mount('/content/drive')
 os.environ['DRIVE_PROJECT_ROOT'] = '/content/drive/MyDrive/ASR_Colab_A100'
 os.environ['USE_LOCAL_SSD'] = '1'                 # recommended: copy dataset Drive -> /content local SSD
 os.environ['A100_SYNC_INTERVAL_SEC'] = '600'      # sync checkpoint ke Drive tiap 10 menit
+os.environ['A100_AUTO_DISCONNECT'] = '0'          # set '1' only for final run auto-shutdown
 
 print('DRIVE_PROJECT_ROOT =', os.environ['DRIVE_PROJECT_ROOT'])
 ```
@@ -371,8 +372,10 @@ Script otomatis menjalankan:
 1. training 5 epoch,
 2. menulis total akumulasi waktu training ke `log.txt` dan `report.md`,
 3. test.py,
-4. periodic sync ke Drive,
-5. final sync ke Drive.
+4. periodic sync seluruh run-dir ke Drive,
+5. final sync seluruh run-dir lengkap ke Drive (`best_model/`, `checkpoints/`, `model_summary.png/.pdf`, `report.md`, `history.json`, `log.txt`, `test_results/`),
+6. membuat `Results/paper_training_time_summary.md/.json`,
+7. opsional auto-disconnect runtime jika `A100_AUTO_DISCONNECT=1`.
 
 ---
 
@@ -514,7 +517,7 @@ Kritik:
 
 ## 15. Verifikasi hasil di Colab setelah selesai
 
-Setelah training/test selesai, jalankan cell notebook **Paper-ready training time and metric summary**. Cell itu membaca `log.txt`, `report.md`, dan `test_results/test_paper.json`, lalu membuat:
+Setelah training/test selesai, script training otomatis membuat summary paper-ready. Jalankan cell notebook **Paper-ready training time and metric summary** hanya untuk re-check manual. Summary membaca `log.txt`, `report.md`, dan `test_results/test_paper.json`, lalu membuat:
 
 ```text
 Results/paper_training_time_summary.md
@@ -552,6 +555,14 @@ test_results/test_summary.md
 ```
 
 Jika salah satu artifact wajib hilang, jangan hapus runtime. Jalankan manual sync/test ulang.
+
+Untuk auto-disconnect setelah semua selesai, set sebelum bootstrap/training:
+
+```python
+os.environ['A100_AUTO_DISCONNECT'] = '1'
+```
+
+Jangan aktifkan auto-disconnect saat masih debugging path/dataset. Aktifkan hanya untuk final run setelah yakin bootstrap dan Drive path benar.
 
 ---
 

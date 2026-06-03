@@ -35,4 +35,7 @@ python3 training/m02b_whisper_small_ft/test.py --run-dir "$RUN_DIR" --data-root 
   2>&1 | tee "ubuntu_logs/test_m02b_small_${RUN_ID}.log"
 rsync -aH --info=progress2 "$RUN_DIR/" "$DEST/"
 rsync -aH ubuntu_logs/ "$DRIVE_RESULTS_ROOT/ubuntu_logs/" || true
-echo "Saved results to $DEST"
+python3 "$DRIVE_COLAB_ROOT/scripts/colab_write_results_summary.py" --results-root "$DRIVE_RESULTS_ROOT" || true
+echo "Saved complete run results to $DEST"
+echo "Paper summary: $DRIVE_RESULTS_ROOT/paper_training_time_summary.md"
+python3 "$DRIVE_COLAB_ROOT/scripts/colab_auto_disconnect.py" || true
