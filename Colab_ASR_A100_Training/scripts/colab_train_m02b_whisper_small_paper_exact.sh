@@ -25,11 +25,12 @@ periodic_sync() {
 SYNC_PID=""
 trap 'status=$?; echo "[small-paper-exact] final sync on exit -> $DEST"; sync_once; if [ -n "${SYNC_PID:-}" ]; then kill "$SYNC_PID" 2>/dev/null || true; fi; exit $status' EXIT
 periodic_sync & SYNC_PID=$!
-echo "[small-paper-exact] RUN_DIR=$RUN_DIR batch=8 grad_accum=4 effective=32 sync_interval=${SYNC_INTERVAL_SEC}s"
+NUM_WORKERS="${A100_NUM_WORKERS:-2}"
+echo "[small-paper-exact] RUN_DIR=$RUN_DIR batch=8 grad_accum=4 effective=32 workers=$NUM_WORKERS sync_interval=${SYNC_INTERVAL_SEC}s"
 time python3 training/m02b_whisper_small_ft/train.py \
   --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" \
   --epochs 5 --batch-size 8 --grad-accum 4 \
-  --lr 1e-5 --warmup-steps 500 --gradient-checkpointing --seed 42 \
+  --lr 1e-5 --warmup-steps 500 --gradient-checkpointing --num-workers "$NUM_WORKERS" --seed 42 \
   2>&1 | tee "ubuntu_logs/train_m02b_small_${RUN_ID}.log"
 python3 training/m02b_whisper_small_ft/test.py --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" \
   2>&1 | tee "ubuntu_logs/test_m02b_small_${RUN_ID}.log"

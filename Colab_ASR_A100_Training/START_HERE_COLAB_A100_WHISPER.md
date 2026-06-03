@@ -96,14 +96,15 @@ Gunakan:
 colab_train_m02b_whisper_small_a100_fast.sh
 ```
 
-hanya jika user eksplisit memilih speed. Profil default:
+jika ingin memanfaatkan A100 dan mengurangi waktu training. Profil default:
 
 - `batch-size=32`
 - `grad-accum=1`
 - effective batch tetap 32
 - gradient checkpointing off untuk speed
+- `A100_NUM_WORKERS=2` untuk mengurangi bottleneck data loader
 
-Kritik: effective batch sama, tetapi microbatch dan checkpointing berubah. Ini kemungkinan valid secara praktis, tetapi untuk paper utama lebih defensible memakai paper-exact.
+Kritik: effective batch sama dengan paper-exact, tetapi microbatch dan checkpointing berubah. Ini jauh lebih efisien di A100 dan masih defensible jika dilaporkan sebagai A100-fast same-effective-batch run. Untuk konservatisme reviewer maksimal, paper-exact tetap tersedia tetapi memang boros resource A100.
 
 ### Whisper-medium
 
@@ -497,25 +498,27 @@ Jika training belum selesai tetapi Drive sudah punya partial run:
 
 ## 13. Optional: A100-fast run
 
-Jika user memilih speed:
+Jika ingin tidak membuang resource A100, gunakan A100-fast:
 
 ```bash
-!bash /content/drive/MyDrive/ASR_Colab_A100/Colab_ASR_A100_Training/scripts/colab_train_m02b_whisper_small_a100_fast.sh
+!bash "$DRIVE_COLAB_ROOT/scripts/colab_train_m02b_whisper_small_a100_fast.sh"
 ```
 
 Opsional override:
 
 ```python
 import os
-os.environ['A100_BATCH_SIZE'] = '24'
+os.environ['A100_BATCH_SIZE'] = '32'      # same effective batch as paper-exact when grad_accum=1
 os.environ['A100_GRAD_ACCUM'] = '1'
+os.environ['A100_NUM_WORKERS'] = '2'      # try 4 if CPU/RAM stable; reduce to 0 if worker errors
 os.environ['A100_SYNC_INTERVAL_SEC'] = '600'
 ```
 
 Kritik:
 
-- Jika batch 32 OOM karena Colab memory fragmentation, coba 24 atau 16 dengan grad accumulation agar effective batch mendekati/menjadi 32.
-- Untuk paper utama tetap lebih baik paper-exact.
+- VRAM tidak harus penuh 40GB; targetnya throughput. Namun 5.7GB pada paper-exact menunjukkan microbatch terlalu konservatif untuk A100.
+- Jika batch 32 OOM karena Colab memory fragmentation, coba batch 24/16 dan sesuaikan grad accumulation agar effective batch tetap mendekati/menjadi 32.
+- Untuk paper utama konservatif, paper-exact tetap tersedia; untuk efisiensi A100, A100-fast lebih masuk akal.
 
 ---
 

@@ -27,11 +27,12 @@ trap 'status=$?; echo "[medium-a100] final sync on exit -> $DEST"; sync_once; if
 periodic_sync & SYNC_PID=$!
 BATCH="${A100_MEDIUM_BATCH_SIZE:-8}"
 ACCUM="${A100_MEDIUM_GRAD_ACCUM:-4}"
-echo "[medium-a100] RUN_DIR=$RUN_DIR batch=$BATCH grad_accum=$ACCUM effective=$((BATCH*ACCUM)) sync_interval=${SYNC_INTERVAL_SEC}s"
+NUM_WORKERS="${A100_NUM_WORKERS:-2}"
+echo "[medium-a100] RUN_DIR=$RUN_DIR batch=$BATCH grad_accum=$ACCUM effective=$((BATCH*ACCUM)) workers=$NUM_WORKERS sync_interval=${SYNC_INTERVAL_SEC}s"
 time python3 training/m02b_whisper_medium_ft/train.py \
   --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" \
   --epochs 5 --batch-size "$BATCH" --grad-accum "$ACCUM" \
-  --lr 1e-5 --warmup-steps 500 --seed 42 \
+  --lr 1e-5 --warmup-steps 500 --num-workers "$NUM_WORKERS" --seed 42 \
   2>&1 | tee "ubuntu_logs/train_m02b_medium_${RUN_ID}.log"
 python3 training/m02b_whisper_medium_ft/test.py --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" \
   2>&1 | tee "ubuntu_logs/test_m02b_medium_${RUN_ID}.log"

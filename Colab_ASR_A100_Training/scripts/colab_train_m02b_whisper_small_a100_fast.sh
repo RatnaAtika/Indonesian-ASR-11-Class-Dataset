@@ -29,11 +29,12 @@ BATCH="${A100_BATCH_SIZE:-32}"
 ACCUM="${A100_GRAD_ACCUM:-1}"
 LR="${A100_LR:-1e-5}"
 WARMUP="${A100_WARMUP_STEPS:-500}"
-echo "[small-a100-fast] RUN_DIR=$RUN_DIR batch=$BATCH grad_accum=$ACCUM effective=$((BATCH*ACCUM)) sync_interval=${SYNC_INTERVAL_SEC}s"
+NUM_WORKERS="${A100_NUM_WORKERS:-2}"
+echo "[small-a100-fast] RUN_DIR=$RUN_DIR batch=$BATCH grad_accum=$ACCUM effective=$((BATCH*ACCUM)) workers=$NUM_WORKERS sync_interval=${SYNC_INTERVAL_SEC}s"
 time python3 training/m02b_whisper_small_ft/train.py \
   --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" \
   --epochs 5 --batch-size "$BATCH" --grad-accum "$ACCUM" \
-  --lr "$LR" --warmup-steps "$WARMUP" --seed 42 \
+  --lr "$LR" --warmup-steps "$WARMUP" --num-workers "$NUM_WORKERS" --seed 42 \
   2>&1 | tee "ubuntu_logs/train_m02b_small_${RUN_ID}.log"
 python3 training/m02b_whisper_small_ft/test.py --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" \
   2>&1 | tee "ubuntu_logs/test_m02b_small_${RUN_ID}.log"

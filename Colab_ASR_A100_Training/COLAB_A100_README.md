@@ -98,12 +98,12 @@ Mengikuti RUN_GUIDE: `batch-size 8`, `grad-accum 4`, effective batch 32, gradien
 
 ### A100-fast
 
-Default script A100 memakai effective batch tetap 32, tetapi menaikkan per-device batch agar A100 lebih penuh:
+Default script A100 memakai effective batch tetap 32, tetapi menaikkan per-device batch agar A100 lebih penuh dan mematikan gradient checkpointing untuk speed:
 
-- Whisper-small: `batch-size 32`, `grad-accum 1`, effective batch 32.
-- Whisper-medium: `batch-size 8`, `grad-accum 4`, effective batch 32.
+- Whisper-small: `batch-size 32`, `grad-accum 1`, effective batch 32, `A100_NUM_WORKERS=2`.
+- Whisper-medium: `batch-size 8`, `grad-accum 4`, effective batch 32, `A100_NUM_WORKERS=2`.
 
-Jika OOM, turunkan `A100_BATCH_SIZE` dan naikkan `A100_GRAD_ACCUM` agar effective batch tetap 32.
+Jika OOM, turunkan `A100_BATCH_SIZE` dan naikkan `A100_GRAD_ACCUM` agar effective batch tetap 32. VRAM tidak harus penuh 40GB; target utamanya throughput. Namun jika paper-exact hanya memakai ~5-6GB, A100-fast lebih efisien.
 
 ## Hasil
 

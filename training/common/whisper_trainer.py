@@ -49,6 +49,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--language", default="indonesian")
     p.add_argument("--task", default="transcribe")
     p.add_argument("--gradient-checkpointing", action="store_true", default=False)
+    p.add_argument("--num-workers", type=int, default=0,
+                   help="DataLoader workers. Use 2-4 on Colab/local SSD to keep A100 fed; keep 0 for maximum compatibility.")
     p.add_argument("--fp16", action="store_true", default=True)
     p.add_argument("--resume", nargs="?", const="auto", default=None,
                    help="Resume training: pass a checkpoint dir, or bare --resume to "
@@ -343,7 +345,7 @@ def main() -> int:
         logging_steps=5,
         report_to=[],
         seed=args.seed,
-        dataloader_num_workers=0,
+        dataloader_num_workers=args.num_workers,
         remove_unused_columns=False,
         metric_for_best_model="wer",
         greater_is_better=False,
@@ -417,6 +419,7 @@ def main() -> int:
 - Train samples: {len(train_ds)}
 - Val samples: {len(val_ds)}
 - FP16: {args.fp16}
+- DataLoader workers: {args.num_workers}
 - Gradient checkpointing: {args.gradient_checkpointing}
 - Seed: {args.seed}
 
