@@ -15,6 +15,19 @@ USE_DATA_ARCHIVE="${USE_DATA_ARCHIVE:-1}"
 LOCAL_DATA_ROOT="${LOCAL_DATA_ROOT:-/content/asr_data/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19}"
 LOCAL_DATA_FINAL="${LOCAL_DATA_FINAL:-/content/asr_data/training/data_final}"
 MIN_LOCAL_FREE_GB="${MIN_LOCAL_FREE_GB:-40}"
+# Support flat Drive layout: MyDrive/Colab_ASR_A100/{scripts,Data,...}
+if [[ ! -f "$DRIVE_COLAB_ROOT/scripts/colab_bootstrap_a100.sh" && -f "$DRIVE_PROJECT_ROOT/scripts/colab_bootstrap_a100.sh" ]]; then
+  DRIVE_COLAB_ROOT="$DRIVE_PROJECT_ROOT"
+fi
+if [[ ! -d "$DRIVE_PROJECT_ROOT/Data" && -d "$DRIVE_COLAB_ROOT/Data" ]]; then
+  DRIVE_PROJECT_ROOT="$DRIVE_COLAB_ROOT"
+  DRIVE_DATA_ROOT="${DRIVE_DATA_ROOT:-$DRIVE_PROJECT_ROOT/Data/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19}"
+  DRIVE_DATA_FINAL="${DRIVE_DATA_FINAL:-$DRIVE_PROJECT_ROOT/Data/training/data_final}"
+  DRIVE_RESULTS_ROOT="${DRIVE_RESULTS_ROOT:-$DRIVE_PROJECT_ROOT/Results}"
+  DRIVE_ARCHIVE_ROOT="${DRIVE_ARCHIVE_ROOT:-$DRIVE_PROJECT_ROOT/Data/_archives}"
+  DRIVE_DATA_ARCHIVE="${DRIVE_DATA_ARCHIVE:-$DRIVE_ARCHIVE_ROOT/dataset_balanced19_v7.tar}"
+  DRIVE_DATA_FINAL_ARCHIVE="${DRIVE_DATA_FINAL_ARCHIVE:-$DRIVE_ARCHIVE_ROOT/data_final.tar}"
+fi
 nvidia-smi || true
 python3 - <<PY
 import shutil, sys
