@@ -22,7 +22,9 @@ MyDrive/ASR_Colab_A100/
 - Jangan membuat copy dataset baru di Linux/Windows untuk staging.
 - Upload dataset v7 yang sudah ada langsung ke Google Drive satu kali.
 - Folder `repo_code/` di paket ini sengaja **tidak berisi WAV/checkpoint/model weight**.
-- Opsi `USE_LOCAL_SSD=1` di Colab hanya membuat copy sementara di `/content` agar A100 tidak bottleneck oleh Google Drive; copy ini hilang saat runtime Colab mati dan bukan duplikasi permanen di Drive.
+- **Best practice wajib untuk A100:** set `USE_LOCAL_SSD=1`. Ini menyalin WAV dataset **dan split TSV** dari Drive ke SSD runtime Colab `/content` (umumnya ratusan GB, cukup untuk dataset ~15GB) agar training/test tidak membaca ribuan file kecil langsung dari Google Drive.
+- Copy `/content` ini sementara, hilang saat runtime Colab mati, dan bukan duplikasi permanen di Drive.
+- Gunakan Drive hanya sebagai sumber upload awal dan tujuan sinkronisasi hasil akhir.
 
 ## Upload ke Google Drive
 
@@ -34,6 +36,8 @@ bash Colab_ASR_A100_Training/scripts/prepare_repo_code_snapshot.sh
 ```
 
 `repo_code/` adalah snapshot lokal untuk Drive dan sengaja di-ignore dari git.
+
+Jangan training langsung dari Drive kecuali darurat. Jika `USE_LOCAL_SSD=1`, bootstrap akan mengecek free space `/content` (default minimal 40 GiB), lalu copy dataset + TSV ke local SSD sebelum training.
 
 ### Opsi A — Web UI Google Drive
 

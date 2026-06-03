@@ -9,8 +9,16 @@ COLAB_WORK_ROOT="${COLAB_WORK_ROOT:-/content/asr_work}"
 COLAB_REPO="${COLAB_REPO:-$COLAB_WORK_ROOT/Paper_Datatset_SOTA}"
 USE_LOCAL_SSD="${USE_LOCAL_SSD:-1}"
 LOCAL_DATA_ROOT="${LOCAL_DATA_ROOT:-/content/asr_data/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19}"
-LOCAL_DATA_FINAL="${LOCAL_DATA_FINAL:-$COLAB_REPO/training/data_final}"
+LOCAL_DATA_FINAL="${LOCAL_DATA_FINAL:-/content/asr_data/training/data_final}"
+MIN_LOCAL_FREE_GB="${MIN_LOCAL_FREE_GB:-40}"
 nvidia-smi || true
+python3 - <<PY
+import shutil, sys
+free = shutil.disk_usage('/content').free / (1024**3)
+print(f'[colab-bootstrap] /content free space: {free:.1f} GiB')
+if free < float('$MIN_LOCAL_FREE_GB'):
+    raise SystemExit(f'ERROR: /content free space {free:.1f} GiB < MIN_LOCAL_FREE_GB=$MIN_LOCAL_FREE_GB')
+PY
 mkdir -p "$COLAB_WORK_ROOT" "$DRIVE_RESULTS_ROOT"
 python3 -m pip install -q --upgrade pip
 python3 -m pip install -q -r "$DRIVE_COLAB_ROOT/requirements_colab_a100.txt"
@@ -20,15 +28,24 @@ rsync -aH --delete "$DRIVE_COLAB_ROOT/repo_code/" "$COLAB_REPO/"
 test -d "$DRIVE_DATA_ROOT" || { echo "ERROR: missing DRIVE_DATA_ROOT=$DRIVE_DATA_ROOT"; exit 3; }
 test -d "$DRIVE_DATA_FINAL" || { echo "ERROR: missing DRIVE_DATA_FINAL=$DRIVE_DATA_FINAL"; exit 3; }
 if [[ "$USE_LOCAL_SSD" == "1" ]]; then
-  echo "Copying dataset from Drive to Colab local SSD for faster A100 training (temporary runtime copy)."
-  mkdir -p "$(dirname "$LOCAL_DATA_ROOT")"
+  echo "Copying dataset WAVs from Drive to Colab local SSD (/content) for faster A100 training."
+  echo "This is a temporary runtime copy, not a permanent Drive duplicate."
+  mkdir -p "$(dirname "$LOCAL_DATA_ROOT")" "$LOCAL_DATA_FINAL"
   rsync -aH --info=progress2 "$DRIVE_DATA_ROOT/" "$LOCAL_DATA_ROOT/"
+  echo "Copying split TSVs to local SSD as well (avoid Drive I/O during training/test)."
+  rsync -aH --delete --info=progress2 "$DRIVE_DATA_FINAL/" "$LOCAL_DATA_FINAL/"
   DATA_ROOT="$LOCAL_DATA_ROOT"
+  DATA_FINAL="$LOCAL_DATA_FINAL"
 else
-  echo "Using dataset directly from Google Drive mount. This may be slower."
+  echo "WARNING: Using dataset directly from Google Drive mount. This can make runtime extremely slow."
+  echo "Recommended: set USE_LOCAL_SSD=1 unless /content free space is insufficient."
   DATA_ROOT="$DRIVE_DATA_ROOT"
+  DATA_FINAL="$DRIVE_DATA_FINAL"
 fi
-if [[ -d "$LOCAL_DATA_FINAL" ]]; then DATA_FINAL="$LOCAL_DATA_FINAL"; else DATA_FINAL="$DRIVE_DATA_FINAL"; fi
+
+echo "[colab-bootstrap] DATA_ROOT=$DATA_ROOT"
+echo "[colab-bootstrap] DATA_FINAL=$DATA_FINAL"
+du -sh "$DATA_ROOT" "$DATA_FINAL" || true
 cat > "$COLAB_WORK_ROOT/colab_env.sh" <<ENV
 export DRIVE_PROJECT_ROOT="$DRIVE_PROJECT_ROOT"
 export DRIVE_COLAB_ROOT="$DRIVE_COLAB_ROOT"
@@ -39,6 +56,7 @@ export COLAB_WORK_ROOT="$COLAB_WORK_ROOT"
 export REPO="$COLAB_REPO"
 export DATA_ROOT="$DATA_ROOT"
 export DATA_FINAL="$DATA_FINAL"
+export MIN_LOCAL_FREE_GB="${MIN_LOCAL_FREE_GB:-40}"
 export A100_SYNC_INTERVAL_SEC="${A100_SYNC_INTERVAL_SEC:-600}"
 export A100_AUTO_DISCONNECT="${A100_AUTO_DISCONNECT:-0}"
 ENV

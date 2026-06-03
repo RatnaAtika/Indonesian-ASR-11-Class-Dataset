@@ -292,7 +292,8 @@ drive.mount('/content/drive')
 
 # Sesuaikan jika Drive folder berbeda.
 os.environ['DRIVE_PROJECT_ROOT'] = '/content/drive/MyDrive/ASR_Colab_A100'
-os.environ['USE_LOCAL_SSD'] = '1'                 # recommended: copy dataset Drive -> /content local SSD
+os.environ['USE_LOCAL_SSD'] = '1'                 # wajib/recommended: copy Drive dataset + TSV -> /content SSD
+os.environ['MIN_LOCAL_FREE_GB'] = '40'            # fail early if /content free space is too small
 os.environ['A100_SYNC_INTERVAL_SEC'] = '600'      # sync checkpoint ke Drive tiap 10 menit
 os.environ['A100_AUTO_DISCONNECT'] = '0'          # set '1' only for final run auto-shutdown
 
@@ -314,7 +315,7 @@ Bootstrap akan:
 5. Membuat `/content/asr_work/colab_env.sh`.
 6. Menjalankan quick dataset verification.
 
-Kritik: jangan training langsung dari Drive kecuali terpaksa. Banyak WAV kecil -> Drive mount lambat. `USE_LOCAL_SSD=1` adalah best practice.
+Kritik: jangan training langsung dari Drive kecuali terpaksa. Banyak WAV kecil membuat Drive mount sangat lambat dan bisa memperpanjang runtime berjam-jam. `USE_LOCAL_SSD=1` adalah best practice: bootstrap menyalin dataset WAV dan split TSV ke SSD `/content` Colab, lalu training/test membaca dari local SSD. Google Drive hanya dipakai sebagai sumber awal dan tujuan sinkronisasi hasil.
 
 ---
 
@@ -371,7 +372,7 @@ Script otomatis menjalankan:
 
 1. training 5 epoch,
 2. menulis total akumulasi waktu training ke `log.txt` dan `report.md`,
-3. test.py,
+3. test.py dari dataset local SSD,
 4. periodic sync seluruh run-dir ke Drive,
 5. final sync seluruh run-dir lengkap ke Drive (`best_model/`, `checkpoints/`, `model_summary.png/.pdf`, `report.md`, `history.json`, `log.txt`, `test_results/`),
 6. membuat `Results/paper_training_time_summary.md/.json`,
