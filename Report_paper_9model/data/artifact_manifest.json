@@ -1,0 +1,34 @@
+{
+  "generated": "2026-06-04T23:09:47.122784",
+  "root": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model",
+  "main_pdf": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/Report_paper_9model_FULL_DETAIL.pdf",
+  "benchmark_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/benchmark/benchmark.json",
+  "benchmark_json_relative": "benchmark/benchmark.json",
+  "figures": [
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/figures/fig1_wer_ranking.png",
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/figures/fig2_cer_ranking.png",
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/figures/fig3_wer_logscale.png",
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/figures/fig4_wer_cer_scatter.png",
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/figures/fig5_test_runtime_minutes.png"
+  ],
+  "figures_relative": [
+    "figures/fig1_wer_ranking.png",
+    "figures/fig2_cer_ranking.png",
+    "figures/fig3_wer_logscale.png",
+    "figures/fig4_wer_cer_scatter.png",
+    "figures/fig5_test_runtime_minutes.png"
+  ],
+  "tables": [
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/tables/paper_9model_results_normalized.csv",
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/tables/paper_table_9model.md",
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/tables/paper_table_9model.tex"
+  ],
+  "appendices": [
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/appendices/candidate_references.md",
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/appendices/model_pseudocode_appendix.md"
+  ],
+  "manuscript": [
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/manuscript/ScienceDirect_style_paper_report.md",
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/manuscript/ScienceDirect_style_paper_report.txt"
+  ]
+}

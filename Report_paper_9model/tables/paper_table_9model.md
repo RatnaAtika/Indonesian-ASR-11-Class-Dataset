@@ -1,0 +1,13 @@
+# Paper Table: 9-model ASR comparison
+
+| Rank | Model | Family | WER | CER | MER | WIL | SER | Wall time (s) | Best epoch |
+|---:|---|---|---:|---:|---:|---:|---:|---:|---:|
+| 1 | `m02b-whisper-small-ft` | Whisper-small FT (Radford 2022) | 0.0085 | 0.0019 | 0.0085 | 0.0130 | 0.0390 | 4363.1 | 5 |
+| 2 | `m06-conformer-ctc` | Conformer-CTC (Gulati 2020) | 0.0119 | 0.0043 | 0.0119 | 0.0205 | 0.0598 | 52.5 | 29 |
+| 3 | `m12-vit-modified-ID` | ViT-modified-ID (Ratna 2026) | 0.0178 | 0.0130 | 0.0177 | 0.0315 | 0.0184 | 1304.3 | n/a |
+| 4 | `m07-bilstm-ctc` | Bi-LSTM CTC | 0.0401 | 0.0132 | 0.0400 | 0.0721 | 0.1516 | 70.4 | 30 |
+| 5 | `m11-vanilla-transformer` | Vanilla Transformer (Vaswani 2017) | 0.0439 | 0.0327 | 0.0438 | 0.0774 | 0.0454 | 1293.3 | n/a |
+| 6 | `m13-wav2letter` | Wav2Letter CNN-CTC (Collobert 2016) | 0.0929 | 0.0520 | 0.0920 | 0.1524 | 0.2822 | 22.9 | 27 |
+| 7 | `m08-hmm-gmm` | HMM-GMM (classical) | 0.9633 | 0.7205 | 0.8789 | 0.9822 | 0.9192 | 3277.3 | 1 |
+| 8 | `m10-gmm-hmm-dnn` | GMM-HMM-DNN (3-stage) | 0.9703 | 0.8516 | 0.9690 | 0.9965 | 1.0000 | 18.9 | 15 |
+| 9 | `m09-dnn-hmm` | DNN-HMM (hybrid) | 0.9708 | 0.8437 | 0.9693 | 0.9967 | 1.0000 | 19.8 | 12 |

@@ -226,14 +226,12 @@ def aggregate(out_dir: Path):
     md += [
         "## Paper Table 1 \u2014 9-Model Comparison (greedy decoding, no LM, full test set)",
         "",
-        "| Rank | Slot | Family | Params (M) | WER | CER | MER | WIL | SER | Wall (s) | GPU MB | Best train epoch | Status |",
-        "|-----:|------|--------|-----------:|----:|----:|----:|----:|----:|---------:|-------:|-----------------:|--------|",
+        "| Rank | Slot | Family | WER | CER | MER | WIL | SER | Wall (s) | GPU MB | Best train epoch | Status |",
+        "|-----:|------|--------|----:|----:|----:|----:|----:|---------:|-------:|-----------------:|--------|",
     ]
-    for i, r in enumerate(paper_results):
+    table_order = ranked + [r for r in paper_results if r.get("status") == "MISSING"]
+    for r in table_order:
         m = r.get("metrics") or {}
-        cfg = r.get("config") or {}
-        params_m = "n/a"
-        # Try to extract params count from training_meta or known defaults
         rank_str = "-"
         for j, rr in enumerate(ranked):
             if rr["model_id"] == r["model_id"]:
@@ -241,13 +239,13 @@ def aggregate(out_dir: Path):
                 break
         novel_marker = " \u2606" if r.get("is_user_novel") else ""
         md.append(
-            f"| {rank_str} | `{r['model_id']}{novel_marker}` | {r.get('family', '')} | {params_m} "
+            f"| {rank_str} | `{r['model_id']}{novel_marker}` | {r.get('family', '')} "
             f"| {fmt(m.get('wer'))} | {fmt(m.get('cer'))} | {fmt(m.get('mer'))} "
             f"| {fmt(m.get('wil'))} | {fmt(m.get('ser'))} "
             f"| {fmt(r.get('wall_time_sec'), 1)} | {fmt(r.get('peak_gpu_mb'), 0)} "
             f"| {r.get('best_train_epoch') or 'n/a'} | {r.get('status')} |"
         )
-    
+
     md += [
         "",
         "\u2606 = User's novel architecture (Ratna 2026, this paper's first public report)",
@@ -385,7 +383,7 @@ def aggregate(out_dir: Path):
         meta = r.get("training_meta") or {}
         env = meta.get("environment", {}) if isinstance(meta, dict) else {}
         ts_md += [
-            f"- Checkpoint: `{r.get('checkpoint_filename', '?')}` \u2192 best epoch {r.get('best_train_epoch')}",
+            f"- Checkpoint: `{r.get('checkpoint_filename', '?')}` \u2192 best epoch {r.get('best_train_epoch') or 'n/a'}",
             f"- Training epochs: {r.get('n_epochs_trained')}",
             f"- Best train WER: {fmt(r.get('best_train_wer'))}",
             f"- Test WER: {fmt(r.get('metrics', {}).get('wer'))}, CER: {fmt(r.get('metrics', {}).get('cer'))}",
