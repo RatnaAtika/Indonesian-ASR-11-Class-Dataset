@@ -498,6 +498,8 @@ Jika training belum selesai tetapi Drive sudah punya partial run:
 
 ## 13. Optional: A100-fast run
 
+Default script Colab sekarang memakai **quiet output mode**: log lengkap disimpan ke `ubuntu_logs/*.log`, progress bar dimatikan, dan output browser hanya ringkas agar halaman Colab tidak lag. Jika ingin output penuh seperti lama, set `A100_CONSOLE_LOG=1`, tetapi ini tidak direkomendasikan untuk run panjang.
+
 Jika ingin tidak membuang resource A100, gunakan A100-fast:
 
 ```bash
@@ -512,6 +514,7 @@ os.environ['A100_BATCH_SIZE'] = '32'      # same effective batch as paper-exact 
 os.environ['A100_GRAD_ACCUM'] = '1'
 os.environ['A100_NUM_WORKERS'] = '2'      # try 4 if CPU/RAM stable; reduce to 0 if worker errors
 os.environ['A100_SYNC_INTERVAL_SEC'] = '600'
+os.environ['A100_CONSOLE_LOG'] = '0'     # keep Colab UI responsive; default 0
 ```
 
 Kritik:

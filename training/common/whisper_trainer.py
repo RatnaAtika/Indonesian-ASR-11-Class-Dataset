@@ -51,6 +51,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--gradient-checkpointing", action="store_true", default=False)
     p.add_argument("--num-workers", type=int, default=0,
                    help="DataLoader workers. Use 2-4 on Colab/local SSD to keep A100 fed; keep 0 for maximum compatibility.")
+    p.add_argument("--disable-tqdm", action="store_true", default=False,
+                   help="Disable tqdm/progress bars to keep Colab browser UI responsive; logs still go to file/report.")
     p.add_argument("--fp16", action="store_true", default=True)
     p.add_argument("--resume", nargs="?", const="auto", default=None,
                    help="Resume training: pass a checkpoint dir, or bare --resume to "
@@ -343,6 +345,7 @@ def main() -> int:
         predict_with_generate=True,
         generation_max_length=200,
         logging_steps=5,
+        disable_tqdm=args.disable_tqdm,
         report_to=[],
         seed=args.seed,
         dataloader_num_workers=args.num_workers,
@@ -420,6 +423,7 @@ def main() -> int:
 - Val samples: {len(val_ds)}
 - FP16: {args.fp16}
 - DataLoader workers: {args.num_workers}
+- Disable tqdm/progress bars: {args.disable_tqdm}
 - Gradient checkpointing: {args.gradient_checkpointing}
 - Seed: {args.seed}
 

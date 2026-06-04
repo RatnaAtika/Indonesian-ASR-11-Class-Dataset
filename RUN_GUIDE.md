@@ -978,6 +978,14 @@ python3 training/m02b_whisper_medium_ft/train.py \
 > direktori khusus **`<run_dir>/best_model/`** (format HF, langsung loadable via
 > `WhisperForConditionalGeneration.from_pretrained('<run_dir>/best_model')`, + `BEST_INFO.txt`).
 > `test.py` otomatis memakai `best_model/` jika ada.
+>
+> **[+2026-06-03 Colab]** Script Colab A100 default memakai **quiet output mode**:
+> progress bar/tqdm dimatikan dengan `--disable-tqdm` dan log lengkap ditulis ke
+> `ubuntu_logs/*.log` agar halaman Colab tidak lag. Jika benar-benar perlu output
+> penuh di browser, set `A100_CONSOLE_LOG=1`, tetapi tidak direkomendasikan untuk
+> run panjang. Untuk A100 efisien, gunakan script fast profile
+> `colab_train_m02b_whisper_small_a100_fast.sh` (`batch=32`, `grad_accum=1`,
+> effective batch tetap 32, `A100_NUM_WORKERS=2`).
 
 ## P3-T. Testing per-model (jalankan SETELAH training selesai)
 
