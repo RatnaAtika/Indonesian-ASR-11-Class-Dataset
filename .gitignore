@@ -67,6 +67,7 @@ skills_transfer_bundle/
 # Colab_ASR_A100_Training/scripts/prepare_repo_code_snapshot.sh
 Colab_ASR_A100_Training/repo_code/
 Colab_ASR_A100_Training/archives/
+Colab_ASR_A100_Training/results/
 
 # --- Exception: publish DiB-compliant vector figures for the v7 dataset stats report ---
 !reports/dataset_statistics_v7_paper9/figures/*.pdf
