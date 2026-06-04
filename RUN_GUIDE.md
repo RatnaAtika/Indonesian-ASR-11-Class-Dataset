@@ -985,7 +985,9 @@ python3 training/m02b_whisper_medium_ft/train.py \
 > penuh di browser, set `A100_CONSOLE_LOG=1`, tetapi tidak direkomendasikan untuk
 > run panjang. Untuk A100 efisien, gunakan script fast profile
 > `colab_train_m02b_whisper_small_a100_fast.sh` (`batch=32`, `grad_accum=1`,
-> effective batch tetap 32, `A100_NUM_WORKERS=2`).
+> effective batch tetap 32, `A100_NUM_WORKERS=2`). Test Whisper memakai batched
+> generation (`--batch-size`, default Colab `A100_TEST_BATCH_SIZE=32`) agar tidak
+> menguji satu audio per satu audio secara lambat.
 
 ## P3-T. Testing per-model (jalankan SETELAH training selesai)
 

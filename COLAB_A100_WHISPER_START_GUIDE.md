@@ -513,6 +513,7 @@ import os
 os.environ['A100_BATCH_SIZE'] = '32'      # same effective batch as paper-exact when grad_accum=1
 os.environ['A100_GRAD_ACCUM'] = '1'
 os.environ['A100_NUM_WORKERS'] = '2'      # try 4 if CPU/RAM stable; reduce to 0 if worker errors
+os.environ['A100_TEST_BATCH_SIZE'] = '32' # batched test/generate on A100
 os.environ['A100_SYNC_INTERVAL_SEC'] = '600'
 os.environ['A100_CONSOLE_LOG'] = '0'     # keep Colab UI responsive; default 0
 ```

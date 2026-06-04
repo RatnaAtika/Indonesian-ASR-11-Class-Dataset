@@ -26,7 +26,8 @@ SYNC_PID=""
 trap 'status=$?; echo "[small-paper-exact] final sync on exit -> $DEST"; sync_once; if [ -n "${SYNC_PID:-}" ]; then kill "$SYNC_PID" 2>/dev/null || true; fi; exit $status' EXIT
 periodic_sync & SYNC_PID=$!
 NUM_WORKERS="${A100_NUM_WORKERS:-2}"
-echo "[small-paper-exact] RUN_DIR=$RUN_DIR batch=8 grad_accum=4 effective=32 workers=$NUM_WORKERS sync_interval=${SYNC_INTERVAL_SEC}s"
+TEST_BATCH="${A100_TEST_BATCH_SIZE:-32}"
+echo "[small-paper-exact] RUN_DIR=$RUN_DIR batch=8 grad_accum=4 effective=32 workers=$NUM_WORKERS test_batch=$TEST_BATCH sync_interval=${SYNC_INTERVAL_SEC}s"
 TRAIN_LOG="ubuntu_logs/train_m02b_small_${RUN_ID}.log"
 TEST_LOG="ubuntu_logs/test_m02b_small_${RUN_ID}.log"
 echo "[small-paper-exact] quiet Colab output mode. Full train log: $TRAIN_LOG"
@@ -48,10 +49,10 @@ echo "[small-paper-exact] train complete. Last train log lines:"
 tail -n 40 "$TRAIN_LOG"
 echo "[small-paper-exact] running test. Full test log: $TEST_LOG"
 if [[ "${A100_CONSOLE_LOG:-0}" == "1" ]]; then
-  python3 training/m02b_whisper_small_ft/test.py --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" \
+  python3 training/m02b_whisper_small_ft/test.py --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" --batch-size "$TEST_BATCH" \
     2>&1 | tee "$TEST_LOG"
 else
-  python3 training/m02b_whisper_small_ft/test.py --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" \
+  python3 training/m02b_whisper_small_ft/test.py --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" --batch-size "$TEST_BATCH" \
     > "$TEST_LOG" 2>&1 || { status=$?; echo "[small-paper-exact] TEST FAILED; last log lines:"; tail -n 120 "$TEST_LOG"; exit $status; }
 fi
 echo "[small-paper-exact] test complete. Last test log lines:"

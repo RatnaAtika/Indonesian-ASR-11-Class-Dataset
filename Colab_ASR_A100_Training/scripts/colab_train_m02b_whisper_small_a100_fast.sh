@@ -30,7 +30,8 @@ ACCUM="${A100_GRAD_ACCUM:-1}"
 LR="${A100_LR:-1e-5}"
 WARMUP="${A100_WARMUP_STEPS:-500}"
 NUM_WORKERS="${A100_NUM_WORKERS:-2}"
-echo "[small-a100-fast] RUN_DIR=$RUN_DIR batch=$BATCH grad_accum=$ACCUM effective=$((BATCH*ACCUM)) workers=$NUM_WORKERS sync_interval=${SYNC_INTERVAL_SEC}s"
+TEST_BATCH="${A100_TEST_BATCH_SIZE:-32}"
+echo "[small-a100-fast] RUN_DIR=$RUN_DIR batch=$BATCH grad_accum=$ACCUM effective=$((BATCH*ACCUM)) workers=$NUM_WORKERS test_batch=$TEST_BATCH sync_interval=${SYNC_INTERVAL_SEC}s"
 TRAIN_LOG="ubuntu_logs/train_m02b_small_${RUN_ID}.log"
 TEST_LOG="ubuntu_logs/test_m02b_small_${RUN_ID}.log"
 echo "[small-a100-fast] quiet Colab output mode. Full train log: $TRAIN_LOG"
@@ -52,10 +53,10 @@ echo "[small-a100-fast] train complete. Last train log lines:"
 tail -n 40 "$TRAIN_LOG"
 echo "[small-a100-fast] running test. Full test log: $TEST_LOG"
 if [[ "${A100_CONSOLE_LOG:-0}" == "1" ]]; then
-  python3 training/m02b_whisper_small_ft/test.py --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" \
+  python3 training/m02b_whisper_small_ft/test.py --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" --batch-size "$TEST_BATCH" \
     2>&1 | tee "$TEST_LOG"
 else
-  python3 training/m02b_whisper_small_ft/test.py --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" \
+  python3 training/m02b_whisper_small_ft/test.py --run-dir "$RUN_DIR" --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" --batch-size "$TEST_BATCH" \
     > "$TEST_LOG" 2>&1 || { status=$?; echo "[small-a100-fast] TEST FAILED; last log lines:"; tail -n 120 "$TEST_LOG"; exit $status; }
 fi
 echo "[small-a100-fast] test complete. Last test log lines:"

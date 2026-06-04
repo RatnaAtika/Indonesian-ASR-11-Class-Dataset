@@ -8,7 +8,7 @@ Usage:
     python3 training/m02b_whisper_medium_ft/test.py \\
       --run-dir training/m02b_whisper_small_ft/runs/run_paper_20260601
 """
-import sys, argparse, csv, time
+import sys, argparse, csv, time, logging
 from pathlib import Path
 
 import numpy as np
@@ -35,6 +35,8 @@ def parse_args():
     p.add_argument("--task", default="transcribe")
     p.add_argument("--max-test-samples", type=int, default=0)
     p.add_argument("--max-new-tokens", type=int, default=200)
+    p.add_argument("--batch-size", type=int, default=16,
+                   help="Batch size for batched Whisper generate() during test. Use 16-32 on A100, lower if OOM.")
     p.add_argument("--checkpoint", type=Path, default=None,
                    help="HF checkpoint dir (overrides auto-detect)")
     p.add_argument("--model-id-fallback", default="openai/whisper-small",
@@ -89,6 +91,7 @@ def main():
     
     # Load model
     from transformers import WhisperForConditionalGeneration, WhisperProcessor
+    logging.getLogger("transformers.generation.utils").setLevel(logging.ERROR)
     
     try:
         processor = WhisperProcessor.from_pretrained(str(ckpt_path))
@@ -122,32 +125,43 @@ def main():
     peak_gpu_mb = 0.0
     t0 = time.perf_counter()
     
-    print(f"[m02b-test] running greedy generate ...")
+    print(f"[m02b-test] running batched greedy generate ... batch_size={args.batch_size}")
     with torch.no_grad():
-        for i, r in enumerate(test_rows):
-            audio, sr = sf.read(r["audio_path"], dtype="float32")
-            if audio.ndim > 1:
-                audio = audio.mean(axis=1).astype(np.float32)
-            feat = processor.feature_extractor(audio, sampling_rate=16000,
-                                               return_tensors="pt").input_features
+        for start in range(0, len(test_rows), args.batch_size):
+            batch_rows = test_rows[start:start + args.batch_size]
+            audios = []
+            for r in batch_rows:
+                audio, sr = sf.read(r["audio_path"], dtype="float32")
+                if audio.ndim > 1:
+                    audio = audio.mean(axis=1).astype(np.float32)
+                audios.append(audio)
+            feat = processor.feature_extractor(
+                audios, sampling_rate=16000, return_tensors="pt", padding=True
+            ).input_features
             feat = feat.to(device, dtype=dtype)
-            ids = model.generate(feat, language=args.language, task=args.task,
-                                 max_new_tokens=args.max_new_tokens)
-            pred = processor.tokenizer.decode(ids[0], skip_special_tokens=True).strip()
-            label = r["transcript"]
-            preds_list.append(pred); labels_list.append(label)
-            predictions.append({
-                "idx": i, "audio": r["rel_path"],
-                "pred": pred, "label": label,
-                "per_sample_wer": per_sample_wer(pred, label),
-                "per_sample_cer": per_sample_cer(pred, label),
-            })
+            ids = model.generate(
+                feat, language=args.language, task=args.task,
+                max_new_tokens=args.max_new_tokens
+            )
+            batch_preds = processor.tokenizer.batch_decode(ids, skip_special_tokens=True)
+            for j, (r, pred) in enumerate(zip(batch_rows, batch_preds)):
+                i = start + j
+                pred = pred.strip()
+                label = r["transcript"]
+                preds_list.append(pred); labels_list.append(label)
+                predictions.append({
+                    "idx": i, "audio": r["rel_path"],
+                    "pred": pred, "label": label,
+                    "per_sample_wer": per_sample_wer(pred, label),
+                    "per_sample_cer": per_sample_cer(pred, label),
+                })
             if torch.cuda.is_available():
                 peak_gpu_mb = max(peak_gpu_mb,
                                   torch.cuda.max_memory_allocated() / (1024 * 1024))
-            if (i + 1) % 50 == 0:
-                rate = (i + 1) / (time.perf_counter() - t0)
-                print(f"  [m02b-test] {i+1}/{len(test_rows)} rate={rate:.2f} samp/s")
+            done = min(start + len(batch_rows), len(test_rows))
+            if done % 256 == 0 or done == len(test_rows):
+                rate = done / (time.perf_counter() - t0)
+                print(f"  [m02b-test] {done}/{len(test_rows)} rate={rate:.2f} samp/s")
     
     wall_time = time.perf_counter() - t0
     print(f"[m02b-test] inference done in {wall_time:.1f}s ({wall_time/60:.1f} min)")
@@ -167,8 +181,9 @@ def main():
         test_set_info={"split": "test", "n_samples": len(preds_list),
                        "audio_root": str(args.data_root), "feature_format": "raw_audio"},
         metrics=metrics,
-        decoding_info={"method": "greedy_ar", "beam_size": 1, "lm": None,
-                       "max_decode_len": args.max_new_tokens},
+        decoding_info={"method": "greedy_ar_batched", "beam_size": 1, "lm": None,
+                       "max_decode_len": args.max_new_tokens,
+                       "batch_size": args.batch_size},
         wall_time_sec=wall_time,
         n_samples=len(preds_list),
         peak_gpu_mb=peak_gpu_mb,
