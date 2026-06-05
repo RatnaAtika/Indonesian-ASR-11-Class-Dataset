@@ -673,7 +673,7 @@ Test (setelah train):
 python3 training_conventional/m12_vit_modified/test.py --max-decode-len 64
 ```
 
-### Terminal 16 — m13 Wav2Letter CNN-CTC (~5 jam)
+### Terminal 16 — m13 Wav2Letter-style CNN-CTC (~5 jam)
 ```bash
 python3 training_conventional/m13_wav2letter_cnn/train.py \
   --run-dir training_conventional/m13_wav2letter_cnn/runs/run_full_$(date +%Y%m%d) \
@@ -783,9 +783,9 @@ itu evidence pipeline OK. Full runs masuk `runs/run_full_<YYYYMMDD>/` terpisah.
 | m07 | Bi-LSTM CTC ⭐ | 30 ep | from-scratch RNN-CTC |
 | m06 | Conformer-CTC ⭐ | 30 ep | from-scratch conv+attn-CTC |
 | m13 | Wav2Letter ⭐ | 30 ep | from-scratch CNN-CTC |
-| m02b | Whisper-small FT ⭐ | 5 ep | pretrained FT (Radford 2022); small=244M, muat di 8GB GPU |
+| m02b | Whisper-small FT ⭐ | 5 ep | pretrained FT (Radford et al. 2023; arXiv 2022); small≈244M, muat di 8GB GPU |
 
-☆ = user's novel architecture (Ratna 2026, this paper's first public report)
+☆ = user's proposed/novel architecture in this work (do not format as an external citation unless a real reference is added)
 
 **Total wall time** (RTX 4060 Laptop 8 GB, sequential): ~80 jam.
 **Pada Colab Pro+ A100-40GB**: ~16 jam.
@@ -868,7 +868,7 @@ python3 training_conventional/m12_vit_modified/train.py \
 > **Versioned run-dir**: tiap invocation menulis ke `runs/run_full_<YYYYMMDD>_<HHMMSS>/`
 > baru — hasil run sebelumnya tidak terhapus.
 
-### Terminal P-6 — m13 Wav2Letter CNN-CTC (~5 jam)
+### Terminal P-6 — m13 Wav2Letter-style CNN-CTC (~5 jam)
 ```bash
 python3 training_conventional/m13_wav2letter_cnn/train.py \
   --run-dir training_conventional/m13_wav2letter_cnn/runs/run_paper_$(date +%Y%m%d) \
@@ -1054,7 +1054,7 @@ python3 training/m07_bilstm_ctc/test.py --max-test-samples 100
 ```json
 {
   "model_id": "m12-vit-modified-ID",
-  "family": "ViT-modified-ID (Ratna 2026, unpublished)",
+  "family": "ViT-modified-ID (proposed in this work)",
   "is_paper_model": true,
   "is_user_novel": true,
   "checkpoint": "...",
@@ -1085,12 +1085,35 @@ Setelah semua 9 model di-test, jalankan aggregator:
 ```bash
 python3 aggregate_paper_test_results.py
 # Output: reports/paper_benchmark/
-#   - benchmark.json         (master, AI-readable)
+#   - benchmark.json         (master, AI-readable, enriched with timing/params/provenance)
 #   - benchmark.md           (human-readable)
-#   - benchmark_table.csv    (paper Table 1 raw data)
+#   - benchmark_table.csv    (paper Table 1 raw data + train/test time + params + hardware)
 #   - paper_table.tex        (LaTeX \input{} ready)
 #   - sample_predictions.md  (per-model 10 samples for Appendix A)
-#   - training_summary.md    (hyperparameters + env per-model)
+#   - training_summary.md    (hyperparameters + timing + env per-model)
+```
+
+For the final `Report_paper_9model/` package, aggregate directly there and regenerate the detailed report/artifact package:
+
+```bash
+python3 aggregate_paper_test_results.py --out-dir Report_paper_9model/benchmark
+python3 tools_generate_report_paper_9model.py
+python3 tools_package_report_model_artifacts.py
+# Output includes:
+#   - Report_paper_9model/Report_paper_9model_FULL_DETAIL.pdf
+#   - Report_paper_9model/tables/paper_9model_evidence_table.md
+#   - Report_paper_9model/model_artifacts/artifact_index.json
+#   - Report_paper_9model/model_artifacts/reproducibility_docs/
+#   - Report_paper_9model/model_artifacts/rankXX_<model>/metadata.json
+#   - Report_paper_9model/model_artifacts/rankXX_<model>/source_code/
+#   - Report_paper_9model/model_artifacts/rankXX_<model>/pseudocode.md
+#   - Report_paper_9model/model_artifacts/rankXX_<model>/architecture/
+```
+
+`tools_package_report_model_artifacts.py` copies source code, pseudocode, architecture summaries/images, global reproducibility docs, and the selected best artifact for each paper model into per-model directories. Large binary weights remain local and are ignored by Git (`*.pt`, `*.pth`, `*.pkl`, `*.safetensors`, etc.; also `best_artifact/` and `run_outputs/`); upload this local artifact folder to Drive/Zenodo/OSF if the submission needs downloadable model weights. Verify package completeness with:
+
+```bash
+python3 tools_verify_report_model_artifacts.py
 ```
 
 ### `benchmark.json` schema (AI agent entry point)
@@ -1104,10 +1127,13 @@ python3 aggregate_paper_test_results.py
   "missing_paper_models": [...],
   "best_paper_model": {"model_id": ..., "wer": ..., "cer": ..., "is_user_novel": bool},
   "paper_models_ranked_by_wer": [
-    {"rank": 1, "model_id": ..., "family": ..., "wer": ..., "cer": ..., "is_user_novel": bool},
+    {"rank": 1, "model_id": ..., "family": ..., "wer": ..., "cer": ..., "is_user_novel": bool,
+     "training_time_hhmmss": "04:48:29", "inference_time_sec": 4363.1,
+     "n_params": 241734912, "hardware_label": "Google Colab Linux, NVIDIA A100-SXM4-40GB GPU"},
     ...
   ],
-  "paper_models": [<TestResult>, ...9],
+  "paper_models": [<TestResult enriched with training_time_*, inference_time_*, n_params,
+                   os_gpu_provenance, best_artifact>, ...9],
   "secondary_models": [<TestResult>, ...]
 }
 ```
@@ -1121,9 +1147,9 @@ Agent yang akan menulis paper Section 5 (Results) cukup baca **SATU FILE**:
 2. **Paper Table 1** — langsung `\input{reports/paper_benchmark/paper_table.tex}`
 3. **Section 4.2 (Experimental Setup)** — dari `paper_models[*].config`
 4. **Appendix A (sample predictions)** — dari `sample_predictions.md`
-5. **Section 4.3 (Reproducibility)** — dari `paper_models[*].training_meta.environment`
-6. **Best-model checkpoint refs** — dari `paper_models[*].checkpoint`
-7. **Compute budget per model** — dari `paper_models[*].wall_time_sec` + `peak_gpu_mb`
+5. **Section 4.3 (Reproducibility)** — dari `paper_models[*].training_meta.environment` + `os_gpu_provenance`
+6. **Best-model checkpoint refs** — dari `paper_models[*].best_artifact` / `checkpoint`
+7. **Compute budget per model** — dari `training_time_hhmmss`, `wall_time_sec` / `inference_time_sec`, `n_params`, `peak_gpu_mb`
 
 ```python
 # Quick AI-agent recipe
@@ -1134,7 +1160,11 @@ with open("reports/paper_benchmark/benchmark.json") as f:
 best = bench["best_paper_model"]
 print(f"Best WER: {best['wer']:.4f} — {best['family']}")
 for row in bench["paper_models_ranked_by_wer"]:
-    print(f"#{row['rank']}: {row['model_id']:30s}  WER={row['wer']:.4f}")
+    print(
+        f"#{row['rank']}: {row['model_id']:30s}  "
+        f"WER={row['wer']:.4f} train={row.get('training_time_hhmmss')} "
+        f"test_s={row.get('inference_time_sec')} params={row.get('n_params')}"
+    )
 ```
 
 ## P4. Post-run: aggregate + replot ke Data in Brief style

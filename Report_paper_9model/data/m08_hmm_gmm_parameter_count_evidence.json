@@ -1,0 +1,16 @@
+{
+  "model_id": "m08-hmm-gmm",
+  "source_artifact": "training_conventional/m08_hmm_gmm/runs/run_paper_20260530/checkpoints/best.pkl",
+  "method": "Counted numeric GMMHMM arrays per template: startprob_, transmat_, means_, covars_, weights_.",
+  "n_templates": 209,
+  "per_template_breakdown": {
+    "startprob": 5,
+    "transmat": 25,
+    "means": 1200,
+    "diag_covars": 1200,
+    "mixture_weights": 15,
+    "total_per_template": 2445
+  },
+  "total_numeric_parameters": 511005,
+  "caveat": "Classical HMM-GMM numeric parameter count, not a neural trainable-parameter count."
+}

@@ -1,0 +1,71 @@
+{
+  "model_id": "m02b-whisper-small-ft",
+  "purpose": "Source code needed to reproduce this model's training and testing entry points.",
+  "note": "Data files and model weights are intentionally excluded; see RUN_GUIDE.md and metadata.json for artifact locations.",
+  "files": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/train.py",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/train.py",
+      "size_bytes": 1276,
+      "sha256": "03aee62ba6d7e61fe4b5fb9ee81191c34023c03f2fcd30713a3d02687e416e78",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/train.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/test.py",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/test.py",
+      "size_bytes": 8413,
+      "sha256": "2d1680b6cba8d92f49648506730a0125ca2c6f2c151cfafd35a2c6ad013dcfe3",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/test.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/training/common/utils.py",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/training/common/utils.py",
+      "size_bytes": 29388,
+      "sha256": "79e851d2ba803e0a5be5ad1cf6fbed49726e9e7cb08f5ad81ad9a45dbc3c6668",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/utils.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/training/common/test_helper.py",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/training/common/test_helper.py",
+      "size_bytes": 15698,
+      "sha256": "09899d1e93810442e8cbb9233aacd1b7d30ad96a6a1287d110718b85bffbea50",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/test_helper.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/training/common/whisper_trainer.py",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/training/common/whisper_trainer.py",
+      "size_bytes": 20337,
+      "sha256": "af32e07bdb82b104748b8eb9eb2651948413bd6f443b81413f0a67900b2dcc9e",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/whisper_trainer.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/Colab_ASR_A100_Training/requirements_colab_a100.txt",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/Colab_ASR_A100_Training/requirements_colab_a100.txt",
+      "size_bytes": 229,
+      "sha256": "5087ca84e3fbea2265c7fe1ddd45396b2119bf63a2d5180098fed8c105a078f4",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Colab_ASR_A100_Training/requirements_colab_a100.txt",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/Colab_ASR_A100_Training/scripts/colab_bootstrap_a100.sh",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/Colab_ASR_A100_Training/scripts/colab_bootstrap_a100.sh",
+      "size_bytes": 7703,
+      "sha256": "72f8f420aac47d1c2696d35395b72d24011970d9d7d29e194924a7c6daf64f6a",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Colab_ASR_A100_Training/scripts/colab_bootstrap_a100.sh",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/Colab_ASR_A100_Training/scripts/colab_train_m02b_whisper_small_paper_exact.sh",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/Colab_ASR_A100_Training/scripts/colab_train_m02b_whisper_small_paper_exact.sh",
+      "size_bytes": 3402,
+      "sha256": "7b6c01fac2bd7ae367e348a3de0b04e5ce2f44ec0f0c9316296aa1bdaacec03b",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Colab_ASR_A100_Training/scripts/colab_train_m02b_whisper_small_paper_exact.sh",
+      "operation": "copy"
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "generated": "2026-06-05T08:27:57.103875",
+  "purpose": "Per-model best-artifact package for the nine-model Data in Brief benchmark.",
+  "path_base": "Report_paper_9model",
+  "paths_are_relative_to": "Report_paper_9model",
+  "note": "Large binary model files are materialized locally as hardlinks when possible, otherwise copies. Git ignores model weights by policy; source code, pseudocode, architecture summaries, and manifests are Git-trackable.",
+  "reproducibility_docs": {
+    "dir": "model_artifacts/reproducibility_docs",
+    "manifest": "model_artifacts/reproducibility_docs/reproducibility_docs_manifest.json",
+    "file_count": 12
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model_id": "m02b-whisper-small-ft",
+      "artifact_dir": "model_artifacts/rank01_m02b-whisper-small-ft",
+      "metadata": "model_artifacts/rank01_m02b-whisper-small-ft/metadata.json",
+      "best_artifact_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model",
+      "best_artifact_exists": true,
+      "best_artifact_file_count": 7,
+      "copied_run_output_file_count": 10,
+      "source_code_file_count": 8,
+      "source_code_manifest": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/source_manifest.json",
+      "pseudocode": "model_artifacts/rank01_m02b-whisper-small-ft/pseudocode.md",
+      "architecture_manifest": "model_artifacts/rank01_m02b-whisper-small-ft/architecture/architecture_manifest.json",
+      "architecture_file_count": 1,
+      "operations": {
+        "hardlink": 7,
+        "copy": 0
+      }
+    },
+    {
+      "rank": 2,
+      "model_id": "m06-conformer-ctc",
+      "artifact_dir": "model_artifacts/rank02_m06-conformer-ctc",
+      "metadata": "model_artifacts/rank02_m06-conformer-ctc/metadata.json",
+      "best_artifact_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/checkpoints/best.pt",
+      "best_artifact_exists": true,
+      "best_artifact_file_count": 1,
+      "copied_run_output_file_count": 9,
+      "source_code_file_count": 6,
+      "source_code_manifest": "model_artifacts/rank02_m06-conformer-ctc/source_code/source_manifest.json",
+      "pseudocode": "model_artifacts/rank02_m06-conformer-ctc/pseudocode.md",
+      "architecture_manifest": "model_artifacts/rank02_m06-conformer-ctc/architecture/architecture_manifest.json",
+      "architecture_file_count": 1,
+      "operations": {
+        "hardlink": 1,
+        "copy": 0
+      }
+    },
+    {
+      "rank": 3,
+      "model_id": "m12-vit-modified-ID",
+      "artifact_dir": "model_artifacts/rank03_m12-vit-modified-ID",
+      "metadata": "model_artifacts/rank03_m12-vit-modified-ID/metadata.json",
+      "best_artifact_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth",
+      "best_artifact_exists": true,
+      "best_artifact_file_count": 1,
+      "copied_run_output_file_count": 6,
+      "source_code_file_count": 9,
+      "source_code_manifest": "model_artifacts/rank03_m12-vit-modified-ID/source_code/source_manifest.json",
+      "pseudocode": "model_artifacts/rank03_m12-vit-modified-ID/pseudocode.md",
+      "architecture_manifest": "model_artifacts/rank03_m12-vit-modified-ID/architecture/architecture_manifest.json",
+      "architecture_file_count": 1,
+      "operations": {
+        "hardlink": 1,
+        "copy": 0
+      }
+    },
+    {
+      "rank": 4,
+      "model_id": "m07-bilstm-ctc",
+      "artifact_dir": "model_artifacts/rank04_m07-bilstm-ctc",
+      "metadata": "model_artifacts/rank04_m07-bilstm-ctc/metadata.json",
+      "best_artifact_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m07_bilstm_ctc/runs/run_paper_20260602_133815_linux/checkpoints/best.pt",
+      "best_artifact_exists": true,
+      "best_artifact_file_count": 1,
+      "copied_run_output_file_count": 9,
+      "source_code_file_count": 6,
+      "source_code_manifest": "model_artifacts/rank04_m07-bilstm-ctc/source_code/source_manifest.json",
+      "pseudocode": "model_artifacts/rank04_m07-bilstm-ctc/pseudocode.md",
+      "architecture_manifest": "model_artifacts/rank04_m07-bilstm-ctc/architecture/architecture_manifest.json",
+      "architecture_file_count": 1,
+      "operations": {
+        "hardlink": 1,
+        "copy": 0
+      }
+    },
+    {
+      "rank": 5,
+      "model_id": "m11-vanilla-transformer",
+      "artifact_dir": "model_artifacts/rank05_m11-vanilla-transformer",
+      "metadata": "model_artifacts/rank05_m11-vanilla-transformer/metadata.json",
+      "best_artifact_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328/checkpoints/best.pth",
+      "best_artifact_exists": true,
+      "best_artifact_file_count": 1,
+      "copied_run_output_file_count": 6,
+      "source_code_file_count": 9,
+      "source_code_manifest": "model_artifacts/rank05_m11-vanilla-transformer/source_code/source_manifest.json",
+      "pseudocode": "model_artifacts/rank05_m11-vanilla-transformer/pseudocode.md",
+      "architecture_manifest": "model_artifacts/rank05_m11-vanilla-transformer/architecture/architecture_manifest.json",
+      "architecture_file_count": 1,
+      "operations": {
+        "hardlink": 1,
+        "copy": 0
+      }
+    },
+    {
+      "rank": 6,
+      "model_id": "m13-wav2letter",
+      "artifact_dir": "model_artifacts/rank06_m13-wav2letter",
+      "metadata": "model_artifacts/rank06_m13-wav2letter/metadata.json",
+      "best_artifact_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/checkpoints/best.pt",
+      "best_artifact_exists": true,
+      "best_artifact_file_count": 1,
+      "copied_run_output_file_count": 9,
+      "source_code_file_count": 8,
+      "source_code_manifest": "model_artifacts/rank06_m13-wav2letter/source_code/source_manifest.json",
+      "pseudocode": "model_artifacts/rank06_m13-wav2letter/pseudocode.md",
+      "architecture_manifest": "model_artifacts/rank06_m13-wav2letter/architecture/architecture_manifest.json",
+      "architecture_file_count": 1,
+      "operations": {
+        "hardlink": 1,
+        "copy": 0
+      }
+    },
+    {
+      "rank": 7,
+      "model_id": "m08-hmm-gmm",
+      "artifact_dir": "model_artifacts/rank07_m08-hmm-gmm",
+      "metadata": "model_artifacts/rank07_m08-hmm-gmm/metadata.json",
+      "best_artifact_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/checkpoints/best.pkl",
+      "best_artifact_exists": true,
+      "best_artifact_file_count": 1,
+      "copied_run_output_file_count": 7,
+      "source_code_file_count": 8,
+      "source_code_manifest": "model_artifacts/rank07_m08-hmm-gmm/source_code/source_manifest.json",
+      "pseudocode": "model_artifacts/rank07_m08-hmm-gmm/pseudocode.md",
+      "architecture_manifest": "model_artifacts/rank07_m08-hmm-gmm/architecture/architecture_manifest.json",
+      "architecture_file_count": 0,
+      "operations": {
+        "hardlink": 1,
+        "copy": 0
+      }
+    },
+    {
+      "rank": 8,
+      "model_id": "m10-gmm-hmm-dnn",
+      "artifact_dir": "model_artifacts/rank08_m10-gmm-hmm-dnn",
+      "metadata": "model_artifacts/rank08_m10-gmm-hmm-dnn/metadata.json",
+      "best_artifact_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/checkpoints/best.pkl",
+      "best_artifact_exists": true,
+      "best_artifact_file_count": 1,
+      "copied_run_output_file_count": 7,
+      "source_code_file_count": 8,
+      "source_code_manifest": "model_artifacts/rank08_m10-gmm-hmm-dnn/source_code/source_manifest.json",
+      "pseudocode": "model_artifacts/rank08_m10-gmm-hmm-dnn/pseudocode.md",
+      "architecture_manifest": "model_artifacts/rank08_m10-gmm-hmm-dnn/architecture/architecture_manifest.json",
+      "architecture_file_count": 0,
+      "operations": {
+        "hardlink": 1,
+        "copy": 0
+      }
+    },
+    {
+      "rank": 9,
+      "model_id": "m09-dnn-hmm",
+      "artifact_dir": "model_artifacts/rank09_m09-dnn-hmm",
+      "metadata": "model_artifacts/rank09_m09-dnn-hmm/metadata.json",
+      "best_artifact_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/checkpoints/best.pkl",
+      "best_artifact_exists": true,
+      "best_artifact_file_count": 1,
+      "copied_run_output_file_count": 7,
+      "source_code_file_count": 8,
+      "source_code_manifest": "model_artifacts/rank09_m09-dnn-hmm/source_code/source_manifest.json",
+      "pseudocode": "model_artifacts/rank09_m09-dnn-hmm/pseudocode.md",
+      "architecture_manifest": "model_artifacts/rank09_m09-dnn-hmm/architecture/architecture_manifest.json",
+      "architecture_file_count": 0,
+      "operations": {
+        "hardlink": 1,
+        "copy": 0
+      }
+    }
+  ]
+}

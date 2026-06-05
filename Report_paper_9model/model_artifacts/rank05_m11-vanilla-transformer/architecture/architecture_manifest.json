@@ -1,0 +1,15 @@
+{
+  "model_id": "m11-vanilla-transformer",
+  "summary": "model_artifacts/rank05_m11-vanilla-transformer/architecture/architecture_summary.md",
+  "images": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank05_m11-vanilla-transformer/architecture/model_summary.png",
+      "relative_path": "model_artifacts/rank05_m11-vanilla-transformer/architecture/model_summary.png",
+      "size_bytes": 127528,
+      "sha256": "0bfb1842701e8a076689aa77c7d078a3a318f45b0d39afb97bb1d0ae729b3829",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328/model_summary.png",
+      "operation": "copy"
+    }
+  ],
+  "image_note": "model_summary.png is included when the source run produced one; classical HMM/DNN-HMM runs may only have textual architecture summaries."
+}

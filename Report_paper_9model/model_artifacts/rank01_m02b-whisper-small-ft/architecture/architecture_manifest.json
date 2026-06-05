@@ -1,0 +1,15 @@
+{
+  "model_id": "m02b-whisper-small-ft",
+  "summary": "model_artifacts/rank01_m02b-whisper-small-ft/architecture/architecture_summary.md",
+  "images": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/architecture/model_summary.png",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/architecture/model_summary.png",
+      "size_bytes": 119964,
+      "sha256": "8cfe4090bc2957c69f1860bacab94e018419b91b999fdafc2f53c30f6c228d61",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/model_summary.png",
+      "operation": "copy"
+    }
+  ],
+  "image_note": "model_summary.png is included when the source run produced one; classical HMM/DNN-HMM runs may only have textual architecture summaries."
+}

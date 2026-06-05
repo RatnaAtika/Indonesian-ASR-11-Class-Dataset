@@ -172,7 +172,7 @@
     - LABEL: `Bagaimana cara mengakses Wi-Fi kampus?`
 
 
-## m12-vit-modified-ID — ViT-modified-ID (Ratna 2026)
+## m12-vit-modified-ID — ViT-modified-ID (proposed in this work)
 
 1. `[0]` (WER=0.000, CER=0.000)
     - PRED: `Saya membutuhkan rekomendasi tempat wisata di kota Palembang`
@@ -215,7 +215,7 @@
     - LABEL: `Bagaimana cara mengakses Wi-Fi kampus?`
 
 
-## m13-wav2letter — Wav2Letter CNN-CTC (Collobert 2016)
+## m13-wav2letter — Wav2Letter-style CNN-CTC (Collobert 2016)
 
 1. `[0]` (WER=0.000, CER=0.000)
     - PRED: `Saya membutuhkan rekomendasi tempat wisata di kota Palembang`
@@ -344,7 +344,7 @@
     - LABEL: `bagaimana cara mengakses wi fi kampus`
 
 
-## m02b-whisper-small-ft — Whisper-small FT (Radford 2022)
+## m02b-whisper-small-ft — Whisper-small FT (Radford et al. 2023; arXiv 2022)
 
 1. `[0]` (WER=0.000, CER=0.000)
     - PRED: `Saya membutuhkan rekomendasi tempat wisata di kota Palembang`
@@ -385,4 +385,3 @@
 10. `[15375]` (WER=0.000, CER=0.000)
     - PRED: `Bagaimana cara mengakses Wi-Fi kampus?`
     - LABEL: `Bagaimana cara mengakses Wi-Fi kampus?`
-

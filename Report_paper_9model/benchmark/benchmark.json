@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-04T23:09:41.714902",
+  "generated": "2026-06-05T08:10:36.527899",
   "scope": "Paper Section 5 (Results) + Table 1 + Appendix B",
   "target_journal": "Data in Brief (Elsevier, ISSN 2352-3409)",
   "n_paper_models": 9,
@@ -18,20 +18,30 @@
   ],
   "best_paper_model": {
     "model_id": "m02b-whisper-small-ft",
-    "family": "Whisper-small FT (Radford 2022)",
+    "family": "Whisper-small FT (Radford et al. 2023; arXiv 2022)",
     "wer": 0.008523540683204734,
     "cer": 0.0018570295438410948,
     "is_user_novel": false,
-    "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/test_results/test_paper.json"
+    "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/test_results/test_paper.json",
+    "training_time_hhmmss": "04:48:29",
+    "inference_time_sec": 4363.1,
+    "n_params": 241734912,
+    "hardware_label": "Google Colab Linux, NVIDIA A100-SXM4-40GB GPU"
   },
   "paper_models_ranked_by_wer": [
     {
       "rank": 1,
       "model_id": "m02b-whisper-small-ft",
-      "family": "Whisper-small FT (Radford 2022)",
+      "family": "Whisper-small FT (Radford et al. 2023; arXiv 2022)",
       "wer": 0.008523540683204734,
       "cer": 0.0018570295438410948,
-      "is_user_novel": false
+      "is_user_novel": false,
+      "training_time_hhmmss": "04:48:29",
+      "training_time_hours": 4.808056,
+      "inference_time_sec": 4363.1,
+      "n_params": 241734912,
+      "params_millions": 241.734912,
+      "hardware_label": "Google Colab Linux, NVIDIA A100-SXM4-40GB GPU"
     },
     {
       "rank": 2,
@@ -39,15 +49,27 @@
       "family": "Conformer-CTC (Gulati 2020)",
       "wer": 0.011941638277990744,
       "cer": 0.004322092427426721,
-      "is_user_novel": false
+      "is_user_novel": false,
+      "training_time_hhmmss": "06:31:49",
+      "training_time_hours": 6.530278,
+      "inference_time_sec": 52.45,
+      "n_params": 11048219,
+      "params_millions": 11.048219,
+      "hardware_label": "Local Linux laptop, NVIDIA GeForce RTX 4060 Laptop GPU, 8 GB VRAM"
     },
     {
       "rank": 3,
       "model_id": "m12-vit-modified-ID",
-      "family": "ViT-modified-ID (Ratna 2026)",
+      "family": "ViT-modified-ID (proposed in this work)",
       "wer": 0.01776655336206327,
       "cer": 0.013009616165317267,
-      "is_user_novel": true
+      "is_user_novel": true,
+      "training_time_hhmmss": "03:44:58",
+      "training_time_hours": 3.749444,
+      "inference_time_sec": 1304.3,
+      "n_params": 4353248,
+      "params_millions": 4.353248,
+      "hardware_label": "Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU."
     },
     {
       "rank": 4,
@@ -55,7 +77,13 @@
       "family": "Bi-LSTM CTC",
       "wer": 0.04012184444231887,
       "cer": 0.013216648861286718,
-      "is_user_novel": false
+      "is_user_novel": false,
+      "training_time_hhmmss": "07:06:23",
+      "training_time_hours": 7.106389,
+      "inference_time_sec": 70.43,
+      "n_params": 32825659,
+      "params_millions": 32.825659,
+      "hardware_label": "Local Linux laptop, NVIDIA GeForce RTX 4060 Laptop GPU, 8 GB VRAM"
     },
     {
       "rank": 5,
@@ -63,15 +91,27 @@
       "family": "Vanilla Transformer (Vaswani 2017)",
       "wer": 0.043931841040738266,
       "cer": 0.0326697714313076,
-      "is_user_novel": false
+      "is_user_novel": false,
+      "training_time_hhmmss": "02:38:53",
+      "training_time_hours": 2.648056,
+      "inference_time_sec": 1293.28,
+      "n_params": 4212688,
+      "params_millions": 4.212688,
+      "hardware_label": "Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU."
     },
     {
       "rank": 6,
       "model_id": "m13-wav2letter",
-      "family": "Wav2Letter CNN-CTC (Collobert 2016)",
+      "family": "Wav2Letter-style CNN-CTC (Collobert 2016)",
       "wer": 0.09292935225495738,
       "cer": 0.05196455821641889,
-      "is_user_novel": false
+      "is_user_novel": false,
+      "training_time_hhmmss": "04:10:23",
+      "training_time_hours": 4.173056,
+      "inference_time_sec": 22.87,
+      "n_params": 24840900,
+      "params_millions": 24.8409,
+      "hardware_label": "WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata"
     },
     {
       "rank": 7,
@@ -79,7 +119,13 @@
       "family": "HMM-GMM (classical)",
       "wer": 0.9633216113236083,
       "cer": 0.7204618840522383,
-      "is_user_novel": false
+      "is_user_novel": false,
+      "training_time_hhmmss": "03:17:11",
+      "training_time_hours": 3.286389,
+      "inference_time_sec": 3277.3,
+      "n_params": 511005,
+      "params_millions": 0.511005,
+      "hardware_label": "WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata"
     },
     {
       "rank": 8,
@@ -87,7 +133,13 @@
       "family": "GMM-HMM-DNN (3-stage)",
       "wer": 0.9703327925057448,
       "cer": 0.8515677534730824,
-      "is_user_novel": false
+      "is_user_novel": false,
+      "training_time_hhmmss": "06:29:10",
+      "training_time_hours": 6.486111,
+      "inference_time_sec": 18.86,
+      "n_params": 1448336,
+      "params_millions": 1.448336,
+      "hardware_label": "WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata"
     },
     {
       "rank": 9,
@@ -95,7 +147,13 @@
       "family": "DNN-HMM (hybrid)",
       "wer": 0.9708026517682126,
       "cer": 0.8437097287945755,
-      "is_user_novel": false
+      "is_user_novel": false,
+      "training_time_hhmmss": "03:12:11",
+      "training_time_hours": 3.203056,
+      "inference_time_sec": 19.75,
+      "n_params": 1448336,
+      "params_millions": 1.448336,
+      "hardware_label": "WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata"
     }
   ],
   "paper_models": [
@@ -320,7 +378,43 @@
       },
       "paper_position": 1,
       "status": "OK",
-      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/test_results/test_paper.json"
+      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/test_results/test_paper.json",
+      "run_dir": "training_conventional/m08_hmm_gmm/runs/run_paper_20260530",
+      "training_time_sec": 11831,
+      "training_time_hhmmss": "03:17:11",
+      "training_time_hours": 3.286389,
+      "training_eval_time_sec": 3485,
+      "training_eval_time_hhmmss": "00:58:05",
+      "training_time_source": "training_conventional/m08_hmm_gmm/runs/run_paper_20260530/report.md:16-17",
+      "inference_time_sec": 3277.3,
+      "inference_time_hhmmss": "00:54:37",
+      "inference_time_hours": 0.910361,
+      "inference_time_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/test_results/test_paper.json",
+      "n_params": 511005,
+      "params_millions": 0.511005,
+      "n_templates": 209,
+      "param_count_note": "Classical HMM-GMM numeric parameter count computed from the selected best.pkl template bank: 209 templates x (5 start probabilities + 25 transitions + 5x3x80 means + 5x3x80 diagonal covariances + 5x3 mixture weights) = 511,005. This is not a neural trainable-parameter count.",
+      "param_count_source": "training_conventional/m08_hmm_gmm/runs/run_paper_20260530/checkpoints/best.pkl arrays; report.md:19 records 209 templates",
+      "os_gpu_provenance": {
+        "training": {
+          "os": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "vram_gb": null,
+          "hardware_label": "WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata",
+          "source": "training_meta.environment in test_paper.json/meta.json"
+        },
+        "test": {
+          "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+          "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "cuda_version": "12.8",
+          "torch_version": "2.10.0+cu128",
+          "timestamp": "2026-06-04T22:50:54.622535",
+          "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/test_results/test_paper.json"
+        }
+      },
+      "best_artifact": "training_conventional/m08_hmm_gmm/runs/run_paper_20260530/checkpoints/best.pkl",
+      "best_artifact_type": "pickle_hmm_gmm",
+      "best_artifact_exists": true
     },
     {
       "model_id": "m09-dnn-hmm",
@@ -543,7 +637,43 @@
       },
       "paper_position": 2,
       "status": "OK",
-      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/test_results/test_paper.json"
+      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/test_results/test_paper.json",
+      "run_dir": "training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634",
+      "training_time_sec": 11531,
+      "training_time_hhmmss": "03:12:11",
+      "training_time_hours": 3.203056,
+      "training_eval_time_sec": 0,
+      "training_eval_time_hhmmss": "00:00:00",
+      "training_time_source": "training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/report.md:16-17",
+      "inference_time_sec": 19.75,
+      "inference_time_hhmmss": "00:00:20",
+      "inference_time_hours": 0.005486,
+      "inference_time_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/test_results/test_paper.json",
+      "n_params": 1448336,
+      "params_millions": 1.448336,
+      "n_templates": null,
+      "param_count_note": "DNN acoustic model parameters.",
+      "param_count_source": "training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/report.md:18",
+      "os_gpu_provenance": {
+        "training": {
+          "os": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "vram_gb": null,
+          "hardware_label": "WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata",
+          "source": "training_meta.environment in test_paper.json/meta.json"
+        },
+        "test": {
+          "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+          "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "cuda_version": "12.8",
+          "torch_version": "2.10.0+cu128",
+          "timestamp": "2026-06-04T20:44:33.593768",
+          "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/test_results/test_paper.json"
+        }
+      },
+      "best_artifact": "training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/checkpoints/best.pkl",
+      "best_artifact_type": "pickle_dnn_hmm",
+      "best_artifact_exists": true
     },
     {
       "model_id": "m10-gmm-hmm-dnn",
@@ -766,7 +896,43 @@
       },
       "paper_position": 3,
       "status": "OK",
-      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/test_results/test_paper.json"
+      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/test_results/test_paper.json",
+      "run_dir": "training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736",
+      "training_time_sec": 23350,
+      "training_time_hhmmss": "06:29:10",
+      "training_time_hours": 6.486111,
+      "training_eval_time_sec": 3244,
+      "training_eval_time_hhmmss": "00:54:04",
+      "training_time_source": "training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/report.md:16-17",
+      "inference_time_sec": 18.86,
+      "inference_time_hhmmss": "00:00:19",
+      "inference_time_hours": 0.005239,
+      "inference_time_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/test_results/test_paper.json",
+      "n_params": 1448336,
+      "params_millions": 1.448336,
+      "n_templates": 209,
+      "param_count_note": "Stage-3 DNN parameters; Stage-1 trained 209 GMM-HMM templates.",
+      "param_count_source": "training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/report.md:18-19",
+      "os_gpu_provenance": {
+        "training": {
+          "os": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "vram_gb": null,
+          "hardware_label": "WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata",
+          "source": "training_meta.environment in test_paper.json/meta.json"
+        },
+        "test": {
+          "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+          "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "cuda_version": "12.8",
+          "torch_version": "2.10.0+cu128",
+          "timestamp": "2026-06-04T20:43:31.759984",
+          "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/test_results/test_paper.json"
+        }
+      },
+      "best_artifact": "training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/checkpoints/best.pkl",
+      "best_artifact_type": "pickle_gmm_hmm_dnn",
+      "best_artifact_exists": true
     },
     {
       "model_id": "m11-vanilla-transformer",
@@ -910,11 +1076,46 @@
       "n_params": 4212688,
       "paper_position": 4,
       "status": "OK",
-      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328/test_results/test_paper.json"
+      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328/test_results/test_paper.json",
+      "run_dir": "training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328",
+      "training_time_sec": 9533,
+      "training_time_hhmmss": "02:38:53",
+      "training_time_hours": 2.648056,
+      "training_eval_time_sec": null,
+      "training_eval_time_hhmmss": null,
+      "training_time_source": "training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328/Log_Run.txt:676",
+      "inference_time_sec": 1293.28,
+      "inference_time_hhmmss": "00:21:33",
+      "inference_time_hours": 0.359244,
+      "inference_time_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328/test_results/test_paper.json",
+      "params_millions": 4.212688,
+      "n_templates": null,
+      "param_count_note": "Total model parameters from torchinfo/log summary.",
+      "param_count_source": "training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328/Log_Run.txt:59",
+      "os_gpu_provenance": {
+        "training": {
+          "os": "not recorded in source training log",
+          "gpu": "CUDA device used; exact GPU model not recorded in source training log",
+          "vram_gb": null,
+          "hardware_label": "Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU.",
+          "source": "Log_Run.txt:10 plus test_results/test_paper.json test_environment"
+        },
+        "test": {
+          "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+          "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "cuda_version": "12.8",
+          "torch_version": "2.10.0+cu128",
+          "timestamp": "2026-06-04T21:08:12.487868",
+          "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328/test_results/test_paper.json"
+        }
+      },
+      "best_artifact": "training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328/checkpoints/best.pth",
+      "best_artifact_type": "pytorch_state_dict",
+      "best_artifact_exists": true
     },
     {
       "model_id": "m12-vit-modified-ID",
-      "family": "ViT-modified-ID (Ratna 2026)",
+      "family": "ViT-modified-ID (proposed in this work)",
       "is_paper_model": true,
       "is_user_novel": true,
       "checkpoint": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth",
@@ -1054,11 +1255,46 @@
       "n_params": 4353248,
       "paper_position": 5,
       "status": "OK",
-      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/test_results/test_paper.json"
+      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/test_results/test_paper.json",
+      "run_dir": "training_conventional/m12_vit_modified/runs/run_full_20260528_223323",
+      "training_time_sec": 13498,
+      "training_time_hhmmss": "03:44:58",
+      "training_time_hours": 3.749444,
+      "training_eval_time_sec": null,
+      "training_eval_time_hhmmss": null,
+      "training_time_source": "training_conventional/m12_vit_modified/runs/run_full_20260528_223323/Log_Run.txt:698",
+      "inference_time_sec": 1304.3,
+      "inference_time_hhmmss": "00:21:44",
+      "inference_time_hours": 0.362306,
+      "inference_time_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/test_results/test_paper.json",
+      "params_millions": 4.353248,
+      "n_templates": null,
+      "param_count_note": "Total model parameters from torchinfo/log summary.",
+      "param_count_source": "training_conventional/m12_vit_modified/runs/run_full_20260528_223323/Log_Run.txt:58",
+      "os_gpu_provenance": {
+        "training": {
+          "os": "not recorded in source training log",
+          "gpu": "CUDA device used; exact GPU model not recorded in source training log",
+          "vram_gb": null,
+          "hardware_label": "Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU.",
+          "source": "Log_Run.txt:10 plus test_results/test_paper.json test_environment"
+        },
+        "test": {
+          "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+          "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "cuda_version": "12.8",
+          "torch_version": "2.10.0+cu128",
+          "timestamp": "2026-06-04T21:30:37.131443",
+          "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/test_results/test_paper.json"
+        }
+      },
+      "best_artifact": "training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth",
+      "best_artifact_type": "pytorch_state_dict",
+      "best_artifact_exists": true
     },
     {
       "model_id": "m13-wav2letter",
-      "family": "Wav2Letter CNN-CTC (Collobert 2016)",
+      "family": "Wav2Letter-style CNN-CTC (Collobert 2016)",
       "is_paper_model": true,
       "is_user_novel": false,
       "checkpoint": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/checkpoints/best.pt",
@@ -1273,7 +1509,43 @@
       },
       "paper_position": 6,
       "status": "OK",
-      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/test_results/test_paper.json"
+      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/test_results/test_paper.json",
+      "run_dir": "training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637",
+      "training_time_sec": 15023,
+      "training_time_hhmmss": "04:10:23",
+      "training_time_hours": 4.173056,
+      "training_eval_time_sec": null,
+      "training_eval_time_hhmmss": null,
+      "training_time_source": "training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/report.md:17",
+      "inference_time_sec": 22.87,
+      "inference_time_hhmmss": "00:00:23",
+      "inference_time_hours": 0.006353,
+      "inference_time_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/test_results/test_paper.json",
+      "n_params": 24840900,
+      "params_millions": 24.8409,
+      "n_templates": null,
+      "param_count_note": "Total CNN-CTC model parameters.",
+      "param_count_source": "training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/report.md:13",
+      "os_gpu_provenance": {
+        "training": {
+          "os": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "vram_gb": null,
+          "hardware_label": "WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata",
+          "source": "training_meta.environment in test_paper.json/meta.json"
+        },
+        "test": {
+          "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+          "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "cuda_version": "12.8",
+          "torch_version": "2.10.0+cu128",
+          "timestamp": "2026-06-04T20:45:48.334590",
+          "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/test_results/test_paper.json"
+        }
+      },
+      "best_artifact": "training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/checkpoints/best.pt",
+      "best_artifact_type": "pytorch_checkpoint",
+      "best_artifact_exists": true
     },
     {
       "model_id": "m07-bilstm-ctc",
@@ -1505,14 +1777,50 @@
       },
       "paper_position": 7,
       "status": "OK",
-      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m07_bilstm_ctc/runs/run_paper_20260602_133815_linux/test_results/test_paper.json"
+      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m07_bilstm_ctc/runs/run_paper_20260602_133815_linux/test_results/test_paper.json",
+      "run_dir": "training/m07_bilstm_ctc/runs/run_paper_20260602_133815_linux",
+      "training_time_sec": 25583,
+      "training_time_hhmmss": "07:06:23",
+      "training_time_hours": 7.106389,
+      "training_eval_time_sec": null,
+      "training_eval_time_hhmmss": null,
+      "training_time_source": "training/m07_bilstm_ctc/runs/run_paper_20260602_133815_linux/report.md:17",
+      "inference_time_sec": 70.43,
+      "inference_time_hhmmss": "00:01:10",
+      "inference_time_hours": 0.019564,
+      "inference_time_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m07_bilstm_ctc/runs/run_paper_20260602_133815_linux/test_results/test_paper.json",
+      "n_params": 32825659,
+      "params_millions": 32.825659,
+      "n_templates": null,
+      "param_count_note": "Total Bi-LSTM CTC model parameters.",
+      "param_count_source": "training/m07_bilstm_ctc/runs/run_paper_20260602_133815_linux/report.md:14",
+      "os_gpu_provenance": {
+        "training": {
+          "os": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "vram_gb": 8,
+          "hardware_label": "Local Linux laptop, NVIDIA GeForce RTX 4060 Laptop GPU, 8 GB VRAM",
+          "source": "report.md + meta.json/training_meta.environment; VRAM label supplied by project run notes/user provenance"
+        },
+        "test": {
+          "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+          "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "cuda_version": "12.6",
+          "torch_version": "2.6.0+cu126",
+          "timestamp": "2026-06-02T22:24:30.152216",
+          "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m07_bilstm_ctc/runs/run_paper_20260602_133815_linux/test_results/test_paper.json"
+        }
+      },
+      "best_artifact": "training/m07_bilstm_ctc/runs/run_paper_20260602_133815_linux/checkpoints/best.pt",
+      "best_artifact_type": "pytorch_checkpoint",
+      "best_artifact_exists": true
     },
     {
       "model_id": "m06-conformer-ctc",
       "family": "Conformer-CTC (Gulati 2020)",
       "is_paper_model": true,
       "is_user_novel": false,
-      "checkpoint": "training/m06_conformer_ctc/runs/run_paper_20260601_213050/checkpoints/best.pt",
+      "checkpoint": "training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/checkpoints/best.pt",
       "checkpoint_filename": "best.pt",
       "best_train_wer": 0.008417273068405059,
       "best_train_epoch": 29,
@@ -1539,7 +1847,7 @@
       "wall_time_sec": 52.45,
       "throughput_samples_per_sec": 293.14,
       "peak_gpu_mb": 954.6,
-      "predictions_csv": "training/m06_conformer_ctc/runs/run_paper_20260601_213050/test_results/predictions.csv",
+      "predictions_csv": "training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/test_results/predictions.csv",
       "sample_predictions": [
         {
           "idx": 0,
@@ -1737,11 +2045,49 @@
       },
       "paper_position": 8,
       "status": "OK",
-      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/test_results/test_paper.json"
+      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/test_results/test_paper.json",
+      "run_dir": "training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux",
+      "training_time_sec": 23509,
+      "training_time_hhmmss": "06:31:49",
+      "training_time_hours": 6.530278,
+      "training_eval_time_sec": null,
+      "training_eval_time_hhmmss": null,
+      "training_time_source": "training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/report.md:17",
+      "inference_time_sec": 52.45,
+      "inference_time_hhmmss": "00:00:52",
+      "inference_time_hours": 0.014569,
+      "inference_time_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/test_results/test_paper.json",
+      "n_params": 11048219,
+      "params_millions": 11.048219,
+      "n_templates": null,
+      "param_count_note": "Total Conformer-CTC model parameters.",
+      "param_count_source": "training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/report.md:14",
+      "os_gpu_provenance": {
+        "training": {
+          "os": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+          "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "vram_gb": 8,
+          "hardware_label": "Local Linux laptop, NVIDIA GeForce RTX 4060 Laptop GPU, 8 GB VRAM",
+          "source": "report.md + meta.json/training_meta.environment; VRAM label supplied by project run notes/user provenance"
+        },
+        "test": {
+          "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+          "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+          "cuda_version": "12.6",
+          "torch_version": "2.6.0+cu126",
+          "timestamp": "2026-06-02T22:23:15.304720",
+          "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/test_results/test_paper.json"
+        }
+      },
+      "best_artifact": "training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/checkpoints/best.pt",
+      "best_artifact_type": "pytorch_checkpoint",
+      "best_artifact_exists": true,
+      "checkpoint_note": "Corrected to canonical selected run; older test JSON had a stale sibling-run path.",
+      "predictions_csv_note": "Corrected to canonical selected run; older test JSON had a stale sibling-run path."
     },
     {
       "model_id": "m02b-whisper-small-ft",
-      "family": "Whisper-small FT (Radford 2022)",
+      "family": "Whisper-small FT (Radford et al. 2023; arXiv 2022)",
       "is_paper_model": true,
       "is_user_novel": false,
       "checkpoint": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model",
@@ -1962,13 +2308,49 @@
       },
       "paper_position": 9,
       "status": "OK",
-      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/test_results/test_paper.json"
+      "test_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/test_results/test_paper.json",
+      "run_dir": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact",
+      "training_time_sec": 17309,
+      "training_time_hhmmss": "04:48:29",
+      "training_time_hours": 4.808056,
+      "training_eval_time_sec": null,
+      "training_eval_time_hhmmss": null,
+      "training_time_source": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/report.md:24",
+      "inference_time_sec": 4363.1,
+      "inference_time_hhmmss": "01:12:43",
+      "inference_time_hours": 1.211972,
+      "inference_time_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/test_results/test_paper.json",
+      "n_params": 241734912,
+      "params_millions": 241.734912,
+      "n_templates": null,
+      "param_count_note": "Total fine-tuned Whisper-small model parameters from run report. The original Whisper paper lists small as approximately 244M parameters; this run reports the exact HF model count used here.",
+      "param_count_source": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/report.md:20",
+      "os_gpu_provenance": {
+        "training": {
+          "os": "Linux-6.6.122+-x86_64-with-glibc2.35",
+          "gpu": "NVIDIA A100-SXM4-40GB",
+          "vram_gb": 40,
+          "hardware_label": "Google Colab Linux, NVIDIA A100-SXM4-40GB GPU",
+          "source": "report.md + meta.json/training_meta.environment + Colab audit report"
+        },
+        "test": {
+          "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+          "cuda_device": "NVIDIA A100-SXM4-40GB",
+          "cuda_version": "12.8",
+          "torch_version": "2.11.0+cu128",
+          "timestamp": "2026-06-04T06:53:04.005651",
+          "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/test_results/test_paper.json"
+        }
+      },
+      "best_artifact": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model",
+      "best_artifact_type": "huggingface_transformers_directory",
+      "best_artifact_exists": true
     }
   ],
   "secondary_models": [
     {
       "model_id": "m02b-whisper-medium-ft",
-      "family": "Whisper-medium FT (Radford 2022)",
+      "family": "Whisper-medium FT (Radford et al. 2023; arXiv 2022)",
       "is_paper_model": false,
       "is_user_novel": false,
       "status": "MISSING",

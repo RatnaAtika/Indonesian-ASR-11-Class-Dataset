@@ -33,6 +33,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional
 
+from report_paper_9model_metadata import enrich_benchmark, enrich_result, seconds_to_hhmmss
+
 PROJECT = Path(__file__).parent
 TRAINING = PROJECT / "training"
 TC = PROJECT / "training_conventional"
@@ -45,15 +47,15 @@ PAPER_MODELS = [
     ("m09-dnn-hmm",            [TC/"m09_dnn_hmm/runs"],            "DNN-HMM (hybrid)",                   2, False),
     ("m10-gmm-hmm-dnn",        [TC/"m10_gmm_hmm_dnn/runs"],        "GMM-HMM-DNN (3-stage)",              3, False),
     ("m11-vanilla-transformer",[TC/"m11_vanilla_transformer/runs"],"Vanilla Transformer (Vaswani 2017)", 4, False),
-    ("m12-vit-modified-ID",    [TC/"m12_vit_modified/runs"],       "ViT-modified-ID (Ratna 2026)",       5, True),  # \u2606 NOVEL
-    ("m13-wav2letter",         [TC/"m13_wav2letter_cnn/runs"],     "Wav2Letter CNN-CTC (Collobert 2016)",6, False),
+    ("m12-vit-modified-ID",    [TC/"m12_vit_modified/runs"],       "ViT-modified-ID (proposed in this work)",       5, True),  # \u2606 NOVEL
+    ("m13-wav2letter",         [TC/"m13_wav2letter_cnn/runs"],     "Wav2Letter-style CNN-CTC (Collobert 2016)",6, False),
     ("m07-bilstm-ctc",         [TRAINING/"m07_bilstm_ctc/runs"],   "Bi-LSTM CTC",                        7, False),
     ("m06-conformer-ctc",      [TRAINING/"m06_conformer_ctc/runs"],"Conformer-CTC (Gulati 2020)",        8, False),
-    ("m02b-whisper-small-ft", [TRAINING/"m02b_whisper_small_ft/runs"],"Whisper-small FT (Radford 2022)", 9, False),
+    ("m02b-whisper-small-ft", [TRAINING/"m02b_whisper_small_ft/runs"],"Whisper-small FT (Radford et al. 2023; arXiv 2022)", 9, False),
 ]
 
 SECONDARY_MODELS = [
-    ("m02b-whisper-medium-ft", [TRAINING/"m02b_whisper_medium_ft/runs"], "Whisper-medium FT (Radford 2022)", False),
+    ("m02b-whisper-medium-ft", [TRAINING/"m02b_whisper_medium_ft/runs"], "Whisper-medium FT (Radford et al. 2023; arXiv 2022)", False),
     ("m01-whisper-tiny",   [TRAINING/"m01_whisper_tiny/runs"],    "Whisper-tiny FT",          False),
     ("m02-whisper-small",  [TRAINING/"m02_whisper_small/runs"],   "Whisper-small FT",         False),
     ("m03-w2v2-xlsr-300m", [TRAINING/"m03_wav2vec2_xlsr_300m/runs"], "wav2vec2-XLS-R-300M FT", False),
@@ -127,6 +129,7 @@ def aggregate(out_dir: Path):
                 r["is_user_novel"] = is_novel
                 r["status"] = "OK"
                 r["test_json"] = str(tj)
+                enrich_result(r)
                 paper_results.append(r)
                 print(f"  \u2713 {slot_id}: WER={r.get('metrics', {}).get('wer'):.4f}")
     
@@ -148,6 +151,7 @@ def aggregate(out_dir: Path):
                 r["is_user_novel"] = is_novel
                 r["status"] = "OK"
                 r["test_json"] = str(tj)
+                enrich_result(r)
                 secondary_results.append(r)
                 print(f"  \u2713 {slot_id}")
     
@@ -188,6 +192,9 @@ def aggregate(out_dir: Path):
         "paper_models": paper_results,
         "secondary_models": secondary_results,
     }
+    enrich_benchmark(benchmark)
+    best_model = benchmark.get("best_paper_model")
+    ranked = sorted(valid_paper, key=lambda r: r["metrics"]["wer"])
     
     bench_json = out_dir / "benchmark.json"
     bench_json.write_text(json.dumps(benchmark, indent=2, default=str, ensure_ascii=False),
@@ -226,8 +233,8 @@ def aggregate(out_dir: Path):
     md += [
         "## Paper Table 1 \u2014 9-Model Comparison (greedy decoding, no LM, full test set)",
         "",
-        "| Rank | Slot | Family | WER | CER | MER | WIL | SER | Wall (s) | GPU MB | Best train epoch | Status |",
-        "|-----:|------|--------|----:|----:|----:|----:|----:|---------:|-------:|-----------------:|--------|",
+        "| Rank | Slot | Family | WER | CER | MER | WIL | SER | Train time | Test wall | Params (M) | Train hardware | Best epoch | Status |",
+        "|-----:|------|--------|----:|----:|----:|----:|----:|----------:|----------:|-----------:|----------------|----------:|--------|",
     ]
     table_order = ranked + [r for r in paper_results if r.get("status") == "MISSING"]
     for r in table_order:
@@ -238,17 +245,20 @@ def aggregate(out_dir: Path):
                 rank_str = str(j + 1)
                 break
         novel_marker = " \u2606" if r.get("is_user_novel") else ""
+        hardware = ((r.get('os_gpu_provenance') or {}).get('training') or {}).get('hardware_label') or 'n/a'
+        params_m = fmt(r.get('params_millions'), 3) if r.get('params_millions') is not None else ('n/a' if r.get('n_params') is None else fmt(r.get('n_params') / 1_000_000, 3))
         md.append(
             f"| {rank_str} | `{r['model_id']}{novel_marker}` | {r.get('family', '')} "
             f"| {fmt(m.get('wer'))} | {fmt(m.get('cer'))} | {fmt(m.get('mer'))} "
             f"| {fmt(m.get('wil'))} | {fmt(m.get('ser'))} "
-            f"| {fmt(r.get('wall_time_sec'), 1)} | {fmt(r.get('peak_gpu_mb'), 0)} "
+            f"| {r.get('training_time_hhmmss') or 'n/a'} | {fmt(r.get('wall_time_sec'), 1)} s "
+            f"| {params_m} | {hardware} "
             f"| {r.get('best_train_epoch') or 'n/a'} | {r.get('status')} |"
         )
 
     md += [
         "",
-        "\u2606 = User's novel architecture (Ratna 2026, this paper's first public report)",
+        "☆ = User's proposed/novel architecture in this work (no external citation claimed).",
         "",
         "## Per-Model Hyperparameter Summary",
         "",
@@ -292,20 +302,27 @@ def aggregate(out_dir: Path):
     # Paper table CSV
     csv_path = out_dir / "benchmark_table.csv"
     with csv_path.open("w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(["rank", "slot", "family", "wer", "cer", "mer", "wil", "ser",
-                    "wall_time_sec", "peak_gpu_mb", "n_epochs_trained",
-                    "best_train_epoch", "best_train_wer", "is_user_novel", "status"])
+                    "wall_time_sec", "inference_time_hhmmss", "training_time_sec",
+                    "training_time_hhmmss", "training_time_hours", "n_params",
+                    "params_millions", "n_templates", "hardware_label", "best_artifact",
+                    "peak_gpu_mb", "n_epochs_trained", "best_train_epoch",
+                    "best_train_wer", "is_user_novel", "status"])
         for r in paper_results:
             m = r.get("metrics") or {}
             rank_str = ""
             for j, rr in enumerate(ranked):
                 if rr["model_id"] == r["model_id"]:
                     rank_str = str(j + 1); break
+            hardware = ((r.get('os_gpu_provenance') or {}).get('training') or {}).get('hardware_label')
             w.writerow([
                 rank_str, r["model_id"], r.get("family", ""),
                 m.get("wer"), m.get("cer"), m.get("mer"), m.get("wil"), m.get("ser"),
-                r.get("wall_time_sec"), r.get("peak_gpu_mb"),
+                r.get("wall_time_sec"), r.get("inference_time_hhmmss"),
+                r.get("training_time_sec"), r.get("training_time_hhmmss"), r.get("training_time_hours"),
+                r.get("n_params"), r.get("params_millions"), r.get("n_templates"), hardware,
+                r.get("best_artifact"), r.get("peak_gpu_mb"),
                 r.get("n_epochs_trained"), r.get("best_train_epoch"),
                 r.get("best_train_wer"), r.get("is_user_novel"), r.get("status"),
             ])
@@ -369,7 +386,7 @@ def aggregate(out_dir: Path):
                 f"    - LABEL: `{sp.get('label', '')[:140]}`\n"
             )
         sp_md.append("")
-    (out_dir / "sample_predictions.md").write_text("\n".join(sp_md), encoding="utf-8")
+    (out_dir / "sample_predictions.md").write_text("\n".join(sp_md).rstrip() + "\n", encoding="utf-8")
     print(f"  \u2713 {out_dir / 'sample_predictions.md'}")
     
     # Training summary per-model
@@ -387,6 +404,12 @@ def aggregate(out_dir: Path):
             f"- Training epochs: {r.get('n_epochs_trained')}",
             f"- Best train WER: {fmt(r.get('best_train_wer'))}",
             f"- Test WER: {fmt(r.get('metrics', {}).get('wer'))}, CER: {fmt(r.get('metrics', {}).get('cer'))}",
+            f"- Total training time: {r.get('training_time_hhmmss') or 'n/a'} ({fmt(r.get('training_time_hours'), 3)} hours)",
+            f"- Observed full-test evaluation wall time: {seconds_to_hhmmss(r.get('wall_time_sec'))} ({fmt(r.get('wall_time_sec'), 1)} s)",
+            f"- Parameter count: {r.get('n_params') if r.get('n_params') is not None else 'n/a'} ({r.get('param_count_note') or 'n/a'})",
+            f"- Training hardware provenance: {((r.get('os_gpu_provenance') or {}).get('training') or {}).get('hardware_label') or 'n/a'}",
+            f"- Best artifact: `{r.get('best_artifact') or r.get('checkpoint')}`",
+            f"- Evidence sources: training time `{r.get('training_time_source')}`, params `{r.get('param_count_source')}`",
             f"- Training meta:",
             f"  - Python: {env.get('python', '?')}",
             f"  - Torch: {env.get('torch_version', '?')}",

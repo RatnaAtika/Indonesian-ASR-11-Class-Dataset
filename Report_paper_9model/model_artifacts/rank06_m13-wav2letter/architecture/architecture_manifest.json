@@ -1,0 +1,15 @@
+{
+  "model_id": "m13-wav2letter",
+  "summary": "model_artifacts/rank06_m13-wav2letter/architecture/architecture_summary.md",
+  "images": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank06_m13-wav2letter/architecture/model_summary.png",
+      "relative_path": "model_artifacts/rank06_m13-wav2letter/architecture/model_summary.png",
+      "size_bytes": 228718,
+      "sha256": "7aec9b624fb585258d2af5597fdfab59680fa061503d366ca3f0838495218644",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/model_summary.png",
+      "operation": "copy"
+    }
+  ],
+  "image_note": "model_summary.png is included when the source run produced one; classical HMM/DNN-HMM runs may only have textual architecture summaries."
+}

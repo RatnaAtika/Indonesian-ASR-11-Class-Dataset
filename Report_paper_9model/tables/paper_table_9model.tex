@@ -1,20 +1,21 @@
 \begin{table*}[t]
 \centering
-\caption{Nine-model Indonesian ASR benchmark on the full v7 test split (15,376 utterances). Lower is better for all error metrics.}
-\label{tab:asr-9model}
+\caption{Nine-model Indonesian ASR benchmark on the full v7 test split (15,376 utterances). Train time is the recorded total training duration for the selected best-checkpoint run. Test time is full-split inference/evaluation wall time.}
+\label{tab:asr-9model-full}
+\small
 \begin{tabular}{rllrrrrr}
 \toprule
-Rank & Model & Family & WER & CER & MER & WIL & SER \
+Rank & Model & Family & WER & CER & Train h & Test s & Params M \\
 \midrule
-1 & m02b-whisper-small-ft & Whisper-small FT (Radford 2022) & 0.0085 & 0.0019 & 0.0085 & 0.0130 & 0.0390 \
-2 & m06-conformer-ctc & Conformer-CTC (Gulati 2020) & 0.0119 & 0.0043 & 0.0119 & 0.0205 & 0.0598 \
-3 & m12-vit-modified-ID & ViT-modified-ID (Ratna 2026) & 0.0178 & 0.0130 & 0.0177 & 0.0315 & 0.0184 \
-4 & m07-bilstm-ctc & Bi-LSTM CTC & 0.0401 & 0.0132 & 0.0400 & 0.0721 & 0.1516 \
-5 & m11-vanilla-transformer & Vanilla Transformer (Vaswani 2017) & 0.0439 & 0.0327 & 0.0438 & 0.0774 & 0.0454 \
-6 & m13-wav2letter & Wav2Letter CNN-CTC (Collobert 2016) & 0.0929 & 0.0520 & 0.0920 & 0.1524 & 0.2822 \
-7 & m08-hmm-gmm & HMM-GMM (classical) & 0.9633 & 0.7205 & 0.8789 & 0.9822 & 0.9192 \
-8 & m10-gmm-hmm-dnn & GMM-HMM-DNN (3-stage) & 0.9703 & 0.8516 & 0.9690 & 0.9965 & 1.0000 \
-9 & m09-dnn-hmm & DNN-HMM (hybrid) & 0.9708 & 0.8437 & 0.9693 & 0.9967 & 1.0000 \
+1 & m02b-whisper-small-ft & Whisper-small FT (Radford et al. 2023; arXiv 2022) & 0.0085 & 0.0019 & 4.81 & 4363.1 & 241.735 \\
+2 & m06-conformer-ctc & Conformer-CTC (Gulati 2020) & 0.0119 & 0.0043 & 6.53 & 52.5 & 11.048 \\
+3 & m12-vit-modified-ID & ViT-modified-ID (proposed in this work) & 0.0178 & 0.0130 & 3.75 & 1304.3 & 4.353 \\
+4 & m07-bilstm-ctc & Bi-LSTM CTC & 0.0401 & 0.0132 & 7.11 & 70.4 & 32.826 \\
+5 & m11-vanilla-transformer & Vanilla Transformer (Vaswani 2017) & 0.0439 & 0.0327 & 2.65 & 1293.3 & 4.213 \\
+6 & m13-wav2letter & Wav2Letter-style CNN-CTC (Collobert 2016) & 0.0929 & 0.0520 & 4.17 & 22.9 & 24.841 \\
+7 & m08-hmm-gmm & HMM-GMM (classical) & 0.9633 & 0.7205 & 3.29 & 3277.3 & 0.511 \\
+8 & m10-gmm-hmm-dnn & GMM-HMM-DNN (3-stage) & 0.9703 & 0.8516 & 6.49 & 18.9 & 1.448 \\
+9 & m09-dnn-hmm & DNN-HMM (hybrid) & 0.9708 & 0.8437 & 3.20 & 19.8 & 1.448 \\
 \bottomrule
 \end{tabular}
 \end{table*}

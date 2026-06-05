@@ -1,0 +1,6 @@
+{
+  "model_id": "m10-gmm-hmm-dnn",
+  "summary": "model_artifacts/rank08_m10-gmm-hmm-dnn/architecture/architecture_summary.md",
+  "images": [],
+  "image_note": "model_summary.png is included when the source run produced one; classical HMM/DNN-HMM runs may only have textual architecture summaries."
+}

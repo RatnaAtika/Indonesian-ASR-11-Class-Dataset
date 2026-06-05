@@ -1,0 +1,79 @@
+{
+  "model_id": "m12-vit-modified-ID",
+  "purpose": "Source code needed to reproduce this model's training and testing entry points.",
+  "note": "Data files and model weights are intentionally excluded; see RUN_GUIDE.md and metadata.json for artifact locations.",
+  "files": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/source_code/train.py",
+      "relative_path": "model_artifacts/rank03_m12-vit-modified-ID/source_code/train.py",
+      "size_bytes": 2896,
+      "sha256": "0acee430a10eefd29403844daf3ecb097446b1dfa25262268c3c1eed2c38e131",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/train.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/source_code/test.py",
+      "relative_path": "model_artifacts/rank03_m12-vit-modified-ID/source_code/test.py",
+      "size_bytes": 4805,
+      "sha256": "23911e32a8a4d610b0123a3104812da801515f0387e10f97ee53d3ea507e924d",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/test.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/source_code/training_conventional/common/utils.py",
+      "relative_path": "model_artifacts/rank03_m12-vit-modified-ID/source_code/training_conventional/common/utils.py",
+      "size_bytes": 29388,
+      "sha256": "79e851d2ba803e0a5be5ad1cf6fbed49726e9e7cb08f5ad81ad9a45dbc3c6668",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/common/utils.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/source_code/training_conventional/common/test_helper.py",
+      "relative_path": "model_artifacts/rank03_m12-vit-modified-ID/source_code/training_conventional/common/test_helper.py",
+      "size_bytes": 15698,
+      "sha256": "09899d1e93810442e8cbb9233aacd1b7d30ad96a6a1287d110718b85bffbea50",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/common/test_helper.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/source_code/training_conventional/common/pkl_hmm_trainer.py",
+      "relative_path": "model_artifacts/rank03_m12-vit-modified-ID/source_code/training_conventional/common/pkl_hmm_trainer.py",
+      "size_bytes": 35636,
+      "sha256": "0cc319f8933c69c0fbba467fcb1da14253d6e0c721046dddf70d85e7b8d5827b",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/common/pkl_hmm_trainer.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/source_code/training_conventional/common/pkl_hmm_test.py",
+      "relative_path": "model_artifacts/rank03_m12-vit-modified-ID/source_code/training_conventional/common/pkl_hmm_test.py",
+      "size_bytes": 8511,
+      "sha256": "fe83d9ebd64f0f8c24ec8fbba5243132e9e62102d726f5d803cc6ddb763eafef",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/common/pkl_hmm_test.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/source_code/training_conventional/common/pkl_cnn_ctc_trainer.py",
+      "relative_path": "model_artifacts/rank03_m12-vit-modified-ID/source_code/training_conventional/common/pkl_cnn_ctc_trainer.py",
+      "size_bytes": 22610,
+      "sha256": "171fc5d2e719a07ebf6dc80a4c6505b36f5e71a0acf86879f9307a69b581a191",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/common/pkl_cnn_ctc_trainer.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/source_code/training_conventional/common/pkl_cnn_ctc_test.py",
+      "relative_path": "model_artifacts/rank03_m12-vit-modified-ID/source_code/training_conventional/common/pkl_cnn_ctc_test.py",
+      "size_bytes": 6452,
+      "sha256": "a6e76310095f94b0eb3292820efb98f913ad0f9a75eb34be648380b101be796b",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/common/pkl_cnn_ctc_test.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/source_code/external/train_model_vit.py",
+      "relative_path": "model_artifacts/rank03_m12-vit-modified-ID/source_code/external/train_model_vit.py",
+      "size_bytes": 24314,
+      "sha256": "63ddf58ab2fa71f6036b0db9b43c5dedf0aeb74dbf1e2820a07211248eba56ed",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/train_model_vit.py",
+      "operation": "copy"
+    }
+  ]
+}

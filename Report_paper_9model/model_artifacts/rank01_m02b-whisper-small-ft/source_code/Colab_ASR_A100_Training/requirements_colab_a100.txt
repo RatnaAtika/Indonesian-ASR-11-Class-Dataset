@@ -1,0 +1,17 @@
+# Do not pin torch here; use Colab's CUDA-enabled torch unless it is missing.
+transformers
+datasets
+accelerate
+evaluate
+jiwer
+soundfile
+librosa
+sentencepiece
+torchinfo
+matplotlib
+pandas
+scikit-learn
+seaborn
+reportlab
+pillow
+tqdm

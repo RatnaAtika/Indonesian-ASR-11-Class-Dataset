@@ -1,0 +1,258 @@
+{
+  "rank": 1,
+  "model_id": "m02b-whisper-small-ft",
+  "family": "Whisper-small FT (Radford et al. 2023; arXiv 2022)",
+  "wer": 0.008523540683204734,
+  "cer": 0.0018570295438410948,
+  "run_dir": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact",
+  "training_time_hhmmss": "04:48:29",
+  "training_time_hours": 4.808056,
+  "inference_time_sec": 4363.1,
+  "inference_time_hhmmss": "01:12:43",
+  "n_params": 241734912,
+  "n_templates": null,
+  "param_count_note": "Total fine-tuned Whisper-small model parameters from run report. The original Whisper paper lists small as approximately 244M parameters; this run reports the exact HF model count used here.",
+  "os_gpu_provenance": {
+    "training": {
+      "os": "Linux-6.6.122+-x86_64-with-glibc2.35",
+      "gpu": "NVIDIA A100-SXM4-40GB",
+      "vram_gb": 40,
+      "hardware_label": "Google Colab Linux, NVIDIA A100-SXM4-40GB GPU",
+      "source": "report.md + meta.json/training_meta.environment + Colab audit report"
+    },
+    "test": {
+      "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+      "cuda_device": "NVIDIA A100-SXM4-40GB",
+      "cuda_version": "12.8",
+      "torch_version": "2.11.0+cu128",
+      "timestamp": "2026-06-04T06:53:04.005651",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/test_results/test_paper.json"
+    }
+  },
+  "best_artifact_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model",
+  "best_artifact_exists": true,
+  "best_artifact_type": "huggingface_transformers_directory",
+  "best_artifact_files": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/BEST_INFO.txt",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/BEST_INFO.txt",
+      "size_bytes": 259,
+      "sha256": "8cb5326b3467657c89a5b1905b457e9a8353a4e79eb27dfa86638015bc51359a",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model/BEST_INFO.txt",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/config.json",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/config.json",
+      "size_bytes": 1302,
+      "sha256": "a6b7498da4cb8f0890baab3d8234f170639024047acf974b3c4fff3fcab73be8",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model/config.json",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/generation_config.json",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/generation_config.json",
+      "size_bytes": 4592,
+      "sha256": "ff0e2eac5d393a95158d3348b2c00e934ebc9f9f43fd0a1b396ca01faf22c296",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model/generation_config.json",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/model.safetensors",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/model.safetensors",
+      "size_bytes": 966995080,
+      "sha256": "8eedea12eb8faee50995f27e82ef0ca8fa9b2950b90de30cafd4d2b13c3b98c8",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model/model.safetensors",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/processor_config.json",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/processor_config.json",
+      "size_bytes": 409,
+      "sha256": "8c648fa85aafc59a07435ed751322499bd4238b819ca9200ddd2b5ba4df50e68",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model/processor_config.json",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/tokenizer.json",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/tokenizer.json",
+      "size_bytes": 3931230,
+      "sha256": "3f692e107a888b7b93e778934101a94ddea655e6e0dbd3e722b4a8e37b643579",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model/tokenizer.json",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/tokenizer_config.json",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/best_artifact/tokenizer_config.json",
+      "size_bytes": 2100,
+      "sha256": "459d04fa501f51cec7c279a713e40d644bc24c39bb306527eff67ae158e7d125",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model/tokenizer_config.json",
+      "operation": "hardlink"
+    }
+  ],
+  "best_artifact_operations": {
+    "hardlink": 7,
+    "copy": 0
+  },
+  "copied_run_output_files": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/report.md",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/report.md",
+      "size_bytes": 1222,
+      "sha256": "e38330a2f0a7f1420aa7d6e24ed0d8bfd3da2da984a660e79b659ca7026fb068",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/report.md",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/training_log.txt",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/training_log.txt",
+      "size_bytes": 6984,
+      "sha256": "ab1afc80de8e7900923744952430555fe2a8c608d29f4c29e960c2339d1f982a",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/log.txt",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/history.json",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/history.json",
+      "size_bytes": 2718,
+      "sha256": "4e2414c97753453bebb636c8e567075240240bee685fef019f818f38b8cd3bf9",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/history.json",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/meta.json",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/meta.json",
+      "size_bytes": 2466,
+      "sha256": "05ec1adc60e40c44781c3442c2ce753d9a54a1874dfe783b98e922a06f8e6998",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/meta.json",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/best_model_BEST_INFO.txt",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/best_model_BEST_INFO.txt",
+      "size_bytes": 259,
+      "sha256": "8cb5326b3467657c89a5b1905b457e9a8353a4e79eb27dfa86638015bc51359a",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model/BEST_INFO.txt",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/model_summary.png",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/model_summary.png",
+      "size_bytes": 119964,
+      "sha256": "8cfe4090bc2957c69f1860bacab94e018419b91b999fdafc2f53c30f6c228d61",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/model_summary.png",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/model_summary.pdf",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/model_summary.pdf",
+      "size_bytes": 22135,
+      "sha256": "cb9daacc4aaf9b6f5694f2813fcd9f0a94d7c1adae9be5135e0b8e65e610e342",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/model_summary.pdf",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/test_paper.json",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/test_paper.json",
+      "size_bytes": 8333,
+      "sha256": "064208d4a02c223a46caef75bc9bca2537e8bf9a86e6aad88deceae4a2f2d0a2",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/test_results/test_paper.json",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/test_summary.md",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/test_summary.md",
+      "size_bytes": 2846,
+      "sha256": "167734f1444f9cd6001b41b151fee2d4c059d1179b0bc45306c408024ec31a46",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/test_results/test_summary.md",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/predictions.csv",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/predictions.csv",
+      "size_bytes": 2996816,
+      "sha256": "30ed614cf6d5040d46d247b92369585da3db74afdd85907bbf88080da3cc5090",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/test_results/predictions.csv",
+      "operation": "hardlink"
+    }
+  ],
+  "source_code_files": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/train.py",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/train.py",
+      "size_bytes": 1276,
+      "sha256": "03aee62ba6d7e61fe4b5fb9ee81191c34023c03f2fcd30713a3d02687e416e78",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/train.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/test.py",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/test.py",
+      "size_bytes": 8413,
+      "sha256": "2d1680b6cba8d92f49648506730a0125ca2c6f2c151cfafd35a2c6ad013dcfe3",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/test.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/training/common/utils.py",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/training/common/utils.py",
+      "size_bytes": 29388,
+      "sha256": "79e851d2ba803e0a5be5ad1cf6fbed49726e9e7cb08f5ad81ad9a45dbc3c6668",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/utils.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/training/common/test_helper.py",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/training/common/test_helper.py",
+      "size_bytes": 15698,
+      "sha256": "09899d1e93810442e8cbb9233aacd1b7d30ad96a6a1287d110718b85bffbea50",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/test_helper.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/training/common/whisper_trainer.py",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/training/common/whisper_trainer.py",
+      "size_bytes": 20337,
+      "sha256": "af32e07bdb82b104748b8eb9eb2651948413bd6f443b81413f0a67900b2dcc9e",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/whisper_trainer.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/Colab_ASR_A100_Training/requirements_colab_a100.txt",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/Colab_ASR_A100_Training/requirements_colab_a100.txt",
+      "size_bytes": 229,
+      "sha256": "5087ca84e3fbea2265c7fe1ddd45396b2119bf63a2d5180098fed8c105a078f4",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Colab_ASR_A100_Training/requirements_colab_a100.txt",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/Colab_ASR_A100_Training/scripts/colab_bootstrap_a100.sh",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/Colab_ASR_A100_Training/scripts/colab_bootstrap_a100.sh",
+      "size_bytes": 7703,
+      "sha256": "72f8f420aac47d1c2696d35395b72d24011970d9d7d29e194924a7c6daf64f6a",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Colab_ASR_A100_Training/scripts/colab_bootstrap_a100.sh",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/source_code/Colab_ASR_A100_Training/scripts/colab_train_m02b_whisper_small_paper_exact.sh",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/source_code/Colab_ASR_A100_Training/scripts/colab_train_m02b_whisper_small_paper_exact.sh",
+      "size_bytes": 3402,
+      "sha256": "7b6c01fac2bd7ae367e348a3de0b04e5ce2f44ec0f0c9316296aa1bdaacec03b",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Colab_ASR_A100_Training/scripts/colab_train_m02b_whisper_small_paper_exact.sh",
+      "operation": "copy"
+    }
+  ],
+  "pseudocode": "model_artifacts/rank01_m02b-whisper-small-ft/pseudocode.md",
+  "architecture_summary": "model_artifacts/rank01_m02b-whisper-small-ft/architecture/architecture_summary.md",
+  "architecture_files": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/architecture/model_summary.png",
+      "relative_path": "model_artifacts/rank01_m02b-whisper-small-ft/architecture/model_summary.png",
+      "size_bytes": 119964,
+      "sha256": "8cfe4090bc2957c69f1860bacab94e018419b91b999fdafc2f53c30f6c228d61",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/model_summary.png",
+      "operation": "copy"
+    }
+  ],
+  "git_tracking_note": "Model weight extensions (*.pt, *.pth, *.pkl, *.safetensors, etc.) plus run_outputs/ and best_artifact/ are ignored by .gitignore and are local artifacts, not GitHub-tracked files. Source code, pseudocode, architecture summaries, and manifests are Git-trackable."
+}

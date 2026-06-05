@@ -1,0 +1,55 @@
+{
+  "model_id": "m06-conformer-ctc",
+  "purpose": "Source code needed to reproduce this model's training and testing entry points.",
+  "note": "Data files and model weights are intentionally excluded; see RUN_GUIDE.md and metadata.json for artifact locations.",
+  "files": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/source_code/train.py",
+      "relative_path": "model_artifacts/rank02_m06-conformer-ctc/source_code/train.py",
+      "size_bytes": 464,
+      "sha256": "44962554cc61c40a4a6ab65762e205b0172afe23c13d31c6e430a3e01514ad78",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m06_conformer_ctc/train.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/source_code/test.py",
+      "relative_path": "model_artifacts/rank02_m06-conformer-ctc/source_code/test.py",
+      "size_bytes": 1392,
+      "sha256": "c98dda6b753279bc3cba45698048b0d7756e4d2bb2a427ef48bd630c665c29d7",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m06_conformer_ctc/test.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/source_code/training/common/utils.py",
+      "relative_path": "model_artifacts/rank02_m06-conformer-ctc/source_code/training/common/utils.py",
+      "size_bytes": 29388,
+      "sha256": "79e851d2ba803e0a5be5ad1cf6fbed49726e9e7cb08f5ad81ad9a45dbc3c6668",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/utils.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/source_code/training/common/test_helper.py",
+      "relative_path": "model_artifacts/rank02_m06-conformer-ctc/source_code/training/common/test_helper.py",
+      "size_bytes": 15698,
+      "sha256": "09899d1e93810442e8cbb9233aacd1b7d30ad96a6a1287d110718b85bffbea50",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/test_helper.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/source_code/training/common/from_scratch_trainer.py",
+      "relative_path": "model_artifacts/rank02_m06-conformer-ctc/source_code/training/common/from_scratch_trainer.py",
+      "size_bytes": 26739,
+      "sha256": "ab94417a35768cc4b2c39fcd754b34cb2165a5e7d9ebcd17cf4965d7d0788358",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/from_scratch_trainer.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/source_code/training/common/from_scratch_test.py",
+      "relative_path": "model_artifacts/rank02_m06-conformer-ctc/source_code/training/common/from_scratch_test.py",
+      "size_bytes": 7576,
+      "sha256": "5171d100cb9c93a0476237f01d745ebc51dd0027c09b55041c33647b78fbe0df",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/from_scratch_test.py",
+      "operation": "copy"
+    }
+  ]
+}

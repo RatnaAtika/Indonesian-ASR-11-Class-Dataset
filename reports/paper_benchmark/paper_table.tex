@@ -9,15 +9,15 @@
   \hline
   Rank & Slot & Family & WER & CER & MER & WIL \\
   \hline
-  1 & m08-hmm-gmm & HMM-GMM template classifier & \textbf{1.1687} & \textbf{0.8980} & 0.9272 & 0.9932 \\
-   & m09-dnn-hmm & DNN-HMM (hybrid) & n/a & n/a & n/a & n/a \\
-   & m10-gmm-hmm-dnn & GMM-HMM-DNN (3-stage) & n/a & n/a & n/a & n/a \\
-   & m11-vanilla-transformer & Vanilla Transformer (Vaswani 2017) & n/a & n/a & n/a & n/a \\
-   & m12-vit-modified-ID $\star$ & ViT-modified-ID (Ratna 2026) & n/a & n/a & n/a & n/a \\
-   & m13-wav2letter & Wav2Letter CNN-CTC (Collobert 2016) & n/a & n/a & n/a & n/a \\
-   & m07-bilstm-ctc & Bi-LSTM CTC & n/a & n/a & n/a & n/a \\
-   & m06-conformer-ctc & Conformer-CTC (Gulati 2020) & n/a & n/a & n/a & n/a \\
-   & m02b-whisper-medium-ft & Whisper-medium FT (Radford 2022) & n/a & n/a & n/a & n/a \\
+  7 & m08-hmm-gmm & HMM-GMM (classical) & 0.9633 & 0.7205 & 0.8789 & 0.9822 \\
+  9 & m09-dnn-hmm & DNN-HMM (hybrid) & 0.9708 & 0.8437 & 0.9693 & 0.9967 \\
+  8 & m10-gmm-hmm-dnn & GMM-HMM-DNN (3-stage) & 0.9703 & 0.8516 & 0.9690 & 0.9965 \\
+  5 & m11-vanilla-transformer & Vanilla Transformer (Vaswani 2017) & 0.0439 & 0.0327 & 0.0438 & 0.0774 \\
+  3 & m12-vit-modified-ID $\star$ & ViT-modified-ID (proposed in this work) & 0.0178 & 0.0130 & 0.0177 & 0.0315 \\
+  6 & m13-wav2letter & Wav2Letter-style CNN-CTC (Collobert 2016) & 0.0929 & 0.0520 & 0.0920 & 0.1524 \\
+  4 & m07-bilstm-ctc & Bi-LSTM CTC & 0.0401 & 0.0132 & 0.0400 & 0.0721 \\
+  2 & m06-conformer-ctc & Conformer-CTC (Gulati 2020) & 0.0119 & 0.0043 & 0.0119 & 0.0205 \\
+  1 & m02b-whisper-small-ft & Whisper-small FT (Radford et al. 2023; arXiv 2022) & \textbf{0.0085} & \textbf{0.0019} & 0.0085 & 0.0130 \\
   \hline
   \end{tabular}
 \end{table*}

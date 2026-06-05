@@ -1,0 +1,55 @@
+{
+  "model_id": "m07-bilstm-ctc",
+  "purpose": "Source code needed to reproduce this model's training and testing entry points.",
+  "note": "Data files and model weights are intentionally excluded; see RUN_GUIDE.md and metadata.json for artifact locations.",
+  "files": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/source_code/train.py",
+      "relative_path": "model_artifacts/rank04_m07-bilstm-ctc/source_code/train.py",
+      "size_bytes": 466,
+      "sha256": "40ae91596a6e9fbe4629350f1f00eebf1e5f14e5b810c8d265a8458cde847883",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m07_bilstm_ctc/train.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/source_code/test.py",
+      "relative_path": "model_artifacts/rank04_m07-bilstm-ctc/source_code/test.py",
+      "size_bytes": 918,
+      "sha256": "21458717934e4fdde30c0e7d0129710f9b28a5f0f276e67f2e6552125e936008",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m07_bilstm_ctc/test.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/source_code/training/common/utils.py",
+      "relative_path": "model_artifacts/rank04_m07-bilstm-ctc/source_code/training/common/utils.py",
+      "size_bytes": 29388,
+      "sha256": "79e851d2ba803e0a5be5ad1cf6fbed49726e9e7cb08f5ad81ad9a45dbc3c6668",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/utils.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/source_code/training/common/test_helper.py",
+      "relative_path": "model_artifacts/rank04_m07-bilstm-ctc/source_code/training/common/test_helper.py",
+      "size_bytes": 15698,
+      "sha256": "09899d1e93810442e8cbb9233aacd1b7d30ad96a6a1287d110718b85bffbea50",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/test_helper.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/source_code/training/common/from_scratch_trainer.py",
+      "relative_path": "model_artifacts/rank04_m07-bilstm-ctc/source_code/training/common/from_scratch_trainer.py",
+      "size_bytes": 26739,
+      "sha256": "ab94417a35768cc4b2c39fcd754b34cb2165a5e7d9ebcd17cf4965d7d0788358",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/from_scratch_trainer.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/source_code/training/common/from_scratch_test.py",
+      "relative_path": "model_artifacts/rank04_m07-bilstm-ctc/source_code/training/common/from_scratch_test.py",
+      "size_bytes": 7576,
+      "sha256": "5171d100cb9c93a0476237f01d745ebc51dd0027c09b55041c33647b78fbe0df",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/common/from_scratch_test.py",
+      "operation": "copy"
+    }
+  ]
+}

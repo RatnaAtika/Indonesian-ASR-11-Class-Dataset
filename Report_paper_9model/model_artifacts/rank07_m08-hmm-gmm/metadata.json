@@ -1,0 +1,177 @@
+{
+  "rank": 7,
+  "model_id": "m08-hmm-gmm",
+  "family": "HMM-GMM (classical)",
+  "wer": 0.9633216113236083,
+  "cer": 0.7204618840522383,
+  "run_dir": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530",
+  "training_time_hhmmss": "03:17:11",
+  "training_time_hours": 3.286389,
+  "inference_time_sec": 3277.3,
+  "inference_time_hhmmss": "00:54:37",
+  "n_params": 511005,
+  "n_templates": 209,
+  "param_count_note": "Classical HMM-GMM numeric parameter count computed from the selected best.pkl template bank: 209 templates x (5 start probabilities + 25 transitions + 5x3x80 means + 5x3x80 diagonal covariances + 5x3 mixture weights) = 511,005. This is not a neural trainable-parameter count.",
+  "os_gpu_provenance": {
+    "training": {
+      "os": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "vram_gb": null,
+      "hardware_label": "WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata",
+      "source": "training_meta.environment in test_paper.json/meta.json"
+    },
+    "test": {
+      "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+      "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "cuda_version": "12.8",
+      "torch_version": "2.10.0+cu128",
+      "timestamp": "2026-06-04T22:50:54.622535",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/test_results/test_paper.json"
+    }
+  },
+  "best_artifact_source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/checkpoints/best.pkl",
+  "best_artifact_exists": true,
+  "best_artifact_type": "pickle_hmm_gmm",
+  "best_artifact_files": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/best_artifact/best.pkl",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/best_artifact/best.pkl",
+      "size_bytes": 10321583,
+      "sha256": "89162243d710a6ec5439056d7f3bc04c4d6562a20ac67a65c6b0c0947d88d017",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/checkpoints/best.pkl",
+      "operation": "hardlink"
+    }
+  ],
+  "best_artifact_operations": {
+    "hardlink": 1,
+    "copy": 0
+  },
+  "copied_run_output_files": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/report.md",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/run_outputs/report.md",
+      "size_bytes": 430,
+      "sha256": "c771eafac00d93358149b9e3f171b0ac8f6d45da57e9a546e5657adb6d20cd94",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/report.md",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/training_log.txt",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/run_outputs/training_log.txt",
+      "size_bytes": 1500,
+      "sha256": "21881dea08cea6d0f4b820924fe020f791cc1e0a4a50596cfe9caf2005f67abe",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/log.txt",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/history.json",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/run_outputs/history.json",
+      "size_bytes": 528,
+      "sha256": "ba31e9a41c206d4e842c5e02f45cf65d784048d87a8c591bb7d70e85c15c135e",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/history.json",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/meta.json",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/run_outputs/meta.json",
+      "size_bytes": 2470,
+      "sha256": "6842c0e3e4adf7a51ee3a7528df49cc8827f404d0161bdb470ec839321d1ba03",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/meta.json",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/test_paper.json",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/run_outputs/test_paper.json",
+      "size_bytes": 8471,
+      "sha256": "a98fcdf6523b320123a07472d17441721985a70d771789db268749fe37894145",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/test_results/test_paper.json",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/test_summary.md",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/run_outputs/test_summary.md",
+      "size_bytes": 2793,
+      "sha256": "35b2600f6abcbdf192af69b1df1e2b28d53e7c8e6e2ef440246324dc5d0cab9e",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/test_results/test_summary.md",
+      "operation": "hardlink"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/predictions.csv",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/run_outputs/predictions.csv",
+      "size_bytes": 3219807,
+      "sha256": "60e4e3755af82bc6c43b65bedeca9005285a1bb6dad49172da18dd70cf1f4265",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/runs/run_paper_20260530/test_results/predictions.csv",
+      "operation": "hardlink"
+    }
+  ],
+  "source_code_files": [
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/source_code/train.py",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/source_code/train.py",
+      "size_bytes": 411,
+      "sha256": "e70c82c6bc48a76c3c50b34874523ac4dec3dbb06bf2e310a6f190d0502daa97",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/train.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/source_code/test.py",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/source_code/test.py",
+      "size_bytes": 857,
+      "sha256": "86426fd12610ae1528a46a55ee8cebd3893766da77a1cb63a99b746b3b1b1c94",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m08_hmm_gmm/test.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/source_code/training_conventional/common/utils.py",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/source_code/training_conventional/common/utils.py",
+      "size_bytes": 29388,
+      "sha256": "79e851d2ba803e0a5be5ad1cf6fbed49726e9e7cb08f5ad81ad9a45dbc3c6668",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/common/utils.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/source_code/training_conventional/common/test_helper.py",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/source_code/training_conventional/common/test_helper.py",
+      "size_bytes": 15698,
+      "sha256": "09899d1e93810442e8cbb9233aacd1b7d30ad96a6a1287d110718b85bffbea50",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/common/test_helper.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/source_code/training_conventional/common/pkl_hmm_trainer.py",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/source_code/training_conventional/common/pkl_hmm_trainer.py",
+      "size_bytes": 35636,
+      "sha256": "0cc319f8933c69c0fbba467fcb1da14253d6e0c721046dddf70d85e7b8d5827b",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/common/pkl_hmm_trainer.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/source_code/training_conventional/common/pkl_hmm_test.py",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/source_code/training_conventional/common/pkl_hmm_test.py",
+      "size_bytes": 8511,
+      "sha256": "fe83d9ebd64f0f8c24ec8fbba5243132e9e62102d726f5d803cc6ddb763eafef",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/common/pkl_hmm_test.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/source_code/training_conventional/common/pkl_cnn_ctc_trainer.py",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/source_code/training_conventional/common/pkl_cnn_ctc_trainer.py",
+      "size_bytes": 22610,
+      "sha256": "171fc5d2e719a07ebf6dc80a4c6505b36f5e71a0acf86879f9307a69b581a191",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/common/pkl_cnn_ctc_trainer.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/source_code/training_conventional/common/pkl_cnn_ctc_test.py",
+      "relative_path": "model_artifacts/rank07_m08-hmm-gmm/source_code/training_conventional/common/pkl_cnn_ctc_test.py",
+      "size_bytes": 6452,
+      "sha256": "a6e76310095f94b0eb3292820efb98f913ad0f9a75eb34be648380b101be796b",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/common/pkl_cnn_ctc_test.py",
+      "operation": "copy"
+    }
+  ],
+  "pseudocode": "model_artifacts/rank07_m08-hmm-gmm/pseudocode.md",
+  "architecture_summary": "model_artifacts/rank07_m08-hmm-gmm/architecture/architecture_summary.md",
+  "architecture_files": [],
+  "git_tracking_note": "Model weight extensions (*.pt, *.pth, *.pkl, *.safetensors, etc.) plus run_outputs/ and best_artifact/ are ignored by .gitignore and are local artifacts, not GitHub-tracked files. Source code, pseudocode, architecture summaries, and manifests are Git-trackable."
+}

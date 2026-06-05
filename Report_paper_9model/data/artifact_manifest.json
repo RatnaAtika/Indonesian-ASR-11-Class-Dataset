@@ -1,24 +1,44 @@
 {
-  "generated": "2026-06-04T23:09:47.122784",
+  "generated": "2026-06-05T08:25:44.179455",
   "root": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model",
   "main_pdf": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/Report_paper_9model_FULL_DETAIL.pdf",
   "benchmark_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/benchmark/benchmark.json",
   "benchmark_json_relative": "benchmark/benchmark.json",
+  "normalized_json_relative": "data/paper_9model_results_normalized.json",
+  "evidence_table_relative": "tables/paper_9model_evidence_table.md",
+  "model_artifacts_relative": "model_artifacts/",
+  "model_artifact_index_relative": "model_artifacts/artifact_index.json",
+  "model_artifact_metadata_relative": [
+    "model_artifacts/rank01_m02b-whisper-small-ft/metadata.json",
+    "model_artifacts/rank02_m06-conformer-ctc/metadata.json",
+    "model_artifacts/rank03_m12-vit-modified-ID/metadata.json",
+    "model_artifacts/rank04_m07-bilstm-ctc/metadata.json",
+    "model_artifacts/rank05_m11-vanilla-transformer/metadata.json",
+    "model_artifacts/rank06_m13-wav2letter/metadata.json",
+    "model_artifacts/rank07_m08-hmm-gmm/metadata.json",
+    "model_artifacts/rank08_m10-gmm-hmm-dnn/metadata.json",
+    "model_artifacts/rank09_m09-dnn-hmm/metadata.json"
+  ],
   "figures": [
     "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/figures/fig1_wer_ranking.png",
     "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/figures/fig2_cer_ranking.png",
     "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/figures/fig3_wer_logscale.png",
     "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/figures/fig4_wer_cer_scatter.png",
-    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/figures/fig5_test_runtime_minutes.png"
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/figures/fig5_test_runtime_seconds.png",
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/figures/fig6_training_time_hours.png",
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/figures/fig7_parameter_counts_logscale.png"
   ],
   "figures_relative": [
     "figures/fig1_wer_ranking.png",
     "figures/fig2_cer_ranking.png",
     "figures/fig3_wer_logscale.png",
     "figures/fig4_wer_cer_scatter.png",
-    "figures/fig5_test_runtime_minutes.png"
+    "figures/fig5_test_runtime_seconds.png",
+    "figures/fig6_training_time_hours.png",
+    "figures/fig7_parameter_counts_logscale.png"
   ],
   "tables": [
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/tables/paper_9model_evidence_table.md",
     "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/tables/paper_9model_results_normalized.csv",
     "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/tables/paper_table_9model.md",
     "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/tables/paper_table_9model.tex"
