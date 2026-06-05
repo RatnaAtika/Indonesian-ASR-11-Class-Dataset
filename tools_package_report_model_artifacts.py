@@ -20,6 +20,7 @@ GLOBAL_DOC_SOURCES = [
     ("benchmark.json", OUT / "benchmark" / "benchmark.json"),
     ("paper_9model_results_normalized.json", OUT / "data" / "paper_9model_results_normalized.json"),
     ("paper_9model_evidence_table.md", OUT / "tables" / "paper_9model_evidence_table.md"),
+    ("paper_9model_evidence_summary.md", OUT / "tables" / "paper_9model_evidence_summary.md"),
     ("paper_table_9model.md", OUT / "tables" / "paper_table_9model.md"),
     ("model_pseudocode_appendix.md", OUT / "appendices" / "model_pseudocode_appendix.md"),
     ("candidate_references.md", OUT / "appendices" / "candidate_references.md"),
@@ -28,6 +29,7 @@ GLOBAL_DOC_SOURCES = [
     ("tools_package_report_model_artifacts.py", PROJECT / "tools_package_report_model_artifacts.py"),
     ("report_paper_9model_metadata.py", PROJECT / "report_paper_9model_metadata.py"),
     ("tools_verify_report_model_artifacts.py", PROJECT / "tools_verify_report_model_artifacts.py"),
+    ("tools_verify_report_readability.py", PROJECT / "tools_verify_report_readability.py"),
 ]
 
 DEEP_COMMON = [

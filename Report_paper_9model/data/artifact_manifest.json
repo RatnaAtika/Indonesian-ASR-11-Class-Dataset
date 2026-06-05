@@ -1,11 +1,12 @@
 {
-  "generated": "2026-06-05T08:25:44.179455",
+  "generated": "2026-06-05T08:40:45.476880",
   "root": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model",
   "main_pdf": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/Report_paper_9model_FULL_DETAIL.pdf",
   "benchmark_json": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/benchmark/benchmark.json",
   "benchmark_json_relative": "benchmark/benchmark.json",
   "normalized_json_relative": "data/paper_9model_results_normalized.json",
   "evidence_table_relative": "tables/paper_9model_evidence_table.md",
+  "evidence_summary_relative": "tables/paper_9model_evidence_summary.md",
   "model_artifacts_relative": "model_artifacts/",
   "model_artifact_index_relative": "model_artifacts/artifact_index.json",
   "model_artifact_metadata_relative": [
@@ -38,6 +39,7 @@
     "figures/fig7_parameter_counts_logscale.png"
   ],
   "tables": [
+    "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/tables/paper_9model_evidence_summary.md",
     "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/tables/paper_9model_evidence_table.md",
     "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/tables/paper_9model_results_normalized.csv",
     "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/tables/paper_table_9model.md",

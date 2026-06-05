@@ -28,33 +28,86 @@ All reported test metrics use the same v7 test split with n=15,376 utterances. T
 
 The nine evaluated systems are: HMM-GMM template classification (m08), DNN-HMM (m09), GMM-HMM-DNN staged hybrid (m10), Vanilla Transformer (m11), ViT-modified-ID (m12, proposed in this work), Wav2Letter-style CNN-CTC (m13), Bi-LSTM CTC (m07), Conformer-CTC (m06), and Whisper-small fine-tuning (m02b). Pseudocode for each model is provided in `appendices/model_pseudocode_appendix.md`.
 
-## 4. Results
+## 4. Results summary
 
-| Rank | Model | Family | WER | CER | Train time | Test time | Params | Training hardware | Best epoch |
-|---:|---|---|---:|---:|---:|---:|---:|---|---:|
-| 1 | `m02b-whisper-small-ft` | Whisper-small FT (Radford et al. 2023; arXiv 2022) | 0.0085 | 0.0019 | 04:48:29 | 01:12:43 | 241,734,912 | Google Colab Linux, A100-SXM4-40GB GPU | 5 |
-| 2 | `m06-conformer-ctc` | Conformer-CTC (Gulati 2020) | 0.0119 | 0.0043 | 06:31:49 | 00:00:52 | 11,048,219 | Local Linux laptop, RTX 4060 Laptop GPU, 8 GB VRAM | 29 |
-| 3 | `m12-vit-modified-ID` | ViT-modified-ID (proposed in this work) | 0.0178 | 0.0130 | 03:44:58 | 00:21:44 | 4,353,248 | Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU. | n/a |
-| 4 | `m07-bilstm-ctc` | Bi-LSTM CTC | 0.0401 | 0.0132 | 07:06:23 | 00:01:10 | 32,825,659 | Local Linux laptop, RTX 4060 Laptop GPU, 8 GB VRAM | 30 |
-| 5 | `m11-vanilla-transformer` | Vanilla Transformer (Vaswani 2017) | 0.0439 | 0.0327 | 02:38:53 | 00:21:33 | 4,212,688 | Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU. | n/a |
-| 6 | `m13-wav2letter` | Wav2Letter-style CNN-CTC (Collobert 2016) | 0.0929 | 0.0520 | 04:10:23 | 00:00:23 | 24,840,900 | WSL2 Linux, RTX 4060 Laptop GPU; VRAM not recorded in run metadata | 27 |
-| 7 | `m08-hmm-gmm` | HMM-GMM (classical) | 0.9633 | 0.7205 | 03:17:11 | 00:54:37 | 511,005 | WSL2 Linux, RTX 4060 Laptop GPU; VRAM not recorded in run metadata | 1 |
-| 8 | `m10-gmm-hmm-dnn` | GMM-HMM-DNN (3-stage) | 0.9703 | 0.8516 | 06:29:10 | 00:00:19 | 1,448,336 | WSL2 Linux, RTX 4060 Laptop GPU; VRAM not recorded in run metadata | 15 |
-| 9 | `m09-dnn-hmm` | DNN-HMM (hybrid) | 0.9708 | 0.8437 | 03:12:11 | 00:00:20 | 1,448,336 | WSL2 Linux, RTX 4060 Laptop GPU; VRAM not recorded in run metadata | 12 |
+The ranking below uses the same full v7 test split (15,376 utterances), greedy decoding, and no external language model.
 
-## 5. Evidence-backed compute and provenance table
+1. `m02b-whisper-small-ft` (Whisper-small FT (Radford et al. 2023; arXiv 2022)) — WER=0.0085, CER=0.0019; train=04:48:29, test=01:12:43; params=241,734,912; hardware=Google Colab Linux, A100-SXM4-40GB GPU.
+2. `m06-conformer-ctc` (Conformer-CTC (Gulati 2020)) — WER=0.0119, CER=0.0043; train=06:31:49, test=00:00:52; params=11,048,219; hardware=Local Linux laptop, RTX 4060 Laptop GPU, 8 GB VRAM.
+3. `m12-vit-modified-ID` (ViT-modified-ID (proposed in this work)) — WER=0.0178, CER=0.0130; train=03:44:58, test=00:21:44; params=4,353,248; hardware=Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU.
+4. `m07-bilstm-ctc` (Bi-LSTM CTC) — WER=0.0401, CER=0.0132; train=07:06:23, test=00:01:10; params=32,825,659; hardware=Local Linux laptop, RTX 4060 Laptop GPU, 8 GB VRAM.
+5. `m11-vanilla-transformer` (Vanilla Transformer (Vaswani 2017)) — WER=0.0439, CER=0.0327; train=02:38:53, test=00:21:33; params=4,212,688; hardware=Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU.
+6. `m13-wav2letter` (Wav2Letter-style CNN-CTC (Collobert 2016)) — WER=0.0929, CER=0.0520; train=04:10:23, test=00:00:23; params=24,840,900; hardware=WSL2 Linux, RTX 4060 Laptop GPU; VRAM not recorded in run metadata.
+7. `m08-hmm-gmm` (HMM-GMM (classical)) — WER=0.9633, CER=0.7205; train=03:17:11, test=00:54:37; params=511,005; hardware=WSL2 Linux, RTX 4060 Laptop GPU; VRAM not recorded in run metadata.
+8. `m10-gmm-hmm-dnn` (GMM-HMM-DNN (3-stage)) — WER=0.9703, CER=0.8516; train=06:29:10, test=00:00:19; params=1,448,336; hardware=WSL2 Linux, RTX 4060 Laptop GPU; VRAM not recorded in run metadata.
+9. `m09-dnn-hmm` (DNN-HMM (hybrid)) — WER=0.9708, CER=0.8437; train=03:12:11, test=00:00:20; params=1,448,336; hardware=WSL2 Linux, RTX 4060 Laptop GPU; VRAM not recorded in run metadata.
 
-| Model | Train time | Train h | Test time | Params | Templates | Hardware provenance | Evidence sources | Best artifact exists |
-|---|---:|---:|---:|---:|---:|---|---|---:|
-| `m02b-whisper-small-ft` | 04:48:29 | 4.808 | 01:12:43 | 241,734,912 | n/a | Google Colab Linux, NVIDIA A100-SXM4-40GB GPU | time: `training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/report.md:24`; params: `training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/report.md:20`; hw: `report.md + meta.json/training_meta.environment + Colab audit report` | True |
-| `m06-conformer-ctc` | 06:31:49 | 6.530 | 00:00:52 | 11,048,219 | n/a | Local Linux laptop, NVIDIA GeForce RTX 4060 Laptop GPU, 8 GB VRAM | time: `training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/report.md:17`; params: `training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/report.md:14`; hw: `report.md + meta.json/training_meta.environment; VRAM label supplied by project run notes/user provenance` | True |
-| `m12-vit-modified-ID` | 03:44:58 | 3.749 | 00:21:44 | 4,353,248 | n/a | Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU. | time: `training_conventional/m12_vit_modified/runs/run_full_20260528_223323/Log_Run.txt:698`; params: `training_conventional/m12_vit_modified/runs/run_full_20260528_223323/Log_Run.txt:58`; hw: `Log_Run.txt:10 plus test_results/test_paper.json test_environment` | True |
-| `m07-bilstm-ctc` | 07:06:23 | 7.106 | 00:01:10 | 32,825,659 | n/a | Local Linux laptop, NVIDIA GeForce RTX 4060 Laptop GPU, 8 GB VRAM | time: `training/m07_bilstm_ctc/runs/run_paper_20260602_133815_linux/report.md:17`; params: `training/m07_bilstm_ctc/runs/run_paper_20260602_133815_linux/report.md:14`; hw: `report.md + meta.json/training_meta.environment; VRAM label supplied by project run notes/user provenance` | True |
-| `m11-vanilla-transformer` | 02:38:53 | 2.648 | 00:21:33 | 4,212,688 | n/a | Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU. | time: `training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328/Log_Run.txt:676`; params: `training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328/Log_Run.txt:59`; hw: `Log_Run.txt:10 plus test_results/test_paper.json test_environment` | True |
-| `m13-wav2letter` | 04:10:23 | 4.173 | 00:00:23 | 24,840,900 | n/a | WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata | time: `training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/report.md:17`; params: `training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/report.md:13`; hw: `training_meta.environment in test_paper.json/meta.json` | True |
-| `m08-hmm-gmm` | 03:17:11 | 3.286 | 00:54:37 | 511,005 | 209 | WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata | time: `training_conventional/m08_hmm_gmm/runs/run_paper_20260530/report.md:16-17`; params: `training_conventional/m08_hmm_gmm/runs/run_paper_20260530/checkpoints/best.pkl arrays; report.md:19 records 209 templates`; hw: `training_meta.environment in test_paper.json/meta.json` | True |
-| `m10-gmm-hmm-dnn` | 06:29:10 | 6.486 | 00:00:19 | 1,448,336 | 209 | WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata | time: `training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/report.md:16-17`; params: `training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/report.md:18-19`; hw: `training_meta.environment in test_paper.json/meta.json` | True |
-| `m09-dnn-hmm` | 03:12:11 | 3.203 | 00:00:20 | 1,448,336 | n/a | WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata | time: `training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/report.md:16-17`; params: `training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/report.md:18`; hw: `training_meta.environment in test_paper.json/meta.json` | True |
+## 5. Evidence-backed compute and provenance summary
+
+The following compact cards avoid wide tables in the PDF and manuscript draft. For full audit paths, see `tables/paper_9model_evidence_table.md`, `benchmark/benchmark.json`, and `data/paper_9model_results_normalized.json`.
+
+### m02b-whisper-small-ft
+- Timing: train 04:48:29 (4.808 h); observed full-test evaluation 01:12:43.
+- Size: params 241,734,912; templates n/a.
+- Hardware provenance: Google Colab Linux, NVIDIA A100-SXM4-40GB GPU.
+- Evidence sources: time=training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/report.md:24; params=training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/report.md:20; hw=report.md + meta.json/training_meta.environment + Colab audit report.
+- Best artifact exists: True.
+
+### m06-conformer-ctc
+- Timing: train 06:31:49 (6.530 h); observed full-test evaluation 00:00:52.
+- Size: params 11,048,219; templates n/a.
+- Hardware provenance: Local Linux laptop, NVIDIA GeForce RTX 4060 Laptop GPU, 8 GB VRAM.
+- Evidence sources: time=training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/report.md:17; params=training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux/report.md:14; hw=report.md + meta.json/training_meta.environment; VRAM label supplied by project run notes/user provenance.
+- Best artifact exists: True.
+
+### m12-vit-modified-ID
+- Timing: train 03:44:58 (3.749 h); observed full-test evaluation 00:21:44.
+- Size: params 4,353,248; templates n/a.
+- Hardware provenance: Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU.
+- Evidence sources: time=training_conventional/m12_vit_modified/runs/run_full_20260528_223323/Log_Run.txt:698; params=training_conventional/m12_vit_modified/runs/run_full_20260528_223323/Log_Run.txt:58; hw=Log_Run.txt:10 plus test_results/test_paper.json test_environment.
+- Best artifact exists: True.
+
+### m07-bilstm-ctc
+- Timing: train 07:06:23 (7.106 h); observed full-test evaluation 00:01:10.
+- Size: params 32,825,659; templates n/a.
+- Hardware provenance: Local Linux laptop, NVIDIA GeForce RTX 4060 Laptop GPU, 8 GB VRAM.
+- Evidence sources: time=training/m07_bilstm_ctc/runs/run_paper_20260602_133815_linux/report.md:17; params=training/m07_bilstm_ctc/runs/run_paper_20260602_133815_linux/report.md:14; hw=report.md + meta.json/training_meta.environment; VRAM label supplied by project run notes/user provenance.
+- Best artifact exists: True.
+
+### m11-vanilla-transformer
+- Timing: train 02:38:53 (2.648 h); observed full-test evaluation 00:21:33.
+- Size: params 4,212,688; templates n/a.
+- Hardware provenance: Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU.
+- Evidence sources: time=training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328/Log_Run.txt:676; params=training_conventional/m11_vanilla_transformer/runs/run_full_20260529_042328/Log_Run.txt:59; hw=Log_Run.txt:10 plus test_results/test_paper.json test_environment.
+- Best artifact exists: True.
+
+### m13-wav2letter
+- Timing: train 04:10:23 (4.173 h); observed full-test evaluation 00:00:23.
+- Size: params 24,840,900; templates n/a.
+- Hardware provenance: WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata.
+- Evidence sources: time=training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/report.md:17; params=training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/report.md:13; hw=training_meta.environment in test_paper.json/meta.json.
+- Best artifact exists: True.
+
+### m08-hmm-gmm
+- Timing: train 03:17:11 (3.286 h); observed full-test evaluation 00:54:37.
+- Size: params 511,005; templates 209.
+- Hardware provenance: WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata.
+- Evidence sources: time=training_conventional/m08_hmm_gmm/runs/run_paper_20260530/report.md:16-17; params=.../m08_hmm_gmm/runs/run_paper_20260530/checkpoints/best.pkl arrays; report.md:19 records 209 templates; hw=training_meta.environment in test_paper.json/meta.json.
+- Best artifact exists: True.
+
+### m10-gmm-hmm-dnn
+- Timing: train 06:29:10 (6.486 h); observed full-test evaluation 00:00:19.
+- Size: params 1,448,336; templates 209.
+- Hardware provenance: WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata.
+- Evidence sources: time=training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/report.md:16-17; params=training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/report.md:18-19; hw=training_meta.environment in test_paper.json/meta.json.
+- Best artifact exists: True.
+
+### m09-dnn-hmm
+- Timing: train 03:12:11 (3.203 h); observed full-test evaluation 00:00:20.
+- Size: params 1,448,336; templates n/a.
+- Hardware provenance: WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata.
+- Evidence sources: time=training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/report.md:16-17; params=training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/report.md:18; hw=training_meta.environment in test_paper.json/meta.json.
+- Best artifact exists: True.
 
 ## 6. Internal interpretation notes (move to Discussion/Appendix as needed)
 

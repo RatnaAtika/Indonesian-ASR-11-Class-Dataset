@@ -68,7 +68,7 @@ def params_m_display(r: dict[str, Any]) -> str:
 
 def hardware_short(r: dict[str, Any]) -> str:
     label = r.get("training_hardware") or ((r.get("os_gpu_provenance") or {}).get("training") or {}).get("hardware_label") or "n/a"
-    return label.replace("NVIDIA GeForce ", "").replace("NVIDIA ", "")
+    return label.replace("NVIDIA GeForce ", "").replace("NVIDIA ", "").rstrip(".")
 
 
 def rel_improve(a: float | None, b: float | None) -> float | None:
@@ -211,6 +211,57 @@ for r in paper:
         f"{r.get('best_artifact_exists')} |"
     )
 (TABLES / "paper_9model_evidence_table.md").write_text("\n".join(evidence_md) + "\n", encoding="utf-8")
+
+
+def compact_path(value: Any, keep_parts: int = 5) -> str:
+    if not value:
+        return "n/a"
+    s = str(value).replace(str(ROOT) + "/", "")
+    parts = s.split("/")
+    if len(parts) > keep_parts:
+        return ".../" + "/".join(parts[-keep_parts:])
+    return s
+
+
+def result_summary_lines() -> list[str]:
+    lines = [
+        "The ranking below uses the same full v7 test split (15,376 utterances), greedy decoding, and no external language model.",
+        "",
+    ]
+    for r in records:
+        lines.append(
+            f"{r['rank']}. `{r['model_id']}` ({r['family']}) — "
+            f"WER={r['wer']:.4f}, CER={r['cer']:.4f}; "
+            f"train={r['training_time_hhmmss'] or 'n/a'}, test={r['inference_time_hhmmss']}; "
+            f"params={params_display(r)}; hardware={hardware_short(r)}."
+        )
+    return lines
+
+
+def evidence_summary_lines() -> list[str]:
+    lines = [
+        "# PDF-friendly evidence and provenance summary",
+        "",
+        "This readable summary avoids wide tables in the full-detail PDF. For full audit paths, see `tables/paper_9model_evidence_table.md`, `benchmark/benchmark.json`, and `data/paper_9model_results_normalized.json`.",
+        "",
+    ]
+    for r in paper:
+        train = ((r.get("os_gpu_provenance") or {}).get("training") or {})
+        lines.extend([
+            f"## {r['model_id']}",
+            f"- Timing: train {r.get('training_time_hhmmss') or 'n/a'} ({fmt_num(r.get('training_time_hours'), 3)} h); observed full-test evaluation {r.get('inference_time_hhmmss') or seconds_to_hhmmss(r.get('wall_time_sec'))}.",
+            f"- Size: params {fmt_int(r.get('n_params'))}; templates {r.get('n_templates') or 'n/a'}.",
+            f"- Hardware provenance: {(train.get('hardware_label') or 'n/a').rstrip('.')}.",
+            f"- Evidence sources: time={compact_path(r.get('training_time_source'))}; params={compact_path(r.get('param_count_source'))}; hw={train.get('source') or 'n/a'}.",
+            f"- Best artifact exists: {r.get('best_artifact_exists')}.",
+            "",
+        ])
+    return lines
+
+
+result_summary_md = "\n".join(result_summary_lines())
+evidence_summary_md = "\n".join(evidence_summary_lines()).rstrip() + "\n"
+(TABLES / "paper_9model_evidence_summary.md").write_text(evidence_summary_md, encoding="utf-8")
 
 # LaTeX: concise numeric table; detailed provenance remains in Markdown/JSON.
 def tex_escape(s: Any) -> str:
@@ -355,8 +406,10 @@ These references support the benchmarked method families. They do **not** establ
 
 # Manuscript markdown
 impr = analysis["relative_improvements"]
-compute_table = "\n".join(evidence_md[4:])
-main_table = "\n".join(md_lines[5:])
+main_results_text = result_summary_md
+compute_summary_text = "\n".join(evidence_summary_lines()[4:]).strip().replace("\n## ", "\n### ")
+if compute_summary_text.startswith("## "):
+    compute_summary_text = "#" + compute_summary_text
 manual_caveat = (
     "m11 and m12 source training logs record CUDA use but do not record exact training OS/GPU model; "
     "their later full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU."
@@ -393,13 +446,15 @@ All reported test metrics use the same v7 test split with n=15,376 utterances. T
 
 The nine evaluated systems are: HMM-GMM template classification (m08), DNN-HMM (m09), GMM-HMM-DNN staged hybrid (m10), Vanilla Transformer (m11), ViT-modified-ID (m12, proposed in this work), Wav2Letter-style CNN-CTC (m13), Bi-LSTM CTC (m07), Conformer-CTC (m06), and Whisper-small fine-tuning (m02b). Pseudocode for each model is provided in `appendices/model_pseudocode_appendix.md`.
 
-## 4. Results
+## 4. Results summary
 
-{main_table}
+{main_results_text}
 
-## 5. Evidence-backed compute and provenance table
+## 5. Evidence-backed compute and provenance summary
 
-{compute_table}
+The following compact cards avoid wide tables in the PDF and manuscript draft. For full audit paths, see `tables/paper_9model_evidence_table.md`, `benchmark/benchmark.json`, and `data/paper_9model_results_normalized.json`.
+
+{compute_summary_text}
 
 ## 6. Internal interpretation notes (move to Discussion/Appendix as needed)
 
@@ -500,13 +555,11 @@ with PdfPages(pdf_path) as pdf:
         "New in this revision: training time, observed full-test evaluation wall time, parameter count, OS/GPU provenance, evidence table, and per-model artifact package.",
         "Recommendation: claim Whisper-small FT as the strongest internal benchmark and ViT-modified-ID as a strong novel non-Whisper architecture.",
     ]))
-    table_body = "\n".join([
-        f"{r['rank']}. {r['model_id']} | WER={r['wer']:.4f} | CER={r['cer']:.4f} | train={r['training_time_hhmmss']} | test={r['inference_time_hhmmss']} | params={params_display(r)}"
-        for r in records
-    ])
-    text_page("Main result table with timing and parameters", table_body)
-    text_page("Evidence and provenance table", "\n".join(evidence_md), fontsize=7)
-    text_page("ScienceDirect/Data in Brief-style manuscript draft", manuscript, fontsize=8)
+    table_body = "\n".join(result_summary_lines())
+    text_page("Main result summary with timing and parameters", table_body)
+    text_page("Evidence and provenance summary", evidence_summary_md, fontsize=8)
+    draft_body = manuscript
+    text_page("ScienceDirect/Data in Brief-style manuscript draft", draft_body, fontsize=8)
     text_page("Pseudocode appendix", pseudo, fontsize=8)
     text_page("Candidate references and submission caution", refs, fontsize=8)
     for img in [
@@ -531,6 +584,7 @@ with PdfPages(pdf_path) as pdf:
     "benchmark_json_relative": "benchmark/benchmark.json",
     "normalized_json_relative": "data/paper_9model_results_normalized.json",
     "evidence_table_relative": "tables/paper_9model_evidence_table.md",
+    "evidence_summary_relative": "tables/paper_9model_evidence_summary.md",
     "model_artifacts_relative": "model_artifacts/",
     "model_artifact_index_relative": "model_artifacts/artifact_index.json",
     "model_artifact_metadata_relative": [str(p.relative_to(OUT)) for p in sorted(ART.glob("rank*/metadata.json"))],

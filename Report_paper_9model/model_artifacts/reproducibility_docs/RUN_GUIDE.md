@@ -1114,6 +1114,7 @@ python3 tools_package_report_model_artifacts.py
 
 ```bash
 python3 tools_verify_report_model_artifacts.py
+python3 tools_verify_report_readability.py
 ```
 
 ### `benchmark.json` schema (AI agent entry point)

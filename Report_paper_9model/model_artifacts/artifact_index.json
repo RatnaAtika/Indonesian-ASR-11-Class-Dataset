@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-05T08:27:57.103875",
+  "generated": "2026-06-05T08:40:46.809728",
   "purpose": "Per-model best-artifact package for the nine-model Data in Brief benchmark.",
   "path_base": "Report_paper_9model",
   "paths_are_relative_to": "Report_paper_9model",
@@ -7,7 +7,7 @@
   "reproducibility_docs": {
     "dir": "model_artifacts/reproducibility_docs",
     "manifest": "model_artifacts/reproducibility_docs/reproducibility_docs_manifest.json",
-    "file_count": 12
+    "file_count": 14
   },
   "models": [
     {

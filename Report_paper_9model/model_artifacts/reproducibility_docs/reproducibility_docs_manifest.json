@@ -4,8 +4,8 @@
     {
       "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/reproducibility_docs/RUN_GUIDE.md",
       "relative_path": "model_artifacts/reproducibility_docs/RUN_GUIDE.md",
-      "size_bytes": 56126,
-      "sha256": "2b252073face720f1c5574298df619f43ebbff2e4362f2ae4f495f8f2e61e514",
+      "size_bytes": 56169,
+      "sha256": "2de54ada59fe612f3d810d456d334b87c6541f60aa73ab274a7c0b858db23b8a",
       "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/RUN_GUIDE.md",
       "operation": "copy"
     },
@@ -34,10 +34,18 @@
       "operation": "copy"
     },
     {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/reproducibility_docs/paper_9model_evidence_summary.md",
+      "relative_path": "model_artifacts/reproducibility_docs/paper_9model_evidence_summary.md",
+      "size_bytes": 5309,
+      "sha256": "d6e075e4afc961ad08c3be1522cb95971de7e44a2f473254b485cc0a1700b4ee",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/tables/paper_9model_evidence_summary.md",
+      "operation": "copy"
+    },
+    {
       "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/reproducibility_docs/paper_table_9model.md",
       "relative_path": "model_artifacts/reproducibility_docs/paper_table_9model.md",
-      "size_bytes": 2251,
-      "sha256": "4a6626b6a187f3d1e9c0870b4f62c6f81b7ebcf51b0d9be04d4a57f5358ada69",
+      "size_bytes": 2249,
+      "sha256": "07493f57b4bf1e831c7c0d7cbadc04dfcd3636b16794f999e432cc5ad107929e",
       "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/tables/paper_table_9model.md",
       "operation": "copy"
     },
@@ -68,16 +76,16 @@
     {
       "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/reproducibility_docs/tools_generate_report_paper_9model.py",
       "relative_path": "model_artifacts/reproducibility_docs/tools_generate_report_paper_9model.py",
-      "size_bytes": 31738,
-      "sha256": "d3d051db18272b29ac8fa10092731d6d86864a79f51d9b034a20d26ea962ef1c",
+      "size_bytes": 34368,
+      "sha256": "b089532f1ac311457e13f90e9498edd5c4a496c04ed1067db371d7b23bad4966",
       "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/tools_generate_report_paper_9model.py",
       "operation": "copy"
     },
     {
       "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/reproducibility_docs/tools_package_report_model_artifacts.py",
       "relative_path": "model_artifacts/reproducibility_docs/tools_package_report_model_artifacts.py",
-      "size_bytes": 21498,
-      "sha256": "04876b76b5ee4df37d421c9adc53c47f74f238f643f3797a6700487378f68616",
+      "size_bytes": 21685,
+      "sha256": "0fcf72bc083c681e3f761efbab9cab0e3094881177d448860c79510e3e78b655",
       "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/tools_package_report_model_artifacts.py",
       "operation": "copy"
     },
@@ -92,9 +100,17 @@
     {
       "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/reproducibility_docs/tools_verify_report_model_artifacts.py",
       "relative_path": "model_artifacts/reproducibility_docs/tools_verify_report_model_artifacts.py",
-      "size_bytes": 3632,
-      "sha256": "2285bb65d5e5264053a775885fe993bd14c26271e3cbbd6b34f8f69e64dba57d",
+      "size_bytes": 3672,
+      "sha256": "6a23ba72f5efc1754e029f93c05f93fc31b2f01d0ad21d4035944fb171036247",
       "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/tools_verify_report_model_artifacts.py",
+      "operation": "copy"
+    },
+    {
+      "path": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/Report_paper_9model/model_artifacts/reproducibility_docs/tools_verify_report_readability.py",
+      "relative_path": "model_artifacts/reproducibility_docs/tools_verify_report_readability.py",
+      "size_bytes": 2604,
+      "sha256": "7e64d341718b76d02db2b40fb255c3372699b554a02bd5a524fb2d554b14d16d",
+      "source": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/tools_verify_report_readability.py",
       "operation": "copy"
     }
   ]

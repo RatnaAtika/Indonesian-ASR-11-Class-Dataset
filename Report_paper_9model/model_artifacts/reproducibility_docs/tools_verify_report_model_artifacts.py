@@ -12,6 +12,7 @@ REQUIRED_GLOBAL_DOCS = [
     "benchmark.json",
     "paper_9model_results_normalized.json",
     "paper_9model_evidence_table.md",
+    "paper_9model_evidence_summary.md",
     "paper_table_9model.md",
     "model_pseudocode_appendix.md",
     "candidate_references.md",
