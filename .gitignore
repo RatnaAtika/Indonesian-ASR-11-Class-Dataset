@@ -74,6 +74,9 @@ Colab_ASR_A100_Training/results/
 !reports/dataset_statistics_v7_paper9/**/*.pdf
 !reports/dataset_statistics_v7_paper9/*.pdf
 
+# --- Exception: publish paper-ready accent spectrogram support PDFs ---
+!Report_paper_9model/spectrogram_logat/**/*.pdf
+
 # Local per-model artifact package: keep manifests/README in Git, not copied run outputs or weights.
 Report_paper_9model/model_artifacts/**/best_artifact/
 Report_paper_9model/model_artifacts/**/run_outputs/
