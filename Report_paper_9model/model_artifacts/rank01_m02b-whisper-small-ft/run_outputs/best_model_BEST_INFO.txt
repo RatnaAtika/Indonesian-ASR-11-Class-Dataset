@@ -1,0 +1,5 @@
+model_id: openai/whisper-small
+best_wer: 0.0014584453561774
+best_cer: 0.0010674592595061152
+best_epoch: 5
+load: WhisperForConditionalGeneration.from_pretrained('training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model')

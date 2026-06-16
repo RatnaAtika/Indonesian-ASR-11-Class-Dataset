@@ -1,0 +1,656 @@
+{
+  "generated": "2026-06-16T22:41:29",
+  "purpose": "GitHub-safe run_outputs upload manifest for all 9 paper model artifacts.",
+  "policy": "Include run_outputs files <= 1,000,000 bytes and exclude model/checkpoint extensions. Skip files >1 MB because large prediction/model artifacts will be uploaded separately to Hugging Face/model storage.",
+  "include_limit_bytes": 1000000,
+  "model_weight_extensions_skipped": [
+    ".bin",
+    ".ckpt",
+    ".h5",
+    ".keras",
+    ".pkl",
+    ".pt",
+    ".pth",
+    ".safetensors"
+  ],
+  "included_count": 61,
+  "included_total_bytes": 1602642,
+  "included_total_human": "1.5 MB",
+  "skipped_count": 9,
+  "skipped_total_bytes": 24523122,
+  "skipped_total_human": "23.4 MB",
+  "included_files": [
+    {
+      "rank_dir": "rank01_m02b-whisper-small-ft",
+      "path": "Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/best_model_BEST_INFO.txt",
+      "filename": "best_model_BEST_INFO.txt",
+      "size_bytes": 259,
+      "size_human": "259 B",
+      "sha256_16": "8cb5326b3467657c",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank01_m02b-whisper-small-ft",
+      "path": "Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/history.json",
+      "filename": "history.json",
+      "size_bytes": 2718,
+      "size_human": "2.7 KB",
+      "sha256_16": "4e2414c97753453b",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank01_m02b-whisper-small-ft",
+      "path": "Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/meta.json",
+      "filename": "meta.json",
+      "size_bytes": 2466,
+      "size_human": "2.4 KB",
+      "sha256_16": "05ec1adc60e40c44",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank01_m02b-whisper-small-ft",
+      "path": "Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/model_summary.pdf",
+      "filename": "model_summary.pdf",
+      "size_bytes": 22135,
+      "size_human": "21.6 KB",
+      "sha256_16": "cb9daacc4aaf9b6f",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank01_m02b-whisper-small-ft",
+      "path": "Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/model_summary.png",
+      "filename": "model_summary.png",
+      "size_bytes": 119964,
+      "size_human": "117.2 KB",
+      "sha256_16": "8cfe4090bc2957c6",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank01_m02b-whisper-small-ft",
+      "path": "Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/report.md",
+      "filename": "report.md",
+      "size_bytes": 1222,
+      "size_human": "1.2 KB",
+      "sha256_16": "e38330a2f0a7f142",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank01_m02b-whisper-small-ft",
+      "path": "Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/test_paper.json",
+      "filename": "test_paper.json",
+      "size_bytes": 8333,
+      "size_human": "8.1 KB",
+      "sha256_16": "064208d4a02c223a",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank01_m02b-whisper-small-ft",
+      "path": "Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/test_summary.md",
+      "filename": "test_summary.md",
+      "size_bytes": 2846,
+      "size_human": "2.8 KB",
+      "sha256_16": "167734f1444f9cd6",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank01_m02b-whisper-small-ft",
+      "path": "Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/training_log.txt",
+      "filename": "training_log.txt",
+      "size_bytes": 6984,
+      "size_human": "6.8 KB",
+      "sha256_16": "ab1afc80de8e7900",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank02_m06-conformer-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/run_outputs/history.json",
+      "filename": "history.json",
+      "size_bytes": 16872,
+      "size_human": "16.5 KB",
+      "sha256_16": "20a13e9a1b66e9ff",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank02_m06-conformer-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/run_outputs/meta.json",
+      "filename": "meta.json",
+      "size_bytes": 2310,
+      "size_human": "2.3 KB",
+      "sha256_16": "8b002872a2c29da2",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank02_m06-conformer-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/run_outputs/model_summary.pdf",
+      "filename": "model_summary.pdf",
+      "size_bytes": 22694,
+      "size_human": "22.2 KB",
+      "sha256_16": "fa1f215fe00eb73b",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank02_m06-conformer-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/run_outputs/model_summary.png",
+      "filename": "model_summary.png",
+      "size_bytes": 304798,
+      "size_human": "297.7 KB",
+      "sha256_16": "013fdf4f39494c07",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank02_m06-conformer-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/run_outputs/report.md",
+      "filename": "report.md",
+      "size_bytes": 497,
+      "size_human": "497 B",
+      "sha256_16": "2be7792aeefda8cf",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank02_m06-conformer-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/run_outputs/test_paper.json",
+      "filename": "test_paper.json",
+      "size_bytes": 8631,
+      "size_human": "8.4 KB",
+      "sha256_16": "a08a9d592ec767a9",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank02_m06-conformer-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/run_outputs/test_summary.md",
+      "filename": "test_summary.md",
+      "size_bytes": 376,
+      "size_human": "376 B",
+      "sha256_16": "6b63e0fa799152dd",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank02_m06-conformer-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/run_outputs/training_log.txt",
+      "filename": "training_log.txt",
+      "size_bytes": 40128,
+      "size_human": "39.2 KB",
+      "sha256_16": "4fd050637c1cf741",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank03_m12-vit-modified-ID",
+      "path": "Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/run_outputs/model_summary.pdf",
+      "filename": "model_summary.pdf",
+      "size_bytes": 22534,
+      "size_human": "22.0 KB",
+      "sha256_16": "bed60c80c110aef3",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank03_m12-vit-modified-ID",
+      "path": "Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/run_outputs/model_summary.png",
+      "filename": "model_summary.png",
+      "size_bytes": 119215,
+      "size_human": "116.4 KB",
+      "sha256_16": "cad8410a0cd1d476",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank03_m12-vit-modified-ID",
+      "path": "Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/run_outputs/test_paper.json",
+      "filename": "test_paper.json",
+      "size_bytes": 5143,
+      "size_human": "5.0 KB",
+      "sha256_16": "1507a1f52965b098",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank03_m12-vit-modified-ID",
+      "path": "Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/run_outputs/test_summary.md",
+      "filename": "test_summary.md",
+      "size_bytes": 2901,
+      "size_human": "2.8 KB",
+      "sha256_16": "7cf80b932e481c90",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank03_m12-vit-modified-ID",
+      "path": "Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/run_outputs/training_log.txt",
+      "filename": "training_log.txt",
+      "size_bytes": 43872,
+      "size_human": "42.8 KB",
+      "sha256_16": "95b19f59f3e0bc1c",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank04_m07-bilstm-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/run_outputs/history.json",
+      "filename": "history.json",
+      "size_bytes": 16918,
+      "size_human": "16.5 KB",
+      "sha256_16": "457b912a4ffeeafc",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank04_m07-bilstm-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/run_outputs/meta.json",
+      "filename": "meta.json",
+      "size_bytes": 2307,
+      "size_human": "2.3 KB",
+      "sha256_16": "45a6507fb4b86cb3",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank04_m07-bilstm-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/run_outputs/model_summary.pdf",
+      "filename": "model_summary.pdf",
+      "size_bytes": 21163,
+      "size_human": "20.7 KB",
+      "sha256_16": "943c4f7973498825",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank04_m07-bilstm-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/run_outputs/model_summary.png",
+      "filename": "model_summary.png",
+      "size_bytes": 87491,
+      "size_human": "85.4 KB",
+      "sha256_16": "b3afa93afb6e0370",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank04_m07-bilstm-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/run_outputs/report.md",
+      "filename": "report.md",
+      "size_bytes": 492,
+      "size_human": "492 B",
+      "sha256_16": "bec02df765de34f6",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank04_m07-bilstm-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/run_outputs/test_paper.json",
+      "filename": "test_paper.json",
+      "size_bytes": 8649,
+      "size_human": "8.4 KB",
+      "sha256_16": "a33b4cdddc42d36c",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank04_m07-bilstm-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/run_outputs/test_summary.md",
+      "filename": "test_summary.md",
+      "size_bytes": 373,
+      "size_human": "373 B",
+      "sha256_16": "983140f2765ba292",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank04_m07-bilstm-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/run_outputs/training_log.txt",
+      "filename": "training_log.txt",
+      "size_bytes": 39964,
+      "size_human": "39.0 KB",
+      "sha256_16": "84caa8b402c89de1",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank05_m11-vanilla-transformer",
+      "path": "Report_paper_9model/model_artifacts/rank05_m11-vanilla-transformer/run_outputs/model_summary.pdf",
+      "filename": "model_summary.pdf",
+      "size_bytes": 22762,
+      "size_human": "22.2 KB",
+      "sha256_16": "4f0392e76f5aa845",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank05_m11-vanilla-transformer",
+      "path": "Report_paper_9model/model_artifacts/rank05_m11-vanilla-transformer/run_outputs/model_summary.png",
+      "filename": "model_summary.png",
+      "size_bytes": 127528,
+      "size_human": "124.5 KB",
+      "sha256_16": "0bfb1842701e8a07",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank05_m11-vanilla-transformer",
+      "path": "Report_paper_9model/model_artifacts/rank05_m11-vanilla-transformer/run_outputs/test_paper.json",
+      "filename": "test_paper.json",
+      "size_bytes": 5157,
+      "size_human": "5.0 KB",
+      "sha256_16": "ce56ee2c4ce73a61",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank05_m11-vanilla-transformer",
+      "path": "Report_paper_9model/model_artifacts/rank05_m11-vanilla-transformer/run_outputs/test_summary.md",
+      "filename": "test_summary.md",
+      "size_bytes": 2900,
+      "size_human": "2.8 KB",
+      "sha256_16": "91bee87c4db259d4",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank05_m11-vanilla-transformer",
+      "path": "Report_paper_9model/model_artifacts/rank05_m11-vanilla-transformer/run_outputs/training_log.txt",
+      "filename": "training_log.txt",
+      "size_bytes": 44176,
+      "size_human": "43.1 KB",
+      "sha256_16": "5aa39d944f81c8bc",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank06_m13-wav2letter",
+      "path": "Report_paper_9model/model_artifacts/rank06_m13-wav2letter/run_outputs/history.json",
+      "filename": "history.json",
+      "size_bytes": 16979,
+      "size_human": "16.6 KB",
+      "sha256_16": "e6204f5257410f24",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank06_m13-wav2letter",
+      "path": "Report_paper_9model/model_artifacts/rank06_m13-wav2letter/run_outputs/meta.json",
+      "filename": "meta.json",
+      "size_bytes": 2477,
+      "size_human": "2.4 KB",
+      "sha256_16": "18bbcaf8c64fdd19",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank06_m13-wav2letter",
+      "path": "Report_paper_9model/model_artifacts/rank06_m13-wav2letter/run_outputs/model_summary.pdf",
+      "filename": "model_summary.pdf",
+      "size_bytes": 22156,
+      "size_human": "21.6 KB",
+      "sha256_16": "aa7e40114cc3fbee",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank06_m13-wav2letter",
+      "path": "Report_paper_9model/model_artifacts/rank06_m13-wav2letter/run_outputs/model_summary.png",
+      "filename": "model_summary.png",
+      "size_bytes": 228718,
+      "size_human": "223.4 KB",
+      "sha256_16": "7aec9b624fb58525",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank06_m13-wav2letter",
+      "path": "Report_paper_9model/model_artifacts/rank06_m13-wav2letter/run_outputs/report.md",
+      "filename": "report.md",
+      "size_bytes": 481,
+      "size_human": "481 B",
+      "sha256_16": "d52494f9636da66b",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank06_m13-wav2letter",
+      "path": "Report_paper_9model/model_artifacts/rank06_m13-wav2letter/run_outputs/test_paper.json",
+      "filename": "test_paper.json",
+      "size_bytes": 8437,
+      "size_human": "8.2 KB",
+      "sha256_16": "1650c48b8fc4b452",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank06_m13-wav2letter",
+      "path": "Report_paper_9model/model_artifacts/rank06_m13-wav2letter/run_outputs/test_summary.md",
+      "filename": "test_summary.md",
+      "size_bytes": 2883,
+      "size_human": "2.8 KB",
+      "sha256_16": "d57e4990f82211bd",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank06_m13-wav2letter",
+      "path": "Report_paper_9model/model_artifacts/rank06_m13-wav2letter/run_outputs/training_log.txt",
+      "filename": "training_log.txt",
+      "size_bytes": 40696,
+      "size_human": "39.7 KB",
+      "sha256_16": "7e8ad61402af3c80",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank07_m08-hmm-gmm",
+      "path": "Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/history.json",
+      "filename": "history.json",
+      "size_bytes": 528,
+      "size_human": "528 B",
+      "sha256_16": "ba31e9a41c206d4e",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank07_m08-hmm-gmm",
+      "path": "Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/meta.json",
+      "filename": "meta.json",
+      "size_bytes": 2470,
+      "size_human": "2.4 KB",
+      "sha256_16": "6842c0e3e4adf7a5",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank07_m08-hmm-gmm",
+      "path": "Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/report.md",
+      "filename": "report.md",
+      "size_bytes": 430,
+      "size_human": "430 B",
+      "sha256_16": "c771eafac00d9335",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank07_m08-hmm-gmm",
+      "path": "Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/test_paper.json",
+      "filename": "test_paper.json",
+      "size_bytes": 8471,
+      "size_human": "8.3 KB",
+      "sha256_16": "a98fcdf6523b3201",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank07_m08-hmm-gmm",
+      "path": "Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/test_summary.md",
+      "filename": "test_summary.md",
+      "size_bytes": 2793,
+      "size_human": "2.7 KB",
+      "sha256_16": "35b2600f6abcbdf1",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank07_m08-hmm-gmm",
+      "path": "Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/training_log.txt",
+      "filename": "training_log.txt",
+      "size_bytes": 1500,
+      "size_human": "1.5 KB",
+      "sha256_16": "21881dea08cea6d0",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank08_m10-gmm-hmm-dnn",
+      "path": "Report_paper_9model/model_artifacts/rank08_m10-gmm-hmm-dnn/run_outputs/history.json",
+      "filename": "history.json",
+      "size_bytes": 15957,
+      "size_human": "15.6 KB",
+      "sha256_16": "6afab9e347ca02ec",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank08_m10-gmm-hmm-dnn",
+      "path": "Report_paper_9model/model_artifacts/rank08_m10-gmm-hmm-dnn/run_outputs/meta.json",
+      "filename": "meta.json",
+      "size_bytes": 2555,
+      "size_human": "2.5 KB",
+      "sha256_16": "85fe7a02ade9c1d0",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank08_m10-gmm-hmm-dnn",
+      "path": "Report_paper_9model/model_artifacts/rank08_m10-gmm-hmm-dnn/run_outputs/report.md",
+      "filename": "report.md",
+      "size_bytes": 524,
+      "size_human": "524 B",
+      "sha256_16": "68a743b3e5a1e8f6",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank08_m10-gmm-hmm-dnn",
+      "path": "Report_paper_9model/model_artifacts/rank08_m10-gmm-hmm-dnn/run_outputs/test_paper.json",
+      "filename": "test_paper.json",
+      "size_bytes": 8074,
+      "size_human": "7.9 KB",
+      "sha256_16": "7408e26384a09126",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank08_m10-gmm-hmm-dnn",
+      "path": "Report_paper_9model/model_artifacts/rank08_m10-gmm-hmm-dnn/run_outputs/test_summary.md",
+      "filename": "test_summary.md",
+      "size_bytes": 2281,
+      "size_human": "2.2 KB",
+      "sha256_16": "372eb9a5f9fe03b6",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank08_m10-gmm-hmm-dnn",
+      "path": "Report_paper_9model/model_artifacts/rank08_m10-gmm-hmm-dnn/run_outputs/training_log.txt",
+      "filename": "training_log.txt",
+      "size_bytes": 33908,
+      "size_human": "33.1 KB",
+      "sha256_16": "b57f43690b5a4ff3",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank09_m09-dnn-hmm",
+      "path": "Report_paper_9model/model_artifacts/rank09_m09-dnn-hmm/run_outputs/history.json",
+      "filename": "history.json",
+      "size_bytes": 15969,
+      "size_human": "15.6 KB",
+      "sha256_16": "5797a6567be51e81",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank09_m09-dnn-hmm",
+      "path": "Report_paper_9model/model_artifacts/rank09_m09-dnn-hmm/run_outputs/meta.json",
+      "filename": "meta.json",
+      "size_bytes": 2519,
+      "size_human": "2.5 KB",
+      "sha256_16": "c47a4238b1cd04ec",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank09_m09-dnn-hmm",
+      "path": "Report_paper_9model/model_artifacts/rank09_m09-dnn-hmm/run_outputs/report.md",
+      "filename": "report.md",
+      "size_bytes": 435,
+      "size_human": "435 B",
+      "sha256_16": "84c0589244c7ca35",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank09_m09-dnn-hmm",
+      "path": "Report_paper_9model/model_artifacts/rank09_m09-dnn-hmm/run_outputs/test_paper.json",
+      "filename": "test_paper.json",
+      "size_bytes": 7901,
+      "size_human": "7.7 KB",
+      "sha256_16": "fa66d6828c565f1e",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank09_m09-dnn-hmm",
+      "path": "Report_paper_9model/model_artifacts/rank09_m09-dnn-hmm/run_outputs/test_summary.md",
+      "filename": "test_summary.md",
+      "size_bytes": 2232,
+      "size_human": "2.2 KB",
+      "sha256_16": "8e7810692182b746",
+      "status": "included_for_github"
+    },
+    {
+      "rank_dir": "rank09_m09-dnn-hmm",
+      "path": "Report_paper_9model/model_artifacts/rank09_m09-dnn-hmm/run_outputs/training_log.txt",
+      "filename": "training_log.txt",
+      "size_bytes": 34490,
+      "size_human": "33.7 KB",
+      "sha256_16": "de776990eb104a62",
+      "status": "included_for_github"
+    }
+  ],
+  "skipped_files": [
+    {
+      "rank_dir": "rank01_m02b-whisper-small-ft",
+      "path": "Report_paper_9model/model_artifacts/rank01_m02b-whisper-small-ft/run_outputs/predictions.csv",
+      "filename": "predictions.csv",
+      "size_bytes": 2996816,
+      "size_human": "2.9 MB",
+      "sha256_16": "30ed614cf6d5040d",
+      "reason": "skipped_over_1MB_github_limit_policy"
+    },
+    {
+      "rank_dir": "rank02_m06-conformer-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank02_m06-conformer-ctc/run_outputs/predictions.csv",
+      "filename": "predictions.csv",
+      "size_bytes": 2947994,
+      "size_human": "2.8 MB",
+      "sha256_16": "783e5b66ec74c067",
+      "reason": "skipped_over_1MB_github_limit_policy"
+    },
+    {
+      "rank_dir": "rank03_m12-vit-modified-ID",
+      "path": "Report_paper_9model/model_artifacts/rank03_m12-vit-modified-ID/run_outputs/predictions.csv",
+      "filename": "predictions.csv",
+      "size_bytes": 2212102,
+      "size_human": "2.1 MB",
+      "sha256_16": "59cb20fe4aa375ec",
+      "reason": "skipped_over_1MB_github_limit_policy"
+    },
+    {
+      "rank_dir": "rank04_m07-bilstm-ctc",
+      "path": "Report_paper_9model/model_artifacts/rank04_m07-bilstm-ctc/run_outputs/predictions.csv",
+      "filename": "predictions.csv",
+      "size_bytes": 2981164,
+      "size_human": "2.8 MB",
+      "sha256_16": "82d10f3efa5df6e6",
+      "reason": "skipped_over_1MB_github_limit_policy"
+    },
+    {
+      "rank_dir": "rank05_m11-vanilla-transformer",
+      "path": "Report_paper_9model/model_artifacts/rank05_m11-vanilla-transformer/run_outputs/predictions.csv",
+      "filename": "predictions.csv",
+      "size_bytes": 2218200,
+      "size_human": "2.1 MB",
+      "sha256_16": "491c922031c6f1a1",
+      "reason": "skipped_over_1MB_github_limit_policy"
+    },
+    {
+      "rank_dir": "rank06_m13-wav2letter",
+      "path": "Report_paper_9model/model_artifacts/rank06_m13-wav2letter/run_outputs/predictions.csv",
+      "filename": "predictions.csv",
+      "size_bytes": 3082085,
+      "size_human": "2.9 MB",
+      "sha256_16": "f926936d94d90530",
+      "reason": "skipped_over_1MB_github_limit_policy"
+    },
+    {
+      "rank_dir": "rank07_m08-hmm-gmm",
+      "path": "Report_paper_9model/model_artifacts/rank07_m08-hmm-gmm/run_outputs/predictions.csv",
+      "filename": "predictions.csv",
+      "size_bytes": 3219807,
+      "size_human": "3.1 MB",
+      "sha256_16": "60e4e3755af82bc6",
+      "reason": "skipped_over_1MB_github_limit_policy"
+    },
+    {
+      "rank_dir": "rank08_m10-gmm-hmm-dnn",
+      "path": "Report_paper_9model/model_artifacts/rank08_m10-gmm-hmm-dnn/run_outputs/predictions.csv",
+      "filename": "predictions.csv",
+      "size_bytes": 2418480,
+      "size_human": "2.3 MB",
+      "sha256_16": "40b9f123e856536c",
+      "reason": "skipped_over_1MB_github_limit_policy"
+    },
+    {
+      "rank_dir": "rank09_m09-dnn-hmm",
+      "path": "Report_paper_9model/model_artifacts/rank09_m09-dnn-hmm/run_outputs/predictions.csv",
+      "filename": "predictions.csv",
+      "size_bytes": 2446474,
+      "size_human": "2.3 MB",
+      "sha256_16": "64adc4ddbcc5f2c9",
+      "reason": "skipped_over_1MB_github_limit_policy"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "model_id": "m02b-whisper-small-ft",
+  "family": "Whisper-small FT (Radford 2022)",
+  "is_paper_model": true,
+  "is_user_novel": false,
+  "checkpoint": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/best_model",
+  "checkpoint_filename": "best_model",
+  "best_train_wer": 0.0014584453561774,
+  "best_train_epoch": 5,
+  "n_epochs_trained": 5,
+  "test_set": {
+    "split": "test",
+    "n_samples": 15376,
+    "audio_root": "/content/asr_data/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19",
+    "feature_format": "raw_audio"
+  },
+  "metrics": {
+    "wer": 0.008523540683204734,
+    "cer": 0.0018570295438410948,
+    "mer": 0.008521288542133038,
+    "wil": 0.012964770865290798,
+    "ser": 0.03895681581685739
+  },
+  "decoding": {
+    "method": "greedy_ar",
+    "beam_size": 1,
+    "lm": null,
+    "max_decode_len": 200
+  },
+  "wall_time_sec": 4363.1,
+  "throughput_samples_per_sec": 3.52,
+  "peak_gpu_mb": 549.2,
+  "predictions_csv": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/test_results/predictions.csv",
+  "sample_predictions": [
+    {
+      "idx": 0,
+      "audio": "Kalimat_Deklaratif/Baron/Baron_Deklaratif_Take1/01.wav",
+      "pred": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
+      "label": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 1708,
+      "audio": "Kalimat_Klarifikasi/Baron/Baron_Klarifikasi_take15/19.wav",
+      "pred": "Bisakah kamu memastikan apakah ruang kelas yang saya tuju tersedia?",
+      "label": "Bisakah kamu memastikan apakah ruang kelas yang saya tuju tersedia?",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 3416,
+      "audio": "Kalimat_Kondisional/Joni/Joni_Kondisional_take15/09.wav",
+      "pred": "Jika mereka menerapkan metode pengajaran yang interaktif, siswa akan lebih tertarik.",
+      "label": "Jika mereka menerapkan metode pengajaran yang interaktif, siswa akan lebih tertarik.",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 5125,
+      "audio": "Kalimat_Konfirmasi/Robi/Robi_Konfirmasi_Take10/08.wav",
+      "pred": "Apakah kamu sudah memeriksa apakah semua dokumen yang diperlukan sudah saya serahkan?\"",
+      "label": "Apakah kamu sudah memeriksa apakah semua dokumen yang diperlukan sudah saya serahkan?\"",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 6833,
+      "audio": "Kalimat_Negasi/Robi/Robi_Negasi_Take25/11.wav",
+      "pred": "Mahasiswa baru tidak diwajibkan mengenakan jas almamater setiap hari",
+      "label": "Mahasiswa baru tidak diwajibkan mengenakan jas almamater setiap hari",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 8541,
+      "audio": "Kalimat_Perintah/Baron/Baron_Perintah_Take7/08.wav",
+      "pred": "Robot, tolong jelaskan panduan keselamatan sebelum memulai praktikum di lab ini",
+      "label": "Robot, tolong jelaskan panduan keselamatan sebelum memulai praktikum di lab ini",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 10250,
+      "audio": "Kalimat_Persuasif/Baron/Baron_Persuasif_take24/11.wav",
+      "pred": "Jangan ragu untuk bertanya pada guru jika ada yang tidak kamu mengerti, itu adalah langkah menuju pemahaman yang lebih baik",
+      "label": "Jangan ragu untuk bertanya pada guru jika ada yang tidak kamu mengerti, itu adalah langkah menuju pemahaman yang lebih baik",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 11958,
+      "audio": "Kalimat_Retoris/Joni/Joni_Retoris_take23/04.wav",
+      "pred": "Siapa yang akan menegakkan hukum jika aparat sendiri tidak memberikan contoh?",
+      "label": "Siapa yang akan menegakkan hukum jika aparat sendiri tidak memberikan contoh?",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 13666,
+      "audio": "Kalimat_Seruan/Robi/Robi_Seruan_Take15/02.wav",
+      "pred": "Hebat, kamu berhasil lulus dengan predikat cumlaude!",
+      "label": "Hebat, kamu berhasil lulus dengan predikat cumlaude!",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 15375,
+      "audio": "Kalimat_Tanya/Robi/Robi_Tanya_Take9/19.wav",
+      "pred": "Bagaimana cara mengakses Wi-Fi kampus?",
+      "label": "Bagaimana cara mengakses Wi-Fi kampus?",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    }
+  ],
+  "config": {
+    "model_id": "openai/whisper-small",
+    "run_dir": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact",
+    "data_root": "/content/asr_data/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19",
+    "data_final": "/content/asr_data/training/data_final",
+    "epochs": 5,
+    "batch_size": 8,
+    "grad_accum": 4,
+    "lr": 1e-05,
+    "warmup_steps": 500,
+    "max_train_samples": 0,
+    "max_val_samples": 0,
+    "language": "indonesian",
+    "task": "transcribe",
+    "gradient_checkpointing": true,
+    "num_workers": 2,
+    "fp16": true,
+    "resume": null,
+    "seed": 42
+  },
+  "training_meta": {
+    "model_id": "openai/whisper-small",
+    "family": "Whisper",
+    "era": "2022",
+    "notes": "Whisper FT trainer. Replot with: python3 -m common.journal_plotting --run-dir <this_dir> --style ieee",
+    "config": {
+      "model_id": "openai/whisper-small",
+      "run_dir": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact",
+      "data_root": "/content/asr_data/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19",
+      "data_final": "/content/asr_data/training/data_final",
+      "epochs": 5,
+      "batch_size": 8,
+      "grad_accum": 4,
+      "lr": 1e-05,
+      "warmup_steps": 500,
+      "max_train_samples": 0,
+      "max_val_samples": 0,
+      "language": "indonesian",
+      "task": "transcribe",
+      "gradient_checkpointing": true,
+      "num_workers": 2,
+      "fp16": true,
+      "resume": null,
+      "seed": 42
+    },
+    "dataset_info": {
+      "splits_dir": "/content/asr_data/training/data_final",
+      "audio_root": "/content/asr_data/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19",
+      "language": "indonesian",
+      "task": "transcribe"
+    },
+    "environment": {
+      "python": "3.12.13",
+      "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+      "timestamp": "2026-06-04T00:51:15.338726",
+      "torch_version": "2.11.0+cu128",
+      "transformers_version": "5.0.0",
+      "librosa_version": "0.11.0",
+      "soundfile_version": "0.13.1",
+      "sentencepiece_version": "0.2.1",
+      "jiwer_version": "unknown",
+      "numpy_version": "2.0.2",
+      "scipy_version": "1.16.3",
+      "pandas_version": "2.2.2",
+      "matplotlib_version": "3.10.0",
+      "seaborn_version": "0.13.2",
+      "cuda_device": "NVIDIA A100-SXM4-40GB",
+      "cuda_version": "12.8",
+      "cudnn_version": 91900
+    },
+    "replay": {
+      "history_path": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/history.json",
+      "log_path": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/log.txt",
+      "predictions_dir": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/predictions",
+      "replot_command": "python3 -m common.journal_plotting --run-dir 'training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact' --style ieee --formats png pdf",
+      "available_styles": [
+        "ieee",
+        "acm",
+        "springer",
+        "elsevier",
+        "thesis",
+        "plain"
+      ],
+      "available_formats": [
+        "png",
+        "pdf",
+        "svg",
+        "eps"
+      ]
+    }
+  },
+  "timestamp": "2026-06-04T06:53:04.003752",
+  "test_environment": {
+    "python": "3.12.13",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+    "timestamp": "2026-06-04T06:53:04.005651",
+    "torch_version": "2.11.0+cu128",
+    "transformers_version": "5.0.0",
+    "librosa_version": "0.11.0",
+    "soundfile_version": "0.13.1",
+    "sentencepiece_version": "0.2.1",
+    "jiwer_version": "unknown",
+    "numpy_version": "2.0.2",
+    "cuda_device": "NVIDIA A100-SXM4-40GB",
+    "cuda_version": "12.8"
+  }
+}
