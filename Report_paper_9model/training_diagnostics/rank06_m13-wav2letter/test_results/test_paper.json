@@ -1,0 +1,216 @@
+{
+  "model_id": "m13-wav2letter",
+  "family": "Wav2Letter CNN-CTC",
+  "is_paper_model": true,
+  "is_user_novel": false,
+  "checkpoint": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/checkpoints/best.pt",
+  "checkpoint_filename": "best.pt",
+  "best_train_wer": 0.07194719956538018,
+  "best_train_epoch": 27,
+  "n_epochs_trained": 30,
+  "test_set": {
+    "split": "test",
+    "n_samples": 15376,
+    "audio_root": "data_pkl",
+    "feature_format": "pkl_logmel80"
+  },
+  "metrics": {
+    "wer": 0.09292935225495738,
+    "cer": 0.05196455821641889,
+    "mer": 0.09199127906976744,
+    "wil": 0.15240911592265793,
+    "ser": 0.28219302809573366
+  },
+  "decoding": {
+    "method": "greedy_ctc",
+    "beam_size": 1,
+    "lm": null,
+    "max_decode_len": null
+  },
+  "wall_time_sec": 22.87,
+  "throughput_samples_per_sec": 672.19,
+  "peak_gpu_mb": 194.1,
+  "predictions_csv": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/test_results/predictions.csv",
+  "sample_predictions": [
+    {
+      "idx": 0,
+      "audio": "Kalimat_Deklaratif/Baron/Baron_Deklaratif_Take1/01.wav",
+      "pred": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
+      "label": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 1708,
+      "audio": "Kalimat_Klarifikasi/Baron/Baron_Klarifikasi_take15/19.wav",
+      "pred": "Bisakah kamu memperjelas apa ruang kelas yang saya cari tersedia?",
+      "label": "Bisakah kamu memastikan apakah ruang kelas yang saya tuju tersedia?",
+      "per_sample_wer": 0.3,
+      "per_sample_cer": 0.208955223880597
+    },
+    {
+      "idx": 3416,
+      "audio": "Kalimat_Kondisional/Joni/Joni_Kondisional_take15/09.wav",
+      "pred": "Jika mereka menerapkan metode pengajaran yang interaktif, siswa akan lebih tertarik.",
+      "label": "Jika mereka menerapkan metode pengajaran yang interaktif, siswa akan lebih tertarik.",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 5125,
+      "audio": "Kalimat_Konfirmasi/Robi/Robi_Konfirmasi_Take10/08.wav",
+      "pred": "Apakah kamu sudah memeriksa apakah semua dokumen yang diperlukan sudah saya serahkan?\"",
+      "label": "Apakah kamu sudah memeriksa apakah semua dokumen yang diperlukan sudah saya serahkan?\"",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 6833,
+      "audio": "Kalimat_Negasi/Robi/Robi_Negasi_Take25/11.wav",
+      "pred": "Mahasiswa baru tidak diwajibkan mengenakan jas almamater setiap hari",
+      "label": "Mahasiswa baru tidak diwajibkan mengenakan jas almamater setiap hari",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 8541,
+      "audio": "Kalimat_Perintah/Baron/Baron_Perintah_Take7/08.wav",
+      "pred": "Robot, tolong jelaskan panduan keselamatan sebelum memulai praktikum di lab ini",
+      "label": "Robot, tolong jelaskan panduan keselamatan sebelum memulai praktikum di lab ini",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 10250,
+      "audio": "Kalimat_Persuasif/Baron/Baron_Persuasif_take24/11.wav",
+      "pred": "Jangan ragu untuk bertanya pada guru jika ada yang tidak kamu mengerti, itu adalah langkah menuju pemahaman yang lebih baik",
+      "label": "Jangan ragu untuk bertanya pada guru jika ada yang tidak kamu mengerti, itu adalah langkah menuju pemahaman yang lebih baik",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 11958,
+      "audio": "Kalimat_Retoris/Joni/Joni_Retoris_take23/04.wav",
+      "pred": "Siapa yaung bertanggugakkan hukum jika aparat sendiri tidak memberikan contoh?",
+      "label": "Siapa yang akan menegakkan hukum jika aparat sendiri tidak memberikan contoh?",
+      "per_sample_wer": 0.2727272727272727,
+      "per_sample_cer": 0.12987012987012986
+    },
+    {
+      "idx": 13666,
+      "audio": "Kalimat_Seruan/Robi/Robi_Seruan_Take15/02.wav",
+      "pred": "Hebat, kamu berhasil lulus dengan predikat cumlaude!",
+      "label": "Hebat, kamu berhasil lulus dengan predikat cumlaude!",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 15375,
+      "audio": "Kalimat_Tanya/Robi/Robi_Tanya_Take9/19.wav",
+      "pred": "Bagaimana cara mengakses Wi-Fi kampus?",
+      "label": "Bagaimana cara mengakses Wi-Fi kampus?",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    }
+  ],
+  "config": {
+    "arch": "wav2letter",
+    "run_dir": "training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637",
+    "data_pkl_dir": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl",
+    "spm_model": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/spm/spm_v7_char.model",
+    "epochs": 30,
+    "batch_size": 16,
+    "lr": 0.0003,
+    "warmup_pct": 0.1,
+    "max_train_samples": 0,
+    "max_val_samples": 0,
+    "input_dim": 80,
+    "dropout": 0.1,
+    "seed": 42,
+    "fp16": true,
+    "grad_clip": 5.0
+  },
+  "training_meta": {
+    "model_id": "cnn-ctc-wav2letter",
+    "family": "CNN-CTC",
+    "era": "2016",
+    "notes": "wav2letter CTC trainer. Replot: python3 -m common.journal_plotting --run-dir <this_dir> --style ieee",
+    "config": {
+      "arch": "wav2letter",
+      "run_dir": "training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637",
+      "data_pkl_dir": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl",
+      "spm_model": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/spm/spm_v7_char.model",
+      "epochs": 30,
+      "batch_size": 16,
+      "lr": 0.0003,
+      "warmup_pct": 0.1,
+      "max_train_samples": 0,
+      "max_val_samples": 0,
+      "input_dim": 80,
+      "dropout": 0.1,
+      "seed": 42,
+      "fp16": true,
+      "grad_clip": 5.0
+    },
+    "dataset_info": {
+      "data_pkl_dir": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl",
+      "spm_model": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/spm/spm_v7_char.model"
+    },
+    "environment": {
+      "python": "3.10.18",
+      "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+      "timestamp": "2026-05-31T23:06:37.376699",
+      "torch_version": "2.10.0+cu128",
+      "transformers_version": "4.57.6",
+      "librosa_version": "0.11.0",
+      "soundfile_version": "0.13.1",
+      "sentencepiece_version": "0.2.0",
+      "hmmlearn_version": "0.3.3",
+      "jiwer_version": "unknown",
+      "numpy_version": "1.26.4",
+      "scipy_version": "1.14.1",
+      "pandas_version": "2.3.3",
+      "matplotlib_version": "3.10.9",
+      "seaborn_version": "0.13.2",
+      "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "cuda_version": "12.8",
+      "cudnn_version": 91002
+    },
+    "replay": {
+      "history_path": "training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/history.json",
+      "log_path": "training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/log.txt",
+      "predictions_dir": "training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637/predictions",
+      "replot_command": "python3 -m common.journal_plotting --run-dir 'training_conventional/m13_wav2letter_cnn/runs/run_paper_20260531_230637' --style ieee --formats png pdf",
+      "available_styles": [
+        "ieee",
+        "acm",
+        "springer",
+        "elsevier",
+        "thesis",
+        "plain"
+      ],
+      "available_formats": [
+        "png",
+        "pdf",
+        "svg",
+        "eps"
+      ]
+    }
+  },
+  "timestamp": "2026-06-04T20:45:48.329663",
+  "test_environment": {
+    "python": "3.10.18",
+    "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "timestamp": "2026-06-04T20:45:48.334590",
+    "torch_version": "2.10.0+cu128",
+    "transformers_version": "4.57.6",
+    "librosa_version": "0.11.0",
+    "soundfile_version": "0.13.1",
+    "sentencepiece_version": "0.2.0",
+    "hmmlearn_version": "0.3.3",
+    "jiwer_version": "unknown",
+    "numpy_version": "1.26.4",
+    "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda_version": "12.8"
+  }
+}

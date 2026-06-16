@@ -1,0 +1,8 @@
+Linux ASR training artifact
+Created: 2026-06-02T22:25:37+07:00
+Slot: m06
+Source repo: /home/wayan/AI/Dataset_ASR_Train_Linux
+Source run dir: training/m06_conformer_ctc/runs/run_paper_20260601_213050
+Windows destination: /media/wayan/Windows-SSD/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training/m06_conformer_ctc/runs/run_paper_20260601_213050_linux
+Label: linux
+Note: This run was produced on Ubuntu/Linux native ext4 and copied to Windows with _linux label.

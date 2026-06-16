@@ -1,0 +1,71 @@
+{
+  "model_id": "openai/whisper-small",
+  "family": "Whisper",
+  "era": "2022",
+  "notes": "Whisper FT trainer. Replot with: python3 -m common.journal_plotting --run-dir <this_dir> --style ieee",
+  "config": {
+    "model_id": "openai/whisper-small",
+    "run_dir": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact",
+    "data_root": "/content/asr_data/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19",
+    "data_final": "/content/asr_data/training/data_final",
+    "epochs": 5,
+    "batch_size": 8,
+    "grad_accum": 4,
+    "lr": 1e-05,
+    "warmup_steps": 500,
+    "max_train_samples": 0,
+    "max_val_samples": 0,
+    "language": "indonesian",
+    "task": "transcribe",
+    "gradient_checkpointing": true,
+    "num_workers": 2,
+    "fp16": true,
+    "resume": null,
+    "seed": 42
+  },
+  "dataset_info": {
+    "splits_dir": "/content/asr_data/training/data_final",
+    "audio_root": "/content/asr_data/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19",
+    "language": "indonesian",
+    "task": "transcribe"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+    "timestamp": "2026-06-04T00:51:15.338726",
+    "torch_version": "2.11.0+cu128",
+    "transformers_version": "5.0.0",
+    "librosa_version": "0.11.0",
+    "soundfile_version": "0.13.1",
+    "sentencepiece_version": "0.2.1",
+    "jiwer_version": "unknown",
+    "numpy_version": "2.0.2",
+    "scipy_version": "1.16.3",
+    "pandas_version": "2.2.2",
+    "matplotlib_version": "3.10.0",
+    "seaborn_version": "0.13.2",
+    "cuda_device": "NVIDIA A100-SXM4-40GB",
+    "cuda_version": "12.8",
+    "cudnn_version": 91900
+  },
+  "replay": {
+    "history_path": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/history.json",
+    "log_path": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/log.txt",
+    "predictions_dir": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact/predictions",
+    "replot_command": "python3 -m common.journal_plotting --run-dir 'training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact' --style ieee --formats png pdf",
+    "available_styles": [
+      "ieee",
+      "acm",
+      "springer",
+      "elsevier",
+      "thesis",
+      "plain"
+    ],
+    "available_formats": [
+      "png",
+      "pdf",
+      "svg",
+      "eps"
+    ]
+  }
+}

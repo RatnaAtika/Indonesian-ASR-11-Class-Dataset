@@ -1,0 +1,20 @@
+{
+  "model_id": "openai/whisper-small",
+  "run_dir": "training/m02b_whisper_small_ft/runs/run_paper_20260604_005100_colab_a100_paper_exact",
+  "data_root": "/content/asr_data/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19",
+  "data_final": "/content/asr_data/training/data_final",
+  "epochs": 5,
+  "batch_size": 8,
+  "grad_accum": 4,
+  "lr": 1e-05,
+  "warmup_steps": 500,
+  "max_train_samples": 0,
+  "max_val_samples": 0,
+  "language": "indonesian",
+  "task": "transcribe",
+  "gradient_checkpointing": true,
+  "num_workers": 2,
+  "fp16": true,
+  "resume": null,
+  "seed": 42
+}

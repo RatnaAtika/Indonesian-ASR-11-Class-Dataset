@@ -1,0 +1,19 @@
+{
+  "mode": "gmm_hmm_dnn",
+  "run_dir": "training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736",
+  "data_pkl_dir": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/data_pkl",
+  "spm_model": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/spm/spm_v7_char.model",
+  "max_train_samples": 0,
+  "max_val_samples": 0,
+  "hmm_states": 5,
+  "hmm_mixtures": 3,
+  "hmm_iters": 30,
+  "cov_type": "diag",
+  "dnn_hidden": 512,
+  "dnn_layers": 4,
+  "dnn_context": 5,
+  "dnn_epochs": 30,
+  "dnn_batch_size": 12000,
+  "dnn_lr": 0.001,
+  "seed": 42
+}

@@ -1,0 +1,67 @@
+{
+  "model_id": "from-scratch-conformer",
+  "family": "Conformer-CTC",
+  "era": "2020",
+  "notes": "Conformer-CTC from-scratch trainer. Replot: python3 -m common.journal_plotting --run-dir <this_dir> --style ieee",
+  "config": {
+    "arch": "conformer",
+    "run_dir": "training/m06_conformer_ctc/runs/run_paper_20260601_213050",
+    "data_root": "/home/wayan/AI/Dataset_ASR_Train_Linux/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19",
+    "data_final": "/home/wayan/AI/Dataset_ASR_Train_Linux/training/data_final",
+    "epochs": 30,
+    "batch_size": 4,
+    "grad_accum": 2,
+    "lr": 0.0003,
+    "max_train_samples": 0,
+    "max_val_samples": 0,
+    "n_mels": 80,
+    "hidden_size": 256,
+    "num_layers": 6,
+    "dropout": 0.1,
+    "seed": 42,
+    "fp16": true
+  },
+  "dataset_info": {
+    "splits_dir": "/home/wayan/AI/Dataset_ASR_Train_Linux/training/data_final",
+    "audio_root": "/home/wayan/AI/Dataset_ASR_Train_Linux/Processed_Balanced19_v7_natural_synth/Dataset_Balanced19"
+  },
+  "environment": {
+    "python": "3.10.16",
+    "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+    "timestamp": "2026-06-01T21:30:50.506925",
+    "torch_version": "2.6.0+cu126",
+    "transformers_version": "5.9.0",
+    "librosa_version": "0.11.0",
+    "soundfile_version": "0.13.1",
+    "sentencepiece_version": "0.2.1",
+    "jiwer_version": "unknown",
+    "numpy_version": "2.1.1",
+    "scipy_version": "1.15.1",
+    "pandas_version": "2.2.3",
+    "matplotlib_version": "3.10.0",
+    "seaborn_version": "0.13.2",
+    "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda_version": "12.6",
+    "cudnn_version": 90501
+  },
+  "replay": {
+    "history_path": "training/m06_conformer_ctc/runs/run_paper_20260601_213050/history.json",
+    "log_path": "training/m06_conformer_ctc/runs/run_paper_20260601_213050/log.txt",
+    "predictions_dir": "training/m06_conformer_ctc/runs/run_paper_20260601_213050/predictions",
+    "replot_command": "python3 -m common.journal_plotting --run-dir 'training/m06_conformer_ctc/runs/run_paper_20260601_213050' --style ieee --formats png pdf",
+    "available_styles": [
+      "ieee",
+      "acm",
+      "springer",
+      "elsevier",
+      "thesis",
+      "plain"
+    ],
+    "available_formats": [
+      "png",
+      "pdf",
+      "svg",
+      "eps"
+    ]
+  }
+}

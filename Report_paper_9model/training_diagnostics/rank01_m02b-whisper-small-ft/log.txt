@@ -1,0 +1,162 @@
+============================================================
+[01:48:48] Epoch 1/5 | Current LR: 0.000000
+Current Learning Rate: 0.0000000000
+Train Loss: 0.007364
+Validation Loss: 0.002965
+Train Accuracy: 1.000000
+Validation Accuracy: 0.998015
+WER: 0.002799
+CER: 0.001985
+[Train] model=openai/whisper-small accuracy=1-CER (char-level proxy, free-running greedy)
+Durasi epoch: 00:57:04
+Total elapsed time: 00:57:05
+GPU memory usage: 5031 MB
+Throughput: 20.96 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 1: Train Loss=0.0074 | Val Loss=0.0030 | Train Acc=1.0000 | Val Acc=0.9980 | WER=0.0028 | CER=0.0020 | Time=00:57:04 | GPU=5031MB
+
+============================================================
+[02:46:28] Epoch 2/5 | Current LR: 0.000000
+Current Learning Rate: 0.0000000000
+Train Loss: 0.001758
+Validation Loss: 0.002040
+Train Accuracy: 1.000000
+Validation Accuracy: 0.998452
+WER: 0.002195
+CER: 0.001548
+[Train] model=openai/whisper-small accuracy=1-CER (char-level proxy, free-running greedy)
+Durasi epoch: 00:57:19
+Total elapsed time: 01:54:43
+GPU memory usage: 5028 MB
+Throughput: 20.88 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 2: Train Loss=0.0018 | Val Loss=0.0020 | Train Acc=1.0000 | Val Acc=0.9985 | WER=0.0022 | CER=0.0015 | Time=00:57:19 | GPU=5028MB
+
+============================================================
+[03:44:10] Epoch 3/5 | Current LR: 0.000000
+Current Learning Rate: 0.0000000000
+Train Loss: 0.016020
+Validation Loss: 0.001918
+Train Accuracy: 1.000000
+Validation Accuracy: 0.998929
+WER: 0.001554
+CER: 0.001071
+[Train] model=openai/whisper-small accuracy=1-CER (char-level proxy, free-running greedy)
+Durasi epoch: 00:57:24
+Total elapsed time: 02:52:27
+GPU memory usage: 5026 MB
+Throughput: 20.84 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 3: Train Loss=0.0160 | Val Loss=0.0019 | Train Acc=1.0000 | Val Acc=0.9989 | WER=0.0016 | CER=0.0011 | Time=00:57:24 | GPU=5026MB
+
+============================================================
+[04:42:02] Epoch 4/5 | Current LR: 0.000000
+Current Learning Rate: 0.0000000000
+Train Loss: 0.000051
+Validation Loss: 0.001786
+Train Accuracy: 1.000000
+Validation Accuracy: 0.998897
+WER: 0.001473
+CER: 0.001103
+[Train] model=openai/whisper-small accuracy=1-CER (char-level proxy, free-running greedy)
+Durasi epoch: 00:57:28
+Total elapsed time: 03:50:19
+GPU memory usage: 5028 MB
+Throughput: 20.82 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 4: Train Loss=0.0001 | Val Loss=0.0018 | Train Acc=1.0000 | Val Acc=0.9989 | WER=0.0015 | CER=0.0011 | Time=00:57:28 | GPU=5028MB
+
+============================================================
+[05:39:53] Epoch 5/5 | Current LR: 0.000000
+Current Learning Rate: 0.0000000000
+Train Loss: 0.000032
+Validation Loss: 0.001684
+Train Accuracy: 1.000000
+Validation Accuracy: 0.998933
+WER: 0.001458
+CER: 0.001067
+[Train] model=openai/whisper-small accuracy=1-CER (char-level proxy, free-running greedy)
+Durasi epoch: 00:57:31
+Total elapsed time: 04:48:10
+GPU memory usage: 5028 MB
+Throughput: 20.80 samples/sec
+=== Contoh prediksi vs label (val) ===
+PRED: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+LABEL: Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+
+PRED: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+LABEL: Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+
+PRED: Dosen pembimbing memberikan banyak masukan yang membangun.
+LABEL: Dosen pembimbing memberikan banyak masukan yang membangun.
+
+PRED: Lingkungan akademik yang positif sangat mendukung proses belajar
+LABEL: Lingkungan akademik yang positif sangat mendukung proses belajar
+
+PRED: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+LABEL: Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+
+Epoch 5: Train Loss=0.0000 | Val Loss=0.0017 | Train Acc=1.0000 | Val Acc=0.9989 | WER=0.0015 | CER=0.0011 | Time=00:57:31 | GPU=5028MB
+
+
+Total waktu training: 4 jam, 48 menit, 29 detik

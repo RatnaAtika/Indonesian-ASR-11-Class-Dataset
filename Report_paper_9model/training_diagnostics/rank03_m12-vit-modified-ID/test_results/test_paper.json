@@ -1,0 +1,141 @@
+{
+  "model_id": "m12-vit-modified-ID",
+  "family": "ViT-modified-ID (Ratna 2026, unpublished)",
+  "is_paper_model": true,
+  "is_user_novel": true,
+  "checkpoint": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/checkpoints/best.pth",
+  "checkpoint_filename": "best.pth",
+  "best_train_wer": null,
+  "best_train_epoch": null,
+  "n_epochs_trained": 30,
+  "test_set": {
+    "split": "test",
+    "n_samples": 15376,
+    "audio_root": "data_pkl",
+    "feature_format": "pkl_logmel80"
+  },
+  "metrics": {
+    "wer": 0.01776655336206327,
+    "cer": 0.013009616165317267,
+    "mer": 0.017738294191808134,
+    "wil": 0.03147379187312416,
+    "ser": 0.018405306971904234
+  },
+  "decoding": {
+    "method": "greedy_ar_with_ctc_aux",
+    "beam_size": 1,
+    "lm": null,
+    "max_decode_len": 64
+  },
+  "wall_time_sec": 1304.3,
+  "throughput_samples_per_sec": 11.79,
+  "peak_gpu_mb": 0.0,
+  "predictions_csv": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/test_results/predictions.csv",
+  "sample_predictions": [
+    {
+      "idx": 0,
+      "audio": "",
+      "pred": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
+      "label": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 1708,
+      "audio": "",
+      "pred": "Bisakah kamu memastikan apakah ruang kelas yang saya tuju tersedia?",
+      "label": "Bisakah kamu memastikan apakah ruang kelas yang saya tuju tersedia?",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 3416,
+      "audio": "",
+      "pred": "Jika mereka menerapkan metode pengajaran yang interaktif, siswa akan lebih tertarik.",
+      "label": "Jika mereka menerapkan metode pengajaran yang interaktif, siswa akan lebih tertarik.",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 5125,
+      "audio": "",
+      "pred": "Apakah kamu sudah memeriksa apakah semua dokumen yang diperlukan sudah saya serahkan?\"",
+      "label": "Apakah kamu sudah memeriksa apakah semua dokumen yang diperlukan sudah saya serahkan?\"",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 6833,
+      "audio": "",
+      "pred": "Mahasiswa baru tidak diwajibkan mengenakan jas almamater setiap hari",
+      "label": "Mahasiswa baru tidak diwajibkan mengenakan jas almamater setiap hari",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 8541,
+      "audio": "",
+      "pred": "Robot, tolong jelaskan panduan keselamatan sebelum memulai praktikum di lab ini",
+      "label": "Robot, tolong jelaskan panduan keselamatan sebelum memulai praktikum di lab ini",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 10250,
+      "audio": "",
+      "pred": "Jangan ragu untuk bertanya pada guru jika ada yang tidak kamu mengerti, itu adalah langkah menuju pemahaman yang lebih baik",
+      "label": "Jangan ragu untuk bertanya pada guru jika ada yang tidak kamu mengerti, itu adalah langkah menuju pemahaman yang lebih baik",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 11958,
+      "audio": "",
+      "pred": "Siapa yang akan menegakkan hukum jika aparat sendiri tidak memberikan contoh?",
+      "label": "Siapa yang akan menegakkan hukum jika aparat sendiri tidak memberikan contoh?",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 13666,
+      "audio": "",
+      "pred": "Hebat, kamu berhasil lulus dengan predikat cumlaude!",
+      "label": "Hebat, kamu berhasil lulus dengan predikat cumlaude!",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    },
+    {
+      "idx": 15375,
+      "audio": "",
+      "pred": "Bagaimana cara mengakses Wi-Fi kampus?",
+      "label": "Bagaimana cara mengakses Wi-Fi kampus?",
+      "per_sample_wer": 0.0,
+      "per_sample_cer": 0.0
+    }
+  ],
+  "config": {
+    "epochs": 30,
+    "batch_size": 16,
+    "lr": 0.0005
+  },
+  "training_meta": {},
+  "timestamp": "2026-06-04T21:30:37.125734",
+  "test_environment": {
+    "python": "3.10.18",
+    "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "timestamp": "2026-06-04T21:30:37.131443",
+    "torch_version": "2.10.0+cu128",
+    "transformers_version": "4.57.6",
+    "librosa_version": "0.11.0",
+    "soundfile_version": "0.13.1",
+    "sentencepiece_version": "0.2.0",
+    "hmmlearn_version": "0.3.3",
+    "jiwer_version": "unknown",
+    "numpy_version": "1.26.4",
+    "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda_version": "12.8"
+  },
+  "root_eval_csv": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/eval_greedy/results_vit.csv",
+  "root_eval_dir": "/mnt/c/Users/wayandadang/AI/Dataset ASR/Paper_Datatset_SOTA/training_conventional/m12_vit_modified/runs/run_full_20260528_223323/eval_greedy",
+  "n_params": 4353248
+}
