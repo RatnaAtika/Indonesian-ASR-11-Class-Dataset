@@ -1,0 +1,175 @@
+{
+  "generated_at": "2026-06-17T21:16:13",
+  "scope": "full_hf_metadata_104500_files",
+  "source": "metadata/dataset_metadata.csv",
+  "synthetic_files_total": 132,
+  "by_synthetic_voice_gender": {
+    "Male": 73,
+    "Female": 59
+  },
+  "by_split": {
+    "train": 122,
+    "dev": 8,
+    "test": 2
+  },
+  "by_category": {
+    "Kalimat_Deklaratif": 2,
+    "Kalimat_Klarifikasi": 9,
+    "Kalimat_Kondisional": 16,
+    "Kalimat_Konfirmasi": 29,
+    "Kalimat_Negasi": 11,
+    "Kalimat_Penjadwalan": 4,
+    "Kalimat_Perintah": 15,
+    "Kalimat_Persuasif": 16,
+    "Kalimat_Retoris": 17,
+    "Kalimat_Seruan": 3,
+    "Kalimat_Tanya": 10
+  },
+  "voice_target_gender_mismatch_files": 2,
+  "repair_targets": [
+    {
+      "synthetic_voice_id": "Fs1",
+      "speaker_gender": "Female",
+      "repair_target_speaker_id": "F1",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 6
+    },
+    {
+      "synthetic_voice_id": "Fs2",
+      "speaker_gender": "Female",
+      "repair_target_speaker_id": "F2",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 7
+    },
+    {
+      "synthetic_voice_id": "Fs3",
+      "speaker_gender": "Female",
+      "repair_target_speaker_id": "F3",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 8
+    },
+    {
+      "synthetic_voice_id": "Fs4",
+      "speaker_gender": "Female",
+      "repair_target_speaker_id": "F4",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 8
+    },
+    {
+      "synthetic_voice_id": "Fs5",
+      "speaker_gender": "Female",
+      "repair_target_speaker_id": "F5",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 4
+    },
+    {
+      "synthetic_voice_id": "Fs6",
+      "speaker_gender": "Female",
+      "repair_target_speaker_id": "F6",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 4
+    },
+    {
+      "synthetic_voice_id": "Fs7",
+      "speaker_gender": "Female",
+      "repair_target_speaker_id": "M8",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "False",
+      "synthetic_files": 2
+    },
+    {
+      "synthetic_voice_id": "Fs8",
+      "speaker_gender": "Female",
+      "repair_target_speaker_id": "F7",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 14
+    },
+    {
+      "synthetic_voice_id": "Fs9",
+      "speaker_gender": "Female",
+      "repair_target_speaker_id": "F8",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 6
+    },
+    {
+      "synthetic_voice_id": "Ms1",
+      "speaker_gender": "Male",
+      "repair_target_speaker_id": "M1",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 17
+    },
+    {
+      "synthetic_voice_id": "Ms2",
+      "speaker_gender": "Male",
+      "repair_target_speaker_id": "M2",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 15
+    },
+    {
+      "synthetic_voice_id": "Ms3",
+      "speaker_gender": "Male",
+      "repair_target_speaker_id": "M3",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 2
+    },
+    {
+      "synthetic_voice_id": "Ms4",
+      "speaker_gender": "Male",
+      "repair_target_speaker_id": "M5",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 3
+    },
+    {
+      "synthetic_voice_id": "Ms5",
+      "speaker_gender": "Male",
+      "repair_target_speaker_id": "M6",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 7
+    },
+    {
+      "synthetic_voice_id": "Ms6",
+      "speaker_gender": "Male",
+      "repair_target_speaker_id": "M7",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 10
+    },
+    {
+      "synthetic_voice_id": "Ms7",
+      "speaker_gender": "Male",
+      "repair_target_speaker_id": "M9",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 12
+    },
+    {
+      "synthetic_voice_id": "Ms8",
+      "speaker_gender": "Male",
+      "repair_target_speaker_id": "M10",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 3
+    },
+    {
+      "synthetic_voice_id": "Ms9",
+      "speaker_gender": "Male",
+      "repair_target_speaker_id": "M11",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
+      "synthetic_files": 4
+    }
+  ]
+}

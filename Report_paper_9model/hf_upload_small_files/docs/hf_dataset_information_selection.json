@@ -1,0 +1,345 @@
+{
+  "purpose": "Optimized selection of dataset-information artifacts for HF upload, with privacy actions.",
+  "critical_scope_note": "Preferred public package is Report_paper_9model/hf_dataset_information_public generated from 104,500-file full HF metadata. Old reports/dataset_statistics_v7_paper9 remains paper-clean subset unless separately labeled.",
+  "selection_count": 47,
+  "decision_counts": {
+    "exclude_public": 3,
+    "exclude_public_duplicate": 1,
+    "include_as_is": 20,
+    "include_preferred_full_scope": 12,
+    "manual_review_or_regenerate": 1,
+    "superseded_by_full_scope_public_package": 9,
+    "superseded_by_public_safe_sample": 1
+  },
+  "items": [
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/README.md",
+      "hf_target_path": "paper/dataset_information/README.md",
+      "decision": "include_preferred_full_scope",
+      "reason": "Full 104500-file package README",
+      "privacy_action": "public-safe generated output"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/dataset_stats_public.json",
+      "hf_target_path": "paper/dataset_information/dataset_stats_public.json",
+      "decision": "include_preferred_full_scope",
+      "reason": "Full 104500-file public dataset summary",
+      "privacy_action": "public-safe generated output"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/word_frequency_public.csv",
+      "hf_target_path": "paper/dataset_information/word_frequency_public.csv",
+      "decision": "include_preferred_full_scope",
+      "reason": "Word distribution from full HF metadata",
+      "privacy_action": "public-safe generated output"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/per_category_public.csv",
+      "hf_target_path": "paper/dataset_information/per_category_public.csv",
+      "decision": "include_preferred_full_scope",
+      "reason": "Category counts/durations from full HF metadata",
+      "privacy_action": "public-safe generated output"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/per_split_public.csv",
+      "hf_target_path": "paper/dataset_information/per_split_public.csv",
+      "decision": "include_preferred_full_scope",
+      "reason": "Split counts/durations with corrected labels",
+      "privacy_action": "public-safe generated output"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/per_speaker_public.csv",
+      "hf_target_path": "paper/dataset_information/per_speaker_public.csv",
+      "decision": "include_preferred_full_scope",
+      "reason": "Public-label speaker/source statistics",
+      "privacy_action": "public-safe generated output"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/synthetic_repair_rows_public.csv",
+      "hf_target_path": "paper/dataset_information/synthetic_repair_rows_public.csv",
+      "decision": "include_preferred_full_scope",
+      "reason": "Synthetic repair disclosure with mismatch flags",
+      "privacy_action": "public-safe generated output"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/audio_quality_sample_public.csv",
+      "hf_target_path": "paper/dataset_information/audio_quality_sample_public.csv",
+      "decision": "include_preferred_full_scope",
+      "reason": "Public-safe audio-quality sample with speaker labels anonymized; source_scope column marks paper-clean sample",
+      "privacy_action": "text-scan before upload"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/synthetic_data_stats_public.json",
+      "hf_target_path": "paper/dataset_information/synthetic_data_stats_public.json",
+      "decision": "include_preferred_full_scope",
+      "reason": "Full-scope synthetic-data summary with public labels and mismatch flags",
+      "privacy_action": "text-scan before upload"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/figures_public/F1_files_per_speaker_split_public.pdf",
+      "hf_target_path": "paper/dataset_information/figures/F1_files_per_speaker_split_public.pdf",
+      "decision": "include_preferred_full_scope",
+      "reason": "Regenerated public-label per-speaker count figure",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/figures_public/F3_speaker_total_duration_public.pdf",
+      "hf_target_path": "paper/dataset_information/figures/F3_speaker_total_duration_public.pdf",
+      "decision": "include_preferred_full_scope",
+      "reason": "Regenerated public-label duration figure",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/figures_public/F7_speaker_category_heatmap_public.pdf",
+      "hf_target_path": "paper/dataset_information/figures/F7_speaker_category_heatmap_public.pdf",
+      "decision": "include_preferred_full_scope",
+      "reason": "Regenerated public-label heatmap figure",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/README.md",
+      "hf_target_path": "paper/dataset_information/README_paper_clean_stats.md",
+      "decision": "include_as_is",
+      "reason": "Explains curated paper-clean statistics package",
+      "privacy_action": "text-scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/stats/word_frequency.csv",
+      "hf_target_path": "paper/dataset_information/word_frequency.csv",
+      "decision": "superseded_by_full_scope_public_package",
+      "reason": "Word distribution / vocabulary analysis",
+      "privacy_action": "use Report_paper_9model/hf_dataset_information_public equivalent for HF public upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/stats/per_category.csv",
+      "hf_target_path": "paper/dataset_information/per_category.csv",
+      "decision": "superseded_by_full_scope_public_package",
+      "reason": "Category counts and durations",
+      "privacy_action": "use Report_paper_9model/hf_dataset_information_public equivalent for HF public upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/stats/per_split.csv",
+      "hf_target_path": "paper/dataset_information/per_split.csv",
+      "decision": "superseded_by_full_scope_public_package",
+      "reason": "Train/dev/test summary",
+      "privacy_action": "use Report_paper_9model/hf_dataset_information_public equivalent for HF public upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/stats/statistical_tests.csv",
+      "hf_target_path": "paper/dataset_information/statistical_tests.csv",
+      "decision": "include_as_is",
+      "reason": "Compact statistical evidence",
+      "privacy_action": "text-scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/synthetic_data_report/synthetic_per_category.csv",
+      "hf_target_path": "paper/dataset_information/synthetic_per_category.csv",
+      "decision": "include_as_is",
+      "reason": "Synthetic disclosure by category",
+      "privacy_action": "text-scan before upload"
+    },
+    {
+      "source_path": "Processed_Balanced19_v3/reports/build_summary.json",
+      "hf_target_path": "provenance/processed_balanced19_v3/build_summary.json",
+      "decision": "include_as_is",
+      "reason": "Build count summary",
+      "privacy_action": "text-scan before upload"
+    },
+    {
+      "source_path": "Processed_Balanced19_v3/reports/output_verify.json",
+      "hf_target_path": "provenance/processed_balanced19_v3/output_verify.json",
+      "decision": "include_as_is",
+      "reason": "Output verification summary",
+      "privacy_action": "text-scan before upload"
+    },
+    {
+      "source_path": "Processed_Balanced19_v3/reports/PROCESS_SUMMARY.txt",
+      "hf_target_path": "provenance/processed_balanced19_v3/PROCESS_SUMMARY.txt",
+      "decision": "include_as_is",
+      "reason": "Human-readable processing summary",
+      "privacy_action": "text-scan before upload"
+    },
+    {
+      "source_path": "Processed_Balanced19_v3/reports/PROCESS_REPORT.md",
+      "hf_target_path": "provenance/processed_balanced19_v3/PROCESS_REPORT.md",
+      "decision": "include_as_is",
+      "reason": "Processing report",
+      "privacy_action": "text-scan before upload"
+    },
+    {
+      "source_path": "Processed_Balanced19_v3/reports/transcript_map.json",
+      "hf_target_path": "provenance/processed_balanced19_v3/transcript_map.json",
+      "decision": "include_as_is",
+      "reason": "Transcript/category map",
+      "privacy_action": "text-scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/figures/F2_duration_per_category.pdf",
+      "hf_target_path": "paper/dataset_information/figures/F2_duration_per_category.pdf",
+      "decision": "include_as_is",
+      "reason": "Category duration figure",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/figures/F4_sentence_length.pdf",
+      "hf_target_path": "paper/dataset_information/figures/F4_sentence_length.pdf",
+      "decision": "include_as_is",
+      "reason": "Sentence length distribution",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/figures/F5_word_frequency_pareto.pdf",
+      "hf_target_path": "paper/dataset_information/figures/F5_word_frequency_pareto.pdf",
+      "decision": "include_as_is",
+      "reason": "Word frequency Pareto figure",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/figures/F6_heaps_law.pdf",
+      "hf_target_path": "paper/dataset_information/figures/F6_heaps_law.pdf",
+      "decision": "include_as_is",
+      "reason": "Vocabulary growth / Heaps law",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/figures/F8_cumulative_hours.pdf",
+      "hf_target_path": "paper/dataset_information/figures/F8_cumulative_hours.pdf",
+      "decision": "include_as_is",
+      "reason": "Cumulative hours figure",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/figures/F9_audio_uniformity.pdf",
+      "hf_target_path": "paper/dataset_information/figures/F9_audio_uniformity.pdf",
+      "decision": "include_as_is",
+      "reason": "Audio format uniformity figure",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/figures/F10_synthetic_disclosure.pdf",
+      "hf_target_path": "paper/dataset_information/figures/F10_synthetic_disclosure.pdf",
+      "decision": "include_as_is",
+      "reason": "Synthetic disclosure figure",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/figures/F12_audio_quality.pdf",
+      "hf_target_path": "paper/dataset_information/figures/F12_audio_quality.pdf",
+      "decision": "include_as_is",
+      "reason": "Audio quality figure",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/synthetic_data_report/figures/S1_synth_per_category_voice.pdf",
+      "hf_target_path": "paper/dataset_information/figures/S1_synth_per_category_voice.pdf",
+      "decision": "include_as_is",
+      "reason": "Synthetic category/voice figure",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/synthetic_data_report/figures/S2_synth_fraction_per_category.pdf",
+      "hf_target_path": "paper/dataset_information/figures/S2_synth_fraction_per_category.pdf",
+      "decision": "include_as_is",
+      "reason": "Synthetic fraction by category",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/synthetic_data_report/figures/S3_synth_split_per_category.pdf",
+      "hf_target_path": "paper/dataset_information/figures/S3_synth_split_per_category.pdf",
+      "decision": "include_as_is",
+      "reason": "Synthetic split/category figure",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/synthetic_data_report/figures/S4_synth_quality.pdf",
+      "hf_target_path": "paper/dataset_information/figures/S4_synth_quality.pdf",
+      "decision": "include_as_is",
+      "reason": "Synthetic quality figure",
+      "privacy_action": "visual/text scan before upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/stats/dataset_stats.json",
+      "hf_target_path": "paper/dataset_information/anonymized_or_regenerated/dataset_stats_public.json",
+      "decision": "superseded_by_full_scope_public_package",
+      "reason": "Contains original speaker names",
+      "privacy_action": "use Report_paper_9model/hf_dataset_information_public equivalent for HF public upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/stats/per_speaker.csv",
+      "hf_target_path": "paper/dataset_information/anonymized_or_regenerated/per_speaker_public.csv",
+      "decision": "superseded_by_full_scope_public_package",
+      "reason": "Contains original speaker names",
+      "privacy_action": "use Report_paper_9model/hf_dataset_information_public equivalent for HF public upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/stats/audio_quality_sample.csv",
+      "hf_target_path": "paper/dataset_information/anonymized_or_regenerated/audio_quality_sample_public.csv",
+      "decision": "superseded_by_public_safe_sample",
+      "reason": "Contains original speaker names and sample paths",
+      "privacy_action": "use Report_paper_9model/hf_dataset_information_public/audio_quality_sample_public.csv for HF public upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/synthetic_data_report/synthetic_data_stats.json",
+      "hf_target_path": "paper/dataset_information/anonymized_or_regenerated/synthetic_data_stats_public.json",
+      "decision": "superseded_by_full_scope_public_package",
+      "reason": "Contains original speaker names",
+      "privacy_action": "use Report_paper_9model/hf_dataset_information_public equivalent for HF public upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/figures/F1_files_per_speaker_split.pdf",
+      "hf_target_path": "paper/dataset_information/figures_public/F1_files_per_speaker_split_public.pdf",
+      "decision": "superseded_by_full_scope_public_package",
+      "reason": "Per-speaker labels likely original names",
+      "privacy_action": "use Report_paper_9model/hf_dataset_information_public equivalent for HF public upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/figures/F3_speaker_total_duration.pdf",
+      "hf_target_path": "paper/dataset_information/figures_public/F3_speaker_total_duration_public.pdf",
+      "decision": "superseded_by_full_scope_public_package",
+      "reason": "Per-speaker labels likely original names",
+      "privacy_action": "use Report_paper_9model/hf_dataset_information_public equivalent for HF public upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/figures/F7_speaker_category_heatmap.pdf",
+      "hf_target_path": "paper/dataset_information/figures_public/F7_speaker_category_heatmap_public.pdf",
+      "decision": "superseded_by_full_scope_public_package",
+      "reason": "Per-speaker labels likely original names",
+      "privacy_action": "use Report_paper_9model/hf_dataset_information_public equivalent for HF public upload"
+    },
+    {
+      "source_path": "reports/dataset_statistics_v7_paper9/figures/F11_mel_spectrogram_exemplars.pdf",
+      "hf_target_path": "paper/dataset_information/figures_public/F11_mel_spectrogram_exemplars_public.pdf",
+      "decision": "manual_review_or_regenerate",
+      "reason": "Exemplar labels need visual privacy review",
+      "privacy_action": "regenerate or manually inspect"
+    },
+    {
+      "source_path": "Processed_Balanced19_v3/reports/build_take_audit.csv",
+      "hf_target_path": "",
+      "decision": "exclude_public",
+      "reason": "Contains detailed paths/original names and is noisy",
+      "privacy_action": "do not upload public"
+    },
+    {
+      "source_path": "Processed_Balanced19_v3/reports/dataset_take_audit.csv",
+      "hf_target_path": "",
+      "decision": "exclude_public",
+      "reason": "Contains detailed paths/original names and is noisy",
+      "privacy_action": "do not upload public"
+    },
+    {
+      "source_path": "Processed_Balanced19_v3/reports/output_take_verify.csv",
+      "hf_target_path": "",
+      "decision": "exclude_public",
+      "reason": "Contains detailed paths/original names and is noisy",
+      "privacy_action": "do not upload public"
+    },
+    {
+      "source_path": "Whisper_Verification_Sessions/session_20260530_125618_dataset_stats_v7_paper9/",
+      "hf_target_path": "",
+      "decision": "exclude_public_duplicate",
+      "reason": "Duplicate working session of curated reports folder",
+      "privacy_action": "prefer curated reports/dataset_statistics_v7_paper9"
+    }
+  ]
+}

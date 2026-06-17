@@ -1,0 +1,12 @@
+category,file_count,duration_sec,duration_hours,synthetic_files,mean_duration_sec
+Kalimat_Deklaratif,9500,38513.0637,10.6981,2,4.054
+Kalimat_Klarifikasi,9500,49711.9233,13.8089,9,5.2328
+Kalimat_Kondisional,9500,57493.4681,15.9704,16,6.0519
+Kalimat_Konfirmasi,9500,53262.219,14.7951,29,5.6065
+Kalimat_Negasi,9500,33954.5354,9.4318,11,3.5742
+Kalimat_Penjadwalan,9500,47204.038,13.1122,4,4.9688
+Kalimat_Perintah,9500,28122.6942,7.8119,15,2.9603
+Kalimat_Persuasif,9500,61942.109,17.2061,16,6.5202
+Kalimat_Retoris,9500,37489.4433,10.4137,17,3.9463
+Kalimat_Seruan,9500,32552.1659,9.0423,3,3.4265
+Kalimat_Tanya,9500,42788.8383,11.8858,10,4.5041

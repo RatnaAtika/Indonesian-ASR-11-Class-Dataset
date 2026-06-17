@@ -1,0 +1,222 @@
+{
+  "generated_at": "2026-06-17T21:36:49",
+  "purpose": "Small public HF upload staging package. Files are copies; original source folders are unchanged.",
+  "small_file_limit_bytes": 10000000,
+  "file_count": 25,
+  "total_bytes": 549251,
+  "total_human": "536.4 KB",
+  "files": [
+    {
+      "source_path": "Report_paper_9model/hf_anonymization/hf_public_metadata_schema.md",
+      "package_path": "Report_paper_9model/hf_upload_small_files/metadata/speaker_labels/hf_public_metadata_schema.md",
+      "hf_target_path": "metadata/speaker_labels/hf_public_metadata_schema.md",
+      "size_bytes": 1104,
+      "sha256": "569411fdc87478ae9c02bac9fd1a0854bb0760e0564efe5e97cf840114e07240"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_anonymization/speaker_anonymization_preparation_report.md",
+      "package_path": "Report_paper_9model/hf_upload_small_files/metadata/speaker_labels/speaker_anonymization_preparation_report.md",
+      "hf_target_path": "metadata/speaker_labels/speaker_anonymization_preparation_report.md",
+      "size_bytes": 1148,
+      "sha256": "354b4eb160ade2fd1e6e275a34720344b1f199c2653fbc1423cc986d0581408c"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_anonymization/speaker_id_public_inventory.csv",
+      "package_path": "Report_paper_9model/hf_upload_small_files/metadata/speaker_labels/speaker_id_public_inventory.csv",
+      "hf_target_path": "metadata/speaker_labels/speaker_id_public_inventory.csv",
+      "size_bytes": 2544,
+      "sha256": "dbbd88d00d56150447536d1a1ab28fd1b6f924d3b32b997e059b27b76e41171f"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_anonymization/speaker_id_public_inventory.json",
+      "package_path": "Report_paper_9model/hf_upload_small_files/metadata/speaker_labels/speaker_id_public_inventory.json",
+      "hf_target_path": "metadata/speaker_labels/speaker_id_public_inventory.json",
+      "size_bytes": 26395,
+      "sha256": "cabb2306ae17b7a96129db7a1b6645d36029c29c61c87d13f49e9767eb7e6928"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_anonymization/speaker_label_gender_list.csv",
+      "package_path": "Report_paper_9model/hf_upload_small_files/metadata/speaker_labels/speaker_label_gender_list.csv",
+      "hf_target_path": "metadata/speaker_labels/speaker_label_gender_list.csv",
+      "size_bytes": 916,
+      "sha256": "889cf07e14544d6a52b68c23da66169d01522105f410e59ef1be9ff5619048fd"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_anonymization/synthetic_repair_targets_public.csv",
+      "package_path": "Report_paper_9model/hf_upload_small_files/metadata/speaker_labels/synthetic_repair_targets_public.csv",
+      "hf_target_path": "metadata/speaker_labels/synthetic_repair_targets_public.csv",
+      "size_bytes": 1018,
+      "sha256": "dbfd11eccdec1d12a7db2354ae94087962e5f15174a6d0ef0257745867905219"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/README.md",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/README.md",
+      "hf_target_path": "paper/dataset_information/README.md",
+      "size_bytes": 881,
+      "sha256": "0c58eb55d44e00aaeccdf0ea3484d098b319ffb9dbece34a816ddf50341282b9"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/audio_quality_sample_public.csv",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/audio_quality_sample_public.csv",
+      "hf_target_path": "paper/dataset_information/audio_quality_sample_public.csv",
+      "size_bytes": 46928,
+      "sha256": "4fbcc13a608971c64042eb36e5dbff0518832d6a45b8961c6dba8cafb2892221"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/dataset_stats_public.json",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/dataset_stats_public.json",
+      "hf_target_path": "paper/dataset_information/dataset_stats_public.json",
+      "size_bytes": 517,
+      "sha256": "d09fff6d062c8eb63a791cf75acd7384d3a42a3d93c41543e8c3fe4b120053c4"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/figures_public/F1_files_per_speaker_split_public.pdf",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/figures_public/F1_files_per_speaker_split_public.pdf",
+      "hf_target_path": "paper/dataset_information/figures_public/F1_files_per_speaker_split_public.pdf",
+      "size_bytes": 115222,
+      "sha256": "fe25972ea4e3cf6a451794c4dd56f1dbfda0aa0a7bb428bece9155b5b7a63e96"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/figures_public/F1_files_per_speaker_split_public.png",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/figures_public/F1_files_per_speaker_split_public.png",
+      "hf_target_path": "paper/dataset_information/figures_public/F1_files_per_speaker_split_public.png",
+      "size_bytes": 24366,
+      "sha256": "15b1d0c88864c3e8de032b961bcaa4e530d824a98a1ea1cd3948efd3202b699c"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/figures_public/F3_speaker_total_duration_public.pdf",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/figures_public/F3_speaker_total_duration_public.pdf",
+      "hf_target_path": "paper/dataset_information/figures_public/F3_speaker_total_duration_public.pdf",
+      "size_bytes": 103634,
+      "sha256": "1824019b01699b5d524a1fdf1375e030b44665f5bee656b24758bedadb1d0adc"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/figures_public/F3_speaker_total_duration_public.png",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/figures_public/F3_speaker_total_duration_public.png",
+      "hf_target_path": "paper/dataset_information/figures_public/F3_speaker_total_duration_public.png",
+      "size_bytes": 25002,
+      "sha256": "ed7d540549e557acfe6e607ceec1dcf319ebb310aec1dd40bd08f461a61d031c"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/figures_public/F7_speaker_category_heatmap_public.pdf",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/figures_public/F7_speaker_category_heatmap_public.pdf",
+      "hf_target_path": "paper/dataset_information/figures_public/F7_speaker_category_heatmap_public.pdf",
+      "size_bytes": 96630,
+      "sha256": "adeadf4e3e1167901f73e9a69de21b4e267e935ce70c1d582cc3f089ae7b7a10"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/figures_public/F7_speaker_category_heatmap_public.png",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/figures_public/F7_speaker_category_heatmap_public.png",
+      "hf_target_path": "paper/dataset_information/figures_public/F7_speaker_category_heatmap_public.png",
+      "size_bytes": 29040,
+      "sha256": "6edcaf89a8c4e218ebb35b53e9acf0fde6c3d3e53f83d91669e5d9e6959bc20e"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/per_category_public.csv",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/per_category_public.csv",
+      "hf_target_path": "paper/dataset_information/per_category_public.csv",
+      "size_bytes": 638,
+      "sha256": "c19418fcdf04709f0c08b47fbf4f602aeba4c3f95713eeea1cb9bdc6d8720ad0"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/per_speaker_public.csv",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/per_speaker_public.csv",
+      "hf_target_path": "paper/dataset_information/per_speaker_public.csv",
+      "size_bytes": 2331,
+      "sha256": "d6caefe5850e844a16cd68d33e87078f2b0974b5d216ff6b87e7bf0008bc402b"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/per_split_public.csv",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/per_split_public.csv",
+      "hf_target_path": "paper/dataset_information/per_split_public.csv",
+      "size_bytes": 226,
+      "sha256": "b6904b103ea6adcf40060c4a4debed81cca1fcd6a880b116d1719453c0747f69"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/synthetic_data_stats_public.json",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/synthetic_data_stats_public.json",
+      "hf_target_path": "paper/dataset_information/synthetic_data_stats_public.json",
+      "size_bytes": 5031,
+      "sha256": "0364393094f159d9b6b19dcd440904eb29fceb67a0f7531191b1b5b1045cfcdd"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/synthetic_repair_rows_public.csv",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/synthetic_repair_rows_public.csv",
+      "hf_target_path": "paper/dataset_information/synthetic_repair_rows_public.csv",
+      "size_bytes": 7136,
+      "sha256": "5633e065c82951cc704c5efc774b6b9c00c6680c7c5c8a0d509dfbf8a43fb478"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/word_frequency_public.csv",
+      "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/word_frequency_public.csv",
+      "hf_target_path": "paper/dataset_information/word_frequency_public.csv",
+      "size_bytes": 11694,
+      "sha256": "715ab97e69db2915d5911a3a94e5b4f88c3cf0e5ce1c77d083807d0ad8d70595"
+    },
+    {
+      "source_path": "Report_paper_9model/HF_DATASET_INFORMATION_SELECTION.md",
+      "package_path": "Report_paper_9model/hf_upload_small_files/docs/HF_DATASET_INFORMATION_SELECTION.md",
+      "hf_target_path": "docs/HF_DATASET_INFORMATION_SELECTION.md",
+      "size_bytes": 13401,
+      "sha256": "fd248960b00c708119fe915100207e9fb2966de35f8d08c357e1551edb147c68"
+    },
+    {
+      "source_path": "Report_paper_9model/HF_DATASET_INFORMATION_FINAL_REPORT.md",
+      "package_path": "Report_paper_9model/hf_upload_small_files/docs/HF_DATASET_INFORMATION_FINAL_REPORT.md",
+      "hf_target_path": "docs/HF_DATASET_INFORMATION_FINAL_REPORT.md",
+      "size_bytes": 4936,
+      "sha256": "81c1057cffce3c8f158987eb177238df94c43d7d09a25312f939fd0a6c0a5e6b"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_selection.csv",
+      "package_path": "Report_paper_9model/hf_upload_small_files/docs/hf_dataset_information_selection.csv",
+      "hf_target_path": "docs/hf_dataset_information_selection.csv",
+      "size_bytes": 10890,
+      "sha256": "3ef118858bba31f042378f3e1bf5368d8110a85630a5e2e465a611b967b9ce28"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_selection.json",
+      "package_path": "Report_paper_9model/hf_upload_small_files/docs/hf_dataset_information_selection.json",
+      "hf_target_path": "docs/hf_dataset_information_selection.json",
+      "size_bytes": 17623,
+      "sha256": "0e526a86b9426b4c5694da671cd2d431f75c469f6df6d906f76ba56f1962b3a0"
+    }
+  ],
+  "large_assets_to_upload_from_original_locations": [
+    {
+      "asset": "Final processed ASR dataset",
+      "local_source": "Processed_Balanced19_v3/Dataset_Balanced19/",
+      "hf_target": "data/processed_balanced19_v3/Dataset_Balanced19/",
+      "approx_size": "about 16 GB",
+      "action": "Upload from original path during HF large-folder upload; do not move or modify source."
+    },
+    {
+      "asset": "Raw/original audio (optional, consent-gated)",
+      "local_source": "Dataset_Ori/",
+      "hf_target": "data/raw_original/",
+      "approx_size": "about 17 GB",
+      "action": "Upload only if consent/license allows; keep original folder unchanged."
+    },
+    {
+      "asset": "Final 9-model best artifacts",
+      "local_source": "Report_paper_9model/model_artifacts/rank*/best_artifact/",
+      "hf_target": "models/final_9model_benchmark/rank*/best_artifact/",
+      "approx_size": "about 1.26 GB",
+      "action": "Upload from original artifact package; do not commit large weights to GitHub."
+    },
+    {
+      "asset": "Full benchmark predictions CSV files",
+      "local_source": "Final run directories test_results/predictions.csv",
+      "hf_target": "models/final_9model_benchmark/rank*/run_outputs/predictions.csv",
+      "approx_size": "about 23.4 MB total",
+      "action": "Upload from original final run directories; GitHub intentionally skipped these >1 MB files."
+    },
+    {
+      "asset": "Paper-clean legacy statistics subset (optional)",
+      "local_source": "reports/dataset_statistics_v7_paper9/",
+      "hf_target": "paper/dataset_information/paper_clean_subset_optional/",
+      "approx_size": "small/moderate",
+      "action": "Upload only with clear label paper-clean/statistics subset; prefer regenerated full-scope package in this small-files folder."
+    }
+  ]
+}
