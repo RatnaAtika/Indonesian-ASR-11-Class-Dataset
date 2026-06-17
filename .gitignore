@@ -83,3 +83,7 @@ Colab_ASR_A100_Training/results/
 # Local per-model artifact package: keep manifests/README in Git, not copied run outputs or weights.
 Report_paper_9model/model_artifacts/**/best_artifact/
 Report_paper_9model/model_artifacts/**/run_outputs/
+
+# HF upload staging and private anonymization crosswalks (never commit/upload these).
+Report_paper_9model/hf_anonymization_private/
+Dataset_ASR_HF_STAGING/

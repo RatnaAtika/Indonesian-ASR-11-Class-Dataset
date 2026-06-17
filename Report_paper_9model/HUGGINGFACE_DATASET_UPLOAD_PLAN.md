@@ -143,10 +143,10 @@ From local metadata:
 - Files per category: 9,500
 - Files per speaker: 5,225
 - Split seed: 42
-- Split speakers:
-  - train: Afgan, Ammar, Anggi, Atika, Bey, Elisa, Erlin, Fito, Harry, Indah, Muhaimin, Nanda, Risky, Uly
-  - dev: Amri, Fajar, Pram
-  - test: Baron, Joni, Robi
+- Public split speaker IDs after anonymization:
+  - train: M1, M2, M6, M7, M8, M10, F1, F2, F3, F4, F5, F6, F8, F9
+  - dev: M3, M5, M9
+  - test: M4, M11, F7
 - Files by split:
   - train: 73,150
   - dev: 15,675
@@ -163,7 +163,8 @@ From local metadata:
 Before switching HF repo from private to public, confirm:
 
 - Speaker consent covers public release of voice recordings.
-- Names in filenames/metadata are acceptable, or replace with anonymized speaker IDs (`spk_001`, etc.).
+- Respondent names must be replaced with anonymized gender-coded IDs before HF publication: male respondents use `M1..M11`; female respondents use `F1..F9`.
+- Use `Report_paper_9model/hf_anonymization/` as the public anonymization preparation package. Do not commit or upload the private original-name crosswalk.
 - Any gender, region/logat, or speaker attributes are consented and necessary for the paper.
 - License is chosen and compatible with voice data. Recommended options to discuss:
   - `CC BY-NC 4.0` if non-commercial research use only.
@@ -203,30 +204,59 @@ If using a staging name:
 hf repo create RatnaAtika/indonesian-asr-11class-paper-private --repo-type dataset --private --exist-ok
 ```
 
-### 7.3 Build local HF staging folder
+### 7.3 Prepare speaker anonymization artifacts
+
+Generate/refresh public anonymization inventory before building the HF staging folder:
+
+```bash
+python3 tools_prepare_hf_anonymization.py
+```
+
+If an internal audit crosswalk is needed, generate it locally only and do not commit/upload it:
+
+```bash
+python3 tools_prepare_hf_anonymization.py --private-crosswalk
+```
+
+Public committed preparation files:
+
+```text
+Report_paper_9model/hf_anonymization/speaker_id_public_inventory.csv
+Report_paper_9model/hf_anonymization/speaker_id_public_inventory.json
+Report_paper_9model/hf_anonymization/speaker_anonymization_preparation_report.md
+```
+
+Private ignored crosswalk path:
+
+```text
+Report_paper_9model/hf_anonymization_private/speaker_crosswalk_PRIVATE_DO_NOT_UPLOAD.csv
+```
+
+### 7.4 Build local HF staging folder
 
 Recommended staging folder outside Git worktree:
 
 ```bash
 mkdir -p /mnt/c/Users/wayandadang/AI/Dataset_ASR_HF_STAGING
+mkdir -p /mnt/c/Users/wayandadang/AI/Dataset_ASR_HF_STAGING_SOURCE
 ```
 
-Use copy mode, not hardlinks, to avoid accidental mutation of source training folders:
+Use copy mode, not hardlinks, to avoid accidental mutation of source training folders. **Important:** the commands below are source-collection commands; before upload, the staged dataset paths/metadata must be rewritten so respondent folders and `speaker_id` values use only `M*`/`F*` IDs.
 
 ```bash
 rsync -a --copy-links --info=progress2 \
   Processed_Balanced19_v3/Dataset_Balanced19/ \
-  /mnt/c/Users/wayandadang/AI/Dataset_ASR_HF_STAGING/data/processed_balanced19_v3/Dataset_Balanced19/
+  /mnt/c/Users/wayandadang/AI/Dataset_ASR_HF_STAGING_SOURCE/data/processed_balanced19_v3/Dataset_Balanced19/
 
 rsync -a --info=progress2 \
   Processed_Balanced19_v3/Transkrip_ASR_Jurnal_Dataset/ \
   /mnt/c/Users/wayandadang/AI/Dataset_ASR_HF_STAGING/data/transcripts/
 
 rsync -a metadata/dataset_metadata.csv metadata/dataset_metadata_clean.csv metadata/dataset_metadata_summary.json \
-  /mnt/c/Users/wayandadang/AI/Dataset_ASR_HF_STAGING/metadata/
+  /mnt/c/Users/wayandadang/AI/Dataset_ASR_HF_STAGING_SOURCE/metadata/
 
 rsync -a splits/ \
-  /mnt/c/Users/wayandadang/AI/Dataset_ASR_HF_STAGING/splits/
+  /mnt/c/Users/wayandadang/AI/Dataset_ASR_HF_STAGING_SOURCE/splits/
 ```
 
 For model artifacts:
@@ -243,7 +273,9 @@ rsync -a --copy-links --info=progress2 \
 
 Then add the 9 full `predictions.csv` files from their final run directories into the corresponding rank `run_outputs/` folders. These are intentionally skipped by GitHub but should be present in HF.
 
-### 7.4 Generate upload manifest
+Before upload, run a final privacy check over the upload staging folder: no original respondent names should appear in uploaded audio paths, metadata rows, split examples, README snippets, or dataset-card examples. Keep any private source staging folder (`Dataset_ASR_HF_STAGING_SOURCE`) local only.
+
+### 7.5 Generate upload manifest
 
 Create a manifest with path, size, and SHA-256 for every staged file:
 
@@ -270,7 +302,7 @@ print('files',len(rows),'bytes',sum(r['size_bytes'] for r in rows))
 PY
 ```
 
-### 7.5 Upload using resumable large-folder upload
+### 7.6 Upload using resumable large-folder upload
 
 Recommended for this project because there are many files and large audio/model artifacts:
 
@@ -284,7 +316,7 @@ hf upload-large-folder RatnaAtika/Indonesian-ASR-11-Class-Dataset \
 
 If upload is interrupted, rerun the same command. It is resumable.
 
-### 7.6 Post-upload verification
+### 7.7 Post-upload verification
 
 After upload:
 
@@ -335,7 +367,7 @@ The HF `README.md` should contain:
 - [ ] Login to HF with account/org permission.
 - [ ] Confirm private repo creation.
 - [ ] Decide whether raw `Dataset_Ori/` is included now, later, or never.
-- [ ] Confirm speaker anonymization policy.
+- [x] Prepare speaker anonymization policy: public HF IDs are `M1..M11` and `F1..F9`; private crosswalk is not committed/uploaded.
 - [ ] Confirm license.
 - [ ] Build staging folder with processed data, metadata, splits, models, predictions, diagnostics, and paper docs.
 - [ ] Generate `upload_manifest.json` and `upload_manifest.csv`.
@@ -352,5 +384,5 @@ Actual upload should wait for these decisions/inputs:
 1. HF repo ID / organization confirmed.
 2. HF login/token available in this environment.
 3. License chosen.
-4. Consent/anonymization decision for speaker names and raw audio.
+4. Consent decision for publishing gender/region/logat attributes and raw audio.
 5. Decision whether to upload `Dataset_Ori/` raw audio in the same private package or only upload final processed data first.

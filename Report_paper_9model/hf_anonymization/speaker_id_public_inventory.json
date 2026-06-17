@@ -1,0 +1,212 @@
+{
+  "generated_at": "2026-06-17T15:34:01",
+  "purpose": "Public speaker inventory for HF upload. Contains anonymized IDs only; no original respondent names.",
+  "id_policy": "Male speakers use M1..Mn; female speakers use F1..Fn. Private deterministic crosswalk is generated locally and is not for Git/HF upload.",
+  "speaker_count": 20,
+  "male_count": 11,
+  "female_count": 9,
+  "files_total": 104500,
+  "duration_hours_total": 134.1762,
+  "speakers": [
+    {
+      "anonymized_speaker_id": "M1",
+      "speaker_gender": "Male",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5208,
+      "synthetic_files": 17,
+      "duration_sec": 20774.0815,
+      "duration_hours": 5.7706
+    },
+    {
+      "anonymized_speaker_id": "M2",
+      "speaker_gender": "Male",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5210,
+      "synthetic_files": 15,
+      "duration_sec": 23498.278,
+      "duration_hours": 6.5273
+    },
+    {
+      "anonymized_speaker_id": "M3",
+      "speaker_gender": "Male",
+      "split": "dev",
+      "file_count": 5225,
+      "real_files": 5223,
+      "synthetic_files": 2,
+      "duration_sec": 24054.3173,
+      "duration_hours": 6.6818
+    },
+    {
+      "anonymized_speaker_id": "M4",
+      "speaker_gender": "Male",
+      "split": "test",
+      "file_count": 5225,
+      "real_files": 5225,
+      "synthetic_files": 0,
+      "duration_sec": 23182.6993,
+      "duration_hours": 6.4396
+    },
+    {
+      "anonymized_speaker_id": "M5",
+      "speaker_gender": "Male",
+      "split": "dev",
+      "file_count": 5225,
+      "real_files": 5222,
+      "synthetic_files": 3,
+      "duration_sec": 23685.7505,
+      "duration_hours": 6.5794
+    },
+    {
+      "anonymized_speaker_id": "M6",
+      "speaker_gender": "Male",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5218,
+      "synthetic_files": 7,
+      "duration_sec": 28352.7158,
+      "duration_hours": 7.8758
+    },
+    {
+      "anonymized_speaker_id": "M7",
+      "speaker_gender": "Male",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5215,
+      "synthetic_files": 10,
+      "duration_sec": 21295.7244,
+      "duration_hours": 5.9155
+    },
+    {
+      "anonymized_speaker_id": "M8",
+      "speaker_gender": "Male",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5213,
+      "synthetic_files": 12,
+      "duration_sec": 22590.6632,
+      "duration_hours": 6.2752
+    },
+    {
+      "anonymized_speaker_id": "M9",
+      "speaker_gender": "Male",
+      "split": "dev",
+      "file_count": 5225,
+      "real_files": 5222,
+      "synthetic_files": 3,
+      "duration_sec": 25328.8854,
+      "duration_hours": 7.0358
+    },
+    {
+      "anonymized_speaker_id": "M10",
+      "speaker_gender": "Male",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5221,
+      "synthetic_files": 4,
+      "duration_sec": 25049.8242,
+      "duration_hours": 6.9583
+    },
+    {
+      "anonymized_speaker_id": "M11",
+      "speaker_gender": "Male",
+      "split": "test",
+      "file_count": 5225,
+      "real_files": 5225,
+      "synthetic_files": 0,
+      "duration_sec": 22011.9246,
+      "duration_hours": 6.1144
+    },
+    {
+      "anonymized_speaker_id": "F1",
+      "speaker_gender": "Female",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5219,
+      "synthetic_files": 6,
+      "duration_sec": 22291.1055,
+      "duration_hours": 6.192
+    },
+    {
+      "anonymized_speaker_id": "F2",
+      "speaker_gender": "Female",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5218,
+      "synthetic_files": 7,
+      "duration_sec": 28011.548,
+      "duration_hours": 7.781
+    },
+    {
+      "anonymized_speaker_id": "F3",
+      "speaker_gender": "Female",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5217,
+      "synthetic_files": 8,
+      "duration_sec": 25947.1757,
+      "duration_hours": 7.2075
+    },
+    {
+      "anonymized_speaker_id": "F4",
+      "speaker_gender": "Female",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5217,
+      "synthetic_files": 8,
+      "duration_sec": 26863.3644,
+      "duration_hours": 7.462
+    },
+    {
+      "anonymized_speaker_id": "F5",
+      "speaker_gender": "Female",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5221,
+      "synthetic_files": 4,
+      "duration_sec": 23700.7232,
+      "duration_hours": 6.5835
+    },
+    {
+      "anonymized_speaker_id": "F6",
+      "speaker_gender": "Female",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5221,
+      "synthetic_files": 4,
+      "duration_sec": 24994.1939,
+      "duration_hours": 6.9428
+    },
+    {
+      "anonymized_speaker_id": "F7",
+      "speaker_gender": "Female",
+      "split": "test",
+      "file_count": 5225,
+      "real_files": 5223,
+      "synthetic_files": 2,
+      "duration_sec": 22973.7709,
+      "duration_hours": 6.3816
+    },
+    {
+      "anonymized_speaker_id": "F8",
+      "speaker_gender": "Female",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5211,
+      "synthetic_files": 14,
+      "duration_sec": 25087.833,
+      "duration_hours": 6.9688
+    },
+    {
+      "anonymized_speaker_id": "F9",
+      "speaker_gender": "Female",
+      "split": "train",
+      "file_count": 5225,
+      "real_files": 5219,
+      "synthetic_files": 6,
+      "duration_sec": 23339.9194,
+      "duration_hours": 6.4833
+    }
+  ]
+}
