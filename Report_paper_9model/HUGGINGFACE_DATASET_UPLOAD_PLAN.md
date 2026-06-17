@@ -37,6 +37,7 @@ Recommended visibility now: **private**. Change to public only after the paper i
 | Full run outputs, including skipped large predictions | final run `test_results/predictions.csv` plus existing `model_artifacts/rank*/run_outputs/` | about 23.4 MB for 9 predictions CSVs + small outputs | `models/final_9model_benchmark/rank*/run_outputs/` | Exact per-sample predictions used in benchmark |
 | Training diagnostics | `Report_paper_9model/training_diagnostics/` | 120 files / about 4.3 MB | `models/final_9model_benchmark/training_diagnostics/` | Training plots/logs/reports cross-checked with final runs |
 | Spectrogram/logat paper assets | `Report_paper_9model/spectrogram_logat/` | small/moderate | `paper/spectrogram_logat/` | Qualitative accent/regional illustration package |
+| Dataset information/statistics package | `reports/dataset_statistics_v7_paper9/` curated by `Report_paper_9model/HF_DATASET_INFORMATION_SELECTION.md` | small/moderate | `paper/dataset_information/` | User-facing dataset statistics, word distribution, category/split summaries, audio uniformity, synthetic disclosure |
 | Reproducibility code snapshots | `Report_paper_9model/model_artifacts/rank*/source_code/`, `pseudocode.md`, `architecture/` | small | `models/final_9model_benchmark/rank*/` | Enables readers to understand model architecture and evaluation |
 
 ### Should upload if licensing/consent allows
@@ -44,8 +45,7 @@ Recommended visibility now: **private**. Change to public only after the paper i
 | Package | Local source | Approx. size | HF path | Note |
 |---|---:|---:|---|---|
 | Raw/original audio | `Dataset_Ori/` | about 17 GB | `data/raw_original/` | Useful for transparency, but only publish if consent and privacy are confirmed |
-| Dataset construction reports | `Processed_Balanced19_v3/reports/`, selected `Whisper_Verification_Sessions/session_20260521_132123_v7_natural_synth_metadata_splits/` files | small/moderate | `provenance/` | Evidence for filtering, balancing, and split construction |
-| Dataset statistics reports | `reports/dataset_statistics_v7_paper9/` and related README | small | `paper/dataset_statistics/` | Supports Data in Brief statistics |
+| Dataset construction reports | curated public-safe subset from `Processed_Balanced19_v3/reports/` | small/moderate | `provenance/` | Evidence for filtering, balancing, and split construction; exclude detailed take audits with original names |
 | GitHub-safe docs already committed | `README.md`, `README_RUN_WHISPER.md`, `RUN_GUIDE.md` | small | `docs/` | Useful entry points for users |
 
 ### Do not upload
@@ -108,7 +108,15 @@ paper/
     appendices/...
     manuscript/...
   spectrogram_logat/...
-  dataset_statistics/...
+  dataset_information/
+    README.md
+    word_frequency.csv
+    per_category.csv
+    per_split.csv
+    statistical_tests.csv
+    synthetic_per_category.csv
+    figures/...
+    anonymized_or_regenerated/...
 
 provenance/
   processed_balanced19_v3_reports/...
@@ -130,6 +138,8 @@ Use these as hard gates before upload:
 5. Upload best artifacts only, not intermediate checkpoints.
 6. Preserve checksums for every uploaded file in `upload_manifest.json` and `upload_manifest.csv`.
 7. Do not change split assignment: seed 42, train/dev/test speakers exactly as in `splits/split_summary.json`.
+8. Dataset-information uploads must follow `Report_paper_9model/HF_DATASET_INFORMATION_SELECTION.md`; do not upload files with original respondent names unless regenerated/anonymized.
+9. Clearly label whether each statistics artifact describes the 104,500-file full HF dataset or the 102,544-file paper-clean statistics subset.
 
 ## 5. Known dataset facts for HF dataset card
 
