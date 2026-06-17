@@ -144,11 +144,11 @@ From local metadata:
 - Files per speaker: 5,225
 - Split seed: 42
 - Public human split speaker labels after anonymization:
-  - train: Af, An, Ar, At, Be, El, Er, Fi, Ha, In, Mu, Na, Ri, Ul
-  - dev: Ai, Fa, Pr
-  - test: Ba, Jo, Ro
-- Public synthetic repair labels append `-s` to the repaired human target label, e.g. `Ai-s` repairs target label `Ai`.
-- Synthetic repair labels currently present: Af-s, Ai-s, An-s, Ar-s, At-s, Be-s, El-s, Er-s, Fa-s, Fi-s, Ha-s, In-s, Jo-s, Mu-s, Na-s, Pr-s, Ri-s, Ul-s.
+  - train: M1, M2, M6, M7, M8, M10, F1, F2, F3, F4, F5, F6, F8, F9
+  - dev: M3, M5, M9
+  - test: M4, M11, F7
+- Public synthetic repair labels use `Ms*`/`Fs*`, assigned alphabetically by original repair target within gender.
+- Synthetic repair labels currently present: Ms1..Ms9 and Fs1..Fs9.
 - Files by split:
   - train: 73,150
   - dev: 15,675
@@ -165,8 +165,8 @@ From local metadata:
 Before switching HF repo from private to public, confirm:
 
 - Speaker consent covers public release of voice recordings.
-- Respondent names must be replaced with short public speaker labels before HF publication. Human labels use deterministic two-character codes; gender remains in the label list CSV instead of being encoded directly in the ID.
-- Synthetic repair audio must be separated from human recordings by appending `-s` to the repaired target label, e.g. `Ai-s` for synthetic repair audio targeting `Ai`.
+- Respondent names must be replaced with public speaker labels before HF publication. Human labels use `M*` for male and `F*` for female, numbered alphabetically within each gender group.
+- Synthetic repair audio must be separated from human recordings with synthetic labels: `Ms*` for male synthetic repair rows and `Fs*` for female synthetic repair rows, numbered alphabetically by repair target within each gender group.
 - Use `Report_paper_9model/hf_anonymization/` as the public anonymization preparation package. Do not commit or upload the private original-name crosswalk.
 - Any gender, region/logat, or speaker attributes are consented and necessary for the paper.
 - License is chosen and compatible with voice data. Recommended options to discuss:
@@ -246,7 +246,7 @@ mkdir -p /mnt/c/Users/wayandadang/AI/Dataset_ASR_HF_STAGING
 mkdir -p /mnt/c/Users/wayandadang/AI/Dataset_ASR_HF_STAGING_SOURCE
 ```
 
-Use copy mode, not hardlinks, to avoid accidental mutation of source training folders. **Important:** the commands below are source-collection commands; before upload, the staged dataset paths/metadata must be rewritten so respondent folders and `speaker_id` values use only final public labels: two-character codes for human audio and `<target-label>-s` for synthetic repair audio.
+Use copy mode, not hardlinks, to avoid accidental mutation of source training folders. **Important:** the commands below are source-collection commands; before upload, the staged dataset paths/metadata must be rewritten so respondent folders and `speaker_id` values use only final public labels: `M*`/`F*` for human audio and `Ms*`/`Fs*` for synthetic repair audio.
 
 ```bash
 rsync -a --copy-links --info=progress2 \
@@ -283,15 +283,15 @@ Before upload, run a final privacy check over the upload staging folder: no orig
 Required public metadata fields after rewrite:
 
 ```text
-speaker_id               = two-letter code for human rows; <target-label>-s for synthetic rows
+speaker_id               = M*/F* for human rows; Ms*/Fs* for synthetic rows
 speaker_type             = human or synthetic
 speaker_gender           = Male/Female
 is_synthetic             = True/False
-synthetic_voice_id       = <target-label>-s for synthetic rows; blank for human rows
-repair_target_speaker_id = target two-letter code for synthetic rows; blank for human rows
+synthetic_voice_id       = Ms*/Fs* for synthetic rows; blank for human rows
+repair_target_speaker_id = target M*/F* label for synthetic rows; blank for human rows
 ```
 
-Human rows keep a two-letter `speaker_id`. Synthetic rows use `speaker_id=<target-label>-s`, while `repair_target_speaker_id` preserves the public human slot repaired by the TTS item. Gender lookup is provided separately in `Report_paper_9model/hf_anonymization/speaker_label_gender_list.csv`.
+Human rows keep `M*` or `F*` `speaker_id`. Synthetic rows use `speaker_id=Ms*` or `Fs*`, while `repair_target_speaker_id` preserves the public human slot repaired by the TTS item. Gender lookup is provided separately in `Report_paper_9model/hf_anonymization/speaker_label_gender_list.csv`.
 
 ### 7.5 Generate upload manifest
 
@@ -385,7 +385,7 @@ The HF `README.md` should contain:
 - [ ] Login to HF with account/org permission.
 - [ ] Confirm private repo creation.
 - [ ] Decide whether raw `Dataset_Ori/` is included now, later, or never.
-- [x] Prepare speaker anonymization policy: human public HF labels use short two-character codes; synthetic public labels use `<target-label>-s`; private crosswalk is not committed/uploaded.
+- [x] Prepare speaker anonymization policy: human public HF labels use `M*`/`F*`; synthetic public labels use `Ms*`/`Fs*`; private crosswalk is not committed/uploaded.
 - [ ] Confirm license.
 - [ ] Build staging folder with processed data, metadata, splits, models, predictions, diagnostics, and paper docs.
 - [ ] Generate `upload_manifest.json` and `upload_manifest.csv`.

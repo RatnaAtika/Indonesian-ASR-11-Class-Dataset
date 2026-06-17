@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 """Prepare public speaker-label artifacts for the HF dataset upload.
 
-Public policy:
-- Real human audio uses short two-letter respondent codes derived from the
-  internal respondent name (for example, first two letters when unique).
-- If first-two-letter codes collide, use a deterministic collision fallback:
-  first letter + last letter; if still colliding, first letter + running number.
-- Synthetic repair audio uses the target public code plus "-s".
+Current public policy:
+- Human respondent labels use gender prefixes and alphabetical numbering:
+  Male => M1..Mn, Female => F1..Fn.
+- Synthetic repair labels use synthetic gender prefixes and alphabetical target
+  numbering: Male synthetic => Ms1..Msn, Female synthetic => Fs1..Fsn.
+- The numbering is deterministic: sort original respondent names alphabetically
+  inside each gender group, then assign the next number. Synthetic labels are
+  assigned only to respondents that have synthetic repair rows, sorted by the
+  original target name inside each gender group.
 - Public files contain labels and gender/type metadata only. The private
-  original-name -> public-code crosswalk can be generated locally with
+  original-name -> public-label crosswalk can be generated locally with
   --private-crosswalk, but must not be committed or uploaded to Hugging Face.
 """
 
@@ -27,6 +30,9 @@ DEFAULT_METADATA = ROOT / "metadata" / "dataset_metadata.csv"
 DEFAULT_SPLIT_SUMMARY = ROOT / "splits" / "split_summary.json"
 DEFAULT_OUTPUT_DIR = ROOT / "Report_paper_9model" / "hf_anonymization"
 DEFAULT_PRIVATE_CROSSWALK = ROOT / "Report_paper_9model" / "hf_anonymization_private" / "speaker_crosswalk_PRIVATE_DO_NOT_UPLOAD.csv"
+
+HUMAN_PREFIX = {"Male": "M", "Female": "F"}
+SYNTH_PREFIX = {"Male": "Ms", "Female": "Fs"}
 
 
 def read_split_by_speaker(path: Path) -> dict[str, str]:
@@ -115,61 +121,49 @@ def collect_stats(metadata_path: Path) -> dict[str, Any]:
     }
 
 
-def make_public_codes(names: list[str]) -> dict[str, str]:
-    """Return deterministic two-character public codes.
+def assign_human_codes(human_stats: dict[str, dict[str, Any]]) -> dict[str, str]:
+    """Assign M/F labels by alphabetical order within each gender."""
+    result: dict[str, str] = {}
+    for gender in ["Male", "Female"]:
+        names = sorted(name for name, row in human_stats.items() if row["speaker_gender"] == gender)
+        prefix = HUMAN_PREFIX[gender]
+        for idx, name in enumerate(names, start=1):
+            result[name] = f"{prefix}{idx}"
+    if len(result) != len(set(result.values())):
+        raise SystemExit("Human label generation produced duplicates")
+    return result
 
-    Rule:
-    1. Start with first two letters, title-cased.
-    2. For any collision group, replace colliding codes with first+last.
-    3. If first+last still collides, use first letter + deterministic number.
-    """
-    names = sorted(names)
-    first_two: dict[str, str] = {name: name[:2].title() for name in names}
-    by_code: dict[str, list[str]] = defaultdict(list)
-    for name, code in first_two.items():
-        by_code[code].append(name)
 
-    result = dict(first_two)
-    used: set[str] = set()
-    for code, group in sorted(by_code.items()):
-        if len(group) == 1:
-            used.add(code)
-            continue
-        # Free the colliding first-two code, then use first+last for each name.
-        for name in sorted(group):
-            fallback = (name[0] + name[-1]).title()
-            if fallback in used or fallback in result.values() and fallback not in {result[g] for g in group}:
-                # Last-resort deterministic fallback; keep short and stable.
-                idx = 1
-                while True:
-                    fallback = f"{name[0].upper()}{idx}"
-                    if fallback not in used and fallback not in result.values():
-                        break
-                    idx += 1
-            result[name] = fallback
-            used.add(fallback)
-
-    # Validate uniqueness after all replacements.
-    values = list(result.values())
-    if len(values) != len(set(values)):
-        duplicates = [code for code, count in Counter(values).items() if count > 1]
-        raise SystemExit(f"Public code generation produced duplicates: {duplicates}")
+def assign_synthetic_codes(synthetic_targets: dict[str, dict[str, Any]]) -> dict[str, str]:
+    """Assign Ms/Fs labels by alphabetical order of original repair targets."""
+    result: dict[str, str] = {}
+    for gender in ["Male", "Female"]:
+        names = sorted(name for name, row in synthetic_targets.items() if row["speaker_gender"] == gender)
+        prefix = SYNTH_PREFIX[gender]
+        for idx, name in enumerate(names, start=1):
+            result[name] = f"{prefix}{idx}"
+    if len(result) != len(set(result.values())):
+        raise SystemExit("Synthetic label generation produced duplicates")
     return result
 
 
 def assign_human_records(
     human_stats: dict[str, dict[str, Any]],
     split_by_speaker: dict[str, str],
-    private_name_to_code: dict[str, str],
+    private_name_to_human_code: dict[str, str],
 ) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
-    for original_speaker in sorted(human_stats):
+    def sort_key(name: str) -> tuple[str, int]:
+        code = private_name_to_human_code[name]
+        return (code[0], int(code[1:]))
+
+    for original_speaker in sorted(human_stats, key=sort_key):
         item = human_stats[original_speaker]
         if original_speaker not in split_by_speaker:
             raise SystemExit(f"Speaker {original_speaker} missing from split summary")
         records.append(
             {
-                "speaker_id": private_name_to_code[original_speaker],
+                "speaker_id": private_name_to_human_code[original_speaker],
                 "speaker_type": "human",
                 "speaker_gender": item["speaker_gender"],
                 "split": split_by_speaker[original_speaker],
@@ -184,20 +178,27 @@ def assign_human_records(
                 "_original_speaker_private": original_speaker,
             }
         )
-    return sorted(records, key=lambda r: r["speaker_id"])
+    return records
 
 
 def build_synthetic_records(
     synthetic_targets: dict[str, dict[str, Any]],
-    private_name_to_code: dict[str, str],
+    private_name_to_human_code: dict[str, str],
+    private_name_to_synth_code: dict[str, str],
     split_by_speaker: dict[str, str],
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     synthetic_records: list[dict[str, Any]] = []
     target_records: list[dict[str, Any]] = []
-    for original_target in sorted(synthetic_targets, key=lambda name: private_name_to_code[name]):
+
+    def sort_key(name: str) -> tuple[str, int]:
+        code = private_name_to_synth_code[name]
+        prefix = "Ms" if code.startswith("Ms") else "Fs"
+        return (prefix, int(code[len(prefix):]))
+
+    for original_target in sorted(synthetic_targets, key=sort_key):
         item = synthetic_targets[original_target]
-        target_id = private_name_to_code[original_target]
-        synthetic_id = f"{target_id}-s"
+        target_id = private_name_to_human_code[original_target]
+        synthetic_id = private_name_to_synth_code[original_target]
         split = split_by_speaker[original_target]
         row = {
             "speaker_id": synthetic_id,
@@ -287,7 +288,7 @@ def write_public_outputs(
             "synthesis_voice": voice,
             "synthesis_voice_label": label,
             "file_count": count,
-            "note": "source TTS voice; public per-row synthetic labels use <target_id>-s",
+            "note": "source TTS voice; public synthetic labels use Ms*/Fs* per repair target",
         }
         for (gender, engine, voice, label), count in sorted(source_voice_counts.items())
     ]
@@ -297,12 +298,13 @@ def write_public_outputs(
         json.dumps(
             {
                 "generated_at": datetime.now().isoformat(timespec="seconds"),
-                "purpose": "Public speaker/source label inventory for HF upload. Contains short public labels only; no original respondent names.",
+                "purpose": "Public speaker/source label inventory for HF upload. Contains public labels only; no original respondent names.",
                 "id_policy": {
-                    "human": "Two-character public respondent code derived deterministically from the internal name. First two letters are used when unique; first+last resolves first-two-letter collisions.",
-                    "synthetic": "Synthetic repair rows use the repaired target public code plus '-s'.",
-                    "example_shape": {"human": "At", "synthetic": "At-s"},
-                    "note": "speaker_id is the acoustic row label used in public metadata. synthetic rows also carry repair_target_speaker_id.",
+                    "human_male": "M1..M11, assigned alphabetically by original respondent name within Male group",
+                    "human_female": "F1..F9, assigned alphabetically by original respondent name within Female group",
+                    "synthetic_male": "Ms1..Msn, assigned alphabetically by original repair target name within Male synthetic group",
+                    "synthetic_female": "Fs1..Fsn, assigned alphabetically by original repair target name within Female synthetic group",
+                    "note": "speaker_id is the public acoustic row label. Synthetic rows also carry repair_target_speaker_id.",
                 },
                 "label_count": len(public_rows),
                 "human_speaker_count": len(human_records),
@@ -324,25 +326,25 @@ def write_public_outputs(
 
     schema_path = output_dir / "hf_public_metadata_schema.md"
     schema_path.write_text(
-        """# HF Public Metadata Schema for Short Speaker Labels
+        """# HF Public Metadata Schema for M/F and Ms/Fs Speaker Labels
 
 This schema should be used when rewriting metadata for Hugging Face upload.
 
 | Field | Meaning | Example |
 |---|---|---|
-| `speaker_id` | Final public acoustic row label. Human audio uses a short two-letter respondent code; synthetic repair audio uses the target code plus `-s`. | `At`, `Ai`, `Ai-s` |
+| `speaker_id` | Final public acoustic row label. Human audio uses `M*`/`F*`; synthetic repair audio uses `Ms*`/`Fs*`. | `M1`, `F1`, `Ms1`, `Fs1` |
 | `speaker_type` | Acoustic source type. | `human`, `synthetic` |
 | `speaker_gender` | Gender label retained for stratified analysis and documented in `speaker_label_gender_list.csv`. | `Male`, `Female` |
 | `is_synthetic` | Whether this row is synthetic repair audio. | `False`, `True` |
-| `synthetic_voice_id` | Synthetic public row label; blank for human rows. | `Ai-s` |
-| `repair_target_speaker_id` | Public human target repaired by this synthetic item; blank for human rows. | `Ai` |
+| `synthetic_voice_id` | Synthetic public row label; blank for human rows. | `Ms1`, `Fs1` |
+| `repair_target_speaker_id` | Public human target repaired by this synthetic item; blank for human rows. | `M2`, `F4` |
 
 ## Per-row rule
 
-- Human row: `speaker_id=<two-letter code>`, `speaker_type=human`, `synthetic_voice_id=`, `repair_target_speaker_id=`.
-- Synthetic row: `speaker_id=<target-code>-s`, `speaker_type=synthetic`, `synthetic_voice_id=<target-code>-s`, `repair_target_speaker_id=<target-code>`.
+- Human row: `speaker_id=M*` or `F*`, `speaker_type=human`, `synthetic_voice_id=`, `repair_target_speaker_id=`.
+- Synthetic row: `speaker_id=Ms*` or `Fs*`, `speaker_type=synthetic`, `synthetic_voice_id=Ms*` or `Fs*`, `repair_target_speaker_id=M*` or `F*`.
 
-This prevents users from mistaking synthetic repair audio for a real respondent recording while still preserving which public respondent slot the synthetic item repairs.
+The `repair_target_speaker_id` keeps the anonymized human slot provenance for each synthetic repair item without exposing original respondent names.
 """,
         encoding="utf-8",
     )
@@ -350,7 +352,8 @@ This prevents users from mistaking synthetic repair audio for a real respondent 
     report_path = output_dir / "speaker_anonymization_preparation_report.md"
     male_human = ", ".join(r["speaker_id"] for r in human_records if r["speaker_gender"] == "Male")
     female_human = ", ".join(r["speaker_id"] for r in human_records if r["speaker_gender"] == "Female")
-    synth_ids = ", ".join(r["speaker_id"] for r in synthetic_records)
+    male_synth = ", ".join(r["speaker_id"] for r in synthetic_records if r["speaker_gender"] == "Male")
+    female_synth = ", ".join(r["speaker_id"] for r in synthetic_records if r["speaker_gender"] == "Female")
     split_counts: dict[str, int] = defaultdict(int)
     for row in human_records:
         split_counts[str(row["split"])] += 1
@@ -363,13 +366,14 @@ Status: **prepared for private-first HF upload**.
 
 The HF dataset package should not expose respondent names in public metadata, folder names, file paths, or dataset-card examples.
 
-Use short public labels:
+Use public labels:
 
 - Human male labels: `{male_human}`
 - Human female labels: `{female_human}`
-- Synthetic repair labels: `{synth_ids}`
+- Synthetic male labels: `{male_synth}`
+- Synthetic female labels: `{female_synth}`
 
-Human labels are two-character codes. Synthetic repair labels append `-s` to the repaired human target label. For example, if a public human target is `Ai`, synthetic repair rows for that target use `Ai-s` and also store `repair_target_speaker_id=Ai`.
+Human labels use `M`/`F` plus alphabetic order number within each gender group. Synthetic repair labels use `Ms`/`Fs` plus alphabetic order number within each synthetic target gender group. Synthetic rows also store `repair_target_speaker_id` so users know which anonymized human slot the synthetic item repairs.
 
 The private original-name to public-label crosswalk is intentionally **not committed** and must not be uploaded to Hugging Face. If a crosswalk is required for internal auditing, generate it locally with:
 
@@ -408,12 +412,12 @@ Report_paper_9model/hf_anonymization_private/speaker_crosswalk_PRIVATE_DO_NOT_UP
 
 When building the HF staging folder, rewrite fields/paths from original respondent names to public labels:
 
-1. Human rows: `speaker_id` -> two-letter public label.
-2. Synthetic rows: `speaker_id` -> `<repair_target_speaker_id>-s`.
+1. Human rows: `speaker_id` -> `M*`/`F*`.
+2. Synthetic rows: `speaker_id` -> `Ms*`/`Fs*`.
 3. Add `speaker_type`: `human` or `synthetic`.
 4. Keep `speaker_gender` as `Male`/`Female` and document labels in `speaker_label_gender_list.csv`.
-5. Add `synthetic_voice_id`: blank for human rows; `<target-label>-s` for synthetic rows.
-6. Add `repair_target_speaker_id`: blank for human rows; target public label for synthetic rows.
+5. Add `synthetic_voice_id`: blank for human rows; `Ms*`/`Fs*` for synthetic rows.
+6. Add `repair_target_speaker_id`: blank for human rows; target public human label for synthetic rows.
 7. `audio_path`: replace speaker directories and take-id prefixes with the final public `speaker_id`.
 8. `audio_path_abs`: do not publish local absolute paths; replace with relative HF paths.
 9. Dataset card examples should use only public labels.
@@ -426,18 +430,23 @@ Do not upload or commit any file containing the original respondent-name crosswa
     )
 
 
-def write_private_crosswalk(records: list[dict[str, Any]], path: Path) -> None:
+def write_private_crosswalk(
+    human_records: list[dict[str, Any]],
+    private_name_to_synth_code: dict[str, str],
+    path: Path,
+) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     fields = ["original_speaker", "public_speaker_id", "synthetic_public_speaker_id", "speaker_gender", "split", "human_file_count", "synthetic_repair_file_count"]
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
-        for rec in records:
+        for rec in human_records:
+            original = rec["_original_speaker_private"]
             writer.writerow(
                 {
-                    "original_speaker": rec["_original_speaker_private"],
+                    "original_speaker": original,
                     "public_speaker_id": rec["speaker_id"],
-                    "synthetic_public_speaker_id": f"{rec['speaker_id']}-s" if int(rec["synthetic_repair_files_for_this_target"]) else "",
+                    "synthetic_public_speaker_id": private_name_to_synth_code.get(original, ""),
                     "speaker_gender": rec["speaker_gender"],
                     "split": rec["split"],
                     "human_file_count": rec["real_files"],
@@ -457,12 +466,18 @@ def main() -> None:
 
     split_by_speaker = read_split_by_speaker(args.split_summary)
     stats = collect_stats(args.metadata)
-    private_name_to_code = make_public_codes(list(stats["human_stats"]))
-    human_records = assign_human_records(stats["human_stats"], split_by_speaker, private_name_to_code)
-    synthetic_records, target_records = build_synthetic_records(stats["synthetic_targets"], private_name_to_code, split_by_speaker)
+    private_name_to_human_code = assign_human_codes(stats["human_stats"])
+    private_name_to_synth_code = assign_synthetic_codes(stats["synthetic_targets"])
+    human_records = assign_human_records(stats["human_stats"], split_by_speaker, private_name_to_human_code)
+    synthetic_records, target_records = build_synthetic_records(
+        stats["synthetic_targets"],
+        private_name_to_human_code,
+        private_name_to_synth_code,
+        split_by_speaker,
+    )
     write_public_outputs(human_records, synthetic_records, target_records, stats["source_voice_counts"], args.output_dir)
     if args.private_crosswalk:
-        write_private_crosswalk(human_records, args.private_crosswalk_path)
+        write_private_crosswalk(human_records, private_name_to_synth_code, args.private_crosswalk_path)
         print(f"Wrote PRIVATE crosswalk: {args.private_crosswalk_path}")
     print(f"Prepared public speaker-label artifacts in: {args.output_dir}")
     print(

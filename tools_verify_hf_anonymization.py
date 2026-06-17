@@ -29,14 +29,14 @@ TARGET_FILES = [
 ]
 
 
-def metadata_stats() -> tuple[set[str], int, dict[str, set[str]], Counter[str], int, int, set[str]]:
+def metadata_stats() -> tuple[set[str], int, dict[str, list[str]], Counter[str], int, int, dict[str, list[str]]]:
     names: set[str] = set()
     total = 0
     gender_names: dict[str, set[str]] = {"Male": set(), "Female": set()}
+    synth_targets_by_gender: dict[str, set[str]] = {"Male": set(), "Female": set()}
     synthetic_by_gender: Counter[str] = Counter()
     real_total = 0
     synth_total = 0
-    synth_targets: set[str] = set()
     with METADATA.open(newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle)
         for row in reader:
@@ -49,15 +49,41 @@ def metadata_stats() -> tuple[set[str], int, dict[str, set[str]], Counter[str], 
             if is_synth:
                 synthetic_by_gender[gender] += 1
                 synth_total += 1
-                synth_targets.add(speaker)
+                synth_targets_by_gender.setdefault(gender, set()).add(speaker)
             else:
                 real_total += 1
-    return names, total, gender_names, synthetic_by_gender, real_total, synth_total, synth_targets
+    return (
+        names,
+        total,
+        {gender: sorted(values) for gender, values in gender_names.items()},
+        synthetic_by_gender,
+        real_total,
+        synth_total,
+        {gender: sorted(values) for gender, values in synth_targets_by_gender.items()},
+    )
+
+
+def expected_human_labels(gender_names: dict[str, list[str]]) -> dict[str, str]:
+    expected: dict[str, str] = {}
+    for gender, prefix in [("Male", "M"), ("Female", "F")]:
+        for idx, name in enumerate(sorted(gender_names.get(gender, [])), start=1):
+            expected[name] = f"{prefix}{idx}"
+    return expected
+
+
+def expected_synth_labels(synth_targets_by_gender: dict[str, list[str]]) -> dict[str, str]:
+    expected: dict[str, str] = {}
+    for gender, prefix in [("Male", "Ms"), ("Female", "Fs")]:
+        for idx, name in enumerate(sorted(synth_targets_by_gender.get(gender, [])), start=1):
+            expected[name] = f"{prefix}{idx}"
+    return expected
 
 
 def main() -> int:
     errors: list[str] = []
-    original_names, total_rows, _gender_names, synthetic_by_gender, real_total, synth_total, synth_targets = metadata_stats()
+    original_names, total_rows, gender_names, synthetic_by_gender, real_total, synth_total, synth_targets_by_gender = metadata_stats()
+    expected_human = set(expected_human_labels(gender_names).values())
+    expected_synth = set(expected_synth_labels(synth_targets_by_gender).values())
 
     inv_csv = PUBLIC_DIR / "speaker_id_public_inventory.csv"
     if not inv_csv.exists():
@@ -75,10 +101,14 @@ def main() -> int:
     human_ids = {row.get("speaker_id", "") for row in human_rows}
     synthetic_ids = {row.get("speaker_id", "") for row in synthetic_rows}
 
+    if human_ids != expected_human:
+        errors.append(f"human label set mismatch: {sorted(human_ids)} != {sorted(expected_human)}")
+    if synthetic_ids != expected_synth:
+        errors.append(f"synthetic label set mismatch: {sorted(synthetic_ids)} != {sorted(expected_synth)}")
     if len(human_rows) != len(original_names):
         errors.append(f"human label count mismatch: {len(human_rows)} != {len(original_names)}")
-    if len(synthetic_rows) != len(synth_targets):
-        errors.append(f"synthetic label count mismatch: {len(synthetic_rows)} != {len(synth_targets)}")
+    if len(synthetic_rows) != len(expected_synth):
+        errors.append(f"synthetic label count mismatch: {len(synthetic_rows)} != {len(expected_synth)}")
     if sum(int(row.get("file_count", 0)) for row in public_rows) != total_rows:
         errors.append("public inventory file_count sum does not match metadata row count")
     if sum(int(row.get("real_files", 0)) for row in public_rows) != real_total:
@@ -88,8 +118,12 @@ def main() -> int:
 
     for row in human_rows:
         sid = row.get("speaker_id", "")
-        if not re.fullmatch(r"[A-Z][a-z0-9]", sid):
-            errors.append(f"invalid two-character human label: {sid}")
+        gender = row.get("speaker_gender", "")
+        if gender == "Male" and not re.fullmatch(r"M\d+", sid):
+            errors.append(f"invalid male human label: {sid}")
+            break
+        if gender == "Female" and not re.fullmatch(r"F\d+", sid):
+            errors.append(f"invalid female human label: {sid}")
             break
         if row.get("synthetic_voice_id") or row.get("repair_target_speaker_id"):
             errors.append(f"human row should not have synthetic fields populated: {sid}")
@@ -97,11 +131,12 @@ def main() -> int:
     for row in synthetic_rows:
         sid = row.get("speaker_id", "")
         target = row.get("repair_target_speaker_id", "")
-        if not re.fullmatch(r"[A-Z][a-z0-9]-s", sid):
-            errors.append(f"invalid synthetic label: {sid}")
+        gender = row.get("speaker_gender", "")
+        if gender == "Male" and not re.fullmatch(r"Ms\d+", sid):
+            errors.append(f"invalid male synthetic label: {sid}")
             break
-        if sid != f"{target}-s":
-            errors.append(f"synthetic label/target mismatch: {sid} vs {target}-s")
+        if gender == "Female" and not re.fullmatch(r"Fs\d+", sid):
+            errors.append(f"invalid female synthetic label: {sid}")
             break
         if target not in human_ids:
             errors.append(f"synthetic target not in human labels: {target}")
@@ -109,13 +144,6 @@ def main() -> int:
         if row.get("synthetic_voice_id") != sid:
             errors.append(f"synthetic_voice_id should equal synthetic speaker_id: {sid}")
             break
-
-    # Required collision behavior from project decision.
-    required_human_labels = {"Ai", "Ar"}
-    if not required_human_labels.issubset(human_ids):
-        errors.append(f"expected collision-resolved labels missing: {sorted(required_human_labels - human_ids)}")
-    if {"Ai-s", "Ar-s"} & synthetic_ids and not {"Ai", "Ar"}.issubset(human_ids):
-        errors.append("synthetic collision labels present without matching human labels")
 
     label_csv = PUBLIC_DIR / "speaker_label_gender_list.csv"
     if label_csv.exists():
@@ -133,8 +161,15 @@ def main() -> int:
         for row in target_rows:
             synth = row.get("synthetic_voice_id", "")
             target = row.get("repair_target_speaker_id", "")
-            if synth != f"{target}-s":
-                errors.append(f"invalid synthetic target row: {synth} / {target}")
+            gender = row.get("speaker_gender", "")
+            if gender == "Male" and not re.fullmatch(r"Ms\d+", synth):
+                errors.append(f"invalid male synthetic target row: {synth}")
+                break
+            if gender == "Female" and not re.fullmatch(r"Fs\d+", synth):
+                errors.append(f"invalid female synthetic target row: {synth}")
+                break
+            if target not in human_ids:
+                errors.append(f"synthetic target row points to unknown human label: {target}")
                 break
     else:
         errors.append(f"missing {target_csv}")

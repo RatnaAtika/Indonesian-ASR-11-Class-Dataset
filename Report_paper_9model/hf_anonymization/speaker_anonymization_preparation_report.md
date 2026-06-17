@@ -6,13 +6,14 @@ Status: **prepared for private-first HF upload**.
 
 The HF dataset package should not expose respondent names in public metadata, folder names, file paths, or dataset-card examples.
 
-Use short public labels:
+Use public labels:
 
-- Human male labels: `Af, Ai, Ar, Ba, Fa, Fi, Ha, Mu, Pr, Ri, Ro`
-- Human female labels: `An, At, Be, El, Er, In, Jo, Na, Ul`
-- Synthetic repair labels: `Af-s, Ai-s, An-s, Ar-s, At-s, Be-s, El-s, Er-s, Fa-s, Fi-s, Ha-s, In-s, Jo-s, Mu-s, Na-s, Pr-s, Ri-s, Ul-s`
+- Human male labels: `M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11`
+- Human female labels: `F1, F2, F3, F4, F5, F6, F7, F8, F9`
+- Synthetic male labels: `Ms1, Ms2, Ms3, Ms4, Ms5, Ms6, Ms7, Ms8, Ms9`
+- Synthetic female labels: `Fs1, Fs2, Fs3, Fs4, Fs5, Fs6, Fs7, Fs8, Fs9`
 
-Human labels are two-character codes. Synthetic repair labels append `-s` to the repaired human target label. For example, if a public human target is `Ai`, synthetic repair rows for that target use `Ai-s` and also store `repair_target_speaker_id=Ai`.
+Human labels use `M`/`F` plus alphabetic order number within each gender group. Synthetic repair labels use `Ms`/`Fs` plus alphabetic order number within each synthetic target gender group. Synthetic rows also store `repair_target_speaker_id` so users know which anonymized human slot the synthetic item repairs.
 
 The private original-name to public-label crosswalk is intentionally **not committed** and must not be uploaded to Hugging Face. If a crosswalk is required for internal auditing, generate it locally with:
 
@@ -51,12 +52,12 @@ Report_paper_9model/hf_anonymization_private/speaker_crosswalk_PRIVATE_DO_NOT_UP
 
 When building the HF staging folder, rewrite fields/paths from original respondent names to public labels:
 
-1. Human rows: `speaker_id` -> two-letter public label.
-2. Synthetic rows: `speaker_id` -> `<repair_target_speaker_id>-s`.
+1. Human rows: `speaker_id` -> `M*`/`F*`.
+2. Synthetic rows: `speaker_id` -> `Ms*`/`Fs*`.
 3. Add `speaker_type`: `human` or `synthetic`.
 4. Keep `speaker_gender` as `Male`/`Female` and document labels in `speaker_label_gender_list.csv`.
-5. Add `synthetic_voice_id`: blank for human rows; `<target-label>-s` for synthetic rows.
-6. Add `repair_target_speaker_id`: blank for human rows; target public label for synthetic rows.
+5. Add `synthetic_voice_id`: blank for human rows; `Ms*`/`Fs*` for synthetic rows.
+6. Add `repair_target_speaker_id`: blank for human rows; target public human label for synthetic rows.
 7. `audio_path`: replace speaker directories and take-id prefixes with the final public `speaker_id`.
 8. `audio_path_abs`: do not publish local absolute paths; replace with relative HF paths.
 9. Dataset card examples should use only public labels.
