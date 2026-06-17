@@ -8,7 +8,7 @@
     "rationale": "Keep paper evidence and plots in GitHub while leaving model weights and bulky full prediction tables for Hugging Face/external artifact storage."
   },
   "included_count": 120,
-  "included_total_bytes": 4515184,
+  "included_total_bytes": 4515190,
   "included_total_human": "4.3 MB",
   "skipped_count": 182,
   "skipped_total_bytes": 1351989943,
@@ -58,21 +58,21 @@
     },
     "rank07_m08-hmm-gmm": {
       "files": 12,
-      "bytes": 164982,
+      "bytes": 164984,
       "plot_files": 5,
       "report_files": 7,
       "bytes_human": "161.1 KB"
     },
     "rank08_m10-gmm-hmm-dnn": {
       "files": 12,
-      "bytes": 349733,
+      "bytes": 349735,
       "plot_files": 5,
       "report_files": 7,
       "bytes_human": "341.5 KB"
     },
     "rank09_m09-dnn-hmm": {
       "files": 12,
-      "bytes": 345963,
+      "bytes": 345965,
       "plot_files": 5,
       "report_files": 7,
       "bytes_human": "337.9 KB"
@@ -98,12 +98,12 @@
       "source_run_dir": "training_conventional/m08_hmm_gmm/runs/run_paper_20260530",
       "relative_path": "history.json",
       "source_path": "training_conventional/m08_hmm_gmm/runs/run_paper_20260530/history.json",
-      "size_bytes": 528,
-      "size_human": "528 B",
+      "size_bytes": 529,
+      "size_human": "529 B",
       "reason": "included",
       "status": "included",
       "package_path": "Report_paper_9model/training_diagnostics/rank07_m08-hmm-gmm/history.json",
-      "sha256_16": "ba31e9a41c206d4e"
+      "sha256_16": "397a9ca3d2840c63"
     },
     {
       "model_id": "m08-hmm-gmm",
@@ -124,12 +124,12 @@
       "source_run_dir": "training_conventional/m08_hmm_gmm/runs/run_paper_20260530",
       "relative_path": "meta.json",
       "source_path": "training_conventional/m08_hmm_gmm/runs/run_paper_20260530/meta.json",
-      "size_bytes": 2470,
+      "size_bytes": 2471,
       "size_human": "2.4 KB",
       "reason": "included",
       "status": "included",
       "package_path": "Report_paper_9model/training_diagnostics/rank07_m08-hmm-gmm/meta.json",
-      "sha256_16": "6842c0e3e4adf7a5"
+      "sha256_16": "a1f2586a783360df"
     },
     {
       "model_id": "m08-hmm-gmm",
@@ -254,12 +254,12 @@
       "source_run_dir": "training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634",
       "relative_path": "history.json",
       "source_path": "training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/history.json",
-      "size_bytes": 15969,
+      "size_bytes": 15970,
       "size_human": "15.6 KB",
       "reason": "included",
       "status": "included",
       "package_path": "Report_paper_9model/training_diagnostics/rank09_m09-dnn-hmm/history.json",
-      "sha256_16": "5797a6567be51e81"
+      "sha256_16": "02475083d75f59d4"
     },
     {
       "model_id": "m09-dnn-hmm",
@@ -280,12 +280,12 @@
       "source_run_dir": "training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634",
       "relative_path": "meta.json",
       "source_path": "training_conventional/m09_dnn_hmm/runs/run_paper_20260530_133634/meta.json",
-      "size_bytes": 2519,
+      "size_bytes": 2520,
       "size_human": "2.5 KB",
       "reason": "included",
       "status": "included",
       "package_path": "Report_paper_9model/training_diagnostics/rank09_m09-dnn-hmm/meta.json",
-      "sha256_16": "c47a4238b1cd04ec"
+      "sha256_16": "526dc2860489c3f8"
     },
     {
       "model_id": "m09-dnn-hmm",
@@ -410,12 +410,12 @@
       "source_run_dir": "training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736",
       "relative_path": "history.json",
       "source_path": "training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/history.json",
-      "size_bytes": 15957,
+      "size_bytes": 15958,
       "size_human": "15.6 KB",
       "reason": "included",
       "status": "included",
       "package_path": "Report_paper_9model/training_diagnostics/rank08_m10-gmm-hmm-dnn/history.json",
-      "sha256_16": "6afab9e347ca02ec"
+      "sha256_16": "278b4405ebcde140"
     },
     {
       "model_id": "m10-gmm-hmm-dnn",
@@ -436,12 +436,12 @@
       "source_run_dir": "training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736",
       "relative_path": "meta.json",
       "source_path": "training_conventional/m10_gmm_hmm_dnn/runs/run_paper_20260531_071736/meta.json",
-      "size_bytes": 2555,
+      "size_bytes": 2556,
       "size_human": "2.5 KB",
       "reason": "included",
       "status": "included",
       "package_path": "Report_paper_9model/training_diagnostics/rank08_m10-gmm-hmm-dnn/meta.json",
-      "sha256_16": "85fe7a02ade9c1d0"
+      "sha256_16": "3959a727f802f6e9"
     },
     {
       "model_id": "m10-gmm-hmm-dnn",
