@@ -152,6 +152,7 @@ def main() -> None:
         else:
             sid = human_label[name]; gender = target_gender[name]; target = ""; target_g = ""
         per_speaker[sid]["speaker_id"] = sid; per_speaker[sid]["speaker_type"] = "synthetic" if is_s else "human"; per_speaker[sid]["speaker_gender"] = gender; per_speaker[sid]["split"] = split; per_speaker[sid]["repair_target_speaker_id"] = target; per_speaker[sid]["repair_target_speaker_gender"] = target_g
+        per_speaker[sid]["voice_gender_matches_target"] = str(gender == target_g) if is_s else ""
         per_speaker[sid]["file_count"] += 1; per_speaker[sid]["duration_sec"] += dur; per_speaker[sid]["synthetic_files"] += int(is_s); per_speaker[sid]["real_files"] += int(not is_s)
         per_category[cat]["category"] = cat; per_category[cat]["file_count"] += 1; per_category[cat]["duration_sec"] += dur; per_category[cat]["synthetic_files"] += int(is_s)
         per_split[split]["split"] = split; per_split[split]["file_count"] += 1; per_split[split]["duration_sec"] += dur; per_split[split]["synthetic_files"] += int(is_s); per_split[split][f"{gender.lower()}_source_files"] += 1
@@ -163,10 +164,10 @@ def main() -> None:
 
     ps_rows=[]
     for sid, v in sorted(per_speaker.items(), key=lambda kv: (kv[0][0:2], int(re.findall(r"\d+", kv[0])[0]))):
-        row={k:v.get(k, "") for k in ["speaker_id","speaker_type","speaker_gender","split","repair_target_speaker_id","repair_target_speaker_gender"]}
+        row={k:v.get(k, "") for k in ["speaker_id","speaker_type","speaker_gender","split","repair_target_speaker_id","repair_target_speaker_gender","voice_gender_matches_target"]}
         row.update({"file_count": int(v["file_count"]), "real_files": int(v["real_files"]), "synthetic_files": int(v["synthetic_files"]), "duration_sec": round(v["duration_sec"],4), "duration_hours": round(v["duration_sec"]/3600,4)})
         ps_rows.append(row)
-    write_csv(OUT/"per_speaker_public.csv", ps_rows, ["speaker_id","speaker_type","speaker_gender","split","repair_target_speaker_id","repair_target_speaker_gender","file_count","real_files","synthetic_files","duration_sec","duration_hours"])
+    write_csv(OUT/"per_speaker_public.csv", ps_rows, ["speaker_id","speaker_type","speaker_gender","split","repair_target_speaker_id","repair_target_speaker_gender","voice_gender_matches_target","file_count","real_files","synthetic_files","duration_sec","duration_hours"])
 
     pc_rows=[]
     for cat in CATEGORIES:
@@ -182,7 +183,54 @@ def main() -> None:
     write_csv(OUT/"word_frequency_public.csv", wf, ["rank","word","freq"])
     write_csv(OUT/"synthetic_repair_rows_public.csv", synth_rows, ["speaker_id","speaker_gender","repair_target_speaker_id","repair_target_speaker_gender","voice_gender_matches_target","split","category","duration_sec"])
 
-    stats={"generated_at":datetime.now().isoformat(timespec="seconds"),"scope":"full_hf_metadata_104500_files","source":"metadata/dataset_metadata.csv","gender_correction_note":"One respondent was corrected to Male for public labels; original names are not exposed here.","file_count":len(rows),"human_real_files":sum(1 for r in rows if str(r['is_synthetic']).lower()!='true'),"synthetic_files":len(synth_rows),"duration_hours_total":round(sum(float(r.get('duration_sec') or 0) for r in rows)/3600,4),"speaker_label_count":len(ps_rows),"word_type_count":len(words),"synthetic_voice_target_gender_mismatch_files":sum(1 for r in synth_rows if r['voice_gender_matches_target']=='False')}
+    # Public-safe version of the existing audio-quality sample. The source file
+    # is a paper-clean sample, so preserve the scope note and remove original
+    # respondent paths/names rather than pretending it is full-scope.
+    aq_source = ROOT / "reports" / "dataset_statistics_v7_paper9" / "stats" / "audio_quality_sample.csv"
+    aq_rows = []
+    if aq_source.exists():
+        with aq_source.open(newline="", encoding="utf-8") as h:
+            for r in csv.DictReader(h):
+                name = r["speaker_id"]
+                is_s = False
+                aq_rows.append({
+                    "source_scope": "paper_clean_audio_quality_sample",
+                    "category": r["category"],
+                    "speaker_id": human_label.get(name, "UNKNOWN"),
+                    "speaker_gender": target_gender.get(name, ""),
+                    "rms": r["rms"],
+                    "peak": r["peak"],
+                    "dynamic_range_db": r["dynamic_range_db"],
+                    "silence_ratio": r["silence_ratio"],
+                    "spectral_centroid_hz": r["spectral_centroid_hz"],
+                    "duration_sec": r["duration_sec"],
+                })
+    write_csv(OUT/"audio_quality_sample_public.csv", aq_rows, ["source_scope","category","speaker_id","speaker_gender","rms","peak","dynamic_range_db","silence_ratio","spectral_centroid_hz","duration_sec"])
+
+    synthetic_summary = {
+        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "scope": "full_hf_metadata_104500_files",
+        "source": "metadata/dataset_metadata.csv",
+        "synthetic_files_total": len(synth_rows),
+        "by_synthetic_voice_gender": dict(Counter(r["speaker_gender"] for r in synth_rows)),
+        "by_split": {split: sum(1 for r in synth_rows if r["split"] == split) for split in ["train", "dev", "test"]},
+        "by_category": {cat: sum(1 for r in synth_rows if r["category"] == cat) for cat in CATEGORIES},
+        "voice_target_gender_mismatch_files": sum(1 for r in synth_rows if r["voice_gender_matches_target"] == "False"),
+        "repair_targets": [
+            {
+                "synthetic_voice_id": r["speaker_id"],
+                "speaker_gender": r["speaker_gender"],
+                "repair_target_speaker_id": r["repair_target_speaker_id"],
+                "repair_target_speaker_gender": r["repair_target_speaker_gender"],
+                "voice_gender_matches_target": r["voice_gender_matches_target"],
+                "synthetic_files": r["synthetic_files"],
+            }
+            for r in ps_rows if r["speaker_type"] == "synthetic"
+        ],
+    }
+    (OUT/"synthetic_data_stats_public.json").write_text(json.dumps(synthetic_summary, indent=2, ensure_ascii=False)+"\n", encoding="utf-8")
+
+    stats={"generated_at":datetime.now().isoformat(timespec="seconds"),"scope":"full_hf_metadata_104500_files","source":"metadata/dataset_metadata.csv","gender_correction_note":"One respondent was corrected to Male for public labels; original names are not exposed here.","file_count":len(rows),"human_real_files":sum(1 for r in rows if str(r['is_synthetic']).lower()!='true'),"synthetic_files":len(synth_rows),"duration_hours_total":round(sum(float(r.get('duration_sec') or 0) for r in rows)/3600,4),"speaker_label_count":len(ps_rows),"word_type_count":len(words),"audio_quality_sample_rows":len(aq_rows),"synthetic_voice_target_gender_mismatch_files":sum(1 for r in synth_rows if r['voice_gender_matches_target']=='False')}
     (OUT/"dataset_stats_public.json").write_text(json.dumps(stats, indent=2, ensure_ascii=False)+"\n", encoding="utf-8")
     (OUT/"README.md").write_text(f"""# HF Dataset Information Public Package
 
@@ -196,6 +244,8 @@ This folder is generated from the full HF target metadata (`metadata/dataset_met
 - Public per-category statistics: `per_category_public.csv`.
 - Public per-split statistics: `per_split_public.csv`.
 - Synthetic repair rows: `synthetic_repair_rows_public.csv`.
+- Synthetic summary: `synthetic_data_stats_public.json`.
+- Public-safe audio-quality sample: `audio_quality_sample_public.csv`.
 - Figures are regenerated with public labels under `figures_public/`.
 
 Rows with synthetic voice/target-gender mismatch are explicitly flagged in `synthetic_repair_rows_public.csv`.

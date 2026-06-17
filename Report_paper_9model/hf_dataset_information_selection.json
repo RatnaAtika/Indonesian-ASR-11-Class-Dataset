@@ -1,15 +1,15 @@
 {
   "purpose": "Optimized selection of dataset-information artifacts for HF upload, with privacy actions.",
   "critical_scope_note": "Preferred public package is Report_paper_9model/hf_dataset_information_public generated from 104,500-file full HF metadata. Old reports/dataset_statistics_v7_paper9 remains paper-clean subset unless separately labeled.",
-  "selection_count": 45,
+  "selection_count": 47,
   "decision_counts": {
-    "anonymize_or_regenerate": 1,
     "exclude_public": 3,
     "exclude_public_duplicate": 1,
     "include_as_is": 20,
-    "include_preferred_full_scope": 10,
+    "include_preferred_full_scope": 12,
     "manual_review_or_regenerate": 1,
-    "superseded_by_full_scope_public_package": 9
+    "superseded_by_full_scope_public_package": 9,
+    "superseded_by_public_safe_sample": 1
   },
   "items": [
     {
@@ -60,6 +60,20 @@
       "decision": "include_preferred_full_scope",
       "reason": "Synthetic repair disclosure with mismatch flags",
       "privacy_action": "public-safe generated output"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/audio_quality_sample_public.csv",
+      "hf_target_path": "paper/dataset_information/audio_quality_sample_public.csv",
+      "decision": "include_preferred_full_scope",
+      "reason": "Public-safe audio-quality sample with speaker labels anonymized; source_scope column marks paper-clean sample",
+      "privacy_action": "text-scan before upload"
+    },
+    {
+      "source_path": "Report_paper_9model/hf_dataset_information_public/synthetic_data_stats_public.json",
+      "hf_target_path": "paper/dataset_information/synthetic_data_stats_public.json",
+      "decision": "include_preferred_full_scope",
+      "reason": "Full-scope synthetic-data summary with public labels and mismatch flags",
+      "privacy_action": "text-scan before upload"
     },
     {
       "source_path": "Report_paper_9model/hf_dataset_information_public/figures_public/F1_files_per_speaker_split_public.pdf",
@@ -260,9 +274,9 @@
     {
       "source_path": "reports/dataset_statistics_v7_paper9/stats/audio_quality_sample.csv",
       "hf_target_path": "paper/dataset_information/anonymized_or_regenerated/audio_quality_sample_public.csv",
-      "decision": "anonymize_or_regenerate",
+      "decision": "superseded_by_public_safe_sample",
       "reason": "Contains original speaker names and sample paths",
-      "privacy_action": "replace labels and relative HF paths"
+      "privacy_action": "use Report_paper_9model/hf_dataset_information_public/audio_quality_sample_public.csv for HF public upload"
     },
     {
       "source_path": "reports/dataset_statistics_v7_paper9/synthetic_data_report/synthetic_data_stats.json",
