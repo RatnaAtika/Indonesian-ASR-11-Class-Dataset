@@ -143,10 +143,13 @@ From local metadata:
 - Files per category: 9,500
 - Files per speaker: 5,225
 - Split seed: 42
-- Public split speaker IDs after anonymization:
+- Public human split speaker IDs after anonymization:
   - train: M1, M2, M6, M7, M8, M10, F1, F2, F3, F4, F5, F6, F8, F9
   - dev: M3, M5, M9
   - test: M4, M11, F7
+- Public synthetic acoustic-source IDs:
+  - MS1: male synthetic repair voice, 73 files
+  - FS1: female synthetic repair voice, 59 files
 - Files by split:
   - train: 73,150
   - dev: 15,675
@@ -163,7 +166,8 @@ From local metadata:
 Before switching HF repo from private to public, confirm:
 
 - Speaker consent covers public release of voice recordings.
-- Respondent names must be replaced with anonymized gender-coded IDs before HF publication: male respondents use `M1..M11`; female respondents use `F1..F9`.
+- Respondent names must be replaced with anonymized gender-coded IDs before HF publication: male human respondents use `M1..M11`; female human respondents use `F1..F9`.
+- Synthetic repair audio must be separated from human respondents at the acoustic-source level: male synthetic audio uses `MS1`; female synthetic audio uses `FS1`.
 - Use `Report_paper_9model/hf_anonymization/` as the public anonymization preparation package. Do not commit or upload the private original-name crosswalk.
 - Any gender, region/logat, or speaker attributes are consented and necessary for the paper.
 - License is chosen and compatible with voice data. Recommended options to discuss:
@@ -223,6 +227,8 @@ Public committed preparation files:
 ```text
 Report_paper_9model/hf_anonymization/speaker_id_public_inventory.csv
 Report_paper_9model/hf_anonymization/speaker_id_public_inventory.json
+Report_paper_9model/hf_anonymization/synthetic_repair_targets_public.csv
+Report_paper_9model/hf_anonymization/hf_public_metadata_schema.md
 Report_paper_9model/hf_anonymization/speaker_anonymization_preparation_report.md
 ```
 
@@ -241,7 +247,7 @@ mkdir -p /mnt/c/Users/wayandadang/AI/Dataset_ASR_HF_STAGING
 mkdir -p /mnt/c/Users/wayandadang/AI/Dataset_ASR_HF_STAGING_SOURCE
 ```
 
-Use copy mode, not hardlinks, to avoid accidental mutation of source training folders. **Important:** the commands below are source-collection commands; before upload, the staged dataset paths/metadata must be rewritten so respondent folders and `speaker_id` values use only `M*`/`F*` IDs.
+Use copy mode, not hardlinks, to avoid accidental mutation of source training folders. **Important:** the commands below are source-collection commands; before upload, the staged dataset paths/metadata must be rewritten so respondent folders and `speaker_id` values use only final public acoustic-source IDs (`M*`/`F*` for human audio, `MS1`/`FS1` for synthetic repair audio).
 
 ```bash
 rsync -a --copy-links --info=progress2 \
@@ -274,6 +280,19 @@ rsync -a --copy-links --info=progress2 \
 Then add the 9 full `predictions.csv` files from their final run directories into the corresponding rank `run_outputs/` folders. These are intentionally skipped by GitHub but should be present in HF.
 
 Before upload, run a final privacy check over the upload staging folder: no original respondent names should appear in uploaded audio paths, metadata rows, split examples, README snippets, or dataset-card examples. Keep any private source staging folder (`Dataset_ASR_HF_STAGING_SOURCE`) local only.
+
+Required public metadata fields after rewrite:
+
+```text
+speaker_id               = M*/F*/MS1/FS1 as the final acoustic speaker/source
+speaker_type             = human or synthetic
+speaker_gender           = Male/Female
+is_synthetic             = True/False
+synthetic_voice_id       = MS1/FS1 for synthetic rows; blank for human rows
+repair_target_speaker_id = M*/F* for synthetic rows; blank for human rows
+```
+
+Human rows keep `speaker_id=M*` or `F*`. Synthetic rows use `speaker_id=MS1` or `FS1`, while `repair_target_speaker_id` preserves the anonymized human slot repaired by the TTS item.
 
 ### 7.5 Generate upload manifest
 
@@ -367,7 +386,7 @@ The HF `README.md` should contain:
 - [ ] Login to HF with account/org permission.
 - [ ] Confirm private repo creation.
 - [ ] Decide whether raw `Dataset_Ori/` is included now, later, or never.
-- [x] Prepare speaker anonymization policy: public HF IDs are `M1..M11` and `F1..F9`; private crosswalk is not committed/uploaded.
+- [x] Prepare speaker anonymization policy: human public HF IDs are `M1..M11` and `F1..F9`; synthetic public HF IDs are `MS1` and `FS1`; private crosswalk is not committed/uploaded.
 - [ ] Confirm license.
 - [ ] Build staging folder with processed data, metadata, splits, models, predictions, diagnostics, and paper docs.
 - [ ] Generate `upload_manifest.json` and `upload_manifest.csv`.
