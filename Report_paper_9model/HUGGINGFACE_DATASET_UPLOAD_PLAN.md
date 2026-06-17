@@ -37,7 +37,7 @@ Recommended visibility now: **private**. Change to public only after the paper i
 | Full run outputs, including skipped large predictions | final run `test_results/predictions.csv` plus existing `model_artifacts/rank*/run_outputs/` | about 23.4 MB for 9 predictions CSVs + small outputs | `models/final_9model_benchmark/rank*/run_outputs/` | Exact per-sample predictions used in benchmark |
 | Training diagnostics | `Report_paper_9model/training_diagnostics/` | 120 files / about 4.3 MB | `models/final_9model_benchmark/training_diagnostics/` | Training plots/logs/reports cross-checked with final runs |
 | Spectrogram/logat paper assets | `Report_paper_9model/spectrogram_logat/` | small/moderate | `paper/spectrogram_logat/` | Qualitative accent/regional illustration package |
-| Dataset information/statistics package | `reports/dataset_statistics_v7_paper9/` curated by `Report_paper_9model/HF_DATASET_INFORMATION_SELECTION.md` | small/moderate | `paper/dataset_information/` | User-facing dataset statistics, word distribution, category/split summaries, audio uniformity, synthetic disclosure |
+| Dataset information/statistics package | preferred: `Report_paper_9model/hf_dataset_information_public/`; optional clean subset: `reports/dataset_statistics_v7_paper9/` curated by `Report_paper_9model/HF_DATASET_INFORMATION_SELECTION.md` | small/moderate | `paper/dataset_information/` | Full-scope public dataset statistics, word distribution, category/split summaries, regenerated public-label speaker figures, synthetic disclosure |
 | Reproducibility code snapshots | `Report_paper_9model/model_artifacts/rank*/source_code/`, `pseudocode.md`, `architecture/` | small | `models/final_9model_benchmark/rank*/` | Enables readers to understand model architecture and evaluation |
 
 ### Should upload if licensing/consent allows
@@ -110,13 +110,21 @@ paper/
   spectrogram_logat/...
   dataset_information/
     README.md
-    word_frequency.csv
-    per_category.csv
-    per_split.csv
-    statistical_tests.csv
-    synthetic_per_category.csv
-    figures/...
-    anonymized_or_regenerated/...
+    dataset_stats_public.json
+    word_frequency_public.csv
+    per_category_public.csv
+    per_split_public.csv
+    per_speaker_public.csv
+    synthetic_repair_rows_public.csv
+    figures/
+      F1_files_per_speaker_split_public.pdf
+      F3_speaker_total_duration_public.pdf
+      F7_speaker_category_heatmap_public.pdf
+    paper_clean_subset_optional/
+      word_frequency.csv
+      per_category.csv
+      statistical_tests.csv
+      non-speaker figures, if clearly labeled as paper-clean subset
 
 provenance/
   processed_balanced19_v3_reports/...

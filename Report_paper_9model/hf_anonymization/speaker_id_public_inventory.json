@@ -1,18 +1,21 @@
 {
-  "generated_at": "2026-06-17T19:25:00",
-  "purpose": "Public speaker/source label inventory for HF upload. Contains public labels only; no original respondent names.",
+  "generated_at": "2026-06-17T20:53:40",
+  "purpose": "Public speaker/source label inventory for HF upload. No original respondent names.",
+  "gender_correction_note": "One respondent label was corrected from the source metadata before public M/F label assignment.",
+  "corrected_metadata_rows": 5225,
   "id_policy": {
-    "human_male": "M1..M11, assigned alphabetically by original respondent name within Male group",
-    "human_female": "F1..F9, assigned alphabetically by original respondent name within Female group",
-    "synthetic_male": "Ms1..Msn, assigned alphabetically by original repair target name within Male synthetic group",
-    "synthetic_female": "Fs1..Fsn, assigned alphabetically by original repair target name within Female synthetic group",
-    "note": "speaker_id is the public acoustic row label. Synthetic rows also carry repair_target_speaker_id."
+    "human_male": "M1..M12, assigned alphabetically by corrected respondent gender within Male group",
+    "human_female": "F1..F8, assigned alphabetically by corrected respondent gender within Female group",
+    "synthetic_male": "Ms*, assigned alphabetically by original repair target among actual male synthetic voices",
+    "synthetic_female": "Fs*, assigned alphabetically by original repair target among actual female synthetic voices",
+    "note": "speaker_id is the public acoustic source label. Synthetic rows carry repair_target_speaker_id and voice_gender_matches_target."
   },
   "label_count": 38,
   "human_speaker_count": 20,
   "synthetic_label_count": 18,
   "human_files_total": 104368,
   "synthetic_files_total": 132,
+  "synthetic_voice_target_gender_mismatch_files": 2,
   "files_total": 104500,
   "duration_hours_total": 134.1762,
   "speakers": [
@@ -28,6 +31,8 @@
       "duration_hours": 6.1836,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 6
     },
     {
@@ -42,6 +47,8 @@
       "duration_hours": 7.77,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 7
     },
     {
@@ -56,6 +63,8 @@
       "duration_hours": 7.193,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 8
     },
     {
@@ -70,6 +79,8 @@
       "duration_hours": 7.4491,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 8
     },
     {
@@ -84,6 +95,8 @@
       "duration_hours": 6.5764,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 4
     },
     {
@@ -98,24 +111,12 @@
       "duration_hours": 6.9353,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 4
     },
     {
       "speaker_id": "F7",
-      "speaker_type": "human",
-      "speaker_gender": "Female",
-      "split": "test",
-      "file_count": 5223,
-      "real_files": 5223,
-      "synthetic_files": 0,
-      "duration_sec": 22962.0589,
-      "duration_hours": 6.3783,
-      "synthetic_voice_id": "",
-      "repair_target_speaker_id": "",
-      "synthetic_repair_files_for_this_target": 2
-    },
-    {
-      "speaker_id": "F8",
       "speaker_type": "human",
       "speaker_gender": "Female",
       "split": "train",
@@ -126,10 +127,12 @@
       "duration_hours": 6.9472,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 14
     },
     {
-      "speaker_id": "F9",
+      "speaker_id": "F8",
       "speaker_type": "human",
       "speaker_gender": "Female",
       "split": "train",
@@ -140,6 +143,8 @@
       "duration_hours": 6.4769,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 6
     },
     {
@@ -154,6 +159,8 @@
       "duration_hours": 5.752,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 17
     },
     {
@@ -168,6 +175,8 @@
       "duration_hours": 6.51,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 15
     },
     {
@@ -182,6 +191,8 @@
       "duration_hours": 6.6801,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 2
     },
     {
@@ -196,6 +207,8 @@
       "duration_hours": 6.4396,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 0
     },
     {
@@ -210,6 +223,8 @@
       "duration_hours": 6.5769,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 3
     },
     {
@@ -224,6 +239,8 @@
       "duration_hours": 7.8677,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 7
     },
     {
@@ -238,10 +255,28 @@
       "duration_hours": 5.9018,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 10
     },
     {
       "speaker_id": "M8",
+      "speaker_type": "human",
+      "speaker_gender": "Male",
+      "split": "test",
+      "file_count": 5223,
+      "real_files": 5223,
+      "synthetic_files": 0,
+      "duration_sec": 22962.0589,
+      "duration_hours": 6.3783,
+      "synthetic_voice_id": "",
+      "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
+      "synthetic_repair_files_for_this_target": 2
+    },
+    {
+      "speaker_id": "M9",
       "speaker_type": "human",
       "speaker_gender": "Male",
       "split": "train",
@@ -252,10 +287,12 @@
       "duration_hours": 6.2613,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 12
     },
     {
-      "speaker_id": "M9",
+      "speaker_id": "M10",
       "speaker_type": "human",
       "speaker_gender": "Male",
       "split": "dev",
@@ -266,10 +303,12 @@
       "duration_hours": 7.0322,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 3
     },
     {
-      "speaker_id": "M10",
+      "speaker_id": "M11",
       "speaker_type": "human",
       "speaker_gender": "Male",
       "split": "train",
@@ -280,10 +319,12 @@
       "duration_hours": 6.9546,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 4
     },
     {
-      "speaker_id": "M11",
+      "speaker_id": "M12",
       "speaker_type": "human",
       "speaker_gender": "Male",
       "split": "test",
@@ -294,6 +335,8 @@
       "duration_hours": 6.1144,
       "synthetic_voice_id": "",
       "repair_target_speaker_id": "",
+      "repair_target_speaker_gender": "",
+      "voice_gender_matches_target": "",
       "synthetic_repair_files_for_this_target": 0
     },
     {
@@ -308,6 +351,8 @@
       "duration_hours": 0.0084,
       "synthetic_voice_id": "Fs1",
       "repair_target_speaker_id": "F1",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -322,6 +367,8 @@
       "duration_hours": 0.011,
       "synthetic_voice_id": "Fs2",
       "repair_target_speaker_id": "F2",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -336,6 +383,8 @@
       "duration_hours": 0.0146,
       "synthetic_voice_id": "Fs3",
       "repair_target_speaker_id": "F3",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -350,6 +399,8 @@
       "duration_hours": 0.013,
       "synthetic_voice_id": "Fs4",
       "repair_target_speaker_id": "F4",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -364,6 +415,8 @@
       "duration_hours": 0.0071,
       "synthetic_voice_id": "Fs5",
       "repair_target_speaker_id": "F5",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -378,6 +431,8 @@
       "duration_hours": 0.0075,
       "synthetic_voice_id": "Fs6",
       "repair_target_speaker_id": "F6",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -391,7 +446,9 @@
       "duration_sec": 11.712,
       "duration_hours": 0.0033,
       "synthetic_voice_id": "Fs7",
-      "repair_target_speaker_id": "F7",
+      "repair_target_speaker_id": "M8",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "False",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -405,7 +462,9 @@
       "duration_sec": 77.808,
       "duration_hours": 0.0216,
       "synthetic_voice_id": "Fs8",
-      "repair_target_speaker_id": "F8",
+      "repair_target_speaker_id": "F7",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -419,7 +478,9 @@
       "duration_sec": 23.256,
       "duration_hours": 0.0065,
       "synthetic_voice_id": "Fs9",
-      "repair_target_speaker_id": "F9",
+      "repair_target_speaker_id": "F8",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -434,6 +495,8 @@
       "duration_hours": 0.0186,
       "synthetic_voice_id": "Ms1",
       "repair_target_speaker_id": "M1",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -448,6 +511,8 @@
       "duration_hours": 0.0173,
       "synthetic_voice_id": "Ms2",
       "repair_target_speaker_id": "M2",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -462,6 +527,8 @@
       "duration_hours": 0.0017,
       "synthetic_voice_id": "Ms3",
       "repair_target_speaker_id": "M3",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -476,6 +543,8 @@
       "duration_hours": 0.0024,
       "synthetic_voice_id": "Ms4",
       "repair_target_speaker_id": "M5",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -490,6 +559,8 @@
       "duration_hours": 0.0081,
       "synthetic_voice_id": "Ms5",
       "repair_target_speaker_id": "M6",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -504,6 +575,8 @@
       "duration_hours": 0.0136,
       "synthetic_voice_id": "Ms6",
       "repair_target_speaker_id": "M7",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -517,7 +590,9 @@
       "duration_sec": 49.848,
       "duration_hours": 0.0138,
       "synthetic_voice_id": "Ms7",
-      "repair_target_speaker_id": "M8",
+      "repair_target_speaker_id": "M9",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -531,7 +606,9 @@
       "duration_sec": 13.056,
       "duration_hours": 0.0036,
       "synthetic_voice_id": "Ms8",
-      "repair_target_speaker_id": "M9",
+      "repair_target_speaker_id": "M10",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     },
     {
@@ -545,7 +622,9 @@
       "duration_sec": 13.392,
       "duration_hours": 0.0037,
       "synthetic_voice_id": "Ms9",
-      "repair_target_speaker_id": "M10",
+      "repair_target_speaker_id": "M11",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "synthetic_repair_files_for_this_target": ""
     }
   ],
@@ -554,6 +633,8 @@
       "synthetic_voice_id": "Fs1",
       "repair_target_speaker_id": "F1",
       "speaker_gender": "Female",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 6,
       "synthetic_duration_sec": 30.288,
@@ -563,6 +644,8 @@
       "synthetic_voice_id": "Fs2",
       "repair_target_speaker_id": "F2",
       "speaker_gender": "Female",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 7,
       "synthetic_duration_sec": 39.432,
@@ -572,6 +655,8 @@
       "synthetic_voice_id": "Fs3",
       "repair_target_speaker_id": "F3",
       "speaker_gender": "Female",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 8,
       "synthetic_duration_sec": 52.488,
@@ -581,6 +666,8 @@
       "synthetic_voice_id": "Fs4",
       "repair_target_speaker_id": "F4",
       "speaker_gender": "Female",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 8,
       "synthetic_duration_sec": 46.632,
@@ -590,6 +677,8 @@
       "synthetic_voice_id": "Fs5",
       "repair_target_speaker_id": "F5",
       "speaker_gender": "Female",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 4,
       "synthetic_duration_sec": 25.656,
@@ -599,6 +688,8 @@
       "synthetic_voice_id": "Fs6",
       "repair_target_speaker_id": "F6",
       "speaker_gender": "Female",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 4,
       "synthetic_duration_sec": 27.048,
@@ -606,8 +697,10 @@
     },
     {
       "synthetic_voice_id": "Fs7",
-      "repair_target_speaker_id": "F7",
+      "repair_target_speaker_id": "M8",
       "speaker_gender": "Female",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "False",
       "target_split": "test",
       "synthetic_file_count": 2,
       "synthetic_duration_sec": 11.712,
@@ -615,8 +708,10 @@
     },
     {
       "synthetic_voice_id": "Fs8",
-      "repair_target_speaker_id": "F8",
+      "repair_target_speaker_id": "F7",
       "speaker_gender": "Female",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 14,
       "synthetic_duration_sec": 77.808,
@@ -624,8 +719,10 @@
     },
     {
       "synthetic_voice_id": "Fs9",
-      "repair_target_speaker_id": "F9",
+      "repair_target_speaker_id": "F8",
       "speaker_gender": "Female",
+      "repair_target_speaker_gender": "Female",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 6,
       "synthetic_duration_sec": 23.256,
@@ -635,6 +732,8 @@
       "synthetic_voice_id": "Ms1",
       "repair_target_speaker_id": "M1",
       "speaker_gender": "Male",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 17,
       "synthetic_duration_sec": 66.816,
@@ -644,6 +743,8 @@
       "synthetic_voice_id": "Ms2",
       "repair_target_speaker_id": "M2",
       "speaker_gender": "Male",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 15,
       "synthetic_duration_sec": 62.16,
@@ -653,6 +754,8 @@
       "synthetic_voice_id": "Ms3",
       "repair_target_speaker_id": "M3",
       "speaker_gender": "Male",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "target_split": "dev",
       "synthetic_file_count": 2,
       "synthetic_duration_sec": 6.024,
@@ -662,6 +765,8 @@
       "synthetic_voice_id": "Ms4",
       "repair_target_speaker_id": "M5",
       "speaker_gender": "Male",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "target_split": "dev",
       "synthetic_file_count": 3,
       "synthetic_duration_sec": 8.784,
@@ -671,6 +776,8 @@
       "synthetic_voice_id": "Ms5",
       "repair_target_speaker_id": "M6",
       "speaker_gender": "Male",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 7,
       "synthetic_duration_sec": 29.04,
@@ -680,6 +787,8 @@
       "synthetic_voice_id": "Ms6",
       "repair_target_speaker_id": "M7",
       "speaker_gender": "Male",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 10,
       "synthetic_duration_sec": 49.08,
@@ -687,8 +796,10 @@
     },
     {
       "synthetic_voice_id": "Ms7",
-      "repair_target_speaker_id": "M8",
+      "repair_target_speaker_id": "M9",
       "speaker_gender": "Male",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 12,
       "synthetic_duration_sec": 49.848,
@@ -696,8 +807,10 @@
     },
     {
       "synthetic_voice_id": "Ms8",
-      "repair_target_speaker_id": "M9",
+      "repair_target_speaker_id": "M10",
       "speaker_gender": "Male",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "target_split": "dev",
       "synthetic_file_count": 3,
       "synthetic_duration_sec": 13.056,
@@ -705,8 +818,10 @@
     },
     {
       "synthetic_voice_id": "Ms9",
-      "repair_target_speaker_id": "M10",
+      "repair_target_speaker_id": "M11",
       "speaker_gender": "Male",
+      "repair_target_speaker_gender": "Male",
+      "voice_gender_matches_target": "True",
       "target_split": "train",
       "synthetic_file_count": 4,
       "synthetic_duration_sec": 13.392,
@@ -719,16 +834,14 @@
       "synthesis_engine": "microsoft_edge_tts_neural",
       "synthesis_voice": "id-ID-GadisNeural",
       "synthesis_voice_label": "id-ID-GadisNeural_Female",
-      "file_count": 59,
-      "note": "source TTS voice; public synthetic labels use Ms*/Fs* per repair target"
+      "file_count": 59
     },
     {
       "speaker_gender": "Male",
       "synthesis_engine": "microsoft_edge_tts_neural",
       "synthesis_voice": "id-ID-ArdiNeural",
       "synthesis_voice_label": "id-ID-ArdiNeural_Male",
-      "file_count": 73,
-      "note": "source TTS voice; public synthetic labels use Ms*/Fs* per repair target"
+      "file_count": 73
     }
   ]
 }

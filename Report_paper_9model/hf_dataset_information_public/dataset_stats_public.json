@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-06-17T20:55:18",
+  "scope": "full_hf_metadata_104500_files",
+  "source": "metadata/dataset_metadata.csv",
+  "gender_correction_note": "One respondent was corrected to Male for public labels; original names are not exposed here.",
+  "file_count": 104500,
+  "human_real_files": 104368,
+  "synthetic_files": 132,
+  "duration_hours_total": 134.1762,
+  "speaker_label_count": 38,
+  "word_type_count": 714,
+  "synthetic_voice_target_gender_mismatch_files": 2
+}

@@ -2,7 +2,15 @@
 
 Purpose: choose the most useful dataset-information artifacts to include in the Hugging Face Dataset repo, while avoiding respondent-name leakage and avoiding noisy/internal build files.
 
-Status: **optimized selection prepared**. Actual upload should use this as a staging checklist.
+Status: **optimized selection prepared and public-safe full-scope package generated**.
+
+New preferred package for HF upload:
+
+```text
+Report_paper_9model/hf_dataset_information_public/
+```
+
+This package is generated from the full HF target metadata (`metadata/dataset_metadata.csv`, 104,500 files), uses public labels only, corrects the speaker-gender assignment requested by the project owner, and regenerates the per-speaker figures with public labels.
 
 ## Critical finding from cross-check
 
@@ -11,10 +19,13 @@ There are two related but not identical dataset scopes in the repository:
 1. **Full HF dataset scope** — `metadata/dataset_metadata.csv`, 104,500 files. This is the current target for HF dataset upload and speaker-label preparation.
 2. **Paper-clean statistics scope** — `reports/dataset_statistics_v7_paper9/`, generated from `metadata/dataset_metadata_clean.csv`, 102,544 files. This package is valuable because it contains word distribution, duration/category/speaker statistics, audio uniformity, synthetic disclosure, and Data in Brief-ready figures, but it must be labeled as the **paper-clean/statistics subset** unless regenerated from the 104,500-file HF metadata.
 
-Therefore, do **not** upload the statistics package blindly as if it described the whole 104,500-file HF dataset. Either:
+Therefore, do **not** upload the old statistics package blindly as if it described the whole 104,500-file HF dataset. The preferred action has now been completed: generate a new public-safe HF statistics package from the final 104,500-file metadata:
 
-- upload it under `paper/dataset_statistics_v7_paper9_clean_subset/` with a clear scope note, or
-- regenerate a new public-safe HF statistics package from the final anonymized 104,500-file metadata.
+```text
+Report_paper_9model/hf_dataset_information_public/
+```
+
+The old `reports/dataset_statistics_v7_paper9/` package can still be uploaded only as a clearly labeled paper-clean/statistics subset if needed.
 
 ## Recommended HF folder layout
 
@@ -22,32 +33,43 @@ Therefore, do **not** upload the statistics package blindly as if it described t
 paper/dataset_information/
   README.md
   dataset_information_selection.md
-  word_frequency.csv
-  per_category.csv
-  per_split.csv
-  statistical_tests.csv
-  synthetic_per_category.csv
+  README.md
+  dataset_stats_public.json
+  word_frequency_public.csv
+  per_category_public.csv
+  per_split_public.csv
+  per_speaker_public.csv
+  synthetic_repair_rows_public.csv
   figures/
-    F2_duration_per_category.pdf
-    F4_sentence_length.pdf
-    F5_word_frequency_pareto.pdf
-    F6_heaps_law.pdf
-    F8_cumulative_hours.pdf
-    F9_audio_uniformity.pdf
-    F10_synthetic_disclosure.pdf
-    F12_audio_quality.pdf
-    S1_synth_per_category_voice.pdf
-    S2_synth_fraction_per_category.pdf
-    S3_synth_split_per_category.pdf
-    S4_synth_quality.pdf
-  anonymized_or_regenerated/
-    dataset_stats_public.json
-    per_speaker_public.csv
-    audio_quality_sample_public.csv
-    synthetic_data_stats_public.json
+    F1_files_per_speaker_split_public.pdf/png
+    F3_speaker_total_duration_public.pdf/png
+    F7_speaker_category_heatmap_public.pdf/png
+  paper_clean_subset_optional/
+    word_frequency.csv
+    per_category.csv
+    statistical_tests.csv
+    non-speaker figures, if clearly labeled as paper-clean subset
 ```
 
 ## Optimized include list
+
+### Preferred include: regenerated full-scope public package
+
+Upload these generated files first because they are aligned with the 104,500-file HF target and use public labels only:
+
+| Source | HF target | Why include |
+|---|---|---|
+| `Report_paper_9model/hf_dataset_information_public/README.md` | `paper/dataset_information/README.md` | Explains full-scope public dataset information package. |
+| `Report_paper_9model/hf_dataset_information_public/dataset_stats_public.json` | `paper/dataset_information/dataset_stats_public.json` | Full 104,500-file public summary. |
+| `Report_paper_9model/hf_dataset_information_public/word_frequency_public.csv` | `paper/dataset_information/word_frequency_public.csv` | Word distribution from full HF metadata. |
+| `Report_paper_9model/hf_dataset_information_public/per_category_public.csv` | `paper/dataset_information/per_category_public.csv` | Category counts/durations from full HF metadata. |
+| `Report_paper_9model/hf_dataset_information_public/per_split_public.csv` | `paper/dataset_information/per_split_public.csv` | Split counts/durations with corrected labels. |
+| `Report_paper_9model/hf_dataset_information_public/per_speaker_public.csv` | `paper/dataset_information/per_speaker_public.csv` | Public-label speaker/source statistics. |
+| `Report_paper_9model/hf_dataset_information_public/synthetic_repair_rows_public.csv` | `paper/dataset_information/synthetic_repair_rows_public.csv` | Per-row synthetic repair disclosure with mismatch flags. |
+| `Report_paper_9model/hf_dataset_information_public/figures_public/F1_files_per_speaker_split_public.pdf` | `paper/dataset_information/figures/F1_files_per_speaker_split_public.pdf` | Regenerated per-speaker figure with public labels. |
+| `Report_paper_9model/hf_dataset_information_public/figures_public/F3_speaker_total_duration_public.pdf` | `paper/dataset_information/figures/F3_speaker_total_duration_public.pdf` | Regenerated per-speaker duration figure with public labels. |
+| `Report_paper_9model/hf_dataset_information_public/figures_public/F7_speaker_category_heatmap_public.pdf` | `paper/dataset_information/figures/F7_speaker_category_heatmap_public.pdf` | Regenerated heatmap with public labels. |
+
 
 ### Include as-is, high value, public-safe
 

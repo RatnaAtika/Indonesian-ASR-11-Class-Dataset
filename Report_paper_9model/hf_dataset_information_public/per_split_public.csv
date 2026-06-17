@@ -1,0 +1,4 @@
+split,file_count,duration_sec,duration_hours,synthetic_files,male_source_files,female_source_files
+train,73150,341797.1502,94.9437,122,31350,41800
+dev,15675,73068.9532,20.2969,8,15675,0
+test,15675,68168.3948,18.9357,2,15673,2

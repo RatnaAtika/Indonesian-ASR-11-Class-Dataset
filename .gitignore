@@ -80,6 +80,9 @@ Colab_ASR_A100_Training/results/
 # --- Exception: publish paper-ready training diagnostics PDFs ---
 !Report_paper_9model/training_diagnostics/**/*.pdf
 
+# --- Exception: publish public HF dataset-information figures ---
+!Report_paper_9model/hf_dataset_information_public/**/*.pdf
+
 # Local per-model artifact package: keep manifests/README in Git, not copied run outputs or weights.
 Report_paper_9model/model_artifacts/**/best_artifact/
 Report_paper_9model/model_artifacts/**/run_outputs/

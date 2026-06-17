@@ -5,9 +5,8 @@ F3,human,Female,train
 F4,human,Female,train
 F5,human,Female,train
 F6,human,Female,train
-F7,human,Female,test
+F7,human,Female,train
 F8,human,Female,train
-F9,human,Female,train
 M1,human,Male,train
 M2,human,Male,train
 M3,human,Male,dev
@@ -15,10 +14,11 @@ M4,human,Male,test
 M5,human,Male,dev
 M6,human,Male,train
 M7,human,Male,train
-M8,human,Male,train
-M9,human,Male,dev
-M10,human,Male,train
-M11,human,Male,test
+M8,human,Male,test
+M9,human,Male,train
+M10,human,Male,dev
+M11,human,Male,train
+M12,human,Male,test
 Fs1,synthetic,Female,train
 Fs2,synthetic,Female,train
 Fs3,synthetic,Female,train
