@@ -96,6 +96,30 @@ def draw_center(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt: 
     draw.text(xy, text, font=fnt, fill=fill, anchor="mm")
 
 
+def draw_rotated_center(
+    base: Image.Image,
+    xy: tuple[int, int],
+    text: str,
+    fnt: ImageFont.FreeTypeFont,
+    fill=BLACK,
+    angle: int = 90,
+):
+    """Draw a rotated label centered at xy.
+
+    angle=90 makes the text read bottom-to-top, which keeps long y-axis
+    labels inside the canvas instead of clipping off the left edge.
+    """
+    scratch = Image.new("RGBA", (1, 1), (255, 255, 255, 0))
+    d0 = ImageDraw.Draw(scratch)
+    bbox = d0.textbbox((0, 0), text, font=fnt)
+    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    text_img = Image.new("RGBA", (tw + 20, th + 20), (255, 255, 255, 0))
+    d = ImageDraw.Draw(text_img)
+    d.text((10 - bbox[0], 10 - bbox[1]), text, font=fnt, fill=fill)
+    rot = text_img.rotate(angle, expand=True)
+    base.paste(rot, (int(xy[0] - rot.width / 2), int(xy[1] - rot.height / 2)), rot)
+
+
 def draw_title(draw: ImageDraw.ImageDraw, w: int, title: str, subtitle: str | None = None):
     draw_center(draw, (w // 2, 120), title, TITLE)
     if subtitle:
@@ -165,7 +189,8 @@ def vertical_bar_chart(
     def y_to_px(v: float) -> float:
         return y1 - (v / ymax) * (y1 - y0)
 
-    draw_grid_y(draw, area, ticks, y_to_px, "{:.1f}")
+    y_tick_fmt = "{:.2f}" if ymax < 1 else "{:.1f}"
+    draw_grid_y(draw, area, ticks, y_to_px, y_tick_fmt)
     draw_axes_box(draw, area)
     n = len(values)
     slot = (x1 - x0) / n
@@ -183,7 +208,7 @@ def vertical_bar_chart(
             draw.line((int(cx - 28), ey0, int(cx + 28), ey0), fill=BLACK, width=3)
             draw.line((int(cx - 28), ey1, int(cx + 28), ey1), fill=BLACK, width=3)
         draw.text((int(cx), y1 + 55), lab, font=TICK, fill=BLACK, anchor="mt")
-    draw.text((80, (y0 + y1) // 2), ylabel, font=LABEL, fill=BLACK, anchor="mm")
+    draw_rotated_center(img, (95, (y0 + y1) // 2), ylabel, LABEL)
     draw.text(((x0 + x1) // 2, h - 120), "Category / speaker label", font=LABEL, fill=BLACK, anchor="mm")
     return save_image(img, name, dpi=dpi, kind="line")
 
@@ -264,7 +289,7 @@ def draw_f1(rows):
         cx = x0 + slot * (i + 0.5)
         draw.rectangle((int(cx - bw / 2), int(y_to_px(val)), int(cx + bw / 2), y1), fill=split_colors[split], outline=BLACK, width=2)
         draw.text((int(cx), y1 + 45), sp, font=TICK, fill=BLACK, anchor="mt")
-    draw.text((80, (y0 + y1)//2), "Number of WAV files", font=LABEL, fill=BLACK, anchor="mm")
+    draw_rotated_center(img, (90, (y0 + y1)//2), "Number of WAV files", LABEL)
     # Legend
     lx, ly = 3100, 2350
     for j, split in enumerate(["train", "dev", "test"]):
@@ -330,7 +355,7 @@ def draw_f5(word_rows):
     pts = [(int(xp(r)), int(yp(c))) for r,c in zip(ranks, counts)]
     draw.line(pts, fill=BLUE, width=7, joint="curve")
     draw.text(((x0+x1)//2, 2530), "Rank (log scale)", font=LABEL, fill=BLACK, anchor="mm")
-    draw.text((95, (y0+y1)//2), "Frequency (log scale)", font=LABEL, fill=BLACK, anchor="mm")
+    draw_rotated_center(img, (105, (y0+y1)//2), "Frequency (log scale)", LABEL)
     return save_image(img, "F5_word_frequency_pareto", kind="line")
 
 
@@ -362,7 +387,7 @@ def draw_f6(meta):
     draw.ellipse((ox-18,oy-18,ox+18,oy+18), fill=PURPLE, outline=BLACK, width=3)
     draw.text((ox-25, oy-45), "Observed vocab", font=SMALL, fill=BLACK, anchor="rb")
     draw.text(((x0+x1)//2,2530), "Cumulative tokens N (log scale)", font=LABEL, fill=BLACK, anchor="mm")
-    draw.text((100,(y0+y1)//2), "Vocabulary V (log scale)", font=LABEL, fill=BLACK, anchor="mm")
+    draw_rotated_center(img, (105,(y0+y1)//2), "Vocabulary V (log scale)", LABEL)
     return save_image(img, "F6_heaps_law", kind="line")
 
 
@@ -420,7 +445,7 @@ def draw_f8(speaker_rows):
     draw.line(pts, fill=BLUE, width=8)
     for x,y in pts: draw.ellipse((x-13,y-13,x+13,y+13), fill=ORANGE, outline=BLACK, width=2)
     draw.text(((x0+x1)//2,2530), "Speaker rank", font=LABEL, fill=BLACK, anchor="mm")
-    draw.text((95,(y0+y1)//2), "Cumulative hours", font=LABEL, fill=BLACK, anchor="mm")
+    draw_rotated_center(img, (105,(y0+y1)//2), "Cumulative hours", LABEL)
     return save_image(img, "F8_cumulative_hours", kind="line")
 
 
@@ -555,7 +580,7 @@ def draw_f11():
     panel_w = int((4470-left-right-(cols-1)*gap_x)/cols)
     panel_h = int((3000-top-bottom-(rows-1)*gap_y)/rows)
     title_h = 120
-    axis_l = 84
+    axis_l = 118
     axis_b = 80
     spec_w = panel_w - axis_l - 8
     spec_h = panel_h - title_h - axis_b
@@ -585,8 +610,6 @@ def draw_f11():
             x = int(sx0 + frac*spec_w)
             draw.line((x, sy1, x, sy1+12), fill=BLACK, width=3)
             draw.text((x, sy1+18), lab, font=panel_font, fill=BLACK, anchor="mt")
-        if c == 0:
-            draw.text((px+16, sy0+spec_h//2), "Hz", font=panel_font, fill=BLACK, anchor="mm")
         draw.text((sx0+spec_w//2, sy1+70), "Time (s)", font=panel_font, fill=BLACK, anchor="mm")
     return save_image(img, "F11_mel_spectrogram_exemplars", dpi=600, kind="halftone")
 

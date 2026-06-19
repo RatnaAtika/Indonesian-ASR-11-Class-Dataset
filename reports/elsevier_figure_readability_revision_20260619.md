@@ -17,9 +17,10 @@ The Data in Brief Guide for Authors points to Elsevier artwork guidance. The rel
 - Rewrote `regenerate_figures_elsevier.py` as a Pillow-only renderer so it works in the current environment without the broken matplotlib/NumPy stack.
 - Regenerated all public figure PNG/PDF artifacts `F1`–`F12` with enlarged titles, axis labels, ticks, and category/speaker labels.
 - Converted dense category x-axis labels in several figures to horizontal-bar layouts where appropriate for readability.
-- Regenerated `F11_mel_spectrogram_exemplars` with the original 4-column/3-row spectrogram style, but with larger English category titles, public speaker IDs only, and simplified readable axes.
+- Reoriented long y-axis titles bottom-to-top so labels no longer extend off the left canvas edge in `F1`, `F5`, `F6`, `F8`, and `F10`.
+- Regenerated `F11_mel_spectrogram_exemplars` with the original 4-column/3-row spectrogram style, but with larger English category titles, public speaker IDs only, and simplified readable axes; the overlapping `Hz` label was removed so the `2048` tick does not collide with other text.
 - Updated `SUBMISSION_READINESS.md` with the new figure dimensions.
-- Extended `tools_audit_elsevier_public_paper_artifacts.py` to catch future oversized physical widths that would shrink labels during publisher scaling.
+- Extended `tools_audit_elsevier_public_paper_artifacts.py` to catch future oversized physical widths that would shrink labels during publisher scaling and future non-white pixels touching image edges, which indicates possible clipping.
 
 ## Final figure dimensions
 
@@ -53,3 +54,5 @@ python3 tools_verify_accent_spectrogram_samples.py
 - Original respondent names remain excluded from paths, text files, PDF text, and figure labels.
 - All PNGs remain below the 10 MB guardrail.
 - All public figures now use full-page-width 600 DPI raster dimensions, reducing the risk of unreadable downscaled labels.
+- The targeted left-edge clipping issues in `F1`, `F5`, `F6`, `F8`, and `F10` are fixed by vertical y-axis titles.
+- The `F11` left-panel `2048` tick no longer overlaps an axis-unit label.

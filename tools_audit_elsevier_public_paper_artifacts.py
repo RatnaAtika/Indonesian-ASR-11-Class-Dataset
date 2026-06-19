@@ -37,6 +37,24 @@ def text_from_pdf(path: Path) -> str:
         return ""
 
 
+def dark_pixels_touch_edge(im: Image.Image, strip_px: int = 4) -> dict[str, int]:
+    """Detect likely text/axis clipping at the canvas boundary."""
+    rgb = im.convert("RGB")
+    w, h = rgb.size
+    strips = {
+        "left": rgb.crop((0, 0, strip_px, h)),
+        "right": rgb.crop((w - strip_px, 0, w, h)),
+        "top": rgb.crop((0, 0, w, strip_px)),
+        "bottom": rgb.crop((0, h - strip_px, w, h)),
+    }
+    hits: dict[str, int] = {}
+    for edge, crop in strips.items():
+        n = sum(1 for px in crop.getdata() if min(px) < 245)
+        if n > 10:
+            hits[edge] = n
+    return hits
+
+
 def load_manifest_kinds() -> dict[str, str]:
     manifest = BASE / "figures" / "figure_manifest.csv"
     if not manifest.exists():
@@ -97,6 +115,9 @@ def main() -> None:
                 # width (190 mm = 7.48 in), with a small tolerance.
                 if physical_width_in > 8.0:
                     errors.append({"type": "physical_width_too_large_for_readable_full_page", "path": rel, "width_in": round(physical_width_in, 2)})
+                edge_hits = dark_pixels_touch_edge(im)
+                if edge_hits:
+                    errors.append({"type": "possible_text_or_axis_clipping_at_image_edge", "path": rel, "edge_hits": edge_hits})
             except Exception as exc:
                 errors.append({"type": "image_open_failed", "path": rel, "error": str(exc)})
     summary = {"base": BASE.relative_to(ROOT).as_posix(), "checked": checked, "errors": errors}
