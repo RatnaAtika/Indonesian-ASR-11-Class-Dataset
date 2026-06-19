@@ -17,7 +17,7 @@ Use it as the audit trail attached to the submission package.
 
 | # | Issue | Severity | Original folder | This folder |
 |---|---|---|---|---|
-| 1 | Figures saved as PNG only — line/bar/scatter plots violate Elsevier's vector-source rule for line drawings | **HIGH** | `figures/F*.png` (PNG only @ 300 dpi) | `figures/F*.pdf` (vector) + `figures/png600/F*.png` (600 dpi raster fallback) |
+| 1 | Figures saved as PNG only and several labels became too small after scaling | **HIGH** | `figures/F*.png` (PNG only @ 300 dpi) | `figures/F*.pdf` companions + `figures/png600/F*.png` full-page 600 dpi raster fallback with readable labels |
 | 2 | `figures_pdf/*.png` raster fallback had no embedded DPI metadata (`dpi=None`) | MED | yes | DPI = 600 embedded on every PNG |
 | 3 | LaTeX tables used `\hline` instead of booktabs `\toprule/\midrule/\bottomrule` | **HIGH** | `tex/T1..T5,G1` use `\hline` | `tex/T1..T5,G1` use booktabs |
 | 4 | `\textless\,1$\times$10$^{-300}$` workaround in T5 | LOW | yes | replaced with `${<}10^{-300}$` |
@@ -40,8 +40,8 @@ Use it as the audit trail attached to the submission package.
 | `Value_of_the_Data.md` | Markdown | yes | ✅ |
 | `references.bib` | BibTeX | yes | ✅ |
 | `tex/T1..T5,G1.tex` | LaTeX | yes — drop into manuscript | ✅ |
-| `figures/F*.pdf` | vector PDF | yes (re-renderable from CSV) | ✅ |
-| `figures/png600/F*.png` | raster fallback @ 600 dpi (300 dpi for F11) | yes (re-renderable) | ✅ |
+| `figures/F*.pdf` | PDF artwork companion | yes (re-renderable from CSV/source images) | ✅ |
+| `figures/png600/F*.png` | full-page raster fallback @ 600 dpi | yes (re-renderable) | ✅ |
 | `figures/figure_manifest.csv` | CSV | yes | ✅ |
 | `stats/*.csv`, `stats/dataset_stats.json` | tabular / JSON | yes | ✅ |
 | `regenerate_figures_elsevier.py` | Python source | yes | ✅ |
@@ -57,18 +57,18 @@ in editable text form.
 
 | Figure | Kind | Vector source | Raster fallback | DPI | Pass |
 |---|---|---|---|---|---|
-| F1 — files per speaker × split | line | `F1_files_per_speaker_split.pdf` | 5580 × 2831 PNG | 600 | ✅ |
-| F2 — duration per category | line | `F2_duration_per_category.pdf` | 5452 × 3022 PNG | 600 | ✅ |
-| F3 — speaker total duration | line | `F3_speaker_total_duration.pdf` | 5630 × 2783 PNG | 600 | ✅ |
-| F4 — sentence length | line | `F4_sentence_length.pdf` | 6061 × 3055 PNG | 600 | ✅ |
-| F5 — Zipf word-frequency | line | `F5_word_frequency_pareto.pdf` | 5525 × 2784 PNG | 600 | ✅ |
-| F6 — Heaps' law | line | `F6_heaps_law.pdf` | 4142 × 2783 PNG | 600 | ✅ |
-| F7 — speaker × category heatmap | combination | `F7_speaker_category_heatmap.pdf` | 5304 × 3484 PNG | 600 | ✅ (≥ 500 dpi rule for combinations) |
-| F8 — cumulative hours | line | `F8_cumulative_hours.pdf` | 4142 × 2783 PNG | 600 | ✅ |
-| F9 — audio uniformity | line | `F9_audio_uniformity.pdf` | 6148 × 2321 PNG | 600 | ✅ |
-| F10 — synthetic disclosure | line | `F10_synthetic_disclosure.pdf` | 5558 × 2215 PNG | 600 | ✅ |
-| F11 — mel spectrograms | **halftone** | raster-in-PDF wrapper | 4470 × 2766 PNG | 300 | ✅ (≥ 300 dpi rule for halftones) |
-| F12 — audio quality | line | `F12_audio_quality.pdf` | 5960 × 2752 PNG | 600 | ✅ |
+| F1 — files per speaker × split | line | `F1_files_per_speaker_split.pdf` | 4500 × 2800 PNG | 600 | ✅ |
+| F2 — duration per category | line | `F2_duration_per_category.pdf` | 4500 × 3000 PNG | 600 | ✅ |
+| F3 — speaker total duration | line | `F3_speaker_total_duration.pdf` | 4500 × 3300 PNG | 600 | ✅ |
+| F4 — sentence length | line | `F4_sentence_length.pdf` | 4500 × 3300 PNG | 600 | ✅ |
+| F5 — Zipf word-frequency | line | `F5_word_frequency_pareto.pdf` | 4500 × 2800 PNG | 600 | ✅ |
+| F6 — Heaps' law | line | `F6_heaps_law.pdf` | 4500 × 2800 PNG | 600 | ✅ |
+| F7 — speaker × category heatmap | combination | `F7_speaker_category_heatmap.pdf` | 4500 × 3400 PNG | 600 | ✅ (≥ 500 dpi rule for combinations) |
+| F8 — cumulative hours | line | `F8_cumulative_hours.pdf` | 4500 × 2800 PNG | 600 | ✅ |
+| F9 — audio uniformity | line | `F9_audio_uniformity.pdf` | 4500 × 2300 PNG | 600 | ✅ |
+| F10 — synthetic disclosure | line | `F10_synthetic_disclosure.pdf` | 4500 × 2700 PNG | 600 | ✅ |
+| F11 — mel spectrograms | **halftone** | raster-in-PDF wrapper | 4470 × 3000 PNG | 600 | ✅ (≥ 300 dpi rule for halftones) |
+| F12 — audio quality | line | `F12_audio_quality.pdf` | 4500 × 3500 PNG | 600 | ✅ |
 
 **Color accessibility (`figures.md` §3):**
 

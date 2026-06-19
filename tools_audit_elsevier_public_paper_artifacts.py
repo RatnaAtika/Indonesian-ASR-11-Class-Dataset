@@ -37,9 +37,23 @@ def text_from_pdf(path: Path) -> str:
         return ""
 
 
+def load_manifest_kinds() -> dict[str, str]:
+    manifest = BASE / "figures" / "figure_manifest.csv"
+    if not manifest.exists():
+        return {}
+    rows = manifest.read_text(encoding="utf-8", errors="ignore").splitlines()
+    out: dict[str, str] = {}
+    for line in rows[1:]:
+        parts = line.split(",")
+        if len(parts) >= 4:
+            out[parts[2].split("/")[-1]] = parts[3]
+    return out
+
+
 def main() -> None:
     errors: list[dict[str, object]] = []
     checked = {"paths": 0, "text_files": 0, "pdf_text": 0, "png_images": 0}
+    manifest_kinds = load_manifest_kinds()
     for path in BASE.rglob("*"):
         rel = path.relative_to(ROOT).as_posix()
         checked["paths"] += 1
@@ -68,10 +82,21 @@ def main() -> None:
             try:
                 im = Image.open(path)
                 dpi = im.info.get("dpi", (0, 0))[0] or 0
-                # F11 is a halftone-style spectrogram panel; 300 DPI is enough.
+                # F11 is a halftone-style spectrogram panel; 300 DPI is enough,
+                # but this package now uses 600 DPI for all public figures.
                 min_dpi = 299 if "F11_mel_spectrogram" in path.name else 590
                 if dpi < min_dpi:
                     errors.append({"type": "dpi_too_low", "path": rel, "dpi": dpi, "min_dpi": min_dpi})
+                kind = manifest_kinds.get(path.name, "halftone" if "F11_mel_spectrogram" in path.name else "line")
+                min_width_px = 2244 if kind == "halftone" else 3740
+                if im.width < min_width_px:
+                    errors.append({"type": "pixel_width_too_low_for_full_page", "path": rel, "width": im.width, "min_width": min_width_px, "kind": kind})
+                physical_width_in = im.width / dpi if dpi else 0
+                # Oversized physical width tends to be downscaled by publishers,
+                # shrinking text.  Keep public figures near Elsevier full-page
+                # width (190 mm = 7.48 in), with a small tolerance.
+                if physical_width_in > 8.0:
+                    errors.append({"type": "physical_width_too_large_for_readable_full_page", "path": rel, "width_in": round(physical_width_in, 2)})
             except Exception as exc:
                 errors.append({"type": "image_open_failed", "path": rel, "error": str(exc)})
     summary = {"base": BASE.relative_to(ROOT).as_posix(), "checked": checked, "errors": errors}
