@@ -62,8 +62,8 @@ are added (Figure F8) shows no single speaker dominates.
 `\input{tex/T3_per_category.tex}`
 
 The 11 categories are **highly balanced** (normalised entropy 0.99987,
-Gini 0.012). Mean file duration ranges from 2.96 s (*Kalimat\_Perintah*,
-imperative) to 6.43 s (*Kalimat\_Persuasif*, persuasive), with mean
+Gini 0.012). Mean file duration ranges from 2.96 s (*Kalimat\_Imperative*,
+imperative) to 6.43 s (*Kalimat\_Persuasive*, persuasive), with mean
 character length 38.4 → 107.1 — consistent with the linguistic
 function of each category (Table G1, Figures F2, F4). The
 speaker × category file-count heatmap (Figure F7) is essentially flat
