@@ -1,6 +1,6 @@
 # Accent spectrogram sample report
 
-Generated: 2026-06-16T19:59:54
+Generated: 2026-06-19T07:55:45
 
 ## Purpose
 
@@ -26,15 +26,15 @@ This package provides one spectrogram sample per selected respondent for a match
 
 | No. | Respondent | Region represented | Audio source | Duration (s) | Sample rate |
 |---:|---|---|---|---:|---:|
-| 1 | Harry | Padang | `Dataset_Ori/Kalimat_Deklaratif/Harry/Harry_Deklaratif_take1/01.wav` | 4.283 | 16000 Hz |
-| 2 | Elisa | Medan | `Dataset_Ori/Kalimat_Deklaratif/Elisa/Elisa_Deklaratif_Take1/01.wav` | 7.688 | 16000 Hz |
-| 3 | Joni | Jawa | `Dataset_Ori/Kalimat_Deklaratif/Joni/Joni_Deklaratif_take1/01.wav` | 4.105 | 16000 Hz |
-| 4 | Amri | Jawa | `Dataset_Ori/Kalimat_Deklaratif/Amri/Amri_Deklaratif_take1/01.wav` | 4.599 | 16000 Hz |
-| 5 | Erlin | Bengkulu | `Dataset_Ori/Kalimat_Deklaratif/Erlin/Erlin_Deklaratif_Take1/01.wav` | 4.229 | 16000 Hz |
-| 6 | Bey | Maluku | `Dataset_Ori/Kalimat_Deklaratif/Bey/Bey_Deklaratif_Take1/01.wav` | 5.444 | 16000 Hz |
-| 7 | Anggi | Palembang | `Dataset_Ori/Kalimat_Deklaratif/Anggi/Anggi_deklaratif_take1/01.wav` | 4.083 | 16000 Hz |
-| 8 | Atika | Palembang | `Dataset_Ori/Kalimat_Deklaratif/Atika/Atika_Deklaratif_Take1/01.wav` | 4.613 | 16000 Hz |
-| 9 | Fito | Baturaja | `Dataset_Ori/Kalimat_Deklaratif/Fito/Fito_Deklaratif_take1/01.wav` | 4.448 | 16000 Hz |
+| 1 | M7 | Padang | `private_original_wav/M7/declarative_sentence01.wav` | 4.283 | 16000 Hz |
+| 2 | F4 | Medan | `private_original_wav/F4/declarative_sentence01.wav` | 7.688 | 16000 Hz |
+| 3 | M8 | Jawa | `private_original_wav/M8/declarative_sentence01.wav` | 4.105 | 16000 Hz |
+| 4 | M3 | Jawa | `private_original_wav/M3/declarative_sentence01.wav` | 4.599 | 16000 Hz |
+| 5 | F5 | Bengkulu | `private_original_wav/F5/declarative_sentence01.wav` | 4.229 | 16000 Hz |
+| 6 | F3 | Maluku | `private_original_wav/F3/declarative_sentence01.wav` | 5.444 | 16000 Hz |
+| 7 | F1 | Palembang | `private_original_wav/F1/declarative_sentence01.wav` | 4.083 | 16000 Hz |
+| 8 | F2 | Palembang | `private_original_wav/F2/declarative_sentence01.wav` | 4.613 | 16000 Hz |
+| 9 | M6 | Baturaja | `private_original_wav/M6/declarative_sentence01.wav` | 4.448 | 16000 Hz |
 
 ## Interpretation guidance
 
@@ -49,3 +49,6 @@ This package provides one spectrogram sample per selected respondent for a match
 - All nine samples are original/non-synthetic WAV recordings according to `metadata/dataset_metadata_clean.csv`.
 - Individual and combined figures are generated with identical spectrogram settings.
 - Figures are suitable as paper/appendix assets; the final manuscript can choose either the 3x3 combined panel or individual respondent panels.
+## Privacy/anonymization note
+
+All respondent labels in this package use public Hugging Face speaker IDs (`M*`/`F*`). Original respondent names and source-name crosswalks are intentionally excluded from the public paper artifact.

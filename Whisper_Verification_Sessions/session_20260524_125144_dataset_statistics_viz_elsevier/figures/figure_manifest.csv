@@ -1,0 +1,13 @@
+figure,vector_pdf,raster_png600,kind
+F1,F1_files_per_speaker_split.pdf,png600/F1_files_per_speaker_split.png,line
+F2,F2_duration_per_category.pdf,png600/F2_duration_per_category.png,line
+F3,F3_speaker_total_duration.pdf,png600/F3_speaker_total_duration.png,line
+F4,F4_sentence_length.pdf,png600/F4_sentence_length.png,line
+F5,F5_word_frequency_pareto.pdf,png600/F5_word_frequency_pareto.png,line
+F6,F6_heaps_law.pdf,png600/F6_heaps_law.png,line
+F7,F7_speaker_category_heatmap.pdf,png600/F7_speaker_category_heatmap.png,combination
+F8,F8_cumulative_hours.pdf,png600/F8_cumulative_hours.png,line
+F9,F9_audio_uniformity.pdf,png600/F9_audio_uniformity.png,line
+F10,F10_synthetic_disclosure.pdf,png600/F10_synthetic_disclosure.png,line
+F11,F11_mel_spectrogram_exemplars.pdf,png600/F11_mel_spectrogram_exemplars.png,halftone
+F12,F12_audio_quality.pdf,png600/F12_audio_quality.png,line

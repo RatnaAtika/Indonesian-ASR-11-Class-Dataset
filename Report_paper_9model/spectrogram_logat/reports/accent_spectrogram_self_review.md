@@ -6,11 +6,11 @@ Status: completed after two review passes.
 
 Checklist:
 
-- [x] Exactly one sample per requested respondent: Harry, Elisa, Joni, Amri, Erlin, Bey, Anggi, Atika, Fito.
+- [x] Exactly one sample per anonymized public speaker ID: M7, F4, M8, M3, F5, F3, F1, F2, M6.
 - [x] Same sentence for all respondents.
 - [x] Sentence type is declarative (`Kalimat_Deklaratif`).
 - [x] Selected transcript: "Saya membutuhkan rekomendasi tempat wisata di kota Palembang".
-- [x] Regional mapping follows the user request: Harry=Padang, Elisa=Medan, Joni/Amri=Jawa, Erlin=Bengkulu, Bey=Maluku, Fito=Baturaja, Atika/Anggi=Palembang.
+- [x] Regional labels follow the curated public artifact mapping while using anonymized speaker IDs only: M7=Padang, F4=Medan, M8/M3=Jawa, F5=Bengkulu, F3=Maluku, M6=Baturaja, F2/F1=Palembang.
 - [x] Outputs are stored in a dedicated folder: `Report_paper_9model/spectrogram_logat/`.
 - [x] Each respondent has an individual spectrogram PNG and PDF.
 - [x] A combined 3x3 paper-ready figure is available in PNG and PDF.
@@ -47,3 +47,6 @@ Action taken:
 
 - Kept both individual and combined figures so the manuscript can choose between a compact 3x3 panel and respondent-level appendix pages.
 - Added `tools_generate_accent_spectrogram_samples.py` and `tools_verify_accent_spectrogram_samples.py` so the package can be regenerated and checked reproducibly.
+## Privacy/anonymization note
+
+All respondent labels in this package use public Hugging Face speaker IDs (`M*`/`F*`). Original respondent names and source-name crosswalks are intentionally excluded from the public paper artifact.

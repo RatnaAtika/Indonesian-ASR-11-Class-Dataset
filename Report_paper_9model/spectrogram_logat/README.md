@@ -17,3 +17,6 @@ This folder contains paper-ready spectrogram assets for one matched declarative 
 ## Caveat
 
 These figures are qualitative samples for paper illustration. They are not, by themselves, a statistical proof of regional accent separability.
+## Privacy/anonymization note
+
+All respondent labels in this package use public Hugging Face speaker IDs (`M*`/`F*`). Original respondent names and source-name crosswalks are intentionally excluded from the public paper artifact.

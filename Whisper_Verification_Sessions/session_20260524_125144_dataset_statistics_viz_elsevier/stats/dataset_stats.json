@@ -1,0 +1,149 @@
+{
+  "generated": "2026-05-24T12:55:35.630977",
+  "metadata_path": "metadata/dataset_metadata_clean.csv",
+  "n_files_total": 102544,
+  "overview": {
+    "n_files": 102544,
+    "total_duration_sec": 470357.38840000005,
+    "total_duration_h": 130.65483011111112,
+    "n_speakers": 20,
+    "n_categories": 11,
+    "n_unique_sentences": 20,
+    "sample_rates": {
+      "16000": 102544
+    },
+    "bit_depths": {
+      "16": 102544
+    },
+    "channels": {
+      "1": 102544
+    },
+    "n_real": 102412,
+    "n_synthetic": 132,
+    "synthetic_pct": 0.12872523014510845
+  },
+  "linguistic": {
+    "vocab_size": 711,
+    "total_tokens": 906472,
+    "tokens_per_file_mean": 8.839834607583086,
+    "char_vocab_size": 24,
+    "bigram_vocab_size": 1370,
+    "mean_syllables_per_word": 2.438165767944294,
+    "char_entropy_bits": 3.9820160903193176,
+    "word_entropy_bits": 8.452991386285806,
+    "heaps_law": {
+      "K": 0.7844175556586579,
+      "beta": 0.4879695858272898,
+      "r_squared": 0.8856740155291404,
+      "max_tokens": 906472,
+      "vocab_size": 711
+    },
+    "zipf_law": {
+      "s": 0.8002261703292843,
+      "C": 65425.661056149576,
+      "r_squared": 0.7377157684713106,
+      "n_unique_words": 711
+    },
+    "top_30_words": {
+      "yang": 26500,
+      "kamu": 24000,
+      "apakah": 21017,
+      "saya": 20000,
+      "ini": 20000,
+      "jika": 18016,
+      "di": 14517,
+      "untuk": 14500,
+      "sudah": 14500,
+      "kita": 13521,
+      "akan": 12511,
+      "tolong": 11517,
+      "lebih": 10010,
+      "dengan": 9523,
+      "ke": 8500,
+      "bisa": 8010,
+      "tidak": 8000,
+      "kampus": 6500,
+      "itu": 6500,
+      "jadwal": 6000,
+      "semua": 5517,
+      "palembang": 5500,
+      "belajar": 5500,
+      "dan": 5500,
+      "tugas": 5000,
+      "waktu": 4011,
+      "banyak": 4010,
+      "ada": 4006,
+      "sistem": 4000,
+      "mahasiswa": 4000
+    }
+  },
+  "balance": {
+    "speaker_entropy_bits": 4.321928002695888,
+    "speaker_entropy_max": 4.321928094887363,
+    "speaker_normalized_entropy": 0.9999999786689012,
+    "speaker_gini": 0.0001960134186299811,
+    "speaker_imbalance_ratio": 1.0013658536585366,
+    "speaker_cv": 0.0003575109763579217,
+    "category_entropy_bits": 3.4589700110274695,
+    "category_entropy_max": 3.4594316186372973,
+    "category_normalized_entropy": 0.9998665654764382,
+    "category_gini": 0.012168612320742189,
+    "category_imbalance_ratio": 1.0548523206751055
+  },
+  "speaker_leak_check": {
+    "train_dev_overlap": [],
+    "train_test_overlap": [],
+    "dev_test_overlap": []
+  },
+  "audio_quality_summary": {
+    "n_sampled": 297,
+    "rms_mean": 0.09113062597710878,
+    "rms_std": 0.047641953182578634,
+    "dynamic_range_db_mean": 16.60795373758088,
+    "dynamic_range_db_std": 1.9384995977944226,
+    "silence_ratio_mean": 0.23808513657398042,
+    "spectral_centroid_hz_mean": 968.6679410367374
+  },
+  "statistical_tests": [
+    {
+      "test": "Kruskal-Wallis (duration ~ category)",
+      "statistic": 60906.77632169184,
+      "df": 10,
+      "p": 0.0,
+      "p_bonferroni": 0.0,
+      "effect_size_eta2": 0.5939236764913914,
+      "n": 102544,
+      "interpretation": "duration distributions differ across categories"
+    },
+    {
+      "test": "Kruskal-Wallis (duration ~ speaker)",
+      "statistic": 5856.287597122961,
+      "df": 19,
+      "p": 0.0,
+      "p_bonferroni": 0.0,
+      "effect_size_eta2": 0.05693581597599549,
+      "n": 102544,
+      "interpretation": "duration distributions differ across speakers"
+    },
+    {
+      "test": "\u03c7\u00b2 goodness-of-fit (category counts ~ uniform)",
+      "statistic": 65.29948119831487,
+      "df": 10,
+      "p": 3.5522408925793256e-10,
+      "p_bonferroni": 1.4208963570317302e-09,
+      "effect_size_eta2": 0.007979942064045623,
+      "n": 102544,
+      "interpretation": "category counts deviate from uniform"
+    },
+    {
+      "test": "Kolmogorov-Smirnov 2-sample (train vs test duration)",
+      "statistic": 0.0757422239806197,
+      "df": NaN,
+      "p": 1.2440312389405243e-63,
+      "p_bonferroni": 4.976124955762097e-63,
+      "effect_size_eta2": 0.0757422239806197,
+      "n": 87168,
+      "interpretation": "train/test duration distributions differ"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-16T19:59:54",
+  "generated": "2026-06-19T07:55:45",
   "purpose": "Matched declarative-utterance spectrogram samples for regional-accent paper analysis.",
   "sentence_type": "Kalimat_Deklaratif",
   "sentence_id": "1",
@@ -15,12 +15,12 @@
   },
   "samples": [
     {
-      "respondent": "Harry",
+      "respondent": "M7",
       "accent_region": "Padang",
       "category": "Kalimat_Deklaratif",
       "sentence_id": "1",
       "transcript": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
-      "source_audio": "Dataset_Ori/Kalimat_Deklaratif/Harry/Harry_Deklaratif_take1/01.wav",
+      "source_audio": "private_original_wav/M7/declarative_sentence01.wav",
       "take_number": 1,
       "duration_sec": 4.2828,
       "sample_rate_hz": 16000,
@@ -29,16 +29,16 @@
       "frames": 68524,
       "file_size_bytes": 137092,
       "sha256_16": "ce8348bca19edb0f",
-      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/harry_padang_declarative_sentence01_spectrogram.png",
-      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/harry_padang_declarative_sentence01_spectrogram.pdf"
+      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/m7_padang_declarative_sentence01_spectrogram.png",
+      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/m7_padang_declarative_sentence01_spectrogram.pdf"
     },
     {
-      "respondent": "Elisa",
+      "respondent": "F4",
       "accent_region": "Medan",
       "category": "Kalimat_Deklaratif",
       "sentence_id": "1",
       "transcript": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
-      "source_audio": "Dataset_Ori/Kalimat_Deklaratif/Elisa/Elisa_Deklaratif_Take1/01.wav",
+      "source_audio": "private_original_wav/F4/declarative_sentence01.wav",
       "take_number": 1,
       "duration_sec": 7.6878,
       "sample_rate_hz": 16000,
@@ -47,16 +47,16 @@
       "frames": 123004,
       "file_size_bytes": 246052,
       "sha256_16": "06a3d94103f2b2a5",
-      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/elisa_medan_declarative_sentence01_spectrogram.png",
-      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/elisa_medan_declarative_sentence01_spectrogram.pdf"
+      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/f4_medan_declarative_sentence01_spectrogram.png",
+      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/f4_medan_declarative_sentence01_spectrogram.pdf"
     },
     {
-      "respondent": "Joni",
+      "respondent": "M8",
       "accent_region": "Jawa",
       "category": "Kalimat_Deklaratif",
       "sentence_id": "1",
       "transcript": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
-      "source_audio": "Dataset_Ori/Kalimat_Deklaratif/Joni/Joni_Deklaratif_take1/01.wav",
+      "source_audio": "private_original_wav/M8/declarative_sentence01.wav",
       "take_number": 1,
       "duration_sec": 4.1048,
       "sample_rate_hz": 16000,
@@ -65,16 +65,16 @@
       "frames": 65676,
       "file_size_bytes": 131396,
       "sha256_16": "e1835244c63422be",
-      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/joni_jawa_declarative_sentence01_spectrogram.png",
-      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/joni_jawa_declarative_sentence01_spectrogram.pdf"
+      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/m8_jawa_declarative_sentence01_spectrogram.png",
+      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/m8_jawa_declarative_sentence01_spectrogram.pdf"
     },
     {
-      "respondent": "Amri",
+      "respondent": "M3",
       "accent_region": "Jawa",
       "category": "Kalimat_Deklaratif",
       "sentence_id": "1",
       "transcript": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
-      "source_audio": "Dataset_Ori/Kalimat_Deklaratif/Amri/Amri_Deklaratif_take1/01.wav",
+      "source_audio": "private_original_wav/M3/declarative_sentence01.wav",
       "take_number": 1,
       "duration_sec": 4.5987,
       "sample_rate_hz": 16000,
@@ -83,16 +83,16 @@
       "frames": 73580,
       "file_size_bytes": 147204,
       "sha256_16": "db48ed1894c9fe7e",
-      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/amri_jawa_declarative_sentence01_spectrogram.png",
-      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/amri_jawa_declarative_sentence01_spectrogram.pdf"
+      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/m3_jawa_declarative_sentence01_spectrogram.png",
+      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/m3_jawa_declarative_sentence01_spectrogram.pdf"
     },
     {
-      "respondent": "Erlin",
+      "respondent": "F5",
       "accent_region": "Bengkulu",
       "category": "Kalimat_Deklaratif",
       "sentence_id": "1",
       "transcript": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
-      "source_audio": "Dataset_Ori/Kalimat_Deklaratif/Erlin/Erlin_Deklaratif_Take1/01.wav",
+      "source_audio": "private_original_wav/F5/declarative_sentence01.wav",
       "take_number": 1,
       "duration_sec": 4.2287,
       "sample_rate_hz": 16000,
@@ -101,16 +101,16 @@
       "frames": 67660,
       "file_size_bytes": 135364,
       "sha256_16": "cc3554c164f9160b",
-      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/erlin_bengkulu_declarative_sentence01_spectrogram.png",
-      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/erlin_bengkulu_declarative_sentence01_spectrogram.pdf"
+      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/f5_bengkulu_declarative_sentence01_spectrogram.png",
+      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/f5_bengkulu_declarative_sentence01_spectrogram.pdf"
     },
     {
-      "respondent": "Bey",
+      "respondent": "F3",
       "accent_region": "Maluku",
       "category": "Kalimat_Deklaratif",
       "sentence_id": "1",
       "transcript": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
-      "source_audio": "Dataset_Ori/Kalimat_Deklaratif/Bey/Bey_Deklaratif_Take1/01.wav",
+      "source_audio": "private_original_wav/F3/declarative_sentence01.wav",
       "take_number": 1,
       "duration_sec": 5.4437,
       "sample_rate_hz": 16000,
@@ -119,16 +119,16 @@
       "frames": 87100,
       "file_size_bytes": 174244,
       "sha256_16": "b23fd9d547c5a9be",
-      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/bey_maluku_declarative_sentence01_spectrogram.png",
-      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/bey_maluku_declarative_sentence01_spectrogram.pdf"
+      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/f3_maluku_declarative_sentence01_spectrogram.png",
+      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/f3_maluku_declarative_sentence01_spectrogram.pdf"
     },
     {
-      "respondent": "Anggi",
+      "respondent": "F1",
       "accent_region": "Palembang",
       "category": "Kalimat_Deklaratif",
       "sentence_id": "1",
       "transcript": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
-      "source_audio": "Dataset_Ori/Kalimat_Deklaratif/Anggi/Anggi_deklaratif_take1/01.wav",
+      "source_audio": "private_original_wav/F1/declarative_sentence01.wav",
       "take_number": 1,
       "duration_sec": 4.0827,
       "sample_rate_hz": 16000,
@@ -137,16 +137,16 @@
       "frames": 65324,
       "file_size_bytes": 130692,
       "sha256_16": "026cedab0d5e8295",
-      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/anggi_palembang_declarative_sentence01_spectrogram.png",
-      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/anggi_palembang_declarative_sentence01_spectrogram.pdf"
+      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/f1_palembang_declarative_sentence01_spectrogram.png",
+      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/f1_palembang_declarative_sentence01_spectrogram.pdf"
     },
     {
-      "respondent": "Atika",
+      "respondent": "F2",
       "accent_region": "Palembang",
       "category": "Kalimat_Deklaratif",
       "sentence_id": "1",
       "transcript": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
-      "source_audio": "Dataset_Ori/Kalimat_Deklaratif/Atika/Atika_Deklaratif_Take1/01.wav",
+      "source_audio": "private_original_wav/F2/declarative_sentence01.wav",
       "take_number": 1,
       "duration_sec": 4.6128,
       "sample_rate_hz": 16000,
@@ -155,16 +155,16 @@
       "frames": 73804,
       "file_size_bytes": 147652,
       "sha256_16": "a4ac4222fc4883ec",
-      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/atika_palembang_declarative_sentence01_spectrogram.png",
-      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/atika_palembang_declarative_sentence01_spectrogram.pdf"
+      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/f2_palembang_declarative_sentence01_spectrogram.png",
+      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/f2_palembang_declarative_sentence01_spectrogram.pdf"
     },
     {
-      "respondent": "Fito",
+      "respondent": "M6",
       "accent_region": "Baturaja",
       "category": "Kalimat_Deklaratif",
       "sentence_id": "1",
       "transcript": "Saya membutuhkan rekomendasi tempat wisata di kota Palembang",
-      "source_audio": "Dataset_Ori/Kalimat_Deklaratif/Fito/Fito_Deklaratif_take1/01.wav",
+      "source_audio": "private_original_wav/M6/declarative_sentence01.wav",
       "take_number": 1,
       "duration_sec": 4.4478,
       "sample_rate_hz": 16000,
@@ -173,8 +173,9 @@
       "frames": 71164,
       "file_size_bytes": 142372,
       "sha256_16": "29d4be98617f20d5",
-      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/fito_baturaja_declarative_sentence01_spectrogram.png",
-      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/fito_baturaja_declarative_sentence01_spectrogram.pdf"
+      "spectrogram_png": "Report_paper_9model/spectrogram_logat/figures/individual/m6_baturaja_declarative_sentence01_spectrogram.png",
+      "spectrogram_pdf": "Report_paper_9model/spectrogram_logat/figures/individual/m6_baturaja_declarative_sentence01_spectrogram.pdf"
     }
-  ]
+  ],
+  "privacy_update": "Respondent display labels and file names use public HF speaker IDs only; original-name source paths are redacted."
 }

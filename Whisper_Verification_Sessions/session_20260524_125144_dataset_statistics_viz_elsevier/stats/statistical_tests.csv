@@ -1,0 +1,5 @@
+test,statistic,df,p,p_bonferroni,effect_size_eta2,n,interpretation
+Kruskal-Wallis (duration ~ category),60906.77632169184,10.0,0.0,0.0,0.5939236764913914,102544,duration distributions differ across categories
+Kruskal-Wallis (duration ~ speaker),5856.287597122961,19.0,0.0,0.0,0.05693581597599549,102544,duration distributions differ across speakers
+χ² goodness-of-fit (category counts ~ uniform),65.29948119831487,10.0,3.5522408925793256e-10,1.4208963570317302e-09,0.007979942064045623,102544,category counts deviate from uniform
+Kolmogorov-Smirnov 2-sample (train vs test duration),0.0757422239806197,,1.2440312389405243e-63,4.976124955762097e-63,0.0757422239806197,87168,train/test duration distributions differ

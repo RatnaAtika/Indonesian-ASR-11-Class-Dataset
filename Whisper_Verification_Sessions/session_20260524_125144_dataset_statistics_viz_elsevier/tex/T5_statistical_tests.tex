@@ -1,0 +1,26 @@
+% T5 -- Statistical tests on the corpus
+% Bonferroni multiplier = 4 across the family of tests.
+\begin{table*}[!t]
+  \centering
+  \caption{Statistical tests on the corpus. Bonferroni-adjusted
+           $p$-values use a family size of 4. Effect sizes:
+           $\eta^{2}$ for Kruskal--Wallis, Cram\'{e}r's $V$ for
+           $\chi^{2}$, and the KS statistic itself for the
+           two-sample Kolmogorov--Smirnov test.}
+  \label{tab:statistical_tests}
+  \small
+  \begin{tabular}{lrrrrr}
+  \toprule
+  Test & Statistic & df & $p$ & $p_{\mathrm{Bonf.}}$ & Effect size \\
+  \midrule
+  Kruskal--Wallis (duration $\sim$ category)
+    & 60{,}906.78 & 10  & ${<}10^{-300}$ & ${<}10^{-300}$ & $\eta^{2}=0.594$ \\
+  Kruskal--Wallis (duration $\sim$ speaker)
+    & 5{,}856.29  & 19  & ${<}10^{-300}$ & ${<}10^{-300}$ & $\eta^{2}=0.057$ \\
+  $\chi^{2}$ goodness-of-fit (category counts $\sim$ uniform)
+    & 65.30       & 10  & $3.55\!\times\!10^{-10}$ & $1.42\!\times\!10^{-9}$ & $V=0.008$ \\
+  Kolmogorov--Smirnov 2-sample (train vs.\ test duration)
+    & $D=0.076$   & --- & $1.24\!\times\!10^{-63}$ & $4.97\!\times\!10^{-63}$ & $D=0.076$ \\
+  \bottomrule
+  \end{tabular}
+\end{table*}

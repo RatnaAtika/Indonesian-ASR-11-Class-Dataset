@@ -13,15 +13,15 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parent
 PKG = ROOT / "Report_paper_9model" / "spectrogram_logat"
 EXPECTED_RESPONDENTS = {
-    "Harry": "Padang",
-    "Elisa": "Medan",
-    "Joni": "Jawa",
-    "Amri": "Jawa",
-    "Erlin": "Bengkulu",
-    "Bey": "Maluku",
-    "Anggi": "Palembang",
-    "Atika": "Palembang",
-    "Fito": "Baturaja",
+    "M7": "Padang",
+    "F4": "Medan",
+    "M8": "Jawa",
+    "M3": "Jawa",
+    "F5": "Bengkulu",
+    "F3": "Maluku",
+    "F1": "Palembang",
+    "F2": "Palembang",
+    "M6": "Baturaja",
 }
 EXPECTED_TRANSCRIPT = "Saya membutuhkan rekomendasi tempat wisata di kota Palembang"
 
@@ -60,18 +60,26 @@ def main() -> None:
             continue
         if sample.get("accent_region") != region:
             errors.append(f"region mismatch for {respondent}: {sample.get('accent_region')} != {region}")
-        source = ROOT / sample["source_audio"]
+        source_audio = str(sample.get("source_audio", ""))
+        source = ROOT / source_audio
         png = ROOT / sample["spectrogram_png"]
         pdf = ROOT / sample["spectrogram_pdf"]
-        for label, path in [("source audio", source), ("PNG", png), ("PDF", pdf)]:
+        # Source paths are intentionally redacted in the public package to avoid
+        # exposing original respondent names. Verify media artifacts and only
+        # inspect source audio when a real local path is present.
+        for label, path in [("PNG", png), ("PDF", pdf)]:
             if not path.exists():
                 errors.append(f"missing {label} for {respondent}: {path}")
-        if source.exists():
+        if source_audio.startswith("private_original_wav/"):
+            pass
+        elif source.exists():
             with wave.open(source.as_posix(), "rb") as wav:
                 if wav.getframerate() != int(sample["sample_rate_hz"]):
                     errors.append(f"sample rate mismatch for {respondent}")
                 if wav.getnchannels() != int(sample["channels"]):
                     errors.append(f"channel mismatch for {respondent}")
+        else:
+            errors.append(f"missing source audio for {respondent}: {source}")
         if png.exists():
             im = Image.open(png)
             if im.size[0] < 1500 or im.size[1] < 800:
