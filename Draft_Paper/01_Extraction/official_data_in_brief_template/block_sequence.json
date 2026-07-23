@@ -1,0 +1,722 @@
+[
+  {
+    "block": 1,
+    "type": "paragraph",
+    "paragraph": 1,
+    "style": "Normal",
+    "text": "data article template v.19 (December 2024)",
+    "images": []
+  },
+  {
+    "block": 2,
+    "type": "paragraph",
+    "paragraph": 2,
+    "style": "Heading 1",
+    "text": "AUTHOR INSTRUCTIONS",
+    "images": []
+  },
+  {
+    "block": 3,
+    "type": "paragraph",
+    "paragraph": 3,
+    "style": "Normal",
+    "text": "• Please check that your dataset meets the criteria on our webpage What Data are Suitable for Data in Brief. Please also see our FAQ page, which introduces further Data in Brief article types.",
+    "images": []
+  },
+  {
+    "block": 4,
+    "type": "paragraph",
+    "paragraph": 4,
+    "style": "Normal",
+    "text": "• Please fill in the template below. Note that we can only consider data articles submitted using this template. For help with preparing your manuscript, please also see our webinar on how to fill in the template, our Guide for Authors, and our step-by-step video guide on how to submit to Data in Brief.",
+    "images": []
+  },
+  {
+    "block": 5,
+    "type": "paragraph",
+    "paragraph": 5,
+    "style": "Normal",
+    "text": "• Please be advised that parts of this template are locked for editing. The parts that are editable are highlighted in yellow. Please do not edit the template other than the section highlighted in yellow.",
+    "images": []
+  },
+  {
+    "block": 6,
+    "type": "paragraph",
+    "paragraph": 6,
+    "style": "Normal",
+    "text": "• Brief instructions are in blue italics. Additional instructions appear in comment boxes to the right of the main text.",
+    "images": []
+  },
+  {
+    "block": 7,
+    "type": "paragraph",
+    "paragraph": 7,
+    "style": "Normal",
+    "text": "• It is mandatory to publicly share your research data in a repository referred to in your Data in Brief article.",
+    "images": []
+  },
+  {
+    "block": 8,
+    "type": "paragraph",
+    "paragraph": 8,
+    "style": "Normal",
+    "text": "• Before submitting your data article, please delete this page as well as all instructional text in blue italics and all comment boxes in this template.",
+    "images": []
+  },
+  {
+    "block": 9,
+    "type": "paragraph",
+    "paragraph": 9,
+    "style": "Normal",
+    "text": "• For inspiration on how to complete the Data in Brief template, please find exemplary articles here.",
+    "images": []
+  },
+  {
+    "block": 10,
+    "type": "paragraph",
+    "paragraph": 10,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 11,
+    "type": "paragraph",
+    "paragraph": 11,
+    "style": "Normal",
+    "text": "In case you still have questions, please email our Scientific Editors at: dib-me@elsevier.com.",
+    "images": []
+  },
+  {
+    "block": 12,
+    "type": "paragraph",
+    "paragraph": 12,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 13,
+    "type": "paragraph",
+    "paragraph": 13,
+    "style": "Normal",
+    "text": "Please click here for a survey to share your anonymous feedback on this template and how it might be improved.",
+    "images": []
+  },
+  {
+    "block": 14,
+    "type": "paragraph",
+    "paragraph": 14,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 15,
+    "type": "paragraph",
+    "paragraph": 15,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 16,
+    "type": "paragraph",
+    "paragraph": 16,
+    "style": "Heading 1",
+    "text": "ARTICLE INFORMATION",
+    "images": []
+  },
+  {
+    "block": 17,
+    "type": "paragraph",
+    "paragraph": 17,
+    "style": "Normal",
+    "text": "Article title",
+    "images": []
+  },
+  {
+    "block": 18,
+    "type": "paragraph",
+    "paragraph": 18,
+    "style": "Normal",
+    "text": "The article title must include the word ‘data’ or ‘dataset’.",
+    "images": []
+  },
+  {
+    "block": 19,
+    "type": "paragraph",
+    "paragraph": 19,
+    "style": "Normal",
+    "text": "Authors",
+    "images": []
+  },
+  {
+    "block": 20,
+    "type": "paragraph",
+    "paragraph": 20,
+    "style": "Normal",
+    "text": "Please list all authors (first name(s) - last name) and mark the corresponding author with *.",
+    "images": []
+  },
+  {
+    "block": 21,
+    "type": "paragraph",
+    "paragraph": 21,
+    "style": "Normal",
+    "text": "Affiliations",
+    "images": []
+  },
+  {
+    "block": 22,
+    "type": "paragraph",
+    "paragraph": 22,
+    "style": "Normal",
+    "text": "Please include the full postal address of each author’s institution.",
+    "images": []
+  },
+  {
+    "block": 23,
+    "type": "paragraph",
+    "paragraph": 23,
+    "style": "Normal",
+    "text": "Corresponding author’s email address and Twitter handle",
+    "images": []
+  },
+  {
+    "block": 24,
+    "type": "paragraph",
+    "paragraph": 24,
+    "style": "Normal",
+    "text": "Please use your institutional email address. If you have one, please also add your Twitter handle here.",
+    "images": []
+  },
+  {
+    "block": 25,
+    "type": "paragraph",
+    "paragraph": 25,
+    "style": "Normal",
+    "text": "Keywords",
+    "images": []
+  },
+  {
+    "block": 26,
+    "type": "paragraph",
+    "paragraph": 26,
+    "style": "Normal",
+    "text": "Include 4-8 keywords, separated by semi-colons. Please do not repeat words used in your title.",
+    "images": []
+  },
+  {
+    "block": 27,
+    "type": "paragraph",
+    "paragraph": 27,
+    "style": "Normal",
+    "text": "Abstract",
+    "images": []
+  },
+  {
+    "block": 28,
+    "type": "paragraph",
+    "paragraph": 28,
+    "style": "Normal",
+    "text": "The abstract should be 100 to 500 words long and describe the data collection process, the dataset, and its reuse potential. It should not provide conclusions or interpretations.",
+    "images": []
+  },
+  {
+    "block": 29,
+    "type": "paragraph",
+    "paragraph": 29,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 30,
+    "type": "paragraph",
+    "paragraph": 30,
+    "style": "Heading 1",
+    "text": "SPECIFICATIONS TABLE [Instruction for SPECIFICATIONS TABLE in comment box]",
+    "images": []
+  },
+  {
+    "block": 31,
+    "type": "table",
+    "table": 1,
+    "rows": 7,
+    "columns": 2,
+    "preview": "Subject | "
+  },
+  {
+    "block": 32,
+    "type": "paragraph",
+    "paragraph": 31,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 33,
+    "type": "paragraph",
+    "paragraph": 32,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 34,
+    "type": "paragraph",
+    "paragraph": 33,
+    "style": "Heading 1",
+    "text": "VALUE OF THE DATA",
+    "images": []
+  },
+  {
+    "block": 35,
+    "type": "paragraph",
+    "paragraph": 34,
+    "style": "Normal",
+    "text": "This section states why these data are of value to the scientific community. Please provide between 3 and 6 bullet points and answer at least the questions below (delete the questions afterwards). Each bullet point should be a maximum of 150 words long, and should not include conclusions or inferences:",
+    "images": []
+  },
+  {
+    "block": 36,
+    "type": "paragraph",
+    "paragraph": 35,
+    "style": "List Paragraph",
+    "text": "Why are these data valuable?",
+    "images": []
+  },
+  {
+    "block": 37,
+    "type": "paragraph",
+    "paragraph": 36,
+    "style": "List Paragraph",
+    "text": "How can these data be reused by other researchers?",
+    "images": []
+  },
+  {
+    "block": 38,
+    "type": "paragraph",
+    "paragraph": 37,
+    "style": "List Paragraph",
+    "text": "…",
+    "images": []
+  },
+  {
+    "block": 39,
+    "type": "paragraph",
+    "paragraph": 38,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 40,
+    "type": "paragraph",
+    "paragraph": 39,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 41,
+    "type": "paragraph",
+    "paragraph": 40,
+    "style": "Heading 1",
+    "text": "BACKGROUND",
+    "images": []
+  },
+  {
+    "block": 42,
+    "type": "paragraph",
+    "paragraph": 41,
+    "style": "Normal",
+    "text": "Please describe your original motivation and context behind compiling this dataset. For example, briefly include information on the theoretical or methodological background against which you generated the data. Do not make concluding, interpretive, or otherwise inferential statements about the dataset. In case your data article is related to an original research article, please briefly describe how the data article adds value to the published article (Max. 200 words).",
+    "images": []
+  },
+  {
+    "block": 43,
+    "type": "paragraph",
+    "paragraph": 42,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 44,
+    "type": "paragraph",
+    "paragraph": 43,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 45,
+    "type": "paragraph",
+    "paragraph": 44,
+    "style": "Heading 1",
+    "text": "DATA DESCRIPTION",
+    "images": []
+  },
+  {
+    "block": 46,
+    "type": "paragraph",
+    "paragraph": 45,
+    "style": "Normal",
+    "text": "This section describes your dataset. Refer to all the data folders, subfolders, and files in the repository individually, irrespective of whether they relate to raw or analyzed data, and make sure that the reader can follow the structure of your dataset.",
+    "images": []
+  },
+  {
+    "block": 47,
+    "type": "paragraph",
+    "paragraph": 46,
+    "style": "Normal",
+    "text": "Please use visual aids (such as tables, graphs, or figures with captions) to familiarize the reader with your dataset, but do not offer background, interpretations, or conclusions.",
+    "images": []
+  },
+  {
+    "block": 48,
+    "type": "paragraph",
+    "paragraph": 47,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 49,
+    "type": "paragraph",
+    "paragraph": 48,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 50,
+    "type": "paragraph",
+    "paragraph": 49,
+    "style": "Heading 1",
+    "text": "EXPERIMENTAL DESIGN, MATERIALS AND METHODS",
+    "images": []
+  },
+  {
+    "block": 51,
+    "type": "paragraph",
+    "paragraph": 50,
+    "style": "Normal",
+    "text": "This section describes how you acquired the data. Provide a complete description of the experimental design and methods used to acquire these data. For example, include all code (files) and software used for data analysis or data generation, and describe tools, instruments, and experimental conditions.",
+    "images": []
+  },
+  {
+    "block": 52,
+    "type": "paragraph",
+    "paragraph": 51,
+    "style": "Normal",
+    "text": "It is important that this section is as comprehensive as possible. There is no character limit, and you may use illustrative figures or tables; however, please do not offer background, interpretations, or conclusions.",
+    "images": []
+  },
+  {
+    "block": 53,
+    "type": "paragraph",
+    "paragraph": 52,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 54,
+    "type": "paragraph",
+    "paragraph": 53,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 55,
+    "type": "paragraph",
+    "paragraph": 54,
+    "style": "Heading 1",
+    "text": "LIMITATIONS",
+    "images": []
+  },
+  {
+    "block": 56,
+    "type": "paragraph",
+    "paragraph": 55,
+    "style": "Normal",
+    "text": "Describe any limitations related to the data described in this article. These could be any problems you faced during data collection or curation, limited quality or size of dataset, data biases, etc., but should not include limitations of analysis conducted or interpretation (Max. 200 words).",
+    "images": []
+  },
+  {
+    "block": 57,
+    "type": "paragraph",
+    "paragraph": 56,
+    "style": "Normal",
+    "text": "If there are none, please write ‘None’ or ‘Not applicable’.",
+    "images": []
+  },
+  {
+    "block": 58,
+    "type": "paragraph",
+    "paragraph": 57,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 59,
+    "type": "paragraph",
+    "paragraph": 58,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 60,
+    "type": "paragraph",
+    "paragraph": 59,
+    "style": "Heading 1",
+    "text": "ETHICS STATEMENT",
+    "images": []
+  },
+  {
+    "block": 61,
+    "type": "paragraph",
+    "paragraph": 60,
+    "style": "Normal",
+    "text": "Data in Brief’s Guide for Authors contains detailed information on the ethical guidelines with which all authors must comply. In addition, we ask you to complete the relevant statement(s) below. Please delete those which are not relevant for your data.",
+    "images": []
+  },
+  {
+    "block": 62,
+    "type": "paragraph",
+    "paragraph": 61,
+    "style": "Normal",
+    "text": "If your work involved human subjects, please include a statement here confirming that the relevant informed consent was obtained from those subjects, if the research was carried out in accordance with the Declaration of Helsinki, and if it includes the Ethical committee approval and the protocol number. A copy of the consent form (in English) can be submitted either in a data repository or under the section ‘Consent form’ while submitting the manuscript to the system.",
+    "images": []
+  },
+  {
+    "block": 63,
+    "type": "paragraph",
+    "paragraph": 62,
+    "style": "Normal",
+    "text": "If your work involved animal experiments, please include a statement here confirming that those experiments complied with the ARRIVE guidelines and were carried out in accordance with the U.K. Animals (Scientific Procedures) Act, 1986 and associated guidelines; EU Directive 2010/63/EU for animal experiments; or the National Institutes of Health guide for the care and use of laboratory animals (NIH Publications No. 8023, revised 1978). Note, the sex of the animals must be indicated, and, where appropriate, the influence (or association) of sex on the results of the study.",
+    "images": []
+  },
+  {
+    "block": 64,
+    "type": "paragraph",
+    "paragraph": 63,
+    "style": "Normal",
+    "text": "If your work involved data collected from social media platforms, please include a statement here confirming that a) informed consent was obtained from participants or that participant data has been fully anonymized, and b) the platform(s)’ data redistribution policies were complied with.",
+    "images": []
+  },
+  {
+    "block": 65,
+    "type": "paragraph",
+    "paragraph": 64,
+    "style": "Normal",
+    "text": "If none of the above, please include a statement confirming that the authors have read and follow the ethical requirements for publication in Data in Brief and confirming that the current work does not involve human subjects, animal experiments, or any data collected from social media platforms.",
+    "images": []
+  },
+  {
+    "block": 66,
+    "type": "paragraph",
+    "paragraph": 65,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 67,
+    "type": "paragraph",
+    "paragraph": 66,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 68,
+    "type": "paragraph",
+    "paragraph": 67,
+    "style": "Heading 1",
+    "text": "CRediT AUTHOR STATEMENT",
+    "images": []
+  },
+  {
+    "block": 69,
+    "type": "paragraph",
+    "paragraph": 68,
+    "style": "Normal",
+    "text": "Please outline the contributions of each co-author, using the categories listed on this webpage.",
+    "images": []
+  },
+  {
+    "block": 70,
+    "type": "paragraph",
+    "paragraph": 69,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 71,
+    "type": "paragraph",
+    "paragraph": 70,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 72,
+    "type": "paragraph",
+    "paragraph": 71,
+    "style": "Heading 1",
+    "text": "ACKNOWLEDGEMENTS",
+    "images": []
+  },
+  {
+    "block": 73,
+    "type": "paragraph",
+    "paragraph": 72,
+    "style": "Normal",
+    "text": "In this section, mention all contributors who do not meet the criteria for authorship.",
+    "images": []
+  },
+  {
+    "block": 74,
+    "type": "paragraph",
+    "paragraph": 73,
+    "style": "Normal",
+    "text": "In addition, please list any funding sources in this section. List funding sources in the standard way to facilitate compliance to funder's requirements.",
+    "images": []
+  },
+  {
+    "block": 75,
+    "type": "paragraph",
+    "paragraph": 74,
+    "style": "Normal",
+    "text": "If no funding has been provided for the research, please include the following sentence:",
+    "images": []
+  },
+  {
+    "block": 76,
+    "type": "paragraph",
+    "paragraph": 75,
+    "style": "Normal",
+    "text": "This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.",
+    "images": []
+  },
+  {
+    "block": 77,
+    "type": "paragraph",
+    "paragraph": 76,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 78,
+    "type": "paragraph",
+    "paragraph": 77,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 79,
+    "type": "paragraph",
+    "paragraph": 78,
+    "style": "Heading 1",
+    "text": "DECLARATION OF COMPETING INTERESTS",
+    "images": []
+  },
+  {
+    "block": 80,
+    "type": "paragraph",
+    "paragraph": 79,
+    "style": "Normal",
+    "text": "Please choose one appropriate statement from below and delete the one that does not apply (if applicable, please specify the nature of your competing interests).",
+    "images": []
+  },
+  {
+    "block": 81,
+    "type": "paragraph",
+    "paragraph": 80,
+    "style": "List Paragraph",
+    "text": "The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.",
+    "images": []
+  },
+  {
+    "block": 82,
+    "type": "paragraph",
+    "paragraph": 81,
+    "style": "List Paragraph",
+    "text": "The authors declare the following financial interests/personal relationships which may be considered as potential competing interests:",
+    "images": []
+  },
+  {
+    "block": 83,
+    "type": "paragraph",
+    "paragraph": 82,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 84,
+    "type": "paragraph",
+    "paragraph": 83,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  },
+  {
+    "block": 85,
+    "type": "paragraph",
+    "paragraph": 84,
+    "style": "Heading 1",
+    "text": "REFERENCES",
+    "images": []
+  },
+  {
+    "block": 86,
+    "type": "paragraph",
+    "paragraph": 85,
+    "style": "Normal",
+    "text": "In this section, please provide a numbered list of references. References are limited to a maximum of 20 and irrelevant self-citation is not allowed.",
+    "images": []
+  },
+  {
+    "block": 87,
+    "type": "paragraph",
+    "paragraph": 86,
+    "style": "Normal",
+    "text": "Please format all in-text citations by number(s) in square brackets in line with the text. The actual authors can be referred to, but the reference number(s) must always be given.",
+    "images": []
+  },
+  {
+    "block": 88,
+    "type": "paragraph",
+    "paragraph": 87,
+    "style": "Normal",
+    "text": "IMPORTANT: If your data article supports an original research article, please cite the associated article here; ideally, it should be the first citation.",
+    "images": []
+  },
+  {
+    "block": 89,
+    "type": "paragraph",
+    "paragraph": 88,
+    "style": "Normal",
+    "text": "Please also make sure to cite your dataset in the data repository.",
+    "images": []
+  },
+  {
+    "block": 90,
+    "type": "paragraph",
+    "paragraph": 89,
+    "style": "Normal",
+    "text": "",
+    "images": []
+  }
+]

@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: Indonesian ASR 11-Class Dataset
+message: "If you use this dataset, please cite the dataset and the associated Data in Brief paper when available."
+type: dataset
+authors:
+  - name: Indonesian ASR Dataset Contributors
+url: https://huggingface.co/datasets/Atika88/Indonesian-ASR-11-Class-Dataset
+repository-code: https://github.com/RatnaAtika/Indonesian-ASR-11-Class-Dataset
+date-released: "2026-06-18"
+abstract: >-
+  Private pre-publication package for an Indonesian ASR corpus with 104,500 WAV files,
+  public anonymized speaker labels, metadata, split definitions, dataset information,
+  and paper-supporting benchmark artifacts.

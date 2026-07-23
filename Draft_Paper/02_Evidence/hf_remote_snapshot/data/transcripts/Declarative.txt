@@ -1,0 +1,19 @@
+01|Saya membutuhkan rekomendasi tempat wisata di kota Palembang
+02|Kami sedang mengerjakan tugas kelompok untuk mata kuliah Sistem Kontrol.
+03|Dosen pembimbing memberikan banyak masukan yang membangun.
+04|Lingkungan akademik yang positif sangat mendukung proses belajar
+05|Mahasiswa perlu mengatur waktu dengan baik antara kuliah dan kegiatan lainnya
+07|Semua makhluk hidup membutuhkan air untuk bertahan hidup
+08|Kita harus menjaga lingkungan untuk generasi mendatang
+09|Saya yakin usaha tidak akan mengkhianati hasil.
+10|Saya percaya bahwa belajar adalah investasi jangka panjang
+11|Ujian akhir semester akan dilaksanakan minggu depan
+12|Universitas Sriwijaya adalah salah satu perguruan tinggi ternama di Palembang.
+13|Kampus menyediakan fasilitas laboratorium yang lengkap.
+14|Diskusi di kelas membuat saya lebih paham dengan topik yang dibahas.
+15|Perpustakaan kampus menyediakan banyak referensi ilmiah
+16|Saya aktif mengikuti organisasi kemahasiswaan di kampus
+17|Saya bangga menjadi bagian dari masyarakat Palembang.
+18|Transportasi LRT sangat membantu mobilitas warga
+19|Saya ingin berkontribusi untuk kemajuan kota Palembang melalui pendidikan
+20|Palembang pernah menjadi tuan rumah Asian Games 2018 bersama Jakarta

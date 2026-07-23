@@ -50,6 +50,21 @@ checkpoints/
 *.pyc
 __pycache__/
 
+# --- Exception: version the complete private internal Draft_Paper package ---
+# The repository is private and every artifact remains NOT FOR SUBMISSION OR
+# PUBLIC RELEASE. Keep ephemeral caches excluded below.
+!Draft_Paper/**/*.docx
+!Draft_Paper/**/*.pdf
+!Draft_Paper/02_Evidence/hf_remote_snapshot/metadata/
+!Draft_Paper/02_Evidence/hf_remote_snapshot/metadata/**
+Draft_Paper/**/.cache/
+Draft_Paper/**/__pycache__/
+# Source-only privacy exclusions: the original DOCX and its respondent-photo
+# derivatives remain local even though the GitHub repository is private.
+Draft_Paper/00_Source/*.docx
+Draft_Paper/01_Extraction/media/image13.jpeg
+Draft_Paper/01_Extraction/media_contact_sheet.jpg
+
 # Local/runtime files
 *.log
 *.err

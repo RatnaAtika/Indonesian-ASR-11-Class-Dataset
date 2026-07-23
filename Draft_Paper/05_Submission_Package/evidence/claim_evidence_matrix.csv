@@ -1,0 +1,20 @@
+claim_id,claim,scope,status,evidence
+C001,"Release-target corpus contains 104,500 audio rows",release_target,verified,metadata/dataset_metadata.csv direct row-level audit; dataset_stats_public.json
+C002,Release-target duration is 134.1762 h,release_target,verified,metadata/dataset_metadata.csv direct row-level audit; dataset_stats_public.json
+C003,"Release target contains 104,368 human and 132 synthetic recordings",release_target,verified,dataset_stats_public.json
+C004,Release target contains 20 retained human public speaker labels: 12 male and 8 female after metadata correction; participant uniqueness and label provenance remain unverified,release_target,verified label counts; participant uniqueness/provenance gap,per_speaker_public.csv; HF final report; METHODS_EVIDENCE_MATRIX.csv
+C005,"Release-target metadata has 11 categories and 213 distinct (category, sentence_id) pairs",release_target,verified,metadata/dataset_metadata.csv direct row-level inventory; transcript_template_stats.csv
+C005B,"Frozen benchmark subset has 209 distinct (category, sentence_id) pairs",benchmark,verified,dataset_metadata_clean.csv direct row-level inventory; dataset_stats.json
+C006,"All 104,500 release-target metadata rows report 16 kHz, mono, PCM16 audio",release_target,verified metadata audit,"metadata/dataset_metadata.csv direct 104,500-row audit via build_evidence_registry.py; package a direct audio-header audit before submission"
+C007,Pinned private HF metadata has zero blank transcripts after repair,HF_private_staging,revision-pinned,hf_transcript_cleanup_execution report; pinned private HF revision
+C008,Private HF staging uses 11 English-category tar shards,HF_private_staging,revision-pinned,remote file listing; English rename report
+C009,"Benchmark subset has 102,544 files and 130.6548 h",benchmark,verified,dataset_metadata_clean.csv; dataset_stats.json
+C010,"Nine models were evaluated on a 15,376-item speaker-separated test split containing 15,374 human recordings and 2 synthetic repairs",benchmark,verified,benchmark.json; dataset_stats.json; synthetic_data_stats_public.json
+C011,"Under the uniform project normalizer, existing Whisper-small FT predictions rescore to WER 0.0018615/CER 0.0014014",benchmark,verified uniform diagnostic rescore,unified_nine_model_metrics.json; canonical test manifest; hashed prediction CSV
+C012,"Under the uniform project normalizer, existing ViT-modified-ID predictions rescore to WER 0.0176145/CER 0.0129790",benchmark,verified uniform diagnostic rescore,unified_nine_model_metrics.json; canonical test manifest; hashed prediction CSV
+C012B,Historical run-native nine-model WER/CER values used non-identical reference normalization and denominators,benchmark,verified comparability defect; historical ranking prohibited,uniform rescore audit; prediction-label denominator audit; benchmark.json retained as provenance
+C013,Benchmark measures held-out human speakers reading seen scripts,benchmark,registry-backed limitation; audit attachment required,split manifests; attach the exact template-overlap audit before final sign-off
+C014,Audio-quality diagnostics were computed for 297 sampled rows,sample,verified sample count; sampling design pending,dataset_stats_public.json; audio_quality_sample_public.csv; attach sampling frame/allocation/seed
+C015,Dataset is publicly accessible with DOI,access,not supported,HF private; DOI absent
+C016,Ethics and public-release consent are complete,ethics,material gap,old declarations contain placeholders
+C017,Open-microphone field accuracy is established,deployment,must not claim,development-only OOD audit

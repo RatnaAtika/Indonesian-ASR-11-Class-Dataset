@@ -1,0 +1,96 @@
+# Extracted manuscript — Draft Jurnal Data In Brief NSS-ID_ver3.docx
+
+NSS-ID : Nusantara Speech Sample Indonesian Dataset
+
+Ratna Atika a,b,, Suci Dwijayanti c, Bhakti yudho Suprapto c
+
+a Department of Electrical Engineering, Sriwijaya State Polytechnic, Srijaya Negara Street, Bukit Besar, Ilir Barat I District, Palembang, 30139, South Sumatra, Indonesia
+
+b Doctoral Program in Engineering Science, Universitas Sriwijaya, Srijaya Negara Street, Bukit Besar, Ilir Barat I District, Palembang, 30139, South Sumatra, Indonesia
+
+c Department of Electrical Engineering, Faculty of Engineering, Universitas Sriwijaya, Palembang–Prabumulih Main Road Km. 32, Indralaya, Ogan Ilir Regency, 30662, South Sumatra, Indonesia
+
+## Abstract
+
+This article presents an Indonesian speech corpus developed to support research in automatic speech recognition and various speech processing applications. The corpus comprises 104.500 audio recordings in WAV format with a sampling rate of 16 kHz, 16-bit depth, and a mono channel, with a total duration of 134.18 hours. The data was recorded from 20 adult speakers, consisting of 12 male and 8 female speakers. All recordings cover 11 sentence categories designed to represent a variety of communicative functions as well as variations in linguistic complexity in Indonesian speech. Each audio file is paired with a validated transcription and metadata describing the speaker’s identity, gender, sentence category, data partition, recording duration, and audio properties. The corpus was divided into training, development, and test subsets using a speaker-disjoint scheme, so that no speaker appears in more than one subset. The division was performed reproducibly using a random seed of 42. A total of 132 recordings generated using Edge-TTS are explicitly identified as synthetic gap-filling data, representing 0.129% of the entire dataset. This repository provides audio recordings, normalized transcriptions, metadata tables, data partition manifests, generated descriptive statistics, and scripts for validating and reproducing the dataset summary. This data can be reused for automatic speech recognition in Indonesian, independent speaker evaluation, acoustic modeling, text normalization, resource-constrained natural language processing, and comparative evaluation of end-to-end and hybrid speech recognition architectures.
+
+Keywords:
+
+Specifications Table
+
+### Extracted table 1
+
+| Subject | Computer Science |
+| --- | --- |
+| Specific subject area | Automatic speech recognition, speech and language processing, and low-resource Indonesian speech resources |
+| Type of data | WAV audio files, UTF-8 transcriptions, CSV metadata, JSON/CSV split manifests, figures, and reproducibility scripts |
+| Data collection | Speech recordings were collected from 20 Indonesian speakers reading sentences from 11 communicative categories under a predefined recording protocol |
+| Audio format | PCM WAV, 16 kHz, 16-bit, mono |
+| How data were acquired | Supercardioid microphone BOYA BY-MM1+ and Audacity version 3.7.4 running on Windows 10. |
+| Data source location | Sriwijaya State Polytechnic Srijaya Negara Street, Bukit Besar, Ilir Barat I District, Palembang, 30139, South Sumatra, Indonesia |
+| Data accessibility | Repository: [Mendeley Data/Zenodo]; DOI: [dataset DOI]; Direct URL: [URL] |
+| Related research article | Atika, R., Dwijayanti, S., and Suprapto, B.Y. (2026). Improving speech-to-text for the Indonesian language using a modified Transformer. DOI: 10.15587/1729-4061.2026.350949 |
+
+### 1. Value of the Data
+
+The NSS-ID dataset provides a structured corpus of Indonesian speech that includes dialectal variations recorded in a controlled acoustic environment, and is useful for the development of ASR and two-way communication in service robots, particularly for Indonesian as a language with limited resources.
+
+This dataset includes speech recordings from both male and female speakers with variations in intonation, volume, speaking rate, and dialects from several regions across Indonesia, enabling further analysis of the model’s robustness to speaker and pronunciation variations.
+
+This dataset provides a structured Indonesian speech resource consisting of 11 sentence categories: interrogative, imperative, confirmation, scheduling, negation, rhetorical, declarative, persuasive, conditional, clarification, and exclamatory. The diversity of these sentence categories makes this dataset relevant for the development of various speech recognition-based applications, such as Indonesian-language voice interfaces, service robots, and human–robot interaction systems that operate in real time.
+
+Voice data was collected using a specialized supercardioid microphone with Audacity software, at a sampling rate of 16 kHz, with the microphone positioned 5–10 cm in front of the sound source (the respondent’s lips).
+
+A total of 104.500 audio files were recorded from 20 respondents, consisting of 62.700 audio files from male respondents and 41.800 audio files from female respondents.
+
+### 2. Background
+
+Automatic speech recognition (ASR) relies on a speech corpus containing audio recordings and their corresponding text transcriptions. The NSS-ID dataset was compiled to support the development of an Indonesian-language ASR system for two-way communication between humans and machines, including speech interfaces for service robots. The data collection was designed to include speakers from various regional backgrounds as well as controlled variations in intonation, regional accents, voice intensity, and speech rate. This corpus contains speech samples drawn from 209 sentences classified into 11 functional categories: interrogative, imperative, declarative, clarification, confirmation, scheduling, negation, rhetorical, exclamatory, conditional, and persuasive. A previous review reported limitations in the documentation of Indonesian speech resources and the implementation of ASR for service robots [1]. An earlier corpus, consisting of eight sentence categories, was used [2] to train and evaluate a modified Transformer-based ASR model. This data article expands upon that research by describing a comprehensive corpus that includes three additional sentence categories, as well as providing recording protocols, anonymized speaker metadata, sentence category annotations, audio specifications, quality control information, and separate training, development, and test partitions across speakers, generated using a random seed of 42.
+
+### 3. Data Description
+
+The NSS-ID repository contains Indonesian speech recordings, textual transcriptions, anonymized speaker metadata, sentence-category annotations, dataset-split manifests, audio-quality measurements, and source data used to generate the figures presented in this article. The repository is organized into the directories described in Table 1. The final corpus contains 104,500 audio files in uncompressed WAV format, with a total duration of 134.18 h and a storage size of approximately 15.7 GB. All audio files use a sampling rate of 16 kHz, 16-bit pulse-code modulation, and a single audio channel. The corpus comprises 104,368 natural speech recordings and 132 synthesized gap-fill files, corresponding to 99.874% and 0.126% of the corpus, respectively.
+
+These natural recordings were obtained from 20 anonymous speakers aged 25–38, comprising 12 male and 8 female speakers. The speakers’ regions of origin include the cities of Bekasi, Bandung, Yogyakarta, Semarang, Sragen, Medan, Padang, Palembang, Bengkulu, Maluku, Baturaja, Kayuagung, Sekayu, Tanjung Enim, and Penukal Abab Lematang Ilir. The mapping between the anonymized speaker IDs, demographic attributes, regional backgrounds, dataset partitions, mintnumber of files, and recording durations is presented in metadata/speakers.csv.
+
+This corpus consists of 209 sentences. Each speaker recited all of these sentences in their respective regional dialects, with each sentence repeated 25 times using variations in intonation, tempo, and speaking speed. This process resulted in 5,225 audio files for each speaker. All sentences are classified into 11 categories, namely interrogative, imperative, declarative, clarification, confirmation, scheduling, negation, rhetorical, exclamatory, conditional, and persuasive. Information regarding the sentence text, category, number of characters, number of words, and sentence identifier is stored in the metadata/sentences.csv file. Meanwhile, metadata at the recording level is stored in the metadata/recordings.csv file, which contains information such as the relative path of the audio file, speaker identity, sentence identity, repetition number, dataset split, recording duration, transcript, and recording status which indicates whether the data comes from a natural recording or is synthetic.
+
+This corpus is divided into training, development, and test subsets using a protocol that separates speakers. Each speaker ID appears in only one subset. This division was generated using a random seed of 42. The speaker assignments and relative audio tracks for each subset are listed in the files splits/train.txt, splits/dev.txt, and splits/test.txt. Table 2 presents the number of speakers, audio files, and hours of recordings contained in each subset.
+
+A total of 132 gap-filling recordings synthesized using Microsoft Edge-TTS Neural have been documented in the repository. In a corpus consisting of 104,500 audio files, these recordings account for approximately 0.126% of the dataset and have a combined duration of 632.52 seconds (0.1757 hours). This synthetic subset consists of 122 training files, 8 development files, and 2 test files. This subset includes 2 declarative recordings, 9 clarifying recordings, 16 conditional recordings, 29 confirmatory recordings, 11 negative recordings, 4 scheduling recordings, 15 imperative recordings, 16 persuasive recordings, 17 rhetorical recordings, 3 exclamatory recordings, and 10 interrogative recordings. Of these recordings, 73 were generated using the male voice id-ID-ArdiNeural and 59 using the female voice id-ID-GadisNeural; speaker cloning was not applied. Aggregate statistics based on dataset partitions, sentence categories, synthetic voices, and correction targets are presented in
+
+Report_paper_9model/hf_dataset_information_public/synthetic_data_stats_public.json. Information regarding the IDs of the repair targets, target partitions, voice-gender alignment with the target, number of files, and recording duration is presented in the file Report_paper_9model/hf_anonymization/synthetic_repair_targets_public.csv.
+
+Figure 1 presents the number of WAV files associated with each anonymized speaker ID and identifies the corresponding training, development, or testing subset. The numerical values underlying this figure are provided in
+
+Figure F1 shows the distribution of WAV files contributed by each public speaker ID in the Indonesian ASR corpus. Each bar represents a single speaker, while the color indicates the relevant dataset portion: training, development, or testing. The nearly identical bar heights indicate that the number of recordings per speaker is very balanced, with each speaker contributing approximately 5,100 WAV files. This uniformity at the speaker level reduces the risk of speaker dominance bias and supports a more reliable evaluation of ASR model generalization under a per-speaker dataset splitting protocol. Figure F2 shows the distribution of average recording durations for each sentence category along with their standard deviations (±1 SD). The Persuasive category had the highest average duration, at 6.43 seconds, followed by Conditional (5.96 seconds) and Confirmation (5.58 seconds). Conversely, the lowest average duration was found in the Imperative category, at 2.96 seconds, followed by Exclamatory (3.43 seconds) and Negation (3.57 seconds). This pattern indicates a fairly clear difference in temporal characteristics among the sentence categories in the dataset. These differences in duration indicate that each category possesses distinct linguistic characteristics. Persuasive and conditional sentences generally have more complex structures and contain more information, thus requiring a longer time to utter. Conversely, imperative and exclamatory sentences tend to be shorter because they contain commands or expressions conveyed directly. Figure F3 presents the total recording duration contributed by each speaker. These durations range from 5.62 to 7.67 hours, indicating that the data contributions among speakers are relatively even. Although there is variation in duration, there is no evidence of excessive dominance by any particular speaker.
+
+Furthermore, the distribution of sentence length based on the average number of characters and the number of words in each sentence category can be seen in Figure F4. Based on the number of characters, the Persuasive category has the longest sentences, with an average of 107.1 characters, while the Imperative category has the shortest sentences, at around 38.4 characters. Similarly, regarding the average number of words, the Persuasive category has an average of 15.4 words, while the Imperative category has only about 6.1 words. This indicates differences in linguistic complexity across categories, with persuasive sentences tending to be longer and more argumentative, whereas imperative sentences are generally short and direct. These variations enrich the linguistic characteristics of the dataset and help the ASR model recognize diverse speech structures in real-world usage scenarios.
+
+The frequency distribution of word occurrences in the dataset on a logarithmic scale (log-log scale) is shown in Figure F5. The curve exhibits a pattern resembling the Zipf distribution, in which a small number of words have very high occurrence frequencies, while the vast majority of other words occur with relatively low frequencies. This dataset consists of 711 word types, indicating a fairly good diversity of vocabulary. This distribution is a common characteristic of natural language corpora, where frequently used words such as conjunctions, pronouns, or common verbs appear much more frequently than more specific vocabulary. This distribution pattern indicates that the dataset possesses realistic linguistic characteristics and is representative of everyday language use. This lexical diversity is beneficial in the ASR model training process because it allows the model to learn both high-frequency and low-frequency words.
+
+### 4. Experimental Design, Materials and Methods
+
+### 4.1 Proses Pengambilan Data
+
+Proses pengumpulan data suara dilakukan di sebuah ruangan khusus di Gedung Laboratorium Teknik Elektro Politeknik Negeri Sriwijaya. Ruang khusus ini didesain agar dapat meredam kebisingan dari luar dan mengurangi pantulan suara dari dalam ruangan itu sendiri. Lokasi yang dipilih berada jauh dari sumber kebisingan eksternal, yang berada di dalam sudut gudang. Ruangan ini dibuat layaknya sebuah ruangan akustik yang dilapisi dengan busa peredam suara khusus. Ruangan ini didesain dengan sudut-sudut yang dapat mengurangi pantulan suara, berbentuk persegi berukuran 1x1 meter dengan tinggi 2.5 meter. Setiap sisi dinding dan atap ruangan dilapisi dengan material peredam suara (glasswool) setelah itu dipasang busa akustik (acoustic foam) yang berfungsi untuk menyerap gelombang suara dan menghilangkan gema atau pantulan suara di dalam ruangan. Jenis busa yang digunakan adalah busa khusus berbentuk telur (egg crate), yang dipilih karena mampu menyerap frekuensi suara dalam berbagai rentang, terutama frekuensi menengah hingga tinggi. Pemasangan busa dilakukan secara menyeluruh pada dinding dan sebagian area langit-langit ruangan, dengan memastikan tidak ada celah yang terbuka agar peredaman berjalan optimal. Kemudian alasnya dilapisi dengan karpet tebal. Ruangan khusus pengambilan data suara tampak pada gambar .
+
+Data suara diambil dari responden berjenis kelamin laki-laki dan perempuan yang memiliki rentang usia antara 22-38 tahun yang memiliki cara pelafalan/logat khas dari daerah dan propinsi yang ada di Indonesia.
+
+### 4.2 Penerapan Speech to Text
+
+Model konvensional dan deep learning
+
+### Extracted table 2
+
+| Rank | Model | WER | CER |
+| --- | --- | --- | --- |
+| 1 | Whisper-small FT | 0.0085 | 0.0019 |
+| 2 | Conformer-CTC | 0.0119 | 0.0043 |
+| 3 | ViT-modified-ID, proposed model | 0.0178 | 0.013 |
+| 4 | Bi-LSTM CTC | 0.0401 | 0.0132 |
+| 5 | Vanilla Transformer | 0.0439 | 0.0327 |
+| 6 | Wav2Letter-style CNN-CTC | 0.0929 | 0.052 |
+| 7 | HMM-GMM classical | 0.9633 | 0.7205 |
+| 8 | GMM-HMM-DNN | 0.9703 | 0.8516 |
+| 9 | DNN-HMM hybrid | 0.9708 | 0.8437 |

@@ -1,0 +1,44 @@
+{
+  "status": "internal_template_evidence",
+  "source_file": "Draft_Paper/data-in-brief-article-template.docx",
+  "template_version": "v.19 (December 2024)",
+  "source_bytes": 84299,
+  "source_sha256": "5c02d5f9e0762e05f69c06d1d042ea800b6214427c82a78166863dfd17264190",
+  "paragraph_count": 89,
+  "nonempty_paragraph_count": 63,
+  "table_count": 1,
+  "specifications_table_rows": 7,
+  "inline_shape_count": 0,
+  "media_count": 1,
+  "header_artwork_sha256": "edb374c9b2e094a7b9e30adb7f988e7f684b6693e72ace19da1d5a9088db945a",
+  "heading_1_count_with_instruction_page": 13,
+  "official_submission_heading_1_sequence": [
+    "ARTICLE INFORMATION",
+    "SPECIFICATIONS TABLE",
+    "VALUE OF THE DATA",
+    "BACKGROUND",
+    "DATA DESCRIPTION",
+    "EXPERIMENTAL DESIGN, MATERIALS AND METHODS",
+    "LIMITATIONS",
+    "ETHICS STATEMENT",
+    "CRediT AUTHOR STATEMENT",
+    "ACKNOWLEDGEMENTS",
+    "DECLARATION OF COMPETING INTERESTS",
+    "REFERENCES"
+  ],
+  "section_count": 1,
+  "page_geometry": {
+    "size": "A4",
+    "width_inches": 8.27,
+    "height_inches": 11.69,
+    "margins_inches": 1.0
+  },
+  "instructional_features_removed_from_generated_docx": {
+    "author_instruction_page": true,
+    "blue_instructional_text": true,
+    "comment_boxes": true,
+    "document_protection": true,
+    "external_hyperlinks": true,
+    "custom_sensitivity_properties": true
+  }
+}

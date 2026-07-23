@@ -1,0 +1,9 @@
+Subject,Computer Science
+Specific subject area,"Automatic speech recognition, speech and language processing, and low-resource Indonesian speech resources"
+Type of data,"WAV audio files, UTF-8 transcriptions, CSV metadata, JSON/CSV split manifests, figures, and reproducibility scripts"
+Data collection,Speech recordings were collected from 20 Indonesian speakers reading sentences from 11 communicative categories under a predefined recording protocol
+Audio format,"PCM WAV, 16 kHz, 16-bit, mono"
+How data were acquired,Supercardioid microphone BOYA BY-MM1+ and Audacity version 3.7.4 running on Windows 10.
+Data source location,"Sriwijaya State Polytechnic Srijaya Negara Street, Bukit Besar, Ilir Barat I District, Palembang, 30139, South Sumatra, Indonesia"
+Data accessibility,Repository: [Mendeley Data/Zenodo]; DOI: [dataset DOI]; Direct URL: [URL]
+Related research article,"Atika, R., Dwijayanti, S., and Suprapto, B.Y. (2026). Improving speech-to-text for the Indonesian language using a modified Transformer. DOI: 10.15587/1729-4061.2026.350949"

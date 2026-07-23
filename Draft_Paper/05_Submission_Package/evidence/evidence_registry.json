@@ -1,0 +1,898 @@
+{
+  "generated_at": "2026-07-22T12:08:44.128134+00:00",
+  "evidence_policy": {
+    "tier_a": "Full 104,500-row release-target metadata and private HF staging artifacts",
+    "tier_b": "Frozen 102,544-row benchmark subset and nine-model test artifacts",
+    "tier_c": "Sampled acoustic/figure diagnostics",
+    "tier_d": "Local deployment/OOD diagnostics; not publication accuracy",
+    "tier_e": "Older narrative drafts; require cross-check"
+  },
+  "release_target_dataset": {
+    "scope": "104,500 release-target audio rows; local pre-repair metadata snapshot plus repaired private HF staging metadata",
+    "local_pre_repair_metadata_snapshot": {
+      "rows": 104500,
+      "duration_hours": 134.1762,
+      "blank_transcripts": 1956,
+      "synthetic_rows": 132,
+      "category_count": 11,
+      "category_rows": {
+        "Kalimat_Deklaratif": 9500,
+        "Kalimat_Klarifikasi": 9500,
+        "Kalimat_Kondisional": 9500,
+        "Kalimat_Konfirmasi": 9500,
+        "Kalimat_Negasi": 9500,
+        "Kalimat_Penjadwalan": 9500,
+        "Kalimat_Perintah": 9500,
+        "Kalimat_Persuasif": 9500,
+        "Kalimat_Retoris": 9500,
+        "Kalimat_Seruan": 9500,
+        "Kalimat_Tanya": 9500
+      },
+      "distinct_category_sentence_pairs": 213,
+      "non_500_row_sentence_pairs": [
+        {
+          "category": "Kalimat_Kondisional",
+          "sentence_id": "19",
+          "rows": 490
+        },
+        {
+          "category": "Kalimat_Kondisional",
+          "sentence_id": "20",
+          "rows": 10
+        },
+        {
+          "category": "Kalimat_Konfirmasi",
+          "sentence_id": "05",
+          "rows": 483
+        },
+        {
+          "category": "Kalimat_Konfirmasi",
+          "sentence_id": "20",
+          "rows": 17
+        },
+        {
+          "category": "Kalimat_Persuasif",
+          "sentence_id": "17",
+          "rows": 489
+        },
+        {
+          "category": "Kalimat_Persuasif",
+          "sentence_id": "20",
+          "rows": 11
+        },
+        {
+          "category": "Kalimat_Tanya",
+          "sentence_id": "17",
+          "rows": 494
+        },
+        {
+          "category": "Kalimat_Tanya",
+          "sentence_id": "20",
+          "rows": 6
+        }
+      ],
+      "audio_formats": [
+        {
+          "sample_rate": 16000,
+          "channels": 1,
+          "bits_per_sample": 16,
+          "rows": 104500
+        }
+      ]
+    },
+    "file_count": 104500,
+    "human_recordings": 104368,
+    "synthetic_recordings": 132,
+    "synthetic_fraction_percent": 0.1263,
+    "duration_hours": 134.1762,
+    "human_speakers": 20,
+    "human_gender_counts_corrected": {
+      "Female": 8,
+      "Male": 12
+    },
+    "synthetic_voice_labels": 18,
+    "synthetic_label_gender_counts": {
+      "Female": 9,
+      "Male": 9
+    },
+    "categories": 11,
+    "distinct_category_sentence_pairs": 213,
+    "partial_replacement_sentence_pairs": [
+      {
+        "category": "Kalimat_Kondisional",
+        "sentence_id": "19",
+        "rows": 490
+      },
+      {
+        "category": "Kalimat_Kondisional",
+        "sentence_id": "20",
+        "rows": 10
+      },
+      {
+        "category": "Kalimat_Konfirmasi",
+        "sentence_id": "05",
+        "rows": 483
+      },
+      {
+        "category": "Kalimat_Konfirmasi",
+        "sentence_id": "20",
+        "rows": 17
+      },
+      {
+        "category": "Kalimat_Persuasif",
+        "sentence_id": "17",
+        "rows": 489
+      },
+      {
+        "category": "Kalimat_Persuasif",
+        "sentence_id": "20",
+        "rows": 11
+      },
+      {
+        "category": "Kalimat_Tanya",
+        "sentence_id": "17",
+        "rows": 494
+      },
+      {
+        "category": "Kalimat_Tanya",
+        "sentence_id": "20",
+        "rows": 6
+      }
+    ],
+    "word_types_release_target_normalization": 714,
+    "split_rows": [
+      {
+        "split": "train",
+        "file_count": "73150",
+        "duration_sec": "341797.1502",
+        "duration_hours": "94.9437",
+        "synthetic_files": "122",
+        "male_source_files": "31350",
+        "female_source_files": "41800"
+      },
+      {
+        "split": "dev",
+        "file_count": "15675",
+        "duration_sec": "73068.9532",
+        "duration_hours": "20.2969",
+        "synthetic_files": "8",
+        "male_source_files": "15675",
+        "female_source_files": "0"
+      },
+      {
+        "split": "test",
+        "file_count": "15675",
+        "duration_sec": "68168.3948",
+        "duration_hours": "18.9357",
+        "synthetic_files": "2",
+        "male_source_files": "15673",
+        "female_source_files": "2"
+      }
+    ],
+    "category_rows": [
+      {
+        "category": "Kalimat_Deklaratif",
+        "file_count": "9500",
+        "duration_sec": "38513.0637",
+        "duration_hours": "10.6981",
+        "synthetic_files": "2",
+        "mean_duration_sec": "4.054"
+      },
+      {
+        "category": "Kalimat_Klarifikasi",
+        "file_count": "9500",
+        "duration_sec": "49711.9233",
+        "duration_hours": "13.8089",
+        "synthetic_files": "9",
+        "mean_duration_sec": "5.2328"
+      },
+      {
+        "category": "Kalimat_Kondisional",
+        "file_count": "9500",
+        "duration_sec": "57493.4681",
+        "duration_hours": "15.9704",
+        "synthetic_files": "16",
+        "mean_duration_sec": "6.0519"
+      },
+      {
+        "category": "Kalimat_Konfirmasi",
+        "file_count": "9500",
+        "duration_sec": "53262.219",
+        "duration_hours": "14.7951",
+        "synthetic_files": "29",
+        "mean_duration_sec": "5.6065"
+      },
+      {
+        "category": "Kalimat_Negasi",
+        "file_count": "9500",
+        "duration_sec": "33954.5354",
+        "duration_hours": "9.4318",
+        "synthetic_files": "11",
+        "mean_duration_sec": "3.5742"
+      },
+      {
+        "category": "Kalimat_Penjadwalan",
+        "file_count": "9500",
+        "duration_sec": "47204.038",
+        "duration_hours": "13.1122",
+        "synthetic_files": "4",
+        "mean_duration_sec": "4.9688"
+      },
+      {
+        "category": "Kalimat_Perintah",
+        "file_count": "9500",
+        "duration_sec": "28122.6942",
+        "duration_hours": "7.8119",
+        "synthetic_files": "15",
+        "mean_duration_sec": "2.9603"
+      },
+      {
+        "category": "Kalimat_Persuasif",
+        "file_count": "9500",
+        "duration_sec": "61942.109",
+        "duration_hours": "17.2061",
+        "synthetic_files": "16",
+        "mean_duration_sec": "6.5202"
+      },
+      {
+        "category": "Kalimat_Retoris",
+        "file_count": "9500",
+        "duration_sec": "37489.4433",
+        "duration_hours": "10.4137",
+        "synthetic_files": "17",
+        "mean_duration_sec": "3.9463"
+      },
+      {
+        "category": "Kalimat_Seruan",
+        "file_count": "9500",
+        "duration_sec": "32552.1659",
+        "duration_hours": "9.0423",
+        "synthetic_files": "3",
+        "mean_duration_sec": "3.4265"
+      },
+      {
+        "category": "Kalimat_Tanya",
+        "file_count": "9500",
+        "duration_sec": "42788.8383",
+        "duration_hours": "11.8858",
+        "synthetic_files": "10",
+        "mean_duration_sec": "4.5041"
+      }
+    ],
+    "synthetic_details": {
+      "generated_at": "2026-06-17T21:16:13",
+      "scope": "full_hf_metadata_104500_files",
+      "source": "metadata/dataset_metadata.csv",
+      "synthetic_files_total": 132,
+      "by_synthetic_voice_gender": {
+        "Male": 73,
+        "Female": 59
+      },
+      "by_split": {
+        "train": 122,
+        "dev": 8,
+        "test": 2
+      },
+      "by_category": {
+        "Kalimat_Deklaratif": 2,
+        "Kalimat_Klarifikasi": 9,
+        "Kalimat_Kondisional": 16,
+        "Kalimat_Konfirmasi": 29,
+        "Kalimat_Negasi": 11,
+        "Kalimat_Penjadwalan": 4,
+        "Kalimat_Perintah": 15,
+        "Kalimat_Persuasif": 16,
+        "Kalimat_Retoris": 17,
+        "Kalimat_Seruan": 3,
+        "Kalimat_Tanya": 10
+      },
+      "voice_target_gender_mismatch_files": 2,
+      "repair_targets": [
+        {
+          "synthetic_voice_id": "Fs1",
+          "speaker_gender": "Female",
+          "repair_target_speaker_id": "F1",
+          "repair_target_speaker_gender": "Female",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 6
+        },
+        {
+          "synthetic_voice_id": "Fs2",
+          "speaker_gender": "Female",
+          "repair_target_speaker_id": "F2",
+          "repair_target_speaker_gender": "Female",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 7
+        },
+        {
+          "synthetic_voice_id": "Fs3",
+          "speaker_gender": "Female",
+          "repair_target_speaker_id": "F3",
+          "repair_target_speaker_gender": "Female",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 8
+        },
+        {
+          "synthetic_voice_id": "Fs4",
+          "speaker_gender": "Female",
+          "repair_target_speaker_id": "F4",
+          "repair_target_speaker_gender": "Female",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 8
+        },
+        {
+          "synthetic_voice_id": "Fs5",
+          "speaker_gender": "Female",
+          "repair_target_speaker_id": "F5",
+          "repair_target_speaker_gender": "Female",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 4
+        },
+        {
+          "synthetic_voice_id": "Fs6",
+          "speaker_gender": "Female",
+          "repair_target_speaker_id": "F6",
+          "repair_target_speaker_gender": "Female",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 4
+        },
+        {
+          "synthetic_voice_id": "Fs7",
+          "speaker_gender": "Female",
+          "repair_target_speaker_id": "M8",
+          "repair_target_speaker_gender": "Male",
+          "voice_gender_matches_target": "False",
+          "synthetic_files": 2
+        },
+        {
+          "synthetic_voice_id": "Fs8",
+          "speaker_gender": "Female",
+          "repair_target_speaker_id": "F7",
+          "repair_target_speaker_gender": "Female",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 14
+        },
+        {
+          "synthetic_voice_id": "Fs9",
+          "speaker_gender": "Female",
+          "repair_target_speaker_id": "F8",
+          "repair_target_speaker_gender": "Female",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 6
+        },
+        {
+          "synthetic_voice_id": "Ms1",
+          "speaker_gender": "Male",
+          "repair_target_speaker_id": "M1",
+          "repair_target_speaker_gender": "Male",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 17
+        },
+        {
+          "synthetic_voice_id": "Ms2",
+          "speaker_gender": "Male",
+          "repair_target_speaker_id": "M2",
+          "repair_target_speaker_gender": "Male",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 15
+        },
+        {
+          "synthetic_voice_id": "Ms3",
+          "speaker_gender": "Male",
+          "repair_target_speaker_id": "M3",
+          "repair_target_speaker_gender": "Male",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 2
+        },
+        {
+          "synthetic_voice_id": "Ms4",
+          "speaker_gender": "Male",
+          "repair_target_speaker_id": "M5",
+          "repair_target_speaker_gender": "Male",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 3
+        },
+        {
+          "synthetic_voice_id": "Ms5",
+          "speaker_gender": "Male",
+          "repair_target_speaker_id": "M6",
+          "repair_target_speaker_gender": "Male",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 7
+        },
+        {
+          "synthetic_voice_id": "Ms6",
+          "speaker_gender": "Male",
+          "repair_target_speaker_id": "M7",
+          "repair_target_speaker_gender": "Male",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 10
+        },
+        {
+          "synthetic_voice_id": "Ms7",
+          "speaker_gender": "Male",
+          "repair_target_speaker_id": "M9",
+          "repair_target_speaker_gender": "Male",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 12
+        },
+        {
+          "synthetic_voice_id": "Ms8",
+          "speaker_gender": "Male",
+          "repair_target_speaker_id": "M10",
+          "repair_target_speaker_gender": "Male",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 3
+        },
+        {
+          "synthetic_voice_id": "Ms9",
+          "speaker_gender": "Male",
+          "repair_target_speaker_id": "M11",
+          "repair_target_speaker_gender": "Male",
+          "voice_gender_matches_target": "True",
+          "synthetic_files": 4
+        }
+      ]
+    },
+    "audio_quality_sample_rows": 297,
+    "audio_quality_scope": "297 sampled files; sampling frame, allocation, seed, and inclusion criteria require attached provenance; not a full-corpus scan",
+    "source_artifacts": [
+      "metadata/dataset_metadata.csv",
+      "Report_paper_9model/hf_dataset_information_public/dataset_stats_public.json",
+      "Report_paper_9model/hf_dataset_information_public/per_split_public.csv",
+      "Report_paper_9model/hf_dataset_information_public/per_category_public.csv",
+      "Report_paper_9model/hf_dataset_information_public/per_speaker_public.csv",
+      "Report_paper_9model/HF_DATASET_INFORMATION_FINAL_REPORT.md"
+    ]
+  },
+  "hf_repository": {
+    "repo_id": "Atika88/Indonesian-ASR-11-Class-Dataset",
+    "revision": "830a2069416707e3f38c06c507255889513cdf4b",
+    "private": true,
+    "access_status": "private staging; not publicly accessible",
+    "persistent_dataset_doi_available": false,
+    "card_license": "other",
+    "remote_file_entries": 76,
+    "audio_tar_shards": 11,
+    "audio_tar_bytes": 15623106560,
+    "public_category_names": [
+      "Clarification",
+      "Conditional",
+      "Confirmation",
+      "Declarative",
+      "Exclamatory",
+      "Imperative",
+      "Interrogative",
+      "Negation",
+      "Persuasive",
+      "Rhetorical",
+      "Scheduling"
+    ],
+    "metadata_rows_at_pinned_revision": 104500,
+    "blank_transcripts_after_repair": 0,
+    "numbering_policy": "Original 01-20 collection IDs are preserved; documented gaps must not be renumbered.",
+    "source_artifacts": [
+      "Draft_Paper/02_Evidence/hf_dataset_remote_info.json",
+      "Draft_Paper/02_Evidence/hf_dataset_remote_files.json",
+      "reports/hf_transcript_cleanup_execution_20260618.md",
+      "reports/hf_transcript_numbering_note_20260618.md",
+      "reports/hf_english_category_rename_20260619.md"
+    ]
+  },
+  "benchmark_subset": {
+    "scope": "Frozen clean subset used by all nine paper models",
+    "local_source_validation": {
+      "rows": 102544,
+      "duration_hours": 130.6548,
+      "blank_transcripts": 0,
+      "synthetic_rows": 132,
+      "category_count": 11,
+      "category_rows": {
+        "Kalimat_Deklaratif": 9500,
+        "Kalimat_Klarifikasi": 9500,
+        "Kalimat_Kondisional": 9010,
+        "Kalimat_Konfirmasi": 9017,
+        "Kalimat_Negasi": 9500,
+        "Kalimat_Penjadwalan": 9500,
+        "Kalimat_Perintah": 9500,
+        "Kalimat_Persuasif": 9011,
+        "Kalimat_Retoris": 9500,
+        "Kalimat_Seruan": 9500,
+        "Kalimat_Tanya": 9006
+      },
+      "distinct_category_sentence_pairs": 209,
+      "non_500_row_sentence_pairs": [
+        {
+          "category": "Kalimat_Kondisional",
+          "sentence_id": "20",
+          "rows": 10
+        },
+        {
+          "category": "Kalimat_Konfirmasi",
+          "sentence_id": "20",
+          "rows": 17
+        },
+        {
+          "category": "Kalimat_Persuasif",
+          "sentence_id": "20",
+          "rows": 11
+        },
+        {
+          "category": "Kalimat_Tanya",
+          "sentence_id": "20",
+          "rows": 6
+        }
+      ],
+      "audio_formats": [
+        {
+          "sample_rate": 16000,
+          "channels": 1,
+          "bits_per_sample": 16,
+          "rows": 102544
+        }
+      ]
+    },
+    "file_count": 102544,
+    "duration_hours": 130.6548,
+    "train_files": 71792,
+    "dev_files": 15376,
+    "test_files": 15376,
+    "test_speakers": 3,
+    "speaker_disjoint": true,
+    "text_template_disjoint": false,
+    "test_transcripts_seen_in_train": "100% of dev/test rows; 206 unique test templates are represented in train",
+    "synthetic_files": 132,
+    "synthetic_test_files": 2,
+    "publication_metric_source": "Draft_Paper/02_Evidence/unified_benchmark_rescore/unified_nine_model_metrics.json",
+    "uniform_normalizer_id": "nssid_project_uniform_v1",
+    "uniform_metric_definition": "corpus WER/CER = summed per-utterance exact Levenshtein edit distance divided by total canonical reference words/characters; characters include normalized inter-word spaces",
+    "models": [
+      {
+        "model_id": "m07-bilstm-ctc",
+        "family": "Bi-LSTM CTC",
+        "normalizer_id": "nssid_project_uniform_v1",
+        "n_test_items": 15376,
+        "reference_words": 135911,
+        "word_errors": 5453,
+        "wer": 0.04012184444231887,
+        "reference_characters": 942599,
+        "character_errors": 12460,
+        "cer": 0.013218770654329148,
+        "parameters": 32825659,
+        "predictions_sha256": "82d10f3efa5df6e69427bb572644e6806b321c35b3f8c7f939da4520aba0a403",
+        "metric_status": "uniform diagnostic rescore of existing predictions"
+      },
+      {
+        "model_id": "m06-conformer-ctc",
+        "family": "Conformer-CTC",
+        "normalizer_id": "nssid_project_uniform_v1",
+        "n_test_items": 15376,
+        "reference_words": 135911,
+        "word_errors": 1623,
+        "wer": 0.011941638277990744,
+        "reference_characters": 942599,
+        "character_errors": 4072,
+        "cer": 0.004319970634384293,
+        "parameters": 11048219,
+        "predictions_sha256": "783e5b66ec74c067d98618c09f98161987d30f33d2e8d6b482eb094a4fdb16bd",
+        "metric_status": "uniform diagnostic rescore of existing predictions"
+      },
+      {
+        "model_id": "m09-dnn-hmm",
+        "family": "DNN-HMM (hybrid)",
+        "normalizer_id": "nssid_project_uniform_v1",
+        "n_test_items": 15376,
+        "reference_words": 135911,
+        "word_errors": 128984,
+        "wer": 0.9490328229503131,
+        "reference_characters": 942599,
+        "character_errors": 796444,
+        "cer": 0.8449446689419361,
+        "parameters": 1448336,
+        "predictions_sha256": "64adc4ddbcc5f2c92f9c692108f8ffa57ea0d00459a9becb50a95cc4646b9b12",
+        "metric_status": "uniform diagnostic rescore of existing predictions"
+      },
+      {
+        "model_id": "m10-gmm-hmm-dnn",
+        "family": "GMM-HMM-DNN (3-stage)",
+        "normalizer_id": "nssid_project_uniform_v1",
+        "n_test_items": 15376,
+        "reference_words": 135911,
+        "word_errors": 129865,
+        "wer": 0.9555150061437264,
+        "reference_characters": 942599,
+        "character_errors": 802313,
+        "cer": 0.8511710706249423,
+        "parameters": 1448336,
+        "predictions_sha256": "40b9f123e856536c9738605d8a3469314fd3b46710b7ec4e8c7e93a239619a2f",
+        "metric_status": "uniform diagnostic rescore of existing predictions"
+      },
+      {
+        "model_id": "m08-hmm-gmm",
+        "family": "HMM-GMM (classical)",
+        "normalizer_id": "nssid_project_uniform_v1",
+        "n_test_items": 15376,
+        "reference_words": 135911,
+        "word_errors": 130428,
+        "wer": 0.9596574228723208,
+        "reference_characters": 942599,
+        "character_errors": 678859,
+        "cer": 0.7201991514949624,
+        "parameters": 511005,
+        "predictions_sha256": "60e4e3755af82bc6c43b65bedeca9005285a1bb6dad49172da18dd70cf1f4265",
+        "metric_status": "uniform diagnostic rescore of existing predictions"
+      },
+      {
+        "model_id": "m11-vanilla-transformer",
+        "family": "Vanilla Transformer",
+        "normalizer_id": "nssid_project_uniform_v1",
+        "n_test_items": 15376,
+        "reference_words": 135911,
+        "word_errors": 5938,
+        "wer": 0.04369035618897661,
+        "reference_characters": 942599,
+        "character_errors": 30827,
+        "cer": 0.03270425705947068,
+        "parameters": 4212688,
+        "predictions_sha256": "491c922031c6f1a1729d3e1942b391774406e77aad5d0ec2cf41d28999d392b2",
+        "metric_status": "uniform diagnostic rescore of existing predictions"
+      },
+      {
+        "model_id": "m12-vit-modified-ID",
+        "family": "ViT-modified-ID",
+        "normalizer_id": "nssid_project_uniform_v1",
+        "n_test_items": 15376,
+        "reference_words": 135911,
+        "word_errors": 2394,
+        "wer": 0.017614468291749747,
+        "reference_characters": 942599,
+        "character_errors": 12234,
+        "cer": 0.012979008040534734,
+        "parameters": 4353248,
+        "predictions_sha256": "59cb20fe4aa375ecfd113ed0be3c34c238d1dc853e0aafcee548e3d1f58838d9",
+        "metric_status": "uniform diagnostic rescore of existing predictions"
+      },
+      {
+        "model_id": "m13-wav2letter",
+        "family": "Wav2Letter-style CNN-CTC",
+        "normalizer_id": "nssid_project_uniform_v1",
+        "n_test_items": 15376,
+        "reference_words": 135911,
+        "word_errors": 12074,
+        "wer": 0.08883754810133102,
+        "reference_characters": 942599,
+        "character_errors": 48578,
+        "cer": 0.05153623120754425,
+        "parameters": 24840900,
+        "predictions_sha256": "f926936d94d905300a52af941f280c6c99493094376f48053595f972421649ae",
+        "metric_status": "uniform diagnostic rescore of existing predictions"
+      },
+      {
+        "model_id": "m02b-whisper-small-ft",
+        "family": "Whisper-small FT",
+        "normalizer_id": "nssid_project_uniform_v1",
+        "n_test_items": 15376,
+        "reference_words": 135911,
+        "word_errors": 253,
+        "wer": 0.001861512313204965,
+        "reference_characters": 942599,
+        "character_errors": 1321,
+        "cer": 0.001401444304523981,
+        "parameters": 241734912,
+        "predictions_sha256": "30ed614cf6d5040d46d247b92369585da3db74afdd85907bbf88080da3cc5090",
+        "metric_status": "uniform diagnostic rescore of existing predictions"
+      }
+    ],
+    "models_run_native": [
+      {
+        "rank": 1,
+        "model_id": "m02b-whisper-small-ft",
+        "family": "Whisper-small FT (Radford et al. 2023; arXiv 2022)",
+        "wer": 0.008523540683204734,
+        "cer": 0.0018570295438410948,
+        "training_time_hours": 4.808056,
+        "inference_time_sec": 4363.1,
+        "parameters": 241734912,
+        "hardware_label": "Google Colab Linux, NVIDIA A100-SXM4-40GB GPU",
+        "metric_status": "run-native; non-identical reference normalization/denominators; not publication-comparable"
+      },
+      {
+        "rank": 2,
+        "model_id": "m06-conformer-ctc",
+        "family": "Conformer-CTC (Gulati 2020)",
+        "wer": 0.011941638277990744,
+        "cer": 0.004322092427426721,
+        "training_time_hours": 6.530278,
+        "inference_time_sec": 52.45,
+        "parameters": 11048219,
+        "hardware_label": "Local Linux laptop, NVIDIA GeForce RTX 4060 Laptop GPU, 8 GB VRAM",
+        "metric_status": "run-native; non-identical reference normalization/denominators; not publication-comparable"
+      },
+      {
+        "rank": 3,
+        "model_id": "m12-vit-modified-ID",
+        "family": "ViT-modified-ID (proposed in this work)",
+        "wer": 0.01776655336206327,
+        "cer": 0.013009616165317267,
+        "training_time_hours": 3.749444,
+        "inference_time_sec": 1304.3,
+        "parameters": 4353248,
+        "hardware_label": "Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU.",
+        "metric_status": "run-native; non-identical reference normalization/denominators; not publication-comparable"
+      },
+      {
+        "rank": 4,
+        "model_id": "m07-bilstm-ctc",
+        "family": "Bi-LSTM CTC",
+        "wer": 0.04012184444231887,
+        "cer": 0.013216648861286718,
+        "training_time_hours": 7.106389,
+        "inference_time_sec": 70.43,
+        "parameters": 32825659,
+        "hardware_label": "Local Linux laptop, NVIDIA GeForce RTX 4060 Laptop GPU, 8 GB VRAM",
+        "metric_status": "run-native; non-identical reference normalization/denominators; not publication-comparable"
+      },
+      {
+        "rank": 5,
+        "model_id": "m11-vanilla-transformer",
+        "family": "Vanilla Transformer (Vaswani 2017)",
+        "wer": 0.043931841040738266,
+        "cer": 0.0326697714313076,
+        "training_time_hours": 2.648056,
+        "inference_time_sec": 1293.28,
+        "parameters": 4212688,
+        "hardware_label": "Training log records `Using device: cuda`; exact training OS/GPU model not recorded. Full-test evaluation metadata records WSL2 Linux + RTX 4060 Laptop GPU.",
+        "metric_status": "run-native; non-identical reference normalization/denominators; not publication-comparable"
+      },
+      {
+        "rank": 6,
+        "model_id": "m13-wav2letter",
+        "family": "Wav2Letter-style CNN-CTC (Collobert 2016)",
+        "wer": 0.09292935225495738,
+        "cer": 0.05196455821641889,
+        "training_time_hours": 4.173056,
+        "inference_time_sec": 22.87,
+        "parameters": 24840900,
+        "hardware_label": "WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata",
+        "metric_status": "run-native; non-identical reference normalization/denominators; not publication-comparable"
+      },
+      {
+        "rank": 7,
+        "model_id": "m08-hmm-gmm",
+        "family": "HMM-GMM (classical)",
+        "wer": 0.9633216113236083,
+        "cer": 0.7204618840522383,
+        "training_time_hours": 3.286389,
+        "inference_time_sec": 3277.3,
+        "parameters": 511005,
+        "hardware_label": "WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata",
+        "metric_status": "run-native; non-identical reference normalization/denominators; not publication-comparable"
+      },
+      {
+        "rank": 8,
+        "model_id": "m10-gmm-hmm-dnn",
+        "family": "GMM-HMM-DNN (3-stage)",
+        "wer": 0.9703327925057448,
+        "cer": 0.8515677534730824,
+        "training_time_hours": 6.486111,
+        "inference_time_sec": 18.86,
+        "parameters": 1448336,
+        "hardware_label": "WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata",
+        "metric_status": "run-native; non-identical reference normalization/denominators; not publication-comparable"
+      },
+      {
+        "rank": 9,
+        "model_id": "m09-dnn-hmm",
+        "family": "DNN-HMM (hybrid)",
+        "wer": 0.9708026517682126,
+        "cer": 0.8437097287945755,
+        "training_time_hours": 3.203056,
+        "inference_time_sec": 19.75,
+        "parameters": 1448336,
+        "hardware_label": "WSL2 Linux, NVIDIA GeForce RTX 4060 Laptop GPU; VRAM not recorded in run metadata",
+        "metric_status": "run-native; non-identical reference normalization/denominators; not publication-comparable"
+      }
+    ],
+    "run_native_metric_comparability": "Run-native WER/CER used non-identical reference normalizations and denominators across recipes; the historical run-native ranking is not comparable and must not be used for publication claims.",
+    "historical_run_native_best_model": {
+      "rank": 1,
+      "model_id": "m02b-whisper-small-ft",
+      "family": "Whisper-small FT (Radford et al. 2023; arXiv 2022)",
+      "wer": 0.008523540683204734,
+      "cer": 0.0018570295438410948,
+      "n_params": 241734912,
+      "training_time_hhmmss": "04:48:29",
+      "inference_time_sec": 4363.1,
+      "n_test_samples": 15376,
+      "decoding_method": "greedy_ar",
+      "metric_status": "historical run-native interpretation only; do not use as publication ranking"
+    },
+    "historical_run_native_novel_model": {
+      "rank": 3,
+      "model_id": "m12-vit-modified-ID",
+      "family": "ViT-modified-ID (proposed in this work)",
+      "wer": 0.01776655336206327,
+      "cer": 0.013009616165317267,
+      "n_params": 4353248,
+      "training_time_hhmmss": "03:44:58",
+      "inference_time_sec": 1304.3,
+      "n_test_samples": 15376,
+      "decoding_method": "greedy_ar_with_ctc_aux",
+      "metric_status": "historical run-native interpretation only; do not use as publication ranking"
+    },
+    "source_artifacts": [
+      "metadata/dataset_metadata_clean.csv",
+      "splits/train_clean.tsv",
+      "splits/dev_clean.tsv",
+      "splits/test_clean.tsv",
+      "Report_paper_9model/benchmark/benchmark.json",
+      "Report_paper_9model/data/paper_9model_interpretation_metrics.json",
+      "Draft_Paper/02_Evidence/unified_benchmark_rescore/unified_nine_model_metrics.csv",
+      "Draft_Paper/02_Evidence/unified_benchmark_rescore/unified_nine_model_metrics.json"
+    ]
+  },
+  "scope_bridge": {
+    "rows_present_in_release_target_but_not_benchmark": 1956,
+    "reason": "The frozen benchmark subset excluded 1,956 rows with blank transcript values in the local metadata snapshot at benchmark freeze time. It therefore contains 209 distinct (category, sentence_id) pairs. The repaired private HF staging metadata retains those rows and four low-count replacement sentence IDs, yielding 213 distinct (category, sentence_id) pairs without changing audio shards.",
+    "publication_rule": "Report release-target descriptive statistics and 213 distinct (category, sentence_id) pairs on 104,500 rows; report the 209-pair nine-model benchmark only on the frozen 102,544-row subset. Do not imply public accessibility until ethics, consent, rights, licence, and DOI gates pass."
+  },
+  "reproducibility": {
+    "hf_audio_shards": 11,
+    "nine_model_artifacts_present": 9,
+    "m12_colab_smoke_returncode": 0,
+    "m12_colab_smoke_gpu": "NVIDIA L4",
+    "m12_colab_smoke_train_samples": 256,
+    "m12_colab_smoke_validation_samples": 64,
+    "m12_colab_smoke_scope": "one-epoch execution smoke test only; not a performance result",
+    "public_figure_audits": [
+      "reports/elsevier_figure_readability_revision_20260619.md",
+      "reports/public_artifact_anonymization_cleanup_20260619.md"
+    ]
+  },
+  "sampled_diagnostics": {
+    "audio_quality_rows": 297,
+    "quality_metrics": [
+      "dynamic range",
+      "silence ratio",
+      "spectral centroid"
+    ],
+    "spectrogram_categories": 11,
+    "scope_warning": "Do not describe the n=297 sample as a full 104,500-file quality scan."
+  },
+  "deployment_ood_diagnostics": {
+    "recordings": 38,
+    "distinct_commands": 10,
+    "robot_default_agreement": 0.2894736842105263,
+    "robot_no_preemphasis_agreement": 0.7105263157894737,
+    "paper_default_agreement": 0.02631578947368421,
+    "paper_no_preemphasis_agreement": 0.07894736842105263,
+    "status": "development-only, Whisper-inferred references, reused recordings",
+    "publication_rule": "Use only to motivate a generalization limitation or future validation protocol; do not report as field accuracy.",
+    "source_artifact": "deploy_robot_asr/deploy_dual_model_web/ANALYSIS_LIVE_OOD_20260714.md"
+  },
+  "privacy": {
+    "human_public_labels": "M1..M12 and F1..F8",
+    "synthetic_public_labels": "Ms1..Ms9 and Fs1..Fs9",
+    "private_crosswalk_location": "outside Git/HF; never include in manuscript package",
+    "public_name_leak_audit_errors": 0,
+    "synthetic_voice_target_gender_mismatch_files": 2
+  },
+  "material_gaps": [
+    "Final dataset DOI or another persistent archive DOI is not available.",
+    "HF repository is private; Data in Brief accessibility must be resolved before submission.",
+    "Dataset licence is recorded only as 'other'; exact reuse terms require author/legal confirmation.",
+    "Ethics committee name, approval/reference number, and approval date are unverified.",
+    "Written consent scope for public release of identifiable voice biometrics is unverified.",
+    "Participant age range conflicts across old drafts and has no authoritative public-safe source.",
+    "The claim that every speaker read every sentence exactly 25 times must be revised: four categories contain paired low-count replacement sentence IDs, and the release-target inventory has 213 rather than 209 distinct (category, sentence_id) pairs.",
+    "Regional-origin/dialect claims require a consent/privacy decision and a verified public-safe table.",
+    "Recording-room dimensions conflict between narrative text and embedded diagrams.",
+    "Microphone model, acquisition distance, Audacity version, and room protocol require author confirmation against primary records.",
+    "Corresponding-author email, CRediT roles, funding statement, and competing-interest confirmation require author approval.",
+    "Two synthetic female-voice recordings target a male public speaker label; authors must decide whether to regenerate, exclude, or retain them with an explicit mismatch flag.",
+    "Prior-publication overlap with the related 2026 article and third-party redistribution rights require verification.",
+    "A whole-package release leakage audit and lifecycle governance record are not yet available.",
+    "The transcript-repair algorithm, immutable repair manifest, and audio-text validation audit are not yet publication-attached.",
+    "The exact benchmark template-overlap audit and the 297-file sampling design must be attached before final sign-off."
+  ]
+}

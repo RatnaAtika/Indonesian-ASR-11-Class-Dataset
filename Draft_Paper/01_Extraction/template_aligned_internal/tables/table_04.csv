@@ -1,0 +1,12 @@
+Category,Files,Duration (h),Mean duration (s),Synthetic,Category–ID pairs,ID note
+Clarification,9500,13.8089,5.2328,9,19,Intentional original-ID gap: 09; do not renumber
+Conditional,9500,15.9704,6.0519,16,20,"Partial replacement pair: 19=490 rows, 20=10 rows; stable original IDs retained"
+Confirmation,9500,14.7951,5.6065,29,20,"Partial replacement pair: 05=483 rows, 20=17 rows; stable original IDs retained"
+Declarative,9500,10.6981,4.054,2,19,Intentional original-ID gap: 06; do not renumber
+Exclamatory,9500,9.0423,3.4265,3,19,Intentional original-ID gap: 20; do not renumber
+Imperative,9500,7.8119,2.9603,15,19,Intentional original-ID gap: 20; do not renumber
+Interrogative,9500,11.8858,4.5041,10,20,"Partial replacement pair: 17=494 rows, 20=6 rows; stable original IDs retained"
+Negation,9500,9.4318,3.5742,11,19,Intentional original-ID gap: 08; do not renumber
+Persuasive,9500,17.2061,6.5202,16,20,"Partial replacement pair: 17=489 rows, 20=11 rows; stable original IDs retained"
+Rhetorical,9500,10.4137,3.9463,17,19,Intentional original-ID gap: 15; do not renumber
+Scheduling,9500,13.1122,4.9688,4,19,Intentional original-ID gap: 20; do not renumber

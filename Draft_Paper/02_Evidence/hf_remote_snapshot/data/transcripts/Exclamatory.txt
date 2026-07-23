@@ -1,0 +1,19 @@
+01|Wah, luar biasa kamu hebat sekali!
+02|Hebat, kamu berhasil lulus dengan predikat cumlaude!
+03|Selamat, kamu diterima di universitas impianmu!
+04|Gawat, laptopku mati mendadak!
+05|Wow, presentasi kelompokmu sangat memukau!
+06|Wahai generasi muda, tuntutlah ilmu setinggi langit!
+07|Ayo, tingkatkan kualitas pendidikan di daerah kita!
+08|Syukurlah, semua tugas akhirnya selesai juga!
+09|Hebat, kamu berhasil menyelesaikan semuanya sendiri!
+10|Ayo, kita ciptakan suasana belajar yang menyenangkan!
+11|Ayo, kita berangkat sekarang sebelum terlambat!
+12|Aduh, kenapa kamu nggak bilang dari tadi?
+13|Ih, lucunya kucing itu!
+14|Astaga, jalanan macet banget hari ini!
+15|Luar biasa, hasil penelitian ini sangat bermanfaat!
+16|Wah, ternyata belajar bisa seseru ini ya!
+17|Aduh, kenapa lupa bawa laporan praktikum?
+18|Selamat, kalian berhasil memenangkan kompetisi antar fakultas!
+19|Ya ampun, masih banyak mahasiswa yang belum paham konsep dasar ini!

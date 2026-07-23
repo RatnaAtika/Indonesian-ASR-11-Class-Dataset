@@ -1,0 +1,59 @@
+{
+  "status": "internal_not_for_submission",
+  "figure_1_scope": "construction_and_scope_bridge",
+  "figure_2_scope": "release_target",
+  "figure_3_scope": "release_target",
+  "figure_4_status": "blocked_pending_sampling_provenance",
+  "script": "Draft_Paper/99_Admin/build_release_target_figures.py",
+  "script_sha256": "bb1527b9428e1c8427f85e38b194b60723d85150e65845a3c04f46c095ad045d",
+  "sources": [
+    {
+      "path": "Report_paper_9model/hf_dataset_information_public/per_category_public.csv",
+      "sha256": "c19418fcdf04709f0c08b47fbf4f602aeba4c3f95713eeea1cb9bdc6d8720ad0"
+    },
+    {
+      "path": "Report_paper_9model/hf_dataset_information_public/per_split_public.csv",
+      "sha256": "b6904b103ea6adcf40060c4a4debed81cca1fcd6a880b116d1719453c0747f69"
+    },
+    {
+      "path": "Report_paper_9model/hf_dataset_information_public/per_speaker_public.csv",
+      "sha256": "d6caefe5850e844a16cd68d33e87078f2b0974b5d216ff6b87e7bf0008bc402b"
+    },
+    {
+      "path": "Draft_Paper/02_Evidence/evidence_registry.json",
+      "sha256": "8625a01b68436bcffecc7a6163d6809b3b182830d28e3c1e1335119dd7e62254"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "Figure_1_construction_package_flow.png",
+      "sha256": "8b20005ab7998d364c44607e85bed634710607b3f647787351bb4a9a2620f56d",
+      "bytes": 284911
+    },
+    {
+      "path": "Figure_1_construction_package_flow.svg",
+      "sha256": "cce7367feb136299f65dd8f1a28b9ab07557fa23a443e398e5dd3927d282aa28",
+      "bytes": 8650
+    },
+    {
+      "path": "Figure_2_release_target_duration_by_category.png",
+      "sha256": "0b8f3e5268efd04ab30f68c5769ae819a2283c85096b510514718196a68d5402",
+      "bytes": 210385
+    },
+    {
+      "path": "Figure_2_release_target_duration_by_category.svg",
+      "sha256": "e16add931ea2f06a8afff6382feb8a8b6c3ee05f36f1dbfaf218672f9081302c",
+      "bytes": 11690
+    },
+    {
+      "path": "Figure_3_release_target_split_source_composition.png",
+      "sha256": "4f0b3cf7cf52ec43880dcdaf0b111ba29a4160bf555a42cbca39eb1862641a65",
+      "bytes": 191856
+    },
+    {
+      "path": "Figure_3_release_target_split_source_composition.svg",
+      "sha256": "db359cf14e92dd724fd7d92faffbe4337ac46305300332cda5f61fc92100b7f0",
+      "bytes": 10395
+    }
+  ]
+}

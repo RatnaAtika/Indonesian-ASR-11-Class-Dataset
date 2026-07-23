@@ -1,0 +1,20 @@
+01|Saya lebih suka makanan pedas, jadi tolong rekomendasikan makanan apa yang sesuai !
+02|Coba deh, ikut program magang di perusahaan ini, banyak pengalaman berharga yang bisa kamu pelajari.
+03|Jika kamu merasa lelah, coba luangkan waktu sebentar untuk beristirahat, agar bisa lebih segar.
+04|Jika kamu sedang mencari cara untuk meningkatkan produktivitas, cobalah manajemen waktu yang lebih efektif.
+05|Jika kamu rajin belajar, kamu akan merasakan manfaatnya di ujian dan dalam kehidupan sehari-hari
+06|Bergabunglah dengan kegiatan sosial di sekitar kampus, itu bisa membuka banyak peluang baru.
+07|Mari kita dukung setiap program pendidikan yang ada, agar kualitas sekolah kita semakin meningkat.
+08|Bergabunglah dalam program penghijauan kota, mari kita buat Palembang semakin hijau dan nyaman untuk ditinggali!
+09|Jika kamu ingin merasakan suasana kota yang penuh sejarah, Palembang adalah tempat yang tepat untuk dikunjungi.
+10|Jika kamu ingin bekerja lebih cepat dan akurat, gunakan perangkat lunak yang sesuai dengan kebutuhanmu.
+11|Jangan ragu untuk bertanya pada guru jika ada yang tidak kamu mengerti, itu adalah langkah menuju pemahaman yang lebih baik
+12|Ayo, tanamkan dalam diri kita bahwa belajar itu menyenangkan, dan setiap tantangan adalah kesempatan untuk tumbuh.
+13|Ayo, maksimalkan waktu praktikummu di laboratorium ini untuk menghasilkan temuan yang bermanfaat!
+14|Jika kita semua bekerja sama untuk menciptakan lingkungan belajar yang positif, hasil yang kita capai akan lebih memuaskan.
+15|Jika kamu ingin mendalami materi lebih dalam, coba lakukan percobaan di laboratorium untuk menguji teori yang telah dipelajari.
+16|Jika kita semua menerapkan prosedur yang benar di laboratorium, kita akan meminimalkan kesalahan dan mendapatkan data yang lebih valid.
+17|Mari kita manfaatkan laboratorium sebagai sarana untuk menguji hipotesis dan memperdalam pengetahuan kita di bidang sains dan teknologi.
+18|Jika kita saling membantu dalam tugas rumah, semua pekerjaan akan terasa lebih ringan dan menyenangkan.
+19|Jika kita selalu mendukung satu sama lain, keluarga kita akan menjadi tempat yang penuh cinta dan kebahagiaan.
+20|Jangan biarkan kesibukan membuat kita lupa akan pentingnya waktu bersama keluarga.

@@ -1,0 +1,10 @@
+Rank,Model,WER,CER
+1,Whisper-small FT,0.0085,0.0019
+2,Conformer-CTC,0.0119,0.0043
+3,"ViT-modified-ID, proposed model",0.0178,0.013
+4,Bi-LSTM CTC,0.0401,0.0132
+5,Vanilla Transformer,0.0439,0.0327
+6,Wav2Letter-style CNN-CTC,0.0929,0.052
+7,HMM-GMM classical,0.9633,0.7205
+8,GMM-HMM-DNN,0.9703,0.8516
+9,DNN-HMM hybrid,0.9708,0.8437

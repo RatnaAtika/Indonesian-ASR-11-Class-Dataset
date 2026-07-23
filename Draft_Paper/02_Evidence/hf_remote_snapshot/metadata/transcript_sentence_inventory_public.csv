@@ -1,0 +1,12 @@
+category,available_sentence_count,available_sentence_ids,intentionally_absent_sentence_ids,metadata_audio_rows,note
+Clarification,19,01 02 03 04 05 06 07 08 10 11 12 13 14 15 16 17 18 19 20,09,9500,Sentence IDs preserve the original numbering scheme; gaps are expected and do not indicate missing uploaded audio.
+Conditional,20,01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20,none,9500,Complete 01-20 sentence IDs are present for this category.
+Confirmation,20,01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20,none,9500,Complete 01-20 sentence IDs are present for this category.
+Declarative,19,01 02 03 04 05 07 08 09 10 11 12 13 14 15 16 17 18 19 20,06,9500,Sentence IDs preserve the original numbering scheme; gaps are expected and do not indicate missing uploaded audio.
+Exclamatory,19,01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19,20,9500,Sentence IDs preserve the original numbering scheme; gaps are expected and do not indicate missing uploaded audio.
+Imperative,19,01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19,20,9500,Sentence IDs preserve the original numbering scheme; gaps are expected and do not indicate missing uploaded audio.
+Interrogative,20,01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20,none,9500,Complete 01-20 sentence IDs are present for this category.
+Negation,19,01 02 03 04 05 06 07 09 10 11 12 13 14 15 16 17 18 19 20,08,9500,Sentence IDs preserve the original numbering scheme; gaps are expected and do not indicate missing uploaded audio.
+Persuasive,20,01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20,none,9500,Complete 01-20 sentence IDs are present for this category.
+Rhetorical,19,01 02 03 04 05 06 07 08 09 10 11 12 13 14 16 17 18 19 20,15,9500,Sentence IDs preserve the original numbering scheme; gaps are expected and do not indicate missing uploaded audio.
+Scheduling,19,01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19,20,9500,Sentence IDs preserve the original numbering scheme; gaps are expected and do not indicate missing uploaded audio.

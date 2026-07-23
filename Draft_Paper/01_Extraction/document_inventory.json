@@ -1,0 +1,152 @@
+{
+  "source_file": "Draft Jurnal Data In Brief NSS-ID_ver3.docx",
+  "source_path": "Draft_Paper/00_Source/Draft Jurnal Data In Brief NSS-ID_ver3.docx",
+  "source_bytes": 1614117,
+  "source_sha256": "17214b820dc3b70277541eeba1ca070de1cd2bd538e11ac66896c5957092bd0c",
+  "core_properties": {
+    "title": "",
+    "author": "user",
+    "last_modified_by": "user",
+    "created": "2026-07-22T02:40:00+00:00",
+    "modified": "2026-07-22T08:26:00+00:00"
+  },
+  "paragraph_count": 63,
+  "nonempty_paragraph_count": 34,
+  "word_count_approx": 2326,
+  "character_count": 16421,
+  "table_count": 2,
+  "table_inventory": [
+    {
+      "table": 1,
+      "rows": 9,
+      "columns": 2,
+      "file": "tables/table_01.csv"
+    },
+    {
+      "table": 2,
+      "rows": 10,
+      "columns": 4,
+      "file": "tables/table_02.csv"
+    }
+  ],
+  "inline_shape_count": 16,
+  "media_count": 15,
+  "media_inventory": [
+    {
+      "file": "image1.png",
+      "bytes": 55996,
+      "sha256": "bda86a9509b82a7b23c95298dc8491aba8c2f2e03d6afec262234086cbcaa394"
+    },
+    {
+      "file": "image2.png",
+      "bytes": 36490,
+      "sha256": "010ebc2b51859de1a421fa96228a5c6ca2a43090bace54b5b5f1ccfd01502765"
+    },
+    {
+      "file": "image3.png",
+      "bytes": 31535,
+      "sha256": "1b1c813f3a97549e38100c6009f55748b836dbcdcacb5e709ef7de35972b28e6"
+    },
+    {
+      "file": "image4.png",
+      "bytes": 53803,
+      "sha256": "65c263404108d2aff13ed98bff51dc6d2f02ecf289b72434d71b9723ad390ef2"
+    },
+    {
+      "file": "image5.png",
+      "bytes": 23508,
+      "sha256": "a7f50db10bfc960639079b75a0a7aa727cb2bceb00c79c6c7295801ec67ad0c5"
+    },
+    {
+      "file": "image6.png",
+      "bytes": 27806,
+      "sha256": "4fb3b9e221f35f9f7836c0594b6d94a94a59eccecd1ab24faae2200185463b87"
+    },
+    {
+      "file": "image7.png",
+      "bytes": 37915,
+      "sha256": "3ea401090a4633702cf116a7abd37e47fcdf4e04fcbd6ccca498c4dc65b857d6"
+    },
+    {
+      "file": "image8.png",
+      "bytes": 22184,
+      "sha256": "71c6f6cbc1b16b80aba552fd9a6710b7eb91d7e894a0d71b15785b5db1b03d31"
+    },
+    {
+      "file": "image12.png",
+      "bytes": 68078,
+      "sha256": "4036ba515f50c107e632429ae3d4fb4bf8a4b3343294290d469f1fdabcaa8e68"
+    },
+    {
+      "file": "image13.jpeg",
+      "bytes": 123902,
+      "sha256": "569ad93c2a9568bc539e13fb1f6ec8468e19162090d3d36dfaa6d4f70219331f"
+    },
+    {
+      "file": "image14.png",
+      "bytes": 101562,
+      "sha256": "8725eef7ed992bac28d10100a96ccbb1c986d8f27d87f58d4310689bcf0e4473"
+    },
+    {
+      "file": "image15.png",
+      "bytes": 158644,
+      "sha256": "8c4c2275f7987886d4abd0e64559fcd7cd24c66c14fbe364d439e39192e019e8"
+    },
+    {
+      "file": "image9.png",
+      "bytes": 37452,
+      "sha256": "c58dfbfd1cba50c3b97059b38d514cecdadc4d2e64d80dbea228627f0d9691c5"
+    },
+    {
+      "file": "image11.png",
+      "bytes": 776933,
+      "sha256": "36e7c63e8b0661dd5a37e2a3c31c87850e2a64a944462aa23013e340972fe9c7"
+    },
+    {
+      "file": "image10.png",
+      "bytes": 13726,
+      "sha256": "476dc8d826b6983f8b266a90197631a435c93190c9e485b03786d708ec3558eb"
+    }
+  ],
+  "headings_detected": [
+    {
+      "text": "1. Value of the Data",
+      "style": "Normal"
+    },
+    {
+      "text": "2. Background",
+      "style": "Normal"
+    },
+    {
+      "text": "3. Data Description",
+      "style": "Normal"
+    },
+    {
+      "text": "4. Experimental Design, Materials and Methods",
+      "style": "Normal"
+    },
+    {
+      "text": "4.1 Proses Pengambilan Data",
+      "style": "Normal"
+    },
+    {
+      "text": "4.2 Penerapan Speech to Text",
+      "style": "Normal"
+    }
+  ],
+  "style_counts": {
+    "Normal": 44,
+    "Normal (Web)": 13,
+    "List Paragraph": 6
+  },
+  "section_count": 1,
+  "archive_metrics": {
+    "tracked_insertions": 0,
+    "tracked_deletions": 0,
+    "hyperlinks": 0,
+    "field_codes": 2,
+    "comments_part": false,
+    "footnotes_part": true,
+    "endnotes_part": true
+  }
+}

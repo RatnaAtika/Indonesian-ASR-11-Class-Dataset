@@ -1,0 +1,56 @@
+{
+  "status": "PASS_INTERNAL_ONLY",
+  "submission_authorized": false,
+  "public_release_authorized": false,
+  "checks": [
+    {
+      "id": "package_manifest",
+      "status": "PASS",
+      "detail": "42 listed files match SHA-256 and byte counts; G0\u2013G5 NO-GO and G6 unassessed."
+    },
+    {
+      "id": "material_gaps",
+      "status": "PASS",
+      "detail": "All 33 canonical tokens occur in Markdown, DOCX, and the author questionnaire; the methods matrix and structurally valid claim flow use controlled evidence and canonical closure language."
+    },
+    {
+      "id": "quantitative_consistency",
+      "status": "PASS",
+      "detail": "Release target, split/source composition, 213-pair total, frozen 102,544/209 scope, and disclosed rounded-hour difference reconcile."
+    },
+    {
+      "id": "benchmark_comparability",
+      "status": "PASS",
+      "detail": "Nine rows use one 15,376-item normalizer and shared 135,911-word/942,599-character denominators; Supplementary Table S6 has no rank or timing."
+    },
+    {
+      "id": "citations",
+      "status": "PASS",
+      "detail": "Sixteen source-verified references are numbered and first cited in order; the related-article DOI is present."
+    },
+    {
+      "id": "privacy_secrets_file_scope",
+      "status": "PASS",
+      "detail": "No targeted secret/path pattern, prohibited anonymity wording, out-of-range public ID, private-audio/model artifact, or forbidden file type was found."
+    },
+    {
+      "id": "docx_xlsx_integrity",
+      "status": "PASS",
+      "detail": "Official-template DOCX has the exact 12-heading v.19 sequence, 6 tables (seven-row Specifications plus Tables 1\u20135), 3 body figures, retained header artwork, clean properties, and no comments/protection/external/macro/tracked-change parts; XLSX has 7 marked sheets including Supplementary Table S6."
+    },
+    {
+      "id": "figure_integrity",
+      "status": "PASS",
+      "detail": "Three 600-dpi PNG/SVG pairs match their figure manifest, contain no EXIF, remain visibly internal, and Figure 4 stays blocked."
+    }
+  ],
+  "residual_gate_status": {
+    "G0": "NO-GO",
+    "G1": "NO-GO",
+    "G2": "NO-GO",
+    "G3": "NO-GO",
+    "G4": "NO-GO",
+    "G5": "NO-GO",
+    "G6": "UNASSESSED"
+  }
+}
