@@ -1,0 +1,19 @@
+01|Saya tidak suka makan pedas
+02|Tolong jangan ganggu saya, saya sedang belajar
+03|Saya tidak membutuhkan bantuan saat ini.
+04|Saya belum menyelesaikan laporan praktikum
+05|Rapat koordinasi antarinstansi tidak dilaksanakan minggu ini.
+06|Pengumuman kelulusan belum diumumkan secara resmi
+07|Dia tidak memahami materi tentang sistem kontrol.
+09|Kita tidak bisa mengabaikan masalah ini
+10|Seminar nasional itu bukan bagian dari mata kuliah wajib.
+11|Mahasiswa baru tidak diwajibkan mengenakan jas almamater setiap hari
+12|Anggaran untuk pendidikan bukan hanya untuk pembangunan fisik sekolah.
+13|Formulir KRS belum dikembalikan ke bagian administrasi.
+14|Pemerintah tidak akan menghentikan upaya untuk mengurangi pengangguran.
+15|Kegiatan himpunan mahasiswa tidak mendapatkan izin dari pihak kampus
+16|Kegiatan musyawarah desa tidak dilakukan secara terbuka.
+17|Tugas kelompok ini bukan tanggung jawab saya sepenuhnya.
+18|Mahasiswa tidak diperbolehkan membawa kendaraan ke area fakultas.
+19|Pejabat tersebut bukan bagian dari kementerian yang bersangkutan
+20|Film itu tidak menarik menurutku.

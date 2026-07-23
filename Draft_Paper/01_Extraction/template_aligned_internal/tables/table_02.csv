@@ -1,0 +1,12 @@
+Component,Path / member,Format,Rows / files,Package state
+Category audio shards,data/audio_shards/by_category/*.tar,11 TAR archives containing PCM WAV files,11 shards / 104500 WAV files,Present in private staging; release not authorized
+Recording-level metadata,metadata/dataset_metadata_public.csv,CSV,104500,Present in private staging; repaired metadata has zero blank transcripts
+Category transcript lists,data/transcripts/*.txt,UTF-8 text,"11 files / 213 distinct (category, sentence_id) pairs",Present in private staging; numbering gaps are intentional
+Sentence-ID inventory,metadata/transcript_sentence_inventory_public.csv,CSV,11 category rows,Present in private staging
+Public identifier schema,metadata/speaker_labels/hf_public_metadata_schema.md,Markdown,Field dictionary,Present; private identity crosswalk excluded
+Split manifests,splits/speaker_split_assignment_public.csv; splits/split_summary_public.json; final row manifests [pending],CSV/JSON/TSV,20 human public IDs; 104500 row assignments in final manifest [pending],Summary present; publication-grade generator and immutable row manifests pending
+Synthetic repair manifest,paper/dataset_information/synthetic_repair_rows_public.csv,CSV,132 rows,Present; disposition of two source/target mismatches pending
+Descriptive source values,paper/dataset_information/*.csv; paper/dataset_information/*.json,CSV/JSON,"Category, split, speaker, synthetic, lexical, and 297-file sampled diagnostic values",Partly present; regenerated main-figure source package pending
+Frozen benchmark artifacts,Draft_Paper/02_Evidence/unified_benchmark_rescore/; Report_paper_9model/benchmark/benchmark.json; model cards,CSV/JSON/Markdown/model artifacts,9 uniformly rescored prediction records / 102544-audio-row benchmark,Uniform rescore present; per-recipe method cards and final supplement/checksum package pending
+Validation and reproduction scripts,scripts/ and manuscript-facing audit scripts [final paths pending],Python/shell,Multiple scripts,Local scripts exist; final minimal release bundle pending
+Package checksum manifest,checksums/SHA256SUMS [planned],Text/CSV,One record per deposited artifact,Not yet generated because the release package is not frozen

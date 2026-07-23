@@ -1,0 +1,104 @@
+{
+  "source_file": "data-in-brief-article-template.docx",
+  "source_path": "Draft_Paper/data-in-brief-article-template.docx",
+  "source_bytes": 84299,
+  "source_sha256": "5c02d5f9e0762e05f69c06d1d042ea800b6214427c82a78166863dfd17264190",
+  "core_properties": {
+    "title": "",
+    "author": "Kotowski, Sven P. (ELS-AMS)",
+    "last_modified_by": "Onat",
+    "created": "2024-09-23T15:09:00+00:00",
+    "modified": "2024-12-30T13:21:00+00:00"
+  },
+  "paragraph_count": 89,
+  "nonempty_paragraph_count": 63,
+  "word_count_approx": 1539,
+  "character_count": 9910,
+  "table_count": 1,
+  "table_inventory": [
+    {
+      "table": 1,
+      "rows": 7,
+      "columns": 2,
+      "file": "tables/table_01.csv"
+    }
+  ],
+  "inline_shape_count": 0,
+  "media_count": 1,
+  "media_inventory": [
+    {
+      "file": "image1.png",
+      "bytes": 23443,
+      "sha256": "edb374c9b2e094a7b9e30adb7f988e7f684b6693e72ace19da1d5a9088db945a"
+    }
+  ],
+  "headings_detected": [
+    {
+      "text": "AUTHOR INSTRUCTIONS",
+      "style": "Heading 1"
+    },
+    {
+      "text": "ARTICLE INFORMATION",
+      "style": "Heading 1"
+    },
+    {
+      "text": "SPECIFICATIONS TABLE [Instruction for SPECIFICATIONS TABLE in comment box]",
+      "style": "Heading 1"
+    },
+    {
+      "text": "VALUE OF THE DATA",
+      "style": "Heading 1"
+    },
+    {
+      "text": "BACKGROUND",
+      "style": "Heading 1"
+    },
+    {
+      "text": "DATA DESCRIPTION",
+      "style": "Heading 1"
+    },
+    {
+      "text": "EXPERIMENTAL DESIGN, MATERIALS AND METHODS",
+      "style": "Heading 1"
+    },
+    {
+      "text": "LIMITATIONS",
+      "style": "Heading 1"
+    },
+    {
+      "text": "ETHICS STATEMENT",
+      "style": "Heading 1"
+    },
+    {
+      "text": "CRediT AUTHOR STATEMENT",
+      "style": "Heading 1"
+    },
+    {
+      "text": "ACKNOWLEDGEMENTS",
+      "style": "Heading 1"
+    },
+    {
+      "text": "DECLARATION OF COMPETING INTERESTS",
+      "style": "Heading 1"
+    },
+    {
+      "text": "REFERENCES",
+      "style": "Heading 1"
+    }
+  ],
+  "style_counts": {
+    "Normal": 71,
+    "Heading 1": 13,
+    "List Paragraph": 5
+  },
+  "section_count": 1,
+  "archive_metrics": {
+    "tracked_insertions": 0,
+    "tracked_deletions": 0,
+    "hyperlinks": 14,
+    "field_codes": 0,
+    "comments_part": true,
+    "footnotes_part": true,
+    "endnotes_part": true
+  }
+}

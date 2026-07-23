@@ -1,0 +1,10 @@
+﻿model_family,wer_percent,cer_percent,parameters
+Bi-LSTM CTC,4.012,1.322,32825659
+Conformer-CTC,1.194,0.432,11048219
+DNN-HMM (hybrid),94.903,84.494,1448336
+GMM-HMM-DNN (3-stage),95.552,85.117,1448336
+HMM-GMM (classical),95.966,72.020,511005
+Vanilla Transformer,4.369,3.270,4212688
+ViT-modified-ID,1.761,1.298,4353248
+Wav2Letter-style CNN-CTC,8.884,5.154,24840900
+Whisper-small FT,0.186,0.140,241734912

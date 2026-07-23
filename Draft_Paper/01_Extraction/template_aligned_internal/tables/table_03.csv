@@ -1,0 +1,13 @@
+Field,Release target,Frozen benchmark,Evidence control
+Files,104500,102544,Distinct current release-target and frozen-benchmark scopes
+Duration (h),134.1762,130.6548,Computed within each scope
+Train / development / test files,73150 / 15675 / 15675,71792 / 15376 / 15376,Do not substitute one split definition for the other
+Human recordings,104368,102412,Frozen scope contains the same 132 synthetic rows
+Synthetic repairs,132,132,Synthetic provenance must remain explicit
+Human speakers,20,20,Human public IDs are partition-disjoint; TTS voice identity is not guaranteed disjoint
+"Distinct (category, sentence_id) pairs",213,209,Pairs are not asserted to be globally unique transcript texts
+Transcript state,Repaired private HF metadata: 0 blank transcript fields,Frozen before transcript repair; excludes rows blank at freeze time,Audio shards did not change during metadata repair
+Rows present only in release target,1956,0 (excluded),1956-row repair bridge requires an immutable publication attachment
+Test composition,15675 items = 15673 human + 2 synthetic,15376 items = 15374 human + 2 synthetic,Do not call every test item human
+Intended role in article,"Corpus description, package, provenance, and reuse",Nine-model technical validation only,Benchmark does not validate every release-target row
+Availability,Private HF staging; licence other; persistent DOI unavailable,Local frozen evidence package; deposit mapping pending,Neither scope is presently submission-compliant public data

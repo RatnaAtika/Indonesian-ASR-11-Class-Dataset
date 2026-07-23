@@ -1,0 +1,1434 @@
+{
+  "schema": "github_navigation_audit_v1",
+  "scope": "Draft_Paper",
+  "status": "PASS",
+  "linked_reference_count": 185,
+  "unresolved_reference_count": 280,
+  "broken_link_count": 0,
+  "publishable_file_count_excluding_index": 200,
+  "linkification_scope": [
+    "02_Evidence",
+    "03_Review",
+    "04_Revised_Draft",
+    "99_Admin"
+  ],
+  "preserved_snapshot_scope": [
+    "01_Extraction",
+    "05_Submission_Package generated evidence copies"
+  ],
+  "excluded_ephemeral_parts": [
+    ".cache",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    "__pycache__"
+  ],
+  "excluded_sensitive_paths": [
+    "00_Source/Draft Jurnal Data In Brief NSS-ID_ver3.docx",
+    "01_Extraction/media/image13.jpeg",
+    "01_Extraction/media_contact_sheet.jpg"
+  ],
+  "unresolved_references": [
+    {
+      "source": "Draft_Paper/02_Evidence/CURRENT_DIB_SPEECH_METHODS_EXPECTATIONS.md",
+      "line": 40,
+      "reference": "metadata.csv"
+    },
+    {
+      "source": "Draft_Paper/02_Evidence/PRIOR_PUBLICATION_OVERLAP_ASSESSMENT.md",
+      "line": 5,
+      "reference": "10.15587/1729-4061.2026.350949"
+    },
+    {
+      "source": "Draft_Paper/02_Evidence/hf_remote_snapshot/README.md",
+      "line": 35,
+      "reference": "docs/CATEGORY_NAMING.md"
+    },
+    {
+      "source": "Draft_Paper/02_Evidence/hf_remote_snapshot/README.md",
+      "line": 35,
+      "reference": "metadata/dataset_metadata_public.csv"
+    },
+    {
+      "source": "Draft_Paper/02_Evidence/hf_remote_snapshot/README.md",
+      "line": 48,
+      "reference": "metadata/dataset_metadata_public.csv"
+    },
+    {
+      "source": "Draft_Paper/02_Evidence/hf_remote_snapshot/README.md",
+      "line": 74,
+      "reference": "docs/DATASET_UPDATE_NOTES.md"
+    },
+    {
+      "source": "Draft_Paper/02_Evidence/hf_remote_snapshot/README.md",
+      "line": 74,
+      "reference": "metadata/dataset_metadata_public.csv"
+    },
+    {
+      "source": "Draft_Paper/02_Evidence/hf_remote_snapshot/README.md",
+      "line": 78,
+      "reference": "data/audio_shards/by_category/"
+    },
+    {
+      "source": "Draft_Paper/02_Evidence/hf_remote_snapshot/README.md",
+      "line": 78,
+      "reference": "metadata/dataset_metadata_public.csv"
+    },
+    {
+      "source": "Draft_Paper/02_Evidence/hf_remote_snapshot/README.md",
+      "line": 85,
+      "reference": "extracted/"
+    },
+    {
+      "source": "Draft_Paper/02_Evidence/hf_remote_snapshot/README.md",
+      "line": 98,
+      "reference": "docs/CITATION.md"
+    },
+    {
+      "source": "Draft_Paper/02_Evidence/hf_remote_snapshot/README.md",
+      "line": 103,
+      "reference": "paper/dataset_information/"
+    },
+    {
+      "source": "Draft_Paper/02_Evidence/unified_benchmark_rescore/BENCHMARK_SCORING_COMPARABILITY_AUDIT.md",
+      "line": 18,
+      "reference": "splits/test_clean.tsv"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 12,
+      "reference": "manuscript_text.md:15,52"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 13,
+      "reference": "manuscript_text.md:52,60-62"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 14,
+      "reference": "manuscript_text.md:19-34,46,50,72"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 22,
+      "reference": "EVIDENCE_REGISTRY.md:15,34-36"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 22,
+      "reference": "evidence_registry.json:448-455,724-727"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 22,
+      "reference": "manuscript_text.md:31"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 25,
+      "reference": "EVIDENCE_REGISTRY.md:37-38"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 25,
+      "reference": "EVIDENCE_REGISTRY.md:41"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 28,
+      "reference": "EVIDENCE_REGISTRY.md:44"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 28,
+      "reference": "manuscript_text.md:17"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 28,
+      "reference": "manuscript_text.md:48"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 28,
+      "reference": "manuscript_text.md:64"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 28,
+      "reference": "manuscript_text.md:74-82"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 31,
+      "reference": "EVIDENCE_REGISTRY.md:5-7,14,40"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 31,
+      "reference": "evidence_registry.json:99-140,678-681"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 31,
+      "reference": "manuscript_text.md:48,56"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 36,
+      "reference": "evidence_registry.json:142,191-203,231-234"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 36,
+      "reference": "manuscript_text.md:66,70"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 36,
+      "reference": "manuscript_text.md:84-96"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 37,
+      "reference": "evidence_registry.json:533-543"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 39,
+      "reference": "EVIDENCE_REGISTRY.md:39,41-43"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 39,
+      "reference": "manuscript_text.md:29"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 39,
+      "reference": "manuscript_text.md:36-38,48,54,78"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 39,
+      "reference": "manuscript_text.md:42"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 39,
+      "reference": "manuscript_text.md:76"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 42,
+      "reference": "manuscript_text.md:15"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 42,
+      "reference": "manuscript_text.md:72-82"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 45,
+      "reference": "evidence_registry.json:143-170"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 45,
+      "reference": "evidence_registry.json:717-722"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 45,
+      "reference": "manuscript_text.md:15"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 48,
+      "reference": "manuscript_text.md:66,68,70"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 51,
+      "reference": "manuscript_text.md:21-32,84-96"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 51,
+      "reference": "manuscript_text.md:52,58"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 51,
+      "reference": "manuscript_text.md:64-70"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 56,
+      "reference": "manuscript_text.md:3"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 59,
+      "reference": "evidence_registry.json:83-87"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 59,
+      "reference": "manuscript_text.md:15"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 62,
+      "reference": "manuscript_text.md:34-44"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 65,
+      "reference": "manuscript_text.md:17"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 65,
+      "reference": "manuscript_text.md:23-32"
+    },
+    {
+      "source": "Draft_Paper/03_Review/01_editorial_fit_review.md",
+      "line": 69,
+      "reference": "evidence_registry.json:437-438,696-704"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 6,
+      "reference": "claim_evidence_matrix.csv:5"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 6,
+      "reference": "evidence_registry.json:88-96"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 6,
+      "reference": "per_speaker_public.csv:10-18,31-39"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 7,
+      "reference": "per_split_public.csv:2-4"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 8,
+      "reference": "benchmark.json"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 8,
+      "reference": "benchmark.json:19-44,2089-2106"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 8,
+      "reference": "benchmark.json:61-72"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 8,
+      "reference": "claim_evidence_matrix.csv:13-14"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 9,
+      "reference": "dataset_stats.json:30-36"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 9,
+      "reference": "evidence_registry.json:83-87,533-537"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 10,
+      "reference": "claim_evidence_matrix.csv:17"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 10,
+      "reference": "claim_evidence_matrix.csv:2-8"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 10,
+      "reference": "evidence_registry.json:448-452,724-727"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 11,
+      "reference": "benchmark.json:2098-2106"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 11,
+      "reference": "claim_evidence_matrix.csv:12"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 11,
+      "reference": "dataset_stats.json:141-147"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 11,
+      "reference": "evidence_registry.json:537-543"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 11,
+      "reference": "per_speaker_public.csv:16"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 11,
+      "reference": "synthetic_data_stats_public.json:10-13,28"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 12,
+      "reference": "evidence_registry.json:10-15"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 12,
+      "reference": "evidence_registry.json:469-470"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 13,
+      "reference": "dataset_stats.json:57-88,141-151"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 13,
+      "reference": "dataset_stats_public.json:5"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 13,
+      "reference": "per_speaker_public.csv:19-30"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 13,
+      "reference": "splits/split_summary.json:57-68"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 14,
+      "reference": "benchmark.json"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 14,
+      "reference": "benchmark.json:19-44,2350-2358"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 14,
+      "reference": "dataset_stats.json"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 14,
+      "reference": "dataset_stats.json:14-23"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 15,
+      "reference": "claim_evidence_matrix.csv:6"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 15,
+      "reference": "dataset_stats.json:30-37"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 15,
+      "reference": "evidence_registry.json:31"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 15,
+      "reference": "evidence_registry.json:99"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 16,
+      "reference": "claim_evidence_matrix.csv:8"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 16,
+      "reference": "dataset_stats.json:46-55"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 16,
+      "reference": "dataset_stats_public.json:1-14"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 16,
+      "reference": "evidence_registry.json:74-80"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 17,
+      "reference": "claim_evidence_matrix.csv:15"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 17,
+      "reference": "dataset_stats.json:103-153"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 17,
+      "reference": "evidence_registry.json:539-541"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 18,
+      "reference": "dataset_stats_public.json:12"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 18,
+      "reference": "evidence_registry.json:696-704"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 20,
+      "reference": "evidence_registry.json:549-572"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 27,
+      "reference": "evidence_registry.json:448-452,724-727"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 28,
+      "reference": "dataset_stats.json:141-147"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 28,
+      "reference": "per_speaker_public.csv:16"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 29,
+      "reference": "evidence_registry.json:10-15,469-470,678-681"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 30,
+      "reference": "dataset_stats.json"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 30,
+      "reference": "dataset_stats.json:57-88"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 30,
+      "reference": "per_speaker_public.csv:2-9,19-30"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 30,
+      "reference": "split_summary.json"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 31,
+      "reference": "benchmark.json:19-44,2350-2358"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 31,
+      "reference": "dataset_stats.json:14-23"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 32,
+      "reference": "evidence_registry.json:31,99"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 33,
+      "reference": "dataset_stats.json:46-55"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 34,
+      "reference": "dataset_stats.json:103-153"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 35,
+      "reference": "dataset_stats_public.json:12"
+    },
+    {
+      "source": "Draft_Paper/03_Review/02_data_integrity_review.md",
+      "line": 36,
+      "reference": "benchmark.json:22-23,64-65"
+    },
+    {
+      "source": "Draft_Paper/03_Review/03_methodology_reproducibility_review.md",
+      "line": 10,
+      "reference": "reports/hf_transcript_cleanup_execution_20260618.md:3-15,23-41"
+    },
+    {
+      "source": "Draft_Paper/03_Review/03_methodology_reproducibility_review.md",
+      "line": 10,
+      "reference": "reports/hf_transcript_numbering_note_20260618.md:39-61"
+    },
+    {
+      "source": "Draft_Paper/03_Review/03_methodology_reproducibility_review.md",
+      "line": 11,
+      "reference": "reports/colab_cli_m12_vit_modified_1epoch_20260619.md:70-95,97-116"
+    },
+    {
+      "source": "Draft_Paper/03_Review/03_methodology_reproducibility_review.md",
+      "line": 27,
+      "reference": "reports/hf_transcript_cleanup_execution_20260618.md:3-15,17-42"
+    },
+    {
+      "source": "Draft_Paper/03_Review/03_methodology_reproducibility_review.md",
+      "line": 29,
+      "reference": "reports/hf_transcript_numbering_note_20260618.md:41-45"
+    },
+    {
+      "source": "Draft_Paper/03_Review/03_methodology_reproducibility_review.md",
+      "line": 52,
+      "reference": "reports/colab_cli_m12_vit_modified_1epoch_20260619.md:70-108"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 26,
+      "reference": "EVIDENCE_REGISTRY.md:5-16"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 26,
+      "reference": "manuscript_text.md:15,52-60"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 27,
+      "reference": "EVIDENCE_REGISTRY.md:34-45"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 27,
+      "reference": "manuscript_text.md:15,42,48,54-60,74-82"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 28,
+      "reference": "BMAD_SUPERPOWERS_WORKFLOW.md:14-24"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 28,
+      "reference": "manuscript_text.md:36-48,54-56,66-96"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 29,
+      "reference": "EVIDENCE_REGISTRY.md:15,34-44"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 29,
+      "reference": "manuscript_text.md:3-17,21-32,52-64"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 38,
+      "reference": "EVIDENCE_REGISTRY.md:15,34-35"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 38,
+      "reference": "[Mendeley Data/Zenodo]"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 38,
+      "reference": "manuscript_text.md:31"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 41,
+      "reference": "EVIDENCE_REGISTRY.md:37-38"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 41,
+      "reference": "manuscript_text.md:15,36-44,54,76-78"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 44,
+      "reference": "EVIDENCE_REGISTRY.md:15,36"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 47,
+      "reference": "manuscript_text.md:21-32"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 47,
+      "reference": "manuscript_text.md:60-64,72-82"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 47,
+      "reference": "manuscript_text.md:84-96"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 50,
+      "reference": "EVIDENCE_REGISTRY.md:12"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 50,
+      "reference": "EVIDENCE_REGISTRY.md:14,40"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 50,
+      "reference": "EVIDENCE_REGISTRY.md:39"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 50,
+      "reference": "manuscript_text.md:15"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 50,
+      "reference": "manuscript_text.md:48,56"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 53,
+      "reference": "manuscript_text.md:32"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 53,
+      "reference": "manuscript_text.md:48"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 58,
+      "reference": "BMAD_SUPERPOWERS_WORKFLOW.md:14,19,45-51"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 58,
+      "reference": "EVIDENCE_REGISTRY.md:5-8"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 58,
+      "reference": "manuscript_text.md:80-96"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 61,
+      "reference": "EVIDENCE_REGISTRY.md:45"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 61,
+      "reference": "manuscript_text.md:60"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 64,
+      "reference": "EVIDENCE_REGISTRY.md:42-43"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 64,
+      "reference": "manuscript_text.md:15"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 64,
+      "reference": "manuscript_text.md:29,42,76"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 67,
+      "reference": "EVIDENCE_REGISTRY.md:41"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 67,
+      "reference": "manuscript_text.md:54"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 70,
+      "reference": "manuscript_text.md:36-40,48,66-70"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 73,
+      "reference": "BMAD_SUPERPOWERS_WORKFLOW.md:21-23"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 73,
+      "reference": "BMAD_SUPERPOWERS_WORKFLOW.md:70-83"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 73,
+      "reference": "manuscript_text.md:80-96"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 78,
+      "reference": "manuscript_text.md:15"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 78,
+      "reference": "manuscript_text.md:17"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 78,
+      "reference": "manuscript_text.md:3"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 81,
+      "reference": "manuscript_text.md:52,58,64-70"
+    },
+    {
+      "source": "Draft_Paper/03_Review/04_submission_readiness_review.md",
+      "line": 84,
+      "reference": "manuscript_text.md:48"
+    },
+    {
+      "source": "Draft_Paper/03_Review/05_privacy_ethics_review.md",
+      "line": 15,
+      "reference": "evidence_registry.json:720"
+    },
+    {
+      "source": "Draft_Paper/03_Review/05_privacy_ethics_review.md",
+      "line": 28,
+      "reference": "manuscript_text.md:54-66"
+    },
+    {
+      "source": "Draft_Paper/03_Review/05_privacy_ethics_review.md",
+      "line": 29,
+      "reference": "evidence_registry.json:729"
+    },
+    {
+      "source": "Draft_Paper/03_Review/05_privacy_ethics_review.md",
+      "line": 30,
+      "reference": "evidence_registry.json:728"
+    },
+    {
+      "source": "Draft_Paper/03_Review/05_privacy_ethics_review.md",
+      "line": 31,
+      "reference": "manuscript_text.md:54"
+    },
+    {
+      "source": "Draft_Paper/03_Review/05_privacy_ethics_review.md",
+      "line": 32,
+      "reference": "cleanup_20260619.md:82-107"
+    },
+    {
+      "source": "Draft_Paper/03_Review/05_privacy_ethics_review.md",
+      "line": 33,
+      "reference": "README.md:10,104"
+    },
+    {
+      "source": "Draft_Paper/03_Review/05_privacy_ethics_review.md",
+      "line": 35,
+      "reference": "evidence_registry.json:722,736"
+    },
+    {
+      "source": "Draft_Paper/03_Review/05_privacy_ethics_review.md",
+      "line": 36,
+      "reference": "manuscript_text.md:15,36-40"
+    },
+    {
+      "source": "Draft_Paper/03_Review/05_privacy_ethics_review.md",
+      "line": 37,
+      "reference": "manuscript_text.md:48-56"
+    },
+    {
+      "source": "Draft_Paper/03_Review/05_privacy_ethics_review.md",
+      "line": 38,
+      "reference": "manuscript_text.md:60"
+    },
+    {
+      "source": "Draft_Paper/03_Review/05_privacy_ethics_review.md",
+      "line": 39,
+      "reference": "hf_public_metadata_schema.md:7"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 20,
+      "reference": "evidence_registry.json:679-681"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 20,
+      "reference": "manuscript_text.md:56"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 22,
+      "reference": "evidence_registry.json:143-171"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 22,
+      "reference": "evidence_registry.json:538-543"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 31,
+      "reference": "evidence_registry.json:451-452,725-727"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 31,
+      "reference": "manuscript_text.md:31"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 34,
+      "reference": "evidence_registry.json:728-729"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 37,
+      "reference": "evidence_registry.json:99,679-681,731"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 37,
+      "reference": "manuscript_text.md:56"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 42,
+      "reference": "evidence_registry.json:540-541"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 42,
+      "reference": "manuscript_text.md:15,58"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 45,
+      "reference": "evidence_registry.json:143-171"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 48,
+      "reference": "evidence_registry.json:142"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 48,
+      "reference": "evidence_registry.json:732"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 48,
+      "reference": "manuscript_text.md:36-40,54,66-70"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 51,
+      "reference": "evidence_registry.json:733-734"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 51,
+      "reference": "manuscript_text.md:72-82"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 54,
+      "reference": "manuscript_text.md:15"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 57,
+      "reference": "BMAD_SUPERPOWERS_WORKFLOW.md:19-23"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 60,
+      "reference": "evidence_registry.json:289,722,735"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 63,
+      "reference": "evidence_registry.json:730"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 63,
+      "reference": "manuscript_text.md:15,54,70,78"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 66,
+      "reference": "manuscript_text.md:60,64"
+    },
+    {
+      "source": "Draft_Paper/03_Review/06_adversarial_reviewer.md",
+      "line": 77,
+      "reference": "evidence_registry.json:437-438"
+    },
+    {
+      "source": "Draft_Paper/03_Review/07_CONSOLIDATED_GAP_ANALYSIS.md",
+      "line": 5,
+      "reference": "evidence_registry.json"
+    },
+    {
+      "source": "Draft_Paper/03_Review/07_CONSOLIDATED_GAP_ANALYSIS.md",
+      "line": 55,
+      "reference": "splits/test_clean.tsv"
+    },
+    {
+      "source": "Draft_Paper/03_Review/10_PROJECT_RESUME_AND_READINESS.md",
+      "line": 32,
+      "reference": "splits/test_clean.tsv"
+    },
+    {
+      "source": "Draft_Paper/03_Review/10_PROJECT_RESUME_AND_READINESS.md",
+      "line": 85,
+      "reference": ".json"
+    },
+    {
+      "source": "Draft_Paper/03_Review/12_FINAL_DELIVERY_SUMMARY.md",
+      "line": 27,
+      "reference": ".json"
+    },
+    {
+      "source": "Draft_Paper/03_Review/12_FINAL_DELIVERY_SUMMARY.md",
+      "line": 59,
+      "reference": "PACKAGE_MANIFEST.json"
+    },
+    {
+      "source": "Draft_Paper/03_Review/14_FINAL_METHODS_CLOSURE_REVIEW.md",
+      "line": 5,
+      "reference": "evidence/CONSOLIDATED_GAP_ANALYSIS.md"
+    },
+    {
+      "source": "Draft_Paper/03_Review/14_FINAL_METHODS_CLOSURE_REVIEW.md",
+      "line": 5,
+      "reference": "evidence/PROJECT_RESUME_AND_READINESS.md"
+    },
+    {
+      "source": "Draft_Paper/03_Review/14_FINAL_METHODS_CLOSURE_REVIEW.md",
+      "line": 5,
+      "reference": "evidence/REVIEWER_RISK_MATRIX.csv"
+    },
+    {
+      "source": "Draft_Paper/03_Review/14_FINAL_METHODS_CLOSURE_REVIEW.md",
+      "line": 6,
+      "reference": "Table_5_synthetic_repair_provenance.csv:4"
+    },
+    {
+      "source": "Draft_Paper/03_Review/14_FINAL_METHODS_CLOSURE_REVIEW.md",
+      "line": 7,
+      "reference": "METHODS_EVIDENCE_MATRIX.csv:61"
+    },
+    {
+      "source": "Draft_Paper/03_Review/14_FINAL_METHODS_CLOSURE_REVIEW.md",
+      "line": 10,
+      "reference": ".json:2-54"
+    },
+    {
+      "source": "Draft_Paper/03_Review/15_DATA_IN_BRIEF_TEMPLATE_CONFORMANCE_REPORT.md",
+      "line": 14,
+      "reference": "04_INTERNAL_WORKING_MANUSCRIPT.md"
+    },
+    {
+      "source": "Draft_Paper/03_Review/15_DATA_IN_BRIEF_TEMPLATE_CONFORMANCE_REPORT.md",
+      "line": 14,
+      "reference": "06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md"
+    },
+    {
+      "source": "Draft_Paper/03_Review/15_DATA_IN_BRIEF_TEMPLATE_CONFORMANCE_REPORT.md",
+      "line": 57,
+      "reference": "CITATION.cff"
+    },
+    {
+      "source": "Draft_Paper/03_Review/15_DATA_IN_BRIEF_TEMPLATE_CONFORMANCE_REPORT.md",
+      "line": 57,
+      "reference": "README.md"
+    },
+    {
+      "source": "Draft_Paper/03_Review/15_DATA_IN_BRIEF_TEMPLATE_CONFORMANCE_REPORT.md",
+      "line": 60,
+      "reference": "metadata/dataset_metadata_public.csv"
+    },
+    {
+      "source": "Draft_Paper/03_Review/15_DATA_IN_BRIEF_TEMPLATE_CONFORMANCE_REPORT.md",
+      "line": 61,
+      "reference": "metadata/transcript_sentence_inventory_public.csv"
+    },
+    {
+      "source": "Draft_Paper/03_Review/15_DATA_IN_BRIEF_TEMPLATE_CONFORMANCE_REPORT.md",
+      "line": 62,
+      "reference": "metadata/speaker_labels/hf_public_metadata_schema.md"
+    },
+    {
+      "source": "Draft_Paper/03_Review/15_DATA_IN_BRIEF_TEMPLATE_CONFORMANCE_REPORT.md",
+      "line": 63,
+      "reference": "splits/speaker_split_assignment_public.csv"
+    },
+    {
+      "source": "Draft_Paper/03_Review/15_DATA_IN_BRIEF_TEMPLATE_CONFORMANCE_REPORT.md",
+      "line": 64,
+      "reference": "splits/split_summary_public.json"
+    },
+    {
+      "source": "Draft_Paper/03_Review/15_DATA_IN_BRIEF_TEMPLATE_CONFORMANCE_REPORT.md",
+      "line": 65,
+      "reference": "paper/dataset_information/synthetic_repair_rows_public.csv"
+    },
+    {
+      "source": "Draft_Paper/03_Review/15_DATA_IN_BRIEF_TEMPLATE_CONFORMANCE_REPORT.md",
+      "line": 66,
+      "reference": "checksums/SHA256SUMS"
+    },
+    {
+      "source": "Draft_Paper/03_Review/15_DATA_IN_BRIEF_TEMPLATE_CONFORMANCE_REPORT.md",
+      "line": 93,
+      "reference": "rendered_preview_contact_sheet.jpg"
+    },
+    {
+      "source": "Draft_Paper/03_Review/15_DATA_IN_BRIEF_TEMPLATE_CONFORMANCE_REPORT.md",
+      "line": 112,
+      "reference": "PACKAGE_MANIFEST.json"
+    },
+    {
+      "source": "Draft_Paper/03_Review/16_FINAL_DATA_IN_BRIEF_TEMPLATE_REVIEW.md",
+      "line": 11,
+      "reference": "table_01.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/00_MANUSCRIPT_ARCHITECTURE.md",
+      "line": 74,
+      "reference": "CITATION.cff"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/00_MANUSCRIPT_ARCHITECTURE.md",
+      "line": 74,
+      "reference": "README.md"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/02_DISPLAY_AND_SUPPLEMENT_PLAN.md",
+      "line": 48,
+      "reference": "hf_dataset_remote_files.json"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/02_DISPLAY_AND_SUPPLEMENT_PLAN.md",
+      "line": 79,
+      "reference": "per_speaker_public.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/02_DISPLAY_AND_SUPPLEMENT_PLAN.md",
+      "line": 79,
+      "reference": "per_split_public.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/02_DISPLAY_AND_SUPPLEMENT_PLAN.md",
+      "line": 95,
+      "reference": "synthetic_data_stats_public.json"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/02_DISPLAY_AND_SUPPLEMENT_PLAN.md",
+      "line": 150,
+      "reference": "per_category_public.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/02_DISPLAY_AND_SUPPLEMENT_PLAN.md",
+      "line": 160,
+      "reference": "per_split_public.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/02_DISPLAY_AND_SUPPLEMENT_PLAN.md",
+      "line": 170,
+      "reference": "audio_quality_sample_public.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/02_DISPLAY_AND_SUPPLEMENT_PLAN.md",
+      "line": 174,
+      "reference": "F12_audio_quality.png"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/02_DISPLAY_AND_SUPPLEMENT_PLAN.md",
+      "line": 183,
+      "reference": "transcript_template_stats.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/02_DISPLAY_AND_SUPPLEMENT_PLAN.md",
+      "line": 185,
+      "reference": "per_speaker_public.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/02_DISPLAY_AND_SUPPLEMENT_PLAN.md",
+      "line": 187,
+      "reference": "benchmark.json"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/02_DISPLAY_AND_SUPPLEMENT_PLAN.md",
+      "line": 187,
+      "reference": "unified_benchmark_rescore/"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/02_DISPLAY_AND_SUPPLEMENT_PLAN.md",
+      "line": 211,
+      "reference": "metadata/dataset_metadata_clean.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/04_INTERNAL_WORKING_MANUSCRIPT.md",
+      "line": 37,
+      "reference": "10.15587/1729-4061.2026.350949"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/04_INTERNAL_WORKING_MANUSCRIPT.md",
+      "line": 74,
+      "reference": "metadata/dataset_metadata_clean.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/04_INTERNAL_WORKING_MANUSCRIPT.md",
+      "line": 78,
+      "reference": "per_category_public.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/04_INTERNAL_WORKING_MANUSCRIPT.md",
+      "line": 80,
+      "reference": "per_category_public.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/04_INTERNAL_WORKING_MANUSCRIPT.md",
+      "line": 140,
+      "reference": "process_paper_dataset_sota.py"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/04_INTERNAL_WORKING_MANUSCRIPT.md",
+      "line": 178,
+      "reference": "metadata/dataset_metadata_clean.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/04_INTERNAL_WORKING_MANUSCRIPT.md",
+      "line": 218,
+      "reference": "splits/test_clean.tsv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/05_TABLE_CAPTIONS_AND_NOTES.md",
+      "line": 43,
+      "reference": "splits/test_clean.tsv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 44,
+      "reference": "CITATION.cff"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 44,
+      "reference": "README.md"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 44,
+      "reference": "data/audio_shards/by_category/"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 46,
+      "reference": "Clarification.txt"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 46,
+      "reference": "Conditional.txt"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 46,
+      "reference": "Confirmation.txt"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 46,
+      "reference": "Declarative.txt"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 46,
+      "reference": "Exclamatory.txt"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 46,
+      "reference": "Imperative.txt"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 46,
+      "reference": "Interrogative.txt"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 46,
+      "reference": "Negation.txt"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 46,
+      "reference": "Persuasive.txt"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 46,
+      "reference": "Rhetorical.txt"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 46,
+      "reference": "Scheduling.txt"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 46,
+      "reference": "data/transcripts/"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 48,
+      "reference": "dataset_metadata_public.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 48,
+      "reference": "metadata/"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 48,
+      "reference": "metadata/speaker_labels/hf_public_metadata_schema.md"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 48,
+      "reference": "transcript_sentence_inventory_public.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 50,
+      "reference": "checksums/SHA256SUMS"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 50,
+      "reference": "paper/dataset_information/"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 50,
+      "reference": "speaker_split_assignment_public.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 50,
+      "reference": "split_summary_public.json"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 50,
+      "reference": "splits/"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 50,
+      "reference": "synthetic_repair_rows_public.csv"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 100,
+      "reference": "process_paper_dataset_sota.py"
+    },
+    {
+      "source": "Draft_Paper/04_Revised_Draft/06_DATA_IN_BRIEF_TEMPLATE_MANUSCRIPT.md",
+      "line": 146,
+      "reference": "splits/test_clean.tsv"
+    },
+    {
+      "source": "Draft_Paper/99_Admin/BMAD_SUPERPOWERS_WORKFLOW.md",
+      "line": 6,
+      "reference": "Draft_Paper/00_Source/Draft Jurnal Data In Brief NSS-ID_ver3.docx"
+    },
+    {
+      "source": "Draft_Paper/99_Admin/plans/2026-07-23-data-in-brief-template-migration.md",
+      "line": 7,
+      "reference": "04_INTERNAL_WORKING_MANUSCRIPT.md"
+    },
+    {
+      "source": "Draft_Paper/99_Admin/plans/2026-07-23-data-in-brief-template-migration.md",
+      "line": 60,
+      "reference": "NSS-ID_INTERNAL_NOT_FOR_SUBMISSION.docx"
+    },
+    {
+      "source": "Draft_Paper/99_Admin/plans/2026-07-23-data-in-brief-template-migration.md",
+      "line": 79,
+      "reference": "Draft_Paper/03_Review/16_FINAL_TEMPLATE_BASED_MANUSCRIPT_REVIEW.md"
+    },
+    {
+      "source": "Draft_Paper/99_Admin/plans/2026-07-23-github-navigation-and-delivery.md",
+      "line": 51,
+      "reference": ".cache/"
+    },
+    {
+      "source": "Draft_Paper/99_Admin/plans/2026-07-23-github-navigation-and-delivery.md",
+      "line": 51,
+      "reference": "__pycache__/"
+    },
+    {
+      "source": "Draft_Paper/99_Admin/plans/2026-07-23-github-navigation-and-delivery.md",
+      "line": 67,
+      "reference": "docs/draft-paper-github-navigation"
+    }
+  ],
+  "broken_links": []
+}

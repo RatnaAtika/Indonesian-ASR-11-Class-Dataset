@@ -1,0 +1,145 @@
+{
+  "source_file": "NSS-ID_INTERNAL_NOT_FOR_SUBMISSION.docx",
+  "source_path": "Draft_Paper/05_Submission_Package/NSS-ID_INTERNAL_NOT_FOR_SUBMISSION.docx",
+  "source_bytes": 633436,
+  "source_sha256": "17a07e5567793bf68566a35689738ab41c8b864b08f332ff6ec25c3d1253e704",
+  "core_properties": {
+    "title": "NSS-ID Data in Brief template-aligned internal working manuscript",
+    "author": "",
+    "last_modified_by": "",
+    "created": "2026-07-23T00:00:00+00:00",
+    "modified": "2026-07-23T00:00:00+00:00"
+  },
+  "paragraph_count": 119,
+  "nonempty_paragraph_count": 116,
+  "word_count_approx": 5035,
+  "character_count": 38242,
+  "table_count": 6,
+  "table_inventory": [
+    {
+      "table": 1,
+      "rows": 7,
+      "columns": 2,
+      "file": "tables/table_01.csv"
+    },
+    {
+      "table": 2,
+      "rows": 12,
+      "columns": 5,
+      "file": "tables/table_02.csv"
+    },
+    {
+      "table": 3,
+      "rows": 13,
+      "columns": 4,
+      "file": "tables/table_03.csv"
+    },
+    {
+      "table": 4,
+      "rows": 12,
+      "columns": 7,
+      "file": "tables/table_04.csv"
+    },
+    {
+      "table": 5,
+      "rows": 5,
+      "columns": 8,
+      "file": "tables/table_05.csv"
+    },
+    {
+      "table": 6,
+      "rows": 22,
+      "columns": 7,
+      "file": "tables/table_06.csv"
+    }
+  ],
+  "inline_shape_count": 3,
+  "media_count": 4,
+  "media_inventory": [
+    {
+      "file": "image1.png",
+      "bytes": 23443,
+      "sha256": "edb374c9b2e094a7b9e30adb7f988e7f684b6693e72ace19da1d5a9088db945a"
+    },
+    {
+      "file": "image2.png",
+      "bytes": 284911,
+      "sha256": "8b20005ab7998d364c44607e85bed634710607b3f647787351bb4a9a2620f56d"
+    },
+    {
+      "file": "image3.png",
+      "bytes": 210385,
+      "sha256": "0b8f3e5268efd04ab30f68c5769ae819a2283c85096b510514718196a68d5402"
+    },
+    {
+      "file": "image4.png",
+      "bytes": 191856,
+      "sha256": "4f0b3cf7cf52ec43880dcdaf0b111ba29a4160bf555a42cbca39eb1862641a65"
+    }
+  ],
+  "headings_detected": [
+    {
+      "text": "ARTICLE INFORMATION",
+      "style": "Heading 1"
+    },
+    {
+      "text": "SPECIFICATIONS TABLE",
+      "style": "Heading 1"
+    },
+    {
+      "text": "VALUE OF THE DATA",
+      "style": "Heading 1"
+    },
+    {
+      "text": "BACKGROUND",
+      "style": "Heading 1"
+    },
+    {
+      "text": "DATA DESCRIPTION",
+      "style": "Heading 1"
+    },
+    {
+      "text": "EXPERIMENTAL DESIGN, MATERIALS AND METHODS",
+      "style": "Heading 1"
+    },
+    {
+      "text": "LIMITATIONS",
+      "style": "Heading 1"
+    },
+    {
+      "text": "ETHICS STATEMENT",
+      "style": "Heading 1"
+    },
+    {
+      "text": "CRediT AUTHOR STATEMENT",
+      "style": "Heading 1"
+    },
+    {
+      "text": "ACKNOWLEDGEMENTS",
+      "style": "Heading 1"
+    },
+    {
+      "text": "DECLARATION OF COMPETING INTERESTS",
+      "style": "Heading 1"
+    },
+    {
+      "text": "REFERENCES",
+      "style": "Heading 1"
+    }
+  ],
+  "style_counts": {
+    "Normal": 103,
+    "Heading 1": 12,
+    "List Paragraph": 4
+  },
+  "section_count": 1,
+  "archive_metrics": {
+    "tracked_insertions": 0,
+    "tracked_deletions": 0,
+    "hyperlinks": 0,
+    "field_codes": 0,
+    "comments_part": false,
+    "footnotes_part": true,
+    "endnotes_part": true
+  }
+}

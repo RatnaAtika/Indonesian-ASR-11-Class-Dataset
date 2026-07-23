@@ -1,0 +1,1730 @@
+[
+  {
+    "path": "data",
+    "tree_id": "4db9b9bd8234b3360f726b1fa8692e62c771c122",
+    "last_commit": {
+      "oid": "4fdfda8f40863570efc3b4c2fb1537658c980018",
+      "title": "Remove Indonesian-named category files after English rename",
+      "date": "2026-06-18T17:22:01+00:00"
+    }
+  },
+  {
+    "path": "data/audio_shards",
+    "tree_id": "626302e552b3c7712e4a0da06a4fa1411184e57f",
+    "last_commit": {
+      "oid": "4fdfda8f40863570efc3b4c2fb1537658c980018",
+      "title": "Remove Indonesian-named category files after English rename",
+      "date": "2026-06-18T17:22:01+00:00"
+    }
+  },
+  {
+    "path": "data/audio_shards/by_category",
+    "tree_id": "b2bbb5ac6f0efd1017b18986da5ff00a3eb2f7da",
+    "last_commit": {
+      "oid": "4fdfda8f40863570efc3b4c2fb1537658c980018",
+      "title": "Remove Indonesian-named category files after English rename",
+      "date": "2026-06-18T17:22:01+00:00"
+    }
+  },
+  {
+    "path": "data/transcripts",
+    "tree_id": "921ea3ed6287f43cb4e34ca2b3b2f177ae08ba13",
+    "last_commit": {
+      "oid": "4fdfda8f40863570efc3b4c2fb1537658c980018",
+      "title": "Remove Indonesian-named category files after English rename",
+      "date": "2026-06-18T17:22:01+00:00"
+    }
+  },
+  {
+    "path": "docs",
+    "tree_id": "fc740efe844168167b4fa2d07058ac5998bf9375",
+    "last_commit": {
+      "oid": "566327025a271b6f6d5796c3b34fd44e5fc1d29a",
+      "title": "Clarify English-only category naming doc",
+      "date": "2026-06-18T17:22:32+00:00"
+    }
+  },
+  {
+    "path": "metadata",
+    "tree_id": "ccd552a30be680e7a0835ad2e62f3d822fbbff6a",
+    "last_commit": {
+      "oid": "830a2069416707e3f38c06c507255889513cdf4b",
+      "title": "Remove internal Indonesian category mapping file",
+      "date": "2026-06-18T17:22:36+00:00"
+    }
+  },
+  {
+    "path": "metadata/speaker_labels",
+    "tree_id": "918471d280bcd99652d24c22d8e143d3f715a45f",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    }
+  },
+  {
+    "path": "paper",
+    "tree_id": "7623bb24490e1067902d79d7ac7665f2fa2f5560",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    }
+  },
+  {
+    "path": "paper/dataset_information",
+    "tree_id": "5691ffb4c64d1b4da6b258e69f68fc4609433d42",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    }
+  },
+  {
+    "path": "paper/dataset_information/figures_public",
+    "tree_id": "fd6ddb9246bca189b97d9e9f1be894d1058731cd",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    }
+  },
+  {
+    "path": "splits",
+    "tree_id": "6e79578ea507a43a05b86546e6b1cb5fee239af9",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    }
+  },
+  {
+    "path": ".gitattributes",
+    "size": 2806,
+    "blob_id": "8f19b3c9cc1e7b101a666b9ce833cec52c094e2f",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "CITATION.cff",
+    "size": 656,
+    "blob_id": "c7bb4b33caec808ab4a25e80f1f38b7de882dda3",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "LARGE_ASSETS_TO_UPLOAD_FROM_ORIGINAL_LOCATIONS.md",
+    "size": 1725,
+    "blob_id": "2ebd7c3a897eb5436eda78e5a3945a4f0e7059f9",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "README.md",
+    "size": 4892,
+    "blob_id": "2d1e5503df87b04d879847cfc00ff80cc67a09f2",
+    "last_commit": {
+      "oid": "73b1b83e777dc1e00eb8f77dc4fe985e85ef6fb0",
+      "title": "Clarify English-only category naming",
+      "date": "2026-06-18T17:22:30+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "data/audio_shards/audio_shards_manifest.csv",
+    "size": 1622,
+    "blob_id": "ea23896a18aaa3b6a7377ec160bb8411b285efb1",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "data/audio_shards/by_category/Clarification.tar",
+    "size": 1608908800,
+    "blob_id": "2685847b4c5dad5a240bb2c34305aa28535229e3",
+    "lfs": {
+      "size": 1608908800,
+      "sha256": "341a35adda440b2dbce42713af62e644277642f7d6723cd54fe275fc530f0072",
+      "pointer_size": 135
+    },
+    "xet_hash": "4b3d441105ac8fddf8eb74475edfaf33e273889bb8bf8a3ab153033ecf86c053",
+    "last_commit": {
+      "oid": "fecb2c162991f9477e6a7059a4b47878a1d14abb",
+      "title": "Upload English audio shard Clarification",
+      "date": "2026-06-18T15:27:07+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "data/audio_shards/by_category/Conditional.tar",
+    "size": 1857638400,
+    "blob_id": "30c7534484e1b25eb6cca8363423421a213d7966",
+    "lfs": {
+      "size": 1857638400,
+      "sha256": "23f9ad07dbc148ff4c153764fae7f2639ace6ff3eda2cb6c085c66ef5f38a08c",
+      "pointer_size": 135
+    },
+    "xet_hash": "0264e0b104f0c2e173978dfd27eb033d227dd8fb8ebc81c833ec0939a9e4afac",
+    "last_commit": {
+      "oid": "58053b1fb7959bb4d8ceffaf4caf9c8ae9ee206d",
+      "title": "Upload English audio shard Conditional",
+      "date": "2026-06-18T15:40:11+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "data/audio_shards/by_category/Confirmation.tar",
+    "size": 1722275840,
+    "blob_id": "df5ffde72186ba7002238292d297bd95ae12730c",
+    "lfs": {
+      "size": 1722275840,
+      "sha256": "0c5f84d7f686abbe6dbd4dc038d7a5f968e7212698dfe8f16a0cb3df87237eb7",
+      "pointer_size": 135
+    },
+    "xet_hash": "b098ae3e8ddbfc0d4e3f6997fa89a476e47e105f1b3a6ceea49ec489add8ad24",
+    "last_commit": {
+      "oid": "ce15dedce483e9afa67e7a4bcd5080f240cf94de",
+      "title": "Upload English audio shard Confirmation",
+      "date": "2026-06-18T15:55:12+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "data/audio_shards/by_category/Declarative.tar",
+    "size": 1250273280,
+    "blob_id": "24ab8aa85a57ca325be8d72ec2fbf34eb5c8a986",
+    "lfs": {
+      "size": 1250273280,
+      "sha256": "df53cedb2a4603159a2cea0190680f683e48ae4e77aefeb7fa075a5affea3808",
+      "pointer_size": 135
+    },
+    "xet_hash": "d1c6000a6e1b090cc0d1103f4ae6a78653e17a0cbabd618dbe8bfe087486b41b",
+    "last_commit": {
+      "oid": "ea0f917dddd5737c78205b85656079008398ccd2",
+      "title": "Upload English audio shard Declarative",
+      "date": "2026-06-18T15:14:17+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "data/audio_shards/by_category/Exclamatory.tar",
+    "size": 1052190720,
+    "blob_id": "8f5b49d7a130304c9adb38418fc45d0d5c4fab3e",
+    "lfs": {
+      "size": 1052190720,
+      "sha256": "25e327ac6b802bbfe40e649375292fec0728580d0a52146f332cdedf93576092",
+      "pointer_size": 135
+    },
+    "xet_hash": "0e360f794707b79ce0c448f3e24a3f0c42b4b9ae159fd8754cb366f14bcbbfee",
+    "last_commit": {
+      "oid": "2a5827c5506c2aea36876087dafe0d67789bc2d1",
+      "title": "Upload English audio shard Exclamatory",
+      "date": "2026-06-18T17:10:01+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "data/audio_shards/by_category/Imperative.tar",
+    "size": 914995200,
+    "blob_id": "15ce5b2c44c0d25d96890445419d68cb3f190300",
+    "lfs": {
+      "size": 914995200,
+      "sha256": "bdd7e447cbd1767b6cba0cd1bbf686ae7a141d770742beb5b7a3248fa0ec92fb",
+      "pointer_size": 134
+    },
+    "xet_hash": "e36c96103bc7379300aa78a72c245135a1d9cbe2dec400227022673f875311b3",
+    "last_commit": {
+      "oid": "2289a276a2fb918aab14b11a7de9f52232539ba6",
+      "title": "Upload English audio shard Imperative",
+      "date": "2026-06-18T16:31:49+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "data/audio_shards/by_category/Interrogative.tar",
+    "size": 1384243200,
+    "blob_id": "66115db85368f9a6a895bd4d5814258b8c59f2f6",
+    "lfs": {
+      "size": 1384243200,
+      "sha256": "26688c564f8ce7a1296ccc6bcd14d075b251735e4fc8ffceac77a40890eaa7f3",
+      "pointer_size": 135
+    },
+    "xet_hash": "309c6790e351a881e177a6e9fd4361d56984dc52cac000cd3b25506c7d30b32d",
+    "last_commit": {
+      "oid": "08a12ba6ac46b09fb67890e414b63b41c595333c",
+      "title": "Upload English audio shard Interrogative",
+      "date": "2026-06-18T17:20:45+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "data/audio_shards/by_category/Negation.tar",
+    "size": 1094973440,
+    "blob_id": "1e57e54365c40f3812facd67f5d2650baf75945d",
+    "lfs": {
+      "size": 1094973440,
+      "sha256": "adf4784b049fa331346c5325d739fb0f0e1b3b8be896940812c393f05a7e0e6e",
+      "pointer_size": 135
+    },
+    "xet_hash": "b5b410d78efa55d37d8e24f1fa6d611c9d14ef773a2bfc1d9376d7e0bfa772e4",
+    "last_commit": {
+      "oid": "d7b01b5291b4c77d116dd01d03aa8cf2d7f69317",
+      "title": "Upload English audio shard Negation",
+      "date": "2026-06-18T16:06:39+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "data/audio_shards/by_category/Persuasive.tar",
+    "size": 1999974400,
+    "blob_id": "5b9c5d3d4991cb6eadfe527f870ed88fed694ebf",
+    "lfs": {
+      "size": 1999974400,
+      "sha256": "e922acf912ff935349fde0db7a37e1ff218eb6ef474aa01ee325524d86dfcf8c",
+      "pointer_size": 135
+    },
+    "xet_hash": "c41ffabf397bea6f0494d74cd38de7489f47c90d3ba5b14f1f4703b810dfef15",
+    "last_commit": {
+      "oid": "bc16c68edaf09e43f30a6f56ac7e04c048462be4",
+      "title": "Upload English audio shard Persuasive",
+      "date": "2026-06-18T16:48:50+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "data/audio_shards/by_category/Rhetorical.tar",
+    "size": 1209313280,
+    "blob_id": "50a1e82f4380ea87a3ad6b19d59b98378e5c5ddc",
+    "lfs": {
+      "size": 1209313280,
+      "sha256": "d5566ecf861864873d23c50fe6edb44a0d0ea24119cf92758e47269a00bcc5e8",
+      "pointer_size": 135
+    },
+    "xet_hash": "4154f218009ad8dbe4c3df0e4dbcadfaad9cb09fc5579f21281a5d94bf014f71",
+    "last_commit": {
+      "oid": "a22459676ac1974c5099cdb578417759b805dfb1",
+      "title": "Upload English audio shard Rhetorical",
+      "date": "2026-06-18T16:59:40+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "error",
+      "av_scan": {
+        "status": "error",
+        "message": ""
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "data/audio_shards/by_category/Scheduling.tar",
+    "size": 1528320000,
+    "blob_id": "edd92fc6cc2ef109772b26b0536805c9646533a6",
+    "lfs": {
+      "size": 1528320000,
+      "sha256": "1167491d8aba03768214862f4a46c9a45e771c4f524a5f63244e212c17e96622",
+      "pointer_size": 135
+    },
+    "xet_hash": "de27c09519f3bc4793f03d2dd2962301c0e895ced3b95f654f021cfe8027d3b4",
+    "last_commit": {
+      "oid": "25c15b3c2b67c6b9ac3b7b6117c24a4b27adc9d5",
+      "title": "Upload English audio shard Scheduling",
+      "date": "2026-06-18T16:19:15+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "data/transcripts/Clarification.txt",
+    "size": 1321,
+    "blob_id": "dae8f0ce4fb4cac12db5cae1d8d40fe6c4554608",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "error",
+      "av_scan": {
+        "status": "error",
+        "message": ""
+      },
+      "pickle_import_scan": {
+        "status": "unscanned"
+      }
+    }
+  },
+  {
+    "path": "data/transcripts/Conditional.txt",
+    "size": 1701,
+    "blob_id": "d7f5cc4932bd6177f076ba978da5bd1ba0638761",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "error",
+      "av_scan": {
+        "status": "error",
+        "message": ""
+      },
+      "pickle_import_scan": {
+        "status": "unscanned"
+      }
+    }
+  },
+  {
+    "path": "data/transcripts/Confirmation.txt",
+    "size": 1531,
+    "blob_id": "d01b37f0395e2fc31fbdc98531754962c298778b",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned"
+      }
+    }
+  },
+  {
+    "path": "data/transcripts/Declarative.txt",
+    "size": 1226,
+    "blob_id": "50d6eae7eb1fe375493317e64fbb3276de792652",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "error",
+      "av_scan": {
+        "status": "error",
+        "message": ""
+      },
+      "pickle_import_scan": {
+        "status": "unscanned"
+      }
+    }
+  },
+  {
+    "path": "data/transcripts/Exclamatory.txt",
+    "size": 945,
+    "blob_id": "7187aed947eddbd8fb20098e3e24a328d9accf27",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "error",
+      "av_scan": {
+        "status": "error",
+        "message": ""
+      },
+      "pickle_import_scan": {
+        "status": "unscanned"
+      }
+    }
+  },
+  {
+    "path": "data/transcripts/Imperative.txt",
+    "size": 806,
+    "blob_id": "de4d3f5b0e573cac435bf69d0b517577fe99fa17",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned"
+      }
+    }
+  },
+  {
+    "path": "data/transcripts/Interrogative.txt",
+    "size": 1009,
+    "blob_id": "bda05e0f1f2eddb43e12137a0ebf0647480283b2",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "error",
+      "av_scan": {
+        "status": "error",
+        "message": ""
+      },
+      "pickle_import_scan": {
+        "status": "unscanned"
+      }
+    }
+  },
+  {
+    "path": "data/transcripts/Negation.txt",
+    "size": 1092,
+    "blob_id": "5d202a41a1cc04682ff6af4b9198964ccb8a37cc",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "error",
+      "av_scan": {
+        "status": "error",
+        "message": ""
+      },
+      "pickle_import_scan": {
+        "status": "unscanned"
+      }
+    }
+  },
+  {
+    "path": "data/transcripts/Persuasive.txt",
+    "size": 2227,
+    "blob_id": "17ff4cbc1a1d36c182dd33e64464caba1501d91f",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "error",
+      "av_scan": {
+        "status": "error",
+        "message": ""
+      },
+      "pickle_import_scan": {
+        "status": "unscanned"
+      }
+    }
+  },
+  {
+    "path": "data/transcripts/Rhetorical.txt",
+    "size": 1284,
+    "blob_id": "f12c3ee83edc3a20af430630479a578637962c50",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned"
+      }
+    }
+  },
+  {
+    "path": "data/transcripts/Scheduling.txt",
+    "size": 1176,
+    "blob_id": "197ca34ecce32683d31b0f6dee3e9f5c9bb73e41",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "error",
+      "av_scan": {
+        "status": "error",
+        "message": ""
+      },
+      "pickle_import_scan": {
+        "status": "unscanned"
+      }
+    }
+  },
+  {
+    "path": "docs/CATEGORY_NAMING.md",
+    "size": 824,
+    "blob_id": "e5d08363c9463032b5c9c6371df1d3557de201dc",
+    "last_commit": {
+      "oid": "566327025a271b6f6d5796c3b34fd44e5fc1d29a",
+      "title": "Clarify English-only category naming doc",
+      "date": "2026-06-18T17:22:32+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "docs/CITATION.md",
+    "size": 975,
+    "blob_id": "5b95c1661d5271f7c540aa14921cad1cdffbc89e",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "docs/DATASET_UPDATE_NOTES.md",
+    "size": 2134,
+    "blob_id": "dda092eaf823b26ed476f37edb711ef6022f2158",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "docs/HF_DATASET_INFORMATION_FINAL_REPORT.md",
+    "size": 4936,
+    "blob_id": "8d09fb4ba5529685f856386be1435da72c798b91",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "docs/HF_DATASET_INFORMATION_SELECTION.md",
+    "size": 13401,
+    "blob_id": "2b29e876a002b607ac3e529b945eeb892dde16a3",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "docs/TRANSCRIPT_NUMBERING_NOTES.md",
+    "size": 2823,
+    "blob_id": "63e18ee3403b7cee479c9bdbb5ec4a56ee729513",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "docs/USAGE.md",
+    "size": 1597,
+    "blob_id": "1bf1553f41a4d776a9d79a901c5ac1a1e1191562",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "docs/hf_dataset_information_selection.csv",
+    "size": 10890,
+    "blob_id": "d97d13e0efffeb35a088f2418a48d5bc60132bd1",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "docs/hf_dataset_information_selection.json",
+    "size": 17623,
+    "blob_id": "272cf47b36e84e31667b2106e7f7350afc4c7bfa",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "manifest.csv",
+    "size": 7727,
+    "blob_id": "7243f214005747539ac1559a72d54be27781c3de",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "manifest.json",
+    "size": 12968,
+    "blob_id": "815080257fa8e31b07499a196f6d5ec10013a008",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "metadata/dataset_metadata_public.csv",
+    "size": 30868778,
+    "blob_id": "5a4ea0aea6a7a9834642915b319f6ef8c0c519be",
+    "lfs": {
+      "size": 30868778,
+      "sha256": "0e5521310e89d1fc67de84108dc176fb895cee9539aa7183ceb6019fb935924f",
+      "pointer_size": 133
+    },
+    "xet_hash": "c9ed62e960de80bbb0ed9e9004bab8d490b4a73f9084a72a2919573c9e5ae216",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "metadata/speaker_labels/hf_public_metadata_schema.md",
+    "size": 1104,
+    "blob_id": "ad2bbdd074512271c0705f966c63421800982fd4",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "metadata/speaker_labels/speaker_anonymization_preparation_report.md",
+    "size": 1148,
+    "blob_id": "e479b27e9b8f45ea939281f02bb985d97512ede9",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "metadata/speaker_labels/speaker_id_public_inventory.csv",
+    "size": 2544,
+    "blob_id": "0a7dc33aee37d22dbdacfdc4708944971ee9edfd",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "metadata/speaker_labels/speaker_id_public_inventory.json",
+    "size": 26395,
+    "blob_id": "2ef1ec03b8240be62ac5c418412e43f0ab094479",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "metadata/speaker_labels/speaker_label_gender_list.csv",
+    "size": 916,
+    "blob_id": "4cd012a3b9e603c43a30fe8a5a9d80ff8e615db6",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "metadata/speaker_labels/synthetic_repair_targets_public.csv",
+    "size": 1018,
+    "blob_id": "09647a4d4299681e6b9b70882bad5a62b639605a",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "metadata/transcript_sentence_inventory_public.csv",
+    "size": 2055,
+    "blob_id": "88887ad3c0096b365db83497ba2f413a9ef1deb7",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/README.md",
+    "size": 881,
+    "blob_id": "2d32a038c36270abf574bb4405c42ee5b3ae03df",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/audio_quality_sample_public.csv",
+    "size": 46928,
+    "blob_id": "e8d10da6ca3faee86d917f31be84f076b938289e",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/dataset_stats_public.json",
+    "size": 517,
+    "blob_id": "3afe514fdb7d73b47c35720c762e2646b3476659",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/figures_public/F1_files_per_speaker_split_public.pdf",
+    "size": 115222,
+    "blob_id": "9fb23c5b18e90c4f49a77684c18da880aad8c345",
+    "lfs": {
+      "size": 115222,
+      "sha256": "fe25972ea4e3cf6a451794c4dd56f1dbfda0aa0a7bb428bece9155b5b7a63e96",
+      "pointer_size": 131
+    },
+    "xet_hash": "3ade2f21c4fb6a24b9a3e05d4788bc0cd0be540f038fd0cbc88b94a9cba4c7af",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/figures_public/F1_files_per_speaker_split_public.png",
+    "size": 24366,
+    "blob_id": "67e02fcfe217024ce62cfc4ae61c2b8512961ce0",
+    "lfs": {
+      "size": 24366,
+      "sha256": "15b1d0c88864c3e8de032b961bcaa4e530d824a98a1ea1cd3948efd3202b699c",
+      "pointer_size": 130
+    },
+    "xet_hash": "c12ddbe9c40b40a374627a6877476b155531015db5a41a1047d5fbceb3b5959f",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/figures_public/F3_speaker_total_duration_public.pdf",
+    "size": 103634,
+    "blob_id": "f3f93089a6ef9438dc2ae8d0144f64a8ad269d8e",
+    "lfs": {
+      "size": 103634,
+      "sha256": "1824019b01699b5d524a1fdf1375e030b44665f5bee656b24758bedadb1d0adc",
+      "pointer_size": 131
+    },
+    "xet_hash": "7c083e0e6c2f9d1c0ad56f34aec7984bce94bedb3a09a11029f4e2fb96563b65",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/figures_public/F3_speaker_total_duration_public.png",
+    "size": 25002,
+    "blob_id": "e2f1cd78a7b3b98ac014ed52ea58ae8196189371",
+    "lfs": {
+      "size": 25002,
+      "sha256": "ed7d540549e557acfe6e607ceec1dcf319ebb310aec1dd40bd08f461a61d031c",
+      "pointer_size": 130
+    },
+    "xet_hash": "c0cf82f7efd5b290b3ba43398e0cb4198fc4f3f8c42f1ad8af4b536d5c6cd358",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/figures_public/F7_speaker_category_heatmap_public.pdf",
+    "size": 96630,
+    "blob_id": "2c4613cb60b85e899ad30d4cde25bbebdec131ef",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/figures_public/F7_speaker_category_heatmap_public.png",
+    "size": 29040,
+    "blob_id": "49122562a1242d3133f82a94b4c0222a29c1752c",
+    "lfs": {
+      "size": 29040,
+      "sha256": "6edcaf89a8c4e218ebb35b53e9acf0fde6c3d3e53f83d91669e5d9e6959bc20e",
+      "pointer_size": 130
+    },
+    "xet_hash": "562bd651e4e5d01545f36d49161e16a1ab696f470e57a49f5de4414a56152cc7",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": false,
+      "status": "queued",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/per_category_public.csv",
+    "size": 638,
+    "blob_id": "1cb46772d829253ca56239f556330a01fb1f02ce",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/per_speaker_public.csv",
+    "size": 2331,
+    "blob_id": "c1eaae72495284603fea2068175623aad1106bac",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/per_split_public.csv",
+    "size": 226,
+    "blob_id": "e92324d75e6bf02ed09efdc0f6490bc148ae3df0",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/synthetic_data_stats_public.json",
+    "size": 5031,
+    "blob_id": "532ba2902715e3d253e6868f5de5562819c1cf76",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/synthetic_repair_rows_public.csv",
+    "size": 7136,
+    "blob_id": "4c519abe7a126061ac5663e78fd780bb7454669a",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "paper/dataset_information/word_frequency_public.csv",
+    "size": 11694,
+    "blob_id": "3b29a921dc63c953aaf47faec27210a4b785d81c",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "splits/speaker_split_assignment_public.csv",
+    "size": 322,
+    "blob_id": "c37171d78f3288e6e5dda19cac4225732a5d7d7c",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "splits/split_summary_public.json",
+    "size": 442,
+    "blob_id": "a60f06249623f619fc2c47335b61688aa5c8885c",
+    "last_commit": {
+      "oid": "3a137d4a1883f61b530ab75921d13c7c3cef325f",
+      "title": "Upload dataset card, metadata, and citation docs",
+      "date": "2026-06-18T05:01:26+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  },
+  {
+    "path": "upload_manifest_small_files.csv",
+    "size": 5387,
+    "blob_id": "6d76622bb655e8f1cb24dde436fa1153446d924a",
+    "last_commit": {
+      "oid": "c2177169733a99aa434f5c5f440b58976d73714d",
+      "title": "Clean public transcripts and repair metadata",
+      "date": "2026-06-18T13:11:39+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28034"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned"
+      }
+    }
+  },
+  {
+    "path": "upload_summary.json",
+    "size": 396,
+    "blob_id": "36ff40b7b83820a6f01c59226db692988f483f1b",
+    "last_commit": {
+      "oid": "6a133809a7fa5273779720eb604084f1eb172175",
+      "title": "Use English category names in metadata and docs",
+      "date": "2026-06-18T17:21:36+00:00"
+    },
+    "security": {
+      "safe": true,
+      "status": "safe",
+      "av_scan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.2/28035"
+      },
+      "pickle_import_scan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      }
+    }
+  }
+]

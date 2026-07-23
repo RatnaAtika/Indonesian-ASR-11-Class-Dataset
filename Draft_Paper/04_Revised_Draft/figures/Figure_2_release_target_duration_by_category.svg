@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4200" height="3000" viewBox="0 0 4200 3000">
+<rect x="0" y="0" width="4200" height="3000" fill="#FFFFFF"/>
+<text x="2100.0" y="60.8" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="72" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="2100.0" dy="0.0">Release-target duration by category</tspan>
+</text>
+<text x="2100.0" y="166.9" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="38" font-weight="400" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="2100.0" dy="0.0">104,500 files • 134.1762 h • 11 categories • 9,500 files per category</tspan>
+</text>
+<polyline points="1420.0,390.0 1420.0,2670.0" fill="none" stroke="#D9E2EC" stroke-width="3"/>
+<text x="1420.0" y="340.8" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="1420.0" dy="0.0">0 h</tspan>
+</text>
+<polyline points="2039.4,390.0 2039.4,2670.0" fill="none" stroke="#D9E2EC" stroke-width="3"/>
+<text x="2039.4" y="340.8" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="2039.4" dy="0.0">5 h</tspan>
+</text>
+<polyline points="2658.9,390.0 2658.9,2670.0" fill="none" stroke="#D9E2EC" stroke-width="3"/>
+<text x="2658.9" y="340.8" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="2658.9" dy="0.0">10 h</tspan>
+</text>
+<polyline points="3278.3,390.0 3278.3,2670.0" fill="none" stroke="#D9E2EC" stroke-width="3"/>
+<text x="3278.3" y="340.8" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="400" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3278.3" dy="0.0">15 h</tspan>
+</text>
+<text x="3880.0" y="300.3" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="31" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3880.0" dy="0.0">Mean duration</tspan>
+</text>
+<text x="1300.0" y="437.5" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="39" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="1300.0" dy="0.0">Persuasive</tspan>
+</text>
+<rect x="1420.0" y="410.0" width="2131.6" height="92.0" rx="14" fill="#2A9D8F" stroke="#2A9D8F" stroke-width="1"/>
+<text x="3575.6" y="439.9" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="3575.6" dy="0.0">17.2061 h</tspan>
+</text>
+<text x="3880.0" y="439.9" fill="#F4A261" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3880.0" dy="0.0">6.5202 s</tspan>
+</text>
+<text x="1300.0" y="632.5" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="39" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="1300.0" dy="0.0">Conditional</tspan>
+</text>
+<rect x="1420.0" y="605.0" width="1978.6" height="92.0" rx="14" fill="#3D7EA6" stroke="#3D7EA6" stroke-width="1"/>
+<text x="3422.6" y="634.9" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="3422.6" dy="0.0">15.9704 h</tspan>
+</text>
+<text x="3880.0" y="634.9" fill="#F4A261" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3880.0" dy="0.0">6.0519 s</tspan>
+</text>
+<text x="1300.0" y="827.5" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="39" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="1300.0" dy="0.0">Confirmation</tspan>
+</text>
+<rect x="1420.0" y="800.0" width="1832.9" height="92.0" rx="14" fill="#2A9D8F" stroke="#2A9D8F" stroke-width="1"/>
+<text x="3276.9" y="829.9" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="3276.9" dy="0.0">14.7951 h</tspan>
+</text>
+<text x="3880.0" y="829.9" fill="#F4A261" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3880.0" dy="0.0">5.6065 s</tspan>
+</text>
+<text x="1300.0" y="1022.5" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="39" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="1300.0" dy="0.0">Clarification</tspan>
+</text>
+<rect x="1420.0" y="995.0" width="1710.8" height="92.0" rx="14" fill="#3D7EA6" stroke="#3D7EA6" stroke-width="1"/>
+<text x="3154.8" y="1024.8" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="3154.8" dy="0.0">13.8089 h</tspan>
+</text>
+<text x="3880.0" y="1024.8" fill="#F4A261" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3880.0" dy="0.0">5.2328 s</tspan>
+</text>
+<text x="1300.0" y="1217.5" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="39" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="1300.0" dy="0.0">Scheduling</tspan>
+</text>
+<rect x="1420.0" y="1190.0" width="1624.5" height="92.0" rx="14" fill="#2A9D8F" stroke="#2A9D8F" stroke-width="1"/>
+<text x="3068.5" y="1219.8" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="3068.5" dy="0.0">13.1122 h</tspan>
+</text>
+<text x="3880.0" y="1219.8" fill="#F4A261" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3880.0" dy="0.0">4.9688 s</tspan>
+</text>
+<text x="1300.0" y="1412.5" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="39" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="1300.0" dy="0.0">Interrogative</tspan>
+</text>
+<rect x="1420.0" y="1385.0" width="1472.5" height="92.0" rx="14" fill="#3D7EA6" stroke="#3D7EA6" stroke-width="1"/>
+<text x="2916.5" y="1414.8" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="2916.5" dy="0.0">11.8858 h</tspan>
+</text>
+<text x="3880.0" y="1414.8" fill="#F4A261" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3880.0" dy="0.0">4.5041 s</tspan>
+</text>
+<text x="1300.0" y="1607.5" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="39" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="1300.0" dy="0.0">Declarative</tspan>
+</text>
+<rect x="1420.0" y="1580.0" width="1325.4" height="92.0" rx="14" fill="#2A9D8F" stroke="#2A9D8F" stroke-width="1"/>
+<text x="2769.4" y="1609.8" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="2769.4" dy="0.0">10.6981 h</tspan>
+</text>
+<text x="3880.0" y="1609.8" fill="#F4A261" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3880.0" dy="0.0">4.0540 s</tspan>
+</text>
+<text x="1300.0" y="1802.5" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="39" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="1300.0" dy="0.0">Rhetorical</tspan>
+</text>
+<rect x="1420.0" y="1775.0" width="1290.1" height="92.0" rx="14" fill="#3D7EA6" stroke="#3D7EA6" stroke-width="1"/>
+<text x="2734.1" y="1804.8" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="2734.1" dy="0.0">10.4137 h</tspan>
+</text>
+<text x="3880.0" y="1804.8" fill="#F4A261" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3880.0" dy="0.0">3.9463 s</tspan>
+</text>
+<text x="1300.0" y="1997.5" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="39" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="1300.0" dy="0.0">Negation</tspan>
+</text>
+<rect x="1420.0" y="1970.0" width="1168.5" height="92.0" rx="14" fill="#2A9D8F" stroke="#2A9D8F" stroke-width="1"/>
+<text x="2612.5" y="1999.8" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="2612.5" dy="0.0">9.4318 h</tspan>
+</text>
+<text x="3880.0" y="1999.8" fill="#F4A261" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3880.0" dy="0.0">3.5742 s</tspan>
+</text>
+<text x="1300.0" y="2192.5" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="39" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="1300.0" dy="0.0">Exclamatory</tspan>
+</text>
+<rect x="1420.0" y="2165.0" width="1120.2" height="92.0" rx="14" fill="#3D7EA6" stroke="#3D7EA6" stroke-width="1"/>
+<text x="2564.2" y="2194.8" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="2564.2" dy="0.0">9.0423 h</tspan>
+</text>
+<text x="3880.0" y="2194.8" fill="#F4A261" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3880.0" dy="0.0">3.4265 s</tspan>
+</text>
+<text x="1300.0" y="2387.5" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="39" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="1300.0" dy="0.0">Imperative</tspan>
+</text>
+<rect x="1420.0" y="2360.0" width="967.8" height="92.0" rx="14" fill="#2A9D8F" stroke="#2A9D8F" stroke-width="1"/>
+<text x="2411.8" y="2389.8" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="2411.8" dy="0.0">7.8119 h</tspan>
+</text>
+<text x="3880.0" y="2389.8" fill="#F4A261" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3880.0" dy="0.0">2.9603 s</tspan>
+</text>
+<text x="1420.0" y="2745.0" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="31" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="1420.0" dy="0.0">Total duration (hours); categories sorted descriptively by hours</tspan>
+</text>
+<polyline points="120.0,2895.0 4080.0,2895.0" fill="none" stroke="#D9E2EC" stroke-width="3"/>
+<text x="120.0" y="2917.7" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="120.0" dy="0.0">Source values: per_category_public.csv (release target only)</tspan>
+</text>
+<text x="4080.0" y="2917.2" fill="#C94C4C" font-family="DejaVu Sans, Arial, sans-serif" font-size="27" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="4080.0" dy="0.0">INTERNAL WORKING ARTWORK — NOT FOR SUBMISSION</tspan>
+</text>
+</svg>

@@ -1,0 +1,7 @@
+Subject,Computer Science
+Specific subject area,Automatic speech recognition and curated Indonesian read-speech data
+Type of data,Raw PCM WAV audio; processed TAR archives; UTF-8 CSV/TSV/JSON metadata and manifests; analyzed CSV source values; PNG/SVG figures; Python scripts
+Data collection,"Repository artifacts organize prompted recordings under 20 retained human public speaker labels and 11 functional categories. The audited build inspected 110,000 source WAVs, retained 19 numbered items per category, zero-padded filenames, and produced 104,500 files; 132 rows are flagged Edge-TTS repairs. Metadata records final audio as 16-kHz mono PCM16. Recruitment, equipment, session, and QC evidence remain open."
+Data source location,"Sriwijaya State Polytechnic, Palembang, Indonesia (provisional source-draft assertion)"
+Data accessibility,Private Hugging Face staging at revision 830a2069416707e3f38c06c507255889513cdf4b; not publicly accessible; licence recorded as other; persistent dataset DOI unavailable
+Related research article,"R. Atika, S. Dwijayanti, B.Y. Suprapto, Improving speech-to-text for the Indonesian language using a modified transformer, Eastern-European Journal of Enterprise Technologies 1(9 (139)) (2026) 78–90. https://doi.org/10.15587/1729-4061.2026.350949"

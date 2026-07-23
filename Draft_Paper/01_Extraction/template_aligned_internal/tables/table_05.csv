@@ -1,0 +1,5 @@
+Split,Human public labels,Files,Human recordings,Synthetic,Duration (h),Male-source files,Female-source files
+train,14,73150,73028,122,94.9437,31350,41800
+dev,3,15675,15667,8,20.2969,15675,0
+test,3,15675,15673,2,18.9357,15673,2
+Total,20,104500,104368,132,134.1762,62698,41802

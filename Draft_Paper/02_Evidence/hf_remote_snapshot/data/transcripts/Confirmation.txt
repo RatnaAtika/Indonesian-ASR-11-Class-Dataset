@@ -1,0 +1,20 @@
+01|Apakah data yang saya unggah sudah diterima?
+02|Tolong pastikan apakah instruksi yang saya berikan sudah dilaksanakan
+03|Apakah kamu yakin hasil ini sudah sesuai dengan pengaturan yang saya buat?
+04|Tolong pastikan apakah jadwal saya tidak bentrok dengan seminar yang akan datang.
+05|Apakah kamu sudah memperbarui jadwal kuliah saya sesuai dengan perubahan terbaru?
+06|Apakah kamu sudah mengupdate sistem e-Government dengan data terbaru?
+07|Tolong konfirmasi apakah saya sudah menerima umpan balik dari dosen mengenai tugas terakhir?
+08|Apakah kamu sudah memeriksa apakah semua dokumen yang diperlukan sudah saya serahkan?"
+09|Tolong pastikan apakah lampu di ruang tamu sudah dimatikan.
+10|Apakah kamu sudah menyiram tanaman seperti yang saya minta?
+11|Apakah kamu sudah memeriksa apakah makanan sudah siap disajikan?
+12|Apakah kamu sudah mengirimkan email pengumuman ke seluruh mahasiswa?
+13|Apakah kamu sudah mengunggah hasil akreditasi terbaru ke sistem pusat data?
+14|Apakah kamu sudah mengatur pencahayaan dan pendingin ruang auditorium?
+15|Apakah kamu sudah mengunggah informasi pelayanan publik ke website resmi?
+16|Bisakah kamu memastikan bahwa CCTV kantor berjalan dengan normal?
+17|Tolong konfirmasi apakah aplikasi layanan publik sudah tersedia untuk diakses warga.
+18|Apakah kamu sudah memproses data KTP elektronik warga Palembang yang mendaftar hari ini?
+19|Apakah kamu sudah menyiapkan laporan kegiatan gotong royong di Seberang Ulu?
+20|Tolong pastikan apakah semua CCTV di Jembatan Ampera berfungsi dengan baik

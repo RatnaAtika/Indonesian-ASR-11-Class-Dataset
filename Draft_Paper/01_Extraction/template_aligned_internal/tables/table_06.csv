@@ -1,0 +1,22 @@
+Dimension,Value,Files,Duration (s),% of release target,Note,Source / scope
+Total,Synthetic repairs,132,632.5200,0.1263,All rows must remain explicitly filterable; totals may change after mismatch disposition.,Release target
+Generation,Edge-TTS neural voices,132,,,Documented voice IDs: id-ID-ArdiNeural and id-ID-GadisNeural; [MATERIAL GAP: Edge-TTS version/date/configuration and redistribution-rights review].,Release target
+Generation assertion,No-cloning statement,,,,The source author draft states that speaker cloning was not used; an immutable generation log and technical confirmation remain pending.,Source-draft assertion; not a measured release-target count
+Voice source,Male-source,73,,,"Acoustic TTS voice source, not the sex/gender of a human participant.",Release target
+Voice source,Female-source,59,,,"Acoustic TTS voice source, not the sex/gender of a human participant.",Release target
+Split,train,122,,,Synthetic rows occur in this partition.,Release target
+Split,dev,8,,,Synthetic rows occur in this partition.,Release target
+Split,test,2,,,Synthetic rows occur in this partition.,Release target
+Category,Clarification,9,,,English public category name.,Release target
+Category,Conditional,16,,,English public category name.,Release target
+Category,Confirmation,29,,,English public category name.,Release target
+Category,Declarative,2,,,English public category name.,Release target
+Category,Exclamatory,3,,,English public category name.,Release target
+Category,Imperative,15,,,English public category name.,Release target
+Category,Interrogative,10,,,English public category name.,Release target
+Category,Negation,11,,,English public category name.,Release target
+Category,Persuasive,16,,,English public category name.,Release target
+Category,Rhetorical,17,,,English public category name.,Release target
+Category,Scheduling,4,,,English public category name.,Release target
+Mismatch,Female-source / male-target,2,11.7120,,Targets public label M8; [MATERIAL GAP: disposition of two female-source/male-target synthetic rows].,Release target / unresolved
+Filtering,is_synthetic and provenance fields,132,,,Users can exclude synthetic rows with is_synthetic and inspect source/target fields.,Release target

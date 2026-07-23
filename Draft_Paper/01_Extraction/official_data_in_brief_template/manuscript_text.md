@@ -1,0 +1,138 @@
+# Extracted manuscript — data-in-brief-article-template.docx
+
+data article template v.19 (December 2024)
+
+## AUTHOR INSTRUCTIONS
+
+• Please check that your dataset meets the criteria on our webpage What Data are Suitable for Data in Brief. Please also see our FAQ page, which introduces further Data in Brief article types.
+
+• Please fill in the template below. Note that we can only consider data articles submitted using this template. For help with preparing your manuscript, please also see our webinar on how to fill in the template, our Guide for Authors, and our step-by-step video guide on how to submit to Data in Brief.
+
+• Please be advised that parts of this template are locked for editing. The parts that are editable are highlighted in yellow. Please do not edit the template other than the section highlighted in yellow.
+
+• Brief instructions are in blue italics. Additional instructions appear in comment boxes to the right of the main text.
+
+• It is mandatory to publicly share your research data in a repository referred to in your Data in Brief article.
+
+• Before submitting your data article, please delete this page as well as all instructional text in blue italics and all comment boxes in this template.
+
+• For inspiration on how to complete the Data in Brief template, please find exemplary articles here.
+
+In case you still have questions, please email our Scientific Editors at: dib-me@elsevier.com.
+
+Please click here for a survey to share your anonymous feedback on this template and how it might be improved.
+
+## ARTICLE INFORMATION
+
+Article title
+
+The article title must include the word ‘data’ or ‘dataset’.
+
+Authors
+
+Please list all authors (first name(s) - last name) and mark the corresponding author with *.
+
+Affiliations
+
+Please include the full postal address of each author’s institution.
+
+Corresponding author’s email address and Twitter handle
+
+Please use your institutional email address. If you have one, please also add your Twitter handle here.
+
+Keywords
+
+Include 4-8 keywords, separated by semi-colons. Please do not repeat words used in your title.
+
+## Abstract
+
+The abstract should be 100 to 500 words long and describe the data collection process, the dataset, and its reuse potential. It should not provide conclusions or interpretations.
+
+## SPECIFICATIONS TABLE [Instruction for SPECIFICATIONS TABLE in comment box]
+
+### Extracted table 1
+
+| Subject |  |
+| --- | --- |
+| Specific subject area | Briefly describe the specific subject area. Max 150 characters (without spaces). |
+| Type of data | Please list your type(s) of data and data formats. Delete any description from the lists that does not apply. If your data type is not featured, please manually add it. Table, Image, Chart, Graph, Figure etc. Raw, Analyzed, Filtered, Processed etc. |
+| Data collection | Briefly describe how the data were collected. Please provide information on instruments you used (e.g., microscope, mass spectrometry, specific hardware or software etc., including relevant make/model details) as well as on methods used for collecting data or inclusion/exclusion criteria. You may also describe how the data were normalized. In case of questionnaires, please briefly describe the sources used to derive the question items. Max 600 characters (without spaces). |
+| Data source location | Please mention where the data were collected (e.g. geographical coordinates) or where the data are stored (typically your affiliation). |
+| Data accessibility | Please note: All raw data referred to in this article must be made publicly available in a data repository prior to publication. Please indicate here where your data are hosted (the URL must be working at the time of submission and editors and reviewers must have anonymous access to the repository): Repository name: … Data identification number: (or DOI or persistent identifier) Direct URL to data: … Instructions for accessing these data: … |
+| Related research article | If your manuscript supports a related research article, please cite this article here. If your manuscript is not related to a research article, please state ‘none’. You should list only one article here. Please upload a copy of your related research article to your submission. |
+
+## VALUE OF THE DATA
+
+This section states why these data are of value to the scientific community. Please provide between 3 and 6 bullet points and answer at least the questions below (delete the questions afterwards). Each bullet point should be a maximum of 150 words long, and should not include conclusions or inferences:
+
+Why are these data valuable?
+
+How can these data be reused by other researchers?
+
+…
+
+## BACKGROUND
+
+Please describe your original motivation and context behind compiling this dataset. For example, briefly include information on the theoretical or methodological background against which you generated the data. Do not make concluding, interpretive, or otherwise inferential statements about the dataset. In case your data article is related to an original research article, please briefly describe how the data article adds value to the published article (Max. 200 words).
+
+## DATA DESCRIPTION
+
+This section describes your dataset. Refer to all the data folders, subfolders, and files in the repository individually, irrespective of whether they relate to raw or analyzed data, and make sure that the reader can follow the structure of your dataset.
+
+Please use visual aids (such as tables, graphs, or figures with captions) to familiarize the reader with your dataset, but do not offer background, interpretations, or conclusions.
+
+## EXPERIMENTAL DESIGN, MATERIALS AND METHODS
+
+This section describes how you acquired the data. Provide a complete description of the experimental design and methods used to acquire these data. For example, include all code (files) and software used for data analysis or data generation, and describe tools, instruments, and experimental conditions.
+
+It is important that this section is as comprehensive as possible. There is no character limit, and you may use illustrative figures or tables; however, please do not offer background, interpretations, or conclusions.
+
+## LIMITATIONS
+
+Describe any limitations related to the data described in this article. These could be any problems you faced during data collection or curation, limited quality or size of dataset, data biases, etc., but should not include limitations of analysis conducted or interpretation (Max. 200 words).
+
+If there are none, please write ‘None’ or ‘Not applicable’.
+
+## ETHICS STATEMENT
+
+Data in Brief’s Guide for Authors contains detailed information on the ethical guidelines with which all authors must comply. In addition, we ask you to complete the relevant statement(s) below. Please delete those which are not relevant for your data.
+
+If your work involved human subjects, please include a statement here confirming that the relevant informed consent was obtained from those subjects, if the research was carried out in accordance with the Declaration of Helsinki, and if it includes the Ethical committee approval and the protocol number. A copy of the consent form (in English) can be submitted either in a data repository or under the section ‘Consent form’ while submitting the manuscript to the system.
+
+If your work involved animal experiments, please include a statement here confirming that those experiments complied with the ARRIVE guidelines and were carried out in accordance with the U.K. Animals (Scientific Procedures) Act, 1986 and associated guidelines; EU Directive 2010/63/EU for animal experiments; or the National Institutes of Health guide for the care and use of laboratory animals (NIH Publications No. 8023, revised 1978). Note, the sex of the animals must be indicated, and, where appropriate, the influence (or association) of sex on the results of the study.
+
+If your work involved data collected from social media platforms, please include a statement here confirming that a) informed consent was obtained from participants or that participant data has been fully anonymized, and b) the platform(s)’ data redistribution policies were complied with.
+
+If none of the above, please include a statement confirming that the authors have read and follow the ethical requirements for publication in Data in Brief and confirming that the current work does not involve human subjects, animal experiments, or any data collected from social media platforms.
+
+## CRediT AUTHOR STATEMENT
+
+Please outline the contributions of each co-author, using the categories listed on this webpage.
+
+## ACKNOWLEDGEMENTS
+
+In this section, mention all contributors who do not meet the criteria for authorship.
+
+In addition, please list any funding sources in this section. List funding sources in the standard way to facilitate compliance to funder's requirements.
+
+If no funding has been provided for the research, please include the following sentence:
+
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+## DECLARATION OF COMPETING INTERESTS
+
+Please choose one appropriate statement from below and delete the one that does not apply (if applicable, please specify the nature of your competing interests).
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+The authors declare the following financial interests/personal relationships which may be considered as potential competing interests:
+
+## REFERENCES
+
+In this section, please provide a numbered list of references. References are limited to a maximum of 20 and irrelevant self-citation is not allowed.
+
+Please format all in-text citations by number(s) in square brackets in line with the text. The actual authors can be referred to, but the reference number(s) must always be given.
+
+IMPORTANT: If your data article supports an original research article, please cite the associated article here; ideally, it should be the first citation.
+
+Please also make sure to cite your dataset in the data repository.

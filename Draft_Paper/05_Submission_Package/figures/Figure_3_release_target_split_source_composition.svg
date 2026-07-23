@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4200" height="3000" viewBox="0 0 4200 3000">
+<rect x="0" y="0" width="4200" height="3000" fill="#FFFFFF"/>
+<text x="2100.0" y="60.8" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="72" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="2100.0" dy="0.0">Release-target split and acoustic-source composition</tspan>
+</text>
+<text x="2100.0" y="166.9" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="38" font-weight="400" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="2100.0" dy="0.0">Human public IDs are split-disjoint; scripts and provider TTS voices are not guaranteed disjoint</tspan>
+</text>
+<rect x="120.0" y="330.0" width="1930.0" height="1040.0" rx="22" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="4"/>
+<rect x="2150.0" y="330.0" width="1930.0" height="1040.0" rx="22" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="4"/>
+<rect x="120.0" y="1470.0" width="1930.0" height="1100.0" rx="22" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="4"/>
+<rect x="2150.0" y="1470.0" width="1930.0" height="1100.0" rx="22" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="4"/>
+<text x="1085.0" y="364.1" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="1085.0" dy="0.0">A. Files and synthetic repairs</tspan>
+</text>
+<text x="3115.0" y="364.1" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3115.0" dy="0.0">B. Duration</tspan>
+</text>
+<text x="1085.0" y="1504.1" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="1085.0" dy="0.0">C. Human public speaker labels</tspan>
+</text>
+<text x="3115.0" y="1504.1" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle" dominant-baseline="hanging">
+<tspan x="3115.0" dy="0.0">D. Acoustic-source file labels</tspan>
+</text>
+<text x="385.0" y="493.3" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="385.0" dy="0.0">Train</tspan>
+</text>
+<rect x="420.0" y="475.0" width="1403.6" height="68.0" rx="12" fill="#2A9D8F" stroke="#2A9D8F" stroke-width="1"/>
+<text x="1841.6" y="495.2" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="29" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="1841.6" dy="0.0">73,150  (synthetic 122)</tspan>
+</text>
+<text x="385.0" y="770.0" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="385.0" dy="0.0">Dev</tspan>
+</text>
+<rect x="420.0" y="751.7" width="300.8" height="68.0" rx="12" fill="#3D7EA6" stroke="#3D7EA6" stroke-width="1"/>
+<text x="738.8" y="771.9" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="29" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="738.8" dy="0.0">15,675  (synthetic 8)</tspan>
+</text>
+<text x="385.0" y="1046.7" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="385.0" dy="0.0">Test</tspan>
+</text>
+<rect x="420.0" y="1028.3" width="300.8" height="68.0" rx="12" fill="#F4A261" stroke="#F4A261" stroke-width="1"/>
+<text x="738.8" y="1048.6" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="29" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="738.8" dy="0.0">15,675  (synthetic 2)</tspan>
+</text>
+<text x="2415.0" y="493.3" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="2415.0" dy="0.0">Train</tspan>
+</text>
+<rect x="2450.0" y="475.0" width="1457.4" height="68.0" rx="12" fill="#2A9D8F" stroke="#2A9D8F" stroke-width="1"/>
+<text x="3925.4" y="495.2" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="29" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="3925.4" dy="0.0">94.9437 h</tspan>
+</text>
+<text x="2415.0" y="770.0" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="2415.0" dy="0.0">Dev</tspan>
+</text>
+<rect x="2450.0" y="751.7" width="311.6" height="68.0" rx="12" fill="#3D7EA6" stroke="#3D7EA6" stroke-width="1"/>
+<text x="2779.6" y="771.9" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="29" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="2779.6" dy="0.0">20.2969 h</tspan>
+</text>
+<text x="2415.0" y="1046.7" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="2415.0" dy="0.0">Test</tspan>
+</text>
+<rect x="2450.0" y="1028.3" width="290.7" height="68.0" rx="12" fill="#F4A261" stroke="#F4A261" stroke-width="1"/>
+<text x="2758.7" y="1048.6" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="29" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="2758.7" dy="0.0">18.9357 h</tspan>
+</text>
+<text x="385.0" y="1633.3" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="385.0" dy="0.0">Train</tspan>
+</text>
+<rect x="420.0" y="1615.0" width="1343.1" height="68.0" rx="12" fill="#2A9D8F" stroke="#2A9D8F" stroke-width="1"/>
+<text x="1781.1" y="1635.2" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="29" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="1781.1" dy="0.0">14  (6 M / 8 F)</tspan>
+</text>
+<text x="385.0" y="1930.0" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="385.0" dy="0.0">Dev</tspan>
+</text>
+<rect x="420.0" y="1911.7" width="287.8" height="68.0" rx="12" fill="#3D7EA6" stroke="#3D7EA6" stroke-width="1"/>
+<text x="725.8" y="1931.9" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="29" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="725.8" dy="0.0">3  (3 M / 0 F)</tspan>
+</text>
+<text x="385.0" y="2226.7" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="385.0" dy="0.0">Test</tspan>
+</text>
+<rect x="420.0" y="2208.3" width="287.8" height="68.0" rx="12" fill="#F4A261" stroke="#F4A261" stroke-width="1"/>
+<text x="725.8" y="2228.6" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="29" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="725.8" dy="0.0">3  (3 M / 0 F)</tspan>
+</text>
+<text x="2415.0" y="1642.3" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="2415.0" dy="0.0">Train</tspan>
+</text>
+<rect x="2450.0" y="1620.0" width="660.0" height="76.0" rx="10" fill="#28527A" stroke="#28527A" stroke-width="1"/>
+<rect x="3110.0" y="1620.0" width="880.0" height="76.0" rx="10" fill="#F4A261" stroke="#F4A261" stroke-width="1"/>
+<text x="2450.0" y="1735.0" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="28" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="2450.0" dy="0.0">Male source 31,350 | Female source 41,800</tspan>
+</text>
+<text x="2415.0" y="1902.3" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="2415.0" dy="0.0">Dev</tspan>
+</text>
+<rect x="2450.0" y="1880.0" width="330.0" height="76.0" rx="10" fill="#28527A" stroke="#28527A" stroke-width="1"/>
+<text x="2450.0" y="1995.0" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="28" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="2450.0" dy="0.0">Male source 15,675 | Female source 0</tspan>
+</text>
+<text x="2415.0" y="2162.3" fill="#172B4D" font-family="DejaVu Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="2415.0" dy="0.0">Test</tspan>
+</text>
+<rect x="2450.0" y="2140.0" width="330.0" height="76.0" rx="10" fill="#28527A" stroke="#28527A" stroke-width="1"/>
+<circle cx="2780.0" cy="2178.0" r="10.0" fill="#F4A261" stroke="#F4A261" stroke-width="1"/>
+<text x="2450.0" y="2255.0" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="28" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="2450.0" dy="0.0">Male source 15,673 | Female source 2</tspan>
+</text>
+<text x="2450.0" y="2465.0" fill="#C94C4C" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="2450.0" dy="0.0">Development: 0 female-source files. Test: 2 female-source files, both synthetic and targeting M8.</tspan>
+</text>
+<text x="2450.0" y="2512.0" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="2450.0" dy="0.0">No natural female human speaker occurs in development or test; no gender-generalization inference.</tspan>
+</text>
+<polyline points="120.0,2895.0 4080.0,2895.0" fill="none" stroke="#D9E2EC" stroke-width="3"/>
+<text x="120.0" y="2917.7" fill="#52667A" font-family="DejaVu Sans, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="120.0" dy="0.0">Source values: per_split_public.csv and per_speaker_public.csv (release target only)</tspan>
+</text>
+<text x="4080.0" y="2917.2" fill="#C94C4C" font-family="DejaVu Sans, Arial, sans-serif" font-size="27" font-weight="700" text-anchor="end" dominant-baseline="hanging">
+<tspan x="4080.0" dy="0.0">INTERNAL WORKING ARTWORK — NOT FOR SUBMISSION</tspan>
+</text>
+</svg>
