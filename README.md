@@ -121,5 +121,18 @@ The test→aggregate chain is audited end-to-end (`training_conventional/reports
 ## 7. Notes & scope
 
 - Run all training in dedicated terminals; large audio/processed trees must not be recursively scanned by agents (see `AGENTS.md`).
-- This repository accompanies a dataset-focused manuscript; raw audio release, if any, follows a separate data-hosting route (e.g. Zenodo / HF Datasets), not git.
-- License/authorship: research artifact (Ratna 2026). The ViT-modified-ID architecture is first reported in this work.
+- The complete audio dataset is distributed through Hugging Face rather than GitHub because of its size.
+- Authorship: research artifact (Ratna 2026). The ViT-modified-ID architecture is first reported in this work.
+
+---
+
+## 8. License and public dataset access
+
+The Indonesian ASR 11-Class Dataset and the accompanying materials in this repository are openly licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license. You may share and adapt the materials for any purpose, including commercial use, provided that appropriate attribution is given and modifications are indicated.
+
+- **License file:** [`LICENSE`](LICENSE)
+- **Official license page:** [Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- **Full public dataset:** [Atika88/Indonesian-ASR-11-Class-Dataset](https://huggingface.co/datasets/Atika88/Indonesian-ASR-11-Class-Dataset)
+- **Citation metadata:** [`Draft_Paper/02_Evidence/hf_remote_snapshot/CITATION.cff`](Draft_Paper/02_Evidence/hf_remote_snapshot/CITATION.cff)
+
+When redistributing or adapting the dataset, retain the dataset name, creator attribution, repository URL, CC BY 4.0 notice, and an indication of any changes.
