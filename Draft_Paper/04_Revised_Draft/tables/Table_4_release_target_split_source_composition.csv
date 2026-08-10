@@ -1,5 +1,5 @@
 ﻿split,human_speakers,human_speaker_labels_male_female,files,human_recordings,synthetic_files,duration_hours,male_source_files,female_source_files,interpretation_note,scope
 train,14,6 / 8,73150,73028,122,94.9437,31350,41800,Six male-label and eight female-label natural human speakers; synthetic repairs are explicitly flagged.,Release target
-dev,3,3 / 0,15675,15667,8,20.2969,15675,0,Three male-label natural human speakers; zero female-source files and no natural female evaluation speaker.,Release target
+val,3,3 / 0,15675,15667,8,20.2969,15675,0,Three male-label natural human speakers; zero female-source files and no natural female evaluation speaker.,Release target
 test,3,3 / 0,15675,15673,2,18.9357,15673,2,"Three male-label natural human speakers; the two female-source files are synthetic, target M8, and remain an unresolved mismatch; no natural female evaluation speaker.",Release target
 Total,20,12 / 8,104500,104368,132,134.1762,62698,41802,Public labels are pseudonymous. [MATERIAL GAP: sex/gender label definition and provenance]. This partition is unsuitable for gender-balanced evaluation.,Release target

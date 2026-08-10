@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T21:36:49",
+  "generated_at": "2026-08-10T13:31:22",
   "purpose": "Small public HF upload staging package. Files are copies; original source folders are unchanged.",
   "small_file_limit_bytes": 10000000,
   "file_count": 25,
@@ -18,35 +18,35 @@
       "package_path": "Report_paper_9model/hf_upload_small_files/metadata/speaker_labels/speaker_anonymization_preparation_report.md",
       "hf_target_path": "metadata/speaker_labels/speaker_anonymization_preparation_report.md",
       "size_bytes": 1148,
-      "sha256": "354b4eb160ade2fd1e6e275a34720344b1f199c2653fbc1423cc986d0581408c"
+      "sha256": "bf38c91712036dcb294bf8da4298b345a95447e0505b4898420530c27998f26c"
     },
     {
       "source_path": "Report_paper_9model/hf_anonymization/speaker_id_public_inventory.csv",
       "package_path": "Report_paper_9model/hf_upload_small_files/metadata/speaker_labels/speaker_id_public_inventory.csv",
       "hf_target_path": "metadata/speaker_labels/speaker_id_public_inventory.csv",
       "size_bytes": 2544,
-      "sha256": "dbbd88d00d56150447536d1a1ab28fd1b6f924d3b32b997e059b27b76e41171f"
+      "sha256": "86bbc8df9eab762d558b4b85ac85d8e464781f92c53a36822a8de757622f24e1"
     },
     {
       "source_path": "Report_paper_9model/hf_anonymization/speaker_id_public_inventory.json",
       "package_path": "Report_paper_9model/hf_upload_small_files/metadata/speaker_labels/speaker_id_public_inventory.json",
       "hf_target_path": "metadata/speaker_labels/speaker_id_public_inventory.json",
       "size_bytes": 26395,
-      "sha256": "cabb2306ae17b7a96129db7a1b6645d36029c29c61c87d13f49e9767eb7e6928"
+      "sha256": "5b0063f7a9f46dab67fda483aea10b11da119eaa5d4960e6022f72255fbced0d"
     },
     {
       "source_path": "Report_paper_9model/hf_anonymization/speaker_label_gender_list.csv",
       "package_path": "Report_paper_9model/hf_upload_small_files/metadata/speaker_labels/speaker_label_gender_list.csv",
       "hf_target_path": "metadata/speaker_labels/speaker_label_gender_list.csv",
       "size_bytes": 916,
-      "sha256": "889cf07e14544d6a52b68c23da66169d01522105f410e59ef1be9ff5619048fd"
+      "sha256": "507fe0d0fc10bb1b07e934496c76912a9ee4d17a23944beb61388a40978665ea"
     },
     {
       "source_path": "Report_paper_9model/hf_anonymization/synthetic_repair_targets_public.csv",
       "package_path": "Report_paper_9model/hf_upload_small_files/metadata/speaker_labels/synthetic_repair_targets_public.csv",
       "hf_target_path": "metadata/speaker_labels/synthetic_repair_targets_public.csv",
       "size_bytes": 1018,
-      "sha256": "dbfd11eccdec1d12a7db2354ae94087962e5f15174a6d0ef0257745867905219"
+      "sha256": "f621a333ece490404bc1aaa7c2ab8017fc3b0aaad895b89618227e4965f311b2"
     },
     {
       "source_path": "Report_paper_9model/hf_dataset_information_public/README.md",
@@ -123,28 +123,28 @@
       "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/per_speaker_public.csv",
       "hf_target_path": "paper/dataset_information/per_speaker_public.csv",
       "size_bytes": 2331,
-      "sha256": "d6caefe5850e844a16cd68d33e87078f2b0974b5d216ff6b87e7bf0008bc402b"
+      "sha256": "b4782e1ef26218e34f9ec151e53a7f569caaffa3fa3640b06f47b3164c9462e4"
     },
     {
       "source_path": "Report_paper_9model/hf_dataset_information_public/per_split_public.csv",
       "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/per_split_public.csv",
       "hf_target_path": "paper/dataset_information/per_split_public.csv",
       "size_bytes": 226,
-      "sha256": "b6904b103ea6adcf40060c4a4debed81cca1fcd6a880b116d1719453c0747f69"
+      "sha256": "e67e78ac75291fd2b854e5394595d124a10071e4cb6fcc4e0d3820e362e8f18f"
     },
     {
       "source_path": "Report_paper_9model/hf_dataset_information_public/synthetic_data_stats_public.json",
       "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/synthetic_data_stats_public.json",
       "hf_target_path": "paper/dataset_information/synthetic_data_stats_public.json",
       "size_bytes": 5031,
-      "sha256": "0364393094f159d9b6b19dcd440904eb29fceb67a0f7531191b1b5b1045cfcdd"
+      "sha256": "7f15e39bcd3ff193f6cb3b084e917c153c79ac82c8b666f6f6fafe0549b7e35b"
     },
     {
       "source_path": "Report_paper_9model/hf_dataset_information_public/synthetic_repair_rows_public.csv",
       "package_path": "Report_paper_9model/hf_upload_small_files/paper/dataset_information/synthetic_repair_rows_public.csv",
       "hf_target_path": "paper/dataset_information/synthetic_repair_rows_public.csv",
       "size_bytes": 7136,
-      "sha256": "5633e065c82951cc704c5efc774b6b9c00c6680c7c5c8a0d509dfbf8a43fb478"
+      "sha256": "3ede703642cbe9901e414738a37fcc27a44feb287cbe389805a57d6221429645"
     },
     {
       "source_path": "Report_paper_9model/hf_dataset_information_public/word_frequency_public.csv",
@@ -158,7 +158,7 @@
       "package_path": "Report_paper_9model/hf_upload_small_files/docs/HF_DATASET_INFORMATION_SELECTION.md",
       "hf_target_path": "docs/HF_DATASET_INFORMATION_SELECTION.md",
       "size_bytes": 13401,
-      "sha256": "fd248960b00c708119fe915100207e9fb2966de35f8d08c357e1551edb147c68"
+      "sha256": "dd8e6106b4314ca0453ac6cd1c903101dad6a8159b4f996e38f1bf2d58260c34"
     },
     {
       "source_path": "Report_paper_9model/HF_DATASET_INFORMATION_FINAL_REPORT.md",
@@ -172,14 +172,14 @@
       "package_path": "Report_paper_9model/hf_upload_small_files/docs/hf_dataset_information_selection.csv",
       "hf_target_path": "docs/hf_dataset_information_selection.csv",
       "size_bytes": 10890,
-      "sha256": "3ef118858bba31f042378f3e1bf5368d8110a85630a5e2e465a611b967b9ce28"
+      "sha256": "28d40641617bce58a80ae6fc012a1caa7bc807a23e23b9d9db7daacd2fd46753"
     },
     {
       "source_path": "Report_paper_9model/hf_dataset_information_selection.json",
       "package_path": "Report_paper_9model/hf_upload_small_files/docs/hf_dataset_information_selection.json",
       "hf_target_path": "docs/hf_dataset_information_selection.json",
       "size_bytes": 17623,
-      "sha256": "0e526a86b9426b4c5694da671cd2d431f75c469f6df6d906f76ba56f1962b3a0"
+      "sha256": "6790eee638e8a09954393c5acdaad3de9b4de8f3f0f7ee6d9612b753618ac4ee"
     }
   ],
   "large_assets_to_upload_from_original_locations": [

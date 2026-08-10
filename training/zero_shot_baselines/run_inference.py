@@ -36,7 +36,7 @@ def parse_args():
     p.add_argument("--data-root", type=Path,
                    default=TRAINING_ROOT.parent / "Processed_Balanced19_v7_natural_synth" / "Dataset_Balanced19")
     p.add_argument("--data-final", type=Path, default=TRAINING_ROOT / "data_final")
-    p.add_argument("--split", default="test", choices=["test", "dev"])
+    p.add_argument("--split", default="test", choices=["test", "val"])
     p.add_argument("--max-samples", type=int, default=0)
     p.add_argument("--target-lang", default=None)
     p.add_argument("--language", default="indonesian")

@@ -5,7 +5,7 @@ Generation assertion,No-cloning statement,,,,The source author draft states that
 Voice source,Male-source,73,,,"Acoustic TTS voice source, not the sex/gender of a human participant.",Release target
 Voice source,Female-source,59,,,"Acoustic TTS voice source, not the sex/gender of a human participant.",Release target
 Split,train,122,,,Synthetic rows occur in this partition.,Release target
-Split,dev,8,,,Synthetic rows occur in this partition.,Release target
+Split,val,8,,,Synthetic rows occur in this partition.,Release target
 Split,test,2,,,Synthetic rows occur in this partition.,Release target
 Category,Clarification,9,,,English public category name.,Release target
 Category,Conditional,16,,,English public category name.,Release target

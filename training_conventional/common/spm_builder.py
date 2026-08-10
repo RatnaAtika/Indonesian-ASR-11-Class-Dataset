@@ -17,6 +17,11 @@ from pathlib import Path
 
 import sentencepiece as spm
 
+try:
+    from .split_compat import resolve_validation_tsv
+except ImportError:  # direct script execution
+    from split_compat import resolve_validation_tsv
+
 PROJECT = Path(__file__).parent.parent.parent
 DEFAULTS = {
     "splits_dir": PROJECT / "training" / "data_final",
@@ -48,12 +53,15 @@ def main():
     args = parse_args()
     args.out_dir.mkdir(parents=True, exist_ok=True)
     
-    # Build corpus from train + dev (not test, to avoid contamination)
+    # Build corpus from train + validation (not test, to avoid contamination)
     corpus_path = args.out_dir / "spm_corpus.txt"
     n_lines = 0
+    split_paths = (
+        ("train", args.splits_dir / "train.tsv"),
+        ("val", resolve_validation_tsv(args.splits_dir)),
+    )
     with corpus_path.open("w", encoding="utf-8") as out:
-        for split in ("train", "dev"):
-            tsv = args.splits_dir / f"{split}.tsv"
+        for split, tsv in split_paths:
             with tsv.open(encoding="utf-8") as f:
                 for r in csv.DictReader(f, delimiter="\t"):
                     txt = normalize_for_spm(r["transcript"])

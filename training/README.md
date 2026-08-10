@@ -32,7 +32,7 @@ training/
 ├── README.md                  # this file
 ├── README-RUN.md              # concrete run commands
 ├── SCALING.md                 # Colab Pro / Pro+ scaling plan
-├── data_final/                # frozen train/dev/test split TSVs (71792/15376/15376)
+├── data_final/                # frozen train/val/test split TSVs (71792/15376/15376)
 ├── common/
 │   ├── utils.py               # split loader, audio I/O, WER/CER, history, GPU monitor
 │   ├── whisper_trainer.py     # unified Whisper FT trainer (custom torch Dataset, no map())

@@ -82,7 +82,7 @@ These files are small, directly useful, and do not expose respondent names based
 | `reports/dataset_statistics_v7_paper9/README.md` | `paper/dataset_information/README_paper_clean_stats.md` | Explains statistics package and reproducibility commands. |
 | `reports/dataset_statistics_v7_paper9/stats/word_frequency.csv` | `paper/dataset_information/word_frequency.csv` | Word distribution requested by user; useful for LM/vocabulary analysis. |
 | `reports/dataset_statistics_v7_paper9/stats/per_category.csv` | `paper/dataset_information/per_category.csv` | Category balance, durations, and counts. |
-| `reports/dataset_statistics_v7_paper9/stats/per_split.csv` | `paper/dataset_information/per_split.csv` | Train/dev/test counts and duration summary. |
+| `reports/dataset_statistics_v7_paper9/stats/per_split.csv` | `paper/dataset_information/per_split.csv` | Train/val/test counts and duration summary. |
 | `reports/dataset_statistics_v7_paper9/stats/statistical_tests.csv` | `paper/dataset_information/statistical_tests.csv` | Compact statistical evidence. |
 | `reports/dataset_statistics_v7_paper9/synthetic_data_report/synthetic_per_category.csv` | `paper/dataset_information/synthetic_per_category.csv` | Synthetic disclosure by category. |
 | `Processed_Balanced19_v3/reports/build_summary.json` | `provenance/processed_balanced19_v3/build_summary.json` | Build counts; no detailed speaker-name paths. |

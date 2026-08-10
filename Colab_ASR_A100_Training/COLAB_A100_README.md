@@ -13,7 +13,7 @@ MyDrive/ASR_Colab_A100/
     Processed_Balanced19_v7_natural_synth/
       Dataset_Balanced19/         # upload dataset v7 yang sudah ada, satu kali saja
     training/
-      data_final/                 # train/dev/test TSV
+      data_final/                 # train/val/test TSV
   Results/                        # output training Colab disalin ke sini
 ```
 

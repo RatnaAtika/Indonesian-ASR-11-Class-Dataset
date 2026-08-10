@@ -20,6 +20,6 @@ Public inventory summary:
 - Human files represented: 104,368
 - Synthetic files represented: 132
 - Total files represented: 104,500
-- Human split speaker counts: train=14, dev=3, test=3
+- Human split speaker counts: train=14, val=3, test=3
 
 Private original-name crosswalks are not committed and must not be uploaded to Hugging Face.

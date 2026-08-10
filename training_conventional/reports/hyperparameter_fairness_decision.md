@@ -10,7 +10,7 @@
 
 **Tidak wajib identik. Yang wajib adalah *protokol* yang sama, bukan *angka* yang sama.** Untuk paper dataset, jawaban yang defensible di mata reviewer adalah:
 
-1. **Samakan yang menentukan keadilan data:** split train/dev/test (frozen), fitur, tokenizer, decoding (greedy, no-LM), metrik, dan **kriteria penghentian** (mis. early-stopping patience yang sama).
+1. **Samakan yang menentukan keadilan data:** split train/val/test (frozen), fitur, tokenizer, decoding (greedy, no-LM), metrik, dan **kriteria penghentian** (mis. early-stopping patience yang sama).
 2. **Boleh berbeda yang merupakan sifat alami arsitektur:** jumlah epoch, learning rate, batch size, scheduler — selama dipilih agar **tiap model mencapai konvergensi-nya sendiri** dan dijustifikasi.
 3. **Whisper 5 epoch BUKAN ketidakadilan** — itu konvensi fine-tuning model pretrained besar (30 epoch = overfit pasti). Reviewer menerima ini bila dijelaskan.
 4. **HMM-GMM 100 "epoch" boleh**, tapi hati-hati: untuk HMM itu *EM iteration*, bukan gradient epoch, dan ia konvergen ~10–25 iter. Menaikkan ke 100 hampir tidak mengubah hasil (lihat §4). Yang lebih penting bukan "lebih banyak epoch untuk yang lemah", melainkan **"cukup epoch sampai konvergen untuk semua"**.

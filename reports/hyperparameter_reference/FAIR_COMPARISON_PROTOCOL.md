@@ -60,7 +60,7 @@ Argumentasi ilmiah:
 
 ### 2.1 Aturan utama (semua model wajib mengikuti)
 
-- **Train / dev / test split**: identik 71,792 / 15,376 / 15,376 (frozen v7)
+- **Train / val / test split**: identik 71,792 / 15,376 / 15,376 (frozen v7)
 - **Audio features**: log-mel 80-bin, 25 ms window, 10 ms hop, pre-emphasis 0.97,
   per-utterance mean-var normalization (CMVN)
 - **Tokenizer**: SentencePiece char 400-vocab (`spm_v7_char.model`) untuk

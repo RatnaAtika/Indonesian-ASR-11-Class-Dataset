@@ -126,12 +126,12 @@ Jangan langsung bayar 2 hari A100. Lakukan probe 15-60 menit:
 
 ### Dataset/split aktual
 
-Dihitung dari `training/data_final/{train,dev,test}.tsv`:
+Dihitung dari `training/data_final/{train,val,test}.tsv`:
 
 | Split | Rows | Durasi audio | Estimasi WAV bytes |
 |---|---:|---:|---:|
 | train | 71,792 | 92.4882 jam | 9.93 GiB |
-| dev | 15,376 | 19.7412 jam | 2.12 GiB |
+| val | 15,376 | 19.7412 jam | 2.12 GiB |
 | test | 15,376 | 18.4254 jam | 1.98 GiB |
 | total unik | 102,544 file | 130.6548 jam | 14.02 GiB / 15.06 GB |
 
@@ -472,7 +472,7 @@ print('torchaudio', torchaudio.__version__)
 print('transformers', transformers.__version__)
 PY
 
-wc -l training/data_final/train.tsv training/data_final/dev.tsv training/data_final/test.tsv
+wc -l training/data_final/train.tsv training/data_final/val.tsv training/data_final/test.tsv
 # expected including header: 71793, 15377, 15377
 ```
 
@@ -612,7 +612,7 @@ Global evidence:
 - [ ] PyTorch, CUDA, torchaudio, transformers versions.
 - [ ] `pip freeze` / conda export.
 - [ ] Dataset root path.
-- [ ] Split counts: train/dev/test = 71,792 / 15,376 / 15,376 rows excluding header.
+- [ ] Split counts: train/val/test = 71,792 / 15,376 / 15,376 rows excluding header.
 - [ ] Hash TSV split files.
 - [ ] Whether `data_pkl/` was transferred or rebuilt.
 

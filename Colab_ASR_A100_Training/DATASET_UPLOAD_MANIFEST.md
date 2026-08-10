@@ -18,7 +18,7 @@ Expected dataset:
 
 ```text
 train rows: 71,792
- dev rows : 15,376
+ val rows : 15,376
 test rows : 15,376
 total rows: 102,544
 WAV files : 104,500

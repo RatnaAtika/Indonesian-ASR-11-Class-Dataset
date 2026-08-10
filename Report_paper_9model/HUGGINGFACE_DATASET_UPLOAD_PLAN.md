@@ -31,7 +31,7 @@ Recommended visibility now: **private**. Change to public only after the paper i
 | Final processed ASR dataset | `Processed_Balanced19_v3/Dataset_Balanced19/` | about 16 GB | `data/processed_balanced19_v3/` | Primary public dataset used for paper experiments |
 | Final transcripts | `Processed_Balanced19_v3/Transkrip_ASR_Jurnal_Dataset/` | small | `data/transcripts/` | Text references for 11 sentence classes |
 | Final metadata CSV/JSON | `metadata/dataset_metadata_clean.csv`, `metadata/dataset_metadata_summary.json`, `metadata/dataset_metadata.csv` | about 40 MB each CSV | `metadata/` | Required for sample-level provenance and reuse |
-| Final split files | `splits/split_assignment.csv`, `splits/split_summary.json`, `splits/split_summary.md` | small | `splits/` | Required to reproduce train/dev/test protocol |
+| Final split files | `splits/split_assignment.csv`, `splits/split_summary.json`, `splits/split_summary.md` | small | `splits/` | Required to reproduce train/val/test protocol |
 | Final benchmark report package | `Report_paper_9model/benchmark/`, `tables/`, `data/`, `manuscript/`, `appendices/` | moderate | `paper/Report_paper_9model/` | Paper evidence and final 9-model benchmark tables |
 | Final model artifacts | `Report_paper_9model/model_artifacts/rank*/best_artifact/` | about 1.26 GB total | `models/final_9model_benchmark/rank*/best_artifact/` | Best checkpoints/model files not suitable for GitHub |
 | Full run outputs, including skipped large predictions | final run `test_results/predictions.csv` plus existing `model_artifacts/rank*/run_outputs/` | about 23.4 MB for 9 predictions CSVs + small outputs | `models/final_9model_benchmark/rank*/run_outputs/` | Exact per-sample predictions used in benchmark |
@@ -50,7 +50,7 @@ Recommended visibility now: **private**. Change to public only after the paper i
 
 ### Do not upload
 
-- Incomplete/dev/smoke/interrupted training runs.
+- Incomplete/development/smoke/interrupted training runs.
 - Non-best checkpoints already deleted from local cleanup scope.
 - Feature caches or temporary preprocessing caches.
 - Local notebooks with private credentials or machine-specific paths unless scrubbed.
@@ -145,7 +145,7 @@ Use these as hard gates before upload:
 4. Upload all 9 `predictions.csv` files that GitHub skipped because each exceeded 1 MB.
 5. Upload best artifacts only, not intermediate checkpoints.
 6. Preserve checksums for every uploaded file in `upload_manifest.json` and `upload_manifest.csv`.
-7. Do not change split assignment: seed 42, train/dev/test speakers exactly as in `splits/split_summary.json`.
+7. Do not change split assignment: seed 42, train/val/test speakers exactly as in `splits/split_summary.json`.
 8. Dataset-information uploads must follow `Report_paper_9model/HF_DATASET_INFORMATION_SELECTION.md`; do not upload files with original respondent names unless regenerated/anonymized.
 9. Clearly label whether each statistics artifact describes the 104,500-file full HF dataset or the 102,544-file paper-clean statistics subset.
 
@@ -163,17 +163,17 @@ From local metadata:
 - Split seed: 42
 - Public human split speaker labels after anonymization:
   - train: M1, M2, M6, M7, M8, M10, F1, F2, F3, F4, F5, F6, F8, F9
-  - dev: M3, M5, M9
+  - val: M3, M5, M9
   - test: M4, M11, F7
 - Public synthetic repair labels use `Ms*`/`Fs*`, assigned alphabetically by original repair target within gender.
 - Synthetic repair labels currently present: Ms1..Ms9 and Fs1..Fs9.
 - Files by split:
   - train: 73,150
-  - dev: 15,675
+  - val: 15,675
   - test: 15,675
 - Duration by split:
   - train: 94.9437 h
-  - dev: 20.2969 h
+  - val: 20.2969 h
   - test: 18.9357 h
 - Primary processed package size: about 16 GB
 - Raw/original package size: about 17 GB
@@ -388,7 +388,7 @@ The HF `README.md` should contain:
 1. Dataset title and short description.
 2. Private-staging warning while paper is under review.
 3. Dataset composition: 104,500 utterances, 11 classes, 20 speakers.
-4. Split protocol: speaker-disjoint train/dev/test, seed 42.
+4. Split protocol: speaker-disjoint train/val/test, seed 42.
 5. File structure and how to load audio/metadata.
 6. Benchmark summary with link to `paper/Report_paper_9model/benchmark/benchmark.json`.
 7. Model artifact section explaining all 9 best checkpoints are under `models/final_9model_benchmark/`.

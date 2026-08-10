@@ -55,7 +55,7 @@ The template-based DOCX embeds the seven-row Specifications Table, numbered Tabl
 |---|---:|---:|
 | Files | 104,500 | 102,544 |
 | Duration | 134.1762 h | 130.6548 h |
-| Train/dev/test | 73,150 / 15,675 / 15,675 | 71,792 / 15,376 / 15,376 |
+| Train/val/test | 73,150 / 15,675 / 15,675 | 71,792 / 15,376 / 15,376 |
 | Distinct `(category, sentence_id)` pairs | 213 | 209 |
 | Transcript state | Repaired private HF staging has zero blanks | Frozen before repair; excludes 1,956 rows |
 | Intended use in article | Corpus description | Nine-model technical validation |
@@ -94,7 +94,7 @@ The template-based DOCX embeds the seven-row Specifications Table, numbered Tabl
 
 **Source:** `synthetic_data_stats_public.json` and public repair-row manifest.
 
-**Rows/blocks:** total and percentage, duration, provider/voices, male/female source counts, train/dev/test counts, category counts, source-draft no-cloning assertion with technical-confirmation status, filtering field, and mismatch status.
+**Rows/blocks:** total and percentage, duration, provider/voices, male/female source counts, train/val/test counts, category counts, source-draft no-cloning assertion with technical-confirmation status, filtering field, and mismatch status.
 
 **Gate:** finalize only after authors decide whether to regenerate, exclude, or retain the two mismatch rows. Any changed data require regenerated totals and tables.
 

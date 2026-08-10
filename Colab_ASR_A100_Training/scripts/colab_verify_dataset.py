@@ -15,7 +15,7 @@ def main():
     if not args.data_final.exists(): raise SystemExit(f'missing data-final: {args.data_final}')
     total=0; miss=0
     t0=time.perf_counter()
-    for split in ['train','dev','test']:
+    for split in ['train','val','test']:
         p=args.data_final/f'{split}.tsv'
         n=0; m=0; dur=0.0
         with p.open(encoding='utf-8') as f:

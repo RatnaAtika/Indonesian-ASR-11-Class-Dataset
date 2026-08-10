@@ -27,6 +27,11 @@ import soundfile as sf
 import librosa
 import sentencepiece as spm
 
+try:
+    from .split_compat import resolve_validation_tsv
+except ImportError:  # direct script execution
+    from split_compat import resolve_validation_tsv
+
 PROJECT = Path(__file__).parent.parent.parent
 
 DEFAULTS = {
@@ -141,7 +146,7 @@ def main():
     
     splits = [
         ("train", args.splits_dir / "train.tsv", args.max_train, "train.pkl"),
-        ("valid", args.splits_dir / "dev.tsv",   args.max_val,   "valid.pkl"),
+        ("valid", resolve_validation_tsv(args.splits_dir), args.max_val, "valid.pkl"),
         ("test",  args.splits_dir / "test.tsv",  args.max_test,  "test.pkl"),
     ]
     

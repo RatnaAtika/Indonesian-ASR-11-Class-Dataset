@@ -18,7 +18,7 @@ NSS-ID is a release-target Indonesian closed-prompt read-speech corpus organized
 | Duration | 134.1762 h | 130.6548 h |
 | Human recordings | 104,368 | 102,412 |
 | Synthetic recordings | 132 | 132 |
-| Train/dev/test | 73,150 / 15,675 / 15,675 | 71,792 / 15,376 / 15,376 |
+| Train/val/test | 73,150 / 15,675 / 15,675 | 71,792 / 15,376 / 15,376 |
 | Category–sentence pairs | 213 | 209 |
 | Purpose | Intended dataset release and full-corpus description | Nine-model technical validation |
 

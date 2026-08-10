@@ -25,6 +25,7 @@ from torch.utils.data import Dataset
 TRAINING_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(TRAINING_ROOT))
 
+from common.split_compat import resolve_validation_tsv
 from common.utils import (
     compute_wer_cer, HistorySaver, regenerate_plots, GPUMonitor, EpochTimer,
     format_epoch_log, cer_to_token_acc_proxy, save_run_meta, unique_run_dir,
@@ -186,7 +187,7 @@ def main() -> int:
     
     print("[whisper-trainer] loading splits ...")
     train_rows = load_split_rows(args.data_final / "train.tsv", args.data_root, args.max_train_samples)
-    val_rows = load_split_rows(args.data_final / "dev.tsv", args.data_root, args.max_val_samples)
+    val_rows = load_split_rows(resolve_validation_tsv(args.data_final), args.data_root, args.max_val_samples)
     print(f"  train: {len(train_rows)}, val: {len(val_rows)}")
     
     train_ds = WhisperASRDataset(train_rows, processor)

@@ -18,6 +18,8 @@ from typing import Iterable
 
 from PIL import Image, ImageDraw, ImageFont
 
+from split_schema import canonical_split
+
 ROOT = Path(__file__).resolve().parent
 METADATA = ROOT / "metadata" / "dataset_metadata.csv"
 SPLITS = ROOT / "splits" / "split_summary.json"
@@ -62,7 +64,11 @@ def read_rows() -> list[dict[str, str]]:
 
 def split_by_original() -> dict[str, str]:
     data = json.loads(SPLITS.read_text(encoding="utf-8"))
-    return {speaker: split for split, speakers in data["speakers_by_split"].items() for speaker in speakers}
+    return {
+        speaker: canonical_split(split)
+        for split, speakers in data["speakers_by_split"].items()
+        for speaker in speakers
+    }
 
 
 def make_labels(rows: list[dict[str, str]]):
@@ -175,7 +181,7 @@ def main() -> None:
     write_csv(OUT/"per_category_public.csv", pc_rows, ["category","file_count","duration_sec","duration_hours","synthetic_files","mean_duration_sec"])
 
     split_rows=[]
-    for split in ["train","dev","test"]:
+    for split in ["train","val","test"]:
         v=per_split[split]; split_rows.append({"split":split,"file_count":int(v["file_count"]),"duration_sec":round(v["duration_sec"],4),"duration_hours":round(v["duration_sec"]/3600,4),"synthetic_files":int(v["synthetic_files"]),"male_source_files":int(v["male_source_files"]),"female_source_files":int(v["female_source_files"])})
     write_csv(OUT/"per_split_public.csv", split_rows, ["split","file_count","duration_sec","duration_hours","synthetic_files","male_source_files","female_source_files"])
 
@@ -213,7 +219,7 @@ def main() -> None:
         "source": "metadata/dataset_metadata.csv",
         "synthetic_files_total": len(synth_rows),
         "by_synthetic_voice_gender": dict(Counter(r["speaker_gender"] for r in synth_rows)),
-        "by_split": {split: sum(1 for r in synth_rows if r["split"] == split) for split in ["train", "dev", "test"]},
+        "by_split": {split: sum(1 for r in synth_rows if r["split"] == split) for split in ["train", "val", "test"]},
         "by_category": {cat: sum(1 for r in synth_rows if r["category"] == cat) for cat in CATEGORIES},
         "voice_target_gender_mismatch_files": sum(1 for r in synth_rows if r["voice_gender_matches_target"] == "False"),
         "repair_targets": [

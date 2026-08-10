@@ -14,12 +14,15 @@ import hashlib
 import html
 import json
 import math
+import sys
 import textwrap
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+from split_schema import canonical_split
 DEFAULT_OUTPUT = ROOT / "Draft_Paper" / "04_Revised_Draft" / "figures"
 CATEGORY_PATH = ROOT / "Report_paper_9model" / "hf_dataset_information_public" / "per_category_public.csv"
 SPLIT_PATH = ROOT / "Report_paper_9model" / "hf_dataset_information_public" / "per_split_public.csv"
@@ -68,7 +71,11 @@ def sha256_file(path: Path) -> str:
 
 def load_csv(path: Path) -> list[dict[str, str]]:
     with path.open(newline="", encoding="utf-8-sig") as handle:
-        return list(csv.DictReader(handle))
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        if row.get("split"):
+            row["split"] = canonical_split(row["split"])
+    return rows
 
 
 class DualCanvas:
@@ -334,7 +341,8 @@ def build_figure_3(output: Path, splits: list[dict[str, str]], speakers: list[di
     canvas.panel_title(panels["speakers"], "C. Human public speaker labels")
     canvas.panel_title(panels["sources"], "D. Acoustic-source file labels")
 
-    labels = [row["split"].title() for row in splits]
+    display_split = {"train": "Train", "val": "Validation", "test": "Test"}
+    labels = [display_split[row["split"]] for row in splits]
     colors = [TEAL, BLUE, ORANGE]
     panel_bar(
         canvas,
@@ -356,15 +364,15 @@ def build_figure_3(output: Path, splits: list[dict[str, str]], speakers: list[di
     )
 
     human = [row for row in speakers if row["speaker_type"].lower() == "human"]
-    counts: dict[str, dict[str, int]] = {split: {"Male": 0, "Female": 0} for split in ("train", "dev", "test")}
+    counts: dict[str, dict[str, int]] = {split: {"Male": 0, "Female": 0} for split in ("train", "val", "test")}
     for row in human:
         counts[row["split"]][row["speaker_gender"]] += 1
     panel_bar(
         canvas,
         panels["speakers"],
         labels,
-        [sum(counts[split].values()) for split in ("train", "dev", "test")],
-        [f"{sum(counts[split].values())}  ({counts[split]['Male']} M / {counts[split]['Female']} F)" for split in ("train", "dev", "test")],
+        [sum(counts[split].values()) for split in ("train", "val", "test")],
+        [f"{sum(counts[split].values())}  ({counts[split]['Male']} M / {counts[split]['Female']} F)" for split in ("train", "val", "test")],
         16,
         colors,
     )
@@ -378,7 +386,7 @@ def build_figure_3(output: Path, splits: list[dict[str, str]], speakers: list[di
         male = int(row["male_source_files"])
         female = int(row["female_source_files"])
         total = int(row["file_count"])
-        canvas.text((left - 35, y + 38), row["split"].title(), 33, bold=True, anchor="rm")
+        canvas.text((left - 35, y + 38), display_split[row["split"]], 33, bold=True, anchor="rm")
         total_width = (total / max_files) * (right - left)
         male_width = (male / total) * total_width if total else 0
         female_width = total_width - male_width

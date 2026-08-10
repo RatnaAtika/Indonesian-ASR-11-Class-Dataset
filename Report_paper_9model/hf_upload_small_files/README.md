@@ -1,6 +1,6 @@
 # HF Upload Small Files Package
 
-Generated: 2026-06-17T21:36:49
+Generated: 2026-08-10T13:31:22
 
 This folder is a tidy, copy-only staging package for small public artifacts that should be uploaded to Hugging Face.
 

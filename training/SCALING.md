@@ -6,7 +6,7 @@ m05), move to managed GPU. The trainers were designed to scale **without code ch
 
 ---
 
-## Tier comparison (full dataset: 71,792 train / 15,376 dev / 15,376 test)
+## Tier comparison (full dataset: 71,792 train / 15,376 val / 15,376 test)
 
 | Tier | GPU | VRAM | Cost/h (USD) | Speed vs RTX 4060 | m02 full ETA |
 |------|-----|------|--------------|-------------------|--------------|

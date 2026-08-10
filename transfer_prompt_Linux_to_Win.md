@@ -69,7 +69,7 @@ Dataset v7 valid:
 
 ```text
 train rows = 71,792
- dev rows = 15,376
+ val rows = 15,376
 test rows = 15,376
 total rows = 102,544
 WAV files = 104,500
@@ -299,14 +299,14 @@ Cek dataset lokal Windows tidak perlu diduplikasi:
 
 ```bash
 ls "Processed_Balanced19_v7_natural_synth/Dataset_Balanced19" | head
-wc -l training/data_final/train.tsv training/data_final/dev.tsv training/data_final/test.tsv
+wc -l training/data_final/train.tsv training/data_final/val.tsv training/data_final/test.tsv
 ```
 
 Expected TSV line counts termasuk header:
 
 ```text
 71793 train.tsv
-15377 dev.tsv
+15377 val.tsv
 15377 test.tsv
 ```
 

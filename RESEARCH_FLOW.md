@@ -23,7 +23,7 @@ Dokumen ini adalah peta jalan riset khusus untuk sub-proyek **`Paper_Datatset_SO
 
 1. **Metadata pusat** (CSV/JSON) sesuai *Datasheets for Datasets* (Gebru et al., 2018).
 2. **Datasheet** lengkap (motivation, composition, collection, recommended uses, distribution, maintenance).
-3. **Split resmi** train/dev/test yang **speaker-disjoint** (mencegah kebocoran identitas).
+3. **Split resmi** train/val/test yang **speaker-disjoint** (mencegah kebocoran identitas).
 4. **Baseline benchmark** terstandar (Whisper {tiny, base, small, medium, large-v3}, MMS, wav2vec2-XLS-R, Indonesian-wav2vec2; zero-shot vs fine-tuned).
 5. **Ablation** (efek 11 kategori, efek per-speaker, efek panjang ujaran).
 6. **Lisensi & informed-consent artefak** (LICENSE, CONSENT_FORM, Mintarsih et al. style).
@@ -105,7 +105,7 @@ Setiap fase punya: (a) **input**, (b) **skill yang dipanggil**, (c) **output art
 |---|---|
 | Input | metadata CSV |
 | Skill | `superpowers-suite` (test-driven-development), `autoresearch-suite` (sanity loop) |
-| Output | `splits/train.tsv` · `splits/dev.tsv` · `splits/test.tsv` (rasio 14 / 3 / 3 speaker; **TIDAK BOLEH** ada speaker yang muncul di >1 split) · `splits/split_report.md` |
+| Output | `splits/train.tsv` · `splits/val.tsv` · `splits/test.tsv` (rasio 14 / 3 / 3 speaker; **TIDAK BOLEH** ada speaker yang muncul di >1 split) · `splits/split_report.md` |
 | Gate | `pytest tests/test_splits.py` lulus: (i) speaker-disjoint, (ii) tiap split punya semua 11 kategori, (iii) leakage check via filename hash |
 
 ### Fase 3 — Baseline benchmark zero-shot (1 hari, GPU-bound)
@@ -131,10 +131,10 @@ Kandidat model (HF Transformers, evaluasi `transcribe` + `lang=id`):
 
 | | |
 |---|---|
-| Input | `splits/train.tsv` + `dev.tsv` |
+| Input | `splits/train.tsv` + `val.tsv` |
 | Skill | `autoresearch-suite` (kalau metric WER turun → keep, kalau naik → discard), `superpowers-suite` (TDD test pipeline) |
 | Output | Checkpoint Hugging Face (`models/whisper-small-id-finetuned/`, `models/wav2vec2-xls-r-300m-id-finetuned/`) · `benchmarks/finetuned/results.csv` · `ablations/{kategori_drop,length_bin,speaker_dropout}.csv` · grafik WER vs jumlah jam pelatihan |
-| Gate | Fine-tuned ≥ 10 % relative WER reduction vs zero-shot pada dev split, dan tidak overfit (dev/test ratio ≤ 1.05) |
+| Gate | Fine-tuned ≥ 10 % relative WER reduction vs zero-shot pada val split, dan tidak overfit (val/test ratio ≤ 1.05) |
 
 > Knob ablation: (i) train tanpa kategori X (uji generalisasi pragmatik), (ii) train hanya 10/14 speaker, (iii) train dengan augment pitch/noise/RIR.
 
@@ -215,7 +215,7 @@ Paper_Datatset_SOTA/
 │   ├── audio_audit.json
 │   └── anonymization_map.csv      ← terenkripsi, .gitignored
 ├── splits/                        ← BARU
-│   ├── train.tsv  dev.tsv  test.tsv
+│   ├── train.tsv  val.tsv  test.tsv
 │   └── split_report.md
 ├── benchmarks/                    ← BARU
 │   ├── zeroshot/{model_id}/...
@@ -239,7 +239,7 @@ Eksekusi berurutan, tiap langkah punya verifikasi sendiri (`superpowers-suite/ve
 
 1. **Build metadata CSV** — tulis `bench/build_metadata_csv.py`, jalankan, hasil `metadata/dataset_metadata.csv` (104 500 baris).
 2. **Audit format audio** — pastikan semua 16 kHz mono 16-bit; tulis WARN ke `metadata/audio_audit.json`.
-3. **Buat split speaker-disjoint** — `bench/build_splits.py --train 14 --dev 3 --test 3 --seed 42`. Komit `splits/`.
+3. **Buat split speaker-disjoint** — `bench/build_splits.py --train 14 --val 3 --test 3 --seed 42`. Komit `splits/`.
 4. **Tulis test pytest** — `tests/test_splits.py` (no leakage), `tests/test_metadata.py` (schema valid). `pytest -q` lulus.
 5. **Smoke benchmark** — `python bench/run_benchmark.py --model openai/whisper-small --split test --max-files 200`. Pastikan `wer < 0.30`.
 6. **Bumping skrip lama** — refactor `verify_paper_dataset_sota_whisper.py` agar memakai metric `evaluate.load("wer")` selain `SequenceMatcher`, jangan dihapus skrip lamanya (ada `superpowers-suite/finishing-a-development-branch` saat siap merge).

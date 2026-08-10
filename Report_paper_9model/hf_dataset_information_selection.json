@@ -121,7 +121,7 @@
       "source_path": "reports/dataset_statistics_v7_paper9/stats/per_split.csv",
       "hf_target_path": "paper/dataset_information/per_split.csv",
       "decision": "superseded_by_full_scope_public_package",
-      "reason": "Train/dev/test summary",
+      "reason": "Train/val/test summary",
       "privacy_action": "use Report_paper_9model/hf_dataset_information_public equivalent for HF public upload"
     },
     {

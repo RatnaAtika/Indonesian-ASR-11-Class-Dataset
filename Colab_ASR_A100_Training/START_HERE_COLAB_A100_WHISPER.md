@@ -151,10 +151,10 @@ Expected: kosong atau tidak ada file berat.
 Cek dataset lokal Windows jika perlu upload/verifikasi:
 
 ```bash
-wc -l training/data_final/train.tsv training/data_final/dev.tsv training/data_final/test.tsv
+wc -l training/data_final/train.tsv training/data_final/val.tsv training/data_final/test.tsv
 # expected dengan header:
 # 71793 train.tsv
-# 15377 dev.tsv
+# 15377 val.tsv
 # 15377 test.tsv
 ```
 
@@ -361,7 +361,7 @@ Di Colab:
 
 ```bash
 !source /content/asr_work/colab_env.sh && echo $REPO && echo $DATA_ROOT && echo $DATA_FINAL
-!source /content/asr_work/colab_env.sh && cd "$REPO" && wc -l "$DATA_FINAL/train.tsv" "$DATA_FINAL/dev.tsv" "$DATA_FINAL/test.tsv"
+!source /content/asr_work/colab_env.sh && cd "$REPO" && wc -l "$DATA_FINAL/train.tsv" "$DATA_FINAL/val.tsv" "$DATA_FINAL/test.tsv"
 !du -sh /content/asr_data || true
 !source /content/asr_work/colab_env.sh && cd "$REPO" && python3 Colab_ASR_A100_Training/scripts/colab_verify_dataset.py --data-root "$DATA_ROOT" --data-final "$DATA_FINAL" --quick 1000
 ```
@@ -376,7 +376,7 @@ Expected line counts:
 
 ```text
 71793 train.tsv
-15377 dev.tsv
+15377 val.tsv
 15377 test.tsv
 ```
 
@@ -730,5 +730,5 @@ git status --short --ignored | grep -E 'best_model|checkpoints|safetensors|\.pt|
 ## 20. Prompt singkat untuk operator Colab
 
 ```text
-Buka Colab_ASR_A100_Training/notebooks/ASR_Whisper_A100_Colab.ipynb dari Drive. Pilih Runtime GPU A100 40GB. Mount Drive. Set DRIVE_PROJECT_ROOT=/content/drive/MyDrive/ASR_Colab_A100, USE_LOCAL_SSD=1, A100_SYNC_INTERVAL_SEC=600. Jalankan colab_bootstrap_a100.sh dan pastikan dataset train/dev/test count benar serta missing audio=0. Untuk paper utama jalankan colab_train_m02b_whisper_small_paper_exact.sh. Jangan pakai fast profile untuk paper utama kecuali user menyetujui. Tunggu training + test selesai. Pastikan best_model/, log.txt dengan Total waktu training, dan test_results/test_paper.json ada. Hasil tersimpan otomatis di Drive Results/m02b_whisper_small_ft/<run>. Setelah selesai copy result ke Windows runs folder dan jalankan aggregate_paper_test_results.py.
+Buka Colab_ASR_A100_Training/notebooks/ASR_Whisper_A100_Colab.ipynb dari Drive. Pilih Runtime GPU A100 40GB. Mount Drive. Set DRIVE_PROJECT_ROOT=/content/drive/MyDrive/ASR_Colab_A100, USE_LOCAL_SSD=1, A100_SYNC_INTERVAL_SEC=600. Jalankan colab_bootstrap_a100.sh dan pastikan dataset train/val/test count benar serta missing audio=0. Untuk paper utama jalankan colab_train_m02b_whisper_small_paper_exact.sh. Jangan pakai fast profile untuk paper utama kecuali user menyetujui. Tunggu training + test selesai. Pastikan best_model/, log.txt dengan Total waktu training, dan test_results/test_paper.json ada. Hasil tersimpan otomatis di Drive Results/m02b_whisper_small_ft/<run>. Setelah selesai copy result ke Windows runs folder dan jalankan aggregate_paper_test_results.py.
 ```

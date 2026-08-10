@@ -340,7 +340,7 @@ Hasil tetap "1 epoch" di log = "1 round of Baum-Welch", tapi parameter HMM lebih
 | `--warmup-steps` | 100 | **500** | LR warmup steps |
 | `--gradient-checkpointing` | False | True if OOM | Trade speed for VRAM |
 | `--max-train-samples` | 0 (full) | 0 | Subsample for smoke |
-| `--max-val-samples` | 0 (full) | 0 | Subsample dev for smoke |
+| `--max-val-samples` | 0 (full) | 0 | Subsample val for smoke |
 | `--language` | `indonesian` | `indonesian` | Forced language tag |
 | `--task` | `transcribe` | `transcribe` | Whisper task |
 | `--seed` | 42 | 42 | Reproducibility |

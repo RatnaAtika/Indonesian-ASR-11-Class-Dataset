@@ -9,7 +9,7 @@ Reproducible research repository for an **Indonesian Automatic Speech Recognitio
 ## 1. What's in this study
 
 - **Corpus (v7)**: Indonesian read/template speech derived from 209 base sentences.
-  - Splits (frozen): **train 71,792 / dev 15,376 / test 15,376** utterances.
+  - Splits (frozen): **train 71,792 / val 15,376 / test 15,376** utterances.
   - Features: **80-bin log-mel**, 25 ms window / 10 ms hop, per-utterance CMVN.
   - Tokenizer: SentencePiece character model (`spm_v7_char`).
 - **9 paper models** benchmarked head-to-head with **greedy decoding, no language model**, metrics via `jiwer` (WER/CER/MER/WIL/SER).
@@ -126,13 +126,13 @@ The test→aggregate chain is audited end-to-end (`training_conventional/reports
 
 ---
 
-## 8. License and public dataset access
+## 8. License and dataset access
 
 The Indonesian ASR 11-Class Dataset and the accompanying materials in this repository are openly licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license. You may share and adapt the materials for any purpose, including commercial use, provided that appropriate attribution is given and modifications are indicated.
 
 - **License file:** [`LICENSE`](LICENSE)
 - **Official license page:** [Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- **Full public dataset:** [Atika88/Indonesian-ASR-11-Class-Dataset](https://huggingface.co/datasets/Atika88/Indonesian-ASR-11-Class-Dataset)
+- **Organization dataset (currently private):** [Indonesian-ASR-Research-RatnaAtika/Indonesian-ASR-11-Class-Dataset](https://huggingface.co/datasets/Indonesian-ASR-Research-RatnaAtika/Indonesian-ASR-11-Class-Dataset)
 - **Citation metadata:** [`Draft_Paper/02_Evidence/hf_remote_snapshot/CITATION.cff`](Draft_Paper/02_Evidence/hf_remote_snapshot/CITATION.cff)
 
 When redistributing or adapting the dataset, retain the dataset name, creator attribution, repository URL, CC BY 4.0 notice, and an indication of any changes.

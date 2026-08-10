@@ -60,7 +60,7 @@ The existing vanilla / ViT codes expect this pickle format:
 Existing SPM is char-subword 400-token: `<pad>=0 <unk>=1 <s>=2 </s>=3 <noise>=4 <laugh>=5 <hes>=6 ▁=7 ...`.
 
 `feature_builder.py` will:
-1. Read `metadata/dataset_metadata_clean.csv` + `training/data_final/{train,dev,test}.tsv`
+1. Read `metadata/dataset_metadata_clean.csv` + `training/data_final/{train,val,test}.tsv`
 2. Load each WAV via `soundfile` (bypass torchcodec / Arrow)
 3. Compute log-Mel: pre-emphasis 0.97, n_fft=512, hop=256, n_mels=80, log + per-utt mean-var norm
 4. Tokenize transcript via the v7-retrained SPM

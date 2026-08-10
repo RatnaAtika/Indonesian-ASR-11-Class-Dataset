@@ -22,6 +22,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from split_schema import canonical_split
+
 ROOT = Path(__file__).resolve().parent
 DEFAULT_METADATA = ROOT / "metadata" / "dataset_metadata.csv"
 DEFAULT_SPLIT_SUMMARY = ROOT / "splits" / "split_summary.json"
@@ -49,7 +51,11 @@ def infer_synthetic_voice_gender(row: dict[str, str], target_gender: str) -> str
 
 def read_split_by_speaker(path: Path) -> dict[str, str]:
     data = json.loads(path.read_text(encoding="utf-8"))
-    return {speaker: split for split, speakers in data["speakers_by_split"].items() for speaker in speakers}
+    return {
+        speaker: canonical_split(split)
+        for split, speakers in data["speakers_by_split"].items()
+        for speaker in speakers
+    }
 
 
 def collect_stats(metadata_path: Path) -> dict[str, Any]:
@@ -300,7 +306,7 @@ Public inventory summary:
 - Human files represented: {sum(int(r['real_files']) for r in public_rows):,}
 - Synthetic files represented: {sum(int(r['synthetic_files']) for r in public_rows):,}
 - Total files represented: {sum(int(r['file_count']) for r in public_rows):,}
-- Human split speaker counts: train={split_counts.get('train', 0)}, dev={split_counts.get('dev', 0)}, test={split_counts.get('test', 0)}
+- Human split speaker counts: train={split_counts.get('train', 0)}, val={split_counts.get('val', 0)}, test={split_counts.get('test', 0)}
 
 Private original-name crosswalks are not committed and must not be uploaded to Hugging Face.
 """, encoding="utf-8")

@@ -129,7 +129,7 @@ tail -f training/m02_whisper_small/runs/run_full_*/log.txt
 | Flag | Effect |
 |------|--------|
 | `--max-train-samples N` | Subsample for fast iteration (smoke runs) |
-| `--max-val-samples N` | Subsample dev set |
+| `--max-val-samples N` | Subsample val set |
 | `--gradient-checkpointing` | Trade speed for VRAM (Whisper trainer; ~30 % slower, ~30 % less VRAM) |
 | `--fp16` | On by default. Disable for debugging numerical issues |
 | `--seed N` | Reproducibility (default 42) |

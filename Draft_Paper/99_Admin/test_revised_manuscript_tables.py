@@ -90,9 +90,9 @@ class RevisedManuscriptTableTests(unittest.TestCase):
     def test_split_table_discloses_source_and_synthetic_imbalance(self) -> None:
         rows = {row["split"]: row for row in read_csv(self.output_dir / "Table_4_release_target_split_source_composition.csv")}
         self.assertEqual("14", rows["train"]["human_speakers"])
-        self.assertEqual("3", rows["dev"]["human_speakers"])
+        self.assertEqual("3", rows["val"]["human_speakers"])
         self.assertEqual("3", rows["test"]["human_speakers"])
-        self.assertEqual("0", rows["dev"]["female_source_files"])
+        self.assertEqual("0", rows["val"]["female_source_files"])
         self.assertEqual("2", rows["test"]["female_source_files"])
         self.assertEqual("2", rows["test"]["synthetic_files"])
         self.assertIn("no natural female", rows["test"]["interpretation_note"].lower())

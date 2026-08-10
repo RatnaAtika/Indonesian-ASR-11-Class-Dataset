@@ -151,7 +151,7 @@
         "female_source_files": "41800"
       },
       {
-        "split": "dev",
+        "split": "val",
         "file_count": "15675",
         "duration_sec": "73068.9532",
         "duration_hours": "20.2969",
@@ -270,7 +270,7 @@
       },
       "by_split": {
         "train": 122,
-        "dev": 8,
+        "val": 8,
         "test": 2
       },
       "by_category": {
@@ -446,7 +446,7 @@
     ]
   },
   "hf_repository": {
-    "repo_id": "Atika88/Indonesian-ASR-11-Class-Dataset",
+    "repo_id": "Indonesian-ASR-Research-RatnaAtika/Indonesian-ASR-11-Class-Dataset",
     "revision": "830a2069416707e3f38c06c507255889513cdf4b",
     "private": true,
     "access_status": "private staging; not publicly accessible",
@@ -535,12 +535,12 @@
     "file_count": 102544,
     "duration_hours": 130.6548,
     "train_files": 71792,
-    "dev_files": 15376,
+    "val_files": 15376,
     "test_files": 15376,
     "test_speakers": 3,
     "speaker_disjoint": true,
     "text_template_disjoint": false,
-    "test_transcripts_seen_in_train": "100% of dev/test rows; 206 unique test templates are represented in train",
+    "test_transcripts_seen_in_train": "100% of val/test rows; 206 unique test templates are represented in train",
     "synthetic_files": 132,
     "synthetic_test_files": 2,
     "publication_metric_source": "Draft_Paper/02_Evidence/unified_benchmark_rescore/unified_nine_model_metrics.json",
@@ -823,7 +823,7 @@
     "source_artifacts": [
       "metadata/dataset_metadata_clean.csv",
       "splits/train_clean.tsv",
-      "splits/dev_clean.tsv",
+      "splits/val_clean.tsv",
       "splits/test_clean.tsv",
       "Report_paper_9model/benchmark/benchmark.json",
       "Report_paper_9model/data/paper_9model_interpretation_metrics.json",

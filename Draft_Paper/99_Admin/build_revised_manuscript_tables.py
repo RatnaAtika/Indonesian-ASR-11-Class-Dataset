@@ -11,11 +11,14 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+from split_schema import canonical_split
 DEFAULT_OUTPUT = ROOT / "Draft_Paper" / "04_Revised_Draft" / "tables"
 EVIDENCE_PATH = ROOT / "Draft_Paper" / "02_Evidence" / "evidence_registry.json"
 REMOTE_FILES_PATH = ROOT / "Draft_Paper" / "02_Evidence" / "hf_dataset_remote_files.json"
@@ -69,13 +72,18 @@ def load_json(path: Path):
 
 def load_csv(path: Path) -> list[dict[str, str]]:
     with path.open(newline="", encoding="utf-8-sig") as handle:
-        return list(csv.DictReader(handle))
+        rows = list(csv.DictReader(handle))
+    for row in rows:
+        for field in ("split", "target_split"):
+            if row.get(field):
+                row[field] = canonical_split(row[field])
+    return rows
 
 
 def write_csv(path: Path, fieldnames: list[str], rows: Iterable[dict[str, object]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8-sig") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="raise")
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="raise", lineterminator="\n")
         writer.writeheader()
         for row in rows:
             writer.writerow({key: row.get(key, "") for key in fieldnames})
@@ -346,12 +354,12 @@ def build_table_4(output_dir: Path, evidence: dict) -> None:
 
     notes = {
         "train": "Six male-label and eight female-label natural human speakers; synthetic repairs are explicitly flagged.",
-        "dev": "Three male-label natural human speakers; zero female-source files and no natural female evaluation speaker.",
+        "val": "Three male-label natural human speakers; zero female-source files and no natural female evaluation speaker.",
         "test": "Three male-label natural human speakers; the two female-source files are synthetic, target M8, and remain an unresolved mismatch; no natural female evaluation speaker.",
     }
     rows = []
     for source in release["split_rows"]:
-        split = source["split"]
+        split = canonical_split(source["split"])
         humans = human_by_split[split]
         gender_counts = Counter(row["speaker_gender"] for row in humans)
         total_files = int(source["file_count"])
@@ -460,7 +468,7 @@ def build_table_5(output_dir: Path, evidence: dict) -> None:
             "source_scope": "Release target",
         },
     ]
-    for split in ("train", "dev", "test"):
+    for split in ("train", "val", "test"):
         rows.append(
             {
                 "dimension": "Split",

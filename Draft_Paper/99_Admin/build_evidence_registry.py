@@ -5,11 +5,14 @@ from __future__ import annotations
 import csv
 import json
 import os
+import sys
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+from split_schema import canonical_split
 OUT = ROOT / "Draft_Paper" / "02_Evidence"
 ROBOT_OOD = Path(
     os.environ.get(
@@ -74,6 +77,10 @@ def main() -> None:
     category_public = read_csv("Report_paper_9model/hf_dataset_information_public/per_category_public.csv")
     speaker_public = read_csv("Report_paper_9model/hf_dataset_information_public/per_speaker_public.csv")
     clean_stats = load_json("reports/dataset_statistics_v7_paper9/stats/dataset_stats.json")
+    clean_stats["splits"] = {
+        canonical_split(split): values
+        for split, values in clean_stats["splits"].items()
+    }
     benchmark = load_json("Report_paper_9model/benchmark/benchmark.json")
     interpretation = load_json("Report_paper_9model/data/paper_9model_interpretation_metrics.json")
     unified_rescore = load_json(
@@ -200,12 +207,12 @@ def main() -> None:
             "file_count": clean_stats["corpus"]["n_files"],
             "duration_hours": clean_stats["corpus"]["total_hours"],
             "train_files": clean_stats["splits"]["train"]["n_files"],
-            "dev_files": clean_stats["splits"]["dev"]["n_files"],
+            "val_files": clean_stats["splits"]["val"]["n_files"],
             "test_files": clean_stats["splits"]["test"]["n_files"],
             "test_speakers": clean_stats["splits"]["test"]["n_speakers"],
             "speaker_disjoint": True,
             "text_template_disjoint": False,
-            "test_transcripts_seen_in_train": "100% of dev/test rows; 206 unique test templates are represented in train",
+            "test_transcripts_seen_in_train": "100% of val/test rows; 206 unique test templates are represented in train",
             "synthetic_files": clean_stats["synthetic"]["n_files"],
             "synthetic_test_files": clean_stats["splits"]["test"]["n_synthetic"],
             "publication_metric_source": "Draft_Paper/02_Evidence/unified_benchmark_rescore/unified_nine_model_metrics.json",
@@ -230,7 +237,7 @@ def main() -> None:
             },
             "source_artifacts": [
                 "metadata/dataset_metadata_clean.csv",
-                "splits/train_clean.tsv", "splits/dev_clean.tsv", "splits/test_clean.tsv",
+                "splits/train_clean.tsv", "splits/val_clean.tsv", "splits/test_clean.tsv",
                 "Report_paper_9model/benchmark/benchmark.json",
                 "Report_paper_9model/data/paper_9model_interpretation_metrics.json",
                 "Draft_Paper/02_Evidence/unified_benchmark_rescore/unified_nine_model_metrics.csv",

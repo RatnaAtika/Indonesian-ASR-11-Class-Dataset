@@ -255,15 +255,15 @@ rsync -aH --info=progress2 \
 ```bash
 cd "$HOME/asr/Paper_Datatset_SOTA"
 
-wc -l training/data_final/train.tsv training/data_final/dev.tsv training/data_final/test.tsv
+wc -l training/data_final/train.tsv training/data_final/val.tsv training/data_final/test.tsv
 # expected termasuk header:
 # 71793 train.tsv
-# 15377 dev.tsv
+# 15377 val.tsv
 # 15377 test.tsv
 
 python3 - <<'PY'
 import csv, pathlib
-for split in ['train','dev','test']:
+for split in ['train','val','test']:
     p=pathlib.Path('training/data_final')/f'{split}.tsv'
     n=0; dur=0.0; missing=0
     with p.open(encoding='utf-8') as f:
@@ -281,7 +281,7 @@ Expected:
 
 ```text
 train rows=71792 hours=92.4882 missing=0
-dev   rows=15376 hours=19.7412 missing=0
+val   rows=15376 hours=19.7412 missing=0
 test  rows=15376 hours=18.4254 missing=0
 ```
 
@@ -308,7 +308,7 @@ Verifikasi split terhadap data Windows:
 python3 - <<'PY'
 import csv, os, pathlib
 root=pathlib.Path(os.environ['WIN_DATA'])
-for split in ['train','dev','test']:
+for split in ['train','val','test']:
     p=pathlib.Path('training/data_final')/f'{split}.tsv'
     n=0; missing=0
     with p.open(encoding='utf-8') as f:
