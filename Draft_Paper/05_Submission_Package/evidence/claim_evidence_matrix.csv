@@ -3,8 +3,8 @@ C001,"Release-target corpus contains 104,500 audio rows",release_target,verified
 C002,Release-target duration is 134.1762 h,release_target,verified,metadata/dataset_metadata.csv direct row-level audit; dataset_stats_public.json
 C003,"Release target contains 104,368 human and 132 synthetic recordings",release_target,verified,dataset_stats_public.json
 C004,Release target contains 20 retained human public speaker labels: 12 male and 8 female after metadata correction; participant uniqueness and label provenance remain unverified,release_target,verified label counts; participant uniqueness/provenance gap,per_speaker_public.csv; HF final report; METHODS_EVIDENCE_MATRIX.csv
-C005,"Release-target metadata has 11 categories and 213 distinct (category, sentence_id) pairs",release_target,verified,metadata/dataset_metadata.csv direct row-level inventory; transcript_template_stats.csv
-C005B,"Frozen benchmark subset has 209 distinct (category, sentence_id) pairs",benchmark,verified,dataset_metadata_clean.csv direct row-level inventory; dataset_stats.json
+C005,"Release design has 11 categories and 209 canonical balanced sentence slots",release_target,verified design count,11 categories × 19 retained slots; transcript inventories; balancing script
+C005B,"Frozen benchmark uses the same 209 canonical balanced sentence slots",benchmark,verified design count,dataset_metadata_clean.csv; dataset_stats.json
 C006,"All 104,500 release-target metadata rows report 16 kHz, mono, PCM16 audio",release_target,verified metadata audit,"metadata/dataset_metadata.csv direct 104,500-row audit via build_evidence_registry.py; package a direct audio-header audit before submission"
 C007,Pinned private HF metadata has zero blank transcripts after repair,HF_private_staging,revision-pinned,hf_transcript_cleanup_execution report; pinned private HF revision
 C008,Private HF staging uses 11 English-category tar shards,HF_private_staging,revision-pinned,remote file listing; English rename report

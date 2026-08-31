@@ -5,7 +5,7 @@ Train / development / test files,73150 / 15675 / 15675,71792 / 15376 / 15376,Do 
 Human recordings,104368,102412,Frozen scope contains the same 132 synthetic rows
 Synthetic repairs,132,132,Synthetic provenance must remain explicit
 Human speakers,20,20,Human public IDs are partition-disjoint; TTS voice identity is not guaranteed disjoint
-"Distinct (category, sentence_id) pairs",213,209,Pairs are not asserted to be globally unique transcript texts
+Canonical balanced sentence slots,209,209,11 categories × 19 retained slots; original IDs and replacement provenance remain preserved separately
 Transcript state,Repaired private HF metadata: 0 blank transcript fields,Frozen before transcript repair; excludes rows blank at freeze time,Audio shards did not change during metadata repair
 Rows present only in release target,1956,0 (excluded),1956-row repair bridge requires an immutable publication attachment
 Test composition,15675 items = 15673 human + 2 synthetic,15376 items = 15374 human + 2 synthetic,Do not call every test item human

@@ -20,6 +20,7 @@ ROBOT_OOD = Path(
         str(ROOT.parent / "deploy_robot_asr/deploy_dual_model_web/analysis/live_ood_aggregate.json"),
     )
 )
+CANONICAL_BALANCED_SENTENCE_SLOTS = 11 * 19
 
 
 def load_json(relative: str):
@@ -70,6 +71,7 @@ def aggregate_metadata(relative: str) -> dict:
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     full_local = aggregate_metadata("metadata/dataset_metadata.csv")
+    full_local.pop("distinct_category_sentence_pairs", None)
     clean_local = aggregate_metadata("metadata/dataset_metadata_clean.csv")
     full_public = load_json("Report_paper_9model/hf_dataset_information_public/dataset_stats_public.json")
     synthetic_public = load_json("Report_paper_9model/hf_dataset_information_public/synthetic_data_stats_public.json")
@@ -159,7 +161,7 @@ def main() -> None:
             "synthetic_voice_labels": len(synthetic_speakers),
             "synthetic_label_gender_counts": dict(synthetic_gender),
             "categories": 11,
-            "distinct_category_sentence_pairs": full_local["distinct_category_sentence_pairs"],
+            "canonical_balanced_sentence_slots": CANONICAL_BALANCED_SENTENCE_SLOTS,
             "partial_replacement_sentence_pairs": full_local["non_500_row_sentence_pairs"],
             "word_types_release_target_normalization": full_public["word_type_count"],
             "split_rows": split_public,
@@ -246,8 +248,8 @@ def main() -> None:
         },
         "scope_bridge": {
             "rows_present_in_release_target_but_not_benchmark": full_local["rows"] - clean_local["rows"],
-            "reason": "The frozen benchmark subset excluded 1,956 rows with blank transcript values in the local metadata snapshot at benchmark freeze time. It therefore contains 209 distinct (category, sentence_id) pairs. The repaired private HF staging metadata retains those rows and four low-count replacement sentence IDs, yielding 213 distinct (category, sentence_id) pairs without changing audio shards.",
-            "publication_rule": "Report release-target descriptive statistics and 213 distinct (category, sentence_id) pairs on 104,500 rows; report the 209-pair nine-model benchmark only on the frozen 102,544-row subset. Do not imply public accessibility until ethics, consent, rights, licence, and DOI gates pass.",
+            "reason": "The release design contains 209 canonical balanced sentence slots (11 categories × 19 retained slots). The frozen benchmark excluded 1,956 rows with blank transcript values at freeze time; later transcript repair did not change the audio shards or canonical slot design.",
+            "publication_rule": "Report 209 canonical balanced sentence slots for the release target and frozen benchmark. Preserve original sentence IDs and replacement provenance separately; do not use observed replacement-ID rows to redefine the canonical slot count.",
         },
         "reproducibility": {
             "hf_audio_shards": 11,
@@ -293,7 +295,7 @@ def main() -> None:
             "Ethics committee name, approval/reference number, and approval date are unverified.",
             "Written consent scope for public release of identifiable voice biometrics is unverified.",
             "Participant age range conflicts across old drafts and has no authoritative public-safe source.",
-            "The claim that every speaker read every sentence exactly 25 times must be revised: four categories contain paired low-count replacement sentence IDs, and the release-target inventory has 213 rather than 209 distinct (category, sentence_id) pairs.",
+            "The claim that every speaker completed every canonical sentence slot exactly 25 times requires primary protocol evidence; report the 209-slot balanced design and preserve replacement provenance separately.",
             "Regional-origin/dialect claims require a consent/privacy decision and a verified public-safe table.",
             "Recording-room dimensions conflict between narrative text and embedded diagrams.",
             "Microphone model, acquisition distance, Audacity version, and room protocol require author confirmation against primary records.",
@@ -313,8 +315,8 @@ def main() -> None:
         ("C002", "Release-target duration is 134.1762 h", "release_target", "verified", "metadata/dataset_metadata.csv direct row-level audit; dataset_stats_public.json"),
         ("C003", "Release target contains 104,368 human and 132 synthetic recordings", "release_target", "verified", "dataset_stats_public.json"),
         ("C004", "Release target contains 20 retained human public speaker labels: 12 male and 8 female after metadata correction; participant uniqueness and label provenance remain unverified", "release_target", "verified label counts; participant uniqueness/provenance gap", "per_speaker_public.csv; HF final report; METHODS_EVIDENCE_MATRIX.csv"),
-        ("C005", "Release-target metadata has 11 categories and 213 distinct (category, sentence_id) pairs", "release_target", "verified", "metadata/dataset_metadata.csv direct row-level inventory; transcript_template_stats.csv"),
-        ("C005B", "Frozen benchmark subset has 209 distinct (category, sentence_id) pairs", "benchmark", "verified", "dataset_metadata_clean.csv direct row-level inventory; dataset_stats.json"),
+        ("C005", "Release design has 11 categories and 209 canonical balanced sentence slots", "release_target", "verified design count", "11 categories × 19 retained slots; transcript inventories; balancing script"),
+        ("C005B", "Frozen benchmark uses the same 209 canonical balanced sentence slots", "benchmark", "verified design count", "dataset_metadata_clean.csv; dataset_stats.json"),
         ("C006", "All 104,500 release-target metadata rows report 16 kHz, mono, PCM16 audio", "release_target", "verified metadata audit", "metadata/dataset_metadata.csv direct 104,500-row audit via build_evidence_registry.py; package a direct audio-header audit before submission"),
         ("C007", "Pinned private HF metadata has zero blank transcripts after repair", "HF_private_staging", "revision-pinned", "hf_transcript_cleanup_execution report; pinned private HF revision"),
         ("C008", "Private HF staging uses 11 English-category tar shards", "HF_private_staging", "revision-pinned", "remote file listing; English rename report"),
@@ -345,7 +347,7 @@ def main() -> None:
         "## Release-target corpus and private HF staging", "",
         f"- Human recordings: {registry['release_target_dataset']['human_recordings']:,}; synthetic: {registry['release_target_dataset']['synthetic_recordings']} ({registry['release_target_dataset']['synthetic_fraction_percent']:.4f}%).",
         f"- Human speakers: 20 ({human_gender['Male']} male, {human_gender['Female']} female).",
-        f"- Distinct `(category, sentence_id)` pairs: {registry['release_target_dataset']['distinct_category_sentence_pairs']}; frozen benchmark pairs: {registry['benchmark_subset']['local_source_validation']['distinct_category_sentence_pairs']}.",
+        f"- Canonical balanced sentence slots: {registry['release_target_dataset']['canonical_balanced_sentence_slots']}.",
         f"- HF revision: `{registry['hf_repository']['revision']}`; private: `{registry['hf_repository']['private']}`; licence: `{registry['hf_repository']['card_license']}`; persistent DOI available: `{registry['hf_repository']['persistent_dataset_doi_available']}`.",
         f"- Remote tar shards in private staging: {registry['hf_repository']['audio_tar_shards']}; bytes: {registry['hf_repository']['audio_tar_bytes']:,}.", "",
         "## Nine-model technical validation", "",

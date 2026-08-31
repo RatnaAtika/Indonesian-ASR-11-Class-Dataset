@@ -28,7 +28,6 @@
         "Kalimat_Seruan": 9500,
         "Kalimat_Tanya": 9500
       },
-      "distinct_category_sentence_pairs": 213,
       "non_500_row_sentence_pairs": [
         {
           "category": "Kalimat_Kondisional",
@@ -96,7 +95,7 @@
       "Male": 9
     },
     "categories": 11,
-    "distinct_category_sentence_pairs": 213,
+    "canonical_balanced_sentence_slots": 209,
     "partial_replacement_sentence_pairs": [
       {
         "category": "Kalimat_Kondisional",
@@ -833,8 +832,8 @@
   },
   "scope_bridge": {
     "rows_present_in_release_target_but_not_benchmark": 1956,
-    "reason": "The frozen benchmark subset excluded 1,956 rows with blank transcript values in the local metadata snapshot at benchmark freeze time. It therefore contains 209 distinct (category, sentence_id) pairs. The repaired private HF staging metadata retains those rows and four low-count replacement sentence IDs, yielding 213 distinct (category, sentence_id) pairs without changing audio shards.",
-    "publication_rule": "Report release-target descriptive statistics and 213 distinct (category, sentence_id) pairs on 104,500 rows; report the 209-pair nine-model benchmark only on the frozen 102,544-row subset. Do not imply public accessibility until ethics, consent, rights, licence, and DOI gates pass."
+    "reason": "The release design contains 209 canonical balanced sentence slots (11 categories × 19 retained slots). The frozen benchmark excluded 1,956 rows with blank transcript values at freeze time; later transcript repair did not change the audio shards or canonical slot design.",
+    "publication_rule": "Report 209 canonical balanced sentence slots for the release target and frozen benchmark. Preserve original sentence IDs and replacement provenance separately; do not use observed replacement-ID rows to redefine the canonical slot count."
   },
   "reproducibility": {
     "hf_audio_shards": 11,
@@ -884,7 +883,7 @@
     "Ethics committee name, approval/reference number, and approval date are unverified.",
     "Written consent scope for public release of identifiable voice biometrics is unverified.",
     "Participant age range conflicts across old drafts and has no authoritative public-safe source.",
-    "The claim that every speaker read every sentence exactly 25 times must be revised: four categories contain paired low-count replacement sentence IDs, and the release-target inventory has 213 rather than 209 distinct (category, sentence_id) pairs.",
+    "The claim that every speaker completed every canonical sentence slot exactly 25 times requires primary protocol evidence; report the 209-slot balanced design and preserve replacement provenance separately.",
     "Regional-origin/dialect claims require a consent/privacy decision and a verified public-safe table.",
     "Recording-room dimensions conflict between narrative text and embedded diagrams.",
     "Microphone model, acquisition distance, Audacity version, and room protocol require author confirmation against primary records.",

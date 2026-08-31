@@ -16,7 +16,7 @@
 
 ## Table 2. Release-target and frozen-benchmark scope bridge
 
-**Caption:** Mandatory bridge between the current 104,500-file, 134.1762-h release target and the distinct 102,544-file, 130.6548-h frozen benchmark used for nine-model technical validation. The 1,956-row difference reflects transcript fields that were blank when the benchmark was frozen before transcript repair and were later repaired in private staging. The repair did not change audio shards, and the benchmark was not regenerated. Counts of 213 and 209 denote distinct `(category, sentence_id)` pairs, not necessarily globally unique transcript texts.
+**Caption:** Mandatory bridge between the current 104,500-file, 134.1762-h release target and the distinct 102,544-file, 130.6548-h frozen benchmark used for nine-model technical validation. The 1,956-row difference reflects transcript fields that were blank when the benchmark was frozen before transcript repair and were later repaired in private staging. The repair did not change audio shards, and the benchmark was not regenerated. The value 209 denotes the canonical balanced design of 11 categories × 19 retained sentence slots; original IDs and replacement provenance remain documented separately.
 
 **Editable source:** [`tables/Table_2_scope_bridge.csv`](tables/Table_2_scope_bridge.csv)
 

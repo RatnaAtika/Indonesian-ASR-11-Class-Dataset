@@ -1,12 +1,12 @@
-﻿category_english,source_category_label,files,duration_hours,mean_duration_sec,synthetic_files,distinct_category_sentence_id_pairs,sentence_id_note,scope
+﻿category_english,source_category_label,files,duration_hours,mean_duration_sec,synthetic_files,canonical_balanced_sentence_slots,sentence_id_note,scope
 Clarification,Kalimat_Klarifikasi,9500,13.8089,5.2328,9,19,Intentional original-ID gap: 09; do not renumber,Release target (104500 files)
-Conditional,Kalimat_Kondisional,9500,15.9704,6.0519,16,20,"Partial replacement pair: 19=490 rows, 20=10 rows; stable original IDs retained",Release target (104500 files)
-Confirmation,Kalimat_Konfirmasi,9500,14.7951,5.6065,29,20,"Partial replacement pair: 05=483 rows, 20=17 rows; stable original IDs retained",Release target (104500 files)
+Conditional,Kalimat_Kondisional,9500,15.9704,6.0519,16,19,"Partial replacement pair: 19=490 rows, 20=10 rows; stable original IDs retained",Release target (104500 files)
+Confirmation,Kalimat_Konfirmasi,9500,14.7951,5.6065,29,19,"Partial replacement pair: 05=483 rows, 20=17 rows; stable original IDs retained",Release target (104500 files)
 Declarative,Kalimat_Deklaratif,9500,10.6981,4.054,2,19,Intentional original-ID gap: 06; do not renumber,Release target (104500 files)
 Exclamatory,Kalimat_Seruan,9500,9.0423,3.4265,3,19,Intentional original-ID gap: 20; do not renumber,Release target (104500 files)
 Imperative,Kalimat_Perintah,9500,7.8119,2.9603,15,19,Intentional original-ID gap: 20; do not renumber,Release target (104500 files)
-Interrogative,Kalimat_Tanya,9500,11.8858,4.5041,10,20,"Partial replacement pair: 17=494 rows, 20=6 rows; stable original IDs retained",Release target (104500 files)
+Interrogative,Kalimat_Tanya,9500,11.8858,4.5041,10,19,"Partial replacement pair: 17=494 rows, 20=6 rows; stable original IDs retained",Release target (104500 files)
 Negation,Kalimat_Negasi,9500,9.4318,3.5742,11,19,Intentional original-ID gap: 08; do not renumber,Release target (104500 files)
-Persuasive,Kalimat_Persuasif,9500,17.2061,6.5202,16,20,"Partial replacement pair: 17=489 rows, 20=11 rows; stable original IDs retained",Release target (104500 files)
+Persuasive,Kalimat_Persuasif,9500,17.2061,6.5202,16,19,"Partial replacement pair: 17=489 rows, 20=11 rows; stable original IDs retained",Release target (104500 files)
 Rhetorical,Kalimat_Retoris,9500,10.4137,3.9463,17,19,Intentional original-ID gap: 15; do not renumber,Release target (104500 files)
 Scheduling,Kalimat_Penjadwalan,9500,13.1122,4.9688,4,19,Intentional original-ID gap: 20; do not renumber,Release target (104500 files)

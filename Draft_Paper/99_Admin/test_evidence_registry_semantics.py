@@ -34,11 +34,11 @@ class EvidenceRegistrySemanticsTests(unittest.TestCase):
         self.assertTrue(self.registry["hf_repository"]["private"])
         self.assertFalse(self.registry["hf_repository"]["persistent_dataset_doi_available"])
 
-    def test_pair_count_does_not_claim_unique_texts(self) -> None:
+    def test_publication_count_uses_canonical_balanced_slots(self) -> None:
         claim = self.claims["C005"]["claim"].lower()
-        self.assertIn("213 distinct (category, sentence_id) pairs", claim)
-        self.assertNotIn("213 unique", claim)
-        self.assertNotIn("213 templates", claim)
+        self.assertIn("209 canonical balanced sentence slots", claim)
+        self.assertEqual(209, self.registry["release_target_dataset"]["canonical_balanced_sentence_slots"])
+        self.assertNotIn("distinct (category, sentence_id) pairs", claim)
 
     def test_test_set_claim_discloses_human_and_synthetic_items(self) -> None:
         claim = self.claims["C010"]["claim"]

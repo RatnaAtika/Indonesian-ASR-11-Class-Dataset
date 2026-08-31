@@ -56,7 +56,7 @@ The template-based DOCX embeds the seven-row Specifications Table, numbered Tabl
 | Files | 104,500 | 102,544 |
 | Duration | 134.1762 h | 130.6548 h |
 | Train/val/test | 73,150 / 15,675 / 15,675 | 71,792 / 15,376 / 15,376 |
-| Distinct `(category, sentence_id)` pairs | 213 | 209 |
+| Canonical balanced sentence slots | 209 | 209 |
 | Transcript state | Repaired private HF staging has zero blanks | Frozen before repair; excludes 1,956 rows |
 | Intended use in article | Corpus description | Nine-model technical validation |
 
@@ -68,7 +68,7 @@ The template-based DOCX embeds the seven-row Specifications Table, numbered Tabl
 
 **Source:** [`Report_paper_9model/hf_dataset_information_public/per_category_public.csv`](../../../Report_paper_9model/hf_dataset_information_public/per_category_public.csv).
 
-**Columns:** English public category, files, duration (h), mean duration (s), synthetic files, distinct `(category, sentence_id)` pairs or replacement note.
+**Columns:** English public category, files, duration (h), mean duration (s), synthetic files, 19 canonical balanced sentence slots, and replacement-provenance note.
 
 **Control:** use authoritative release-target means (e.g., Persuasive 6.5202 s, Conditional 6.0519 s, Confirmation 5.6065 s), not the older benchmark means 6.43/5.96/5.58 s.
 
@@ -180,7 +180,7 @@ pre-transcript-repair 104,500-row metadata state
 | ID | Content | Source / gate |
 |---|---|---|
 | Table S1 | Full recording-level metadata dictionary | Public schema; verify exact final archive fields |
-| Table S2 | Complete 213 `(category, sentence_id)` release-target inventory | `transcript_template_stats.csv` and pinned remote transcript inventory |
+| Table S2 | Canonical 209-slot design and separate replacement-provenance inventory | `transcript_template_stats.csv` and pinned remote transcript inventory |
 | Table S3 | Partial replacement pairs and intentional numbering gaps | Row-level inventory and numbering note |
 | Table S4 | Public per-speaker files, duration, split, and source-label fields | Corrected `per_speaker_public.csv`; omit region/age unless consented and verified |
 | Table S5 | Complete synthetic repair-target and row inventory | Public repair manifest; finalize after mismatch decision |

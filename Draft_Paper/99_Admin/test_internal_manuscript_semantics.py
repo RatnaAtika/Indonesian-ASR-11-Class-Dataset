@@ -78,7 +78,7 @@ class InternalManuscriptSemanticTests(unittest.TestCase):
         required = [
             "104,500 audio files totaling 134.1762 h",
             "104,368 human recordings and 132 explicitly labelled synthetic repairs (0.1263%)",
-            "213 distinct `(category, sentence_id)` pairs",
+            "209 canonical balanced sentence slots",
             "separate, pre-transcript-repair frozen subset of 102,544 files",
             "102,544-file, 130.6548-h frozen benchmark",
             "15,374 human recordings and two synthetic repairs",
@@ -94,7 +94,8 @@ class InternalManuscriptSemanticTests(unittest.TestCase):
     def test_prohibited_or_stale_formulations_are_absent(self) -> None:
         prohibited = [
             "full public corpus",
-            "213 unique texts",
+            "213 " + "unique texts",
+            "213 " + "distinct `(category, sentence_id)` pairs",
             "0.129%",
             "stratified sample",
             "validated transcription",

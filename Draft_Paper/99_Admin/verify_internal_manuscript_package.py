@@ -85,7 +85,7 @@ def check_quantitative(package: Path) -> str:
     t3=rows(package/"tables/Table_3_release_target_category_composition.csv")
     assert len(t3)==11 and sum(int(r["files"]) for r in t3)==104500
     assert sum(int(r["synthetic_files"]) for r in t3)==132
-    assert sum(int(r["distinct_category_sentence_id_pairs"]) for r in t3)==213
+    assert sum(int(r["canonical_balanced_sentence_slots"]) for r in t3)==209
     assert abs(sum(float(r["duration_hours"]) for r in t3)-134.1763)<1e-8
     t4=rows(package/"tables/Table_4_release_target_split_source_composition.csv"); detail=[r for r in t4 if r["split"]!="Total"]; total=next(r for r in t4 if r["split"]=="Total")
     assert [int(r["files"]) for r in detail]==[73150,15675,15675]
@@ -96,9 +96,9 @@ def check_quantitative(package: Path) -> str:
     assert abs(sum(float(r["duration_hours"]) for r in detail)-134.1763)<1e-8
     registry=json.loads((package/"evidence/evidence_registry.json").read_text(encoding="utf-8"))
     assert registry["release_target_dataset"]["file_count"]==104500 and registry["benchmark_subset"]["file_count"]==102544
-    assert registry["release_target_dataset"]["distinct_category_sentence_pairs"]==213
+    assert registry["release_target_dataset"]["canonical_balanced_sentence_slots"]==209
     assert registry["benchmark_subset"]["local_source_validation"]["distinct_category_sentence_pairs"]==209
-    return "Release target, split/source composition, 213-pair total, frozen 102,544/209 scope, and disclosed rounded-hour difference reconcile."
+    return "Release target, split/source composition, canonical 209-slot design, frozen 102,544/209 scope, and disclosed rounded-hour difference reconcile."
 
 
 def check_benchmark(package: Path) -> str:

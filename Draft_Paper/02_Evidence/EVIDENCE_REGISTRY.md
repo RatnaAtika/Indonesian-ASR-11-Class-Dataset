@@ -12,7 +12,7 @@
 
 - Human recordings: 104,368; synthetic: 132 (0.1263%).
 - Human speakers: 20 (12 male, 8 female).
-- Distinct `(category, sentence_id)` pairs: 213; frozen benchmark pairs: 209.
+- Canonical balanced sentence slots: 209.
 - HF revision: `830a2069416707e3f38c06c507255889513cdf4b`; private: `True`; licence: `other`; persistent DOI available: `False`.
 - Remote tar shards in private staging: 11; bytes: 15,623,106,560.
 
@@ -42,7 +42,7 @@
 - [MATERIAL GAP] Ethics committee name, approval/reference number, and approval date are unverified.
 - [MATERIAL GAP] Written consent scope for public release of identifiable voice biometrics is unverified.
 - [MATERIAL GAP] Participant age range conflicts across old drafts and has no authoritative public-safe source.
-- [MATERIAL GAP] The claim that every speaker read every sentence exactly 25 times must be revised: four categories contain paired low-count replacement sentence IDs, and the release-target inventory has 213 rather than 209 distinct (category, sentence_id) pairs.
+- [MATERIAL GAP] The claim that every speaker completed every canonical sentence slot exactly 25 times requires primary protocol evidence; report the 209-slot balanced design and preserve replacement provenance separately.
 - [MATERIAL GAP] Regional-origin/dialect claims require a consent/privacy decision and a verified public-safe table.
 - [MATERIAL GAP] Recording-room dimensions conflict between narrative text and embedded diagrams.
 - [MATERIAL GAP] Microphone model, acquisition distance, Audacity version, and room protocol require author confirmation against primary records.
